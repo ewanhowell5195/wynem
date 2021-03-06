@@ -1,5 +1,4 @@
 # Wynem Discord Bot
-
 Wynem is a multipurpose discord bot that has a vast array of features for all sorts of purposes. From Moderation, to Fun, to Image Editing!
 
 # Moderation
@@ -31,4 +30,5 @@ All your standard stuff from coin flips, to 8ball, as well as some extras. These
 # Media
 There are some image editing capabilities avaliable, from being able to do fully fledged pixel art, to being able to put members into an image of a band! Some search features exist, allowing you to search youtube for videos, search for gifs on Tenor, or even search for the descriptions and ratings of Movies.
 
+# Commands
 For a full list of commands and descriptions, you can view the help.json file [here](https://raw.githubusercontent.com/ewanhowell5195/discord_bot_assets/master/help.json)
