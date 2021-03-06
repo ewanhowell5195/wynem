@@ -4,7 +4,7 @@
 }
 html, body{
 	margin: 0;
-	background-color: #1F1F21;
+	background-color: #1F1F21 !important;
 }
 .wynemLogo{
 	max-width: 100%;
