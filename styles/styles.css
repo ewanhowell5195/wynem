@@ -1,0 +1,20 @@
+@font-face{
+	font-family: AlteDin;
+	src: url(../fonts/din1451alt.ttf);
+}
+html, body{
+	margin: 0;
+	background-color: #1F1F21;
+}
+.wynemLogo{
+	max-width: 100%;
+	max-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.imgBox{
+	display: grid;
+	height: 100%;
+}
