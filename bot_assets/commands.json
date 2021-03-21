@@ -94,7 +94,6 @@
 		},
 		"bot": {
 			"subcategories": [
-				"Restricted",
 				"Joinroles"
 			],
 			"commands": [
@@ -127,13 +126,6 @@
 				"listjoinroles       [n/a]",
 				"removejoinrole      <role>",
 				"setjoinrole         <role>"
-			]
-		},
-		"restricted": {
-			"commands": [
-				"dm                  [memberID][message]",
-				"reply               [channelID][memberID][reply]",
-				"setemoji            [emoji][url]"
 			]
 		},
 		"user": {
