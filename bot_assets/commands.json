@@ -921,7 +921,7 @@
 		},
 		"snap": {
 			"description": "Snap a user out of existence.",
-			"formatting": "[imageURL]"
+			"formatting": "<member> <member>"
 		},
 		"spin": {
 			"description": "Make an image spin!\n[direction] is \"forwards/backwards/on/off\".\nSpeed is a number, the larger, the slower.\n[expand] is \"on/off\".]",
