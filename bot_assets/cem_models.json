@@ -1,0 +1,1226 @@
+{
+	"entities": {
+		"supported": {
+			"armor_stand": {
+				"display_name": "Armor Stand",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg",
+					"right",
+					"left",
+					"waist",
+					"base"
+				]
+			},
+			"banner": {
+				"display_name": "Banner",
+				"bones": [
+					"slate",
+					"stand",
+					"top"
+				]
+			},
+			"bat": {
+				"display_name": "Bat",
+				"bones": [
+					"head",
+					"body",
+					"right_wing",
+					"left_wing",
+					"outer_right_wing",
+					"outer_left_wing"
+				]
+			},
+			"bed": {
+				"display_name": "Bed",
+				"bones": [
+					"head",
+					"foot",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"blaze": {
+				"display_name": "Blaze",
+				"bones": [
+					"head",
+					"stick1",
+					"stick2",
+					"stick3",
+					"stick4",
+					"stick5",
+					"stick6",
+					"stick7",
+					"stick8",
+					"stick9",
+					"stick10",
+					"stick11",
+					"stick12"
+				]
+			},
+			"boat": {
+				"display_name": "Boat",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"paddle_left",
+					"paddle_right",
+					"bottom_no_water"
+				]
+			},
+			"book": {
+				"display_name": "Book",
+				"bones": [
+					"cover_right",
+					"cover_left",
+					"pages_right",
+					"pages_left",
+					"flipping_page_right",
+					"flipping_page_left",
+					"book_spine"
+				]
+			},
+			"cat": {
+				"display_name": "Cat",
+				"bones": [
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"tail2",
+					"head",
+					"body"
+				]
+			},
+			"cave_spider": {
+				"display_name": "Cave Spider",
+				"bones": [
+					"head",
+					"neck",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"leg5",
+					"leg6",
+					"leg7",
+					"leg8"
+				]
+			},
+			"chest": {
+				"display_name": "Chest",
+				"bones": [
+					"lid",
+					"base",
+					"knob"
+				]
+			},
+			"chest_large": {
+				"display_name": "Large Chest",
+				"bones": [
+					"lid_left",
+					"base_left",
+					"knob_left",
+					"lid_right",
+					"base_right",
+					"knob_right"
+				]
+			},
+			"chicken": {
+				"display_name": "Chicken",
+				"bones": [
+					"head",
+					"body",
+					"right_leg",
+					"left_leg",
+					"right_wing",
+					"left_wing",
+					"bill",
+					"chin"
+				]
+			},
+			"cod": {
+				"display_name": "Cod",
+				"bones": [
+					"body",
+					"fin_back",
+					"head",
+					"nose",
+					"fin_right",
+					"fin_left",
+					"tail"
+				]
+			},
+			"cow": {
+				"display_name": "Cow",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"creeper": {
+				"display_name": "Creeper",
+				"bones": [
+					"head",
+					"armor",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"dragon": {
+				"display_name": "Dragon",
+				"bones": [
+					"head",
+					"spine",
+					"jaw",
+					"body",
+					"left_wing",
+					"left_wing_tip",
+					"right_wing",
+					"right_wing_tip",
+					"front_left_leg",
+					"front_left_shin",
+					"front_left_foot",
+					"back_left_leg",
+					"back_left_shin",
+					"back_left_foot",
+					"front_right_leg",
+					"front_right_shin",
+					"front_right_foot",
+					"back_right_leg",
+					"back_right_shin",
+					"back_right_foot"
+				]
+			},
+			"donkey": {
+				"display_name": "Donkey",
+				"bones": [
+					"body",
+					"neck",
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"saddle",
+					"head",
+					"mane",
+					"mouth",
+					"left_ear",
+					"right_ear",
+					"left_bit",
+					"right_bit",
+					"left_rein",
+					"right_rein",
+					"headpiece",
+					"noseband",
+					"child_back_left_leg",
+					"child_back_right_leg",
+					"child_front_left_leg",
+					"child_front_right_leg",
+					"left_chest",
+					"right_chest"
+				]
+			},
+			"dolphin": {
+				"display_name": "Dolphin",
+				"bones": [
+					"body",
+					"back_fin",
+					"left_fin",
+					"right_fin",
+					"tail",
+					"tail_fin",
+					"head"
+				]
+			},
+			"drowned": {
+				"display_name": "Drowned",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"ender_chest": {
+				"display_name": "Ender Chest",
+				"bones": [
+					"lid",
+					"base",
+					"knob"
+				]
+			},
+			"end_crystal": {
+				"display_name": "End Crystal",
+				"bones": [
+					"cube",
+					"glass",
+					"base"
+				]
+			},
+			"enderman": {
+				"display_name": "Enderman",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"endermite": {
+				"display_name": "Endermite",
+				"bones": [
+					"body1",
+					"body2",
+					"body3",
+					"body4"
+				]
+			},
+			"evoker": {
+				"display_name": "Evoker",
+				"bones": [
+					"head",
+					"hat",
+					"body",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose",
+					"left_arm",
+					"right_arm"
+				]
+			},
+			"evoker_fangs": {
+				"display_name": "Evoker Fangs",
+				"bones": [
+					"base",
+					"upper_jaw",
+					"lower_jaw"
+				]
+			},
+			"fox": {
+				"display_name": "Fox",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"tail"
+				]
+			},
+			"ghast": {
+				"display_name": "Ghast",
+				"bones": [
+					"body",
+					"tentacle1",
+					"tentacle2",
+					"tentacle3",
+					"tentacle4",
+					"tentacle5",
+					"tentacle6",
+					"tentacle7",
+					"tentacle8",
+					"tentacle9"
+				]
+			},
+			"giant": {
+				"display_name": "Giant",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"guardian": {
+				"display_name": "Guardian",
+				"bones": [
+					"body",
+					"eye",
+					"spine1",
+					"spine2",
+					"spine3",
+					"spine4",
+					"spine5",
+					"spine6",
+					"spine7",
+					"spine8",
+					"spine9",
+					"spine10",
+					"spine11",
+					"spine12",
+					"tail1",
+					"tail2",
+					"tail3"
+				]
+			},
+			"head_creeper": {
+				"display_name": "Creeper Head",
+				"bones": [
+					"head"
+				]
+			},
+			"head_dragon": {
+				"display_name": "Dragon Head",
+				"bones": [
+					"head",
+					"jaw"
+				]
+			},
+			"head_player": {
+				"display_name": "Player Head",
+				"bones": [
+					"head"
+				]
+			},
+			"head_skeleton": {
+				"display_name": "Skeleton Head",
+				"bones": [
+					"head"
+				]
+			},
+			"head_wither_skeleton": {
+				"display_name": "Wither Skeleton Head",
+				"bones": [
+					"head"
+				]
+			},
+			"head_zombie": {
+				"display_name": "Zombie Head",
+				"bones": [
+					"head"
+				]
+			},
+			"horse": {
+				"display_name": "Horse",
+				"bones": [
+					"body",
+					"neck",
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"saddle",
+					"head",
+					"mane",
+					"mouth",
+					"left_ear",
+					"right_ear",
+					"left_bit",
+					"right_bit",
+					"left_rein",
+					"right_rein",
+					"headpiece",
+					"noseband",
+					"child_back_left_leg",
+					"child_back_right_leg",
+					"child_front_left_leg",
+					"child_front_right_leg"
+				]
+			},
+			"husk": {
+				"display_name": "Husk",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"illusioner": {
+				"display_name": "Illusioner",
+				"bones": [
+					"head",
+					"hat",
+					"body",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose",
+					"left_arm",
+					"right_arm"
+				]
+			},
+			"iron_golem": {
+				"display_name": "Iron Golem",
+				"bones": [
+					"head",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"lead_knot": {
+				"display_name": "Lead Knot",
+				"bones": [
+					"knot"
+				]
+			},
+			"llama": {
+				"display_name": "Llama",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"chest_right",
+					"chest_left"
+				]
+			},
+			"magma_cube": {
+				"display_name": "Magma Cube",
+				"bones": [
+					"core",
+					"segment1",
+					"segment2",
+					"segment3",
+					"segment4",
+					"segment5",
+					"segment6",
+					"segment7",
+					"segment8"
+				]
+			},
+			"minecart": {
+				"display_name": "Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
+				]
+			},
+			"mooshroom": {
+				"display_name": "Mooshroom",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"mule": {
+				"display_name": "Mule",
+				"bones": [
+					"body",
+					"neck",
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"saddle",
+					"head",
+					"mane",
+					"mouth",
+					"left_ear",
+					"right_ear",
+					"left_bit",
+					"right_bit",
+					"left_rein",
+					"right_rein",
+					"headpiece",
+					"noseband",
+					"child_back_left_leg",
+					"child_back_right_leg",
+					"child_front_left_leg",
+					"child_front_right_leg",
+					"left_chest",
+					"right_chest"
+				]
+			},
+			"ocelot": {
+				"display_name": "Ocelot",
+				"bones": [
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"tail2",
+					"head",
+					"body"
+				]
+			},
+			"panda": {
+				"display_name": "Panda",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"parrot": {
+				"display_name": "Parrot",
+				"bones": [
+					"head",
+					"body",
+					"tail",
+					"left_wing",
+					"right_wing",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"phantom": {
+				"display_name": "Phantom",
+				"bones": [
+					"body",
+					"left_wing",
+					"left_wing_tip",
+					"right_wing",
+					"right_wing_tip",
+					"head",
+					"tail",
+					"tail2"
+				]
+			},
+			"puffer_fish_big": {
+				"display_name": "Puffer Fish [Big]",
+				"bones": [
+					"body",
+					"fin_right",
+					"fin_left",
+					"spikes_front_top",
+					"spikes_middle_top",
+					"spikes_back_top",
+					"spikes_front_right",
+					"spikes_front_left",
+					"spikes_front_bottom",
+					"spikes_middle_bottom",
+					"spikes_back_bottom",
+					"spikes_back_right",
+					"spikes_back_left"
+				]
+			},
+			"puffer_fish_medium": {
+				"display_name": "Puffer Fish [Medium]",
+				"bones": [
+					"body",
+					"fin_right",
+					"fin_left",
+					"spikes_front_top",
+					"spikes_back_top",
+					"spikes_front_right",
+					"spikes_back_right",
+					"spikes_back_left",
+					"spikes_front_left",
+					"spikes_back_bottom",
+					"spikes_front_bottom"
+				]
+			},
+			"puffer_fish_small": {
+				"display_name": "Puffer Fish [Small]",
+				"bones": [
+					"body",
+					"eye_right",
+					"eye_left",
+					"tail",
+					"fin_right",
+					"fin_left"
+				]
+			},
+			"pig": {
+				"display_name": "Pig",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"piglin": {
+				"display_name": "Piglin",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg",
+					"left_ear",
+					"right_ear"
+				]
+			},
+			"piglin_brute": {
+				"display_name": "Piglin Brute",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg",
+					"left_ear",
+					"right_ear"
+				]
+			},
+			"pillager": {
+				"display_name": "Pillager",
+				"bones": [
+					"head",
+					"hat",
+					"body",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose",
+					"left_arm",
+					"right_arm"
+				]
+			},
+			"polar_bear": {
+				"display_name": "Polar Bear",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"rabbit": {
+				"display_name": "Rabbit",
+				"bones": [
+					"left_foot",
+					"right_foot",
+					"left_thigh",
+					"right_thigh",
+					"body",
+					"left_arm",
+					"right_arm",
+					"head",
+					"right_ear",
+					"left_ear",
+					"tail",
+					"nose"
+				]
+			},
+			"ravager": {
+				"display_name": "Ravager",
+				"bones": [
+					"head",
+					"jaw",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"neck"
+				]
+			},
+			"salmon": {
+				"display_name": "Salmon",
+				"bones": [
+					"body_front",
+					"body_back",
+					"head",
+					"fin_back_1",
+					"fin_back_2",
+					"tail",
+					"fin_right",
+					"fin_left"
+				]
+			},
+			"sheep": {
+				"display_name": "Sheep",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"sheep_wool": {
+				"display_name": "Sheep [Wool]",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4"
+				]
+			},
+			"shulker": {
+				"display_name": "Shulker",
+				"bones": [
+					"head",
+					"base",
+					"lid"
+				]
+			},
+			"shulker_box": {
+				"display_name": "Shulker Box",
+				"bones": [
+					"base",
+					"lid"
+				]
+			},
+			"shulker_bullet": {
+				"display_name": "Shulker Bullet",
+				"bones": [
+					"bullet"
+				]
+			},
+			"sign": {
+				"display_name": "Sign",
+				"bones": [
+					"board",
+					"stick"
+				]
+			},
+			"silverfish": {
+				"display_name": "Silverfish",
+				"bones": [
+					"body1",
+					"body2",
+					"body3",
+					"body4",
+					"body5",
+					"body6",
+					"body7",
+					"wing1",
+					"wing2",
+					"wing3"
+				]
+			},
+			"skeleton": {
+				"display_name": "Skeleton",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"skeleton_horse": {
+				"display_name": "Skeleton Horse",
+				"bones": [
+					"body",
+					"neck",
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"saddle",
+					"head",
+					"mane",
+					"mouth",
+					"left_ear",
+					"right_ear",
+					"left_bit",
+					"right_bit",
+					"left_rein",
+					"right_rein",
+					"headpiece",
+					"noseband",
+					"child_back_left_leg",
+					"child_back_right_leg",
+					"child_front_left_leg",
+					"child_front_right_leg"
+				]
+			},
+			"slime": {
+				"display_name": "Slime",
+				"bones": [
+					"body",
+					"left_eye",
+					"right_eye",
+					"mouth"
+				]
+			},
+			"snow_golem": {
+				"display_name": "Snow Golem",
+				"bones": [
+					"body",
+					"body_bottom",
+					"head",
+					"left_hand",
+					"right_hand"
+				]
+			},
+			"spawner_minecart": {
+				"display_name": "Spawner Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
+				]
+			},
+			"spider": {
+				"display_name": "Spider",
+				"bones": [
+					"head",
+					"neck",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"leg5",
+					"leg6",
+					"leg7",
+					"leg8"
+				]
+			},
+			"squid": {
+				"display_name": "Squid",
+				"bones": [
+					"body",
+					"tentacle1",
+					"tentacle2",
+					"tentacle3",
+					"tentacle4",
+					"tentacle5",
+					"tentacle6",
+					"tentacle7",
+					"tentacle8"
+				]
+			},
+			"stray": {
+				"display_name": "Stray",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"tnt_minecart": {
+				"display_name": "TNT Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
+				]
+			},
+			"trapped_chest": {
+				"display_name": "Trapped Chest",
+				"bones": [
+					"lid",
+					"base",
+					"knob"
+				]
+			},
+			"trapped_chest_large": {
+				"display_name": "Large Trapped Chest",
+				"bones": [
+					"lid_left",
+					"base_left",
+					"knob_left",
+					"lid_right",
+					"base_right",
+					"knob_right"
+				]
+			},
+			"tropical_fish_a": {
+				"display_name": "Tropical Fish [Small]",
+				"bones": [
+					"body",
+					"tail",
+					"fin_right",
+					"fin_left",
+					"fin_top"
+				]
+			},
+			"tropical_fish_b": {
+				"display_name": "Tropical Fish [Large]",
+				"bones": [
+					"body",
+					"tail",
+					"fin_right",
+					"fin_left",
+					"fin_top",
+					"fin_bottom"
+				]
+			},
+			"turtle": {
+				"display_name": "Turtle",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"body2"
+				]
+			},
+			"vex": {
+				"display_name": "Vex",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg",
+					"left_wing",
+					"right_wing"
+				]
+			},
+			"villager": {
+				"display_name": "Villager",
+				"bones": [
+					"head",
+					"headwear",
+					"headwear2",
+					"body",
+					"bodywear",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose"
+				]
+			},
+			"vindicator": {
+				"display_name": "Vindicator",
+				"bones": [
+					"head",
+					"hat",
+					"body",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose",
+					"left_arm",
+					"right_arm"
+				]
+			},
+			"witch": {
+				"display_name": "Witch",
+				"bones": [
+					"head",
+					"headwear",
+					"headwear2",
+					"body",
+					"bodywear",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose",
+					"mole"
+				]
+			},
+			"wither": {
+				"display_name": "Wither",
+				"bones": [
+					"body1",
+					"body2",
+					"body3",
+					"head1",
+					"head2",
+					"head3"
+				]
+			},
+			"wither_skeleton": {
+				"display_name": "Wither Skeleton",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"wither_skull": {
+				"display_name": "Wither Skull",
+				"bones": [
+					"head"
+				]
+			},
+			"wolf": {
+				"display_name": "Wolf",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"tail",
+					"mane"
+				]
+			},
+			"zombie": {
+				"display_name": "Zombie",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"zombie_horse": {
+				"display_name": "Zombie Horse",
+				"bones": [
+					"body",
+					"neck",
+					"back_left_leg",
+					"back_right_leg",
+					"front_left_leg",
+					"front_right_leg",
+					"tail",
+					"saddle",
+					"head",
+					"mane",
+					"mouth",
+					"left_ear",
+					"right_ear",
+					"left_bit",
+					"right_bit",
+					"left_rein",
+					"right_rein",
+					"headpiece",
+					"noseband",
+					"child_back_left_leg",
+					"child_back_right_leg",
+					"child_front_left_leg",
+					"child_front_right_leg"
+				]
+			},
+			"zombie_pigman": {
+				"display_name": "Zombie Pigman",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"zombie_villager": {
+				"display_name": "Zombie Villager",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg"
+				]
+			},
+			"zombified_piglin": {
+				"display_name": "Zombified Piglin",
+				"bones": [
+					"head",
+					"headwear",
+					"body",
+					"left_arm",
+					"right_arm",
+					"left_leg",
+					"right_leg",
+					"left_ear",
+					"right_ear"
+				]
+			}
+		},
+		"unsupported": [
+			"armor",
+			"arrow",
+			"axolotl",
+			"bee",
+			"bell",
+			"chest_minecart",
+			"command_block_minecart",
+			"elder_guardian",
+			"elytra",
+			"furnace_minecart",
+			"glowsquid",
+			"hoglin",
+			"hopper_minecart",
+			"llama_carpet",
+			"llama_spit",
+			"painting",
+			"player",
+			"player_thin",
+			"shield",
+			"spectral_arrow",
+			"strider",
+			"trader_llama",
+			"trident",
+			"wandering_trader",
+			"zoglin"
+		],
+		"unreleased": [
+			"goat",
+			"warden"
+		]
+	}
+}
