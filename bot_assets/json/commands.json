@@ -98,7 +98,7 @@
             ]
         },
         "artchives": {
-            "command": [
+            "commands": [
                 "artchive            [description]",
                 "setartchive         <channel>"
             ]
