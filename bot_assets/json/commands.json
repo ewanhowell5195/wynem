@@ -206,6 +206,7 @@
                 "define              [word]",
                 "embed               [title][description][thumbnailURL][imageURL]",
                 "emoji               [emoji]",
+                "ewan                [n/a]",
                 "filesize            [fileURL]",
                 "google              [searchTerm]",
                 "mock                [text]",
@@ -640,7 +641,7 @@
             "permissions": "Manage Roles"
         },
         "website": {
-            "description": "Get a link to the bot creators website."
+            "description": "Get a link to Wynem's website."
         },
         "servers": {
             "description": "Show the top 5 servers that the bot is in."
@@ -861,6 +862,9 @@
         },
         "chest": {
             "description": "Convert chests from 1.14 to 1.15 and back. To downgrade double chests, put both image links in the command, in the order [leftChest] [rightChest]."
+        },
+        "ewan": {
+            "description": "Get a link to the bot creators website."
         }
     }
 }
