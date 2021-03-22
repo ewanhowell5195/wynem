@@ -3,13 +3,14 @@
         "Bot",
         "Fun",
         "Images",
+        "Information",
         "Media",
         "Minecraft",
         "Moderation",
-        "Number",
         "Other",
         "Server",
         "User",
+        "Utility",
         "VC"
     ],
     "categories": {
@@ -45,7 +46,8 @@
                 "resume              [n/a]",
                 "shuffle             [n/a]",
                 "stop                [n/a]",
-                "tts                 [language][text]"
+                "tts                 [language][text]",
+                "ttslang             [language]"
             ]
         },
         "wordfilter": {
@@ -81,15 +83,32 @@
             ]
         },
         "server": {
+            "subcategories": [
+                "Artchives",
+                "Starboards"
+            ],
             "commands": [
                 "lock                <channel>",
                 "membercount         [n/a]",
-                "setartchive         <channel>",
                 "setautotts          <channel>",
                 "setlogs             <channel>",
                 "setmembercounter    [channelID][text]",
                 "slowmode            <channel>[length]",
                 "sortchannels        <category>"
+            ]
+        },
+        "artchives": {
+            "command": [
+                "artchive            [description]",
+                "setartchive         <channel>"
+            ]
+        },
+        "starboards": {
+            "commands": [
+                "removestarboard     [n/a]",
+                "removestarboardbl   <channel>",
+                "starboard           <channel>[emojiCount][emoji]",
+                "starboardblacklist  <channel>"
             ]
         },
         "bot": {
@@ -107,7 +126,6 @@
                 "disable             [command]",
                 "disabled            [n/a]",
                 "help                [command]",
-                "info                [n/a]",
                 "invite              [n/a]",
                 "ping                [n/a]",
                 "prefix              [prefix]",
@@ -134,86 +152,114 @@
                 "id                  <member>",
                 "joinposition        <member>",
                 "nickname            [nickname]",
-                "setnickname         <member>[nickname]",
-                "userinfo            <member>"
+                "setnickname         <member>[nickname]"
+            ]
+        },
+        "information": {
+            "commands": [
+                "info                [n/a]",
+                "userinfo            <member>",
+                "serverinfo          [n/a]",
+                "starboardinfo       [n/a]",
+                "systemstats         [n/a]"
             ]
         },
         "minecraft": {
             "description": "For the commands that take the [imageURL] input, the same applies as what is in the Image category description.",
             "subcategories": [
-                "Resourcepacks"
+                "Planetminecraft",
+                "Resourcepacks",
+                "Skins"
             ],
             "commands": [
                 "account             <member>",
                 "blockify            [imageURL]",
-                "cape                [name]",
-                "capeify             [imageURL]",
                 "cem                 [entity]",
-                "head                [name]",
                 "mcwiki              [searchTerm]",
                 "namehistory         [name]",
                 "playerhead          [url]",
+                "removeaccount       [n/a]",
+                "setaccount          [name]"
+            ]
+        },
+        "planetminecraft": {
+            "commands": [
                 "pmcmap              [searchTerm]",
                 "pmcmember           [searchTerm]",
                 "pmcpack             [searchTerm]",
-                "pmcskin             [searchTerm]",
-                "removeaccount       [n/a]",
+                "pmcskin             [searchTerm]"
+            ]
+        },
+        "skins": {
+            "commands": [
+                "cape                [name]",
+                "capeify             [imageURL]",
+                "head                [name]",
                 "renderskin          [skinMode][imageURL]",
-                "setaccount          [name]",
                 "skin                [name]",
                 "skinify             [imageURL]"
             ]
         },
-        "number": {
+        "utility": {
             "commands": [
-                "dice                [number]",
+                "google              [searchTerm]",
                 "math                [number][process][number]",
-                "randomnumber        [number][number]"
+                "remindme            [duration][reminder]",
+                "trans               [sourceLanguage][destinationLanguage][message]"
             ]
         },
         "fun": {
+            "subcategories": [
+                "Imagefun"
+            ],
             "commands": [
                 "ball                [question]",
-                "band                <member><member><member><member>",
                 "bean                <member>",
                 "beanrequest         [n/a]",
                 "charshift           [offset][text]",
                 "coin                [n/a]",
                 "dadjoke             [n/a]",
+                "dice                [number]",
                 "joke                [n/a]",
                 "kill                <member>[weapon]",
                 "leet                [text]",
                 "love                [name] [name]",
-                "marry               <member><member>",
                 "mock                [text]",
-                "monke               <member><member><member><member>",
-                "monkeband           <member><member><member>",
                 "monketest           <member>",
                 "namesearch          [text]",
                 "quote               [n/a]",
                 "say                 [character][message]",
+                "textquote           [n/a]"
+            ]
+        },
+        "imagefun": {
+            "commands": [
+                "band                <member><member><member><member>",
+                "impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
+                "marry               <member><member>",
+                "monke               <member><member><member><member>",
+                "monkeband           <member><member><member>",
+                "rainbow             [speed][direction][imageURL]",
                 "snap                <member><member>",
-                "textquote           [n/a]",
+                "spin                [speed][direction][expandMode][imageURL]",
+                "squarify            [squaresize][gapsize][imageURL]",
                 "unband              <member><member><member><member>",
                 "valentines          <member>",
+                "wynem               [lines][lines2][background][shadow][imageURL]",
                 "yeet                <member><member>"
             ]
         },
         "other": {
             "commands": [
-                "artchive            [description]",
                 "bottime             [n/a]",
                 "define              [word]",
                 "embed               [title][description][thumbnailURL][imageURL]",
                 "emoji               [emoji]",
                 "ewan                [n/a]",
                 "filesize            [fileURL]",
-                "google              [searchTerm]",
                 "mock                [text]",
                 "poll                [title; <emoji> description;...]",
-                "remindme            [duration][reminder]",
-                "serverinfo          [n/a]",
-                "trans               [sourceLanguage][destinationLanguage][message]"
+                "randomnumber        [number][number]"
             ]
         },
         "media": {
@@ -230,6 +276,7 @@
                 "Drawing"
             ],
             "commands": [
+                "crop                [x][y][x2][y2][imageURL]",
                 "flip                [imageURL]",
                 "grayscale           [imageURL]",
                 "haah                [imageURL]",
@@ -242,12 +289,10 @@
                 "noiseify            [imageURL]",
                 "palette             [imageURL]",
                 "paletteify          [imageURL]",
-                "rainbow             [speed][direction][imageURL]",
+                "paste               [x][y][imageURL][imageURL]",
                 "resize              [width][height][imageURL]",
                 "rotate              [degrees][imageURL]",
-                "spin                [speed][direction][expandMode][imageURL]",
                 "spritesheet         [imageURL]",
-                "squarify            [squaresize][gapsize][imageURL]",
                 "trim                [imageURL]",
                 "waaw                [imageURL]",
                 "woow                [imageURL]"
@@ -838,7 +883,7 @@
         "starboardinfo": {
             "description": "View the info about a starboard. Includes the channel, emoji, emoji count, and a list of blacklisted channels."
         },
-        "removestarboardblacklist": {
+        "removestarboardbl": {
             "description": "Remove a blacklisted channel from the starboard blacklist.",
             "permissions": "Manage Channels"
         },
