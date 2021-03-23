@@ -897,10 +897,12 @@
             "description": "Crop a region of an image."
         },
         "impostor": {
-            "description": "Create a custom Among Us character!"
+            "description": "Create a custom Among Us character!",
+            "cooldown": 8
         },
         "wynem": {
-            "description": "Create a custom Wynem logo!"
+            "description": "Create a custom Wynem logo!",
+            "cooldown": 3
         },
         "ctm": {
             "description": "Convert compact CTM to full CTM"
