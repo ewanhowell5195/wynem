@@ -47,6 +47,27 @@
 					"leg4"
 				]
 			},
+			"bee": {
+				"display_name": "Bee",
+				"bones": [
+					"body",
+					"torso",
+					"left_wing",
+					"right_wing",
+					"front_legs",
+					"middle_legs",
+					"back_legs",
+					"stinger",
+					"left_antenna",
+					"right_antenna"
+				]
+			},
+			"bell": {
+				"display_name": "Bell",
+				"bones": [
+					"body"
+				]
+			},
 			"blaze": {
 				"display_name": "Blaze",
 				"bones": [
@@ -138,6 +159,17 @@
 					"knob_right"
 				]
 			},
+			"chest_minecart": {
+				"display_name": "Chest Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
+				]
+			},
 			"chicken": {
 				"display_name": "Chicken",
 				"bones": [
@@ -161,6 +193,17 @@
 					"fin_right",
 					"fin_left",
 					"tail"
+				]
+			},
+			"command_block_minecart": {
+				"display_name": "Command Block Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
 				]
 			},
 			"cow": {
@@ -265,6 +308,28 @@
 					"right_leg"
 				]
 			},
+			"elder_guardian": {
+				"display_name": "Elder Guardian",
+				"bones": [
+					"body",
+					"eye",
+					"spine1",
+					"spine2",
+					"spine3",
+					"spine4",
+					"spine5",
+					"spine6",
+					"spine7",
+					"spine8",
+					"spine9",
+					"spine10",
+					"spine11",
+					"spine12",
+					"tail1",
+					"tail2",
+					"tail3"
+				]
+			},
 			"ender_chest": {
 				"display_name": "Ender Chest",
 				"bones": [
@@ -334,6 +399,17 @@
 					"leg3",
 					"leg4",
 					"tail"
+				]
+			},
+			"furnace_minecart": {
+				"display_name": "Furnace Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
 				]
 			},
 			"ghast": {
@@ -420,6 +496,31 @@
 				"display_name": "Zombie Head",
 				"bones": [
 					"head"
+				]
+			},
+			"hoglin": {
+				"display_name": "Hoglin",
+				"bones": [
+					"head",
+					"left_ear",
+					"right_ear",
+					"body",
+					"front_left_leg",
+					"front_right_leg",
+					"back_left_leg",
+					"back_right_leg",
+					"mane"
+				]
+			},
+			"hopper_minecart": {
+				"display_name": "Hopper Minecart",
+				"bones": [
+					"bottom",
+					"back",
+					"front",
+					"right",
+					"left",
+					"dirt"
 				]
 			},
 			"horse": {
@@ -950,6 +1051,20 @@
 					"right_leg"
 				]
 			},
+			"strider": {
+				"display_name": "Strider",
+				"bones": [
+					"body",
+					"left_leg",
+					"right_leg",
+					"hair_left_bottom",
+					"hair_left_middle",
+					"hair_left_top",
+					"hair_right_bottom",
+					"hair_right_middle",
+					"hair_right_top"
+				]
+			},
 			"tnt_minecart": {
 				"display_name": "TNT Minecart",
 				"bones": [
@@ -959,6 +1074,19 @@
 					"right",
 					"left",
 					"dirt"
+				]
+			},
+			"trader_llama": {
+				"display_name": "Trader Llama",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"chest_right",
+					"chest_left"
 				]
 			},
 			"trapped_chest": {
@@ -978,6 +1106,12 @@
 					"lid_right",
 					"base_right",
 					"knob_right"
+				]
+			},
+			"trident": {
+				"display_name": "Trident",
+				"bones": [
+					"body"
 				]
 			},
 			"tropical_fish_a": {
@@ -1055,6 +1189,20 @@
 					"right_arm"
 				]
 			},
+			"wandering_trader": {
+				"display_name": "Wandering Trader",
+				"bones": [
+					"head",
+					"headwear",
+					"headwear2",
+					"body",
+					"bodywear",
+					"arms",
+					"left_leg",
+					"right_leg",
+					"nose"
+				]
+			},
 			"witch": {
 				"display_name": "Witch",
 				"bones": [
@@ -1109,6 +1257,20 @@
 					"leg3",
 					"leg4",
 					"tail",
+					"mane"
+				]
+			},
+			"zoglin": {
+				"display_name": "Zoglin",
+				"bones": [
+					"head",
+					"left_ear",
+					"right_ear",
+					"body",
+					"front_left_leg",
+					"front_right_leg",
+					"back_left_leg",
+					"back_right_leg",
 					"mane"
 				]
 			},
@@ -1195,28 +1357,25 @@
 			"armor",
 			"arrow",
 			"axolotl",
-			"bee",
-			"bell",
-			"chest_minecart",
-			"command_block_minecart",
-			"elder_guardian",
+			"beacon_beam",
+			"cat_collar",
+			"creeper_armor",
+			"drowned_outer_layer",
 			"elytra",
-			"furnace_minecart",
 			"glowsquid",
-			"hoglin",
-			"hopper_minecart",
 			"llama_carpet",
 			"llama_spit",
 			"painting",
+			"pig_saddle",
 			"player",
 			"player_thin",
 			"shield",
+			"slime_outer_layer",
 			"spectral_arrow",
-			"strider",
-			"trader_llama",
-			"trident",
-			"wandering_trader",
-			"zoglin"
+			"stray_outer_layer",
+			"strider_saddle",
+			"tropical_fish_a_outer_layer",
+			"tropical_fish_b_outer_layer"
 		],
 		"unreleased": [
 			"goat",
