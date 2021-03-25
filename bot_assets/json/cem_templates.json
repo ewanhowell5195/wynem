@@ -1680,6 +1680,85 @@
 					}
 				},
 				{
+					"name": "conduit",
+					"display_name": "Conduit",
+					"texture_name": "conduit.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAEtJREFUOE9jMIaCcihQggIGGDAOhYCKDjBoV3EBA6dRBUNSAaHoFoQCmMKZULAKChjE0sAg0RRiU/Ds3WCwc80ZMDg1qmAoKSAU3QCN6pGwFSoLUAAAAABJRU5ErkJggg==",
+					"model": {
+						"textureSize": [64, 32],
+						"models": [
+							{
+								"part": "eye",
+								"id": "eye",
+								"invertAxis": "xy",
+								"translate": [0, -4, 0],
+								"boxes": [
+									{
+										"coordinates": [-4, 0, 0, 8, 8, 0],
+										"uvNorth": [0, 0, 32, 16],
+										"uvEast": [0, 0, 0, 8],
+										"uvSouth": [0, 0, 32, 16],
+										"uvWest": [8, 0, 8, 8],
+										"uvUp": [8, 0, 0, 0],
+										"uvDown": [16, 0, 8, 0]
+									}
+								]
+							},
+							{
+								"part": "cage",
+								"id": "cage",
+								"invertAxis": "xy",
+								"translate": [0, -4, 0],
+								"boxes": [
+									{
+										"coordinates": [-4, 0, -4, 8, 8, 8],
+										"uvNorth": [32, 32, 16, 16],
+										"uvEast": [16, 32, 0, 16],
+										"uvSouth": [64, 32, 48, 16],
+										"uvWest": [48, 32, 32, 16],
+										"uvUp": [32, 16, 16, 0],
+										"uvDown": [48, 16, 32, 0]
+									}
+								]
+							},
+							{
+								"part": "base",
+								"id": "base",
+								"invertAxis": "xy",
+								"translate": [0, -4, 0],
+								"boxes": [
+									{
+										"coordinates": [-3, 1, -3, 6, 6, 6],
+										"uvNorth": [24, 24, 12, 12],
+										"uvEast": [12, 24, 0, 12],
+										"uvSouth": [48, 24, 36, 12],
+										"uvWest": [36, 24, 24, 12],
+										"uvUp": [24, 12, 12, 0],
+										"uvDown": [36, 12, 24, 0]
+									}
+								]
+							},
+							{
+								"part": "wind",
+								"id": "wind",
+								"invertAxis": "xy",
+								"translate": [0, -4, 0],
+								"boxes": [
+									{
+										"coordinates": [-8, -4, -8, 16, 16, 16],
+										"uvNorth": [16, 16, 32, 32],
+										"uvEast": [0, 16, 16, 32],
+										"uvSouth": [48, 16, 64, 32],
+										"uvWest": [32, 16, 48, 32],
+										"uvUp": [32, 16, 16, 0],
+										"uvDown": [48, 0, 32, 16]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
 					"name": "cow",
 					"display_name": "Cow",
 					"texture_name": "cow.png",
@@ -3600,6 +3679,100 @@
 					}
 				},
 				{
+					"name": "hoglin",
+					"display_name": "Hoglin",
+					"texture_name": "hoglin.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAMAAADlCI9NAAAATlBMVEUAAABbvPR71P97/6P0hob/p6RD6I1TYXT43XK01OH/+Jn////s+P1ueIx71P97/6P/p6T/+JlTYXS01OHs+P1D6I30hob43XJbvPRueIzRsNMHAAAADnRSTlMAAAAAAAAAAAAAAAAAAKroblcAAAGrSURBVHhe5JbbCoMwDIZ79jRvqju9/4suCcbItFPG1g39rgpJfj7aIKrmx6hGAR0RCTXSPRGFSWdFFMRsaGFA2hXAAj3QxTswFehHpC6wwAmoihYggfTIIMDt/yUg95Vf4AzciAtwJb4oIDvwsRuQxDWBgGjEISWQ2AEsrQsECdSOI18KWGuDNsZo5713ZV3XCQGobBGwHIiJQ+SbAvIEmQUSS5hVYCnmWAK4Afjyhg+HE8AVxOUzfNizwPxLmFdAzdmjQPqPaEVAiwCyRSA82jGDHYZBEAzb4+KybgfR93/SbQcD9ddE4qxpxndq4PJFKEQDkg4QEg8IgVv+UKzjsJeE9BAkepZQfAmkwP1PBdaXAJvw24AfTmtC57bNCRQXkyaqm1FokgqoSSzQCewAlhMLinVl1guYgAmYgAmYwLWW0SL0As7VX5OaiTkC+KKIiSsK8PFldwzOFcj2LADB5QKDTTguIGeD/Pt9K/HrHgg8HRPx/Iu+mejCsT7L+1pwmkDWT5Tlo68ELygQEEJmCuB+xX1qAiZgAjQ6CccFfC/aZdQ7iPxilgu8AU/W2EViQEAbAAAAAElFTkSuQmCC",
+					"model": {
+						"textureSize": [128, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -21, 8.5],
+								"boxes": [
+									{"coordinates": [-7, 18, -27.5, 14, 6, 19], "textureOffset": [61, 1]},
+									{"coordinates": [-8, 19, -21.5, 2, 11, 2], "textureOffset": [1, 13]},
+									{"coordinates": [6, 19, -21.5, 2, 11, 2], "textureOffset": [10, 13]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -17, -4.5],
+								"boxes": [
+									{"coordinates": [-8, 10, -8.5, 16, 14, 26], "textureOffset": [1, 1]}
+								]
+							},
+							{
+								"part": "mane",
+								"id": "mane",
+								"invertAxis": "xy",
+								"translate": [0, -31, 2.5],
+								"boxes": [
+									{"coordinates": [0, 21, -11.5, 0, 10, 19], "textureOffset": [90, 33]}
+								]
+							},
+							{
+								"part": "front_left_leg",
+								"id": "front_left_leg",
+								"invertAxis": "xy",
+								"translate": [4, -14, 4.75],
+								"boxes": [
+									{"coordinates": [-7, 0, -7.5, 6, 14, 6], "textureOffset": [41, 42]}
+								]
+							},
+							{
+								"part": "front_right_leg",
+								"id": "front_right_leg",
+								"invertAxis": "xy",
+								"translate": [-4, -14, 4.5],
+								"boxes": [
+									{"coordinates": [1, 0, -7.5, 6, 14, 6], "textureOffset": [66, 42]}
+								]
+							},
+							{
+								"part": "back_left_leg",
+								"id": "back_left_leg",
+								"invertAxis": "xy",
+								"translate": [4.5, -11, -14],
+								"boxes": [
+									{"coordinates": [-7, 0, 11.5, 5, 11, 5], "textureOffset": [0, 45]}
+								]
+							},
+							{
+								"part": "back_right_leg",
+								"id": "back_right_leg",
+								"invertAxis": "xy",
+								"translate": [-4.5, -11, -14],
+								"boxes": [
+									{"coordinates": [2, 0, 11.5, 5, 11, 5], "textureOffset": [21, 45]}
+								]
+							},
+							{
+								"part": "right_ear",
+								"id": "right_ear",
+								"invertAxis": "xy",
+								"translate": [-6.5, -22.75, 11.5],
+								"boxes": [
+									{"coordinates": [6.5, 22.75, -13.5, 6, 1, 4], "textureOffset": [1, 1]}
+								]
+							},
+							{
+								"part": "left_ear",
+								"id": "left_ear",
+								"invertAxis": "xy",
+								"translate": [6.5, -22.75, 11.5],
+								"boxes": [
+									{"coordinates": [-12.5, 22.75, -13.5, 6, 1, 4], "textureOffset": [1, 6]}
+								]
+							}
+						]
+					}
+				},
+				{
 					"name": "guardian",
 					"display_name": "Guardian",
 					"texture_name": "guardian.png",
@@ -5074,6 +5247,8 @@
 				{
 					"name": "llama",
 					"display_name": "Llama",
+					"texture_name": "llama.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
 					"model": {
 						"textureSize": [128, 64],
 						"models": [
@@ -5193,6 +5368,33 @@
 									}
 								],
 								"animations": [{"chest_right_rotation.ry": "0"}]
+							}
+						]
+					}
+				},
+				{
+					"name": "llama_spit",
+					"display_name": "Llama Spit",
+					"texture_name": "llama_spit.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAGFBMVEVTYXT///9D6I1TYXRbvPS01OH0hob43XL3dmg2AAAAAnRSTlMAAHaTzTgAAAAjSURBVHheYxAMNWYUxAMIK1BySSunTAGIGHQKRhWMKhhVAACTQUarjGuvZwAAAABJRU5ErkJggg==",
+					"model": {
+						"texture": "llama_spit.png",
+						"textureSize": [64, 32],
+						"models": [
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -6, 0],
+								"boxes": [
+									{"coordinates": [-2, 6, 0, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [-2, 4, 0, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [-2, 4, 2, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [-4, 4, 0, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [-2, 0, 0, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [-2, 4, -4, 2, 2, 2], "textureOffset": [0, 0]},
+									{"coordinates": [2, 4, 0, 2, 2, 2], "textureOffset": [0, 0]}
+								]
 							}
 						]
 					}
@@ -9186,6 +9388,122 @@
 					}
 				},
 				{
+					"name": "strider",
+					"display_name": "Strider",
+					"texture_name": "strider.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAACACAMAAACMX59YAAAAOVBMVEUAAABueIy01OF71P9TYXTs+P3///9D6I1TYXRbvPT0hoa01OH43XJueIzs+P171P97/6P/p6T/+Jla6Bn7AAAAB3RSTlMAAAAAAAAAVWTqWAAAAMdJREFUaN7t1MsOgyAQheERqQxor+//sF0QbGdqE3Gqacj5d7r4Ei8cItWoYpV7y3vv6QO4iEY+i9id5pzvug4AAAC7AbXHOaiiKqkmFYWbKMSrKKa7KE0PEQAA7QDWwzQYswNlRJiZiYi2AXm6ZuDbIq0HljeRVz9CFVA+XflE9UD+eWLKPwkAAE0BNcd5H+DYd2Ddg7xCfV8uNgKvi+M38TerjFnHHjSwBwCaAKx7sHQTQOVxHowBAAAAAAAAAAAAAADgX4En/foNkMNYCKQAAAAASUVORK5CYII=",
+					"model": {
+						"textureSize": [64, 128],
+						"models": [
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -23, 0],
+								"boxes": [
+									{"coordinates": [-8, 15, -8, 16, 14, 16], "textureOffset": [0, 0]}
+								]
+							},
+							{
+								"part": "left_leg",
+								"id": "left_leg",
+								"invertAxis": "xy",
+								"translate": [-4, -17, 0],
+								"boxes": [
+									{"coordinates": [2, 0, -2, 4, 17, 4], "textureOffset": [0, 55]}
+								]
+							},
+							{
+								"part": "right_leg",
+								"id": "right_leg",
+								"invertAxis": "xy",
+								"translate": [4, -17, 0],
+								"boxes": [
+									{"coordinates": [-6, 0, -2, 4, 17, 4], "textureOffset": [0, 32]}
+								]
+							},
+							{
+								"part": "hair_left_top",
+								"id": "hair_left_top",
+								"invertAxis": "xy",
+								"translate": [8, -29, 8],
+								"boxes": [
+									{"coordinates": [-20, 29, -8, 12, 0, 16], "textureOffset": [4, 33]}
+								]
+							},
+							{
+								"part": "hair_left_middle",
+								"id": "hair_left_middle",
+								"invertAxis": "xy",
+								"translate": [8, -25, 8],
+								"boxes": [
+									{"coordinates": [-20, 25, -8, 12, 0, 16], "textureOffset": [4, 49]}
+								]
+							},
+							{
+								"part": "hair_left_bottom",
+								"id": "hair_left_bottom",
+								"invertAxis": "xy",
+								"translate": [8, -20, 8],
+								"boxes": [
+									{"coordinates": [-20, 20, -8, 12, 0, 16], "textureOffset": [4, 65]}
+								]
+							},
+							{
+								"part": "hair_right_top",
+								"id": "hair_right_top",
+								"invertAxis": "xy",
+								"translate": [-8, -28, 8],
+								"submodels": [
+									{
+										"id": "hair_right_top_sub_0",
+										"invertAxis": "xy",
+										"translate": [0, 0, 0],
+										"mirrorTexture": "u",
+										"boxes": [
+											{"coordinates": [8, 28, -8, 12, 0, 16], "textureOffset": [4, 33]}
+										]
+									}
+								]
+							},
+							{
+								"part": "hair_right_middle",
+								"id": "hair_right_middle",
+								"invertAxis": "xy",
+								"translate": [-8, -24, 8],
+								"submodels": [
+									{
+										"id": "hair_right_middle_sub_0",
+										"invertAxis": "xy",
+										"translate": [0, 0, 0],
+										"mirrorTexture": "u",
+										"boxes": [
+											{"coordinates": [8, 24, -8, 12, 0, 16], "textureOffset": [4, 49]}
+										]
+									}
+								]
+							},
+							{
+								"part": "hair_right_bottom",
+								"id": "hair_right_bottom",
+								"invertAxis": "xy",
+								"translate": [-8, -19, 8],
+								"submodels": [
+									{
+										"id": "hair_right_bottom_sub_0",
+										"invertAxis": "xy",
+										"translate": [0, 0, 0],
+										"mirrorTexture": "u",
+										"boxes": [
+											{"coordinates": [8, 19, -8, 12, 0, 16], "textureOffset": [4, 65]}
+										]
+									}
+								]
+							}
+						]
+					}
+				},
+				{
 					"name": "tnt_minecart",
 					"display_name": "TNT Minecart",
 					"texture_name": "tnt_minecart.png",
@@ -9278,6 +9596,134 @@
 								"id": "dirt",
 								"invertAxis": "xy",
 								"translate": [0, 0, 0]
+							}
+						]
+					}
+				},
+				{
+					"name": "trader_llama",
+					"display_name": "Trader Llama",
+					"texture_name": "trader_llama.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
+					"model": {
+						"textureSize": [128, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -17, 6],
+								"boxes": [
+									{"coordinates": [-2, 27, -16, 4, 4, 9], "textureOffset": [0, 0]},
+									{
+										"coordinates": [-4, 15, -12, 8, 18, 6],
+										"textureOffset": [0, 14]
+									},
+									{"coordinates": [-4, 33, -10, 3, 3, 2], "textureOffset": [17, 0]},
+									{"coordinates": [1, 33, -10, 3, 3, 2], "textureOffset": [17, 0]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -19, -2],
+								"submodels": [
+									{
+										"id": "body_rotation",
+										"invertAxis": "xy",
+										"translate": [0, 19, 2],
+										"rotate": [-90, 0, 0],
+										"boxes": [
+											{
+												"coordinates": [-6, -8, -7, 12, 18, 10],
+												"textureOffset": [29, 0]
+											}
+										]
+									}
+								],
+								"animations": [{"body_rotation.rx": "0"}]
+							},
+							{
+								"part": "leg1",
+								"id": "leg1",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [-5.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg2",
+								"id": "leg2",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [1.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg3",
+								"id": "leg3",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, 5],
+								"boxes": [
+									{
+										"coordinates": [-5.5, 0, -7, 4, 14, 4],
+										"textureOffset": [29, 29]
+									}
+								]
+							},
+							{
+								"part": "leg4",
+								"id": "leg4",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, 5],
+								"boxes": [
+									{"coordinates": [1.5, 0, -7, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "chest_left",
+								"id": "chest_left",
+								"invertAxis": "xy",
+								"translate": [8.5, -21, -3],
+								"submodels": [
+									{
+										"id": "chest_left_rotation",
+										"invertAxis": "xy",
+										"translate": [-7, 17, 4.5],
+										"rotate": [0, -90, 0],
+										"boxes": [
+											{
+												"coordinates": [-6.5, -4, -1.5, 8, 8, 3],
+												"textureOffset": [45, 41]
+											}
+										]
+									}
+								],
+								"animations": [{"chest_left_rotation.ry": "0"}]
+							},
+							{
+								"part": "chest_right",
+								"id": "chest_right",
+								"invertAxis": "xy",
+								"translate": [-10.5, -21, 2],
+								"submodels": [
+									{
+										"id": "chest_right_rotation",
+										"invertAxis": "xy",
+										"translate": [7, 17, -0.5],
+										"rotate": [0, -90, 0],
+										"boxes": [
+											{
+												"coordinates": [-1.5, -4, -1.5, 8, 8, 3],
+												"textureOffset": [45, 28]
+											}
+										]
+									}
+								],
+								"animations": [{"chest_right_rotation.ry": "0"}]
 							}
 						]
 					}
@@ -10216,6 +10662,133 @@
 					}
 				},
 				{
+					"name": "wandering_trader",
+					"display_name": "Wandering Trader",
+					"texture_name": "wandering_trader.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAPVJREFUeF7tktEJg0AMhqUbHIUbQIQOcAj4Km4gDuBLn/tmN9AVDjcQFxA3OByqucYSmpQetKWltN9bwieX/DHyNEAMRE18XV84dl2bFEWOAtVCUMYOnxZu1XwtWSvAABYYAF5Her+v06oq+3mexmVxvP4RIRzUK6EbMeTVGf4zKWAX+22ScwG7YYGeEENS18fiI6F8BsBaY5Q6x6TrtOyn0ek1YQy4n9JS16P7biG4ZkQ8JdyJOvQnUUuembUeE8JP4Lw0rhhS48a4MFtPCiwg8QQXBFzYxMiuQQ5c2BokG1aEUCEZVB73JuEvyB9GCoyQIM99An1Mxj1n4YWeAAAAAElFTkSuQmCC",
+					"model": {
+						"textureSize": [64, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -24, 0],
+								"boxes": [
+									{"coordinates": [-4, 24, -4, 8, 10, 8], "textureOffset": [0, 0]}
+								]
+							},
+							{
+								"part": "nose",
+								"id": "nose",
+								"invertAxis": "xy",
+								"translate": [0, -26, 0],
+								"boxes": [
+									{"coordinates": [-1, 23, -6, 2, 4, 2], "textureOffset": [24, 0]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -24, 0],
+								"boxes": [
+									{"coordinates": [-4, 12, -3, 8, 12, 6], "textureOffset": [16, 20]}
+								]
+							},
+							{
+								"part": "arms",
+								"id": "arms",
+								"invertAxis": "xy",
+								"translate": [0, -22, 0],
+								"boxes": [
+									{"coordinates": [-4, 16, -2, 8, 4, 4], "textureOffset": [40, 38]},
+									{"coordinates": [4, 16, -2, 4, 8, 4], "textureOffset": [44, 22]}
+								],
+								"submodels": [
+									{
+										"id": "mirrored",
+										"invertAxis": "xy",
+										"translate": [0, 0, 0],
+										"mirrorTexture": "u",
+										"boxes": [
+											{
+												"coordinates": [-8, 16, -2, 4, 8, 4],
+												"textureOffset": [44, 22]
+											}
+										]
+									}
+								]
+							},
+							{
+								"part": "right_leg",
+								"id": "right_leg",
+								"invertAxis": "xy",
+								"translate": [-2, -12, 0],
+								"boxes": [
+									{"coordinates": [-4, 0, -2, 4, 12, 4], "textureOffset": [0, 22]}
+								]
+							},
+							{
+								"part": "left_leg",
+								"id": "left_leg",
+								"invertAxis": "xy",
+								"translate": [2, -12, 0],
+								"boxes": [
+									{"coordinates": [0, 0, -2, 4, 12, 4], "textureOffset": [0, 22]}
+								]
+							},
+							{
+								"part": "bodywear",
+								"id": "bodywear",
+								"invertAxis": "xy",
+								"translate": [0, -24, 0],
+								"boxes": [
+									{
+										"coordinates": [-4, 6, -3, 8, 18, 6],
+										"textureOffset": [0, 38],
+										"sizeAdd": 0.5
+									}
+								]
+							},
+							{
+								"part": "headwear",
+								"id": "headwear",
+								"invertAxis": "xy",
+								"translate": [0, -24, 0],
+								"boxes": [
+									{
+										"coordinates": [-4, 24, -4, 8, 10, 8],
+										"textureOffset": [32, 0],
+										"sizeAdd": 0.25
+									}
+								]
+							},
+							{
+								"part": "headwear2",
+								"id": "headwear2",
+								"invertAxis": "xy",
+								"translate": [0, -24, 0],
+								"submodels": [
+									{
+										"id": "rotation",
+										"invertAxis": "xy",
+										"translate": [0, 24, 0],
+										"rotate": [90, 0, 0],
+										"boxes": [
+											{
+												"coordinates": [-8, -8, -6, 16, 16, 1],
+												"textureOffset": [30, 47]
+											}
+										]
+									}
+								],
+								"animations": [{"rotation.rx": 0}]
+							}
+						]
+					}
+				},
+				{
 					"name": "witch",
 					"display_name": "Witch",
 					"model": {
@@ -10711,6 +11284,100 @@
 								"translate": [-1, -12, -10],
 								"boxes": [
 									{"coordinates": [-1, 4, 9, 2, 8, 2], "textureOffset": [9, 18]}
+								]
+							}
+						]
+					}
+				},
+				{
+					"name": "zoglin",
+					"display_name": "Zoglin",
+					"texture_name": "zoglin.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAMAAADlCI9NAAAATlBMVEUAAABbvPR71P97/6P0hob/p6RD6I1TYXT43XK01OH/+Jn////s+P1ueIx71P97/6P/p6T/+JlTYXS01OHs+P1D6I30hob43XJbvPRueIzRsNMHAAAADnRSTlMAAAAAAAAAAAAAAAAAAKroblcAAAGrSURBVHhe5JbbCoMwDIZ79jRvqju9/4suCcbItFPG1g39rgpJfj7aIKrmx6hGAR0RCTXSPRGFSWdFFMRsaGFA2hXAAj3QxTswFehHpC6wwAmoihYggfTIIMDt/yUg95Vf4AzciAtwJb4oIDvwsRuQxDWBgGjEISWQ2AEsrQsECdSOI18KWGuDNsZo5713ZV3XCQGobBGwHIiJQ+SbAvIEmQUSS5hVYCnmWAK4Afjyhg+HE8AVxOUzfNizwPxLmFdAzdmjQPqPaEVAiwCyRSA82jGDHYZBEAzb4+KybgfR93/SbQcD9ddE4qxpxndq4PJFKEQDkg4QEg8IgVv+UKzjsJeE9BAkepZQfAmkwP1PBdaXAJvw24AfTmtC57bNCRQXkyaqm1FokgqoSSzQCewAlhMLinVl1guYgAmYgAmYwLWW0SL0As7VX5OaiTkC+KKIiSsK8PFldwzOFcj2LADB5QKDTTguIGeD/Pt9K/HrHgg8HRPx/Iu+mejCsT7L+1pwmkDWT5Tlo68ELygQEEJmCuB+xX1qAiZgAjQ6CccFfC/aZdQ7iPxilgu8AU/W2EViQEAbAAAAAElFTkSuQmCC",
+					"model": {
+						"textureSize": [128, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -21, 8.5],
+								"boxes": [
+									{"coordinates": [-7, 18, -27.5, 14, 6, 19], "textureOffset": [61, 1]},
+									{"coordinates": [-8, 19, -21.5, 2, 11, 2], "textureOffset": [1, 13]},
+									{"coordinates": [6, 19, -21.5, 2, 11, 2], "textureOffset": [10, 13]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -17, -4.5],
+								"boxes": [
+									{"coordinates": [-8, 10, -8.5, 16, 14, 26], "textureOffset": [1, 1]}
+								]
+							},
+							{
+								"part": "mane",
+								"id": "mane",
+								"invertAxis": "xy",
+								"translate": [0, -31, 2.5],
+								"boxes": [
+									{"coordinates": [0, 21, -11.5, 0, 10, 19], "textureOffset": [90, 33]}
+								]
+							},
+							{
+								"part": "front_left_leg",
+								"id": "front_left_leg",
+								"invertAxis": "xy",
+								"translate": [4, -14, 4.75],
+								"boxes": [
+									{"coordinates": [-7, 0, -7.5, 6, 14, 6], "textureOffset": [41, 42]}
+								]
+							},
+							{
+								"part": "front_right_leg",
+								"id": "front_right_leg",
+								"invertAxis": "xy",
+								"translate": [-4, -14, 4.5],
+								"boxes": [
+									{"coordinates": [1, 0, -7.5, 6, 14, 6], "textureOffset": [66, 42]}
+								]
+							},
+							{
+								"part": "back_left_leg",
+								"id": "back_left_leg",
+								"invertAxis": "xy",
+								"translate": [4.5, -11, -14],
+								"boxes": [
+									{"coordinates": [-7, 0, 11.5, 5, 11, 5], "textureOffset": [0, 45]}
+								]
+							},
+							{
+								"part": "back_right_leg",
+								"id": "back_right_leg",
+								"invertAxis": "xy",
+								"translate": [-4.5, -11, -14],
+								"boxes": [
+									{"coordinates": [2, 0, 11.5, 5, 11, 5], "textureOffset": [21, 45]}
+								]
+							},
+							{
+								"part": "right_ear",
+								"id": "right_ear",
+								"invertAxis": "xy",
+								"translate": [-6.5, -22.75, 11.5],
+								"boxes": [
+									{"coordinates": [6.5, 22.75, -13.5, 6, 1, 4], "textureOffset": [1, 1]}
+								]
+							},
+							{
+								"part": "left_ear",
+								"id": "left_ear",
+								"invertAxis": "xy",
+								"translate": [6.5, -22.75, 11.5],
+								"boxes": [
+									{"coordinates": [-12.5, 22.75, -13.5, 6, 1, 4], "textureOffset": [1, 6]}
 								]
 							}
 						]
@@ -13424,6 +14091,8 @@
 				{
 					"name": "llama_carpet",
 					"display_name": "Llama Carpet",
+					"texture_name": "llama_carpet.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
 					"model": {
 						"textureSize": [128, 64],
 						"models": [
