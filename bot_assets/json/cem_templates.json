@@ -1,7 +1,7 @@
 {
 	"categories": [
 		{
-			"name": "Supported",
+			"name": "AAAAAAAASupported",
 			"description": "The standard CEM models supported by OptiFine",
 			"icon": "icon-format_optifine",
 			"entities": [
