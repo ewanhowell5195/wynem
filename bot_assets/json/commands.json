@@ -225,7 +225,7 @@
                 "leet                [text]",
                 "love                [name] [name]",
                 "mock                [text]",
-                "monketest           <member>",
+                "monketest           <member><member><member><member>",
                 "namesearch          [text]",
                 "quote               [n/a]",
                 "say                 [character][message]",
