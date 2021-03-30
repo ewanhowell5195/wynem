@@ -193,7 +193,7 @@
         "skins": {
             "commands": [
                 "cape                [name]",
-                "capeify             [imageURL]",
+                "capeify             [size][imageURL]",
                 "head                [name]",
                 "renderskin          [skinMode][imageURL]",
                 "skin                [name]",
