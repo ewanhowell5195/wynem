@@ -783,13 +783,13 @@
             "description": "Turn any image into a Minecraft cape. [size] is optional, and goes from 1 - 10."
         },
         "poll": {
-            "description": "Create a poll where people react to vote! Members are limited to one reaction.\nFormatting example:\ne!poll This is the title; \u00f0\u0178\u02dc\u0192 Option one; \u00f0\u0178\u02dc\u00b3 Option two."
+            "description": "Create a poll where people react to vote! Members are limited to one reaction.\nFormatting example:\ne!poll This is the title; 😳 Option one; 😄 Option two."
         },
         "yeet": {
             "description": "Throw a member really far."
         },
         "reactionroles": {
-            "description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; \u00f0\u0178\u02dc\u0192 role description; \u00f0\u0178\u02dc\u00b3 role description."
+            "description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; 😳 role description; 😄 role description."
         },
         "mirror": {
             "description": "Mirror an image horizontally."

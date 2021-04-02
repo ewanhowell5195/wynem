@@ -99,18 +99,6 @@
 					"bottom_no_water"
 				]
 			},
-			"book": {
-				"display_name": "Book",
-				"bones": [
-					"cover_right",
-					"cover_left",
-					"pages_right",
-					"pages_left",
-					"flipping_page_right",
-					"flipping_page_left",
-					"book_spine"
-				]
-			},
 			"cat": {
 				"display_name": "Cat",
 				"bones": [
@@ -138,6 +126,15 @@
 					"leg6",
 					"leg7",
 					"leg8"
+				]
+			},
+			"conduit": {
+				"display_name": "Conduit",
+				"bones": [
+					"eye",
+					"cage",
+					"base",
+					"wind"
 				]
 			},
 			"chest": {
@@ -328,6 +325,18 @@
 					"tail1",
 					"tail2",
 					"tail3"
+				]
+			},
+			"enchanting_book": {
+				"display_name": "Enchanting Book",
+				"bones": [
+					"cover_right",
+					"cover_left",
+					"pages_right",
+					"pages_left",
+					"flipping_page_right",
+					"flipping_page_left",
+					"book_spine"
 				]
 			},
 			"ender_chest": {
@@ -594,6 +603,18 @@
 					"knot"
 				]
 			},
+			"lectern_book": {
+				"display_name": "Lectern Book",
+				"bones": [
+					"cover_right",
+					"cover_left",
+					"pages_right",
+					"pages_left",
+					"flipping_page_right",
+					"flipping_page_left",
+					"book_spine"
+				]
+			},
 			"llama": {
 				"display_name": "Llama",
 				"bones": [
@@ -605,6 +626,12 @@
 					"leg4",
 					"chest_right",
 					"chest_left"
+				]
+			},
+			"llama_spit": {
+				"display_name": "Llama Spit",
+				"bones": [
+					"body"
 				]
 			},
 			"magma_cube": {
@@ -1357,15 +1384,12 @@
 			"armor",
 			"arrow",
 			"axolotl",
-			"beacon_beam",
 			"cat_collar",
 			"creeper_armor",
 			"drowned_outer_layer",
 			"elytra",
 			"glowsquid",
 			"llama_carpet",
-			"llama_spit",
-			"painting",
 			"pig_saddle",
 			"player",
 			"player_thin",
