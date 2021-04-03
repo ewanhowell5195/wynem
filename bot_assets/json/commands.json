@@ -504,7 +504,7 @@
         },
         "reply": {
             "description": "Reply to a support message.",
-            "permissions": "Ban Members\n- only in GuildID = 736777568182861944"
+            "permissions": "Ban Members\n- only in GuildID = 827706267325562881"
         },
         "removebannedword": {
             "description": "Remove a banned word from the banned word list.",
@@ -829,7 +829,7 @@
         },
         "setemoji": {
             "description": "Add an emoji to the bots emoji database. The url must be the emojis svg url. You can get the url by right clicking a default emoji and then clicking \"Copy Link\".",
-            "permissions": "Ban Members\n- only in GuildID = 736777568182861944"
+            "permissions": "Ban Members\n- only in GuildID = 827706267325562881"
         },
         "defaultemojistats": {
             "description": "View how many default emoji are in the bots emoji database."
