@@ -1,917 +1,974 @@
 {
-    "help": [
-        "Bot",
-        "Fun",
-        "Images",
-        "Information",
-        "Media",
-        "Minecraft",
-        "Moderation",
-        "Other",
-        "Server",
-        "User",
-        "Utility",
-        "VC"
-    ],
-    "categories": {
-        "moderation": {
-            "subcategories": [
-                "Blacklists",
-                "Modpings",
-                "Mutes",
-                "Roles",
-                "Warns",
-                "Wordfilter"
-            ],
-            "commands": [
-                "ban                 <member>[reason]",
-                "kick                <member>[reason]",
-                "purge               [amount]",
-                "unban               [userID]"
-            ]
-        },
-        "modpings": {
-            "commands": [
-                "setmodping          <role>",
-                "modping             [n/a]",
-                "removemodping       [n/a]"
-            ]
-        },
-        "vc": {
-            "commands": [
-                "leave               [n/a]",
-                "pause               [n/a]",
-                "play                [searchTerm]",
-                "queue               [n/a]",
-                "resume              [n/a]",
-                "shuffle             [n/a]",
-                "stop                [n/a]",
-                "tts                 [language][text]",
-                "ttslang             [language]"
-            ]
-        },
-        "wordfilter": {
-            "commands": [
-                "addbannedword       [word][severity]",
-                "listbannedwords     [n/a]",
-                "removebannedword    [word]"
-            ]
-        },
-        "roles": {
-            "commands": [
-                "addrole             <member>[role]",
-                "muterole            [n/a]",
-                "reactionroles       [title; <emoji> <role> description;...]",
-                "removerole          <member>[role]"
-            ]
-        },
-        "mutes": {
-            "commands": [
-                "mute                <member>[time][value][reason]",
-                "muteclear           <member>[slotnumber]",
-                "mutecount           <member>",
-                "mutelist            <member>",
-                "unmute              <member>"
-            ]
-        },
-        "warns": {
-            "commands": [
-                "warn                <member>[reason]",
-                "warnclear           <member>[number]",
-                "warncount           <member>",
-                "warnlist            <member>"
-            ]
-        },
-        "server": {
-            "subcategories": [
-                "Artchives",
-                "Starboards"
-            ],
-            "commands": [
-                "lock                <channel>",
-                "membercount         [n/a]",
-                "setautotts          <channel>",
-                "setlogs             <channel>",
-                "setmembercounter    [channelID][text]",
-                "slowmode            <channel>[length]",
-                "sortchannels        <category>"
-            ]
-        },
-        "artchives": {
-            "commands": [
-                "artchive            [description]",
-                "setartchive         <channel>"
-            ]
-        },
-        "starboards": {
-            "commands": [
-                "removestarboard     [n/a]",
-                "removestarboardbl   <channel>",
-                "starboard           <channel>[emojiCount][emoji]",
-                "starboardblacklist  <channel>"
-            ]
-        },
-        "bot": {
-            "subcategories": [
-                "Joinroles"
-            ],
-            "commands": [
-                "alias               [command]",
-                "botserver           [n/a]",
-                "commandcount        [n/a]",
-                "contact             [n/a]",
-                "credits             [n/a]",
-                "customembed         [colour]",
-                "defaultemojistats   [n/a]",
-                "disable             [command]",
-                "disabled            [n/a]",
-                "help                [command]",
-                "invite              [n/a]",
-                "ping                [n/a]",
-                "prefix              [prefix]",
-                "prefixlessmode      [n/a]",
-                "requestemoji        [emoji]",
-                "reset               [n/a]",
-                "servers             [n/a]",
-                "support             [message]",
-                "stats               [command]",
-                "uptime              [n/a]",
-                "website             [n/a]"
-            ]
-        },
-        "joinroles": {
-            "commands": [
-                "listjoinroles       [n/a]",
-                "removejoinrole      <role>",
-                "setjoinrole         <role>"
-            ]
-        },
-        "user": {
-            "commands": [
-                "avatar              <member>",
-                "id                  <member>",
-                "joinposition        <member>",
-                "nickname            [nickname]",
-                "setnickname         <member>[nickname]"
-            ]
-        },
-        "information": {
-            "commands": [
-                "info                [n/a]",
-                "userinfo            <member>",
-                "serverinfo          [n/a]",
-                "starboardinfo       [n/a]",
-                "systemstats         [n/a]"
-            ]
-        },
-        "minecraft": {
-            "description": "For the commands that take the [imageURL] input, the same applies as what is in the Image category description.",
-            "subcategories": [
-                "Planetminecraft",
-                "Resourcepacks",
-                "Skins"
-            ],
-            "commands": [
-                "account             <member>",
-                "blockify            [imageURL]",
-                "cem                 [entity]",
-                "mcwiki              [searchTerm]",
-                "namehistory         [name]",
-                "playerhead          [url]",
-                "removeaccount       [n/a]",
-                "setaccount          [name]"
-            ]
-        },
-        "planetminecraft": {
-            "commands": [
-                "pmcmap              [searchTerm]",
-                "pmcmember           [searchTerm]",
-                "pmcpack             [searchTerm]",
-                "pmcskin             [searchTerm]"
-            ]
-        },
-        "skins": {
-            "commands": [
-                "cape                [name]",
-                "capeify             [size][imageURL]",
-                "head                [name]",
-                "renderskin          [skinMode][imageURL]",
-                "skin                [name]",
-                "skinify             [imageURL]"
-            ]
-        },
-        "utility": {
-            "commands": [
-                "google              [searchTerm]",
-                "math                [number][process][number]",
-                "remindme            [duration][reminder]",
-                "trans               [sourceLanguage][destinationLanguage][message]"
-            ]
-        },
-        "fun": {
-            "subcategories": [
-                "Imagefun"
-            ],
-            "commands": [
-                "ball                [question]",
-                "bean                <member>",
-                "beanrequest         [n/a]",
-                "charshift           [offset][text]",
-                "coin                [n/a]",
-                "dadjoke             [n/a]",
-                "dice                [number]",
-                "joke                [n/a]",
-                "kill                <member>[weapon]",
-                "leet                [text]",
-                "love                [name] [name]",
-                "mock                [text]",
-                "monketest           <member><member><member><member>",
-                "namesearch          [text]",
-                "quote               [n/a]",
-                "say                 [character][message]",
-                "textquote           [n/a]"
-            ]
-        },
-        "imagefun": {
-            "commands": [
-                "band                <member><member><member><member>",
-                "impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
-                "marry               <member><member>",
-                "monke               <member><member><member><member>",
-                "monkeband           <member><member><member>",
-                "rainbow             [speed][direction][imageURL]",
-                "snap                <member><member>",
-                "spin                [speed][direction][expandMode][imageURL]",
-                "squarify            [squaresize][gapsize][imageURL]",
-                "unband              <member><member><member><member>",
-                "valentines          <member>",
-                "wynem               [lines][lines2][background][shadow][imageURL]",
-                "yeet                <member><member>"
-            ]
-        },
-        "other": {
-            "commands": [
-                "bottime             [n/a]",
-                "define              [word]",
-                "embed               [title][description][thumbnailURL][imageURL]",
-                "emoji               [emoji]",
-                "ewan                [n/a]",
-                "filesize            [fileURL]",
-                "mock                [text]",
-                "poll                [title; <emoji> description;...]",
-                "randomnumber        [number][number]"
-            ]
-        },
-        "media": {
-            "commands": [
-                "gif                 [tag]",
-                "randomgif           [tag]",
-                "thumbnail           [name]",
-                "youtube             [name]"
-            ]
-        },
-        "images": {
-            "description": "These commands take many image inputs. Where it says [imageURL], this can be a url, member ping, uploaded image, emoji, or leave it blank to target an image/url/emoji from a previous message in the channel. You can reply to a message to target an image in that message.",
-            "subcategories": [
-                "Drawing"
-            ],
-            "commands": [
-                "crop                [x][y][x2][y2][imageURL]",
-                "flip                [imageURL]",
-                "grayscale           [imageURL]",
-                "haah                [imageURL]",
-                "hooh                [imageURL]",
-                "hueshift            [angle][imageURL]",
-                "imagesize           [imageURL]",
-                "invert              [imageURL]",
-                "magnify             [imageURL]",
-                "mirror              [imageURL]",
-                "noiseify            [imageURL]",
-                "palette             [imageURL]",
-                "paletteify          [imageURL]",
-                "paste               [x][y][imageURL][imageURL]",
-                "resize              [width][height][imageURL]",
-                "rotate              [degrees][imageURL]",
-                "spritesheet         [imageURL]",
-                "trim                [imageURL]",
-                "waaw                [imageURL]",
-                "woow                [imageURL]"
-            ]
-        },
-        "drawing": {
-            "description": "For the [colour] element, you can use [r][g][b], [#hexcode], or [colourname].",
-            "commands": [
-                "ellipse             [x][y][x2][y2][colour][imageURL]",
-                "fill                [x][y][colour][tolerance][imageURL]",
-                "image               [width][height][colour]",
-                "line                [x][y][x2][y2][colour][imageURL]",
-                "pixel               [x][y][colour][imageURL]",
-                "polygon             [x][y][radius][sides][colour][imageURL]",
-                "rectangle           [x][y][x2][y2][colour][imageURL]",
-                "text                [text][x][y][size][colour][font][imageURL]"
-            ]
-        },
-        "blacklists": {
-            "description": "Blacklists are used to stop commands in certain channels, or to stop users from using certain commands.\n[command] is optional and is only avaliable for blacklisting members. Not specifying one will default to blocking all commands.",
-            "commands": [
-                "blacklist           <member/channel>[command]",
-                "removeblacklist     <member/channel>[command]",
-                "viewblacklist       <member>"
-            ]
-        },
-        "resourcepacks": {
-            "commands": [
-                "chest               [imageURL][imageURL]",
-                "ctm                 [imageURL]"
-            ]
-        }
-    },
-    "commands": {
-        "ball": {
-            "description": "Ask the magic eight-ball a question."
-        },
-        "account": {
-            "description": "View the minecraft account tied to someones discord."
-        },
-        "addbannedword": {
-            "description": "Add a banned word. If severity is left blank, it defaults to 1. Words with other characters instead of letters (such as 'h3110') are automatically handled\n\nSeverity 1 - Deletes the message\nSeverity 2 - Deletes message and warns sender\nSeverity 3 - Deletes message, warns and mutes sender.",
-            "permissions": "Kick Members"
-        },
-        "addrole": {
-            "description": "Add a role to a mentioned user.",
-            "permissions": "Manage Roles"
-        },
-        "artchive": {
-            "description": "Add your artwork to the artchive!"
-        },
-        "avatar": {
-            "description": "Shows a users avatar."
-        },
-        "ban": {
-            "description": "Ban a user from the server.",
-            "permissions": "Ban Members"
-        },
-        "bean": {
-            "description": "Bean a user.",
-            "permissions": "Ban Members"
-        },
-        "beanrequest": {
-            "description": "Request to be beaned."
-        },
-        "bottime": {
-            "description": "See what the current time is for Wynem."
-        },
-        "cape": {
-            "description": "Get a Minecraft Java users capes."
-        },
-        "dice": {
-            "description": "Throw between 1 and 3 dice."
-        },
-        "coin": {
-            "description": "Flips a coin."
-        },
-        "head": {
-            "description": "Get a Minecraft Java users Minecraft head."
-        },
-        "help": {
-            "description": "Get a list of the bots commands and info about each one."
-        },
-        "id": {
-            "description": "Shows a users ID."
-        },
-        "info": {
-            "description": "Get info about the bot."
-        },
-        "joinposition": {
-            "description": "View what position a user joined the server in.\nYou can also find what member is in a position by entering the number instead of a member."
-        },
-        "kick": {
-            "description": "Kick a user from the server.",
-            "permissions": "Kick Members"
-        },
-        "kill": {
-            "description": "Kill a user with a Minecraft death message. <member> and [weapon] are optional."
-        },
-        "listbannedwords": {
-            "description": "List all banned words.",
-            "permissions": "Manage Messages"
-        },
-        "love": {
-            "description": "Discover how much you love someone!"
-        },
-        "math": {
-            "description": "Calculate simple math equations."
-        },
-        "mock": {
-            "description": "Spongebobify some text."
-        },
-        "mute": {
-            "description": "Temporarily mute a user, removing their ability to talk in chat. Defaults to 10 minutes if left blank.",
-            "permissions": "Kick Members"
-        },
-        "mutecount": {
-            "description": "Show how many times a user has been muted."
-        },
-        "mutelist": {
-            "description": "Show a description of every mute a user has had."
-        },
-        "namesearch": {
-            "description": "Search for users with certain text in their name."
-        },
-        "nickname": {
-            "description": "Set your nickname."
-        },
-        "ping": {
-            "description": "Check the bots latency."
-        },
-        "purge": {
-            "description": "Bulk delete messages from a channel. Defaults to 5 if left blank.",
-            "permissions": "Manage Messages"
-        },
-        "randomnumber": {
-            "description": "Generates a random number between two numbers."
-        },
-        "removerole": {
-            "description": "Remove a role from a mentioned user.",
-            "permissions": "Manage Roles"
-        },
-        "say": {
-            "description": "Make a character say a message of your choice. [character] is optional."
-        },
-        "serverinfo": {
-            "description": "Get info about the server."
-        },
-        "setaccount": {
-            "description": "Tie a minecraft account to your discord, so you can run the Minecraft commands without specifying a user."
-        },
-        "removeaccount": {
-            "description": "Remove a minecraft account from your discord."
-        },
-        "setnickname": {
-            "description": "Set a users nickname.",
-            "permissions": "Manage Nicknames"
-        },
-        "skin": {
-            "description": "Get a Minecraft Java users Minecraft skin."
-        },
-        "thumbnail": {
-            "description": "View the Thumbnail of a YouTube video."
-        },
-        "uptime": {
-            "description": "Check how long the bot has been running for."
-        },
-        "userinfo": {
-            "description": "Get info about a desired user."
-        },
-        "warn": {
-            "description": "Warns a user.",
-            "permissions": "Kick Members"
-        },
-        "warnclear": {
-            "description": "Clear warns from a user.",
-            "permissions": "Kick Members"
-        },
-        "warncount": {
-            "description": "Show how many times a user has been warned."
-        },
-        "warnlist": {
-            "description": "Show a description of every warn a user has had."
-        },
-        "youtube": {
-            "description": "Search for a YouTube video."
-        },
-        "cem": {
-            "description": "Get a list of bone names for use with OptiFine CEM.\nDont supply an entity to get a full list of entities."
-        },
-        "setartchive": {
-            "description": "Set the channel for the Artchive command.",
-            "permissions": "Manage Channels"
-        },
-        "setlogs": {
-            "description": "Set the channel for the server logs.",
-            "permissions": "Manage Channels"
-        },
-        "muteclear": {
-            "description": "Clear a mute from a member.",
-            "permissions": "Kick Members"
-        },
-        "unmute": {
-            "description": "Unmute a muted member.",
-            "permissions": "Kick Members"
-        },
-        "support": {
-            "description": "Request support for the bot. Just send your message after the command and we will get back to you asap."
-        },
-        "reply": {
-            "description": "Reply to a support message.",
-            "permissions": "Ban Members\n- only in GuildID = 827706267325562881"
-        },
-        "removebannedword": {
-            "description": "Remove a banned word from the banned word list.",
-            "permissions": "Kick Members"
-        },
-        "leave": {
-            "description": "Make the bot leave a voice channel."
-        },
-        "play": {
-            "description": "Play audio into a voice channel.\nSearches are done through YouTube."
-        },
-        "customembed": {
-            "description": "Change the bots embed colour.",
-            "permissions": "Manage Roles"
-        },
-        "tts": {
-            "description": "Text to speech some text. The [language] is optional. The language must be inside [] for it to register.",
-            "cooldown": 5
-        },
-        "emoji": {
-            "description": "View an emoji."
-        },
-        "invite": {
-            "description": "Get the bots invite URL."
-        },
-        "dm": {
-            "description": "Direct message someone using the bot.",
-            "permissions": "Bot Owner"
-        },
-        "setjoinrole": {
-            "description": "Set a role for members to gain when joining the server.",
-            "permissions": "Manage Roles"
-        },
-        "listjoinroles": {
-            "description": "List all the currently set server join roles."
-        },
-        "removejoinrole": {
-            "description": "Remove a role from the list of server join roles.",
-            "permissions": "Manage Roles"
-        },
-        "membercount": {
-            "description": "Display the number of members currently in the server."
-        },
-        "commandcount": {
-            "description": "Display the number of commands the bot has."
-        },
-        "setmembercounter": {
-            "description": "Set a channel to use to display the current member count.\nA `!` must be used in the custom text to indicate the number, for example: `e!setmembercount [channelID] Current Members: !`",
-            "permissions": "Manage Channels"
-        },
-        "squarify": {
-            "description": "Squarifies images. The first number is the square size, the second is the size of the gap between them which is removed."
-        },
-        "magnify": {
-            "description": "Enlarges an image."
-        },
-        "palette": {
-            "description": "Show the palette of an image."
-        },
-        "quote": {
-            "description": "Generate an \"inspirational\" image quote."
-        },
-        "textquote": {
-            "description": "Generate an \"inspirational\" quote."
-        },
-        "ellipse": {
-            "description": "Draw an ellipse on an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
-        },
-        "fill": {
-            "description": "Fill a closed on an image with colour.",
-            "cooldown": 10
-        },
-        "image": {
-            "description": "Generate a new blank image."
-        },
-        "line": {
-            "description": "Draw a line across an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
-        },
-        "pixel": {
-            "description": "Add a single pixel to an image."
-        },
-        "polygon": {
-            "description": "Draw a polygon over an image.\n[x][y] is the centre of the polygon."
-        },
-        "rectangle": {
-            "description": "Draw a rectangle over an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
-        },
-        "text": {
-            "description": "Write text over an image.\nThe-text-must-use-dashes-instead-of-spaces.\nUse the command \"text fonts\" to show a list of fonts."
-        },
-        "embed": {
-            "description": "Send a custom embed using the bot.\nAll parameters must be seperated with \"; \".\nPut \"none\" if you don't want something."
-        },
-        "define": {
-            "description": "Shows the descriptions of a word."
-        },
-        "prefix": {
-            "description": "Change the prefix of the bot on your server.",
-            "permissions": "Administrator"
-        },
-        "band": {
-            "description": "Put some members into a band! Multiple members optional."
-        },
-        "unband": {
-            "description": "Remove some members from a band! Multiple members optional."
-        },
-        "monkeband": {
-            "description": "Put some members into a band of moneys! Multiple members optional."
-        },
-        "remindme": {
-            "description": "Set a reminder for yourself."
-        },
-        "monketest": {
-            "description": "Test how much of a monke someone is!"
-        },
-        "lock": {
-            "description": "Toggle on and off everyone's ability to send messages in a channel.",
-            "permissions": "Manage Messages"
-        },
-        "alias": {
-            "description": "Show the aliases for a command."
-        },
-        "disable": {
-            "description": "Toggle commands being disabled in a server.",
-            "permissions": "Administrator"
-        },
-        "disabled": {
-            "description": "Show which commands are disabled in a server."
-        },
-        "leet": {
-            "description": "Convert text to and from Leetspeak."
-        },
-        "charshift": {
-            "description": "Perform a Caesar Shift on a message by a determined amount."
-        },
-        "unban": {
-            "description": "Unban a user from the server.",
-            "permissions": "Ban Members"
-        },
-        "marry": {
-            "description": "Marry to members together! If the second member is left blank, you will be that member."
-        },
-        "pmcpack": {
-            "description": "Find a pack on Planet Minecraft."
-        },
-        "pmcskin": {
-            "description": "Find a skin on Planet Minecraft."
-        },
-        "pmcmap": {
-            "description": "Find a map on Planet Minecraft."
-        },
-        "pmcmember": {
-            "description": "Find a member on Planet Minecraft."
-        },
-        "mcwiki": {
-            "description": "Search something on the Minecraft Wiki."
-        },
-        "prefixlessmode": {
-            "description": "Allow for commands to not need a prefix when in DMs."
-        },
-        "gif": {
-            "description": "Search for a gif on Tenor."
-        },
-        "randomgif": {
-            "description": "Get a random gif from the first 20 results on Tenor."
-        },
-        "blockify": {
-            "description": "Turn an image into Minecraft block art!",
-            "cooldown": 5
-        },
-        "monke": {
-            "description": "Turn some members into a group of monkeys! Multiple members optional."
-        },
-        "stats": {
-            "description": "View the command stats for the bot. Specify a command to see per command stats."
-        },
-        "muterole": {
-            "description": "Creates a role named Muted (if there isn't already one) and then moves it as high up the role list as possible.\nThen it sets permissions on all channels to disable sending messages and adding reactions.",
-            "permissions": "Manage Roles"
-        },
-        "website": {
-            "description": "Get a link to Wynem's website."
-        },
-        "servers": {
-            "description": "Show the top 5 servers that the bot is in."
-        },
-        "reset": {
-            "description": "Reset the bot to its default state on this server as well as clearing any files related to this server.\nWARNING:\nThis will remove all warn and mute logs, and there is no way to recover them.",
-            "permissions": "Administrator"
-        },
-        "resize": {
-            "description": "Resizes an image to the specified size. Max size of 4096x4096."
-        },
-        "botserver": {
-            "description": "Get the invite links for both the bots Discord server and the bot creators Discord server."
-        },
-        "google": {
-            "description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
-        },
-        "credits": {
-            "description": "View the credits for the bot. This includes any APIs used and any websites data is sourced from."
-        },
-        "joke": {
-            "description": "Generate a joke."
-        },
-        "dadjoke": {
-            "description": "Generate a dad joke."
-        },
-        "setautotts": {
-            "description": "Set the channel where messages to be automatically read out load in a voice channel as TTS\nUsers not in a voice channel, and urls are ignored.",
-            "permissions": "Manage Channels"
-        },
-        "stop": {
-            "description": "Stop audio in a voice channel."
-        },
-        "pause": {
-            "description": "Pause audio in a voice channel."
-        },
-        "resume": {
-            "description": "Resume audio in a voice channel."
-        },
-        "blacklist": {
-            "description": "Channels:\nEnter a Category to block all channels in the category.\nEnter a Voice Channel to block the bot joining that channel.\nEnter a Text Channel to block commands in that channel.\nMembers:\nEnter a Member to block from being able to run certain commands.\n[command] is optional. Not specifying one will default to blocking all commands.",
-            "permissions": "Manage Channels"
-        },
-        "removeblacklist": {
-            "description": "Remove a blacklisted channel, or remove a blacklisted command from a member.\nIf a member has all commands blacklisted, leave [command] blank.",
-            "permissions": "Manage Channels"
-        },
-        "viewblacklist": {
-            "description": "View all blacklisted channels, or view the commands blacklisted for a member."
-        },
-        "spritesheet": {
-            "description": "Turn an animated GIF into a spritesheet."
-        },
-        "skinify": {
-            "description": "Turn any image into a minecraft skin. [sides] is optional."
-        },
-        "trans": {
-            "description": "Translate a message. Leave the command blank to view avaliable languages."
-        },
-        "rotate": {
-            "description": "Rotate an image. Defaults to 90\u00c2\u00b0."
-        },
-        "imagesize": {
-            "description": "View the width and height of an image."
-        },
-        "renderskin": {
-            "description": "Render a minecraft skin to view it in 3D. [skinMode] is optional, but can be set to \"slim\" to render a skin with 3px wide arms."
-        },
-        "namehistory": {
-            "description": "View a minecraft accounts username history."
-        },
-        "playerhead": {
-            "description": "Generate a custom playerhead from any image. The image url be from minecraft.net, but there are ways to upload your own."
-        },
-        "valentines": {
-            "description": "Generate a minecraft valentines for that special someone in your life."
-        },
-        "sortchannels": {
-            "description": "Sort the channels in a category alphabetically.",
-            "permissions": "Manage Channels"
-        },
-        "setmodping": {
-            "description": "Set the role to use for modpings.",
-            "permissions": "Manage Roles"
-        },
-        "removemodping": {
-            "description": "Remove the role thats used with modpings.",
-            "permissions": "Manage Roles"
-        },
-        "modping": {
-            "description": "Perform a modping. This pings all currently online moderators."
-        },
-        "capeify": {
-            "description": "Turn any image into a Minecraft cape. [size] is optional, and goes from 1 - 10."
-        },
-        "poll": {
-            "description": "Create a poll where people react to vote! Members are limited to one reaction.\nFormatting example:\ne!poll This is the title; 😳 Option one; 😄 Option two."
-        },
-        "yeet": {
-            "description": "Throw a member really far."
-        },
-        "reactionroles": {
-            "description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; 😳 role description; 😄 role description."
-        },
-        "mirror": {
-            "description": "Mirror an image horizontally."
-        },
-        "flip": {
-            "description": "Flip an image vertically."
-        },
-        "trim": {
-            "description": "Remove the transparent pixels from the edge of an image."
-        },
-        "filesize": {
-            "description": "Determine the file size of a file."
-        },
-        "waaw": {
-            "description": "Mirror the left side of an image to the right side."
-        },
-        "woow": {
-            "description": "Mirror the right side of an image to the left side."
-        },
-        "haah": {
-            "description": "Flip the top half of an image to the bottom half."
-        },
-        "hooh": {
-            "description": "Flip the bottom half of an image to the top half."
-        },
-        "paletteify": {
-            "description": "Limit an images colour palette to a certain amount."
-        },
-        "queue": {
-            "description": "View the queued up music in a voice channel."
-        },
-        "shuffle": {
-            "description": "Shuffle the order of the songs in the music queue."
-        },
-        "requestemoji": {
-            "description": "Request a default emoji to be added to the bots emoji database."
-        },
-        "setemoji": {
-            "description": "Add an emoji to the bots emoji database. The url must be the emojis svg url. You can get the url by right clicking a default emoji and then clicking \"Copy Link\".",
-            "permissions": "Ban Members\n- only in GuildID = 827706267325562881"
-        },
-        "defaultemojistats": {
-            "description": "View how many default emoji are in the bots emoji database."
-        },
-        "slowmode": {
-            "description": "Set the slowmode length for a channel.",
-            "permissions": "Manage Channels"
-        },
-        "noiseify": {
-            "description": "Shuffle an images pixels into noise."
-        },
-        "invert": {
-            "description": "Invert an images colour."
-        },
-        "grayscale": {
-            "description": "Turn an image grayscale."
-        },
-        "snap": {
-            "description": "Snap a user out of existence."
-        },
-        "spin": {
-            "description": "Make an image spin!\n[direction] is \"forwards/backwards/on/off\".\nSpeed is a number, the larger, the slower.\n[expand] is \"on/off\".]",
-            "cooldown": 5
-        },
-        "hueshift": {
-            "description": "Change the hue of an image.",
-            "cooldown": 3
-        },
-        "rainbow": {
-            "description": "Make an image cycle through the rainbow!\n[direction] is \"forwards/backwards/on/off\".\nSpeed is a number, the larger, the slower.",
-            "cooldown": 5
-        },
-        "contact": {
-            "description": "Get a list of ways to contact the bot developer."
-        },
-        "ttslang": {
-            "description": "Set a default language for your TTS to be read in."
-        },
-        "starboard": {
-            "description": "Set up a starboard for the server. A starboard is a channel where messages are sent after they reach a certain number of upvotes. Upon setup, the starboard channel is automatically added to the starboard blacklist.",
-            "permissions": "Manage Channels"
-        },
-        "removestarboard": {
-            "description": "Remove a set starboard.",
-            "permissions": "Manage Channels"
-        },
-        "starboardblacklist": {
-            "description": "Blacklist a channel from having its messages sent to the starboard.",
-            "permissions": "Manage Channels"
-        },
-        "starboardinfo": {
-            "description": "View the info about a starboard. Includes the channel, emoji, emoji count, and a list of blacklisted channels."
-        },
-        "removestarboardbl": {
-            "description": "Remove a blacklisted channel from the starboard blacklist.",
-            "permissions": "Manage Channels"
-        },
-        "systemstats": {
-            "description": "View the stats about the hardware the bot is running on."
-        },
-        "paste": {
-            "description": "Paste an image onto another image."
-        },
-        "crop": {
-            "description": "Crop a region of an image."
-        },
-        "impostor": {
-            "description": "Create a custom Among Us character!",
-            "cooldown": 8
-        },
-        "wynem": {
-            "description": "Create a custom Wynem logo!",
-            "cooldown": 3
-        },
-        "ctm": {
-            "description": "Convert compact CTM to full CTM"
-        },
-        "chest": {
-            "description": "Convert chests from 1.14 to 1.15 and back. To downgrade double chests, put both image links in the command, in the order [leftChest] [rightChest]."
-        },
-        "ewan": {
-            "description": "Get a link to the bot creators website."
-        }
-    }
+	"help": [
+		"Bot",
+		"Fun",
+		"Images",
+		"Information",
+		"Media",
+		"Minecraft",
+		"Moderation",
+		"Other",
+		"Server",
+		"User",
+		"Utility",
+		"VC"
+	],
+	"categories": {
+		"moderation": {
+			"subcategories": [
+				"Blacklists",
+				"Modpings",
+				"Mutes",
+				"Roles",
+				"Warns",
+				"Wordfilter"
+			],
+			"commands": [
+				"ban                 <member>[reason]",
+				"kick                <member>[reason]",
+				"purge               [amount]",
+				"unban               [userID]"
+			]
+		},
+		"modpings": {
+			"commands": [
+				"setmodping          <role>",
+				"modping             [n/a]",
+				"removemodping       [n/a]"
+			]
+		},
+		"vc": {
+			"commands": [
+				"leave               [n/a]",
+				"pause               [n/a]",
+				"play                [searchTerm]",
+				"queue               [n/a]",
+				"resume              [n/a]",
+				"shuffle             [n/a]",
+				"stop                [n/a]",
+				"tts                 [language][text]",
+				"ttslang             [language]"
+			]
+		},
+		"wordfilter": {
+			"commands": [
+				"addbannedword       [word][severity]",
+				"listbannedwords     [n/a]",
+				"removebannedword    [word]"
+			]
+		},
+		"roles": {
+			"commands": [
+				"addrole             <member>[role]",
+				"muterole            [n/a]",
+				"reactionroles       [title; <emoji> <role> description;...]",
+				"removerole          <member>[role]"
+			]
+		},
+		"mutes": {
+			"commands": [
+				"mute                <member>[time][value][reason]",
+				"muteclear           <member>[slotnumber]",
+				"mutecount           <member>",
+				"mutelist            <member>",
+				"unmute              <member>"
+			]
+		},
+		"warns": {
+			"commands": [
+				"warn                <member>[reason]",
+				"warnclear           <member>[number]",
+				"warncount           <member>",
+				"warnlist            <member>"
+			]
+		},
+		"server": {
+			"subcategories": [
+				"Artchives",
+				"Starboards"
+			],
+			"commands": [
+				"lock                <channel>",
+				"membercount         [n/a]",
+				"setautotts          <channel>",
+				"setlogs             <channel>",
+				"setmembercounter    [channelID][text]",
+				"slowmode            <channel>[length]",
+				"sortchannels        <category>"
+			]
+		},
+		"artchives": {
+			"commands": [
+				"artchive            [description]",
+				"setartchive         <channel>"
+			]
+		},
+		"starboards": {
+			"commands": [
+				"removestarboard     [n/a]",
+				"removestarboardbl   <channel>",
+				"starboard           <channel>[emojiCount][emoji]",
+				"starboardblacklist  <channel>"
+			]
+		},
+		"bot": {
+			"subcategories": [
+				"Joinroles"
+			],
+			"commands": [
+				"alias               [command]",
+				"botserver           [n/a]",
+				"bugreport           [message]",
+				"commandcount        [n/a]",
+				"contact             [n/a]",
+				"credits             [n/a]",
+				"customembed         [colour]",
+				"defaultemojistats   [n/a]",
+				"disable             [command]",
+				"disabled            [n/a]",
+				"help                [command]",
+				"invite              [n/a]",
+				"ping                [n/a]",
+				"prefix              [prefix]",
+				"prefixlessmode      [n/a]",
+				"requestemoji        [emoji]",
+				"reset               [n/a]",
+				"servers             [n/a]",
+				"suggest             [message]",
+				"support             [message]",
+				"stats               [command]",
+				"uptime              [n/a]",
+				"website             [n/a]"
+			]
+		},
+		"joinroles": {
+			"commands": [
+				"listjoinroles       [n/a]",
+				"removejoinrole      <role>",
+				"setjoinrole         <role>"
+			]
+		},
+		"user": {
+			"commands": [
+				"avatar              <member>",
+				"id                  <member>",
+				"joinposition        <member>",
+				"nickname            [nickname]",
+				"setnickname         <member>[nickname]"
+			]
+		},
+		"information": {
+			"commands": [
+				"info                [n/a]",
+				"userinfo            <member>",
+				"serverinfo          [n/a]",
+				"starboardinfo       [n/a]",
+				"systemstats         [n/a]"
+			]
+		},
+		"minecraft": {
+			"description": "For the commands that take the [imageURL] input, the same applies as what is in the Image category description.",
+			"subcategories": [
+				"Planetminecraft",
+				"Resourcepacks",
+				"Skins"
+			],
+			"commands": [
+				"account             <member>",
+				"blockify            [imageURL]",
+				"cem                 [entity]",
+				"mcwiki              [searchTerm]",
+				"namehistory         [name]",
+				"playerhead          [url]",
+				"removeaccount       [n/a]",
+				"setaccount          [name]"
+			]
+		},
+		"planetminecraft": {
+			"commands": [
+				"pmcmap              [searchTerm]",
+				"pmcmember           [searchTerm]",
+				"pmcpack             [searchTerm]",
+				"pmcskin             [searchTerm]"
+			]
+		},
+		"skins": {
+			"commands": [
+				"cape                [name]",
+				"capeify             [size][imageURL]",
+				"head                [name]",
+				"renderskin          [skinMode][imageURL]",
+				"skin                [name]",
+				"skinify             [imageURL]"
+			]
+		},
+		"utility": {
+			"commands": [
+				"google              [searchTerm]",
+				"math                [number][process][number]",
+				"remindme            [duration][reminder]",
+				"trans               [sourceLanguage][destinationLanguage][message]"
+			]
+		},
+		"fun": {
+			"subcategories": [
+				"Imagefun"
+			],
+			"commands": [
+				"ball                [question]",
+				"bean                <member>",
+				"beanrequest         [n/a]",
+				"charshift           [offset][text]",
+				"coin                [n/a]",
+				"dadjoke             [n/a]",
+				"dice                [number]",
+				"joke                [n/a]",
+				"kill                <member>[weapon]",
+				"leet                [text]",
+				"love                [name] [name]",
+				"mock                [text]",
+				"monketest           <member><member><member><member>",
+				"namesearch          [text]",
+				"quote               [n/a]",
+				"say                 [character][message]",
+				"textquote           [n/a]",
+				"tictactoe           <member>"
+			]
+		},
+		"imagefun": {
+			"commands": [
+				"band                <member><member><member><member>",
+				"gun                 [scaleMode][imageURL]",
+				"impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
+				"marry               <member><member>",
+				"monke               <member><member><member><member>",
+				"monkeband           <member><member><member>",
+				"rainbow             [speed][direction][imageURL]",
+				"snap                <member><member>",
+				"spin                [speed][direction][expandMode][imageURL]",
+				"squarify            [squaresize][gapsize][imageURL]",
+				"triggered           [imageURL]",
+				"unband              <member><member><member><member>",
+				"valentines          <member>",
+				"wynem               [lines][lines2][background][shadow][imageURL]",
+				"yeet                <member><member>"
+			]
+		},
+		"other": {
+			"commands": [
+				"binary              [message]",
+				"bottime             [n/a]",
+				"decodemessage       [key][message]",
+				"define              [word]",
+				"embed               [title][description][thumbnailURL][imageURL]",
+				"emoji               [emoji]",
+				"encodemessage       [key][message]",
+				"ewan                [n/a]",
+				"filesize            [fileURL]",
+				"mock                [text]",
+				"poll                [title; <emoji> description;...]",
+				"qrcode              [message]",
+				"qrcodedecode        [imageURL]",
+				"randomnumber        [number][number]"
+			]
+		},
+		"media": {
+			"commands": [
+				"gif                 [tag]",
+				"randomgif           [tag]",
+				"thumbnail           [name]",
+				"youtube             [name]"
+			]
+		},
+		"images": {
+			"description": "These commands take many image inputs. Where it says [imageURL], this can be a url, member ping, uploaded image, emoji, or leave it blank to target an image/url/emoji from a previous message in the channel. You can reply to a message to target an image in that message.",
+			"subcategories": [
+				"Drawing"
+			],
+			"commands": [
+				"crop                [x][y][x2][y2][imageURL]",
+				"flip                [imageURL]",
+				"grayscale           [imageURL]",
+				"haah                [imageURL]",
+				"hooh                [imageURL]",
+				"hueshift            [angle][imageURL]",
+				"imagesize           [imageURL]",
+				"invert              [imageURL]",
+				"magnify             [imageURL]",
+				"mirror              [imageURL]",
+				"noiseify            [imageURL]",
+				"palette             [imageURL]",
+				"paletteify          [imageURL]",
+				"paste               [x][y][imageURL][imageURL]",
+				"resize              [width][height][imageURL]",
+				"rotate              [degrees][imageURL]",
+				"spritesheet         [imageURL]",
+				"trim                [imageURL]",
+				"waaw                [imageURL]",
+				"woow                [imageURL]"
+			]
+		},
+		"drawing": {
+			"description": "For the [colour] element, you can use [r][g][b], [#hexcode], or [colourname].",
+			"commands": [
+				"ellipse             [x][y][x2][y2][colour][imageURL]",
+				"fill                [x][y][colour][tolerance][imageURL]",
+				"image               [width][height][colour]",
+				"line                [x][y][x2][y2][colour][imageURL]",
+				"pixel               [x][y][colour][imageURL]",
+				"polygon             [x][y][radius][sides][colour][imageURL]",
+				"rectangle           [x][y][x2][y2][colour][imageURL]",
+				"text                [text][x][y][size][colour][font][imageURL]"
+			]
+		},
+		"blacklists": {
+			"description": "Blacklists are used to stop commands in certain channels, or to stop users from using certain commands.\n[command] is optional and is only avaliable for blacklisting members. Not specifying one will default to blocking all commands.",
+			"commands": [
+				"blacklist           <member/channel>[command]",
+				"removeblacklist     <member/channel>[command]",
+				"viewblacklist       <member>"
+			]
+		},
+		"resourcepacks": {
+			"commands": [
+				"chest               [imageURL][imageURL]",
+				"ctm                 [imageURL]",
+				"ctmsplitter         [imageURL]",
+				"renderentity        [imageURL]",
+				"tile                [imageURL]"
+			]
+		}
+	},
+	"commands": {
+		"ball": {
+			"description": "Ask the magic eight-ball a question."
+		},
+		"account": {
+			"description": "View the minecraft account tied to someones discord."
+		},
+		"addbannedword": {
+			"description": "Add a banned word. If severity is left blank, it defaults to 1. Words with other characters instead of letters (such as 'h3110') are automatically handled\n\nSeverity 1 - Deletes the message\nSeverity 2 - Deletes message and warns sender\nSeverity 3 - Deletes message, warns and mutes sender.",
+			"permissions": "Kick Members"
+		},
+		"addrole": {
+			"description": "Add a role to a mentioned user.",
+			"permissions": "Manage Roles"
+		},
+		"artchive": {
+			"description": "Add your artwork to the artchive!"
+		},
+		"avatar": {
+			"description": "Shows a users avatar."
+		},
+		"ban": {
+			"description": "Ban a user from the server.",
+			"permissions": "Ban Members"
+		},
+		"bean": {
+			"description": "Bean a user.",
+			"permissions": "Ban Members"
+		},
+		"beanrequest": {
+			"description": "Request to be beaned."
+		},
+		"bottime": {
+			"description": "See what the current time is for Wynem."
+		},
+		"cape": {
+			"description": "Get a Minecraft Java users capes."
+		},
+		"dice": {
+			"description": "Throw between 1 and 3 dice."
+		},
+		"coin": {
+			"description": "Flips a coin."
+		},
+		"head": {
+			"description": "Get a Minecraft Java users Minecraft head."
+		},
+		"help": {
+			"description": "Get a list of the bots commands and info about each one."
+		},
+		"id": {
+			"description": "Shows a users ID."
+		},
+		"info": {
+			"description": "Get info about the bot."
+		},
+		"joinposition": {
+			"description": "View what position a user joined the server in.\nYou can also find what member is in a position by entering the number instead of a member."
+		},
+		"kick": {
+			"description": "Kick a user from the server.",
+			"permissions": "Kick Members"
+		},
+		"kill": {
+			"description": "Kill a user with a Minecraft death message. <member> and [weapon] are optional."
+		},
+		"listbannedwords": {
+			"description": "List all banned words.",
+			"permissions": "Manage Messages"
+		},
+		"love": {
+			"description": "Discover how much you love someone!"
+		},
+		"math": {
+			"description": "Calculate simple math equations."
+		},
+		"mock": {
+			"description": "Spongebobify some text."
+		},
+		"mute": {
+			"description": "Temporarily mute a user, removing their ability to talk in chat. Defaults to 10 minutes if left blank.",
+			"permissions": "Kick Members"
+		},
+		"mutecount": {
+			"description": "Show how many times a user has been muted."
+		},
+		"mutelist": {
+			"description": "Show a description of every mute a user has had."
+		},
+		"namesearch": {
+			"description": "Search for users with certain text in their name."
+		},
+		"nickname": {
+			"description": "Set your nickname."
+		},
+		"ping": {
+			"description": "Check the bots latency."
+		},
+		"purge": {
+			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank.",
+			"permissions": "Manage Messages"
+		},
+		"randomnumber": {
+			"description": "Generates a random number between two numbers."
+		},
+		"removerole": {
+			"description": "Remove a role from a mentioned user.",
+			"permissions": "Manage Roles"
+		},
+		"say": {
+			"description": "Make a character say a message of your choice. [character] is optional."
+		},
+		"serverinfo": {
+			"description": "Get info about the server."
+		},
+		"setaccount": {
+			"description": "Tie a minecraft account to your discord, so you can run the Minecraft commands without specifying a user."
+		},
+		"removeaccount": {
+			"description": "Remove a minecraft account from your discord."
+		},
+		"setnickname": {
+			"description": "Set a users nickname.",
+			"permissions": "Manage Nicknames"
+		},
+		"skin": {
+			"description": "Get a Minecraft Java users Minecraft skin."
+		},
+		"thumbnail": {
+			"description": "View the Thumbnail of a YouTube video."
+		},
+		"uptime": {
+			"description": "Check how long the bot has been running for."
+		},
+		"userinfo": {
+			"description": "Get info about a desired user."
+		},
+		"warn": {
+			"description": "Warns a user.",
+			"permissions": "Kick Members"
+		},
+		"warnclear": {
+			"description": "Clear warns from a user.",
+			"permissions": "Kick Members"
+		},
+		"warncount": {
+			"description": "Show how many times a user has been warned."
+		},
+		"warnlist": {
+			"description": "Show a description of every warn a user has had."
+		},
+		"youtube": {
+			"description": "Search for a YouTube video."
+		},
+		"cem": {
+			"description": "Get a list of bone names for use with OptiFine CEM.\nDont supply an entity to get a full list of entities."
+		},
+		"setartchive": {
+			"description": "Set the channel for the Artchive command.",
+			"permissions": "Manage Channels"
+		},
+		"setlogs": {
+			"description": "Set the channel for the server logs.",
+			"permissions": "Manage Channels"
+		},
+		"muteclear": {
+			"description": "Clear a mute from a member.",
+			"permissions": "Kick Members"
+		},
+		"unmute": {
+			"description": "Unmute a muted member.",
+			"permissions": "Kick Members"
+		},
+		"support": {
+			"description": "Request support for the bot. Just send your message after the command and we will get back to you asap."
+		},
+		"reply": {
+			"description": "Reply to a support message.",
+			"permissions": "Ban Members\n- only in GuildID = 827706267325562881"
+		},
+		"removebannedword": {
+			"description": "Remove a banned word from the banned word list.",
+			"permissions": "Kick Members"
+		},
+		"leave": {
+			"description": "Make the bot leave a voice channel."
+		},
+		"play": {
+			"description": "Play audio into a voice channel.\nSearches are done through YouTube."
+		},
+		"customembed": {
+			"description": "Change the bots embed colour.",
+			"permissions": "Manage Roles"
+		},
+		"tts": {
+			"description": "Text to speech some text. The [language] is optional. The language must be inside [] for it to register.",
+			"cooldown": 5
+		},
+		"emoji": {
+			"description": "View an emoji."
+		},
+		"invite": {
+			"description": "Get the bots invite URL."
+		},
+		"dm": {
+			"description": "Direct message someone using the bot.",
+			"permissions": "Bot Owner"
+		},
+		"setjoinrole": {
+			"description": "Set a role for members to gain when joining the server.",
+			"permissions": "Manage Roles"
+		},
+		"listjoinroles": {
+			"description": "List all the currently set server join roles."
+		},
+		"removejoinrole": {
+			"description": "Remove a role from the list of server join roles.",
+			"permissions": "Manage Roles"
+		},
+		"membercount": {
+			"description": "Display the number of members currently in the server."
+		},
+		"commandcount": {
+			"description": "Display the number of commands the bot has."
+		},
+		"setmembercounter": {
+			"description": "Set a channel to use to display the current member count.\nA `!` must be used in the custom text to indicate the number, for example: `e!setmembercount [channelID] Current Members: !`",
+			"permissions": "Manage Channels"
+		},
+		"squarify": {
+			"description": "Squarifies images. The first number is the square size, the second is the size of the gap between them which is removed."
+		},
+		"magnify": {
+			"description": "Enlarges an image."
+		},
+		"palette": {
+			"description": "Show the palette of an image."
+		},
+		"quote": {
+			"description": "Generate an \"inspirational\" image quote."
+		},
+		"textquote": {
+			"description": "Generate an \"inspirational\" quote."
+		},
+		"ellipse": {
+			"description": "Draw an ellipse on an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
+		},
+		"fill": {
+			"description": "Fill a closed on an image with colour.",
+			"cooldown": 10
+		},
+		"image": {
+			"description": "Generate a new blank image."
+		},
+		"line": {
+			"description": "Draw a line across an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
+		},
+		"pixel": {
+			"description": "Add a single pixel to an image."
+		},
+		"polygon": {
+			"description": "Draw a polygon over an image.\n[x][y] is the centre of the polygon."
+		},
+		"rectangle": {
+			"description": "Draw a rectangle over an image.\n[x][y] is top left corner, [x2][y2] is bottom right corner."
+		},
+		"text": {
+			"description": "Write text over an image.\nThe-text-must-use-dashes-instead-of-spaces.\nUse the command \"text fonts\" to show a list of fonts."
+		},
+		"embed": {
+			"description": "Send a custom embed using the bot.\nAll parameters must be seperated with \"; \".\nPut \"none\" if you don't want something."
+		},
+		"define": {
+			"description": "Shows the descriptions of a word."
+		},
+		"prefix": {
+			"description": "Change the prefix of the bot on your server.",
+			"permissions": "Administrator"
+		},
+		"band": {
+			"description": "Put some members into a band! Multiple members optional."
+		},
+		"unband": {
+			"description": "Remove some members from a band! Multiple members optional."
+		},
+		"monkeband": {
+			"description": "Put some members into a band of moneys! Multiple members optional."
+		},
+		"remindme": {
+			"description": "Set a reminder for yourself."
+		},
+		"monketest": {
+			"description": "Test how much of a monke someone is!"
+		},
+		"lock": {
+			"description": "Toggle on and off everyone's ability to send messages in a channel.",
+			"permissions": "Manage Messages"
+		},
+		"alias": {
+			"description": "Show the aliases for a command."
+		},
+		"disable": {
+			"description": "Toggle commands being disabled in a server.",
+			"permissions": "Administrator"
+		},
+		"disabled": {
+			"description": "Show which commands are disabled in a server."
+		},
+		"leet": {
+			"description": "Convert text to and from Leetspeak."
+		},
+		"charshift": {
+			"description": "Perform a Caesar Shift on a message by a determined amount."
+		},
+		"unban": {
+			"description": "Unban a user from the server.",
+			"permissions": "Ban Members"
+		},
+		"marry": {
+			"description": "Marry to members together! If the second member is left blank, you will be that member."
+		},
+		"pmcpack": {
+			"description": "Find a pack on Planet Minecraft."
+		},
+		"pmcskin": {
+			"description": "Find a skin on Planet Minecraft."
+		},
+		"pmcmap": {
+			"description": "Find a map on Planet Minecraft."
+		},
+		"pmcmember": {
+			"description": "Find a member on Planet Minecraft."
+		},
+		"mcwiki": {
+			"description": "Search something on the Minecraft Wiki."
+		},
+		"prefixlessmode": {
+			"description": "Allow for commands to not need a prefix when in DMs."
+		},
+		"gif": {
+			"description": "Search for a gif on Tenor."
+		},
+		"randomgif": {
+			"description": "Get a random gif from the first 20 results on Tenor."
+		},
+		"blockify": {
+			"description": "Turn an image into Minecraft block art!",
+			"cooldown": 5
+		},
+		"monke": {
+			"description": "Turn some members into a group of monkeys! Multiple members optional."
+		},
+		"stats": {
+			"description": "View the command stats for the bot. Specify a command to see per command stats."
+		},
+		"muterole": {
+			"description": "Creates a role named Muted (if there isn't already one) and then moves it as high up the role list as possible.\nThen it sets permissions on all channels to disable sending messages and adding reactions.",
+			"permissions": "Manage Roles"
+		},
+		"website": {
+			"description": "Get a link to Wynem's website."
+		},
+		"servers": {
+			"description": "Show the top 5 servers that the bot is in."
+		},
+		"reset": {
+			"description": "Reset the bot to its default state on this server as well as clearing any files related to this server.\nWARNING:\nThis will remove all warn and mute logs, and there is no way to recover them.",
+			"permissions": "Administrator"
+		},
+		"resize": {
+			"description": "Resizes an image to the specified size. Max size of 4096x4096."
+		},
+		"botserver": {
+			"description": "Get the invite links for both the bots Discord server and the bot creators Discord server."
+		},
+		"google": {
+			"description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
+		},
+		"credits": {
+			"description": "View the credits for the bot. This includes any APIs used and any websites data is sourced from."
+		},
+		"joke": {
+			"description": "Generate a joke."
+		},
+		"dadjoke": {
+			"description": "Generate a dad joke."
+		},
+		"setautotts": {
+			"description": "Set the channel where messages to be automatically read out load in a voice channel as TTS\nUsers not in a voice channel, and urls are ignored.",
+			"permissions": "Manage Channels"
+		},
+		"stop": {
+			"description": "Stop audio in a voice channel."
+		},
+		"pause": {
+			"description": "Pause audio in a voice channel."
+		},
+		"resume": {
+			"description": "Resume audio in a voice channel."
+		},
+		"blacklist": {
+			"description": "Channels:\nEnter a Category to block all channels in the category.\nEnter a Voice Channel to block the bot joining that channel.\nEnter a Text Channel to block commands in that channel.\nMembers:\nEnter a Member to block from being able to run certain commands.\n[command] is optional. Not specifying one will default to blocking all commands.",
+			"permissions": "Manage Channels"
+		},
+		"removeblacklist": {
+			"description": "Remove a blacklisted channel, or remove a blacklisted command from a member.\nIf a member has all commands blacklisted, leave [command] blank.",
+			"permissions": "Manage Channels"
+		},
+		"viewblacklist": {
+			"description": "View all blacklisted channels, or view the commands blacklisted for a member."
+		},
+		"spritesheet": {
+			"description": "Turn an animated GIF into a spritesheet."
+		},
+		"skinify": {
+			"description": "Turn any image into a minecraft skin. [sides] is optional."
+		},
+		"trans": {
+			"description": "Translate a message. Leave the command blank to view avaliable languages."
+		},
+		"rotate": {
+			"description": "Rotate an image. Defaults to 90\u00c2\u00b0."
+		},
+		"imagesize": {
+			"description": "View the width and height of an image."
+		},
+		"renderskin": {
+			"description": "Render a minecraft skin to view it in 3D. [skinMode] is optional, but can be set to \"slim\" to render a skin with 3px wide arms."
+		},
+		"namehistory": {
+			"description": "View a minecraft accounts username history."
+		},
+		"playerhead": {
+			"description": "Generate a custom playerhead from any image. The image url be from minecraft.net, but there are ways to upload your own."
+		},
+		"valentines": {
+			"description": "Generate a minecraft valentines for that special someone in your life."
+		},
+		"sortchannels": {
+			"description": "Sort the channels in a category alphabetically.",
+			"permissions": "Manage Channels"
+		},
+		"setmodping": {
+			"description": "Set the role to use for modpings.",
+			"permissions": "Manage Roles"
+		},
+		"removemodping": {
+			"description": "Remove the role thats used with modpings.",
+			"permissions": "Manage Roles"
+		},
+		"modping": {
+			"description": "Perform a modping. This pings all currently online moderators."
+		},
+		"capeify": {
+			"description": "Turn any image into a Minecraft cape. [size] is optional, and goes from 1 - 10."
+		},
+		"poll": {
+			"description": "Create a poll where people react to vote! Members are limited to one reaction.\nFormatting example:\ne!poll This is the title; 😳 Option one; 😄 Option two."
+		},
+		"yeet": {
+			"description": "Throw a member really far."
+		},
+		"reactionroles": {
+			"description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; 😳 role description; 😄 role description."
+		},
+		"mirror": {
+			"description": "Mirror an image horizontally."
+		},
+		"flip": {
+			"description": "Flip an image vertically."
+		},
+		"trim": {
+			"description": "Remove the transparent pixels from the edge of an image."
+		},
+		"filesize": {
+			"description": "Determine the file size of a file."
+		},
+		"waaw": {
+			"description": "Mirror the left side of an image to the right side."
+		},
+		"woow": {
+			"description": "Mirror the right side of an image to the left side."
+		},
+		"haah": {
+			"description": "Flip the top half of an image to the bottom half."
+		},
+		"hooh": {
+			"description": "Flip the bottom half of an image to the top half."
+		},
+		"paletteify": {
+			"description": "Limit an images colour palette to a certain amount."
+		},
+		"queue": {
+			"description": "View the queued up music in a voice channel."
+		},
+		"shuffle": {
+			"description": "Shuffle the order of the songs in the music queue."
+		},
+		"requestemoji": {
+			"description": "Request a default emoji to be added to the bots emoji database."
+		},
+		"setemoji": {
+			"description": "Add an emoji to the bots emoji database. The url must be the emojis svg url. You can get the url by right clicking a default emoji and then clicking \"Copy Link\".",
+			"permissions": "Ban Members\n- only in GuildID = 827706267325562881"
+		},
+		"defaultemojistats": {
+			"description": "View how many default emoji are in the bots emoji database."
+		},
+		"slowmode": {
+			"description": "Set the slowmode length for a channel.",
+			"permissions": "Manage Channels"
+		},
+		"noiseify": {
+			"description": "Shuffle an images pixels into noise."
+		},
+		"invert": {
+			"description": "Invert an images colour."
+		},
+		"grayscale": {
+			"description": "Turn an image grayscale."
+		},
+		"snap": {
+			"description": "Snap a user out of existence."
+		},
+		"spin": {
+			"description": "Make an image spin!\n[direction] is \"forwards/backwards/on/off\".\nSpeed is a number, the larger, the slower.\n[expand] is \"on/off\".]",
+			"cooldown": 5
+		},
+		"hueshift": {
+			"description": "Change the hue of an image.",
+			"cooldown": 3
+		},
+		"rainbow": {
+			"description": "Make an image cycle through the rainbow!\n[direction] is \"forwards/backwards/on/off\".\nSpeed is a number, the larger, the slower.",
+			"cooldown": 5
+		},
+		"contact": {
+			"description": "Get a list of ways to contact the bot developer."
+		},
+		"ttslang": {
+			"description": "Set a default language for your TTS to be read in."
+		},
+		"starboard": {
+			"description": "Set up a starboard for the server. A starboard is a channel where messages are sent after they reach a certain number of upvotes. Upon setup, the starboard channel is automatically added to the starboard blacklist.",
+			"permissions": "Manage Channels"
+		},
+		"removestarboard": {
+			"description": "Remove a set starboard.",
+			"permissions": "Manage Channels"
+		},
+		"starboardblacklist": {
+			"description": "Blacklist a channel from having its messages sent to the starboard.",
+			"permissions": "Manage Channels"
+		},
+		"starboardinfo": {
+			"description": "View the info about a starboard. Includes the channel, emoji, emoji count, and a list of blacklisted channels."
+		},
+		"removestarboardbl": {
+			"description": "Remove a blacklisted channel from the starboard blacklist.",
+			"permissions": "Manage Channels"
+		},
+		"systemstats": {
+			"description": "View the stats about the hardware the bot is running on."
+		},
+		"paste": {
+			"description": "Paste an image onto another image."
+		},
+		"crop": {
+			"description": "Crop a region of an image."
+		},
+		"impostor": {
+			"description": "Create a custom Among Us character!",
+			"cooldown": 8
+		},
+		"wynem": {
+			"description": "Create a custom Wynem logo!",
+			"cooldown": 3
+		},
+		"ctm": {
+			"description": "Convert compact CTM to full CTM"
+		},
+		"chest": {
+			"description": "Convert chests from 1.14 to 1.15 and back. To downgrade double chests, put both image links in the command, in the order [leftChest] [rightChest]."
+		},
+		"ewan": {
+			"description": "Get a link to the bot creators website."
+		},
+		"encodemessage": {
+			"description": "Encode a message using a password."
+		},
+		"decodemessage": {
+			"description": "Decode a message using a password."
+		},
+		"ctmsplitter": {
+			"description": "Split a CTM template image up into its individual images for use with OptiFine ctm."
+		},
+		"renderentity": {
+			"description": "Render an entity skin onto a 3D model. Run without any arguments to see a list of supported entities."
+		},
+		"tile": {
+			"description": "Tile an image in a 5x5 area."
+		},
+		"binary": {
+			"description": "Convert messages to and from binary."
+		},
+		"suggest": {
+			"description": "Make a suggestion for the bot.",
+			"cooldown": 86400
+		},
+		"bugreport": {
+			"description": "Report a bug with the bot.",
+			"cooldown": 86400
+		},
+		"tictactoe": {
+			"description": "Play Tic Tac Toe with someone! React with an emoji to choose your placement."
+		},
+		"triggered": {
+			"description": "Make an image triggered."
+		},
+		"gun": {
+			"description": "Add a gun to an image. Scale mode is optional."
+		},
+		"qrcode": {
+			"description": "Generate a QR code."
+		},
+		"qrcodedecode": {
+			"description": "Decode a QR code."
+		},
+		"tinyurl": {
+			"description": "Shorten a link using tinyurl."
+		}
+	}
 }
