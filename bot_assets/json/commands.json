@@ -333,8 +333,8 @@
 			"commands": [
 				"chest               [imageURL][imageURL]",
 				"ctm                 [imageURL]",
-				"ctmsplitter         [imageURL]",
-				"renderentity        [imageURL]",
+				"ctmsplitter         [resolution][imageURL]",
+				"renderentity        [entity][imageURL]",
 				"tile                [imageURL]"
 			]
 		}
