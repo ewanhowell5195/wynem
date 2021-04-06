@@ -176,7 +176,6 @@
 			"commands": [
 				"account             <member>",
 				"blockify            [imageURL]",
-				"cem                 [entity]",
 				"mcwiki              [searchTerm]",
 				"namehistory         [name]",
 				"playerhead          [url]",
@@ -331,6 +330,8 @@
 		},
 		"resourcepacks": {
 			"commands": [
+				"animate             [speed][imageURL]",
+				"cem                 [entity]",
 				"chest               [imageURL][imageURL]",
 				"ctm                 [imageURL]",
 				"ctmsplitter         [resolution][imageURL]",
@@ -969,6 +970,9 @@
 		},
 		"tinyurl": {
 			"description": "Shorten a link using tinyurl."
+		},
+		"animate": {
+			"description": "Animate a Minecraft spritesheet texture. [speed] is optional."
 		}
 	}
 }
