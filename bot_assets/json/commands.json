@@ -803,7 +803,7 @@
 			"description": "Throw a member really far."
 		},
 		"reactionroles": {
-			"description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; 😳 role description; 😄 role description."
+			"description": "Create a message that users can react to to gain certain roles.\nFormatting example:\ne!reactionroles This is the title; 😳 @role description; 😄 @role description."
 		},
 		"mirror": {
 			"description": "Mirror an image horizontally."
