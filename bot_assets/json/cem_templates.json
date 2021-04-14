@@ -1,5 +1,5 @@
 {
-	"version": "3.1.2",
+	"version": "3.2.0",
 	"categories": [
 		{
 			"name": "Supported",
@@ -5369,6 +5369,92 @@
 									}
 								],
 								"animations": [{"chest_right_rotation.ry": "0"}]
+							}
+						]
+					}
+				},
+				{
+					"name": "llama_decor",
+					"display_name": "Llama Decor",
+					"texture_name": "llama_decor.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
+					"model": {
+						"textureSize": [128, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -17, 6],
+								"boxes": [
+									{"coordinates": [-2, 27, -16, 4, 4, 9], "textureOffset": [0, 0]},
+									{
+										"coordinates": [-4, 15, -12, 8, 18, 6],
+										"textureOffset": [0, 14]
+									},
+									{"coordinates": [-4, 33, -10, 3, 3, 2], "textureOffset": [17, 0]},
+									{"coordinates": [1, 33, -10, 3, 3, 2], "textureOffset": [17, 0]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -19, -2],
+								"submodels": [
+									{
+										"id": "body_rotation",
+										"invertAxis": "xy",
+										"translate": [0, 19, 2],
+										"rotate": [-90, 0, 0],
+										"boxes": [
+											{
+												"coordinates": [-6, -8, -7, 12, 18, 10],
+												"textureOffset": [29, 0]
+											}
+										]
+									}
+								],
+								"animations": [{"body_rotation.rx": "0"}]
+							},
+							{
+								"part": "leg1",
+								"id": "leg1",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [-5.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg2",
+								"id": "leg2",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [1.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg3",
+								"id": "leg3",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, 5],
+								"boxes": [
+									{
+										"coordinates": [-5.5, 0, -7, 4, 14, 4],
+										"textureOffset": [29, 29]
+									}
+								]
+							},
+							{
+								"part": "leg4",
+								"id": "leg4",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, 5],
+								"boxes": [
+									{"coordinates": [1.5, 0, -7, 4, 14, 4], "textureOffset": [29, 29]}
+								]
 							}
 						]
 					}
@@ -14105,92 +14191,6 @@
 					}
 				},
 				{
-					"name": "llama_carpet",
-					"display_name": "Llama Carpet",
-					"texture_name": "llama_carpet.png",
-					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
-					"model": {
-						"textureSize": [128, 64],
-						"models": [
-							{
-								"part": "head",
-								"id": "head",
-								"invertAxis": "xy",
-								"translate": [0, -17, 6],
-								"boxes": [
-									{"coordinates": [-2, 27, -16, 4, 4, 9], "textureOffset": [0, 0]},
-									{
-										"coordinates": [-4, 15, -12, 8, 18, 6],
-										"textureOffset": [0, 14]
-									},
-									{"coordinates": [-4, 33, -10, 3, 3, 2], "textureOffset": [17, 0]},
-									{"coordinates": [1, 33, -10, 3, 3, 2], "textureOffset": [17, 0]}
-								]
-							},
-							{
-								"part": "body",
-								"id": "body",
-								"invertAxis": "xy",
-								"translate": [0, -19, -2],
-								"submodels": [
-									{
-										"id": "body_rotation",
-										"invertAxis": "xy",
-										"translate": [0, 19, 2],
-										"rotate": [-90, 0, 0],
-										"boxes": [
-											{
-												"coordinates": [-6, -8, -7, 12, 18, 10],
-												"textureOffset": [29, 0]
-											}
-										]
-									}
-								],
-								"animations": [{"body_rotation.rx": "0"}]
-							},
-							{
-								"part": "leg1",
-								"id": "leg1",
-								"invertAxis": "xy",
-								"translate": [-3.5, -14, -6],
-								"boxes": [
-									{"coordinates": [-5.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
-								]
-							},
-							{
-								"part": "leg2",
-								"id": "leg2",
-								"invertAxis": "xy",
-								"translate": [3.5, -14, -6],
-								"boxes": [
-									{"coordinates": [1.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
-								]
-							},
-							{
-								"part": "leg3",
-								"id": "leg3",
-								"invertAxis": "xy",
-								"translate": [-3.5, -14, 5],
-								"boxes": [
-									{
-										"coordinates": [-5.5, 0, -7, 4, 14, 4],
-										"textureOffset": [29, 29]
-									}
-								]
-							},
-							{
-								"part": "leg4",
-								"id": "leg4",
-								"invertAxis": "xy",
-								"translate": [3.5, -14, 5],
-								"boxes": [
-									{"coordinates": [1.5, 0, -7, 4, 14, 4], "textureOffset": [29, 29]}
-								]
-							}
-						]
-					}
-				},
-				{
 					"name": "player",
 					"display_name": "Player",
 					"model": {
@@ -14451,6 +14451,92 @@
 											}
 										]
 									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"name": "trader_llama_decor",
+					"display_name": "Trader Llama Decor",
+					"texture_name": "trader_llama_decor.png",
+					"texture_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABABAMAAAAg+GJMAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFBSURBVHhe7ZQxboMwFIYbpoyYKXOFlDUU9QaoQ9aKGyAO0MUHYHFuEK4AHUpXKxeouEHEXfreM6pdqVXx60Ci8E34IT5hv9/vDlmrKk02Kk1W4UqIcK0AKCE7fA/FXzGCuspdQQ1ACZkueIizRndU2zAFRXOyghn+IKHl9QpUZRrOEdwDcbZvAK1HgVeQtlLKuNz3ff9xOovI+BBythrpPASSlgCV+nZAuslb4AiEC0cAKCAF4JEnONT18THPn29WwD9Em4MMwBgADMFWvjyVZfEKQRyG8yUIFgFroLgCMRLadOE8my4IzYB18u0roBG/c/LNFASUbzqCjrWFwBSxCX6CiAZsq9/ZAhrx7XBxgukDhSH4vvwS2DbyBO5X8wjenCgzBfYyzfIH/C78OweMy/RzOVoEIvJo45/chGARLIJPQr1VNK5PhckAAAAASUVORK5CYII=",
+					"model": {
+						"textureSize": [128, 64],
+						"models": [
+							{
+								"part": "head",
+								"id": "head",
+								"invertAxis": "xy",
+								"translate": [0, -17, 6],
+								"boxes": [
+									{"coordinates": [-2, 27, -16, 4, 4, 9], "textureOffset": [0, 0]},
+									{
+										"coordinates": [-4, 15, -12, 8, 18, 6],
+										"textureOffset": [0, 14]
+									},
+									{"coordinates": [-4, 33, -10, 3, 3, 2], "textureOffset": [17, 0]},
+									{"coordinates": [1, 33, -10, 3, 3, 2], "textureOffset": [17, 0]}
+								]
+							},
+							{
+								"part": "body",
+								"id": "body",
+								"invertAxis": "xy",
+								"translate": [0, -19, -2],
+								"submodels": [
+									{
+										"id": "body_rotation",
+										"invertAxis": "xy",
+										"translate": [0, 19, 2],
+										"rotate": [-90, 0, 0],
+										"boxes": [
+											{
+												"coordinates": [-6, -8, -7, 12, 18, 10],
+												"textureOffset": [29, 0]
+											}
+										]
+									}
+								],
+								"animations": [{"body_rotation.rx": "0"}]
+							},
+							{
+								"part": "leg1",
+								"id": "leg1",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [-5.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg2",
+								"id": "leg2",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, -6],
+								"boxes": [
+									{"coordinates": [1.5, 0, 4, 4, 14, 4], "textureOffset": [29, 29]}
+								]
+							},
+							{
+								"part": "leg3",
+								"id": "leg3",
+								"invertAxis": "xy",
+								"translate": [-3.5, -14, 5],
+								"boxes": [
+									{
+										"coordinates": [-5.5, 0, -7, 4, 14, 4],
+										"textureOffset": [29, 29]
+									}
+								]
+							},
+							{
+								"part": "leg4",
+								"id": "leg4",
+								"invertAxis": "xy",
+								"translate": [3.5, -14, 5],
+								"boxes": [
+									{"coordinates": [1.5, 0, -7, 4, 14, 4], "textureOffset": [29, 29]}
 								]
 							}
 						]
