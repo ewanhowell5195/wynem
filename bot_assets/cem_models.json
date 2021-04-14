@@ -628,6 +628,19 @@
 					"chest_left"
 				]
 			},
+			"llama_decor": {
+				"display_name": "Llama Decor",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"chest_right",
+					"chest_left"
+				]
+			},
 			"llama_spit": {
 				"display_name": "Llama Spit",
 				"bones": [
@@ -1389,6 +1402,7 @@
 			"drowned_outer_layer",
 			"elytra",
 			"glowsquid",
+			"goat",
 			"llama_carpet",
 			"pig_saddle",
 			"player",
@@ -1398,11 +1412,11 @@
 			"spectral_arrow",
 			"stray_outer_layer",
 			"strider_saddle",
+			"trader_llama_decor",
 			"tropical_fish_a_outer_layer",
 			"tropical_fish_b_outer_layer"
 		],
 		"unreleased": [
-			"goat",
 			"warden"
 		]
 	}
