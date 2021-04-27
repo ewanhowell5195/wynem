@@ -198,6 +198,7 @@
 				"head                [name]",
 				"renderskin          [skinMode][imageURL]",
 				"skin                [name]",
+				"skinconvert         [imageURL]",
 				"skinify             [imageURL]"
 			]
 		},
@@ -237,6 +238,7 @@
 		"imagefun": {
 			"commands": [
 				"band                <member><member><member><member>",
+				"emojify             [imageURL]",
 				"gun                 [scaleMode][imageURL]",
 				"impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
 				"marry               <member><member>",
@@ -973,6 +975,13 @@
 		},
 		"animate": {
 			"description": "Animate a Minecraft spritesheet texture. [speed] is optional."
+		},
+		"emojify": {
+			"description": "Turn an image into a bunch of emojis!",
+			"cooldown": 3
+		},
+		"skinconvert": {
+			"description": "Convert between the new and old Minecraft skin formats."
 		}
 	}
 }
