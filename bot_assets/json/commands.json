@@ -126,6 +126,7 @@
 				"defaultemojistats   [n/a]",
 				"disable             [command]",
 				"disabled            [n/a]",
+				"disablequotes       [n/a]",
 				"help                [command]",
 				"invite              [n/a]",
 				"ping                [n/a]",
@@ -337,6 +338,7 @@
 				"chest               [imageURL][imageURL]",
 				"ctm                 [imageURL]",
 				"ctmsplitter         [resolution][imageURL]",
+				"mojang              [mode][imageURL]",
 				"renderentity        [entity][imageURL]",
 				"tile                [imageURL]"
 			]
@@ -982,6 +984,13 @@
 		},
 		"skinconvert": {
 			"description": "Convert between the new and old Minecraft skin formats."
+		},
+		"disablequotes": {
+			"description": "Toggles disabling the message quotes that happen when you send a message link.",
+			"permissions": "Manage Channels"
+		},
+		"mojang": {
+			"description": "Convert between 1.15 and 1.16 Minecraft Mojang logo formats.\n[mode] can be \"upgrade\" or \"downgrade\"."
 		}
 	}
 }
