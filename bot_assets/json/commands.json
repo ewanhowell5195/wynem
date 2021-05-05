@@ -85,6 +85,7 @@
 		"server": {
 			"subcategories": [
 				"Artchives",
+				"FAQs",
 				"Starboards"
 			],
 			"commands": [
@@ -103,6 +104,16 @@
 				"setartchive         <channel>"
 			]
 		},
+		"faqs": {
+			"description": "The FAQ is a system to store frequently asked questions, so that you don't need to keep giving the same answers. The FAQ uses a JSON file for configuation.",
+			"commands": [
+				"faq                 [question]",
+				"getfaq              [n/a]",
+				"removefaq           [n/a]",
+				"templatefaq         [n/a]",
+				"uploadfaq           {file}",
+			]
+		}
 		"starboards": {
 			"commands": [
 				"removestarboard     [n/a]",
@@ -987,6 +998,21 @@
 		},
 		"mojang": {
 			"description": "Convert between 1.15 and 1.16 Minecraft Mojang logo formats.\n[mode] can be \"upgrade\" or \"downgrade\"."
+		},
+		"faq": {
+			"description": "Ask a frequently asked question!"
+		},
+		"removefaq": {
+			"description": "Remove the FAQ from the server."
+		},
+		"templatefaq": {
+			"description": "Get a template version of the FAQ JSON file."
+		},
+		"uploadfaq": {
+			"description": "Upload the FAQ JSON file to the bot to set up the FAQ."
+		},
+		"getfaq": {
+			"description": "Get the servers FAQ JSON file."
 		}
 	}
 }
