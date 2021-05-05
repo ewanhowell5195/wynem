@@ -111,9 +111,9 @@
 				"getfaq              [n/a]",
 				"removefaq           [n/a]",
 				"templatefaq         [n/a]",
-				"uploadfaq           {file}",
+				"uploadfaq           {file}"
 			]
-		}
+		},
 		"starboards": {
 			"commands": [
 				"removestarboard     [n/a]",
