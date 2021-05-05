@@ -207,8 +207,7 @@
 			"commands": [
 				"google              [searchTerm]",
 				"math                [number][process][number]",
-				"remindme            [duration][reminder]",
-				"trans               [sourceLanguage][destinationLanguage][message]"
+				"remindme            [duration][reminder]"
 			]
 		},
 		"fun": {
@@ -760,9 +759,6 @@
 		},
 		"skinify": {
 			"description": "Turn any image into a minecraft skin. [sides] is optional."
-		},
-		"trans": {
-			"description": "Translate a message. Leave the command blank to view avaliable languages."
 		},
 		"rotate": {
 			"description": "Rotate an image. Defaults to 90\u00c2\u00b0."

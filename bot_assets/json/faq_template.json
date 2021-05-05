@@ -1,0 +1,65 @@
+[
+	{
+		"question": "This is where you put the question",
+		"answer": "This is where you put the answer",
+		"image": "https://i.imgur.com/NC3wyOq.jpg",
+		"keywords": [
+			"these",
+			"are",
+			"the",
+			"keywords",
+			"to",
+			"trigger",
+			"the",
+			"faq"
+		]
+	},
+	{
+		"question": "This is where your second question goes",
+		"answer": "This is where your second answer goes. Images are optional. You can see this one doesnt have an image",
+		"keywords": [
+			"these",
+			"are",
+			"not",
+			"optional"
+		]
+	},
+	{
+		"question": "How many FAQs can i have?",
+		"answer": "You can have up to 10 FAQs per Discord server",
+		"keywords": [
+			"dont",
+			"have",
+			"duplicate",
+			"keywords"
+		]
+	},
+	{
+		"question": "How many keywords can i have?",
+		"answer": "You can have up to 8 keywords per FAQ",
+		"keywords": [
+			"keyword"
+		]
+	},
+	{
+		"question": "How many characters can i have in a question/answer?",
+		"answer": "You can have up to 1024 characters for each of the question/answer",
+		"keywords": [
+			"keyword2"
+		]
+	},
+	{
+		"question": "How many characters can i have in a keyword?",
+		"answer": "You can have up to 32 characters for each of the keywords",
+		"keywords": [
+			"keyword3"
+		]
+	},
+	{
+		"question": "It says invalid JSON when I upload the file?",
+		"answer": "If your JSON formatting is invalid, you can check it for errors [here](https://jsonlint.com/)",
+		"keywords": [
+			"keyword4"
+		]
+	}
+]
