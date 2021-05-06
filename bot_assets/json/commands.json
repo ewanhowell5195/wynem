@@ -155,7 +155,7 @@
 		},
 		"joinroles": {
 			"commands": [
-				"joinroles           [n/a]",
+				"joinrole            [n/a]",
 				"removejoinrole      <role>",
 				"setjoinrole         <role>"
 			]
@@ -566,7 +566,7 @@
 			"description": "Set a role for members to gain when joining the server.",
 			"permissions": "Manage Roles"
 		},
-		"joinroles": {
+		"joinrole": {
 			"description": "List all the currently set server join roles."
 		},
 		"removejoinrole": {
