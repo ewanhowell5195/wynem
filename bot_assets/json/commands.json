@@ -58,6 +58,9 @@
 			]
 		},
 		"roles": {
+			"subcategories": [
+				"Joinroles"
+			],
 			"commands": [
 				"addrole             <member>[role]",
 				"muterole            [n/a]",
@@ -123,9 +126,6 @@
 			]
 		},
 		"bot": {
-			"subcategories": [
-				"Joinroles"
-			],
 			"commands": [
 				"alias               [command]",
 				"botserver           [n/a]",
@@ -155,7 +155,7 @@
 		},
 		"joinroles": {
 			"commands": [
-				"listjoinroles       [n/a]",
+				"joinroles           [n/a]",
 				"removejoinrole      <role>",
 				"setjoinrole         <role>"
 			]
@@ -566,7 +566,7 @@
 			"description": "Set a role for members to gain when joining the server.",
 			"permissions": "Manage Roles"
 		},
-		"listjoinroles": {
+		"joinroles": {
 			"description": "List all the currently set server join roles."
 		},
 		"removejoinrole": {
