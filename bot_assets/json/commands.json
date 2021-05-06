@@ -218,6 +218,7 @@
 			"commands": [
 				"google              [searchTerm]",
 				"math                [number][process][number]",
+				"reminders           [n/a]",
 				"remindme            [duration][reminder]"
 			]
 		},
@@ -644,6 +645,9 @@
 		},
 		"remindme": {
 			"description": "Set a reminder for yourself."
+		},
+		"reminders": {
+			"description": "View your active reminders in a server."
 		},
 		"monketest": {
 			"description": "Test how much of a monke someone is!"
