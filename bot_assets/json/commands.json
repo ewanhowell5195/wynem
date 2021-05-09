@@ -106,7 +106,7 @@
 		"logs": {
 			"commands": [
 				"removelogs          [category]",
-				"setlogs             <channel>[category]",
+				"setlogs             [category]<channel>",
 				"viewlogs            [n/a]"
 			]
 		},
