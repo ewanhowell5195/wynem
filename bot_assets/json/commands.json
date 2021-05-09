@@ -26,8 +26,8 @@
 			"commands": [
 				"ban                 <member>[reason]",
 				"kick                <member>[reason]",
-				"megapurge           [amount]",
-				"purge               [amount]",
+				"megapurge           [amount]<member>",
+				"purge               [amount]<member>",
 				"unban               [userID]"
 			]
 		},
@@ -468,11 +468,11 @@
 			"description": "Check the bots latency."
 		},
 		"purge": {
-			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Maximum 99.",
+			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Maximum 99. Mention a user to only delete their messages.",
 			"permissions": "Manage Messages"
 		},
 		"megapurge": {
-			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Allows the use of numbers larger than 99.",
+			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Allows the use of numbers larger than 99. Mention a user to only delete their messages.",
 			"permissions": "Administrator"
 		},
 		"randomnumber": {
