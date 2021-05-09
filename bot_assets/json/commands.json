@@ -90,6 +90,7 @@
 			"subcategories": [
 				"Artchives",
 				"FAQs",
+				"Logs",
 				"Starboards"
 			],
 			"commands": [
@@ -97,10 +98,16 @@
 				"lock                <channel>",
 				"membercount         [n/a]",
 				"setautotts          <channel>",
-				"setlogs             <channel>",
 				"setmembercounter    [channelID][text]",
 				"slowmode            <channel>[length]",
 				"sortchannels        <category>"
+			]
+		},
+		"logs": {
+			"commands": [
+				"removelogs          [category]",
+				"setlogs             [category]<channel>",
+				"viewlogs            [n/a]"
 			]
 		},
 		"artchives": {
@@ -217,6 +224,8 @@
 		},
 		"utility": {
 			"commands": [
+				"charactercount      [message]",
+				"colour              [colour]",
 				"google              [searchTerm]",
 				"math                [number][process][number]",
 				"reminders           [n/a]",
@@ -523,10 +532,6 @@
 		},
 		"setartchive": {
 			"description": "Set the channel for the Artchive command.",
-			"permissions": "Manage Channels"
-		},
-		"setlogs": {
-			"description": "Set the channel for the server logs.",
 			"permissions": "Manage Channels"
 		},
 		"muteclear": {
@@ -1026,6 +1031,24 @@
 		},
 		"getfaq": {
 			"description": "Get the servers FAQ JSON file."
+		},
+		"colour": {
+			"description": "Preview a colour. This also converts it to Hex, RGB, and HSL colours. Acceptable inputs are the Hex value, RGB values, or colour name."
+		},
+		"charactercount": {
+			"description": "Count the number characters in a message."
+		},
+		"setlogs": {
+			"description": "Set the channels for the server logs to be sent to. View the avaliable categories by running the command without any arguments.",
+			"permissions": "Manage Channels"
+		},
+		"viewlogs": {
+			"description": "View the log channels set up in the server.",
+			"permissions": "Manage Channels"
+		},
+		"removelogs": {
+			"description": "Remove a log channel from the server.",
+			"permissions": "Manage Channels"
 		}
 	}
 }
