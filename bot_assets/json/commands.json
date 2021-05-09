@@ -26,6 +26,7 @@
 			"commands": [
 				"ban                 <member>[reason]",
 				"kick                <member>[reason]",
+				"megapurge           [amount]",
 				"purge               [amount]",
 				"unban               [userID]"
 			]
@@ -435,7 +436,11 @@
 			"description": "Spongebobify some text."
 		},
 		"mute": {
-			"description": "Temporarily mute a user, removing their ability to talk in chat. Defaults to 10 minutes if left blank.",
+			"description": "Temporarily mute a member, removing their ability to talk in chat. Defaults to 10 minutes if left blank.",
+			"permissions": "Kick Members"
+		},
+		"permamute": {
+			"description": "Permanently mute a member, removing their ability to talk in chat.",
 			"permissions": "Kick Members"
 		},
 		"mutecount": {
@@ -454,8 +459,12 @@
 			"description": "Check the bots latency."
 		},
 		"purge": {
-			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank.",
+			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Maximum 99.",
 			"permissions": "Manage Messages"
+		},
+		"megapurge": {
+			"description": "Bulk delete messages from a channel. Defaults to 5 if left blank. Allows the use of numbers larger than 99.",
+			"permissions": "Administrator"
 		},
 		"randomnumber": {
 			"description": "Generates a random number between two numbers."
