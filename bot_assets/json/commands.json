@@ -93,6 +93,7 @@
 				"Starboards"
 			],
 			"commands": [
+				"id                  <member/channel/emoji/role>",
 				"lock                <channel>",
 				"membercount         [n/a]",
 				"setautotts          <channel>",
@@ -164,7 +165,6 @@
 		"user": {
 			"commands": [
 				"avatar              <member>",
-				"id                  <member>",
 				"joinposition        <member>",
 				"nickname            [nickname]",
 				"setnickname         <member>[nickname]"
@@ -407,7 +407,7 @@
 			"description": "Get a list of the bots commands and info about each one."
 		},
 		"id": {
-			"description": "Shows a users ID."
+			"description": "Show the ID of a member, channel, category, emoji, or role."
 		},
 		"info": {
 			"description": "Get info about the bot."
