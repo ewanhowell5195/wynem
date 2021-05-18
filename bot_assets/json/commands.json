@@ -745,7 +745,7 @@
 			"description": "Resizes an image to the specified size. Max size of 4096x4096."
 		},
 		"botserver": {
-			"description": "Get the invite links for the bot creators Discord server."
+			"description": "Get the invite link for the bot creators Discord server."
 		},
 		"google": {
 			"description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
