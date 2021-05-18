@@ -499,7 +499,8 @@
 			"permissions": "Manage Nicknames"
 		},
 		"skin": {
-			"description": "Get a Minecraft Java users Minecraft skin."
+			"description": "Get a Minecraft Java users Minecraft skin.",
+			"cooldown": 3
 		},
 		"thumbnail": {
 			"description": "View the Thumbnail of a YouTube video."

@@ -16,7 +16,7 @@
 	},
 	{
 		"question": "This is where your second question goes",
-		"answer": "This is where your second answer goes. Images are optional. You can see this one doesnt have an image",
+		"answer": "This is where your second answer goes. Images are optional. You can see this one doesnt have an image.",
 		"keywords": [
 			"these",
 			"are",
@@ -56,10 +56,17 @@
 		]
 	},
 	{
+		"question": "How long can image URLs be?",
+		"answer": "Image URLs can be up to 128 characters long",
+		"keywords": [
+			"keyword4"
+		]
+	},
+	{
 		"question": "It says invalid JSON when I upload the file?",
 		"answer": "If your JSON formatting is invalid, you can check it for errors [here](https://jsonlint.com/)",
 		"keywords": [
-			"keyword4"
+			"keyword5"
 		]
 	}
 ]
