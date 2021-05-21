@@ -218,7 +218,6 @@
 				"display_name": "Creeper",
 				"bones": [
 					"head",
-					"armor",
 					"body",
 					"leg1",
 					"leg2",
@@ -829,7 +828,12 @@
 					"left_leg",
 					"right_leg",
 					"left_ear",
-					"right_ear"
+					"right_ear",
+					"left_sleeve",
+					"right_sleeve",
+					"left_pants",
+					"right_pants",
+					"jacket"
 				]
 			},
 			"piglin_brute": {
@@ -843,7 +847,12 @@
 					"left_leg",
 					"right_leg",
 					"left_ear",
-					"right_ear"
+					"right_ear",
+					"left_sleeve",
+					"right_sleeve",
+					"left_pants",
+					"right_pants",
+					"jacket"
 				]
 			},
 			"pillager": {
@@ -1129,6 +1138,19 @@
 					"chest_left"
 				]
 			},
+			"trader_llama_decor": {
+				"display_name": "Trader Llama Decor",
+				"bones": [
+					"head",
+					"body",
+					"leg1",
+					"leg2",
+					"leg3",
+					"leg4",
+					"chest_right",
+					"chest_left"
+				]
+			},
 			"trapped_chest": {
 				"display_name": "Trapped Chest",
 				"bones": [
@@ -1389,7 +1411,12 @@
 					"left_leg",
 					"right_leg",
 					"left_ear",
-					"right_ear"
+					"right_ear",
+					"left_sleeve",
+					"right_sleeve",
+					"left_pants",
+					"right_pants",
+					"jacket"
 				]
 			}
 		},
@@ -1403,7 +1430,6 @@
 			"elytra",
 			"glowsquid",
 			"goat",
-			"llama_carpet",
 			"pig_saddle",
 			"player",
 			"player_thin",
@@ -1412,7 +1438,6 @@
 			"spectral_arrow",
 			"stray_outer_layer",
 			"strider_saddle",
-			"trader_llama_decor",
 			"tropical_fish_a_outer_layer",
 			"tropical_fish_b_outer_layer"
 		],
