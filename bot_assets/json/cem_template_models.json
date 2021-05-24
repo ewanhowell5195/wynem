@@ -6,664 +6,664 @@
 			"description": "The standard CEM models supported by OptiFine",
 			"icon": "icon-format_optifine",
 			"entities": [
-				{
-					"name": "armor_stand",
-					"display_name": "Armor Stand",
-					"texture_name": "armor_stand.png",
-					"model": "armor_stand"
-				},
+				"armor_stand",
 				{
 					"name": "banner",
 					"display_name": "Banner",
-					"texture_name": "banner.png",
+					"texture_name": "banner",
 					"model": "banner"
 				},
 				{
 					"name": "bat",
 					"display_name": "Bat",
-					"texture_name": "bat.png",
+					"texture_name": "bat",
 					"model": "bat"
 				},
 				{
 					"name": "bed",
 					"display_name": "Bed",
-					"texture_name": "bed.png",
+					"texture_name": "bed",
 					"model": "bed"
 				},
 				{
 					"name": "bee",
 					"display_name": "Bee",
-					"texture_name": "bee.png",
+					"texture_name": "bee",
 					"model": "bee"
 				},
 				{
 					"name": "bell",
 					"display_name": "Bell",
-					"texture_name": "bell.png",
+					"texture_name": "bell",
 					"model": "bell"
 				},
 				{
 					"name": "blaze",
 					"display_name": "Blaze",
-					"texture_name": "blaze.png",
+					"texture_name": "blaze",
 					"model": "blaze"
 				},
 				{
 					"name": "boat",
 					"display_name": "Boat",
-					"texture_name": "boat.png",
+					"texture_name": "boat",
 					"model": "boat"
 				},
 				{
 					"name": "enchanting_book",
 					"display_name": "Book [Enchanting]",
-					"texture_name": "enchanting_book.png",
+					"texture_name": "enchanting_book",
 					"model": "book"
 				},
 				{
 					"name": "lectern_book",
 					"display_name": "Book [Lectern]",
-					"texture_name": "lectern_book.png",
+					"texture_name": "lectern_book",
 					"model": "book"
 				},
 				{
 					"name": "cat",
 					"display_name": "Cat",
-					"texture_name": "cat.png",
+					"texture_name": "cat",
 					"model": "cat"
 				},
 				{
 					"name": "cave_spider",
 					"display_name": "Cave Spider",
-					"texture_name": "cave_spider.png",
+					"texture_name": "cave_spider",
 					"model": "spider"
 				},
 				{
 					"name": "chest",
 					"display_name": "Chest",
-					"texture_name": "chest.png",
+					"texture_name": "chest",
 					"model": "chest"
 				},
 				{
 					"name": "chest_large",
 					"display_name": "Chest [Large]",
-					"texture_name": "chest_large.png",
+					"texture_name": "chest_large",
 					"model": "chest_large"
 				},
 				{
 					"name": "chicken",
 					"display_name": "Chicken",
-					"texture_name": "chicken.png",
+					"texture_name": "chicken",
 					"model": "chicken"
 				},
 				{
 					"name": "cod",
 					"display_name": "Cod",
-					"texture_name": "cod.png",
+					"texture_name": "cod",
 					"model": "cod"
 				},
 				{
 					"name": "conduit",
 					"display_name": "Conduit",
-					"texture_name": "conduit.png",
+					"texture_name": [
+						"wind",
+						"cage",
+						"base",
+						"eye"
+					],
 					"model": "conduit"
 				},
 				{
 					"name": "cow",
 					"display_name": "Cow",
-					"texture_name": "cow.png",
+					"texture_name": "cow",
 					"model": "cow"
 				},
 				{
 					"name": "creeper",
 					"display_name": "Creeper",
-					"texture_name": "creeper.png",
+					"texture_name": "creeper",
 					"model": "creeper"
 				},
 				{
 					"name": "head_creeper",
 					"display_name": "Creeper Head",
-					"texture_name": "head_creeper.png",
+					"texture_name": "head_creeper",
 					"model": "head"
 				},
 				{
 					"name": "dolphin",
 					"display_name": "Dolphin",
-					"texture_name": "dolphin.png",
+					"texture_name": "dolphin",
 					"model": "dolphin"
 				},
 				{
 					"name": "donkey",
 					"display_name": "Donkey",
-					"texture_name": "donkey.png",
+					"texture_name": "donkey",
 					"model": "donkey"
 				},
 				{
 					"name": "drowned",
 					"display_name": "Drowned",
-					"texture_name": "drowned.png",
+					"texture_name": "drowned",
 					"model": "drowned"
 				},
 				{
 					"name": "dragon",
 					"display_name": "Dragon",
-					"texture_name": "dragon.png",
+					"texture_name": "dragon",
 					"model": "dragon"
 				},
 				{
 					"name": "head_dragon",
 					"display_name": "Dragon Head",
-					"texture_name": "head_dragon.png",
+					"texture_name": "head_dragon",
 					"model": "head_dragon"
 				},
 				{
 					"name": "elder_guardian",
 					"display_name": "Elder Guardian",
-					"texture_name": "elder_guardian.png",
+					"texture_name": "elder_guardian",
 					"model": "guardian"
 				},
 				{
 					"name": "enderman",
 					"display_name": "Enderman",
-					"texture_name": "enderman.png",
+					"texture_name": "enderman",
 					"model": "enderman"
 				},
 				{
 					"name": "endermite",
 					"display_name": "Endermite",
-					"texture_name": "endermite.png",
+					"texture_name": "endermite",
 					"model": "endermite"
 				},
 				{
 					"name": "ender_chest",
 					"display_name": "Ender Chest",
-					"texture_name": "ender_chest.png",
+					"texture_name": "ender_chest",
 					"model": "chest"
 				},
 				{
 					"name": "end_crystal",
 					"display_name": "End Crystal",
-					"texture_name": "end_crystal.png",
+					"texture_name": "end_crystal",
 					"model": "end_crystal"
 				},
 				{
 					"name": "evoker",
 					"display_name": "Evoker",
-					"texture_name": "evoker.png",
+					"texture_name": "evoker",
 					"model": "illager"
 				},
 				{
 					"name": "evoker_fangs",
 					"display_name": "Evoker Fangs",
-					"texture_name": "evoker_fangs.png",
+					"texture_name": "evoker_fangs",
 					"model": "evoker_fangs"
 				},
 				{
 					"name": "fox",
 					"display_name": "Fox",
-					"texture_name": "fox.png",
+					"texture_name": "fox",
 					"model": "fox"
 				},
 				{
 					"name": "ghast",
 					"display_name": "Ghast",
-					"texture_name": "ghast.png",
+					"texture_name": "ghast",
 					"model": "ghast"
 				},
 				{
 					"name": "giant",
 					"display_name": "Giant",
-					"texture_name": "giant.png",
+					"texture_name": "giant",
 					"model": "zombie"
 				},
 				{
 					"name": "guardian",
 					"display_name": "Guardian",
-					"texture_name": "guardian.png",
+					"texture_name": "guardian",
 					"model": "guardian"
 				},
 				{
 					"name": "hoglin",
 					"display_name": "Hoglin",
-					"texture_name": "hoglin.png",
+					"texture_name": "hoglin",
 					"model": "hoglin"
 				},
 				{
 					"name": "horse",
 					"display_name": "Horse",
-					"texture_name": "horse.png",
+					"texture_name": "horse",
 					"model": "horse"
 				},
 				{
 					"name": "husk",
 					"display_name": "Husk",
-					"texture_name": "husk.png",
+					"texture_name": "husk",
 					"model": "zombie"
 				},
 				{
 					"name": "illusioner",
 					"display_name": "Illusioner",
-					"texture_name": "illusioner.png",
+					"texture_name": "illusioner",
 					"model": "illager"
 				},
 				{
 					"name": "iron_golem",
 					"display_name": "Iron Golem",
-					"texture_name": "iron_golem.png",
+					"texture_name": "iron_golem",
 					"model": "iron_golem"
 				},
 				{
 					"name": "lead_knot",
 					"display_name": "Lead Knot",
-					"texture_name": "lead_knot.png",
+					"texture_name": "lead_knot",
 					"model": "lead_knot"
 				},
 				{
 					"name": "llama",
 					"display_name": "Llama",
-					"texture_name": "llama.png",
+					"texture_name": "llama",
 					"model": "llama"
 				},
 				{
 					"name": "llama_decor",
 					"display_name": "Llama [Decor]",
-					"texture_name": "llama_decor.png",
+					"texture_name": "llama_decor",
 					"model": "llama"
 				},
 				{
 					"name": "llama_spit",
 					"display_name": "Llama Spit",
-					"texture_name": "llama_spit.png",
+					"texture_name": "llama_spit",
 					"model": "llama_spit"
 				},
 				{
 					"name": "magma_cube",
 					"display_name": "Magma Cube",
-					"texture_name": "magma_cube.png",
+					"texture_name": "magma_cube",
 					"model": "magma_cube"
 				},
 				{
 					"name": "minecart",
 					"display_name": "Minecart",
-					"texture_name": "minecart.png",
+					"texture_name": "minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "chest_minecart",
 					"display_name": "Minecart [Chest]",
-					"texture_name": "chest_minecart.png",
+					"texture_name": "chest_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "command_block_minecart",
 					"display_name": "Minecart [Command block]",
-					"texture_name": "command_block_minecart.png",
+					"texture_name": "command_block_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "furnace_minecart",
 					"display_name": "Minecart [Furnace]",
-					"texture_name": "furnace_minecart.png",
+					"texture_name": "furnace_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "hopper_minecart",
 					"display_name": "Minecart [Hopper]",
-					"texture_name": "hopper_minecart.png",
+					"texture_name": "hopper_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "spawner_minecart",
 					"display_name": "Minecart [Spawner]",
-					"texture_name": "spawner_minecart.png",
+					"texture_name": "spawner_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "tnt_minecart",
 					"display_name": "Minecart [TNT]",
-					"texture_name": "tnt_minecart.png",
+					"texture_name": "tnt_minecart",
 					"model": "minecart"
 				},
 				{
 					"name": "mooshroom",
 					"display_name": "Mooshroom",
-					"texture_name": "mooshroom.png",
+					"texture_name": "mooshroom",
 					"model": "cow"
 				},
 				{
 					"name": "mule",
 					"display_name": "Mule",
-					"texture_name": "mule.png",
+					"texture_name": "mule",
 					"model": "donkey"
 				},
 				{
 					"name": "ocelot",
 					"display_name": "Ocelot",
-					"texture_name": "ocelot.png",
+					"texture_name": "ocelot",
 					"model": "cat"
 				},
 				{
 					"name": "panda",
 					"display_name": "Panda",
-					"texture_name": "panda.png",
+					"texture_name": "panda",
 					"model": "panda"
 				},
 				{
 					"name": "parrot",
 					"display_name": "Parrot",
-					"texture_name": "parrot.png",
+					"texture_name": "parrot",
 					"model": "parrot"
 				},
 				{
 					"name": "phantom",
 					"display_name": "Phantom",
-					"texture_name": "phantom.png",
+					"texture_name": "phantom",
 					"model": "phantom"
 				},
 				{
 					"name": "pig",
 					"display_name": "Pig",
-					"texture_name": "pig.png",
+					"texture_name": "pig",
 					"model": "pig"
 				},
 				{
 					"name": "piglin",
 					"display_name": "Piglin",
-					"texture_name": "piglin.png",
+					"texture_name": "piglin",
 					"model": "piglin"
 				},
 				{
 					"name": "piglin_brute",
 					"display_name": "Piglin Brute",
-					"texture_name": "piglin_brute.png",
+					"texture_name": "piglin_brute",
 					"model": "piglin"
 				},
 				{
 					"name": "pillager",
 					"display_name": "Pillager",
-					"texture_name": "pillager.png",
+					"texture_name": "pillager",
 					"model": "pillager"
 				},
 				{
 					"name": "head_player",
 					"display_name": "Player Head",
-					"texture_name": "head_player.png",
+					"texture_name": "head_player",
 					"model": "head_large"
 				},
 				{
 					"name": "polar_bear",
 					"display_name": "Polar Bear",
-					"texture_name": "polar_bear.png",
+					"texture_name": "polar_bear",
 					"model": "polar_bear"
 				},
 				{
 					"name": "puffer_fish_small",
 					"display_name": "Puffer Fish [Small]",
-					"texture_name": "puffer_fish_small.png",
+					"texture_name": "puffer_fish_small",
 					"model": "puffer_fish_small"
 				},
 				{
 					"name": "puffer_fish_medium",
 					"display_name": "Puffer Fish [Medium]",
-					"texture_name": "puffer_fish_medium.png",
+					"texture_name": "puffer_fish_medium",
 					"model": "puffer_fish_medium"
 				},
 				{
 					"name": "puffer_fish_big",
 					"display_name": "Puffer Fish [Large]",
-					"texture_name": "puffer_fish_big.png",
+					"texture_name": "puffer_fish_big",
 					"model": "puffer_fish_big"
 				},
 				{
 					"name": "rabbit",
 					"display_name": "Rabbit",
-					"texture_name": "rabbit.png",
+					"texture_name": "rabbit",
 					"model": "rabbit"
 				},
 				{
 					"name": "ravager",
 					"display_name": "Ravager",
-					"texture_name": "ravager.png",
+					"texture_name": "ravager",
 					"model": "ravager"
 				},
 				{
 					"name": "salmon",
 					"display_name": "Salmon",
-					"texture_name": "salmon.png",
+					"texture_name": "salmon",
 					"model": "salmon"
 				},
 				{
 					"name": "sheep",
 					"display_name": "Sheep",
-					"texture_name": "sheep.png",
+					"texture_name": "sheep",
 					"model": "sheep"
 				},
 				{
 					"name": "sheep_wool",
 					"display_name": "Sheep Wool",
-					"texture_name": "sheep_wool.png",
+					"texture_name": "sheep_wool",
 					"model": "sheep_wool"
 				},
 				{
 					"name": "shulker",
 					"display_name": "Shulker",
-					"texture_name": "shulker.png",
+					"texture_name": "shulker",
 					"model": "shulker"
 				},
 				{
 					"name": "shulker_box",
 					"display_name": "Shulker Box",
-					"texture_name": "shulker_box.png",
+					"texture_name": "shulker_box",
 					"model": "shulker_box"
 				},
 				{
 					"name": "shulker_bullet",
 					"display_name": "Shulker Bullet",
-					"texture_name": "shulker_bullet.png",
+					"texture_name": "shulker_bullet",
 					"model": "shulker_bullet"
 				},
 				{
 					"name": "sign",
 					"display_name": "Sign",
-					"texture_name": "sign.png",
+					"texture_name": "sign",
 					"model": "sign"
 				},
 				{
 					"name": "silverfish",
 					"display_name": "Silverfish",
-					"texture_name": "silverfish.png",
+					"texture_name": "silverfish",
 					"model": "silverfish"
 				},
 				{
 					"name": "skeleton",
 					"display_name": "Skeleton",
-					"texture_name": "skeleton.png",
+					"texture_name": "skeleton",
 					"model": "skeleton"
 				},
 				{
 					"name": "skeleton_horse",
 					"display_name": "Skeleton Horse",
-					"texture_name": "skeleton_horse.png",
+					"texture_name": "skeleton_horse",
 					"model": "horse"
 				},
 				{
 					"name": "slime",
 					"display_name": "Slime",
-					"texture_name": "slime.png",
+					"texture_name": "slime",
 					"model": "slime"
 				},
 				{
 					"name": "snow_golem",
 					"display_name": "Snow Golem",
-					"texture_name": "snow_golem.png",
+					"texture_name": "snow_golem",
 					"model": "snow_golem"
 				},
 				{
 					"name": "spider",
 					"display_name": "Spider",
-					"texture_name": "spider.png",
+					"texture_name": "spider",
 					"model": "spider"
 				},
 				{
 					"name": "squid",
 					"display_name": "Squid",
-					"texture_name": "squid.png",
+					"texture_name": "squid",
 					"model": "squid"
 				},
 				{
 					"name": "stray",
 					"display_name": "Stray",
-					"texture_name": "stray.png",
+					"texture_name": "stray",
 					"model": "skeleton"
 				},
 				{
 					"name": "strider",
 					"display_name": "Strider",
-					"texture_name": "strider.png",
+					"texture_name": "strider",
 					"model": "strider"
 				},
 				{
 					"name": "trader_llama",
 					"display_name": "Trader Llama",
-					"texture_name": "trader_llama.png",
+					"texture_name": "trader_llama",
 					"model": "llama"
 				},
 				{
 					"name": "trader_llama_decor",
 					"display_name": "Trader Llama [Decor]",
-					"texture_name": "trader_llama_decor.png",
+					"texture_name": "trader_llama_decor",
 					"model": "llama"
 				},
 				{
 					"name": "trapped_chest",
 					"display_name": "Trapped Chest",
-					"texture_name": "trapped_chest.png",
+					"texture_name": "trapped_chest",
 					"model": "chest"
 				},
 				{
 					"name": "trapped_chest_large",
 					"display_name": "Trapped Chest [Large]",
-					"texture_name": "trapped_chest_large.png",
+					"texture_name": "trapped_chest_large",
 					"model": "chest_large"
 				},
 				{
 					"name": "trident",
 					"display_name": "Trident",
-					"texture_name": "trident.png",
+					"texture_name": "trident",
 					"model": "trident"
 				},
 				{
 					"name": "tropical_fish_a",
 					"display_name": "Tropical Fish A",
-					"texture_name": "tropical_fish_a.png",
+					"texture_name": "tropical_fish_a",
 					"model": "tropical_fish_a"
 				},
 				{
 					"name": "tropical_fish_b",
 					"display_name": "Tropical Fish B",
-					"texture_name": "tropical_fish_b.png",
+					"texture_name": "tropical_fish_b",
 					"model": "tropical_fish_b"
 				},
 				{
 					"name": "turtle",
 					"display_name": "Turtle",
-					"texture_name": "turtle.png",
+					"texture_name": "turtle",
 					"model": "turtle"
 				},
 				{
 					"name": "vex",
 					"display_name": "Vex",
-					"texture_name": "vex.png",
+					"texture_name": "vex",
 					"model": "vex"
 				},
 				{
 					"name": "villager",
 					"display_name": "Villager",
-					"texture_name": "villager.png",
+					"texture_name": "villager",
 					"model": "villager"
 				},
 				{
 					"name": "vindicator",
 					"display_name": "Vindicator",
-					"texture_name": "vindicator.png",
+					"texture_name": "vindicator",
 					"model": "illager"
 				},
 				{
 					"name": "wandering_trader",
 					"display_name": "Wandering Trader",
-					"texture_name": "wandering_trader.png",
+					"texture_name": "wandering_trader",
 					"model": "villager"
 				},
 				{
 					"name": "witch",
 					"display_name": "Witch",
-					"texture_name": "witch.png",
+					"texture_name": "witch",
 					"model": "witch"
 				},
 				{
 					"name": "wither",
 					"display_name": "Wither",
-					"texture_name": "wither.png",
+					"texture_name": "wither",
 					"model": "wither"
 				},
 				{
 					"name": "wither_skeleton",
 					"display_name": "Wither Skeleton",
-					"texture_name": "wither_skeleton.png",
+					"texture_name": "wither_skeleton",
 					"model": "skeleton"
 				},
 				{
 					"name": "head_wither_skeleton",
 					"display_name": "Wither Skeleton Head",
-					"texture_name": "head_wither_skeleton.png",
+					"texture_name": "head_wither_skeleton",
 					"model": "head"
 				},
 				{
 					"name": "wither_skull",
 					"display_name": "Wither Skull",
-					"texture_name": "wither_skull.png",
+					"texture_name": "wither_skull",
 					"model": "wither_skull"
 				},
 				{
 					"name": "wolf",
 					"display_name": "Wolf",
-					"texture_name": "wolf.png",
+					"texture_name": "wolf",
 					"model": "wolf"
 				},
 				{
 					"name": "zoglin",
 					"display_name": "Zoglin",
-					"texture_name": "zoglin.png",
+					"texture_name": "zoglin",
 					"model": "hoglin"
 				},
 				{
 					"name": "zombie",
 					"display_name": "Zombie",
-					"texture_name": "zombie.png",
+					"texture_name": "zombie",
 					"model": "zombie"
 				},
 				{
 					"name": "head_zombie",
 					"display_name": "Zombie Head",
-					"texture_name": "head_zombie.png",
+					"texture_name": "head_zombie",
 					"model": "head_large"
 				},
 				{
 					"name": "zombie_horse",
 					"display_name": "Zombie Horse",
-					"texture_name": "zombie_horse.png",
+					"texture_name": "zombie_horse",
 					"model": "horse"
 				},
 				{
 					"name": "zombie_villager",
 					"display_name": "Zombie Villager",
-					"texture_name": "zombie_villager.png",
+					"texture_name": "zombie_villager",
 					"model": "zombie_villager"
 				},
 				{
 					"name": "zombified_piglin",
 					"display_name": "Zombified Piglin",
-					"texture_name": "zombified_piglin.png",
+					"texture_name": "zombified_piglin",
 					"model": "piglin"
 				}
 			]
@@ -676,37 +676,37 @@
 				{
 					"name": "enchanting_book_single_bone",
 					"display_name": "Book [Enchanting] [Single bone]",
-					"texture_name": "enchanting_book_single_bone.png",
+					"texture_name": "enchanting_book_single_bone",
 					"model": "book_single_bone"
 				},
 				{
 					"name": "lectern_book_single_bone",
 					"display_name": "Book [Lectern] [Single bone]",
-					"texture_name": "lectern_book_single_bone.png",
+					"texture_name": "lectern_book_single_bone",
 					"model": "book_single_bone"
 				},
 				{
 					"name": "chest_large_old_uv",
 					"display_name": "Chest [Large] [Old UV]",
-					"texture_name": "chest_large_old_uv.png",
+					"texture_name": "chest_large_old_uv",
 					"model": "chest_large_old_uv"
 				},
 				{
 					"name": "dragon_neck_tail",
-					"display_name": "Dragon [With neck & tail",
-					"texture_name": "dragon_neck_tail.png",
+					"display_name": "Dragon [With neck & tail]",
+					"texture_name": "dragon_neck_tail",
 					"model": "dragon_neck_tail"
 				},
 				{
 					"name": "mooshroom_mushrooms",
 					"display_name": "Mooshroom [With mushrooms]",
-					"texture_name": "mooshroom_mushrooms.png",
+					"texture_name": "mooshroom_mushrooms",
 					"model": "mooshroom_mushrooms"
 				},
 				{
 					"name": "trapped_chest_large_old_uv",
 					"display_name": "Trapped Chest [Large] [Old UV]",
-					"texture_name": "trapped_chest_large_old_uv.png",
+					"texture_name": "trapped_chest_large_old_uv",
 					"model": "chest_large_old_uv"
 				}
 			]
@@ -719,61 +719,61 @@
 				{
 					"name": "chest_14",
 					"display_name": "Chest [1.14]",
-					"texture_name": "chest_14.png",
+					"texture_name": "chest_14",
 					"model": "chest_14"
 				},
 				{
 					"name": "chest_large_14",
 					"display_name": "Chest Large [1.14]",
-					"texture_name": "chest_large_14.png",
+					"texture_name": "chest_large_14",
 					"model": "chest_large_14"
 				},
 				{
 					"name": "dragon_14",
 					"display_name": "Dragon [1.14]",
-					"texture_name": "dragon_14.png",
+					"texture_name": "dragon_14",
 					"model": "dragon_14"
 				},
 				{
 					"name": "ender_chest_14",
 					"display_name": "Ender Chest [1.14]",
-					"texture_name": "ender_chest_14.png",
+					"texture_name": "ender_chest_14",
 					"model": "chest_14"
 				},
 				{
 					"name": "end_crystal_no_base_14",
 					"display_name": "End Crystal No Base [1.14]",
-					"texture_name": "end_crystal_no_base_14.png",
+					"texture_name": "end_crystal_no_base_14",
 					"model": "end_crystal_no_base_14"
 				},
 				{
 					"name": "trapped_chest_14",
 					"display_name": "Trapped Chest [1.14]",
-					"texture_name": "trapped_chest_14.png",
+					"texture_name": "trapped_chest_14",
 					"model": "chest_14"
 				},
 				{
 					"name": "trapped_chest_large_14",
 					"display_name": "Trapped Chest Large [1.14]",
-					"texture_name": "trapped_chest_large_14.png",
+					"texture_name": "trapped_chest_large_14",
 					"model": "chest_large_14"
 				},
 				{
 					"name": "book_15",
 					"display_name": "Book [1.15]",
-					"texture_name": "book_15.png",
+					"texture_name": "book_15",
 					"model": "book"
 				},
 				{
 					"name": "zombie_pigman_15",
 					"display_name": "Zombie Pigman [1.15]",
-					"texture_name": "zombie_pigman_15.png",
+					"texture_name": "zombie_pigman_15",
 					"model": "zombie_pigman_15"
 				},
 				{
 					"name": "iron_golem_16",
 					"display_name": "Iron Golem [1.16]",
-					"texture_name": "iron_golem_16.png",
+					"texture_name": "iron_golem_16",
 					"model": "iron_golem_16"
 				}
 			]
@@ -786,79 +786,79 @@
 				{
 					"name": "armor_layer_1",
 					"display_name": "Armor [Layer 1]",
-					"texture_name": "armor_layer_1.png",
+					"texture_name": "armor_layer_1",
 					"model": "armor_layer_1"
 				},
 				{
 					"name": "armor_layer_2",
 					"display_name": "Armor [Layer 2]",
-					"texture_name": "armor_layer_2.png",
+					"texture_name": "armor_layer_2",
 					"model": "armor_layer_2"
 				},
 				{
 					"name": "arrow",
 					"display_name": "Arrow",
-					"texture_name": "arrow.png",
+					"texture_name": "arrow",
 					"model": "arrow"
 				},
 				{
 					"name": "axolotl",
 					"display_name": "Axolotl",
-					"texture_name": "axolotl.png",
+					"texture_name": "axolotl",
 					"model": "axolotl"
 				},
 				{
 					"name": "drowned_outer",
 					"display_name": "Drowned [Outer]",
-					"texture_name": "drowned_outer.png",
+					"texture_name": "drowned_outer",
 					"model": "drowned"
 				},
 				{
 					"name": "elytra",
 					"display_name": "Elytra",
-					"texture_name": "elytra.png",
+					"texture_name": "elytra",
 					"model": "elytra"
 				},
 				{
 					"name": "glow_squid",
 					"display_name": "Glow Squid",
-					"texture_name": "glow_squid.png",
+					"texture_name": "glow_squid",
 					"model": "squid"
 				},
 				{
 					"name": "goat",
 					"display_name": "Goat",
-					"texture_name": "goat.png",
+					"texture_name": "goat",
 					"model": "goat"
 				},
 				{
 					"name": "player",
 					"display_name": "Player",
-					"texture_name": "player.png",
+					"texture_name": "player",
 					"model": "player"
 				},
 				{
 					"name": "player_slim",
 					"display_name": "Player [Slim]",
-					"texture_name": "player_slim.png",
+					"texture_name": "player_slim",
 					"model": "player_slim"
 				},
 				{
 					"name": "shield",
 					"display_name": "Shield",
-					"texture_name": "shield.png",
+					"texture_name": "shield",
 					"model": "shield"
 				},
 				{
 					"name": "spectral_arrow",
 					"display_name": "Spectral Arrow",
-					"texture_name": "spectral_arrow.png",
+					"texture_name": "spectral_arrow",
 					"model": "arrow"
 				},
 				{
 					"name": "stray_outer",
 					"display_name": "Stray [Outer]",
-					"texture_name": "stray_outer.png",
+					"texture_name": "stray_outer",
 					"model": "skeleton"
 				}
 			]
@@ -871,7 +871,7 @@
 				{
 					"name": "warden",
 					"display_name": "Warden",
-					"texture_name": "warden.png",
+					"texture_name": "warden",
 					"model": "warden"
 				}
 			]
@@ -967,8 +967,13 @@
 			"model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-1,0,0,2,4,7],\"textureOffset\":[0,0]}],\"submodels\":[{\"id\":\"right_fin\",\"invertAxis\":\"xy\",\"translate\":[1,1,0],\"rotate\":[0,0,-45],\"boxes\":[{\"coordinates\":[0,-1,-1,2,1,2],\"textureOffset\":[24,1]}]},{\"id\":\"left_fin\",\"invertAxis\":\"xy\",\"translate\":[-1,1,0],\"rotate\":[0,0,45],\"boxes\":[{\"coordinates\":[-2,-1,-1,2,1,2],\"textureOffset\":[24,4]}]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-1,0,-3,2,4,3],\"textureOffset\":[11,0]}]},{\"part\":\"nose\",\"id\":\"nose\",\"invertAxis\":\"xy\",\"translate\":[0,-2,3],\"boxes\":[{\"coordinates\":[-1,1,-4,2,3,1],\"textureOffset\":[0,0]}]},{\"part\":\"fin_left\"},{\"part\":\"fin_right\"},{\"part\":\"fin_back\",\"id\":\"fin_back\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[0,4,-1,0,1,6],\"textureOffset\":[20,-6]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0,-2,-7],\"boxes\":[{\"coordinates\":[0,0,7,0,4,4],\"textureOffset\":[22,3]}]}]}"
 		},
 		"conduit": {
-			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAMAAACVQ462AAAAz1BMVEUAAABbvPRryPqz5v70hoZgbIBryPlP0sBr3cxueIyl3fephIyxf4lD6I205v5f3sb2snz43XL5lpX6l5X/p6R71P+avNumn3Ooob1vq8+tscykdH2zq3976dG03fC1yuC3kJi4rcKNwNyP1/yXtdRf85hP0sH7wotTYXR76tF9tNaoxeKBzvWprYeEutyHyOuIyOqJ1PhxwvB2sdWUxuJ5yPK3uJOX3f+40ui9vdHC5vaY1PBr3sthbYClvdtf9Jj6v5B7/6Om1On/0J7/+Jnm3VEmAAAAAXRSTlMAQObYZgAAAOZJREFUeF7t0FVuxDAUheFc22GmYeYyM8P+11SPPb1WPGqf2qoP+Rbw6+gYoMAxd7TR3lhpDB1Aie6iKPIovaWUepPztcOzB9c1XeUvAnWgDnCvA2/gcRNht70yze8Dth0ji9ufSkPhcdYNgqCnNLcD9zufYouvOLkSpsPrtb2GPxoFvUv0KwFkAyHkQjqdNSTf97vNA7QdCJ9QuOA/EAlaHSnPc5Y8oyTVGOELmjv9fkxKwRrfCJ28KLLlG0rS94qfCdSBueI4zgIsaSy1WJZlS+WrBSiEsgJYUcH+Z6AOaEDDNKnmAx4Z7K1majyzAAAAAElFTkSuQmCC",
-			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"eye\",\"id\":\"eye\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[-4,0,0,8,8,0],\"uvNorth\":[0,0,32,16],\"uvEast\":[0,0,0,8],\"uvSouth\":[0,0,32,16],\"uvWest\":[8,0,8,8],\"uvUp\":[8,0,0,0],\"uvDown\":[16,0,8,0]}]},{\"part\":\"cage\",\"id\":\"cage\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,8,8],\"uvNorth\":[32,32,16,16],\"uvEast\":[16,32,0,16],\"uvSouth\":[64,32,48,16],\"uvWest\":[48,32,32,16],\"uvUp\":[32,16,16,0],\"uvDown\":[48,16,32,0]}]},{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[-3,1,-3,6,6,6],\"uvNorth\":[24,24,12,12],\"uvEast\":[12,24,0,12],\"uvSouth\":[48,24,36,12],\"uvWest\":[36,24,24,12],\"uvUp\":[24,12,12,0],\"uvDown\":[36,12,24,0]}]},{\"part\":\"wind\",\"id\":\"wind\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[-8,-4,-8,16,16,16],\"uvNorth\":[16,16,32,32],\"uvEast\":[0,16,16,32],\"uvSouth\":[48,16,64,32],\"uvWest\":[32,16,48,32],\"uvUp\":[32,16,16,0],\"uvDown\":[48,0,32,16]}]}]}"
+			"texture_data": [
+				"iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAALVBMVEUAAABTYXT///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkS0xXHAAAAA3RSTlMAAAD6dsTeAAAAS0lEQVQ4jWNUYoCAcii9Gkqf+QChGWEKKgTA1P+5CmD635pRBUNYAc7oNoYKwBSmQWlBKM1oEQCmf1+BGu0BpT9D6VEFQ0kBoegGAKetrqHRgBOMAAAAAElFTkSuQmCC",
+				"iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAABCSURBVHheYxAEgg4gMAYCBiAAC3TOnDnDNDQ0mGYCmNYqAYELEKwCgt1AwKBeXl7klpaWsubMmVN77969TRMBDGsBjhVjnb4NM2YAAAAASUVORK5CYII=",
+				"iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAMAAABA3o1rAAAAM1BMVEVTYXT///9bvPR71P9ueIxbvPT0hob43XK01OFTYXRD6I171P/s+P17/6NueIz/p6T/+JnKzvXZAAAABXRSTlMAAAAAAMJrBrEAAABFSURBVHhevc45EsAgDARBsC1x+fr/a1m2oAiVqeMJJhznkKnQNYQ4reCGXF7wD+zJSkJKiXbwQJUGoh9o+sEzsCejwSHoOXUKU/bPnxwAAAAASUVORK5CYII=",
+				"iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///9bvPR71P9U2V2rAAAAAXRSTlMAQObYZgAAABdJREFUeF5jCA1lYGDIWomPCA1lIBoAANnQB8f100sbAAAAAElFTkSuQmCC"
+			],
+			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"eye\",\"id\":\"eye\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-4,4,0,8,8,0],\"uvNorth\":[0,0,32,16],\"uvEast\":[0,0,0,8],\"uvSouth\":[0,0,32,16],\"uvWest\":[8,0,8,8],\"uvUp\":[8,0,0,0],\"uvDown\":[16,0,8,0]}]},{\"part\":\"cage\",\"id\":\"cage\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-4,4,-4,8,8,8],\"uvNorth\":[32,32,16,16],\"uvEast\":[16,32,0,16],\"uvSouth\":[64,32,48,16],\"uvWest\":[48,32,32,16],\"uvUp\":[32,16,16,0],\"uvDown\":[48,16,32,0]}]},{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-3,5,-3,6,6,6],\"uvNorth\":[24,24,12,12],\"uvEast\":[12,24,0,12],\"uvSouth\":[48,24,36,12],\"uvWest\":[36,24,24,12],\"uvUp\":[24,12,12,0],\"uvDown\":[36,12,24,0]}]},{\"part\":\"wind\",\"id\":\"wind\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-8,0,-8,16,16,16],\"uvNorth\":[16,16,32,32],\"uvEast\":[0,16,16,32],\"uvSouth\":[48,16,64,32],\"uvWest\":[32,16,48,32],\"uvUp\":[32,16,16,0],\"uvDown\":[48,0,32,16]}]}]}"
 		},
 		"cow": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAADDSURBVHhe7dLBCYNAEEDROXrMtrAIexXEDkTAq9iBWIAXC8hFO9AWVjsQGxA7WOwlM8NKNgFNwFMg/ygPZxwEIW4NFmJeAMIGmNfcw0AQaPu+i/I884cX4MfpNJ2CMp3NFwDbAdqGC7kn2J/hbLSsscwCKWWMaa0nzAV2SVVXSVkW47rM22ZcANRPgPfPdA9lgdhDyZY1ec4Bqq55Gs9baSLGp6ZXApyAtouyC+DzCNqcVj4EqkqKcZnNFfAH7qmPfpgH7vi9ztLmNm0AAAAASUVORK5CYII=",
