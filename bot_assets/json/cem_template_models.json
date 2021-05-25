@@ -1,5 +1,5 @@
 {
-	"version": "4.0.0",
+	"version": "4.1.0",
 	"categories": [
 		{
 			"name": "Supported",
@@ -420,6 +420,10 @@
 					"model": "cat"
 				},
 				{
+					"name": "creeper_charge",
+					"display_name": "Creeper [Charge]"
+				},
+				{
 					"name": "drowned_outer",
 					"display_name": "Drowned [Outer]",
 					"model": "drowned"
@@ -430,12 +434,21 @@
 					"model": "squid"
 				},
 				"goat",
+				{
+					"name": "pig_saddle",
+					"display_name": "Pig [Saddle]",
+					"model": "pig"
+				},
 				"player",
 				{
 					"name": "player_slim",
 					"display_name": "Player [Slim]"
 				},
 				"shield",
+				{
+					"name": "slime_gel",
+					"display_name": "Slime [Gel]"
+				},
 				{
 					"name": "spectral_arrow",
 					"model": "arrow"
@@ -444,6 +457,21 @@
 					"name": "stray_outer",
 					"display_name": "Stray [Outer]",
 					"model": "skeleton"
+				},
+				{
+					"name": "strider_saddle",
+					"display_name": "Strider [Saddle]",
+					"model": "strider"
+				},
+				{
+					"name": "tropical_fish_a_outer",
+					"display_name": "Tropical Fish [Small] [Outer]",
+					"model": "tropical_fish_a"
+				},
+				{
+					"name": "tropical_fish_b_outer",
+					"display_name": "Tropical Fish [Large] [Outer]",
+					"model": "tropical_fish_b"
 				}
 			]
 		},
@@ -561,6 +589,10 @@
 		"creeper": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAACPSURBVHheYwCBDiAwBgIGMBBEAQwg0Dlz5gzT0NBguigASdNAAYo3MRUoAYELEKwCgt1AgKFAvby8yC0tLWXNmTOn9t69e5ugAoQ1A64AtzcxFDAwgAIJObgwFHTOMA1GDnCCCki1AuREkPMgTsWMDwb1IreUNaf23laHeBbsVfoowHQkTgUwlUNCAa6gBgAYV/trb09iCAAAAABJRU5ErkJggg==",
 			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-18,0],\"boxes\":[{\"coordinates\":[-4,18,-4,8,8,8],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-18,0],\"boxes\":[{\"coordinates\":[-4,6,-2,8,12,4],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-2,-6,-4],\"boxes\":[{\"coordinates\":[0,0,2,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[2,-6,-4],\"boxes\":[{\"coordinates\":[-4,0,2,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-2,-6,4],\"boxes\":[{\"coordinates\":[0,0,-6,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[2,-6,4],\"boxes\":[{\"coordinates\":[-4,0,-6,4,6,4],\"textureOffset\":[0,16]}]}]}"
+		},
+		"creeper_charge": {
+			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAACPSURBVHheYwCBDiAwBgIGMBBEAQwg0Dlz5gzT0NBguigASdNAAYo3MRUoAYELEKwCgt1AgKFAvby8yC0tLWXNmTOn9t69e5ugAoQ1A64AtzcxFDAwgAIJObgwFHTOMA1GDnCCCki1AuREkPMgTsWMDwb1IreUNaf23laHeBbsVfoowHQkTgUwlUNCAa6gBgAYV/trb09iCAAAAABJRU5ErkJggg==",
+			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-18,0],\"boxes\":[{\"coordinates\":[-4,18,-4,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":2}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-18,0],\"boxes\":[{\"coordinates\":[-4,6,-2,8,12,4],\"textureOffset\":[16,16],\"sizeAdd\":2}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-2,-6,-4],\"boxes\":[{\"coordinates\":[0,0,2,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":2}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[2,-6,-4],\"boxes\":[{\"coordinates\":[-4,0,2,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":2}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-2,-6,4],\"boxes\":[{\"coordinates\":[0,0,-6,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":2}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[2,-6,4],\"boxes\":[{\"coordinates\":[-4,0,-6,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":2}]}]}"
 		},
 		"dolphin": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAO5JREFUeF7tkTEKgzAUht/mHITOKr1B6ZC15AYlB3DxAC72Bs0Voouz9AKSGxQP1V+TkkoQB6GF4jcIgU/+9/5HoAIZoIkIrxKvhKgky02p+1GIixOUUqUQ4otCOKQTUsa41i0xxk5Aa92BT6HIuelbOhT5WcprY/rHMDxXhTBiWUjIsl0It/C3cFSZd0EMnWvgfvEC0kZiKSU3wIVuFzAjwrYIExEWSxa3ABGqSWwFUN8lRON3LijXoviNsD5kOm5oV6w70IYRMxh8DTcU/GHixpjaN7kkuHq56zaMgAlXcnudJwVsFoIZ/oSdnZ0XQWkWWb7zbbAAAAAASUVORK5CYII=",
@@ -785,6 +817,10 @@
 		"slime": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAFtJREFUOMtjYEAH5UoM+AEhBYLGM1dRpmAwuIFdgYAThGcxDFNQXl6upIQvgCs62lVcnAZWAX5HCgoKGhsbz5w5c9Uq7NEslpZoGho8e/fONWdODZQCgo4cBAAA85E3BQNJQcsAAAAASUVORK5CYII=",
 			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-3,1,-3,6,6,6],\"textureOffset\":[0,16]}]},{\"part\":\"right_eye\",\"id\":\"right_eye\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-3.3,4,-3.5,2,2,2],\"textureOffset\":[32,0]}]},{\"part\":\"left_eye\",\"id\":\"left_eye\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[1.3,4,-3.5,2,2,2],\"textureOffset\":[32,4]}]},{\"part\":\"mouth\",\"id\":\"mouth\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[0,2,-3.5,1,1,1],\"textureOffset\":[32,8]}]}]}"
+		},
+		"slime_gel": {
+			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAEhJREFUOE9jYACCciBQAgIGXKCio6NdxcXFaWgrwOtNQSAwBoKZQLAKCDAUiKWlJZqGhgbP3r1755ozZ04NTQUEvTkKRgESAAAtalS9lr5drwAAAABJRU5ErkJggg==",
+			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"gel\",\"id\":\"gel\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,8,8],\"textureOffset\":[0,0]}]}]}"
 		},
 		"snow_golem": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAKxJREFUeF5jAIFyIFACAhgHzIUIQEBFR0e7iouLE1EKBI3BYOYqMCBdASagXAGGNzGAIBCAXQUEYGehA7G0tETT0NDg2bt371xz5sypoaaAsDcRABHDOCMDEhsuTiNVAeGAEgQBY1hgQ1I7WmSBYwscXZD4OnNqZCkgHFAIgFnuYMYWLLpcnMhSMKqAcFALgoExIroQxTgiuiHxDYlwSIyfOUWkglEFhIN6EAEANBi3JCjq7mQAAAAASUVORK5CYII=",
