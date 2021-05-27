@@ -1,5 +1,5 @@
 {
-	"version": "4.1.0",
+	"version": "4.1.1",
 	"categories": [
 		{
 			"name": "Supported",
@@ -89,10 +89,7 @@
 					"name": "husk",
 					"model": "zombie"
 				},
-				{
-					"name": "illusioner",
-					"model": "illager"
-				},
+				"illusioner",
 				"iron_golem",
 				"lead_knot",
 				"llama",
@@ -681,6 +678,10 @@
 		"illager": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAANdJREFUeF7tk8EJhDAQRdOClxQgdiA2IHYgFuDFFtwOtAWxg2ADYgdiUTshK0P8gWE3h2Vx3/HzJJmfUVl6IiVUn6ogj3EcsqoqRSHJJ/NtQQXwxwyREDkxEYYAQXddWzRNPW/buhzHflNBLioe+c3kV7efgcAp5UNWomBTWeAj4JKc2ppsRdyXIc6UBN0W9bwuu3417go/098WxDEVEy+Eq5Y2iSN8Zog+EeQjzvsaAnVCu4ndwJfxUPALwiNQuPwVKPDSRwjiEbwuIPgr8IbwF2BhoOponnSZAys53VVQAAAAAElFTkSuQmCC",
 			"model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,10,8],\"textureOffset\":[0,0]}]},{\"part\":\"hat\"},{\"part\":\"nose\",\"id\":\"nose\",\"invertAxis\":\"xy\",\"translate\":[0,-26,0],\"boxes\":[{\"coordinates\":[-1,23,-6,2,4,2],\"textureOffset\":[24,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-3,8,12,6],\"textureOffset\":[16,20]},{\"coordinates\":[-4,6,-3,8,18,6],\"textureOffset\":[0,38],\"sizeAdd\":0.5}]},{\"part\":\"arms\",\"id\":\"arms\",\"invertAxis\":\"xy\",\"translate\":[0,-20.5,-0.3],\"submodels\":[{\"id\":\"arms_rotation\",\"invertAxis\":\"xy\",\"translate\":[0,22.5,0.35],\"rotate\":[43,0,0],\"boxes\":[{\"coordinates\":[4,-8,-2,4,8,4],\"textureOffset\":[44,22]},{\"coordinates\":[-4,-8,-2,8,4,4],\"textureOffset\":[40,38]}],\"submodels\":[{\"id\":\"arms_flipped\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,16,-2,4,8,4],\"textureOffset\":[44,22]}]}]}],\"animations\":[{\"arms_rotation.rx\":0}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[40,46]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,46]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[2,-12,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-4,0,-2,4,12,4],\"textureOffset\":[0,22]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[0,0,-2,4,12,4],\"textureOffset\":[0,22]}]}]}"
+		},
+		"illusioner": {
+			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAOBJREFUeF7tk+EJg0AMhW8F/9wA4gbiAuIG4gD+cQW7ga4gbnC4gLiBOFRzXOXRBAnVQint+5fHJ0leTuPVkmKSaePnetet77ukKPIAoBZAlA7u08BBzdbidURKSQPJkXhtbNPUWVWV47LM07atvP4RQA/qncKNmOTVmfxnAoBLfpfkDICrAGghhoTrY/GRIB9H2l0CbJ2V4zyt9pFwCHh3vxtQ1zTQNeA4au0lwZJnZtY5QG8R5sW4YkgbNg4Ls/UkwAISLSTA/goJ4NGfBfQWOOABgCfwAvAH2IORUV/XHXa7aIGgkcqoAAAAAElFTkSuQmCC",
+			"model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,10,8],\"textureOffset\":[0,0]}]},{\"part\":\"hat\",\"id\":\"hat\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,10,8],\"textureOffset\":[32,0],\"sizeAdd\":0.5}]},{\"part\":\"nose\",\"id\":\"nose\",\"invertAxis\":\"xy\",\"translate\":[0,-26,0],\"boxes\":[{\"coordinates\":[-1,23,-6,2,4,2],\"textureOffset\":[24,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-3,8,12,6],\"textureOffset\":[16,20]},{\"coordinates\":[-4,6,-3,8,18,6],\"textureOffset\":[0,38],\"sizeAdd\":0.5}]},{\"part\":\"arms\",\"id\":\"arms\",\"invertAxis\":\"xy\",\"translate\":[0,-20.5,-0.3],\"submodels\":[{\"id\":\"arms_rotation\",\"invertAxis\":\"xy\",\"translate\":[0,22.5,0.35],\"rotate\":[43,0,0],\"boxes\":[{\"coordinates\":[4,-8,-2,4,8,4],\"textureOffset\":[44,22]},{\"coordinates\":[-4,-8,-2,8,4,4],\"textureOffset\":[40,38]}],\"submodels\":[{\"id\":\"arms_flipped\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,16,-2,4,8,4],\"textureOffset\":[44,22]}]}]}],\"animations\":[{\"arms_rotation.rx\":0}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[40,46]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,46]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[2,-12,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-4,0,-2,4,12,4],\"textureOffset\":[0,22]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[0,0,-2,4,12,4],\"textureOffset\":[0,22]}]}]}"
 		},
 		"iron_golem": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAMFBMVEUAAABbvPR71P////9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+Jl7FhfoAAAABHRSTlMAAAAAs5NmmgAAAW9JREFUeF7t2DFugzAUgGG3ytSpZ+jYNVewkNiqSig3sDqwIt8g4gBdOAAL3CBcwUS5gNULVNwA0fccN6hR08JDgoH3b0jkG5yHsRBYAUWQKCLhOl8L7KEo8ih6EWL7ew4oq+qw0zq5ACVeJ2egqnKtBwJSGbs8QF6DHthIqZQyprb2JGWgVGyMtXYIIFyb7P0t3R+buutOYRakadx8fnTtbaD/G0mAhBRkIAuNBsIM78cf4G1du0qAgemDhN09ir7ZgesIj/M/4YOKLhkoD7tkzcD0RXRj6mb0L+D+6WYhDNX+CIPUrgJggIHnwpdHvteRQOXLtc8BDDAw3yRKLFC+2GD2uyFAmEFB6osbCM9KrhYABvqXKxHAhIsO+PMBHfAnlOUB4ij3APG94BeRDsx2yGLgshlSgdJvx8lKgemLKKX0j2FtofEA3nLeCGrcAZYHJq+B+NkA4CoGGGCA+gVjO7S5AAYYYIABBhhggIEvvsLfs/EH5O8AAAAASUVORK5CYII=",
