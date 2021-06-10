@@ -1,5 +1,5 @@
 {
-	"version": "4.3.0",
+	"version": "4.4.0",
 	"categories": [
 		{
 			"name": "Supported",
@@ -450,6 +450,7 @@
 					"name": "spectral_arrow",
 					"model": "arrow"
 				},
+				"spyglass",
 				{
 					"name": "stray_outer",
 					"display_name": "Stray [Outer]"
@@ -830,6 +831,10 @@
 		"spider": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAACuSURBVHheYxAUFOzo6DA2NmbogAJjKGAQBAGQgs6ZM0xDgwkqUHKBglW7oYBIBUAAUQBkwARgFsH4EC5EAVQHSEtoMJivpKQEMnYVyGCsCtTLi9zSUtacObX37u0BUYDpSExvQgAijJVAOiBawCEGVAAxFGJqaLB6OchOkKUgW+/eHpoKCHpTEA1QrAAzqDEUKIEBJLWCASS9QgAkPZSDPQbxGcRvd28PLQWEvQkACcRZxtDLHccAAAAASUVORK5CYII=",
 			"model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-9,3],\"boxes\":[{\"coordinates\":[-4,5,-11,8,8,8],\"textureOffset\":[32,4]}]},{\"part\":\"neck\",\"id\":\"neck\",\"invertAxis\":\"xy\",\"translate\":[0,-9,0],\"boxes\":[{\"coordinates\":[-3,6,-3,6,6,6],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-9],\"boxes\":[{\"coordinates\":[-5,5,3,10,8,12],\"textureOffset\":[0,12]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-9,-4],\"boxes\":[{\"coordinates\":[3,8,3,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-9,-4],\"boxes\":[{\"coordinates\":[-19,8,3,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-9,-1],\"boxes\":[{\"coordinates\":[3,8,0,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-9,-1],\"boxes\":[{\"coordinates\":[-19,8,0,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg5\",\"id\":\"leg5\",\"invertAxis\":\"xy\",\"translate\":[-4,-9,2],\"boxes\":[{\"coordinates\":[3,8,-3,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg6\",\"id\":\"leg6\",\"invertAxis\":\"xy\",\"translate\":[4,-9,2],\"boxes\":[{\"coordinates\":[-19,8,-3,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg7\",\"id\":\"leg7\",\"invertAxis\":\"xy\",\"translate\":[-4,-9,5],\"boxes\":[{\"coordinates\":[3,8,-6,16,2,2],\"textureOffset\":[18,0]}]},{\"part\":\"leg8\",\"id\":\"leg8\",\"invertAxis\":\"xy\",\"translate\":[4,-9,5],\"boxes\":[{\"coordinates\":[-19,8,-6,16,2,2],\"textureOffset\":[18,0]}]}]}"
+		},
+		"spyglass": {
+			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAADFBMVEUAAABTYXS01OH0hoYycnJLAAAAAXRSTlMAQObYZgAAABVJREFUCFtjCGAAAjDxgTxiAZwAAQAEXgwxI7JhRAAAAABJRU5ErkJggg==",
+			"model": "{\"textureSize\":[16,16],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-1,5,-1,2,6,2],\"uvNorth\":[2,13,0,7],\"uvEast\":[2,13,0,7],\"uvSouth\":[2,13,0,7],\"uvWest\":[2,13,0,7],\"uvUp\":[0,13,2,15],\"uvDown\":[0,5,2,7],\"sizeAdd\":0.1},{\"coordinates\":[-1,0,-1,2,5,2],\"uvNorth\":[2,7,0,2],\"uvEast\":[2,7,0,2],\"uvSouth\":[2,7,0,2],\"uvWest\":[2,7,0,2],\"uvDown\":[0,0,2,2]}]}]}"
 		},
 		"squid": {
 			"texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAFtJREFUOI1jYACDcjBQAgMGqBCMAQYVHUDQruICBE5EKhA0nrlqVAGGAsyghisQBANjMJgJBqvAAK5ALA0IEk1DgSB49m4g2LnmDBCcGiEK4GE4PBTgim6GQQQAvVEXgC+lMVsAAAAASUVORK5CYII=",
