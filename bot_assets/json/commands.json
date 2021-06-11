@@ -106,7 +106,7 @@
 		"logs": {
 			"commands": [
 				"removelogs          [category]",
-				"setlogs             <channel>[category]",
+				"setlogs             [category]<channel>",
 				"viewlogs            [n/a]"
 			]
 		},
@@ -249,7 +249,7 @@
 				"leet                [text]",
 				"love                [name] [name]",
 				"mock                [text]",
-				"monketest           <member><member><member><member>",
+				"monke               <member><member><member><member>",
 				"namesearch          [text]",
 				"quote               [n/a]",
 				"say                 [character][message]",
@@ -264,8 +264,8 @@
 				"gun                 [scaleMode][imageURL]",
 				"impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
 				"marry               <member><member>",
-				"monke               <member><member><member><member>",
 				"monkeband           <member><member><member>",
+				"monketest           <member>",
 				"rainbow             [speed][direction][imageURL]",
 				"snap                <member><member>",
 				"spin                [speed][direction][expandMode][imageURL]",
