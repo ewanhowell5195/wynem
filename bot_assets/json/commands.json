@@ -596,7 +596,7 @@
 			"description": "Display the number of commands the bot has."
 		},
 		"setmembercounter": {
-			"description": "Set a channel to use to display the current member count.\nA `!` must be used in the custom text to indicate the number, for example: `e!setmembercount [channelID] Current Members: !`",
+			"description": "Set a channel to use to display the current member count.\nA '!' must be used in the custom text to indicate the number, for example: 'e!setmembercount [channelID] Current Members: !'",
 			"permissions": "Manage Channels"
 		},
 		"squarify": {
