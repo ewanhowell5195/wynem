@@ -135,6 +135,9 @@
 			]
 		},
 		"bot": {
+			"subcategories": [
+				"Restricted"
+			],
 			"commands": [
 				"alias               [command]",
 				"botserver           [n/a]",
@@ -143,7 +146,6 @@
 				"contact             [n/a]",
 				"credits             [n/a]",
 				"customembed         [colour]",
-				"defaultemojistats   [n/a]",
 				"disable             [command]",
 				"disabled            [n/a]",
 				"disablequotes       [n/a]",
@@ -152,7 +154,6 @@
 				"ping                [n/a]",
 				"prefix              [prefix]",
 				"prefixlessmode      [n/a]",
-				"requestemoji        [emoji]",
 				"reset               [n/a]",
 				"servers             [n/a]",
 				"suggest             [message]",
@@ -215,6 +216,7 @@
 			"commands": [
 				"cape                [name]",
 				"capeify             [size][imageURL]",
+				"capepreview         [imageURL]",
 				"head                [name]",
 				"renderskin          [skinMode][imageURL]",
 				"skin                [name]",
@@ -224,10 +226,11 @@
 		},
 		"utility": {
 			"commands": [
+				"averagecolour       [imageURL]",
 				"charactercount      [message]",
 				"colour              [colour]",
+				"generatepalette     [amount]",
 				"google              [searchTerm]",
-				"math                [number][process][number]",
 				"reminders           [n/a]",
 				"remindme            [duration][reminder]"
 			]
@@ -239,7 +242,6 @@
 			"commands": [
 				"ball                [question]",
 				"bean                <member>",
-				"beanrequest         [n/a]",
 				"charshift           [offset][text]",
 				"coin                [n/a]",
 				"dadjoke             [n/a]",
@@ -261,15 +263,20 @@
 			"commands": [
 				"band                <member><member><member><member>",
 				"emojify             [imageURL]",
+				"gmagick             [imageURL]",
 				"gun                 [scaleMode][imageURL]",
 				"impostor            [outline][hair][head][visor][body][backpack][leftLeg][rightLeg]",
+				"magick              [intensity][imageURL]",
 				"marry               <member><member>",
+				"mckick              [username][username]",
 				"monkeband           <member><member><member>",
 				"monketest           <member>",
 				"rainbow             [speed][direction][imageURL]",
 				"snap                <member><member>",
 				"spin                [speed][direction][expandMode][imageURL]",
 				"squarify            [squaresize][gapsize][imageURL]",
+				"textify             [imageURL]",
+				"textify2            [imageURL]",
 				"triggered           [imageURL]",
 				"unband              <member><member><member><member>",
 				"valentines          <member>",
@@ -359,9 +366,22 @@
 				"chest               [imageURL][imageURL]",
 				"ctm                 [imageURL]",
 				"ctmsplitter         [resolution][imageURL]",
+				"minecrafttitle      [imageURL]",
 				"mojang              [mode][imageURL]",
 				"renderentity        [entity][imageURL]",
 				"tile                [imageURL]"
+			]
+		},
+		"restricted": {
+			"commands": [
+				"botban              <user>[reason]",
+				"botunban            <user>[reason]",
+				"cleanstats          [n/a]",
+				"dm                  <user>[message]",
+				"reloadmodels        [n/a]",
+				"reply               [channelID]<user>",
+				"universaldisable    [command]",
+				"universalenable     [command]"
 			]
 		}
 	},
@@ -392,10 +412,7 @@
 		},
 		"bean": {
 			"description": "Bean a user.",
-			"permissions": "Ban Members"
-		},
-		"beanrequest": {
-			"description": "Request to be beaned."
+			"permissions": "Manage Messages"
 		},
 		"bottime": {
 			"description": "See what the current time is for Wynem."
@@ -438,15 +455,13 @@
 		"love": {
 			"description": "Discover how much you love someone!"
 		},
-		"math": {
-			"description": "Calculate simple math equations."
-		},
 		"mock": {
 			"description": "Spongebobify some text."
 		},
 		"mute": {
 			"description": "Temporarily mute a member, removing their ability to talk in chat. Defaults to 10 minutes if left blank.",
-			"permissions": "Kick Members"
+			"permissions": "Kick Members",
+			"cooldown": 2
 		},
 		"permamute": {
 			"description": "Permanently mute a member, removing their ability to talk in chat.",
@@ -513,7 +528,8 @@
 		},
 		"warn": {
 			"description": "Warns a user.",
-			"permissions": "Kick Members"
+			"permissions": "Kick Members",
+			"cooldown": 2
 		},
 		"warnclear": {
 			"description": "Clear warns from a user.",
@@ -868,16 +884,6 @@
 		"shuffle": {
 			"description": "Shuffle the order of the songs in the music queue."
 		},
-		"requestemoji": {
-			"description": "Request a default emoji to be added to the bots emoji database."
-		},
-		"setemoji": {
-			"description": "Add an emoji to the bots emoji database. The url must be the emojis svg url. You can get the url by right clicking a default emoji and then clicking \"Copy Link\".",
-			"permissions": "Ban Members\n- only in GuildID = 827706267325562881"
-		},
-		"defaultemojistats": {
-			"description": "View how many default emoji are in the bots emoji database."
-		},
 		"slowmode": {
 			"description": "Set the slowmode length for a channel.",
 			"permissions": "Manage Channels"
@@ -1050,6 +1056,66 @@
 		"removelogs": {
 			"description": "Remove a log channel from the server.",
 			"permissions": "Manage Channels"
+		},
+		"capepreview": {
+			"description": "Generate a preview image for a Minecraft cape."
+		},
+		"magick": {
+			"description": "Distort an image. Outputs a static image.",
+			"cooldown": 3
+		},
+		"gmagick": {
+			"description": "Distort a image. Outputs a GIF.",
+			"cooldown": 5
+		},
+		"mckick": {
+			"description": "Make one minecraft character kick another!",
+			"cooldown": 3
+		},
+		"textify": {
+			"description": "Turn an image into ascii art. Processed with average brightness",
+			"cooldown": 2
+		},
+		"textify2": {
+			"description": "Turn an image into ascii art. Processed with edge detection.",
+			"cooldown": 2
+		},
+		"averagecolour": {
+			"description": "Show the average colour of an image."
+		},
+		"generatepalette": {
+			"description": "Generate a palette of random colours."
+		},
+		"minecrafttitle": {
+			"description": "Convert an image into a Minecraft title texture for use in a resource pack"
+		},
+		"cleanstats": {
+			"description": "Clean the command stats, removing stats for commands that have been removed.",
+			"permissions": "Bot Owner"
+		},
+		"universaldisable": {
+			"description": "Disable a command for all servers.",
+			"permissions": "Bot Owner"
+		},
+		"universalenable": {
+			"description": "Disable a command for all servers.",
+			"permissions": "Bot Owner"
+		},
+		"reloadmodels": {
+			"description": "Reload the models used for the render command.",
+			"permissions": "Bot Owner"
+		},
+		"botban": {
+			"description": "Ban a member from using the bot across all servers.",
+			"permissions": "Bot Moderator"
+		},
+		"botunban": {
+			"description": "Unban a member from using the bot across all servers.",
+			"permissions": "Bot Moderator"
+		},
+		"reply": {
+			"description": "Reply to a bot support message",
+			"permissions": "Bot Moderator"
 		}
 	}
 }

@@ -1,5 +1,5 @@
 {
-	"version": "4.4.0",
+	"version": "4.4.1",
 	"categories": [
 		{
 			"name": "Supported",
@@ -185,6 +185,11 @@
 				"sign",
 				"silverfish",
 				"skeleton",
+				{
+					"name": "head_skeleton",
+					"display_name": "Skeleton Head",
+					"model": "head"
+				},
 				{
 					"name": "skeleton_horse",
 					"model": "horse"
