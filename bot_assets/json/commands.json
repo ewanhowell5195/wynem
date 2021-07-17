@@ -196,7 +196,7 @@
 			],
 			"commands": [
 				"account             <member>",
-				"blockify            [imageURL]",
+				"blockify            [mode][imageURL]",
 				"mcwiki              [searchTerm]",
 				"namehistory         [name]",
 				"playerhead          [url]",
@@ -316,12 +316,14 @@
 				"Drawing"
 			],
 			"commands": [
+				"convert             [mode][imageURL]",
 				"crop                [x][y][x2][y2][imageURL]",
 				"flip                [imageURL]",
 				"grayscale           [imageURL]",
 				"haah                [imageURL]",
 				"hooh                [imageURL]",
 				"hueshift            [angle][imageURL]",
+				"imagecompare        [imageURL][imageURL]",
 				"imagesize           [imageURL]",
 				"invert              [imageURL]",
 				"magnify             [imageURL]",
@@ -401,7 +403,7 @@
 			"permissions": "Manage Roles"
 		},
 		"artchive": {
-			"description": "Add your artwork to the artchive!"
+			"description": "Add your artwork to the artchive! React to the artchive message with 🗑️ (`:wastebasket:`) to remove it."
 		},
 		"avatar": {
 			"description": "Shows a users avatar."
@@ -735,7 +737,7 @@
 			"description": "Get a random gif from the first 20 results on Tenor."
 		},
 		"blockify": {
-			"description": "Turn an image into Minecraft block art!",
+			"description": "Turn an image into Minecraft block art! Possible modes: `all` `solid` `top` `side`.",
 			"cooldown": 5
 		},
 		"monke": {
@@ -919,7 +921,7 @@
 			"description": "Set a default language for your TTS to be read in."
 		},
 		"starboard": {
-			"description": "Set up a starboard for the server. A starboard is a channel where messages are sent after they reach a certain number of upvotes. Upon setup, the starboard channel is automatically added to the starboard blacklist.",
+			"description": "Set up a starboard for the server. A starboard is a channel where messages are sent after they reach a certain number of upvotes. Upon setup, the starboard channel is automatically added to the starboard blacklist. Users can remove their messages in starboard by reacting with 🗑️ (`:wastebasket:`).",
 			"permissions": "Manage Channels"
 		},
 		"removestarboard": {
@@ -1116,6 +1118,13 @@
 		"reply": {
 			"description": "Reply to a bot support message",
 			"permissions": "Bot Moderator"
+		},
+		"imagecompare": {
+			"description": "Compare two images, to see the differences between them.\n\nRED = Removed pixles\nGREEN = New pixels\nBLUE = Edited pixels",
+			"cooldown": 3
+		},
+		"convert": {
+			"description": "Convert an image to a different colour mode."
 		}
 	}
 }
