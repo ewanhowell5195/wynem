@@ -534,7 +534,7 @@
 			"cooldown": 2
 		},
 		"warnclear": {
-			"description": "Clear warns from a user.",
+			"description": "Clear warns from a user. Not providing a number will clear all warns from a user. Set the user as `all` or `everyone` to clear all warns in the server.",
 			"permissions": "Kick Members"
 		},
 		"warncount": {
@@ -554,7 +554,7 @@
 			"permissions": "Manage Channels"
 		},
 		"muteclear": {
-			"description": "Clear a mute from a member.",
+			"description": "Clear mute logs from a user. Not providing a number will clear all mute logs from a user. Set the user as `all` or `everyone` to clear all mute logs in the server.",
 			"permissions": "Kick Members"
 		},
 		"unmute": {
