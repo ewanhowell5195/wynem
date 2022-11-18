@@ -1,0 +1,174 @@
+:root
+  color-scheme: dark
+  --color-blue-light: #9DB6F9
+  --color-blue: #6C80F6
+  --color-blue-dark: #3C4DF3
+  --color-text-white: #FFF
+  --color-box-shadow: #00000030
+  --color-text-shadow: #00000080
+  --color-svg-shadow: #000000c0
+  --color-shadow: #00000080
+  --color-grey-lighter: #3E3E42
+  --color-grey-light: #36363A
+  --color-grey: #2F2E31
+  --color-grey-dark: #272729
+  --color-grey-darker: #1F1F21
+  --color-link-blue: #6C80F6
+  --header-height: 40px
+  --content-width: 1280px
+  --box-shadow: 0 10px 10px var(--color-box-shadow)
+  
+body
+  margin: 0
+  background-color: var(--color-grey-darker)
+  overflow: auto
+  min-height: 100vh
+  
+*
+  font-family: Arial
+  color: var(--color-text-white)
+  
+.spacer
+  flex: 1
+  
+// scrollbar
+
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-thumb
+  box-shadow: inset 0 0 10px 10px var(--color-blue)
+  min-height: var(--header-height)
+
+  &:hover
+    box-shadow: inset 0 0 10px 10px var(--color-blue-light)
+
+    &:active
+      box-shadow: inset 0 0 10px 10px var(--color-blue)
+
+body::-webkit-scrollbar
+  border-top: var(--header-height) solid var(--color-blue)
+
+body::-webkit-scrollbar-thumb
+  border-top: var(--header-height) solid transparent
+  min-height: calc(var(--header-height) * 2)
+  
+// header
+
+#header-container
+  background-color: var(--color-blue)
+  width: 100%
+  display: flex
+  justify-content: center
+  height: var(--header-height)
+  position: sticky
+  top: 0
+  box-shadow: var(--box-shadow)
+  z-index: 2
+  overflow: hidden
+
+#header
+  width: var(--content-width)
+  display: flex
+  position: relative
+  padding-right: calc(min(45px, 45px - (100vw - var(--content-width)) / 2))
+  box-sizing: border-box
+  
+.page-button
+  text-decoration: none
+  display: flex
+  align-items: center
+  color: white
+  font-weight: 700
+  letter-spacing: 1px
+  padding: 0 10px
+  text-shadow: -2px 2px 1px var(--color-text-shadow)
+  transition: background-color .15s
+  user-select: none
+  min-height: var(--header-height)
+  gap: 10px
+
+  & > span
+    transition: transform .15s
+
+  & > svg
+    fill: var(--color-text-white)
+    filter: drop-shadow(-2px 2px 1px var(--color-text-shadow))
+
+  &:hover
+    background-color: var(--color-blue-light)
+
+  &:active > span
+    transform: translateY(3px)
+
+  &.selected
+    background-color: var(--color-blue-dark)
+
+  &.logo > span::before
+    content: "Home"
+    
+.logo
+  padding-left: 0
+
+  img
+    height: var(--header-height)
+    
+// page
+
+#content
+  min-height: calc(100vh - var(--header-height) * 2)
+  
+.page
+  position: relative
+  display: block
+  width: 100%
+
+  &:not(.loading)
+    opacity: 0
+    animation: fadeIn 1 250ms forwards
+
+  &.loading
+    visibility: hidden
+    pointer-events: none
+    animation: none
+    opacity: 0
+    
+// footer
+
+#footer-container
+  position: relative
+  background-color: var(--color-blue)
+  width: 100%
+  display: flex
+  justify-content: center
+  height: var(--header-height)
+  box-shadow: 0 -10px 10px var(--color-box-shadow)
+  overflow: hidden
+
+#footer
+  width: var(--content-width)
+  display: flex
+    
+// animations
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+    
+// mobile
+
+@media only screen and (max-width: 768px)
+  .page-button.logo 
+    background-color: transparent
+
+    > span::before
+      content: "Wynem"
+  
+  #header > .page-button:not(.logo)
+    display: none
+
+  .popup-image-close
+    right: 0
+    opacity: 1

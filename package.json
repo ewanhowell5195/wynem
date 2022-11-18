@@ -1,0 +1,16 @@
+{
+  "webbuilder": {
+    "cloudflare_spa_router": true,
+    "uglify": true,
+    "watch": [
+      "src",
+      "includes"
+    ],
+    "pugLocals": {
+      "domain": "wynem.com"
+    }
+  },
+  "devDependencies": {
+    "webbuilder": "github:EvenTorset/WebBuilder"
+  }
+}
