@@ -7,7 +7,7 @@
       "includes"
     ],
     "pugLocals": {
-      "domain": "wynem.com"
+      "domain": "beta.wynem.com"
     }
   },
   "devDependencies": {
