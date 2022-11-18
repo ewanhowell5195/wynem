@@ -82,6 +82,7 @@ function basicPageRoute(path, rgx) {
 }
 
 const routes = [
+  basicPageRoute("features")
 ]
 
 let isOpeningPage = false
