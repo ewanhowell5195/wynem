@@ -55,11 +55,12 @@ window.imageObserver  =  new IntersectionObserver((entries, observer) => {
 
 // pages
 
-function setupPage(PageClass, container, data) {
+async function setupPage(PageClass, container, data) {
   const page = E(PageClass.tag)
   if (PageClass.title) document.title = PageClass.title
   container.empty().append(page)
-  if (data) page[0].setData(data)
+  if (data) return await page[0].setData(data) ?? true
+  return true
 }
 
 function historyHandler(updateHistory, url) {
@@ -70,19 +71,24 @@ function historyHandler(updateHistory, url) {
   }
 }
 
-function basicPageRoute(path, rgx) {
+function pageRoute(path, rgx) {
   return [
-    rgx ?? new RegExp(`^/${path}/?(?:\\?.*)?$`,"i"),
-    async (url, container, updateHistory) => {
-      setupPage((await import(`/pages/${path}/page.js`)).default, container, Object.fromEntries(url.searchParams))
-      historyHandler(updateHistory, url)
-      return true
+    typeof rgx === "string" ? new RegExp(`^${rgx.replace(/:(?<name>[^/?.]+)/g, (m, name) => `(?<${name}>[^/?.]+)(?=$|/|\\?|.)`).replace(/\./g, "\\$&")}/?(?:\\?.*)?$`, "i") : rgx ?? new RegExp(`^/${path}/?(?:\\?.*)?$`, "i"),
+    async (url, container, updateHistory, params) => {
+      const searchParams = Object.fromEntries(url.searchParams)
+      if (await setupPage((await import(`/pages/${path}/page.js`)).default, container, params !== undefined ? Object.assign(params, {searchParams}) : searchParams)) {
+        historyHandler(updateHistory, url)
+        return true
+      } else {
+        return false
+      }
     }
   ]
 }
 
 const routes = [
-  basicPageRoute("features")
+  pageRoute("home", "/"),
+  pageRoute("features")
 ]
 
 let isOpeningPage = false
@@ -91,23 +97,24 @@ window.openPage = async function(url, updateHistory = false, forceUpdate = false
   $("#mobile-menu").addClass("hidden")
   $('link[rel="icon"][sizes="16x16"]').attr("href", "/assets/images/logo/logo_16.webp")
   $('link[rel="icon"][sizes="32x32"]').attr("href", "/assets/images/logo/logo_32.webp")
-  $("title").text("Wynem")
+  document.title = "Wynem"
   isOpeningPage = true
-  let foundPage = false
-  const ps = url.pathname + url.search
-  for (const [rgx, func] of routes) {
-    if (ps.match(rgx)) {
-      if (!(await func(url, $("#content"), updateHistory))) {
-        setupPage((await import("/pages/home/page.js")).default, $("#content"), Object.fromEntries(url.searchParams))
-        history.replaceState({}, "", "/")
-      }
-      foundPage = true
-      break
+  const findPage = async ps => {
+    for (const [rgx, func] of routes) {
+      const m = ps.match(rgx)
+      if (m !== null) return await func(url, $("#content"), updateHistory, m.groups)
     }
   }
+  let foundPage = await findPage(url.pathname + url.search)
   if (!foundPage) {
-    setupPage((await import("/pages/home/page.js")).default, $("#content"), Object.fromEntries(url.searchParams))
-    historyHandler(updateHistory, "/")
+    let i = 1
+    const parts = url.pathname.split("/")
+    while (!foundPage && parts.length > i) {
+      const path = parts.slice(0, -i++).join('/')
+      const ps = (path.length ? path : '/') + url.search
+      foundPage = await findPage(ps)
+      if (foundPage) historyHandler("replace", ps)
+    }
   }
   isOpeningPage = false
   $('meta[name="theme-color"]').attr("content", "#6C80F6")
