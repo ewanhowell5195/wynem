@@ -56,6 +56,7 @@ window.imageObserver  =  new IntersectionObserver((entries, observer) => {
 // pages
 
 async function setupPage(PageClass, container, data) {
+  if (!customElements.get(PageClass.tag)) customElements.define(PageClass.tag, PageClass)
   const page = E(PageClass.tag)
   if (PageClass.title) document.title = PageClass.title
   container.empty().append(page)

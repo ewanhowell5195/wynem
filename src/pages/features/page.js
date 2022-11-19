@@ -7,5 +7,3 @@ export default class FeaturesPage extends Page {
 
   static tag = "features-page"
 }
-
-customElements.define(FeaturesPage.tag, FeaturesPage)

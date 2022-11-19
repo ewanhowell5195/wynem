@@ -7,5 +7,3 @@ export default class HomePage extends Page {
 
   static tag = "home-page"
 }
-
-customElements.define(HomePage.tag, HomePage)
