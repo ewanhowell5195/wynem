@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "webbuilder": {
     "cloudflare_spa_router": true,
     "uglify": true,
@@ -10,7 +11,7 @@
       "domain": "beta.wynem.com"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "webbuilder": "github:EvenTorset/WebBuilder"
   }
 }

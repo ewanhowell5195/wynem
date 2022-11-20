@@ -6,4 +6,6 @@ export default class FeaturesPage extends Page {
   }
 
   static tag = "features-page"
+  static title = "Features - Wynem"
+  static description = "This page doesn't exist"
 }
