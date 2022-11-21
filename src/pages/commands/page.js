@@ -136,7 +136,7 @@ export default class extends Page {
     const searchInput = $("#search > input")
     this.shadowBody.on("click", e => {
       const target = $(e.target)
-      if (!(target.attr("id") === "search" || target.attr("id") === "search-results" || target.parents("#search, #search-results").length)) {
+      if (!(target.attr("id") === "search" || target.parents("#search").length)) {
         searchResults.empty()
       } else if ((target.attr("id") === "search" || target.parents("#search").length) && searchInput.val()) {
         searchInput.trigger("input")
@@ -184,7 +184,7 @@ export default class extends Page {
           }).addClass("search-result").append(
             E("div").addClass("name").html(match[1]),
             E("div").addClass("path").text(match[2])
-          )
+          ).on("click", e => searchResults.empty())
         )
       }
     })
