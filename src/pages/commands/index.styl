@@ -12,7 +12,7 @@ page-body
   width: 148px
   position: fixed
   top: var(--header-height)
-  left: calc(max(0, (100vw - var(--content-width)) / 2))
+  left: calc(max(0px, (100vw - var(--content-width)) / 2))
   bottom: 0
   overflow-y: auto
   z-index: 200
@@ -80,7 +80,7 @@ page-body
   height: var(--header-height)
   background-color: var(--color-grey-dark)
   right: 0
-  left: 148px
+  left: calc(max(0px, (100vw - var(--content-width)) / 2) + 148px)
   display: flex
   align-items: center
   padding: 0 10px
