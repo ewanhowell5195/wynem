@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang = "en")
   head
     - let meta
     block meta
@@ -41,7 +41,7 @@ html
     #header-container
       #header
         a.page-button.logo(href = "/", is = "f-a")
-          img(src = "/assets/images/logo/logo.webp")
+          img(src = "/assets/images/logo/logo.webp", width = "40", height = "40", alt = "logo")
           span
         a.page-button(href = "/features", is = "f-a"): span Features
         a.page-button(href = "/commands", is = "f-a"): span Commands

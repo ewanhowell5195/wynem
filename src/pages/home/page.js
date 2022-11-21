@@ -10,8 +10,8 @@ export default class extends Page {
   async setData(params) {
     if (Object.keys(params).length) {
       if (params.commands) this.redirect = `commands/${params.commands}/${params.command ?? ""}`
-      else if (params.features !== undefined) this.redirect = `features`
-      else if (params.privacy !== undefined) this.redirect = `privacy`
+      else if ("features" in params) this.redirect = "features"
+      else if ("privacy" in params) this.redirect = "privacy"
     }
   }
 

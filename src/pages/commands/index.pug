@@ -1,9 +1,15 @@
 template#arrow-left: include /assets/images/svg/arrow_left.svg
 template#arrow-right: include /assets/images/svg/arrow_right.svg
 .container
+  #darken.hidden
   #categories-container
     #categories
   #main
-    #breadcrumbs
-      a(href = "/commands", is = "f-a"): span Wynem
+    #breadcrumbs-container
+      #breadcrumbs
+        a(href = "/commands", is = "f-a"): span Wynem
+      #search(onclick = "this.children[1].focus()")
+        include /assets/images/svg/search.svg
+        input(placeholder = "Search...")
+        #search-results
     #content

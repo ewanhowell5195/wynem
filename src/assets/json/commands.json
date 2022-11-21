@@ -175,7 +175,10 @@
               ],
               "arguments": "[category/command]",
               "cooldown": 1,
-              "description": "Get a list of the bot's commands and information about each one.``````Argument types:\n\n[arg] - A text argument\n<arg> - A discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
+              "description": [
+                "Get a list of the bot's commands and information about each one.",
+                "Argument types:\n\n[arg] - A text argument\n<arg> - A discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
+              ]
             },
             "prefixlessmode": {
               "aliases": [
@@ -946,7 +949,7 @@
             "avatars": {
               "commands": {
                 "avatarpie": {
-                  "arguments": "<member> * 8",
+                  "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                   "cooldown": 1,
                   "description": "Merge a bunch of avatars into one image."
                 },
@@ -2070,7 +2073,10 @@
         },
         "minecrafttext": {
           "aliases": [
-            "mctext"
+            "minecraftfont",
+            "mcfont",
+            "mctext",
+            "mct"
           ],
           "arguments": "[text]",
           "cooldown": 1,
@@ -2089,6 +2095,8 @@
         "mojangtext": {
           "aliases": [
             "mojangfont",
+            "mjfont",
+            "mjtext",
             "mjt"
           ],
           "arguments": "[text]",
@@ -3247,7 +3255,11 @@
               ],
               "arguments": "[language] [text]",
               "cooldown": "3",
-              "description": "Read some text out loud. If you are in a voice channel, the bot will join the channel and read it out loud there, otherwise it sends an mp3.``````The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.``````Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+              "description": [
+                "Read some text out loud. If you are in a voice channel, the bot will join the channel and read it out loud there, otherwise it sends an mp3.",
+                "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
+                "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+              ]
             },
             "viewignoredprefixes": {
               "aliases": [
