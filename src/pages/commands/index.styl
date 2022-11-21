@@ -1,0 +1,46 @@
+.container
+  max-width: var(--content-width)
+  margin: 0 auto
+  flex: 1
+  display: flex
+  min-height: calc(100vh - var(--header-height) * 2)
+
+page-body
+  background-image: linear-gradient(to right, var(--color-grey-darker) 50%, var(--color-grey) 50%)
+
+#main
+  background-color: var(--color-grey)
+  min-height: 100%
+  flex: 1
+
+#categories-container
+  background-color: var(--color-grey-darker)
+  padding: 10px
+  width: 128px
+  position: fixed
+  top: var(--header-height)
+  left: 0
+  bottom: 0
+  overflow-y: auto
+
+#categories
+  display: flex
+  flex-direction: column
+  gap: 5px
+
+  a
+    text-decoration: none
+    color: var(--color-text-white)
+    text-transform: capitalize
+
+#category-back
+  padding-bottom: 20px
+
+#content
+  margin-left: 148px
+  padding: 20px
+
+#commands
+  display: flex
+  flex-direction: column
+  gap: 20px

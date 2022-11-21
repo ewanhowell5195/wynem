@@ -44,10 +44,27 @@ html
           img(src = "/assets/images/logo/logo.webp")
           span
         a.page-button(href = "/features", is = "f-a"): span Features
-        a.page-button(href = "https://www.wynem.com/?commands", target = "_blank"): span Commands
+        a.page-button(href = "/commands", is = "f-a"): span Commands
         .spacer
-        a.page-button(href = "https://invite.wynem.com/", target = "_blank"): span Invite Wynem
+        a.page-button(href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
         a.page-button(href = `https://discord.${self.domain}/`, target = "_blank"): span Discord Server
+      .sidebar-button.hamburger-container.outside
+        .hamburger
+          .hamburger-line
+    #sidebar
+      a.page-button(href = "/", is = "f-a"): span Home
+      .line
+      a.page-button(href = "/features", is = "f-a"): span Features
+      a.page-button(href = "/commands", is = "f-a"): span Commands
+      .line
+      a.page-button(href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
+      a.page-button(href = `https://discord.${self.domain}/`, target = "_blank"): span Discord Server
+      .line
+      a.page-button(href = "https://ewanhowell.com/", target = "_blank"): span Developer's Website
+      .spacer
+      .line
+      .sidebar-link-icons
+        a(href = "https://twitter.com/WynemBot", target = "_blank"): include /assets/images/svg/twitter.svg
     #content
     #footer-container
       #footer

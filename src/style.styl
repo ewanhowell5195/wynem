@@ -8,11 +8,10 @@
   --color-text-shadow: #00000080
   --color-svg-shadow: #000000c0
   --color-shadow: #00000080
-  --color-grey-lighter: #3E3E42
-  --color-grey-light: #36363A
-  --color-grey: #2F2E31
-  --color-grey-dark: #272729
-  --color-grey-darker: #1F1F21
+  --color-grey-light: #2B2B2E
+  --color-grey: #1F1F21
+  --color-grey-dark: #141414
+  --color-grey-darker: #0F0F10
   --color-link-blue: #6C80F6
   --header-height: 40px
   --content-width: 1280px
@@ -20,7 +19,7 @@
   
 body
   margin: 0
-  background-color: var(--color-grey-darker)
+  background-color: var(--color-grey)
   overflow: auto
   min-height: 100vh
   
@@ -112,7 +111,115 @@ body::-webkit-scrollbar-thumb
 
   img
     height: var(--header-height)
+
+// sidebar
+
+.hamburger-container
+  cursor: pointer
+  transition: background-color .15s
+  width: 25px
+  padding: 0 10px
+  
+  &.outside
+    position: absolute
+    top: 0
+    right: 0
+
+  &:hover
+    background-color: var(--color-blue-light)
+
+  &.active
+    background-color: var(--color-blue-dark)
+
+    .hamburger-line
+      transition-delay: .12s
+      transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      transform: rotate(45deg)
+
+      &:before
+        top: 0
+        transition: top 75ms ease, opacity 75ms ease .12s
+        opacity: 0
+
+      &:after
+        bottom: 0
+        transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s
+        transform: rotate(-90deg)
+
+.hamburger
+  filter: drop-shadow(-2px 2px 1px var(--color-text-shadow))
+  display: flex
+  align-items: center
+  height: var(--header-height)
+
+.hamburger-line
+  position: relative
+  display: block
+  transition-timing-function: cubic-bezier(.55, .055, .675, .19)
+  transition-duration: 75ms
+
+  &, &:before, &:after
+    content: ""
+    width: 25px
+    height: 4px
+    border-radius: 4px
+    background-color: #fff
+
+  &:before
+    position: absolute
+    top: -8px
+    transition: top 75ms ease .12s, opacity 75ms ease
+
+  &:after
+    position: absolute
+    bottom: -8px
+    transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19)
+
+#sidebar
+  right: 0
+  position: fixed
+  z-index: 1
+  top: var(--header-height)
+  bottom: 0
+  background-color: var(--color-grey-dark)
+  box-shadow: initial
+  transition: transform .5s ease, box-shadow .5s ease
+  padding: 20px 0 10px
+  transform: translateX(100%)
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto
+  
+  &.active
+    transform: translateX(0)
+    box-shadow: 0 0 100px black
     
+  .page-button
+    &:hover
+      background-color: var(--color-grey-light)
+
+    &.selected
+      background-color: var(--color-grey)
+      
+  .line
+    background-color: var(--color-text-white)
+    width: calc(100% - 20px)
+    min-height: 2px
+    margin: 10px 10px
+    opacity: 0.5
+
+.sidebar-link-icons
+  padding: 0 10px
+  display: flex
+  justify-content: space-around
+  
+  path
+    fill: var(--color-text-white)
+    
+  a
+    display: flex
+    align-items: center
+
 // page
 
 #content

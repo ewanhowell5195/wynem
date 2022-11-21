@@ -53,6 +53,31 @@ window.imageObserver  =  new IntersectionObserver((entries, observer) => {
   })
 })
 
+// sidebar
+
+const sidebarButton = $(".sidebar-button")
+const sidebar = $("#sidebar")
+sidebarButton.on("click", e => {
+  sidebarButton.toggleClass("active")
+  sidebar.toggleClass("active")
+})
+
+$(window).on({
+  click(e) {
+    const target = $(e.target)
+    if (globalThis.innerWidth < 1330 + sidebar.width() * 2 + 200 && ((target.hasClass("page-button") || target.parents(".page-button").length && target.parents("#sidebar").length) || sidebar.hasClass("active") && !(e.target === sidebar[0] || target.parents("#sidebar").length) && !(e.target === sidebarButton[0] || target.parents(".sidebar-button").length))) {
+      sidebarButton.removeClass("active")
+      sidebar.removeClass("active")
+    }
+  },
+  resize() {
+    if (globalThis.innerWidth < 1330 + sidebar.width() * 2 + 200 && sidebar.hasClass("active")) {
+      sidebarButton.removeClass("active")
+      sidebar.removeClass("active")
+    }
+  }
+})
+
 // pages
 
 async function setupPage(PageClass, container, data) {
@@ -89,7 +114,8 @@ function pageRoute(path, rgx) {
 
 const routes = [
   pageRoute("home", "/"),
-  pageRoute("features")
+  pageRoute("features"),
+  pageRoute("commands", /\/commands(\/(?<path>.+))?/)
 ]
 
 let isOpeningPage = false
@@ -119,6 +145,7 @@ window.openPage = async function(url, updateHistory = false, forceUpdate = false
   }
   isOpeningPage = false
   $('meta[name="theme-color"]').attr("content", "#6C80F6")
+  $("#content > *")[0].onOpened()
 }
 
 const onLoad = () => openPage(new URL(location.href), false, true)
@@ -127,6 +154,7 @@ class FastAnchorElement extends HTMLAnchorElement {
   constructor() {
     super()
     this.addEventListener("click", evt => {
+      evt.preventDefault()
       if (evt.button === 0) {
         evt.preventDefault()
         openPage(new URL(this.href), true)
@@ -163,10 +191,10 @@ customElements.define("f-a", FastAnchorElement, { extends: "a" })
 
 // files
 
-const entriesFetch = {}
-window.fetchEntries = async type => {
-  if (window[type] === undefined && entriesFetch[type] === undefined) entriesFetch[type] = fetch(`/assets/json/${type}.json`).then(e => e.json())
-  window[type] = await entriesFetch[type]
+const jsonFetch = {}
+window.fetchJSON = async name => {
+  if (window[name] === undefined && jsonFetch[name] === undefined) jsonFetch[name] = fetch(`/assets/json/${name}.json`).then(e => e.json())
+  window[name] = await jsonFetch[name]
 }
 
 // end

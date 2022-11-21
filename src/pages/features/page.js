@@ -1,4 +1,4 @@
-export default class FeaturesPage extends Page {
+export default class extends Page {
   constructor() {
     super("features")
     $("a").removeClass("selected")

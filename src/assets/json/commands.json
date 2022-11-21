@@ -1,0 +1,3311 @@
+{
+  "categories": {
+    "bot": {
+      "categories": {
+        "commands": {
+          "categories": {
+            "blacklists": {
+              "description": "Blacklisting is a system that stops commands being run by a certain member, or in a certain channel.",
+              "commands": {
+                "blacklist": {
+                  "aliases": [
+                    "block",
+                    "bl",
+                    "toggleblacklist",
+                    "removeblacklist",
+                    "toggleblock",
+                    "removeblock",
+                    "unblacklist"
+                  ],
+                  "arguments": "<member/channel/category>",
+                  "cooldown": 1,
+                  "description": "Toggle having a member, channel, or category blacklisted from running commands. Threads are not supported. Moderators can bypass channel blacklists, and Administrators can bypass member blacklists.",
+                  "permissions": [
+                    "Manage Channels"
+                  ]
+                },
+                "viewblacklist": {
+                  "aliases": [
+                    "showblacklist",
+                    "blacklistview",
+                    "blacklistshow",
+                    "viewblock",
+                    "showblock",
+                    "blockview",
+                    "blockshow",
+                    "blacklists",
+                    "viewbl",
+                    "showbl",
+                    "blview",
+                    "blshow",
+                    "bls"
+                  ],
+                  "cooldown": 1,
+                  "description": "View the currently blacklisted members, channels, and categories."
+                }
+              }
+            },
+            "customcommands": {
+              "description": "Custom commands are commands that you can configure do respond with whatever you want.``````You can use \"e!help custom\" to view all the custom commands``````Custom command types:\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an Image/Gif/Video in chat\nEmbed: Will send an embed",
+              "commands": {
+                "addcustomcommand": {
+                  "aliases": [
+                    "newcustomcommand",
+                    "customcommandadd",
+                    "customcommandnew",
+                    "addcommand",
+                    "newcommand",
+                    "commandadd",
+                    "commandnew",
+                    "addcc",
+                    "newcc",
+                    "ccadd",
+                    "ccnew"
+                  ],
+                  "cooldown": 1,
+                  "description": "Run a builder that adds a new custom command for the server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "removecustomcommand": {
+                  "aliases": [
+                    "deletecustomcommand",
+                    "customcommandremove",
+                    "customcommanddelete",
+                    "removecommand",
+                    "deletecommand",
+                    "commandremove",
+                    "commanddelete",
+                    "removecc",
+                    "deletecc",
+                    "ccremove",
+                    "ccdelete"
+                  ],
+                  "arguments": "[command]",
+                  "cooldown": 1,
+                  "description": "Remove a custom command from the server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                }
+              }
+            },
+            "rolerequirements": {
+              "description": "Role requirements are a system where users must have a certain role to be able to use commands.",
+              "commands": {
+                "addrolerequirement": {
+                  "aliases": [
+                    "addrolerequire",
+                    "arr",
+                    "addrr",
+                    "setrolerequirement",
+                    "setrolerequire",
+                    "srr",
+                    "setrr",
+                    "rolerequire"
+                  ],
+                  "arguments": "[command/category] <role>",
+                  "cooldown": 1,
+                  "description": "Limit a command to only be used by members with a certain role. You can set up to 5 roles per command. Members only need one of the roles to be able to use it.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Roles"
+                  ]
+                },
+                "removerolerequirements": {
+                  "aliases": [
+                    "removerolerequirement",
+                    "removerolerequire",
+                    "rrr",
+                    "removerr"
+                  ],
+                  "arguments": "[command/category] <role>",
+                  "cooldown": 1,
+                  "description": "Remove a role from being a requirement of a command.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Roles"
+                  ]
+                },
+                "viewrolerequirements": {
+                  "aliases": [
+                    "viewrolerequirement",
+                    "viewrolerequire",
+                    "vrr",
+                    "rolerequirements"
+                  ],
+                  "arguments": "[command/category]",
+                  "cooldown": 1,
+                  "description": "View the role requirements set up in the current server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Roles"
+                  ]
+                }
+              }
+            }
+          },
+          "commands": {
+            "disable": {
+              "aliases": [
+                "enable",
+                "undisable",
+                "unenable",
+                "toggledisable",
+                "toggleenable"
+              ],
+              "arguments": "[category/command]",
+              "cooldown": 1,
+              "description": "Toggle a category/command being disabled in the current server.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "help": {
+              "aliases": [
+                "h",
+                "hlp",
+                "commands",
+                "commandslist",
+                "commandlist"
+              ],
+              "arguments": "[category/command]",
+              "cooldown": 1,
+              "description": "Get a list of the bot's commands and information about each one.``````Argument types:\n\n[arg] - A text argument\n<arg> - A discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
+            },
+            "prefixlessmode": {
+              "aliases": [
+                "prefixless"
+              ],
+              "cooldown": 1,
+              "description": "Toggle allowing commands to not need a prefix when used in direct messages.",
+              "dmOnly": true
+            },
+            "stats": {
+              "aliases": [
+                "botstats"
+              ],
+              "arguments": "[command]",
+              "cooldown": 1,
+              "description": "View the number of times a command has been used. Don't provide a command to view the top 10 most used commands."
+            },
+            "viewdisabled": {
+              "aliases": [
+                "showdisabled",
+                "disabled"
+              ],
+              "cooldown": 1,
+              "description": "View which categories/commands are disabled in the current server.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "viewwhitelist": {
+              "aliases": [
+                "showwhitelist",
+                "viewwhitelisted",
+                "showwhitelisted",
+                "whitelisted"
+              ],
+              "cooldown": 1,
+              "description": "View which categories/commands are whitelisted in the current server.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "whitelist": {
+              "aliases": [
+                "unwhitelist",
+                "togglewhitelist"
+              ],
+              "arguments": "[category/command]",
+              "cooldown": 1,
+              "description": "Toggle a category/command being whitelisted in the current server. Whitelisting a category/command allows it to bypass being disabled by a parent category.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            }
+          }
+        },
+        "prefixes": {
+          "commands": {
+            "prefix": {
+              "arguments": "[prefix]",
+              "cooldown": 1,
+              "description": "Change the prefix for the bot in the current server.``````Set the prefix to \"default\", \"normal\", or \"reset\" to return it back to the default prefix.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            },
+            "prefixalias": {
+              "aliases": [
+                "prefixaliases",
+                "aliasprefix",
+                "aliasprefixes",
+                "addprefix",
+                "removeprefix"
+              ],
+              "arguments": "[prefix]",
+              "cooldown": 1,
+              "description": "Add or remove a custom prefix alias. A prefix alias is an alternate prefix that can be used without overwriting the main prefix.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            }
+          }
+        },
+        "restricted": {
+          "commands": {
+            "botban": {
+              "arguments": "<user>",
+              "cooldown": 1,
+              "description": "Ban a user from using the bot.",
+              "permissions": [
+                "Bot Moderator"
+              ]
+            },
+            "botunban": {
+              "aliases": [
+                "unbotban"
+              ],
+              "arguments": "<user>",
+              "cooldown": 1,
+              "description": "Unban a user from using the bot.",
+              "permissions": [
+                "Bot Moderator"
+              ]
+            },
+            "cleancommands": {
+              "aliases": [
+                "commandsclean",
+                "cleanstats",
+                "statsclean"
+              ],
+              "cooldown": 1,
+              "description": "Clean the command database, removing data for commands that no longer exist.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "deploy": {
+              "cooldown": 1,
+              "description": "Deploy the application commands.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "endbot": {
+              "aliases": [
+                "end"
+              ],
+              "cooldown": 1,
+              "description": "Ends the bot.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "eval": {
+              "aliases": [
+                "evaluate"
+              ],
+              "arguments": "[code]",
+              "cooldown": 1,
+              "description": "Evaluate some code and view the output.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "globaltoggle": {
+              "aliases": [
+                "globaldisable",
+                "globalenable",
+                "universaltoggle",
+                "universaldisable",
+                "universalenable"
+              ],
+              "arguments": "[command]",
+              "cooldown": 1,
+              "description": "Toggle a command being disabled across all servers.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "reload": {
+              "cooldown": 1,
+              "description": "Reloads the bot without restarting it.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "restart": {
+              "cooldown": 1,
+              "description": "Restart the bot.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "sendmessage": {
+              "aliases": [
+                "dm"
+              ],
+              "arguments": "<user/channel> [message]",
+              "cooldown": 1,
+              "description": "Send a message to a user or a channel as the bot.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            },
+            "systemstats": {
+              "aliases": [
+                "systemspecs",
+                "specs"
+              ],
+              "cooldown": 1,
+              "description": "View the stats about the system the bot is running on.",
+              "permissions": [
+                "Bot Owner"
+              ]
+            }
+          }
+        },
+        "settings": {
+          "commands": {
+            "togglequotes": {
+              "aliases": [
+                "enablequotes",
+                "disablequotes"
+              ],
+              "cooldown": 1,
+              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            },
+            "togglescamdetection": {
+              "aliases": [
+                "enablescamdetection",
+                "disablescamdetection",
+                "togglescams",
+                "enablescams",
+                "disablescams",
+                "togglescam",
+                "enablescam",
+                "disablescam"
+              ],
+              "cooldown": 1,
+              "description": "Toggles whether the bot will scan messages in the server for nitro scams.``````When a scam is detected, the message is deleted, the member is put in timeout, and the server moderators are pinged.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            }
+          }
+        }
+      },
+      "commands": {
+        "bugreport": {
+          "aliases": [
+            "reportbug",
+            "bug"
+          ],
+          "arguments": "[report]",
+          "cooldown": 86400,
+          "description": "Submit a bug report for the bot."
+        },
+        "contact": {
+          "cooldown": 1,
+          "description": "Get a list of ways to contact the bot developer."
+        },
+        "credits": {
+          "cooldown": 1,
+          "description": "View the credits for Wynem."
+        },
+        "discord": {
+          "aliases": [
+            "botserver"
+          ],
+          "cooldown": 1,
+          "description": "Get the invite link for the bot creators Discord server."
+        },
+        "donate": {
+          "cooldown": 1,
+          "description": "Get some links where you can donate to the bot developer to show your support!"
+        },
+        "embedcolour": {
+          "aliases": [
+            "customembed",
+            "customembedcolour",
+            "customcolour",
+            "customembedcolor",
+            "customcolor",
+            "embedcolor",
+            "embedcol",
+            "customcol"
+          ],
+          "arguments": "[colour]",
+          "cooldown": 1,
+          "description": "Change the bots embed colour on the current server.``````The embed colour is the coloured bar down the side of each message.``````Set the colour to \"default\" to return it to the default colour.",
+          "permissions": [
+            "Manage Guild"
+          ],
+          "guildOnly": true
+        },
+        "ewan": {
+          "aliases": [
+            "wan",
+            "owner",
+            "creator"
+          ],
+          "cooldown": 1,
+          "description": "Get a link to the bot creators website."
+        },
+        "exportdata": {
+          "arguments": "[type]",
+          "cooldown": 1,
+          "description": "Export the data that the bot has stored about you or the server.``````Types:\n- User\n- Server"
+        },
+        "info": {
+          "aliases": [
+            "botinformation",
+            "botinfo",
+            "information",
+            "binfo",
+            "about"
+          ],
+          "cooldown": 1,
+          "description": "Get some information about the bot."
+        },
+        "invite": {
+          "aliases": [
+            "inv",
+            "i"
+          ],
+          "cooldown": 1,
+          "description": "Get the bot's invite link."
+        },
+        "notices": {
+          "aliases": [
+            "notice",
+            "updates",
+            "changelog",
+            "changelogs",
+            "announcements"
+          ],
+          "cooldown": 1,
+          "description": "View the latest Wynem notices."
+        },
+        "ping": {
+          "aliases": [
+            "pong"
+          ],
+          "cooldown": 1,
+          "description": "Check what the bot's latency is."
+        },
+        "privacy": {
+          "aliases": [
+            "privacypolicy",
+            "policy"
+          ],
+          "cooldown": 1,
+          "description": "View the privacy policy for the bot."
+        },
+        "resendjoininfo": {
+          "aliases": [
+            "resendserverjoininfo",
+            "resendjoinmessage",
+            "resendserverjoinmessage"
+          ],
+          "cooldown": 1,
+          "description": "Resend the message the bot sends when it joins the message in the current channel.",
+          "permissions": [
+            "Manage Guild"
+          ]
+        },
+        "reset": {
+          "aliases": [
+            "resetbot"
+          ],
+          "cooldown": 60,
+          "description": "Reset the bot to its default state on this server as well as clearing any files related to this server.``````WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data.",
+          "permissions": [
+            "Guild Only",
+            "Administrator"
+          ]
+        },
+        "servers": {
+          "aliases": [
+            "guilds"
+          ],
+          "cooldown": 1,
+          "description": "Show the top 10 biggest servers that the bot is in."
+        },
+        "suggest": {
+          "aliases": [
+            "suggestion",
+            "suggestions",
+            "feedback"
+          ],
+          "arguments": "[suggestion]",
+          "cooldown": 86400,
+          "description": "Make a suggestion for the bot."
+        },
+        "support": {
+          "arguments": "[message]",
+          "cooldown": 10,
+          "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!"
+        },
+        "website": {
+          "aliases": [
+            "web",
+            "site"
+          ],
+          "cooldown": 1,
+          "description": "Get a link to the bots website."
+        }
+      }
+    },
+    "fun": {
+      "categories": {
+        "games": {
+          "commands": {
+            "rockpaperscissors": {
+              "aliases": [
+                "rps"
+              ],
+              "arguments": "<member>",
+              "cooldown": 1,
+              "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them."
+            },
+            "tictactoe": {
+              "aliases": [
+                "ttt",
+                "ox",
+                "noughtsandcrosses",
+                "noughtscrosses"
+              ],
+              "arguments": "[difficulty]/<member>",
+              "cooldown": 1,
+              "description": "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.``````Difficulties:\n\neasy\nmedium\nhard\nexpert"
+            }
+          }
+        }
+      },
+      "commands": {
+        "8ball": {
+          "aliases": [
+            "8b",
+            "8",
+            "ball"
+          ],
+          "arguments": "[question]",
+          "cooldown": 1,
+          "description": "Ask the magic eight-ball a question."
+        },
+        "bean": {
+          "arguments": "<member> [reason]",
+          "cooldown": 1,
+          "description": "Bean a user."
+        },
+        "bubblewrap": {
+          "arguments": "[message]",
+          "cooldown": 1,
+          "description": "Create some bubblewrap with a hidden message!"
+        },
+        "charshift": {
+          "aliases": [
+            "shiftchar",
+            "caesarshift",
+            "caesarcipher"
+          ],
+          "arguments": "[offset] [text]",
+          "cooldown": 1,
+          "description": "Perform a Caesar Shift on a message."
+        },
+        "coinflip": {
+          "aliases": [
+            "flipcoin",
+            "coin",
+            "cf"
+          ],
+          "cooldown": 1,
+          "description": "Flip a coin."
+        },
+        "cowsay": {
+          "aliases": [
+            "saycow",
+            "cow",
+            "say"
+          ],
+          "arguments": "[character] [message]",
+          "cooldown": 1,
+          "description": "Make a cow say something!"
+        },
+        "dadjoke": {
+          "cooldown": 1,
+          "description": "Get the bot to tell a dad joke."
+        },
+        "dice": {
+          "arguments": "[count]",
+          "cooldown": 1,
+          "description": "Roll some dice! You can roll a total of 1 to 6 dice in one go."
+        },
+        "flow": {
+          "aliases": [
+            "flowinspireme",
+            "flowinspire"
+          ],
+          "cooldown": 15,
+          "description": "Generate an \"inspirational\" flow of images and quotes."
+        },
+        "hate": {
+          "aliases": [
+            "h8"
+          ],
+          "arguments": "[thing1] [thing2]",
+          "cooldown": 1,
+          "description": "Discover how much you hate someone/something!"
+        },
+        "joke": {
+          "cooldown": 1,
+          "description": "Get the bot to tell a joke. NSFW jokes will only occur in NSFW channels."
+        },
+        "kill": {
+          "aliases": [
+            "deathmessage",
+            "killmessage"
+          ],
+          "arguments": "<member> [weapon]",
+          "cooldown": 1,
+          "description": "Kill a user with a Minecraft death message.\n\"<member>\" and \"[weapon]\" are optional."
+        },
+        "leet": {
+          "aliases": [
+            "1337"
+          ],
+          "arguments": "[text]",
+          "cooldown": 1,
+          "description": "Convert text to Leetspeak."
+        },
+        "love": {
+          "aliases": [
+            "luv"
+          ],
+          "arguments": "[thing1] [thing2]",
+          "cooldown": 1,
+          "description": "Discover how much you love someone/something!"
+        },
+        "mock": {
+          "aliases": [
+            "sarcasm"
+          ],
+          "cooldown": 1,
+          "description": "Convert some text to CoNsTaNtLy sWiTcHiNg cAsEs."
+        },
+        "monketest": {
+          "aliases": [
+            "monkeytest"
+          ],
+          "arguments": "<member>",
+          "cooldown": 1,
+          "description": "Test how much of a monkey someone is!"
+        },
+        "quote": {
+          "aliases": [
+            "inspireme",
+            "inspire"
+          ],
+          "cooldown": 1,
+          "description": "Generate an \"inspirational\" image quote."
+        }
+      }
+    },
+    "images": {
+      "description": "These commands take many types of image inputs. ``````Valid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker``````Leave it blank to target an image/url/emoji/sticker from a previous message in the channel. You can reply to a message to target an image in that message.",
+      "categories": {
+        "animation": {
+          "commands": {
+            "animate": {
+              "arguments": "[delay] [frameHeight] {image}",
+              "cooldown": 1,
+              "description": "Animate a spritesheet texture"
+            },
+            "boomerang": {
+              "aliases": [
+                "pingpong"
+              ],
+              "arguments": "{gif}",
+              "cooldown": 1,
+              "description": "Make a gif play forwards, then backwards, in a loop."
+            },
+            "frame": {
+              "aliases": [
+                "frames"
+              ],
+              "arguments": "[frame] {gif}",
+              "cooldown": 1,
+              "description": "Get a specific frame of a gif. Leave frame blank to show how many frames a gif has. \"first\" gives the first frame, and \"last\" gives the last frame."
+            },
+            "reverse": {
+              "aliases": [
+                "backwards"
+              ],
+              "arguments": "{gif}",
+              "cooldown": 1,
+              "description": "Make a gif play in reverse."
+            },
+            "spritesheet": {
+              "arguments": "{gif}",
+              "cooldown": 1,
+              "description": "Turn an animated GIF into a spritesheet of its frames."
+            }
+          }
+        },
+        "drawing": {
+          "commands": {
+            "ellipse": {
+              "aliases": [
+                "circle"
+              ],
+              "arguments": "[x] [y] [width] [height] [colour] {image}",
+              "cooldown": 1,
+              "description": "Draw a ellipse on an image."
+            },
+            "floodfill": {
+              "aliases": [
+                "paintbucket",
+                "fill"
+              ],
+              "arguments": "[x] [y] [colour] [tolerance] {image}",
+              "cooldown": 1,
+              "description": "Floodfill an area on an image."
+            },
+            "image": {
+              "aliases": [
+                "newimage",
+                "img",
+                "newimg"
+              ],
+              "arguments": "[width] [height] [colour]",
+              "cooldown": 1,
+              "description": "Generate a new blank image."
+            },
+            "line": {
+              "arguments": "[x] [y] [x2] [y2] [colour] [thickness] {image}",
+              "cooldown": 1,
+              "description": "Draw a line on an image."
+            },
+            "pixel": {
+              "arguments": "[x] [y] [colour] {image}",
+              "cooldown": 1,
+              "description": "Add a single pixel to an image."
+            },
+            "polygon": {
+              "aliases": [
+                "shape"
+              ],
+              "arguments": "[x] [y] [diameter] [sides] [colour] {image}",
+              "cooldown": 1,
+              "description": "Draw a regular polygon on an image."
+            },
+            "rectangle": {
+              "aliases": [
+                "rect"
+              ],
+              "arguments": "[x] [y] [width] [height] [colour] {image}",
+              "cooldown": 1,
+              "description": "Draw a rectangle on an image."
+            },
+            "text": {
+              "arguments": "[text] [x] [y] [size] [colour] [font] [align] {image}",
+              "cooldown": 1,
+              "description": "Write some text over an image.\n\"Put an argument inside quotation marks to use spaces\".\nThe \"align\" options are \"center\", \"left\", and \"right\""
+            }
+          }
+        },
+        "filters": {
+          "commands": {
+            "blur": {
+              "aliases": [
+                "unsharpen",
+                "unfocus",
+                "lostmyglasses"
+              ],
+              "arguments": "[amount] {image}",
+              "cooldown": 1,
+              "description": "Apply a blur to an image. The amount defaults to 10."
+            },
+            "convert": {
+              "aliases": [
+                "imageformat",
+                "imgformat",
+                "colourspace",
+                "colorspace"
+              ],
+              "arguments": "[mode] {image}",
+              "cooldown": 1,
+              "description": "Convert an image to a different colour mode.``````Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
+            },
+            "copypalette": {
+              "aliases": [
+                "applypalette",
+                "palettecopy",
+                "paletteapply",
+                "replacepalette",
+                "palettereplace"
+              ],
+              "arguments": "{image} {image}",
+              "cooldown": 1,
+              "description": "Copy the palette of one image to another image. Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
+            },
+            "greyscale": {
+              "aliases": [
+                "grayscale",
+                "monochrome",
+                "grey",
+                "gray",
+                "blackandwhite",
+                "whiteandblack"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Turn an image greyscale."
+            },
+            "hueshift": {
+              "aliases": [
+                "hue"
+              ],
+              "arguments": "[angle] {image}",
+              "cooldown": 1,
+              "description": "Change the hue of an image. Defaults to 180°"
+            },
+            "index": {
+              "aliases": [
+                "paletteify",
+                "palettify",
+                "limitpalette",
+                "palettelimit",
+                "lowpalette"
+              ],
+              "arguments": "[colourCount] {image}",
+              "cooldown": 1,
+              "description": "Limit an images colour palette to a provided amount. Defaults to 10 colours."
+            },
+            "invert": {
+              "aliases": [
+                "negate",
+                "flipcolour",
+                "flipcolor"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Invert an images colour."
+            },
+            "multiply": {
+              "aliases": [
+                "tint"
+              ],
+              "arguments": "[colour] {image}",
+              "cooldown": 1,
+              "description": "Multiply an image by a colour."
+            },
+            "neon": {
+              "aliases": [
+                "edge_detection",
+                "edgedetect",
+                "edges",
+                "edge",
+                "sobel"
+              ],
+              "arguments": "{image}",
+              "cooldown": 3,
+              "description": "Apply a sobel edge detection filter to an image."
+            },
+            "recolour": {
+              "aliases": [
+                "recolor",
+                "recol"
+              ],
+              "arguments": "[colour] {image}",
+              "cooldown": 1,
+              "description": "Recolour an image to a specific colour, keeping the opacity."
+            }
+          }
+        },
+        "imagefun": {
+          "categories": {
+            "avatars": {
+              "commands": {
+                "avatarpie": {
+                  "arguments": "<member> * 8",
+                  "cooldown": 1,
+                  "description": "Merge a bunch of avatars into one image."
+                },
+                "award": {
+                  "aliases": [
+                    "obama"
+                  ],
+                  "arguments": "<member> <member>",
+                  "cooldown": 1,
+                  "description": "Give another member an award!"
+                },
+                "band": {
+                  "arguments": "<member> <member> <member> <member>",
+                  "cooldown": 1,
+                  "description": "Put members into a band."
+                },
+                "birthday": {
+                  "arguments": "<member> <member> <member> <member> <member>",
+                  "cooldown": 3,
+                  "description": "Throw a birthday party for someone!``````If members are not specified, random members from the server will be picked.``````The birthday member will always be Wynem on \"26/7\".``````Custom birthday members can be set by specifying a 5th member. If no 5th member is provided, you will be the birthday person."
+                },
+                "bonk": {
+                  "arguments": "<member> [text]",
+                  "cooldown": 1,
+                  "description": "Bonk a member."
+                },
+                "disappear": {
+                  "aliases": [
+                    "gone",
+                    "fadeaway",
+                    "fade",
+                    "peaceout",
+                    "peace"
+                  ],
+                  "arguments": "<member>",
+                  "cooldown": 1,
+                  "description": "Make a member disappear!"
+                },
+                "distractedboyfriend": {
+                  "aliases": [
+                    "distracted",
+                    "boyfriend",
+                    "distract"
+                  ],
+                  "arguments": "<member> <member> <member>",
+                  "cooldown": 1,
+                  "description": "Get distracted by another member."
+                },
+                "guyslook": {
+                  "aliases": [
+                    "look",
+                    "lookguys",
+                    "point"
+                  ],
+                  "arguments": "<member> {image}",
+                  "cooldown": 1,
+                  "description": "Show some guys an image"
+                },
+                "kickface": {
+                  "aliases": [
+                    "facekick"
+                  ],
+                  "arguments": "<member> <member>",
+                  "cooldown": 1,
+                  "description": "Kick a member in the face!"
+                },
+                "marry": {
+                  "arguments": "<member> <member>",
+                  "cooldown": 1,
+                  "description": "Marry two members."
+                },
+                "monkey": {
+                  "aliases": [
+                    "monkeys",
+                    "monke"
+                  ],
+                  "arguments": "<member> <member> <member>",
+                  "cooldown": 1,
+                  "description": "Turn some members into a group of monkeys!"
+                },
+                "monkeyband": {
+                  "aliases": [
+                    "monkeband"
+                  ],
+                  "arguments": "<member> <member> <member>",
+                  "cooldown": 1,
+                  "description": "Turn some members into a band of monkeys!"
+                },
+                "silence": {
+                  "arguments": "<member>",
+                  "cooldown": 1,
+                  "description": "Silence a member."
+                },
+                "slap": {
+                  "aliases": [
+                    "smack"
+                  ],
+                  "arguments": "<member> <member>",
+                  "cooldown": 1,
+                  "description": "Slap a member!"
+                },
+                "snap": {
+                  "arguments": "<member> <member>",
+                  "cooldown": 1,
+                  "description": "Snap a user out of existence."
+                },
+                "unband": {
+                  "arguments": "<member> <member> <member> <member>",
+                  "cooldown": 1,
+                  "description": "Remove members from a band."
+                }
+              }
+            },
+            "compositing": {
+              "commands": {
+                "billboard": {
+                  "aliases": [
+                    "newyork"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image onto a billboard in New York."
+                },
+                "gallery": {
+                  "aliases": [
+                    "artgallery"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image into an art gallery."
+                },
+                "linus": {
+                  "aliases": [
+                    "techtips",
+                    "linustechtips"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image into Linus Sebastian's hands"
+                },
+                "locket": {
+                  "aliases": [
+                    "heartlocket",
+                    "locketheart",
+                    "heart",
+                    "beloved"
+                  ],
+                  "arguments": "[text]/{image} [text]/{image}",
+                  "cooldown": 3,
+                  "description": "Put images/text into a heart shaped locket.``````If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+                },
+                "salute": {
+                  "aliases": [
+                    "flag"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image onto a flag that is being saluted."
+                },
+                "samepicture": {
+                  "aliases": [
+                    "samepic",
+                    "sameimage",
+                    "sameimg"
+                  ],
+                  "arguments": "{image} {image}",
+                  "cooldown": 1,
+                  "description": "Show that two images are the same picture."
+                },
+                "scottthewoz": {
+                  "aliases": [
+                    "scott",
+                    "woz",
+                    "tv"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image onto Scott Wozniak's TV."
+                },
+                "spongebob": {
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image into Spongebob's hands."
+                },
+                "trump": {
+                  "aliases": [
+                    "donaldtrump",
+                    "donald"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Put an image into Donald Trump's hands."
+                },
+                "worthless": {
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Make an image worthless."
+                }
+              }
+            },
+            "distortions": {
+              "commands": {
+                "bulge": {
+                  "aliases": [
+                    "pinch"
+                  ],
+                  "arguments": "[strength] [x] [y] [radius] {image}",
+                  "cooldown": 1,
+                  "description": "Apply a bulge or a pinch effect to an image."
+                },
+                "gmagick": {
+                  "aliases": [
+                    "gmagic",
+                    "gmagik",
+                    "gcontentawarescale",
+                    "gcontentaware",
+                    "gifmagick",
+                    "gifmagic",
+                    "gifmagik",
+                    "gifcontentawarescale",
+                    "gifcontentaware"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Content aware scales an image. Outputs a GIF."
+                },
+                "magick": {
+                  "aliases": [
+                    "magic",
+                    "magik",
+                    "contentawarescale",
+                    "contentaware"
+                  ],
+                  "arguments": "[intensity] {image}",
+                  "cooldown": 1,
+                  "description": "Content aware scales an image. Outputs a static image."
+                },
+                "twist": {
+                  "aliases": [
+                    "twirl"
+                  ],
+                  "arguments": "[degrees] [x] [y] [radius] {image}",
+                  "cooldown": 1,
+                  "description": "Apply a twist effect to an image."
+                }
+              }
+            },
+            "faces": {
+              "commands": {
+                "animeeyes": {
+                  "aliases": [
+                    "animeyes",
+                    "anime"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Place anime eyes over someones face!"
+                },
+                "bulgeface": {
+                  "aliases": [
+                    "facebulge",
+                    "pinchface",
+                    "facepinch"
+                  ],
+                  "arguments": "[strength] {image}",
+                  "cooldown": 1,
+                  "description": "Apply a bulge or a pinch effect to a face."
+                },
+                "dealwithit": {
+                  "aliases": [
+                    "thuglife"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Place MLG glasses over someones face!"
+                },
+                "detectface": {
+                  "aliases": [
+                    "facedetect",
+                    "facelandmarks",
+                    "landmarksface",
+                    "showface",
+                    "faceshow",
+                    "viewface",
+                    "faceview"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Detect a face in an image"
+                },
+                "emojiface": {
+                  "aliases": [
+                    "faceemoji"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Place emojis on someones face!"
+                },
+                "makeup": {
+                  "arguments": "[lipsCol] [outerEyeCol] [innerEyeCol] {image}",
+                  "cooldown": 1,
+                  "description": "Apply makeup to someones face!``````Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
+                },
+                "steveface": {
+                  "aliases": [
+                    "steveify",
+                    "stevify",
+                    "facesteve",
+                    "alexface",
+                    "alexify",
+                    "facealex"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Place Steve or Alex's face over someones face!"
+                },
+                "trollface": {
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Place a trollface over someones face!"
+                }
+              }
+            },
+            "overlays": {
+              "commands": {
+                "gun": {
+                  "arguments": "[expand] [double] {image}",
+                  "cooldown": 1,
+                  "description": "Make an image hold a gun. \"expand\" and \"double\" are booleans. \"expand\" puts the gun over the edge of the image"
+                },
+                "petpet": {
+                  "aliases": [
+                    "pet"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 3,
+                  "description": "Pet an image!"
+                },
+                "shoot": {
+                  "arguments": "[expand] [double] {image}",
+                  "cooldown": 1,
+                  "description": "Shoot an image. \"expand\" and \"double\" are booleans. \"expand\" puts the gun over the edge of the image"
+                },
+                "speechbubble": {
+                  "aliases": [
+                    "speech",
+                    "bubble"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Add a speech bubble to an image"
+                },
+                "thinking": {
+                  "aliases": [
+                    "think"
+                  ],
+                  "arguments": "[expand] [double] [colour] {image}",
+                  "cooldown": 1,
+                  "description": "Add a thinking hand to an image. \"expand\" and \"double\" are booleans. \"expand\" puts the hand over the edge of the image."
+                },
+                "triggered": {
+                  "aliases": [
+                    "trigger"
+                  ],
+                  "arguments": "{image}",
+                  "cooldown": 1,
+                  "description": "Make an image triggered."
+                }
+              }
+            },
+            "texts": {
+              "commands": {
+                "breakingnews": {
+                  "aliases": [
+                    "forecast",
+                    "breaking",
+                    "news"
+                  ],
+                  "arguments": "[text] {image}",
+                  "cooldown": 5,
+                  "description": "Add a breaking news bar to an image."
+                },
+                "caption": {
+                  "arguments": "[text] {image}",
+                  "cooldown": 5,
+                  "description": "Add a caption to an image."
+                },
+                "certifiedmoment": {
+                  "aliases": [
+                    "certified"
+                  ],
+                  "arguments": "[text]",
+                  "cooldown": 1,
+                  "description": "Make a certified moment meme."
+                },
+                "changemymind": {
+                  "aliases": [
+                    "changemind"
+                  ],
+                  "arguments": "[text]",
+                  "cooldown": 1,
+                  "description": "Create a \"change my mind\" meme."
+                },
+                "discordmessage": {
+                  "aliases": [
+                    "message"
+                  ],
+                  "arguments": "[message] [username] [colour] [botTag] {image}",
+                  "cooldown": 1,
+                  "description": "Generate a discord message. Use quotes around arguments to use more than one word. Set \"botTag\" to \"false\" to disable it."
+                },
+                "notification": {
+                  "aliases": [
+                    "notify",
+                    "imageping",
+                    "pingimage",
+                    "ping2",
+                    "pinggenerator",
+                    "pinggen",
+                    "pingicon"
+                  ],
+                  "arguments": "[text] {image}",
+                  "cooldown": 1,
+                  "description": "Add a custom Discord notification to an image."
+                },
+                "peter": {
+                  "aliases": [
+                    "griffin",
+                    "petergriffin",
+                    "peter2",
+                    "griffin2",
+                    "petergriffin2"
+                  ],
+                  "arguments": "[text] {image}",
+                  "cooldown": 5,
+                  "description": "Add Peter Griffin to an image.``````Use \"peter2\" to put him on the opposite side."
+                },
+                "sneak": {
+                  "aliases": [
+                    "sneak100",
+                    "100"
+                  ],
+                  "arguments": "[text] [number] {image}",
+                  "cooldown": 5,
+                  "description": "Add the \"Sneak 100\" image to the bottom of an image. The text is customisable."
+                },
+                "stuff": {
+                  "aliases": [
+                    "rdj",
+                    "stark",
+                    "ironman",
+                    "stuff2",
+                    "rdj2",
+                    "stark2",
+                    "ironman2"
+                  ],
+                  "arguments": "[text] {image}",
+                  "cooldown": 5,
+                  "description": "Add Robert Downey Jr. to an image.``````Use \"stuff2\" to put him on the opposite side."
+                },
+                "toptext": {
+                  "aliases": [
+                    "middletext",
+                    "bottomtext",
+                    "uppertext",
+                    "texttop",
+                    "textupper",
+                    "centertext",
+                    "centretext",
+                    "textmiddle",
+                    "textcenter",
+                    "textcentre",
+                    "lowertext",
+                    "textbottom",
+                    "textlower"
+                  ],
+                  "arguments": "[text] {image}",
+                  "cooldown": 5,
+                  "description": "Add some text to the top, middle, or bottom of an image.\n\nUse the middle or bottom aliases to put the text in the middle or on the bottom."
+                },
+                "valentines": {
+                  "aliases": [
+                    "valentine"
+                  ],
+                  "arguments": "<member>",
+                  "cooldown": 1,
+                  "description": "Generate a minecraft valentines image for that special someone in your life."
+                },
+                "what": {
+                  "arguments": "[text] {image}",
+                  "cooldown": 1,
+                  "description": "What."
+                }
+              }
+            }
+          },
+          "commands": {
+            "blockify": {
+              "arguments": "[mode] {image}",
+              "cooldown": 3,
+              "description": "Turn an image into Minecraft block art!``````Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+            },
+            "blurplify": {
+              "aliases": [
+                "blurpleify",
+                "blurpify",
+                "blurple"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Turn an image blurple!"
+            },
+            "darkmodelightmode": {
+              "aliases": [
+                "darklight",
+                "lightmodedarkmode",
+                "lightdark"
+              ],
+              "arguments": "{image} {image}",
+              "cooldown": 1,
+              "description": "Turn two images into one images, where it shows a different one depending on if you are using dark mode or light mode. The first image will be visible while in dark mode, the second while in light mode."
+            },
+            "dumpy": {
+              "aliases": [
+                "twerk",
+                "amongustwerk",
+                "amogustwerk"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Make an image into an Among Us Dumpy gif!"
+            },
+            "emojify": {
+              "aliases": [
+                "mojify"
+              ],
+              "arguments": "[mode] {image}",
+              "cooldown": 3,
+              "description": "Turn an image into a bunch of emojis! Available modes are \"default\" and \"all\"."
+            },
+            "hiddenimage": {
+              "aliases": [
+                "hideimage",
+                "secretimage"
+              ],
+              "arguments": "[mode] {image}",
+              "cooldown": 1,
+              "description": "Hide an image in plain sight.``````Colour modes:\n- dark\n- light"
+            },
+            "impostor": {
+              "aliases": [
+                "imposter",
+                "amongus",
+                "amogus",
+                "sus",
+                "mpostor",
+                "mposter"
+              ],
+              "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
+              "cooldown": 1,
+              "description": "Create a custom Among Us character!``````The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
+            },
+            "jpegify": {
+              "aliases": [
+                "jpgify",
+                "jpeg",
+                "jpg"
+              ],
+              "arguments": "[quality] {image}",
+              "cooldown": 1,
+              "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100"
+            },
+            "rainbow": {
+              "aliases": [
+                "colourcycle",
+                "colorcycle"
+              ],
+              "arguments": "{image}",
+              "cooldown": 5,
+              "description": "Make an image cycle through the rainbow!"
+            },
+            "scan": {
+              "arguments": "[switchAxis] [reverse] [beamColour] {image}",
+              "cooldown": 5,
+              "description": "Apply a time warp scan effect to a gif.\n\"switchAxis\" and \"reverse\" are both booleans."
+            },
+            "spin": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Make an image spin!"
+            },
+            "squarify": {
+              "aliases": [
+                "squareify"
+              ],
+              "arguments": "[squareSize] [gapSize] {image}",
+              "cooldown": 1,
+              "description": "Squarifies an image. The first number is the square size, the second is the size of the gap between each square."
+            },
+            "textify": {
+              "aliases": [
+                "asciiart"
+              ],
+              "arguments": "[mode] {image}",
+              "cooldown": 1,
+              "description": "Turn an image into ascii art using the braille characters. Available modes are \"average\" and \"edge\"."
+            },
+            "wynem": {
+              "arguments": "[vCol] [hCol] [bgCol] [sCol] {image}",
+              "cooldown": 1,
+              "description": "Create a custom Wynem logo!``````vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
+            },
+            "yeet": {
+              "arguments": "<member> <member>",
+              "cooldown": 3,
+              "description": "Throw a member really far."
+            }
+          }
+        },
+        "manipulation": {
+          "commands": {
+            "background": {
+              "aliases": [
+                "bg"
+              ],
+              "arguments": "[colour] {image}",
+              "cooldown": 5,
+              "description": "Set the background colour for an image with transparency."
+            },
+            "crop": {
+              "aliases": [
+                "cutout",
+                "cut"
+              ],
+              "arguments": "[x] [y] [width] [height] {image}",
+              "cooldown": 1,
+              "description": "Crop a region of an image."
+            },
+            "pad": {
+              "aliases": [
+                "padding",
+                "margin",
+                "border"
+              ],
+              "arguments": "[size] [direction] [colour] {image}",
+              "cooldown": 1,
+              "description": "Add padding to the sides of an image.``````Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+            },
+            "resize": {
+              "arguments": "[width] [height] [mode] {image}",
+              "cooldown": 1,
+              "description": "Resize an image to a desired size. Interpolation modes only work on static images.``````Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
+            },
+            "rotate": {
+              "aliases": [
+                "turn"
+              ],
+              "arguments": "[degrees] {image}",
+              "cooldown": 1,
+              "description": "Rotate an image. Defaults to 90°."
+            },
+            "scale": {
+              "aliases": [
+                "magnify",
+                "enlarge",
+                "upscale"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Scale an image up to the max size discord displays images, making it easier to view small images."
+            },
+            "square": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Add transparent padding to an image to make it a square."
+            },
+            "trim": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Remove the transparent pixels from the edge of an image."
+            }
+          }
+        },
+        "mirroring": {
+          "commands": {
+            "daad": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the top left half of an image to the bottom right half."
+            },
+            "dood": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the bottom right half of an image to the top left half."
+            },
+            "flip": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Flip an image vertically."
+            },
+            "haah": {
+              "aliases": [
+                "fliptop"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Flip the top half of an image to the bottom half."
+            },
+            "hooh": {
+              "aliases": [
+                "flipbottom"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Flip the bottom half of an image to the top half."
+            },
+            "mirror": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror an image horizontally."
+            },
+            "taat": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the bottom left half of an image to the top right half."
+            },
+            "toot": {
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the top right half of an image to the bottom left half."
+            },
+            "waaw": {
+              "aliases": [
+                "mirrorleft"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the left half of an image to the right half."
+            },
+            "woow": {
+              "aliases": [
+                "mirrorright"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Mirror the right half of an image to the left half."
+            }
+          }
+        }
+      },
+      "commands": {
+        "append": {
+          "aliases": [
+            "prepend"
+          ],
+          "arguments": "[direction] [scaling] {image} {image}",
+          "cooldown": 1,
+          "description": "Append one image onto another image. Scaling is a boolean that will resize the appended image to be the same size.``````Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+        },
+        "averagecolour": {
+          "aliases": [
+            "averagecolor",
+            "colouraverage",
+            "coloraverage",
+            "avgcol",
+            "colavg",
+            "avgcolour",
+            "avgcolor",
+            "average",
+            "avg",
+            "commoncolour",
+            "commoncolor",
+            "commoncol"
+          ],
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Get the average colour of an image."
+        },
+        "decodemessage": {
+          "aliases": [
+            "decode"
+          ],
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Decode an image which has a message encoded in the pixel values."
+        },
+        "encodemessage": {
+          "aliases": [
+            "encode"
+          ],
+          "arguments": "[message]",
+          "cooldown": 1,
+          "description": "Create an image from a message, which is encoded as pixel values."
+        },
+        "getimage": {
+          "aliases": [
+            "getimg",
+            "imageget",
+            "imgget"
+          ],
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Get an image. This can be used to show what image would be used in an image command. This can also be used to convert videos into gifs."
+        },
+        "gradient": {
+          "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
+          "cooldown": 1,
+          "description": "Generate a gradient from a list of colours."
+        },
+        "hexagon": {
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Turn ANY image into a Twitter hexagon."
+        },
+        "imagecompare": {
+          "aliases": [
+            "imagecomp",
+            "imgcompare",
+            "imgcomp",
+            "imgdifference",
+            "imgdiff",
+            "difference",
+            "diff",
+            "compare",
+            "comp"
+          ],
+          "arguments": "{image} {image}",
+          "cooldown": 1,
+          "description": "Compare two images, to see the differences between them.``````Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+        },
+        "imagesize": {
+          "aliases": [
+            "getsize",
+            "size"
+          ],
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "View the dimentions of an image."
+        },
+        "palette": {
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Show the palette of an image"
+        },
+        "paste": {
+          "aliases": [
+            "overlay"
+          ],
+          "arguments": "[x] [y] [w] [h] {image} {image}",
+          "cooldown": 1,
+          "description": "Paste an image onto another image."
+        },
+        "replacecolour": {
+          "aliases": [
+            "colourreplace",
+            "replacecolor",
+            "colorreplace",
+            "replacecol",
+            "colreplace"
+          ],
+          "arguments": "[originalColour] [replacementColour] [tolerance] {image}",
+          "cooldown": 1,
+          "description": "Replace a colour in an image."
+        },
+        "round": {
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Make an image round by cutting off the corners."
+        },
+        "sticker": {
+          "arguments": "<sticker>",
+          "cooldown": 1,
+          "description": "View a sticker. Animated stickers are converted to gifs."
+        }
+      }
+    },
+    "minecraft": {
+      "categories": {
+        "resourcepacks": {
+          "commands": {
+            "cem": {
+              "aliases": [
+                "cemparts",
+                "mob",
+                "mobparts",
+                "customentitymodel"
+              ],
+              "arguments": "[entity]",
+              "cooldown": 1,
+              "description": "Get a list of bone names for each entity supported by OptiFine CEM"
+            },
+            "chestconverter": {
+              "aliases": [
+                "chestconvert",
+                "convertchest",
+                "convertchests",
+                "chest",
+                "chests"
+              ],
+              "arguments": "{image} {image}",
+              "cooldown": 1,
+              "description": "Convert chests between the 1.14 and 1.15 format."
+            },
+            "ctmconverter": {
+              "aliases": [
+                "ctmconvert",
+                "ctm",
+                "convertctm"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Convert compact CTM to full CTM or overlay CTM."
+            },
+            "ctmpreviewer": {
+              "aliases": [
+                "ctmpreview",
+                "previewctm"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Generate a preview image for full CTM."
+            },
+            "ctmsplitter": {
+              "aliases": [
+                "ctmsplit",
+                "splitctm"
+              ],
+              "arguments": "[tileResolution] {image}",
+              "cooldown": 1,
+              "description": "Split a CTM template image up into its individual images for use with OptiFine CTM."
+            },
+            "minecraftassets": {
+              "aliases": [
+                "mcassets"
+              ],
+              "arguments": "[version]",
+              "cooldown": 1,
+              "description": "Get a link to download the Minecraft assets of a specific version."
+            },
+            "minecrafttexture": {
+              "aliases": [
+                "mctexture",
+                "texture"
+              ],
+              "arguments": "[texture] [version]",
+              "cooldown": 1,
+              "description": "Get a vanilla minecraft texture."
+            },
+            "minecrafttitleconverter": {
+              "aliases": [
+                "minecrafttitle",
+                "mctitleconverter",
+                "mctitle",
+                "titleconverter"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Convert an image into a Minecraft title texture for use in a resource pack."
+            },
+            "mojangconverter": {
+              "aliases": [
+                "convertmojang",
+                "mojang"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Convert between the 1.15 and 1.16 Mojang logo formats."
+            },
+            "rendermodel": {
+              "aliases": [
+                "renderentity",
+                "rendermob",
+                "rendermodel",
+                "render",
+                "entityrender",
+                "mobrender",
+                "modelrender"
+              ],
+              "arguments": "[model] {images}",
+              "cooldown": 5,
+              "description": "Render an image/images onto a 3D model. Run without any arguments to see the list of supported models."
+            },
+            "tile": {
+              "aliases": [
+                "repeat"
+              ],
+              "arguments": "[width] [height] [randomRotationEnabled] {image}",
+              "cooldown": 1,
+              "description": "Tile an image over a 5x5 area. Provide a custom width and height to customise the size."
+            },
+            "versiondifference": {
+              "aliases": [
+                "versiondiff",
+                "versioncompare",
+                "versioncomp",
+                "minecraftdifference",
+                "minecraftdiff",
+                "minecraftcompare",
+                "minecraftcomp",
+                "mcdifference",
+                "mcdiff",
+                "mccompare",
+                "mccomp"
+              ],
+              "arguments": "[version] [version]",
+              "cooldown": 1,
+              "description": "Get a link to quickly compare the assets of 2 versions of Minecraft against eachother. Saying \"latest\" will automatically compare the newest 2 versions."
+            }
+          }
+        },
+        "skins": {
+          "commands": {
+            "cape": {
+              "aliases": [
+                "minecraftcape",
+                "mccape",
+                "minecraftelytra",
+                "mcelytra",
+                "elytra"
+              ],
+              "arguments": "[username]",
+              "cooldown": 1,
+              "description": "View the cape and elytra of a Minecraft Java edition player."
+            },
+            "head": {
+              "aliases": [
+                "minecrafthead",
+                "mchead"
+              ],
+              "arguments": "[username]",
+              "cooldown": 1,
+              "description": "View the head of a Minecraft Java edition player."
+            },
+            "mcavatar": {
+              "aliases": [
+                "minecraftavatar",
+                "minecraftav",
+                "minecraftpfp",
+                "minecraftprofilepic",
+                "minecraftprofilepicture",
+                "minecraftpic",
+                "minecraftpicture",
+                "mcav",
+                "mcpfp",
+                "mcprofilepic",
+                "mcprofilepicture",
+                "mcpic",
+                "mcpicture"
+              ],
+              "arguments": "[username] {image}",
+              "cooldown": 1,
+              "description": "Create a minecraft avatar."
+            },
+            "mckick": {
+              "aliases": [
+                "minecraftkick"
+              ],
+              "arguments": "[username] [username]",
+              "cooldown": 1,
+              "description": "Make one minecraft player kick another minecraft player!"
+            },
+            "previewskin": {
+              "aliases": [
+                "skinpreview"
+              ],
+              "arguments": "[format] {image}",
+              "cooldown": 1,
+              "description": "Make a 2D preview for a skin texture. The format is either \"steve\" or \"alex\""
+            },
+            "renderskin": {
+              "aliases": [
+                "skinrender",
+                "renderplayer",
+                "playerrender"
+              ],
+              "arguments": "[format] [username]",
+              "cooldown": 5,
+              "description": "Render a minecraft skin in 3D.``````Formats:\n\n- player\n- round\n- spin\n- flop\n- back\n- wave\n- squish\n- head"
+            },
+            "skin": {
+              "aliases": [
+                "minecraftskin",
+                "mcskin"
+              ],
+              "arguments": "[username]",
+              "cooldown": 1,
+              "description": "View the skin of a Minecraft Java edition player."
+            },
+            "skinconverter": {
+              "aliases": [
+                "skinconvert",
+                "convertskin"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Convert between the new and old Minecraft skin formats."
+            },
+            "skinify": {
+              "aliases": [
+                "imagetoskin",
+                "imgtoskin",
+                "image2skin",
+                "img2skin"
+              ],
+              "arguments": "{image}",
+              "cooldown": 1,
+              "description": "Turn any image into a minecraft skin."
+            }
+          }
+        }
+      },
+      "commands": {
+        "mcaccount": {
+          "aliases": [
+            "account",
+            "minecraftaccount"
+          ],
+          "arguments": "<member>",
+          "cooldown": 1,
+          "description": "View the minecraft account tied to someones discord."
+        },
+        "minecrafttext": {
+          "aliases": [
+            "mctext"
+          ],
+          "arguments": "[text]",
+          "cooldown": 1,
+          "description": "Generate some Minecraft text"
+        },
+        "minecraftwiki": {
+          "aliases": [
+            "wikiminecraft",
+            "mcwiki",
+            "wikimc"
+          ],
+          "arguments": "[searchTerm]",
+          "cooldown": 5,
+          "description": "Search for something on the Minecraft Wiki."
+        },
+        "mojangtext": {
+          "aliases": [
+            "mojangfont",
+            "mjt"
+          ],
+          "arguments": "[text]",
+          "cooldown": 1,
+          "description": "Generate some text in the Mojang font. This can be used for the loading screen in Minecraft if used with the \"e!mojangconverter\" command."
+        },
+        "optifine": {
+          "aliases": [
+            "of"
+          ],
+          "cooldown": 5,
+          "description": "Get a link to download the latest OptiFine version."
+        },
+        "setmcaccount": {
+          "aliases": [
+            "setaccount",
+            "setminecraftaccount",
+            "linkaccount",
+            "accountlink",
+            "removemcaccount",
+            "removeminecraftaccount",
+            "rmmcaccount",
+            "rmminecraftaccount"
+          ],
+          "arguments": "[username]",
+          "cooldown": 1,
+          "description": "Tie a minecraft account to your Discord, so you can run the Minecraft commands without specifying a user.\n\nLeave blank to remove your account."
+        }
+      }
+    },
+    "moderation": {
+      "categories": {
+        "modpings": {
+          "commands": {
+            "modping": {
+              "aliases": [
+                "moderatorping"
+              ],
+              "cooldown": 1,
+              "description": "Ping the moderators of the current server. The roles can be configured with the \"setmodpingroles\" command",
+              "permissions": [
+                "Guild Only"
+              ]
+            },
+            "setmodpingroles": {
+              "aliases": [
+                "setmoderatorpingrole",
+                "moderatorpingroles",
+                "moderatorpingrole",
+                "setmoderatorpingroles",
+                "modpingroles",
+                "setmodpingrole",
+                "modpingrole",
+                "setmodping",
+                "setmoderatorping"
+              ],
+              "arguments": "<role> <role> <role>",
+              "cooldown": 1,
+              "description": "Set up to three custom roles to be used with moderator pings. The order of the roles is the order of priority. Running this will overwrite any previously set roles. Provide no roles to remove the current ones.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "togglemodping": {
+              "aliases": [
+                "enablemoderatorping",
+                "disablemoderatorping",
+                "togglemoderatorping",
+                "enablemodping",
+                "disablemodping"
+              ],
+              "cooldown": 1,
+              "description": "Toggles the ability for users to trigger a moderator ping. This also disables modpings on scam detections.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            }
+          }
+        }
+      },
+      "commands": {
+        "addnote": {
+          "aliases": [
+            "note"
+          ],
+          "arguments": "{member} [reason]",
+          "cooldown": 1,
+          "description": "Add a note to a member.``````Members cannot see their notes.``````The note is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+          "permissions": [
+            "Guild Only",
+            "Moderate Members"
+          ]
+        },
+        "ban": {
+          "arguments": "<member> [reason]",
+          "cooldown": 1,
+          "description": "Ban a user from the server.``````The user is sent a message saying they were banned, along with the reason.",
+          "permissions": [
+            "Guild Only",
+            "Ban Members"
+          ]
+        },
+        "endtimeout": {
+          "aliases": [
+            "untimeout",
+            "endmute",
+            "unmute"
+          ],
+          "arguments": "{member} [reason]",
+          "cooldown": 1,
+          "description": "End the time out of a member who is timed out.",
+          "permissions": [
+            "Guild Only",
+            "Moderate Members"
+          ]
+        },
+        "kick": {
+          "arguments": "<member> [reason]",
+          "cooldown": 1,
+          "description": "Kick a member from the server.``````The member is sent a message saying they were kicked, along with the reason.",
+          "permissions": [
+            "Guild Only",
+            "Kick Members"
+          ]
+        },
+        "purge": {
+          "aliases": [
+            "prune",
+            "clean",
+            "delete"
+          ],
+          "arguments": "[limit] <member>",
+          "cooldown": 1,
+          "description": "Bulk delete messages from a channel.``````Defaults to 5, maximum 99.``````Mention a user to delete only their messages.``````This cannot delete messages that are over two weeks old.",
+          "permissions": [
+            "Guild Only",
+            "Manage Messages"
+          ]
+        },
+        "records": {
+          "aliases": [
+            "warnlist",
+            "warncount",
+            "timeoutlist",
+            "timeoutcount",
+            "mutelist",
+            "mutecount",
+            "warns",
+            "mutes",
+            "timeouts",
+            "listwarns",
+            "listmutes",
+            "listtimeouts"
+          ],
+          "arguments": "<member>",
+          "cooldown": 1,
+          "description": "View the moderation records for a member.",
+          "permissions": [
+            "Guild Only",
+            "Moderate Members"
+          ]
+        },
+        "timeout": {
+          "aliases": [
+            "mute"
+          ],
+          "arguments": "{member} [duration] [reason]",
+          "cooldown": 1,
+          "description": "Give a member a time out so that they cannot type or speak.``````Defaults to 10 minutes.``````The member is sent a message saying they were timed out, along with the reason.``````The time out is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+          "permissions": [
+            "Guild Only",
+            "Moderate Members"
+          ]
+        },
+        "unban": {
+          "arguments": "<user> [reason]",
+          "cooldown": 1,
+          "description": "Unban a user from the server.",
+          "permissions": [
+            "Guild Only",
+            "Ban Members"
+          ]
+        },
+        "warn": {
+          "aliases": [
+            "warning"
+          ],
+          "arguments": "{member} [reason]",
+          "cooldown": 1,
+          "description": "Give a member a warning.``````The member is sent a message saying they were warned, along with the reason.``````The warning is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+          "permissions": [
+            "Guild Only",
+            "Moderate Members"
+          ]
+        }
+      }
+    },
+    "server": {
+      "categories": {
+        "artchives": {
+          "description": "The Artchive™ is a channel where users can submit images to be archived. These could be artworks, memes, or literally anything. Its up to each server to decide what to use it for.",
+          "commands": {
+            "artchive": {
+              "aliases": [
+                "archive",
+                "art",
+                "a",
+                "submit"
+              ],
+              "arguments": "[description]",
+              "cooldown": 1,
+              "description": "Add an image to the Artchive! Requires an image attachment.",
+              "permissions": [
+                "Guild Only"
+              ]
+            },
+            "removeartchive": {
+              "aliases": [
+                "removearchive",
+                "artchiveremove",
+                "archiveremove"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers Artchive channel.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setartchive": {
+              "aliases": [
+                "addartchive",
+                "artchiveset",
+                "artchiveadd",
+                "setarchive",
+                "archiveset"
+              ],
+              "arguments": "<channel>",
+              "cooldown": 1,
+              "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            }
+          }
+        },
+        "emojis": {
+          "commands": {
+            "addemoji": {
+              "aliases": [
+                "emojiadd",
+                "newemoji",
+                "emojinew"
+              ],
+              "arguments": "[name]",
+              "cooldown": 1,
+              "description": "Add an emoji to the server.",
+              "permissions": [
+                "Guild Only",
+                "Manage Emojis And Stickers"
+              ]
+            },
+            "emoji": {
+              "aliases": [
+                "emote",
+                "e"
+              ],
+              "arguments": "<emoji> [type/resolution]",
+              "cooldown": 1,
+              "description": "Get the image of an emoji. The type or resolution is optional. Not every type has every emoji.``````Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
+            },
+            "removeemoji": {
+              "aliases": [
+                "emojiremove",
+                "deleteemoji"
+              ],
+              "cooldown": 1,
+              "description": "Remove an emoji from the server.",
+              "permissions": [
+                "Guild Only",
+                "Manage Emojis And Stickers"
+              ]
+            }
+          }
+        },
+        "faqs": {
+          "description": "The FAQ is a system to store frequently asked questions, so that you can quickly bring up the answers when they are asked.",
+          "commands": {
+            "addfaq": {
+              "aliases": [
+                "newfaq",
+                "faqadd",
+                "faqnew"
+              ],
+              "cooldown": 1,
+              "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            },
+            "editfaq": {
+              "aliases": [
+                "updatefaq",
+                "faqedit",
+                "faqupdate"
+              ],
+              "cooldown": 1,
+              "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            },
+            "faq": {
+              "arguments": "[question]",
+              "cooldown": 1,
+              "description": "Ask a frequently asked question!",
+              "guildOnly": true
+            },
+            "faqdetails": {
+              "aliases": [
+                "faqinfo",
+                "detailsfaq",
+                "infofaq"
+              ],
+              "arguments": "[question]",
+              "cooldown": 1,
+              "description": "Get the full details about a certain faq.",
+              "guildOnly": true
+            },
+            "removefaq": {
+              "aliases": [
+                "deletefaq",
+                "faqremove",
+                "faqdelete"
+              ],
+              "arguments": "[question]",
+              "cooldown": 1,
+              "description": "Remove an FAQ from the server.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            }
+          }
+        },
+        "joinmessages": {
+          "commands": {
+            "removejoindm": {
+              "aliases": [
+                "deletejoindm",
+                "joindmremove",
+                "joindmdelete"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers join DM.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ]
+            },
+            "removejoinmessage": {
+              "aliases": [
+                "deletejoinmessage",
+                "joinmessageremove",
+                "joinmessagedelete"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers join message.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ]
+            },
+            "removeleavemessage": {
+              "aliases": [
+                "deleteleavemessage",
+                "leavemessageremove",
+                "leavemessagedelete"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers leave message.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ]
+            },
+            "setjoindm": {
+              "aliases": [
+                "joindmset",
+                "addjoindm",
+                "joindmadd",
+                "joindm"
+              ],
+              "arguments": "[message]",
+              "cooldown": 1,
+              "description": "Set a message that is sent to members through DM when they join the server.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ]
+            },
+            "setjoinimage": {
+              "aliases": [
+                "joinimageset",
+                "addjoinimage",
+                "joinimageadd",
+                "joinimage"
+              ],
+              "arguments": "<image>",
+              "cooldown": 1,
+              "description": "Set the image that will be used with the join message. \"default\" will set it back to the default image.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setjoinmessage": {
+              "aliases": [
+                "joinmessageset",
+                "addjoinmessage",
+                "joinmessageadd",
+                "joinmessage"
+              ],
+              "arguments": "<channel> [message]",
+              "cooldown": 1,
+              "description": "Set a channel to send an image with a message when a member joins the server. The message is in the format [message] <member>, where you set the message part.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setleaveimage": {
+              "aliases": [
+                "leaveimageset",
+                "addleaveimage",
+                "leaveimageadd",
+                "leaveimage"
+              ],
+              "arguments": "<image>",
+              "cooldown": 1,
+              "description": "Set the image that will be used with the leave message. \"default\" will set it back to the default image.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setleavemessage": {
+              "aliases": [
+                "leavemessageset",
+                "addleavemessage",
+                "leavemessageadd",
+                "leavemessage"
+              ],
+              "arguments": "<channel> [message]",
+              "cooldown": 1,
+              "description": "Set a channel to send an image with a message when a member leaves the server. The message is in the format [message] <member>, where you set the message part.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "viewjoinmessages": {
+              "aliases": [
+                "showjoinmessages",
+                "previewjoinmessages",
+                "joinmessagesview",
+                "joinmessagesshow",
+                "joinmessagespreview",
+                "viewjoinmessage",
+                "showjoinmessage",
+                "previewjoinmessage",
+                "joinmessageview",
+                "joinmessageshow",
+                "joinmessagepreview",
+                "joinmessages"
+              ],
+              "cooldown": 5,
+              "description": "View what the current servers join messages are.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ]
+            }
+          }
+        },
+        "logs": {
+          "commands": {
+            "removelogs": {
+              "aliases": [
+                "removelog"
+              ],
+              "arguments": "[category]",
+              "cooldown": 1,
+              "description": "Remove a server log channel from the current server",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setlogs": {
+              "aliases": [
+                "setlog",
+                "addlogs",
+                "addlog"
+              ],
+              "arguments": "[category] <channel>",
+              "cooldown": 1,
+              "description": "Set the channels for the server logs to be sent to.``````Available categories:\n\n- all\n- automod\n- members\n- messages\n- moderation\n- server\n- voice",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "viewlogs": {
+              "aliases": [
+                "logs"
+              ],
+              "cooldown": 1,
+              "description": "View the server log channels set up in the current server.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            }
+          }
+        },
+        "roles": {
+          "commands": {
+            "addrole": {
+              "aliases": [
+                "roleadd"
+              ],
+              "arguments": "<member> <role>",
+              "cooldown": 1,
+              "description": "Add a role to a member.",
+              "permissions": [
+                "Manage Roles"
+              ],
+              "guildOnly": true
+            },
+            "buttonroles": {
+              "aliases": [
+                "buttonrole",
+                "br",
+                "reactionroles",
+                "reactionrole",
+                "reactroles",
+                "reactrole",
+                "rr"
+              ],
+              "cooldown": 1,
+              "description": "Run a builder that sets up a message that members can use to to add roles to themselves.``````For the role text, provide \"none\" to leave it blank.``````Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time",
+              "permissions": [
+                "Guild Only",
+                "Manage Roles"
+              ]
+            },
+            "joinrole": {
+              "aliases": [
+                "addjoinrole",
+                "removejoinrole",
+                "setjoinrole",
+                "deletejoinrole",
+                "togglejoinrole",
+                "joinroles",
+                "viewjoinroles",
+                "viewjoinrole"
+              ],
+              "arguments": "<role>",
+              "cooldown": 1,
+              "description": "Add or remove a role that users will gain when joining the server.``````Provide no arguments to view the current join roles.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "guildOnly": true
+            },
+            "removerole": {
+              "aliases": [
+                "roleremove"
+              ],
+              "arguments": "<member> <role>",
+              "cooldown": 1,
+              "description": "Remove a role from a member.",
+              "permissions": [
+                "Manage Roles"
+              ],
+              "guildOnly": true
+            }
+          }
+        },
+        "serverlinking": {
+          "commands": {
+            "linkserver": {
+              "aliases": [
+                "serverlink",
+                "linkguild",
+                "guildlink"
+              ],
+              "arguments": "[serverId]",
+              "cooldown": 1,
+              "description": "Link a server to the current server, sharing bot settings, moderation logs, timeouts, kicks, and bans.\n\nThe current server will become the parent server, and any linked servers will become child servers.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "unlinkserver": {
+              "aliases": [
+                "serverunlink",
+                "unlinkguild",
+                "guildunlink"
+              ],
+              "arguments": "[serverId]",
+              "cooldown": 1,
+              "description": "Unlink a server from the current server.",
+              "permissions": [
+                "Guild Only",
+                "Administrator"
+              ]
+            },
+            "viewserverlinks": {
+              "aliases": [
+                "viewlinks",
+                "viewguildlinks"
+              ],
+              "cooldown": 1,
+              "description": "View the current server links of the current server.",
+              "permissions": [
+                "Guild Only"
+              ]
+            }
+          }
+        },
+        "starboards": {
+          "commands": {
+            "addstarboardblacklist": {
+              "aliases": [
+                "addsbblacklist",
+                "addstarboardbl",
+                "addsbbl",
+                "starboardblacklistadd",
+                "sbblacklistadd",
+                "starboardbladd",
+                "sbbladd",
+                "starboardblacklist",
+                "sbblacklist",
+                "starboardbl",
+                "sbbl"
+              ],
+              "arguments": "<channel>",
+              "cooldown": 1,
+              "description": "Blacklist a category or channel from having its messages sent to the starboard.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "removestarboard": {
+              "aliases": [
+                "starboardremove",
+                "deletestarboard",
+                "starboarddelete",
+                "removesb",
+                "sbremove",
+                "deletesb",
+                "sbdelete"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers starboard channel.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "removestarboardblacklist": {
+              "aliases": [
+                "removesbblacklist",
+                "removestarboardbl",
+                "removesbbl",
+                "starboardblacklistremove",
+                "sbblacklistremove",
+                "starboardblremove",
+                "sbblremove",
+                "deletesbblacklist",
+                "deletestarboardbl",
+                "deletesbbl",
+                "starboardblacklistdelete",
+                "sbblacklistdelete",
+                "starboardbldelete",
+                "sbbldelete"
+              ],
+              "arguments": "<channel>",
+              "cooldown": 1,
+              "description": "Remove a category or channel from being blacklisted from the starboard.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setstarboard": {
+              "aliases": [
+                "starboardset",
+                "starboard",
+                "setsb",
+                "sbset",
+                "sb"
+              ],
+              "arguments": "<channel> [count] [emoji]",
+              "cooldown": 1,
+              "description": "Set a channel to use as a starboard for the server.``````A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "starboardinfo": {
+              "aliases": [
+                "viewstarboard",
+                "showstarboard",
+                "infostarboard",
+                "starboardview",
+                "starboardshow",
+                "viewsb",
+                "showsb",
+                "infosb",
+                "sbview",
+                "sbshow",
+                "sbinfo"
+              ],
+              "cooldown": 1,
+              "description": "Set a channel to use as a starboard for the server.``````A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
+            }
+          }
+        },
+        "threads": {
+          "description": "A Wynem thread channel is a channel where every message sent turns into a thread. This can be used as a support channel, feature request channel, bug report channel, and many more!",
+          "commands": {
+            "close": {
+              "aliases": [
+                "closethread",
+                "threadclose",
+                "setarchived"
+              ],
+              "cooldown": 1,
+              "description": "Close the current thread channel",
+              "permissions": [
+                "Guild Only"
+              ]
+            },
+            "removethreadchannel": {
+              "aliases": [
+                "threadchannelremove",
+                "removesupportchannel",
+                "supportchannelremove",
+                "deletethreadchannel",
+                "threadchanneldelete",
+                "deletesupportchannel",
+                "supportchanneldelete"
+              ],
+              "arguments": "<channel>",
+              "cooldown": 1,
+              "description": "Set a channel to be a Wynem thread channel.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            }
+          }
+        }
+      },
+      "commands": {
+        "lock": {
+          "aliases": [
+            "unlock",
+            "lockdown"
+          ],
+          "cooldown": 1,
+          "description": "Toggle everyone's ability to send messages in the current channel.",
+          "permissions": [
+            "Guild Only",
+            "Manage Messages"
+          ]
+        },
+        "namesearch": {
+          "aliases": [
+            "names"
+          ],
+          "arguments": "[search]",
+          "cooldown": 1,
+          "description": "Search for users with certain text in their name.",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "quotemessage": {
+          "aliases": [
+            "messagequote"
+          ],
+          "arguments": "[messageURL]",
+          "cooldown": 1,
+          "description": "Quote a discord message.",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "removemembercounter": {
+          "aliases": [
+            "membercounterremove",
+            "deletemembercounter",
+            "membercounterdelete"
+          ],
+          "cooldown": 1,
+          "description": "Remove the servers member counter.",
+          "permissions": [
+            "Guild Only",
+            "Manage Channels"
+          ]
+        },
+        "serverinfo": {
+          "aliases": [
+            "serverinformation",
+            "aboutserver",
+            "guildinfo",
+            "guildinformation",
+            "aboutguild"
+          ],
+          "cooldown": 1,
+          "description": "Get some infomation about the current server.",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "setmembercounter": {
+          "aliases": [
+            "membercounterset",
+            "membercounter"
+          ],
+          "arguments": "<channel> [text]",
+          "cooldown": 1,
+          "description": "Set a channel to display the current number of members in the server.``````Any channel type can be used except for Threads.``````Use <count> in the text to incicate where the count should go.``````Example:`e!setmembercounter #channelname Member Count: <count>",
+          "permissions": [
+            "Guild Only",
+            "Manage Channels"
+          ]
+        },
+        "slowmode": {
+          "aliases": [
+            "cooldown"
+          ],
+          "arguments": "[length]",
+          "cooldown": 1,
+          "description": "Set a custom slowmode for the current channel.",
+          "permissions": [
+            "Guild Only",
+            "Manage Messages"
+          ]
+        }
+      }
+    },
+    "user": {
+      "commands": {
+        "avatar": {
+          "aliases": [
+            "av",
+            "pfp",
+            "profilepic",
+            "profilepicture",
+            "pic",
+            "picture"
+          ],
+          "arguments": "<member>",
+          "cooldown": 1,
+          "description": "Show a users avatar, with links to get it in different resolutions."
+        },
+        "joinposition": {
+          "aliases": [
+            "join"
+          ],
+          "arguments": "<member>/[position]",
+          "cooldown": 1,
+          "description": "View the position that a member joined the server in. To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list.",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "userinfo": {
+          "aliases": [
+            "whois",
+            "who",
+            "profile",
+            "memberinformation",
+            "memberinfo",
+            "userinformation"
+          ],
+          "arguments": "<user>",
+          "cooldown": 1,
+          "description": "Get info about a specified user."
+        }
+      }
+    },
+    "utility": {
+      "categories": {
+        "reminders": {
+          "commands": {
+            "reminder": {
+              "aliases": [
+                "remind",
+                "remindme",
+                "rm"
+              ],
+              "arguments": "[duration] [reminder]",
+              "cooldown": 1,
+              "description": "Set a reminder for yourself."
+            },
+            "repeatingreminder": {
+              "aliases": [
+                "repeatingremind",
+                "repeatingremindme",
+                "repeatreminder",
+                "repeatremind",
+                "repeatremindme",
+                "rrm"
+              ],
+              "arguments": "[duration] [reminder]",
+              "cooldown": 1,
+              "description": "Set a reminder for yourself that repeats at a regular interval."
+            },
+            "viewreminders": {
+              "aliases": [
+                "managereminders",
+                "reminders",
+                "viewremind",
+                "manageremind",
+                "viewremindme",
+                "manageremindme",
+                "vrm",
+                "mrm"
+              ],
+              "arguments": "<member/channel>",
+              "cooldown": 1,
+              "description": "View and remove your existing reminders. If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
+            }
+          }
+        }
+      },
+      "commands": {
+        "calculator": {
+          "aliases": [
+            "calc",
+            "math"
+          ],
+          "cooldown": 1,
+          "description": "Summon a calculator."
+        },
+        "colour": {
+          "aliases": [
+            "color",
+            "col",
+            "hex",
+            "rgb"
+          ],
+          "arguments": "[colour]",
+          "cooldown": 1,
+          "description": "Preview a colour. This also converts it to a variety of different colour formats.``````Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+        },
+        "createembed": {
+          "aliases": [
+            "makeembed",
+            "embedcreate",
+            "embedmake",
+            "embed",
+            "mbed"
+          ],
+          "cooldown": 1,
+          "description": "Run a builder to create and send a custom embed."
+        },
+        "filesize": {
+          "arguments": "[url]",
+          "cooldown": 1,
+          "description": "View the file size of a file."
+        },
+        "generategradient": {
+          "aliases": [
+            "gradientgenerate",
+            "gradientgen",
+            "gengradient"
+          ],
+          "arguments": "[colour] [stepCount] [degrees]",
+          "cooldown": 1,
+          "description": "Generate a gradient from a colour, with hue shifting."
+        },
+        "generatepalette": {
+          "aliases": [
+            "palettegenerate",
+            "palettegen",
+            "genpalette"
+          ],
+          "arguments": "[colourCount]",
+          "cooldown": 1,
+          "description": "Generate a palette of random colours."
+        },
+        "getrawmessage": {
+          "aliases": [
+            "getraw",
+            "rawmessage"
+          ],
+          "arguments": "[messageURL]",
+          "cooldown": 1,
+          "description": "Get the raw text content of a discord message."
+        },
+        "google": {
+          "aliases": [
+            "search"
+          ],
+          "arguments": "[searchTerm]",
+          "cooldown": 1,
+          "description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
+        },
+        "makeqrcode": {
+          "aliases": [
+            "createqrcode",
+            "qrcodemake",
+            "qrcodecreate",
+            "makeqr",
+            "createqr",
+            "qrmake",
+            "qrcreate",
+            "qrcode",
+            "qr"
+          ],
+          "arguments": "[text]",
+          "cooldown": 1,
+          "description": "Create a QR code."
+        },
+        "poll": {
+          "aliases": [
+            "vote"
+          ],
+          "cooldown": 1,
+          "description": "Run a builder that sets up a poll that members can vote on.",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "readqrcode": {
+          "aliases": [
+            "decodeqrcode",
+            "qrcoderead",
+            "qrcodedecode",
+            "readqr",
+            "decodeqr",
+            "qrread",
+            "qrdecode",
+            "unqr"
+          ],
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Read a QR code in an image."
+        },
+        "save": {
+          "arguments": "{image}",
+          "cooldown": 1,
+          "description": "Turn an image into a gif so that you can save it to your discord favourites list."
+        },
+        "tinyurl": {
+          "arguments": "[url]",
+          "cooldown": 1,
+          "description": "Shorten a link using tinyurl."
+        }
+      }
+    },
+    "voice": {
+      "categories": {
+        "texttospeech": {
+          "commands": {
+            "ignoreprefix": {
+              "aliases": [
+                "disableprefix",
+                "blockprefix",
+                "disallowprefix",
+                "addignoredprefix"
+              ],
+              "arguments": "[prefix]",
+              "cooldown": 1,
+              "description": "Add prefixes to ignore in the autotts channel. This can be used to stop other bot commands being read out loud.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "removeautotts": {
+              "aliases": [
+                "autottsremove",
+                "deleteautotts",
+                "autottsdelete"
+              ],
+              "cooldown": 1,
+              "description": "Remove the servers autotts channel.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "removeignoredprefix": {
+              "aliases": [
+                "removedisabledprefix",
+                "removeblockedprefix",
+                "removedisallowedprefix",
+                "allowprefix",
+                "enableprefix",
+                "unblockprefix"
+              ],
+              "arguments": "[prefix]",
+              "cooldown": 1,
+              "description": "Remove prefixes that are currently being ignored in autotts.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setautotts": {
+              "aliases": [
+                "autottsset",
+                "autotts"
+              ],
+              "arguments": "<channel>",
+              "cooldown": 1,
+              "description": "Set a channel where messages to be automatically read out loud in a voice channel.``````Messages will not be read for users who not in the voice channel, or if the message starts with a URL.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setttslanguage": {
+              "aliases": [
+                "ttslanguage",
+                "setttslang",
+                "ttslang"
+              ],
+              "arguments": "[language]",
+              "cooldown": 1,
+              "description": "Set a default language for your TTS to be read in."
+            },
+            "tts": {
+              "aliases": [
+                "t",
+                "texttospeech",
+                "textspeech",
+                "read",
+                "speak"
+              ],
+              "arguments": "[language] [text]",
+              "cooldown": "3",
+              "description": "Read some text out loud. If you are in a voice channel, the bot will join the channel and read it out loud there, otherwise it sends an mp3.``````The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.``````Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+            },
+            "viewignoredprefixes": {
+              "aliases": [
+                "viewdisabledprefixes",
+                "viewblockedprefixes",
+                "viewdisallowedprefixes",
+                "showignoredprefixes",
+                "showdisabledprefixes",
+                "showblockedprefixes",
+                "showdisallowedprefixes",
+                "ignoredprefixes",
+                "disabledprefixes",
+                "blockedprefixes",
+                "disallowedprefixes"
+              ],
+              "cooldown": 1,
+              "description": "View the prefixes currently being ignored in autotts.",
+              "permissions": [
+                "Guild Only"
+              ]
+            }
+          }
+        }
+      },
+      "commands": {
+        "activity": {
+          "aliases": [
+            "together",
+            "youtubetogether",
+            "yttogether",
+            "play",
+            "p",
+            "activities",
+            "games"
+          ],
+          "arguments": "[type]",
+          "cooldown": 1,
+          "description": "Start an activity in the current voice channel.``````Activity types:\n\nbetrayal\ncheckers\nchess\nfishington\nletterleague\nocho\npokernight\nsketchheads\nspellcast\nwordsnacks\nyoutube",
+          "permissions": [
+            "Guild Only"
+          ]
+        },
+        "leave": {
+          "aliases": [
+            "l",
+            "die",
+            "disconnect",
+            "unconnect",
+            "unjoin",
+            "dc"
+          ],
+          "cooldown": 1,
+          "description": "Make the bot leave the current voice channel.",
+          "permissions": [
+            "Guild Only"
+          ]
+        }
+      }
+    }
+  }
+}
