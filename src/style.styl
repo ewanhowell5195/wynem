@@ -1,13 +1,14 @@
 :root
   color-scheme: dark
-  --color-blue-light: #9DB6F9
+  --color-blue-light: #8BA9FB
   --color-blue: #6C80F6
-  --color-blue-dark: #3C4DF3
+  --color-blue-dark: #4954C5
   --color-text-white: #FFF
   --color-box-shadow: #00000030
   --color-text-shadow: #00000080
   --color-svg-shadow: #000000c0
   --color-shadow: #00000080
+  --color-grey-lighter: #353538
   --color-grey-light: #2B2B2E
   --color-grey: #1F1F21
   --color-grey-dark: #141414
@@ -16,6 +17,7 @@
   --header-height: 40px
   --content-width: 1280px
   --box-shadow: 0 10px 10px var(--color-box-shadow)
+  --text-shadow: -2px 2px 1px var(--color-text-shadow)
   
 body
   margin: 0
@@ -81,7 +83,7 @@ body::-webkit-scrollbar-thumb
   font-weight: 700
   letter-spacing: 1px
   padding: 0 10px
-  text-shadow: -2px 2px 1px var(--color-text-shadow)
+  text-shadow: var(--text-shadow)
   transition: background-color .15s
   user-select: none
   min-height: var(--header-height)
@@ -92,7 +94,7 @@ body::-webkit-scrollbar-thumb
 
   & > svg
     fill: var(--color-text-white)
-    filter: drop-shadow(-2px 2px 1px var(--color-text-shadow))
+    filter: drop-shadow(var(--text-shadow))
 
   &:hover
     background-color: var(--color-blue-light)
@@ -147,7 +149,7 @@ body::-webkit-scrollbar-thumb
         transform: rotate(-90deg)
 
 .hamburger
-  filter: drop-shadow(-2px 2px 1px var(--color-text-shadow))
+  filter: drop-shadow(var(--text-shadow))
   display: flex
   align-items: center
   height: var(--header-height)

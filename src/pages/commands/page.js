@@ -14,14 +14,12 @@ export default class extends Page {
     const $ = this.$
     await fetchJSON("commands")
     path = path?.split("/") ?? []
-    
     let category = commands
     let index = 0
     while (category?.categories?.[path[index]]) {
       category = category?.categories?.[path[index]]
       index++
     }
-
     let command
     if (index - 1 <= path.length) {
       if (category.commands?.[path[index]]) {
@@ -34,25 +32,56 @@ export default class extends Page {
       }
     }
     const pathStr = `/commands/${path.slice(0, index).join("/")}${path.length ? "/" : ""}`
+    const breadcrumbs = $("#breadcrumbs")
+    const arrowLeft = $("#arrow-left").contents()
+    const arrowRight = $("#arrow-right").contents()
+    for (let i = 0; i < index; i++) breadcrumbs.append(
+      arrowRight.clone(),
+      E("a", { is: "f-a" }).attr("href", `/commands/${path.slice(0, i + 1).join("/")}`).append(
+        E("span").text(path[i])
+      )
+    )
     const categories = $("#categories")
     if (index !== 0) {
-      categories.append(E("a", { is: "f-a" }).attr({
-        id: "category-back",
-        href: `/commands/${path.slice(0, index - 1).join("/")}${index !== 1 ? "/" : ""}`
-      }).text("Back"))
-    }
+      categories.append(
+        E("a", { is: "f-a" }).attr({
+          id: "category-back",
+          href: `/commands/${path.slice(0, index - 1).join("/")}${index !== 1 ? "/" : ""}`
+        }).append(
+          arrowLeft.clone(),
+          E("span").text("Back")
+        ),
+        E("div").attr("id", "category-title").addClass("subcategory-title").text("Subcategories")
+      )
+    } else categories.append(
+      E("div").attr("id", "category-title").text("Categories")
+    )
     if (category.categories) for (const subcategory of Object.keys(category.categories)) {
       categories.append(E("a", { is: "f-a" }).attr({
         href: `${pathStr}${subcategory}`
-      }).text(subcategory))
+      }).append(
+        E("span").text(subcategory)
+      ))
     }
     const content = $("#content")
     if (command) {
-      content.append(E("a", { is: "f-a" }).attr({
-        id: "command-back",
-        href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}`
-      }).text("Back"))
+      breadcrumbs.append(
+        arrowRight.clone(),
+        E("a", { is: "f-a" }).attr({
+          id: "command-breadcrumb",
+          href: `/commands/${path.slice(0, index + 1).join("/")}`
+        }).append(
+          E("span").text(path[index])
+        )
+      )
       const commandInfo = E("div").attr("id", "command-info").append(
+        E("a", { is: "f-a" }).attr({
+          id: "command-back",
+          href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}`
+        }).append(
+          arrowLeft.clone(),
+          E("span").text("Back to command list")
+        ),
         E("h1").text(path[index]),
         E("h3").text("Description")
       ).appendTo(content)
@@ -84,11 +113,11 @@ export default class extends Page {
         const commandsContainer = E("div").attr("id", "commands").appendTo(content)
         for (const [command, info] of Object.entries(category.commands)) {
           commandsContainer.append(
-            E("div").addClass("command").append(
-              E("a", { is: "f-a" }).attr({
-                href: `${pathStr}${command}`
-              }).text(command),
-              E("p").text(info.description.split("``````")[0])
+            E("a", { is: "f-a" }).attr({
+              href: `${pathStr}${command}`
+            }).append(
+              E("div").addClass("command-name").text(command),
+              E("div").addClass("command-description").text(info.description.split("``````")[0])
             )
           )
         }
