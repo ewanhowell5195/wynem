@@ -113,7 +113,17 @@ export default class extends Page {
       )
       commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
-        E("div").addClass("formatting").text(`e!${command.name} ${command.arguments ?? ""}`),
+        E("div").addClass("formatting").text(`e!${command.name} ${command.arguments ?? ""}`)
+      )
+      if (command.permissions) {
+        const permissions = E("ul")
+        for (const alias of command.permissions) permissions.append(E("li").text(alias))
+        commandInfo.append(
+          E("div").addClass("heading").text("Restricted to"),
+          permissions
+        )
+      }
+      commandInfo.append(
         E("div").addClass("heading").text("Cooldown"),
         E("div").text(`${command.cooldown?.toLocaleString("en") ?? 1} Second${(command.cooldown ?? 1) === 1 ? "" : "s"}`)
       )
@@ -123,14 +133,6 @@ export default class extends Page {
         commandInfo.append(
           E("div").addClass("heading").text("Aliases"),
           aliases
-        )
-      }
-      if (command.permissions) {
-        const permissions = E("ul")
-        for (const alias of command.permissions) permissions.append(E("li").text(alias))
-        commandInfo.append(
-          E("h3").text("Restricted to"),
-          permissions
         )
       }
     } else {
@@ -161,6 +163,7 @@ export default class extends Page {
     searchInput.on("input", e => {
       searchResults.empty()
       const val = e.currentTarget.value.toLowerCase()
+      if (!val) return
       let matches = []
       const queue = Object.entries(commands.categories).map(e => [e[1], `/${e[0]}`])
       while (queue.length) {
