@@ -215,6 +215,7 @@ page-body
     color: var(--color-text-white)
     text-decoration: none
     transition: background-color .15s
+    border-radius: 10px
     
     &:hover
       background-color: var(--color-grey-lighter)
@@ -259,7 +260,7 @@ page-body
     transition: transform .15s
 
   &:hover
-    filter: brightness(1.2)
+    background-color: var(--color-grey-lighter)
 
   &:active > *
     transform: translateY(3px)
@@ -267,7 +268,7 @@ page-body
 .title
   font-size: 3rem
   font-weight: 700
-  margin: 30px 0 30px 20px
+  margin: 30px 0 30px 30px
   position: relative
   text-shadow: -5px 5px 1px var(--color-text-shadow)
   
@@ -277,7 +278,7 @@ page-body
     position: absolute
     top: 0
     bottom: 0
-    left: -20px
+    left: -30px
     width: 10px
     border-radius: 5px
 
