@@ -9,7 +9,7 @@ export default class extends Page {
   static title = "Commands - Wynem"
   static description = "View all of Wynem's commands"
 
-  async setData({ path }) {
+  async setData({ path, searchParams }) {
     await this.ready
     const $ = this.$
     await fetchJSON("commands")
@@ -41,13 +41,15 @@ export default class extends Page {
     const breadcrumbs = $("#breadcrumbs")
     const arrowLeft = $("#arrow-left").contents()
     const arrowRight = $("#arrow-right").contents()
-    for (let i = 0; i < index; i++) breadcrumbs.append(
-      arrowRight.clone(),
+    for (let i = 0; i < index; i++) breadcrumbs.prepend(
       E("a", { is: "f-a" }).attr("href", `/commands/${path.slice(0, i + 1).join("/")}`).append(
         E("span").text(path[i])
-      )
+      ),
+      arrowRight.clone()
     )
     const categories = $("#categories")
+    const categoryContainer = $("#categories-container")
+    const main = $("#main")
     if (index !== 0) {
       categories.append(
         E("a", { is: "f-a" }).attr({
@@ -58,11 +60,23 @@ export default class extends Page {
           E("span").text("Back")
         )
       )
-      if (category.categories) categories.append(
-        E("div").attr("id", "category-title").addClass("subcategory-title").text("Subcategories")
+      categories.append(
+        E("a").addClass("mobile-only").text("View commands").on("click", e => {
+          main.addClass("opened")
+          categoryContainer.addClass("closed")
+        })
       )
+      if (category.categories) categories.append(
+        E("div").addClass("category-title subcategory-title").text("Subcategories")
+      )
+      if (!category.categories || "commandview" in searchParams) {
+        main.addClass("opened")
+        categoryContainer.addClass("closed")
+      }
     } else categories.append(
-      E("div").attr("id", "category-title").text("Categories")
+      E("div").addClass("category-title desktop-only").text("Categories"),
+      E("div").addClass("category-title mobile-only").text("Wynem Commands"),
+      E("div").addClass("mobile-only").css("margin-bottom", "10px").text("Please select a category")
     )
     if (category.categories) for (const subcategory of Object.keys(category.categories)) {
       categories.append(E("a", { is: "f-a" }).attr({
@@ -73,19 +87,21 @@ export default class extends Page {
     }
     const content = $("#content")
     if (command) {
-      breadcrumbs.append(
-        arrowRight.clone(),
+      main.addClass("opened")
+      categoryContainer.addClass("closed")
+      breadcrumbs.prepend(
         E("a", { is: "f-a" }).attr({
           id: "command-breadcrumb",
           href: `/commands/${path.slice(0, index + 1).join("/")}`
         }).append(
           E("span").text(command.name)
-        )
+        ),
+        arrowRight.clone()
       )
       const commandInfo = E("div").attr("id", "command-info").append(
         E("a", { is: "f-a" }).attr({
           id: "command-back",
-          href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}`
+          href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}?commandview`
         }).append(
           arrowLeft.clone(),
           E("span").text("Back to command list")
@@ -187,6 +203,16 @@ export default class extends Page {
           ).on("click", e => searchResults.empty())
         )
       }
+    })
+    const switchLeft = $("#mobile-switch-left")
+    const switchRight = $("#mobile-switch-right")
+    switchRight.on("click", e => {
+      main.addClass("opened")
+      categoryContainer.addClass("closed")
+    })
+    switchLeft.on("click", e => {
+      main.removeClass("opened")
+      categoryContainer.removeClass("closed")
     })
   }
 

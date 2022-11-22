@@ -40,6 +40,7 @@ class Page extends HTMLElement {
     )
     this.ready = fetch(`/pages/${this.path}/`).then(e => e.text()).then(async content => {
       this.shadowBody = E("page-body")
+      this.shadowBody.addClass("preload")
       if (!supportsCBIE()) $(this.shadowBody).on("click", 'a[is="f-a"]', evt => {
         evt.preventDefault()
         openPage(new URL(evt.currentTarget.href), true)
@@ -50,6 +51,7 @@ class Page extends HTMLElement {
       await onReady(this.$)
       this.hasLoaded = true
       this.classList.remove("loading")
+      setTimeout(() => this.shadowBody.removeClass("preload"), 100)
     })
   }
 
@@ -69,6 +71,10 @@ class Page extends HTMLElement {
           page-body {
             display: block;
             overflow-x: hidden;
+          }
+          page-body.preload * {
+            animation-duration: 0s!important;
+            transition: all 0s!important;
           }
           img.popupable {
             cursor: pointer;
