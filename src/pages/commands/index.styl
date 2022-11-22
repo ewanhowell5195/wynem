@@ -217,6 +217,15 @@ page-body
   > .path
     padding-top: 2px
     opacity: 0.75
+    
+    :first-child
+      text-transform: capitalize
+
+    > svg
+      width: 14px!important
+      height: 14px!important
+      filter: drop-shadow(-2px 2px 1px black)
+      transform: translateY(2px)
 
 #content
   padding: calc(var(--header-height) + 20px) 20px 20px

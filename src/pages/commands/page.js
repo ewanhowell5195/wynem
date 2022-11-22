@@ -199,7 +199,7 @@ export default class extends Page {
           queue.push([data, `${path}/${subCategory}`])
         }
         if (category.commands) for (const [command, info] of Object.entries(category.commands)) {
-          if (command.includes(val) || path.includes(val)) matches.push([command, command, `${path}/${command}`])
+          if (command.replace(/-/g, " ").includes(val) || path.includes(val)) matches.push([command, command.includes("-") ? command.replace(/-/g, " ").toTitleCase() : command, `${path}/${command}`])
           if (info.aliases) for (const alias of info.aliases) {
             if (alias.includes(val)) matches.push([alias, `${alias} <span>(${command})</span>`, `${path}/${command}`])
           }
@@ -229,7 +229,7 @@ export default class extends Page {
             href: `/commands${match[2]}`
           }).addClass("search-result").append(
             E("div").addClass("name").html(match[1]),
-            E("div").addClass("path").text(match[2])
+            E("div").addClass("path").append(match[2].split("/").slice(1).map(e => [arrowRight.clone(), E("span").text(e.includes("-") ? e.replace(/-/g, " ").toTitleCase() : e)]).flat().slice(1))
           ).on("click", e => searchResults.empty())
         )
       }
