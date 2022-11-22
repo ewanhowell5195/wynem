@@ -101,7 +101,7 @@ export default class extends Page {
       const commandInfo = E("div").attr("id", "command-info").append(
         E("a", { is: "f-a" }).attr({
           id: "command-back",
-          href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}?commandview`
+          href: `/commands/${path.slice(0, index).join("/")}${index !== 1 ? "/" : ""}/?commandview`
         }).append(
           arrowLeft.clone(),
           E("span").text("Back to command list")

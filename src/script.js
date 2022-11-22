@@ -115,7 +115,8 @@ function pageRoute(path, rgx) {
 const routes = [
   pageRoute("home", "/"),
   pageRoute("features"),
-  pageRoute("commands", /\/commands(\/(?<path>.+))?/)
+  pageRoute("commands", /\/commands(\/(?<path>.+))?/),
+  pageRoute("colours")
 ]
 
 let pageLoadPromise = Promise.resolve()
