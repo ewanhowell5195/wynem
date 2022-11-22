@@ -60,29 +60,29 @@ export default class extends Page {
           E("span").text("Back")
         )
       )
-      categories.append(
+      if (category.commands) categories.append(
         E("a").addClass("mobile-only").text("View commands").on("click", e => {
           main.addClass("opened")
           categoryContainer.addClass("closed")
         })
       )
       if (category.categories) categories.append(
-        E("div").addClass("category-title subcategory-title").text("Subcategories")
+        E("div").addClass("category-title subcategory-title").text(index === 1 ? "Categories" : "Subcategories")
       )
       if (!category.categories || "commandview" in searchParams) {
         main.addClass("opened")
         categoryContainer.addClass("closed")
       }
     } else categories.append(
-      E("div").addClass("category-title desktop-only").text("Categories"),
+      E("div").addClass("category-title desktop-only").text("Commands"),
       E("div").addClass("category-title mobile-only").text("Wynem Commands"),
-      E("div").addClass("mobile-only").css("margin-bottom", "10px").text("Please select a category")
+      E("div").addClass("mobile-only").css("margin-bottom", "10px").text("Please select a command type")
     )
     if (category.categories) for (const subcategory of Object.keys(category.categories)) {
       categories.append(E("a", { is: "f-a" }).attr({
         href: `${pathStr}${subcategory}`
       }).append(
-        E("span").text(subcategory)
+        E("span").text(subcategory.replace(/-/g, " "))
       ))
     }
     const content = $("#content")
@@ -106,20 +106,47 @@ export default class extends Page {
           arrowLeft.clone(),
           E("span").text("Back to command list")
         ),
-        E("div").addClass("title").text(command.name)
+        E("div").addClass("title").text(path[0] === "context" ? command.name.replace(/-/g, " ").toTitleCase() : command.name)
       ).appendTo(content)
       for (const section of (Array.isArray(command.description) ? command.description : command.description.split("``````"))) commandInfo.append(
         E("div").addClass("description").text(section)
       )
-      commandInfo.append(
+      if (path[0] === "prefix") commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
         E("div").addClass("formatting").text(`e!${command.name} ${command.arguments ?? ""}`)
       )
+      else if (path[0] === "slash") commandInfo.append(
+        E("div").addClass("heading").text("Formatting"),
+        E("div").addClass("formatting").text(`/${path.slice(1, index + 1).join(" ")} ${command.options?.map(e => `${e.name}:${e.required ? "required" : "optional"}`).join(" ") ?? ""}`)
+      )
+      else {
+        commandInfo.append(
+          E("div").addClass("heading").text("How to use"),
+          E("div").html(`Right click on a <strong>${command.type ?? "message"}</strong>, go to <strong>Apps</strong>, then select <strong>${command.name.replace(/-/g, " ").toTitleCase()}</strong>`)
+        )
+      }
+      if (command.options) {
+        commandInfo.append(E("div").addClass("heading").text("Options"))
+        for (const option of command.options) {
+          commandInfo.append(
+            E("div").addClass("option-name").html(`${option.name}${option.required ? ' <span class="option-required">(required)</span>' : ""}`),
+            E("div").addClass("option-description").text(option.description)
+          )
+        }
+      }
       if (command.permissions) {
         const permissions = E("ul")
         for (const alias of command.permissions) permissions.append(E("li").text(alias))
         commandInfo.append(
           E("div").addClass("heading").text("Restricted to"),
+          permissions
+        )
+      }
+      if (command.botPermissions) {
+        const permissions = E("ul")
+        for (const alias of command.botPermissions) permissions.append(E("li").text(alias))
+        commandInfo.append(
+          E("div").addClass("heading").text("Wynem needs these permissions"),
           permissions
         )
       }
@@ -143,7 +170,7 @@ export default class extends Page {
             E("a", { is: "f-a" }).attr({
               href: `${pathStr}${command}`
             }).append(
-              E("div").addClass("command-name").text(command),
+              E("div").addClass("command-name").text(path[0] === "context" ? command.replace(/-/g, " ").toTitleCase() : command),
               E("div").addClass("command-description").text(Array.isArray(info.description) ? info.description[0] : info.description.split("``````")[0])
             )
           )
