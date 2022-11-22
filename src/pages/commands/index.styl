@@ -39,6 +39,8 @@ page-body
     text-shadow: var(--text-shadow)
     background-color: var(--color-grey-light)
     border-radius: 7.5px
+    user-select: none
+    cursor: pointer
     
     &:hover
       background-color: var(--color-blue)
@@ -229,6 +231,32 @@ page-body
 
 #content
   padding: calc(var(--header-height) + 20px) 20px 20px
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+#category-name
+  font-weight: 700
+  font-size: 3rem
+  text-transform: capitalize
+  text-shadow: -4px 4px 1px var(--color-text-shadow)
+
+#category-heading
+  font-weight: 700
+  font-size: 2rem
+  text-shadow: -3px 3px 1px var(--color-text-shadow)
+
+#category-description
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.category-description
+  white-space: pre-wrap
+  padding: 20px
+  background-color: var(--color-grey-dark)
+  border-radius: 10px
+  box-shadow: var(--box-shadow)
 
 #commands
   display: flex
@@ -331,9 +359,10 @@ page-body
   width: calc(100% - 20px)
   background-color: var(--color-grey-dark)
   padding: 10px
-  margin-bottom: 10px
+  margin-bottom: 20px
   box-shadow: var(--box-shadow)
   white-space: pre-wrap
+  border-radius: 10px
   
 .formatting
   font-family: consolas, monospace
@@ -485,3 +514,6 @@ page-body
     
   #commands > a
     width: calc(100vw - var(--header-height) - 80px)
+    
+  #category-name
+    font-size: 2rem

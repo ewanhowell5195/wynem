@@ -163,6 +163,13 @@ export default class extends Page {
         )
       }
     } else {
+      if (path[index - 1]) content.append(E("div").attr("id", "category-name").text(path[index - 1]))
+      if (category.description) {
+        content.append(
+          E("div").attr("id", "category-description").append((Array.isArray(category.description) ? category.description : category.description.split("``````")).map(e => E("div").addClass("category-description").text(e))),
+          E("div").attr("id", "category-heading").text("Commands")
+        )
+      }
       if (category.commands) {
         const commandsContainer = E("div").attr("id", "commands").appendTo(content)
         for (const [command, info] of Object.entries(category.commands)) {
