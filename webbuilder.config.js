@@ -11,18 +11,24 @@ export default {
       const PageClass = (await import("./" + path.relative(".", f))).default
       if (PageClass.description) {
         const dir = path.relative("src/pages", path.dirname(f))
-        fs.mkdirSync(path.join("dist", dir), { recursive: true })
-        fs.writeFileSync(path.join("dist", dir, "index.html"), processPug(`extends /../includes/main.pug
+        writeIndex(dir, PageClass)
+      }
+    }
 
-block meta
-  -
-    meta = {
-      title: "${PageClass.title}",
-      description: "${PageClass.description}",
-      ${PageClass.image ? `image: "${PageClass.image}",` : ""}
-      ${PageClass.colour ? `colour: "${PageClass.colour}",` : ""}
-      ${PageClass.icon ? `icon: "${PageClass.icon}"` : ""}
-    }`))
+    const commands = JSON.parse(fs.readFileSync("src/assets/json/commands.json"))
+    const queue = [["commands", commands, "commands"]]
+    while (queue.length) {
+      const [dir, category, name] = queue.shift()
+      if (category.categories) queue.push(...Object.entries(category.categories).map(e => [`${dir}/${e[0]}`, e[1], e[0]]))
+      writeIndex(dir, {
+        title: `${name} - Commands - Ewan Howell`,
+        description: category.description ? (Array.isArray(category.description) ? category.description[0] : category.description.split("``````")[0]) : `View the commands in the ${name} category`
+      })
+      if (category.commands) for (const [name, command] of Object.entries(category.commands)) {
+        writeIndex(path.join(dir, name), {
+          title: `${name.includes("-") ? name.replace(/-/g, " ").toTitleCase() : name} - Commands - Ewan Howell`,
+          description: Array.isArray(command.description) ? command.description[0] : command.description.split("``````")[0]
+        })
       }
     }
 
@@ -42,6 +48,23 @@ globalThis.getFiles = async function*(dir) {
   }
 }
 
-globalThis.Page = class {
-  
+globalThis.Page = class {}
+
+String.prototype.toTitleCase = function() {
+  return this.replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.substring(1).toLowerCase()).trim()
+}
+
+function writeIndex(dir, args) {
+  fs.mkdirSync(path.join("dist", dir), { recursive: true })
+  fs.writeFileSync(path.join("dist", dir, "index.html"), processPug(`extends /../includes/main.pug
+
+block meta
+  -
+    meta = {
+      title: "${args.title}",
+      description: "${args.description.replace(/\n/g, " ").replace(/"/g, '\\"')}",
+      ${args.image ? `image: "${args.image}",` : ""}
+      ${args.colour ? `colour: "${args.colour}",` : ""}
+      ${args.icon ? `icon: "${args.icon}"` : ""}
+    }`))
 }
