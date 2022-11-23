@@ -46,7 +46,11 @@
                   }
                 },
                 "customcommands": {
-                  "description": "Custom commands are commands that you can configure do respond with whatever you want.``````You can use \"e!help custom\" to view all the custom commands``````Custom command types:\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an Image/Gif/Video in chat\nEmbed: Will send an embed",
+                  "description": [
+                    "Custom commands are commands that you can configure do respond with whatever you want.",
+                    "You can use \"e!help custom\" to view all the custom commands.",
+                    "Custom command types:\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an Image/Gif/Video in chat\nEmbed: Will send an embed"
+                  ],
                   "commands": {
                     "addcustomcommand": {
                       "aliases": [
@@ -231,7 +235,10 @@
               "commands": {
                 "prefix": {
                   "arguments": "[prefix]",
-                  "description": "Change the prefix for the bot in the current server.``````Set the prefix to \"default\", \"normal\", or \"reset\" to return it back to the default prefix.",
+                  "description": [
+                    "Change the prefix for the bot in the current server.",
+                    "Set the prefix to \"default\", \"normal\", or \"reset\" to return it back to the default prefix."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -381,7 +388,10 @@
                     "enablescam",
                     "disablescam"
                   ],
-                  "description": "Toggles whether the bot will scan messages in the server for nitro scams.``````When a scam is detected, the message is deleted, the member is put in timeout, and the server moderators are pinged.",
+                  "description": [
+                    "Toggles whether the bot will scan messages in the server for nitro scams.",
+                    "When a scam is detected, the message is deleted, the member is put in timeout, and the server moderators are pinged."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -427,7 +437,11 @@
                 "customcol"
               ],
               "arguments": "[colour]",
-              "description": "Change the bots embed colour on the current server.``````The embed colour is the coloured bar down the side of each message.``````Set the colour to \"default\" to return it to the default colour.",
+              "description": [
+                "Change the bots embed colour on the current server.",
+                "The embed colour is the coloured bar down the side of each message.",
+                "Set the colour to \"default\" to return it to the default colour."
+              ],
               "permissions": [
                 "Guild Only",
                 "Manage Guild"
@@ -443,7 +457,10 @@
             },
             "exportdata": {
               "arguments": "[type]",
-              "description": "Export the data that the bot has stored about you or the server.``````Types:\n- User\n- Server"
+              "description": [
+                "Export the data that the bot has stored about you or the server.",
+                "Types:\n- User\n- Server"
+              ]
             },
             "info": {
               "aliases": [
@@ -501,7 +518,10 @@
                 "resetbot"
               ],
               "cooldown": 60,
-              "description": "Reset the bot to its default state on this server as well as clearing any files related to this server.``````WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data.",
+              "description": [
+                "Reset the bot to its default state on this server as well as clearing any files related to this server.",
+                "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data."
+              ],
               "permissions": [
                 "Guild Only",
                 "Administrator"
@@ -556,7 +576,10 @@
                     "noughtscrosses"
                   ],
                   "arguments": "[difficulty]/<member>",
-                  "description": "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.``````Difficulties:\n\neasy\nmedium\nhard\nexpert"
+                  "description": [
+                    "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
+                    "Difficulties:\n\neasy\nmedium\nhard\nexpert"
+                  ]
                 }
               }
             }
@@ -675,7 +698,11 @@
           }
         },
         "images": {
-          "description": "These commands take many types of image inputs. ``````Valid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker``````Leave it blank to target an image/url/emoji/sticker from a previous message in the channel. You can reply to a message to target an image in that message.",
+          "description": [
+            "These commands take many types of image inputs.",
+            "Valid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
+            "Leave it blank to target an image/url/emoji/sticker from a previous message in the channel. You can reply to a message to target an image in that message."
+          ],
           "categories": {
             "animation": {
               "commands": {
@@ -783,7 +810,10 @@
                     "colorspace"
                   ],
                   "arguments": "[mode] {image}",
-                  "description": "Convert an image to a different colour mode.``````Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
+                  "description": [
+                    "Convert an image to a different colour mode.",
+                    "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
+                  ]
                 },
                 "copypalette": {
                   "aliases": [
@@ -886,7 +916,12 @@
                     "birthday": {
                       "arguments": "<member> <member> <member> <member> <member>",
                       "cooldown": 3,
-                      "description": "Throw a birthday party for someone!``````If members are not specified, random members from the server will be picked.``````The birthday member will always be Wynem on \"26/7\".``````Custom birthday members can be set by specifying a 5th member. If no 5th member is provided, you will be the birthday person."
+                      "description": [
+                        "Throw a birthday party for someone!",
+                        "If members are not specified, random members from the server will be picked.",
+                        "The birthday member will always be Wynem on \"26/7\".",
+                        "Custom birthday members can be set by specifying a 5th member. If no 5th member is provided, you will be the birthday person."
+                      ]
                     },
                     "bonk": {
                       "arguments": "<member> [text]",
@@ -1001,7 +1036,10 @@
                       ],
                       "arguments": "[text]/{image} [text]/{image}",
                       "cooldown": 3,
-                      "description": "Put images/text into a heart shaped locket.``````If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+                      "description": [
+                        "Put images/text into a heart shaped locket.",
+                        "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+                      ]
                     },
                     "salute": {
                       "aliases": [
@@ -1137,7 +1175,10 @@
                     },
                     "makeup": {
                       "arguments": "[lipsCol] [outerEyeCol] [innerEyeCol] {image}",
-                      "description": "Apply makeup to someones face!``````Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
+                      "description": [
+                        "Apply makeup to someone's face!",
+                        "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
+                      ]
                     },
                     "steveface": {
                       "aliases": [
@@ -1260,7 +1301,10 @@
                       ],
                       "arguments": "[text] {image}",
                       "cooldown": 5,
-                      "description": "Add Peter Griffin to an image.``````Use \"peter2\" to put him on the opposite side."
+                      "description": [
+                        "Add Peter Griffin to an image.",
+                        "Use \"peter2\" to put him on the opposite side."
+                      ]
                     },
                     "sneak": {
                       "aliases": [
@@ -1283,7 +1327,10 @@
                       ],
                       "arguments": "[text] {image}",
                       "cooldown": 5,
-                      "description": "Add Robert Downey Jr. to an image.``````Use \"stuff2\" to put him on the opposite side."
+                      "description": [
+                        "Add Robert Downey Jr. to an image.",
+                        "Use \"stuff2\" to put him on the opposite side."
+                      ]
                     },
                     "toptext": {
                       "aliases": [
@@ -1323,7 +1370,10 @@
                 "blockify": {
                   "arguments": "[mode] {image}",
                   "cooldown": 3,
-                  "description": "Turn an image into Minecraft block art!``````Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+                  "description": [
+                    "Turn an image into Minecraft block art!",
+                    "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+                  ]
                 },
                 "blurplify": {
                   "aliases": [
@@ -1369,7 +1419,10 @@
                     "secretimage"
                   ],
                   "arguments": "[mode] {image}",
-                  "description": "Hide an image in plain sight.``````Colour modes:\n- dark\n- light"
+                  "description": [
+                    "Hide an image in plain sight.",
+                    "Colour modes:\n- dark\n- light"
+                  ]
                 },
                 "impostor": {
                   "aliases": [
@@ -1381,7 +1434,10 @@
                     "mposter"
                   ],
                   "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
-                  "description": "Create a custom Among Us character!``````The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
+                  "description": [
+                    "Create a custom Among Us character!",
+                    "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
+                  ]
                 },
                 "jpegify": {
                   "aliases": [
@@ -1426,7 +1482,10 @@
                 },
                 "wynem": {
                   "arguments": "[vCol] [hCol] [bgCol] [sCol] {image}",
-                  "description": "Create a custom Wynem logo!``````vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
+                  "description": [
+                    "Create a custom Wynem logo!",
+                    "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
+                  ]
                 },
                 "yeet": {
                   "arguments": "<member> <member>",
@@ -1460,11 +1519,18 @@
                     "border"
                   ],
                   "arguments": "[size] [direction] [colour] {image}",
-                  "description": "Add padding to the sides of an image.``````Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+                  "description": [
+                    "Add padding to the sides of an image.",
+                    "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+                  ]
                 },
                 "resize": {
                   "arguments": "[width] [height] [mode] {image}",
-                  "description": "Resize an image to a desired size. Interpolation modes only work on static images.``````Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
+                  "description": [
+                    "Resize an image to a desired size.",
+                    "Interpolation modes only work on static images.",
+                    "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
+                  ]
                 },
                 "rotate": {
                   "aliases": [
@@ -1555,7 +1621,10 @@
                 "prepend"
               ],
               "arguments": "[direction] [scaling] {image} {image}",
-              "description": "Append one image onto another image. Scaling is a boolean that will resize the appended image to be the same size.``````Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+              "description": [
+                "Append one image onto another image. Scaling is a boolean that will resize the appended image to be the same size.",
+                "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+              ]
             },
             "averagecolour": {
               "aliases": [
@@ -1619,7 +1688,10 @@
                 "comp"
               ],
               "arguments": "{image} {image}",
-              "description": "Compare two images, to see the differences between them.``````Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+              "description": [
+                "Compare two images, to see the differences between them.",
+                "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+              ]
             },
             "imagesize": {
               "aliases": [
@@ -1846,7 +1918,10 @@
                   ],
                   "arguments": "[format] [username]",
                   "cooldown": 5,
-                  "description": "Render a minecraft skin in 3D.``````Formats:\n\n- player\n- round\n- spin\n- flop\n- back\n- wave\n- squish\n- head"
+                  "description": [
+                    "Render a minecraft skin in 3D.",
+                    "Formats:\n\n- player\n- round\n- spin\n- flop\n- back\n- wave\n- squish\n- head"
+                  ]
                 },
                 "skin": {
                   "aliases": [
@@ -1994,7 +2069,11 @@
                 "note"
               ],
               "arguments": "{member} [reason]",
-              "description": "Add a note to a member.``````Members cannot see their notes.``````The note is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+              "description": [
+                "Add a note to a member.",
+                "Members cannot see their notes.",
+                "The note is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+              ],
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
@@ -2002,7 +2081,10 @@
             },
             "ban": {
               "arguments": "<member> [reason]",
-              "description": "Ban a user from the server.``````The user is sent a message saying they were banned, along with the reason.",
+              "description": [
+                "Ban a user from the server.",
+                "The user is sent a message saying they were banned, along with the reason."
+              ],
               "permissions": [
                 "Guild Only",
                 "Ban Members"
@@ -2029,7 +2111,10 @@
             },
             "kick": {
               "arguments": "<member> [reason]",
-              "description": "Kick a member from the server.``````The member is sent a message saying they were kicked, along with the reason.",
+              "description": [
+                "Kick a member from the server.",
+                "The member is sent a message saying they were kicked, along with the reason."
+              ],
               "permissions": [
                 "Guild Only",
                 "Kick Members"
@@ -2045,7 +2130,12 @@
                 "delete"
               ],
               "arguments": "[limit] <member>",
-              "description": "Bulk delete messages from a channel.``````Defaults to 5, maximum 99.``````Mention a user to delete only their messages.``````This cannot delete messages that are over two weeks old.",
+              "description": [
+                "Bulk delete messages from a channel.",
+                "Defaults to 5, maximum 99.",
+                "Mention a user to delete only their messages.",
+                "This cannot delete messages that are over two weeks old."
+              ],
               "permissions": [
                 "Guild Only",
                 "Manage Messages"
@@ -2081,7 +2171,12 @@
                 "mute"
               ],
               "arguments": "{member} [duration] [reason]",
-              "description": "Give a member a time out so that they cannot type or speak.``````Defaults to 10 minutes.``````The member is sent a message saying they were timed out, along with the reason.``````The time out is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+              "description": [
+                "Give a member a time out so that they cannot type or speak.",
+                "Defaults to 10 minutes.",
+                "The member is sent a message saying they were timed out, along with the reason.",
+                "The time out is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+              ],
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
@@ -2106,7 +2201,11 @@
                 "warning"
               ],
               "arguments": "{member} [reason]",
-              "description": "Give a member a warning.``````The member is sent a message saying they were warned, along with the reason.``````The warning is stored as a record and can be viewed at any time. There is a maximum of 50 records per member.",
+              "description": [
+                "Give a member a warning.",
+                "The member is sent a message saying they were warned, along with the reason.",
+                "The warning is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+              ],
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
@@ -2185,7 +2284,11 @@
                     "e"
                   ],
                   "arguments": "<emoji> [type/resolution]",
-                  "description": "Get the image of an emoji. The type or resolution is optional. Not every type has every emoji.``````Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
+                  "description": [
+                    "Get the image of an emoji.",
+                    "The type or resolution is optional. Not every type has every emoji.",
+                    "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
+                  ]
                 },
                 "removeemoji": {
                   "aliases": [
@@ -2416,7 +2519,10 @@
                     "addlog"
                   ],
                   "arguments": "[category] <channel>",
-                  "description": "Set the channels for the server logs to be sent to.``````Available categories:\n\n- all\n- automod\n- members\n- messages\n- moderation\n- server\n- voice",
+                  "description": [
+                    "Set the channels for the server logs to be sent to.",
+                    "Available categories:\n\n- all\n- automod\n- members\n- messages\n- moderation\n- server\n- voice"
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
@@ -2460,7 +2566,11 @@
                     "reactrole",
                     "rr"
                   ],
-                  "description": "Run a builder that sets up a message that members can use to to add roles to themselves.``````For the role text, provide \"none\" to leave it blank.``````Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time",
+                  "description": [
+                    "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                    "For the role text, provide \"none\" to leave it blank.",
+                    "Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Roles"
@@ -2481,7 +2591,10 @@
                     "viewjoinrole"
                   ],
                   "arguments": "<role>",
-                  "description": "Add or remove a role that users will gain when joining the server.``````Provide no arguments to view the current join roles.",
+                  "description": [
+                    "Add or remove a role that users will gain when joining the server.",
+                    "Provide no arguments to view the current join roles."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -2618,7 +2731,10 @@
                     "sb"
                   ],
                   "arguments": "<channel> [count] [emoji]",
-                  "description": "Set a channel to use as a starboard for the server.``````A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.",
+                  "description": [
+                    "Set a channel to use as a starboard for the server.",
+                    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
@@ -2638,7 +2754,10 @@
                     "sbshow",
                     "sbinfo"
                   ],
-                  "description": "Set a channel to use as a starboard for the server.``````A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
+                  "description": [
+                    "Set a channel to use as a starboard for the server.",
+                    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
+                  ]
                 }
               }
             },
@@ -2748,7 +2867,12 @@
                 "membercounter"
               ],
               "arguments": "<channel> [text]",
-              "description": "Set a channel to display the current number of members in the server.``````Any channel type can be used except for Threads.``````Use <count> in the text to incicate where the count should go.``````Example:`e!setmembercounter #channelname Member Count: <count>",
+              "description": [
+                "Set a channel to display the current number of members in the server.",
+                "Any channel type can be used except for Threads.",
+                "Use <count> in the text to incicate where the count should go.",
+                "Example:`e!setmembercounter #channelname Member Count: <count>"
+              ],
               "permissions": [
                 "Guild Only",
                 "Manage Channels"
@@ -2869,7 +2993,10 @@
                 "rgb"
               ],
               "arguments": "[colour]",
-              "description": "Preview a colour. This also converts it to a variety of different colour formats.``````Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+              "description": [
+                "Preview a colour. This also converts it to a variety of different colour formats.",
+                "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+              ]
             },
             "createembed": {
               "aliases": [
@@ -3018,7 +3145,10 @@
                     "autotts"
                   ],
                   "arguments": "<channel>",
-                  "description": "Set a channel where messages to be automatically read out loud in a voice channel.``````Messages will not be read for users who not in the voice channel, or if the message starts with a URL.",
+                  "description": [
+                    "Set a channel where messages to be automatically read out loud in a voice channel.",
+                    "Messages will not be read for users who not in the voice channel, or if the message starts with a URL."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
@@ -3083,7 +3213,10 @@
                 "games"
               ],
               "arguments": "[type]",
-              "description": "Start an activity in the current voice channel.``````Activity types:\n\nbetrayal\ncheckers\nchess\nfishington\nletterleague\nocho\npokernight\nsketchheads\nspellcast\nwordsnacks\nyoutube",
+              "description": [
+                "Start an activity in the current voice channel.",
+                "Activity types:\n\nbetrayal\ncheckers\nchess\nfishington\nletterleague\nocho\npokernight\nsketchheads\nspellcast\nwordsnacks\nyoutube"
+              ],
               "permissions": [
                 "Guild Only"
               ],
@@ -3562,7 +3695,10 @@
                   "description": "Run a builder that sets up a message that members can use to to add roles to themselves."
                 },
                 "joinrole": {
-                  "description": "Add or remove a role that users will gain when joining the server.``````Provide no arguments to view the current join roles.",
+                  "description": [
+                    "Add or remove a role that users will gain when joining the server.",
+                    "Provide no arguments to view the current join roles."
+                  ],
                   "options": [
                     {
                       "name": "role",
@@ -3917,7 +4053,7 @@
               "type": "message"
             },
             "resize-image": {
-              "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
+              "description": "Resize an image to a desired size.",
               "options": [
                 {
                   "name": "Width",

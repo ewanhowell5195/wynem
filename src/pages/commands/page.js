@@ -108,7 +108,7 @@ export default class extends Page {
         ),
         E("div").addClass("title").text(path[0] === "context" ? command.name.replace(/-/g, " ").toTitleCase() : command.name)
       ).appendTo(content)
-      for (const section of (Array.isArray(command.description) ? command.description : command.description.split("``````"))) commandInfo.append(
+      for (const section of (Array.isArray(command.description) ? command.description : [command.description])) commandInfo.append(
         E("div").addClass("description").text(section)
       )
       if (path[0] === "prefix") commandInfo.append(
@@ -166,7 +166,7 @@ export default class extends Page {
       if (path[index - 1]) content.append(E("div").attr("id", "category-name").text(path[index - 1]))
       if (category.description) {
         content.append(
-          E("div").attr("id", "category-description").append((Array.isArray(category.description) ? category.description : category.description.split("``````")).map(e => E("div").addClass("category-description").text(e))),
+          E("div").attr("id", "category-description").append((Array.isArray(category.description) ? category.description : [category.description]).map(e => E("div").addClass("category-description").text(e))),
           E("div").attr("id", "category-heading").text("Commands")
         )
       }
@@ -178,7 +178,7 @@ export default class extends Page {
               href: `${pathStr}${command}`
             }).append(
               E("div").addClass("command-name").text(path[0] === "context" ? command.replace(/-/g, " ").toTitleCase() : command),
-              E("div").addClass("command-description").text(Array.isArray(info.description) ? info.description[0] : info.description.split("``````")[0])
+              E("div").addClass("command-description").text(Array.isArray(info.description) ? info.description[0] : info.description)
             )
           )
         }
