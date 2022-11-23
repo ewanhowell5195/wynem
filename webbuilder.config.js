@@ -21,12 +21,12 @@ export default {
       const [dir, category, name] = queue.shift()
       if (category.categories) queue.push(...Object.entries(category.categories).map(e => [`${dir}/${e[0]}`, e[1], e[0]]))
       writeIndex(dir, {
-        title: `${name.toTitleCase()} - Commands - Ewan Howell`,
+        title: `${name.toTitleCase()} - Commands - Wynem`,
         description: category.description ? (Array.isArray(category.description) ? category.description[0] : category.description.split("``````")[0]) : `View the commands in the ${name.toTitleCase()} category`
       })
       if (category.commands) for (const [name, command] of Object.entries(category.commands)) {
         writeIndex(path.join(dir, name), {
-          title: `${name.includes("-") ? name.replace(/-/g, " ").toTitleCase() : name} - Commands - Ewan Howell`,
+          title: `${name.includes("-") ? name.replace(/-/g, " ").toTitleCase() : name} - Commands - Wynem`,
           description: Array.isArray(command.description) ? command.description[0] : command.description.split("``````")[0]
         })
       }
