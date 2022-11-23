@@ -1,0 +1,27 @@
+.container
+  max-width: var(--content-width)
+  margin: 0 auto
+  min-height: calc(100% - var(--header-height))
+  flex: 1
+  padding: 0 100px 100px
+
+.title
+  font-size: 3rem
+  margin: 100px 0
+  text-shadow: -4px 4px 1px var(--color-text-shadow)
+
+h1, h3
+  text-shadow: var(--text-shadow)
+
+p
+  margin-left: 20px
+
+a
+  color: var(--color-link-blue)
+
+@media only screen and (max-width: 768px)
+  .container
+    padding: 20px
+    
+  .title
+    margin: 20px 0 40px

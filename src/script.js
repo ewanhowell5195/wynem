@@ -116,7 +116,9 @@ const routes = [
   pageRoute("home", "/"),
   pageRoute("features"),
   pageRoute("commands", /\/commands(\/(?<path>.+))?/),
-  pageRoute("colours")
+  pageRoute("colours"),
+  pageRoute("privacy"),
+  pageRoute("terms")
 ]
 
 let pageLoadPromise = Promise.resolve()
