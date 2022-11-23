@@ -1341,7 +1341,10 @@
                     "lightdark"
                   ],
                   "arguments": "{image} {image}",
-                  "description": "Turn two images into one images, where it shows a different one depending on if you are using dark mode or light mode. The first image will be visible while in dark mode, the second while in light mode."
+                  "description": [
+                    "Turn two images into one image, where it shows a different one depending on if you are using dark mode or light mode",
+                    "The first image will be visible while in dark mode, the second while in light mode."
+                  ]
                 },
                 "dumpy": {
                   "aliases": [
