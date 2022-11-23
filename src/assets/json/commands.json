@@ -3816,7 +3816,6 @@
           ],
           "permissions": [
             "Guild Only",
-            "Guild Only",
             "Ban Members"
           ],
           "botPermissions": [
@@ -3886,7 +3885,6 @@
           ],
           "permissions": [
             "Guild Only",
-            "Guild Only",
             "Kick Members"
           ],
           "botPermissions": [
@@ -3916,7 +3914,6 @@
           ],
           "permissions": [
             "Guild Only",
-            "Guild Only",
             "Manage Messages"
           ],
           "botPermissions": [
@@ -3942,7 +3939,6 @@
           ],
           "permissions": [
             "Guild Only",
-            "Guild Only",
             "Moderate Members"
           ],
           "botPermissions": [
@@ -3963,7 +3959,6 @@
             }
           ],
           "permissions": [
-            "Guild Only",
             "Guild Only",
             "Ban Members"
           ],
@@ -3986,7 +3981,6 @@
           ],
           "permissions": [
             "Guild Only",
-            "Guild Only",
             "Moderate Members"
           ]
         }
@@ -4004,7 +3998,6 @@
               "description": "Ban a user from the server.",
               "permissions": [
                 "Guild Only",
-                "Guild Only",
                 "Ban Members"
               ],
               "botPermissions": [
@@ -4021,7 +4014,6 @@
             "kick-member": {
               "description": "Kick a member from the server.",
               "permissions": [
-                "Guild Only",
                 "Guild Only",
                 "Kick Members"
               ],
