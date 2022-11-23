@@ -183,7 +183,7 @@
                   ],
                   "description": "Toggle allowing commands to not need a prefix when used in direct messages.",
                   "permissions": [
-                    "D M Only"
+                    "Direct Messages Only"
                   ]
                 },
                 "stats": {
