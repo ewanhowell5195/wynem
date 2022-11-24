@@ -9,7 +9,10 @@
     ],
     "pugLocals": {
       "domain": "beta.wynem.com"
-    }
+    },
+    "stylusPaths": [
+      "includes/stylus"
+    ]
   },
   "dependencies": {
     "webbuilder": "github:EvenTorset/WebBuilder"

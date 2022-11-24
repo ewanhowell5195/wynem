@@ -118,7 +118,9 @@ const routes = [
   pageRoute("commands", /\/commands(\/(?<path>.+))?/),
   pageRoute("colours"),
   pageRoute("privacy"),
-  pageRoute("terms")
+  pageRoute("terms"),
+  pageRoute("cem"),
+  pageRoute("cemanimation")
 ]
 
 function compareURLs(a, b) {

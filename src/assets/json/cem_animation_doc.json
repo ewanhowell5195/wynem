@@ -1,0 +1,811 @@
+{
+  "version": "1.2.1",
+  "optifineVersion": "1.19.2 HD U I1 pre2",
+  "tabs": [
+    {
+      "name": "Structure",
+      "elements": [
+        {
+          "type": "heading",
+          "text": "Formatting"
+        },
+        {
+          "type": "text",
+          "text": "CEM Animations use four different data types:"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "arrays",
+              "The outermost part of the animations is an array/list. An array is formatted as two square brackets <code>[]</code>, with commas <code>,</code> separating each item in the list."
+            ],
+            [
+              "objects",
+              "Inside the array you will find objects. An object is formatted as two braces <code>{}</code>, which contain a list of key-value pairs inside of them, with commas <code>,</code> separating each key-value pair."
+            ],
+            [
+              "keys",
+              "The keys of objects are made using strings. A string is formatted as two quotation marks <code>\"\"</code>, with some text in-between. After the key there will be a colon <code>:</code>."
+            ],
+            [
+              "values",
+              "The value that comes after the key may be a string or a number."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "text": "This is an example of the formatting used for animations."
+        },
+        {
+          "type": "code",
+          "text": "[\n  {\n    \"key\": \"value\",\n    \"key2\": \"value2\"\n  },\n  {\n    \"key\": \"value\",\n    \"key2\": \"value2\"\n  }\n]"
+        },
+        {
+          "type": "heading",
+          "text": "Animation keys"
+        },
+        {
+          "type": "text",
+          "text": "Animation keys are made from a <strong>group variable</strong>, followed by a dot <code>.</code> and a <strong>variable name</strong>. You can find a full list of the group variables and names in the <span class=\"cem_doc_tab_link\">Documentation</span> tab.\n\nHere is an example of an animation key:"
+        },
+        {
+          "type": "code",
+          "text": "\"body.rx\":"
+        },
+        {
+          "type": "heading",
+          "text": "Animation values"
+        },
+        {
+          "type": "text",
+          "text": "Animation values, also known as expressions, are made using the <strong>constants</strong>, <strong>variables</strong>, <strong>parameters</strong>, <strong>operators</strong>, and <strong>functions</strong> from the <span class=\"cem_doc_tab_link\">Documentation</span> tab. These are combined to create animation expressions, that define how the group should animate. You can see some examples for how this works in the <span class=\"cem_doc_tab_link\">Examples</span> tab."
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "elements": [
+        {
+          "type": "heading",
+          "text": "group variables"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "this",
+              "The current custom group."
+            ],
+            [
+              "part",
+              "The vanilla group which the custom group is attached to in game."
+            ],
+            [
+              "&lt;group&gt;",
+              "The name of the group. The groups are the folders containing the elements/cubes."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Variable names"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "<span style=\"color:var(--color-axis-x)\">tx</span>",
+              "Translation along the x axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">ty</span>",
+              "Translation along the y axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">tz</span>",
+              "Translation along the z axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">rx</span>",
+              "Rotation around the x axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">ry</span>",
+              "Rotation around the y axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">rz</span>",
+              "Rotation around the z axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">sx</span>",
+              "Scale along the x axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">sy</span>",
+              "Scale along the y axis."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">sz</span>",
+              "Scale along the z axis."
+            ],
+            [
+              "visible",
+              "Show/hide the current group and all its subgroups."
+            ],
+            [
+              "visible_boxes",
+              "Show/hide only current group. Does not affect its subgroups."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Entity variables"
+        },
+        {
+          "type": "text",
+          "text": "Entity variables are a way of storing data between frames. You can then use the variable inside other animations."
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "var.&lt;name&gt;",
+              "Store a value in a named variable"
+            ],
+            [
+              "varb.&lt;name&gt;",
+              "Store a boolean in a named variable"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Render variables"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "render.shadow_size",
+              "The size of the shadow underneath an entity."
+            ],
+            [
+              "render.shadow_opacity",
+              "How transparent the shadow is"
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">render.shadow_offset_x</span>",
+              "An x offset for the shadow location."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">render.shadow_offset_z</span>",
+              "A z offset for the shadow location."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">render.leash_offset_x</span>",
+              "An x offset for the leash attachment location."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">render.leash_offset_y</span>",
+              "A y offset for the leash attachment location."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">render.leash_offset_z</span>",
+              "A z offset for the leash attachment location."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Constants"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "&lt;number&gt;",
+              "A number. Decimal places are allowed."
+            ],
+            [
+              "pi",
+              "3.1415926"
+            ],
+            [
+              "true",
+              "true"
+            ],
+            [
+              "false",
+              "false"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Variables"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "&lt;group&gt;.&lt;name&gt;",
+              "A group variable and a variable name."
+            ],
+            [
+              "time",
+              "The current world time in ticks."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Render parameters"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "limb_swing",
+              "Counts up in ticks when the entity moves."
+            ],
+            [
+              "limb_speed",
+              "The current speed of the entity’s limbs. Ranges from 0 to 1 (still = 0, sprinting = 1)."
+            ],
+            [
+              "age",
+              "How long the entity has existed in the world in ticks (unrelated to the <strong>Age</strong> NBT tag)."
+            ],
+            [
+              "head_pitch",
+              "The entity's head’s x rotation."
+            ],
+            [
+              "head_yaw",
+              "The entity's head’s y rotation."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">player_pos_x</span>",
+              "The players's current x coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">player_pos_y</span>",
+              "The players's current y coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">player_pos_z</span>",
+              "The players's current z coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">player_rot_x</span>",
+              "The player's current x rotation."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">player_rot_y</span>",
+              "The player's current y rotation."
+            ],
+            [
+              "frame_time",
+              "The time in seconds since the last frame."
+            ],
+            [
+              "dimension",
+              "The current dimension. Overworld: 0, Nether: -1, End: 1."
+            ],
+            [
+              "rule_index",
+              "The current index of the the first matching rule from the properties file. Defaults to 0."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Entity parameters (float)"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "health",
+              "The entity's current health."
+            ],
+            [
+              "hurt_time",
+              "The time the entity is hurt for. Counts down from 10 to 0."
+            ],
+            [
+              "death_time",
+              "The time the entity is dead. Counts up from 0 to 20."
+            ],
+            [
+              "anger_time",
+              "The time the entity is angry. 0 while neutral, 720 while agressive, and then counts down to 0 when the target is lost."
+            ],
+            [
+              "max_health",
+              "The entity's maximum health."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">pos_x</span>",
+              "The entity's current x coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">pos_y</span>",
+              "The entity's current y coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-z)\">pos_z</span>",
+              "The entity's current z coordinate."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-x)\">rot_x</span>",
+              "The entity's current x rotation."
+            ],
+            [
+              "<span style=\"color:var(--color-axis-y)\">rot_y</span>",
+              "The entity's current y rotation."
+            ],
+            [
+              "swing_progress",
+              "How far through an attack the entity is. Counts up from 0 to 1."
+            ],
+            [
+              "id",
+              "A unique numeric identifier for the entity."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Entity parameters (boolean)"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "is_aggressive",
+              "If the entity is aggressive towards a player or another entity."
+            ],
+            [
+              "is_alive",
+              "If the entity is alive."
+            ],
+            [
+              "is_burning",
+              "If the entity is on fire."
+            ],
+            [
+              "is_child",
+              "If the entity is in its baby state."
+            ],
+            [
+              "is_glowing",
+              "If the entity has the <strong>Glowing</strong> effect."
+            ],
+            [
+              "is_hurt",
+              "If the entity is taking damage."
+            ],
+            [
+              "is_in_hand",
+              "If the entity is being held in your hand."
+            ],
+            [
+              "is_in_item_frame",
+              "If the entity is in an item frame."
+            ],
+            [
+              "is_in_ground",
+              "If a trident is impaled in the ground."
+            ],
+            [
+              "is_in_gui",
+              "If the entity is inside the GUI."
+            ],
+            [
+              "is_in_lava",
+              "If the entity is touching lava."
+            ],
+            [
+              "is_in_water",
+              "If the entity is touching water."
+            ],
+            [
+              "is_invisible",
+              "If the entity has the <strong>Invisibility</strong> effect/NBT tag."
+            ],
+            [
+              "is_on_ground",
+              "If the entity is touching the ground."
+            ],
+            [
+              "is_on_head",
+              "If the entity is worn on another entity's head."
+            ],
+            [
+              "is_on_shoulder",
+              "If a parrot is sitting on your shoulder."
+            ],
+            [
+              "is_ridden",
+              "If the entity is being ridden by another entity."
+            ],
+            [
+              "is_riding",
+              "If the entity is riding another entity."
+            ],
+            [
+              "is_sitting",
+              "If a cat/wolf/parrot is sitting."
+            ],
+            [
+              "is_sneaking",
+              "If a cat/ocelot is sneaking."
+            ],
+            [
+              "is_sprinting",
+              "If a cat/ocelot is sprinting."
+            ],
+            [
+              "is_tamed",
+              "If a cat/wolf/parrot is tamed."
+            ],
+            [
+              "is_wet",
+              "If the entity is inside water/rain."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Operators"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "+",
+              "Add two numbers together."
+            ],
+            [
+              "-",
+              "Subtract one number from another."
+            ],
+            [
+              "*",
+              "Multiply two numbers together."
+            ],
+            [
+              "/",
+              "Divide one number by another number."
+            ],
+            [
+              "%",
+              "Divide one number by another number, returning the remainder."
+            ],
+            [
+              "!",
+              "Negate a boolean. Turns true to false and false to true."
+            ],
+            [
+              "&&",
+              "Logical AND. True if the statement before and after is true."
+            ],
+            [
+              "||",
+              "Logical OR. True if the statement before or after is true."
+            ],
+            [
+              "&gt;",
+              "Check if a number is bigger than another number."
+            ],
+            [
+              "&gt;=",
+              "Check if a number is bigger than or equal to another number."
+            ],
+            [
+              "&lt;",
+              "Check if a number is smaller than another number."
+            ],
+            [
+              "&lt;=",
+              "Check if a number is smaller than or equal to another number."
+            ],
+            [
+              "==",
+              "Check if something is equal to something else."
+            ],
+            [
+              "!=",
+              "Check if something is not equal to something else."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Functions"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "sin(x)",
+              "Get the sine of x."
+            ],
+            [
+              "cos(x)",
+              "Get the cosine of x."
+            ],
+            [
+              "asin(x)",
+              "Get the arc sine of x."
+            ],
+            [
+              "acos(x)",
+              "Get the arc cosine of x."
+            ],
+            [
+              "tan(x)",
+              "Get the tangent of x."
+            ],
+            [
+              "atan(x)",
+              "Get the arc tangent of x."
+            ],
+            [
+              "atan2(y, x)",
+              "Get the angle between the positive X-axis and the point (x, y)."
+            ],
+            [
+              "torad(deg)",
+              "Convert degrees to radians."
+            ],
+            [
+              "todeg(rad)",
+              "Convert radians to degrees."
+            ],
+            [
+              "min(x, y, …)",
+              "Get the smallest number from a list of numbers."
+            ],
+            [
+              "max(x, y, …)",
+              "Get the largest number from a list of numbers."
+            ],
+            [
+              "clamp(x, min, max)",
+              "Limits a number to be between min and max values."
+            ],
+            [
+              "abs(x)",
+              "Get the absolute value of a number. Will turn negative numbers positive."
+            ],
+            [
+              "floor(x)",
+              "Round x down to the nearest whole number."
+            ],
+            [
+              "ceil(x)",
+              "Round x up to the nearest whole number."
+            ],
+            [
+              "exp(x)",
+              "Get e (Euler's constant) raised to the power of x."
+            ],
+            [
+              "frac(x)",
+              "Get the fractional part of x (what's behind the decimal point)."
+            ],
+            [
+              "log(x)",
+              "Get the natural logarithm of x."
+            ],
+            [
+              "pow(x, y)",
+              "Get x raised to the power of y."
+            ],
+            [
+              "random(seed)",
+              "Random number from 0 to 1. Providing a seed will always return the same result. The seed is optional."
+            ],
+            [
+              "round(x)",
+              "Round x to nearest whole number."
+            ],
+            [
+              "signum(x)",
+              "Get the sign of x (positive or negative)."
+            ],
+            [
+              "sqrt(x)",
+              "Get the square root of x."
+            ],
+            [
+              "fmod(x, y)",
+              "Similar to the % operator, but the returned value always has the same sign as the divisor. Equivalent to <code>x - y * floor(x / y)</code>."
+            ],
+            [
+              "lerp(t, x, y)",
+              "Linear interpolation between x and y, controlled by the value t."
+            ],
+            [
+              "if(c, v, [c2, v2, …,] v_else)",
+              "Select a value based on one or more conditions. Explained in more detail in the <span class=\"cem_doc_tab_link\">Examples</span> tab"
+            ],
+            [
+              "print(id, n, x)",
+              "Prints the value \"x\" every N-th frame. In blockbench, the console can be accessed <span class=\"cem_doc_display_desktop\">from <strong>Help > Developer > Open Dev Tools</strong>, or with the keyboard shortcut <strong>ctrl + shift + i</strong></span><span class=\"cem_doc_display_web\">by pressing <strong>F12</strong></span>. In Minecraft the prints are sent to the output log, which can be enabled in the launcher settigns. The function returns the value that you give it."
+            ],
+            [
+              "printb(id, n, x)",
+              "Prints the boolean value \"x\" every N-th frame."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Boolean functions"
+        },
+        {
+          "type": "table",
+          "tableType": "list",
+          "rows": [
+            [
+              "between(x, min, max)",
+              "Check if x is between min and max values."
+            ],
+            [
+              "equals(x, y, epsilon)",
+              "Compare x and y with an error margin."
+            ],
+            [
+              "in(x, val1, val2, …)",
+              "Check if x equals one of several values."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Examples",
+      "elements": [
+        {
+          "type": "heading",
+          "text": "Walking animations"
+        },
+        {
+          "type": "text",
+          "text": "This is an animation that creates a leg swinging animation for an entity. In this example, <code>x</code> is a multipler to control how fast the leg swings back and forth, and <code>y</code> is a multiplier to control how far it swings back and forth."
+        },
+        {
+          "type": "code",
+          "text": "\"left_leg.rx\": \"sin(limb_swing*x)*limb_speed*y\""
+        },
+        {
+          "type": "heading",
+          "text": "If statements"
+        },
+        {
+          "type": "text",
+          "text": "If statements are great for when you want certain animations to occur under specific conditions. In this example, the leg will rotate by 45 degrees when the entity is not on the ground, making it look like it is jumping/falling, otherwise it will just stay at 0 rotation."
+        },
+        {
+          "type": "code",
+          "text": "\"left_leg.rx\": \"if(!is_on_ground, torad(45), 0)\""
+        },
+        {
+          "type": "text",
+          "text": "In this example, the body will tilt forwards once the entity hits a certain movement speed."
+        },
+        {
+          "type": "code",
+          "text": "\"body.rx\": \"if(limb_speed > 0.7, torad(20), 0)\""
+        },
+        {
+          "type": "text",
+          "text": "An if statement can contain multiple different conditions and outputs, similar to an \"if, else if, else\" chain. When you use multiple conditions, the if statement follows the formatting <code>if(condition1, valueIfTrue, condition2, valueIfTrue, condition3, valueIfTrue, valueIfElse)</code>. There is no limit to the number of conditions you can use in one if statement. In this example, the arm will stay still normally, swing back and forth gently when in water, and swing back and forth aggressively when in lava. The conditions that come first take priority."
+        },
+        {
+          "type": "code",
+          "text": "\"left_arm.rx\": \"if(is_in_lava, sin(age), is_in_water, sin(age / 4), 0)\""
+        },
+        {
+          "type": "heading",
+          "text": "Referencing animations"
+        },
+        {
+          "type": "text",
+          "text": "When you are creating a model, you may want to reference animations from another part. The referenced animations work with both the built-in vanilla animations, and your custom animations.\n\nLets say you have a model setup in the same structure as the image below:"
+        },
+        {
+          "type": "image",
+          "url": "https://media.discordapp.net/attachments/698979190942466148/971471802834509934/unknown.png"
+        },
+        {
+          "type": "text",
+          "text": "If you want to make the \"2\" groups copy the built-in vanilla animations of the main groups, this is how you would do that:"
+        },
+        {
+          "type": "code",
+          "text": "{\n  \"head2.rx\": \"head.rx\",\n  \"head2.ry\": \"head.ry\",\n  \"head2.rz\": \"head.rz\",\n  \"left_arm2.rx\": \"left_arm.rx\",\n  \"right_arm2.rx\": \"right_arm.rx\",\n  \"left_leg2.rx\": \"left_leg.rx\",\n  \"right_leg2.rx\": \"right_leg.rx\",\n}"
+        },
+        {
+          "type": "text",
+          "text": "Please note: If you are referencing the built-in vanilla animations, you will not be able to preview these inside of Blockbench."
+        },
+        {
+          "type": "heading",
+          "text": "Cancelling out animations"
+        },
+        {
+          "type": "text",
+          "text": "Most entities have at least one group that doesn't have any animations, making it perfect to use as a base group for your own animations. Unfortunately, this is not the case for all entities. One example of this is the Silverfish, which constantly wiggles. To create a group that has no animations to use as a base, we need to cancel out the built-in vanilla animations.\n\nTo do this, you need to create a subgroup inside the group you want to cancel out, with the exact same pivot point location as the main group."
+        },
+        {
+          "type": "image",
+          "url": "https://media.discordapp.net/attachments/425702172219408385/971421794378584064/unknown.png"
+        },
+        {
+          "type": "text",
+          "text": "From here, we can use an inverted referenced animation to cancel out the built-in vanilla animation."
+        },
+        {
+          "type": "code",
+          "text": "\"cancel.ry\": \"-body3.ry\""
+        },
+        {
+          "type": "heading",
+          "text": "Attack animations"
+        },
+        {
+          "type": "text",
+          "text": "You can give some entities custom attack animations, for when they try to melee attack you. In this example, the entity would headbutt you when it attacks you. <code>x</code> is a multipler for how much it rotates."
+        },
+        {
+          "type": "code",
+          "text": "\"head.rx\": \"sin(swing_progress*pi)*x\""
+        },
+        {
+          "type": "heading",
+          "text": "Hurt animations"
+        },
+        {
+          "type": "text",
+          "text": "You can give some entities custom hurt animations, for when they take damage. In this example, the entity's head would swing back when it takes damage. <code>x</code> is a multipler for how much it rotates."
+        },
+        {
+          "type": "code",
+          "text": "\"head.rx\": \"-sin(hurt_time/pi)*x\""
+        },
+        {
+          "type": "heading",
+          "text": "Custom counter"
+        },
+        {
+          "type": "text",
+          "text": "This is a counter that will count up while an entity is in water, and count down again when it leaves the water."
+        },
+        {
+          "type": "code",
+          "text": "\"var.counter\": \"if(is_in_water, min(20, var.counter + 0.1 * frame_time * 20), max(0, var.counter - 0.1 * frame_time * 20))\""
+        }
+      ]
+    }
+  ]
+}
