@@ -1470,7 +1470,7 @@
                   "arguments": "[text] {image}",
                   "description": [
                     "Put a watermark over an image.",
-                    "Use the \"watermarkimage\" alias to use an image a watermark instead of text."
+                    "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
                   ]
                 }
               }
@@ -3347,7 +3347,7 @@
                 "watermark": {
                   "description": [
                     "Put a watermark over an image.",
-                    "Use the \"watermarkimage\" alias to use an image a watermark instead of text."
+                    "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
                   ],
                   "options": [
                     {
