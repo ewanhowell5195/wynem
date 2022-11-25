@@ -61,7 +61,7 @@ export default class extends Page {
                         ),
                         model.models.map(part => E("tr").append(
                           E("td").text(part.part),
-                          (part.translate ?? [0, 0, 0]).map((e, i) => E("td").text(`${Math.trunc(e).toString().padStart(padding[i])}${Math.trunc(e) === e ? "" : `.${(Math.round(e % 1 * 100) / 100).toString().split(".")[1]}`}`))
+                          (part.translate ?? [0, 0, 0]).map((e, i) => E("td").attr("data-padding", Math.trunc(e).toString().padStart(padding[i]).match(/^\s*/)[0]).text(`${Math.trunc(e)}${Math.trunc(e) === e ? "" : `.${(Math.round(e % 1 * 100) / 100).toString().split(".")[1]}`}`))
                         ))
                       )
                     )

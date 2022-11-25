@@ -152,6 +152,9 @@ page-body
       &:nth-child(2), &:nth-child(3)
         width: 0
         padding-right: 10px
+        
+      &::before
+        content: attr(data-padding)
 
 .entity-name
   font-size: 2.5rem
