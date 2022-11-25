@@ -1239,6 +1239,7 @@
                     "tombstone": {
                       "aliases": [
                         "gravestone",
+                        "grave",
                         "rip"
                       ],
                       "arguments": "[text]",
@@ -1270,10 +1271,6 @@
                       ],
                       "arguments": "<member>",
                       "description": "Generate a minecraft valentines image for that special someone in your life."
-                    },
-                    "watermark": {
-                      "arguments": "[text] {image}",
-                      "description": "Put a watermark over an image"
                     },
                     "what": {
                       "arguments": "[text] {image}",
@@ -1407,6 +1404,74 @@
                   "arguments": "<member> <member>",
                   "cooldown": 3,
                   "description": "Throw a member really far."
+                }
+              }
+            },
+            "imageutility": {
+              "commands": {
+                "generategradient": {
+                  "aliases": [
+                    "gradientgenerate",
+                    "gradientgen",
+                    "gengradient"
+                  ],
+                  "arguments": "[colour] [stepCount] [degrees]",
+                  "description": "Generate a gradient from a colour, with hue shifting."
+                },
+                "generatepalette": {
+                  "aliases": [
+                    "palettegenerate",
+                    "palettegen",
+                    "genpalette"
+                  ],
+                  "arguments": "[colourCount]",
+                  "description": "Generate a palette of random colours."
+                },
+                "makeqrcode": {
+                  "aliases": [
+                    "createqrcode",
+                    "qrcodemake",
+                    "qrcodecreate",
+                    "makeqr",
+                    "createqr",
+                    "qrmake",
+                    "qrcreate",
+                    "qrcode",
+                    "qr"
+                  ],
+                  "arguments": "[text]",
+                  "description": "Create a QR code."
+                },
+                "readqrcode": {
+                  "aliases": [
+                    "decodeqrcode",
+                    "qrcoderead",
+                    "qrcodedecode",
+                    "readqr",
+                    "decodeqr",
+                    "qrread",
+                    "qrdecode",
+                    "unqr"
+                  ],
+                  "arguments": "{image}",
+                  "description": "Read a QR code in an image."
+                },
+                "save": {
+                  "arguments": "{image}",
+                  "description": "Turn an image into a gif so that you can save it to your discord favourites list."
+                },
+                "watermark": {
+                  "aliases": [
+                    "watermarkimage",
+                    "imagewatermark",
+                    "watermarkimg",
+                    "imgwatermark"
+                  ],
+                  "arguments": "[text] {image}",
+                  "description": [
+                    "Put a watermark over an image.",
+                    "Use the \"watermarkimage\" alias to use an image a watermark instead of text."
+                  ]
                 }
               }
             },
@@ -1876,16 +1941,6 @@
               ],
               "arguments": "<member>",
               "description": "View the minecraft account tied to someones discord."
-            },
-            "minecrafttext": {
-              "aliases": [
-                "minecraftfont",
-                "mcfont",
-                "mctext",
-                "mct"
-              ],
-              "arguments": "[text]",
-              "description": "Generate some Minecraft text"
             },
             "minecraftwiki": {
               "aliases": [
@@ -2928,24 +2983,6 @@
               "arguments": "[url]",
               "description": "View the file size of a file."
             },
-            "generategradient": {
-              "aliases": [
-                "gradientgenerate",
-                "gradientgen",
-                "gengradient"
-              ],
-              "arguments": "[colour] [stepCount] [degrees]",
-              "description": "Generate a gradient from a colour, with hue shifting."
-            },
-            "generatepalette": {
-              "aliases": [
-                "palettegenerate",
-                "palettegen",
-                "genpalette"
-              ],
-              "arguments": "[colourCount]",
-              "description": "Generate a palette of random colours."
-            },
             "getrawmessage": {
               "aliases": [
                 "getraw",
@@ -2961,21 +2998,6 @@
               "arguments": "[searchTerm]",
               "description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
             },
-            "makeqrcode": {
-              "aliases": [
-                "createqrcode",
-                "qrcodemake",
-                "qrcodecreate",
-                "makeqr",
-                "createqr",
-                "qrmake",
-                "qrcreate",
-                "qrcode",
-                "qr"
-              ],
-              "arguments": "[text]",
-              "description": "Create a QR code."
-            },
             "poll": {
               "aliases": [
                 "vote"
@@ -2984,24 +3006,6 @@
               "permissions": [
                 "Guild Only"
               ]
-            },
-            "readqrcode": {
-              "aliases": [
-                "decodeqrcode",
-                "qrcoderead",
-                "qrcodedecode",
-                "readqr",
-                "decodeqr",
-                "qrread",
-                "qrdecode",
-                "unqr"
-              ],
-              "arguments": "{image}",
-              "description": "Read a QR code in an image."
-            },
-            "save": {
-              "arguments": "{image}",
-              "description": "Turn an image into a gif so that you can save it to your discord favourites list."
             },
             "tinyurl": {
               "arguments": "[url]",
@@ -3333,6 +3337,38 @@
                     {
                       "name": "image-string",
                       "description": "The image to scale"
+                    }
+                  ]
+                }
+              }
+            },
+            "utility": {
+              "commands": {
+                "watermark": {
+                  "description": [
+                    "Put a watermark over an image.",
+                    "Use the \"watermarkimage\" alias to use an image a watermark instead of text."
+                  ],
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The text to draw over the image as the watermark"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "The image to draw the watermark over"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "The image to draw the watermark over"
+                    },
+                    {
+                      "name": "watermark-image-attachment",
+                      "description": "The image use as a watermark instead of text"
+                    },
+                    {
+                      "name": "watermark-image-string",
+                      "description": "The image use as a watermark instead of text"
                     }
                   ]
                 }
