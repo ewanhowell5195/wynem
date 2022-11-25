@@ -11,14 +11,12 @@ export default class extends Page {
   static title = "Custom Entity Models - Wynem"
   static description = "View the Custom Entity Models for OptiFine"
 
-  async setData() {
+  async setData({ entity, search }) {
     await this.ready
     const $ = this.$
     await fetchJSON("cem_template_models")
-    
     const downloadIcon = $("#download-icon").contents()
     const linkIcon = $("#link-icon").contents()
-
     const entityContainer = $("#entity-container")
     for (const category of cem_template_models.categories) {
       const entities = E("div").addClass("entities").appendTo(
@@ -40,8 +38,12 @@ export default class extends Page {
             E("img").attr("src", `/assets/images/minecraft/renders/${entity.name}.webp`),
             E("div").text(entity.display_name)
           ).on("click", e => {
+            const params = getURLParams() ?? {}
+            params.entity = entity.name
+            history.replaceState({}, null, `/cem/${toURLParams(params)}`)
             $(document.body).addClass("no-scroll")
             const model = JSON.parse(cem_template_models.models[entity.model].model)
+            const padding = [0, 1, 2].map(e => model.models.reduce((a, b) => Math.max(a, (b.translate?.[e] ?? 0).toString().split(".")[0].length), 0))
             const popup = E("div").addClass("popup").append(
               E("div").addClass("popup-container").append(
                 E("div").addClass("popup-contents").append(
@@ -51,11 +53,11 @@ export default class extends Page {
                       E("table").append(
                         E("tr").append(
                           E("th").text("Part name"),
-                          E("th").text("Pivot point location")
+                          E("th").attr("colspan", "3").text("Pivot point location")
                         ),
-                        ...model.models.map(part => E("tr").append(
+                        model.models.map(part => E("tr").append(
                           E("td").text(part.part),
-                          E("td").text(part.translate ? `${part.translate[0]}, ${part.translate[1] * -1}, ${part.translate[2]}` : "0, 0, 0")
+                          (part.translate ?? [0, 0, 0]).map((e, i) => E("td").text(`${Math.trunc(e).toString().padStart(padding[i])}${Math.trunc(e) === e ? "" : `.${(Math.round(e % 1 * 100) / 100).toString().split(".")[1]}`}`))
                         ))
                       )
                     )
@@ -81,6 +83,9 @@ export default class extends Page {
               )
             ).on("click", e => {
               if ($(e.target).hasClass("popup")) {
+                const params = getURLParams() ?? {}
+                delete params.entity
+                history.replaceState({}, null, `/cem/${toURLParams(params)}`)
                 popup.remove()
                 $(document.body).removeClass("no-scroll")
               }
@@ -92,6 +97,12 @@ export default class extends Page {
 
     $("#search > input").on("input", e => {
       const val = e.currentTarget.value.toLowerCase().replace(/_/g, " ")
+      
+      const params = getURLParams() ?? {}
+      params.search = val
+      if (!params.search) delete params.search
+      history.replaceState({}, null, `/cem/${toURLParams(params)}`)
+
       const underscored = val.replace(/\s/g, "_")
       $(".entities > div").each((i, e) => {
         const name = $(e).children().last().text().toLowerCase()
@@ -104,6 +115,24 @@ export default class extends Page {
         E("h2").addClass("no-results").text("No results")
       )
     })
+
+    if (entity) {
+      const element = $(`.entity[data-id="${entity}"]`)
+      if (element.length) element.click()
+      else {
+        const params = getURLParams() ?? {}
+        params.entity = entity.name
+        this.newState = `/cem/${toURLParams(params)}`
+      }
+    }
+
+    if (search) {
+      $("#search > input").val(search).trigger("input")
+    }
+  }
+
+  onOpened() {
+    if (this.newState) history.replaceState({}, null, this.newState)
   }
 }
 

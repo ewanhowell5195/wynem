@@ -2,12 +2,23 @@
 
 page-body
   background-color: var(--color-grey)
+  overflow-x: initial!important
 
 .container
   max-width: var(--content-width)
   margin: 0 auto
   flex: 1
-  padding: 40px
+  padding: 0 40px 40px
+
+#cem-header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: sticky
+  top: calc(var(--header-height))
+  z-index: 1
+  background-color: var(--color-grey)
+  padding-top: 40px
 
 #search
   display: flex
@@ -88,20 +99,17 @@ page-body
 
 .popup-container
   width: 640px
-  height: 480px
+  height: 392px
   background-color: var(--color-grey-light)
   max-height: calc(100vh - var(--header-height) * 3)
   overflow-y: auto
-  padding: 20px 20px 0
+  padding: 20px
   border-radius: 10px
   box-shadow: 0 8px 16px #000
-  display: flex
-  flex-direction: column
 
 .popup-contents
   display: flex
   gap: 20px
-  height: 100%
 
 .entity-info
   flex: 1
@@ -111,7 +119,7 @@ page-body
   
 .entity-parts
   width: 100%
-  flex: 1 1
+  flex: 1 1 1px
   overflow-y: auto
 
   table
@@ -135,6 +143,14 @@ page-body
       
     td
       padding: 2.5px 0 2.5px
+      white-space: pre
+      
+      &:not(:first-child)
+        font-family: consolas, monospace
+        
+      &:nth-child(2), &:nth-child(3)
+        width: 0
+        padding-right: 10px
 
 .entity-name
   font-size: 2.5rem
@@ -156,6 +172,8 @@ page-body
   
   img
     width: 256px
+    height: 256px
+    object-fit: contain
     background-image: url("/assets/images/misc/transparent_dark.webp")
     display: block
 
@@ -164,3 +182,25 @@ page-body
     opacity: 0
   to
     opacity: 1
+    
+@media only screen and (max-width: 768px)
+  #cem-header
+    display: block
+    padding-bottom: 1px
+    
+  #search
+    position: fixed
+    top: var(--header-height)
+    left: 0
+    width: 100vw
+  
+  .popup-container
+    width: 296px
+    height: initial
+
+  .popup-contents
+    flex-direction: column
+    
+  .entity-parts
+    max-height: 128px
+    flex: 1
