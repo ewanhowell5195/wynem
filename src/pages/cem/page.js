@@ -11,7 +11,7 @@ export default class extends Page {
   static title = "Custom Entity Models - Wynem"
   static description = "View the Custom Entity Models for OptiFine"
 
-  async setData({ entity, search }) {
+  async setData(params) {
     await this.ready
     const $ = this.$
     await fetchJSON("cem_template_models")
@@ -40,9 +40,13 @@ export default class extends Page {
           ).on("click", e => {
             const params = getURLParams() ?? {}
             params.entity = entity.name
+            const model = JSON.parse(cem_template_models.models[entity.model].model)
+            if ("download" in params) {
+              saveAs(new Blob([compileJSON(model)]), `${entity.file_name}.jem`)
+              delete params.download
+            }
             history.replaceState({}, null, `/cem/${toURLParams(params)}`)
             $(document.body).addClass("no-scroll")
-            const model = JSON.parse(cem_template_models.models[entity.model].model)
             const padding = [0, 1, 2].map(e => model.models.reduce((a, b) => Math.max(a, (b.translate?.[e] ?? 0).toString().split(".")[0].length), 0))
             const popup = E("div").addClass("popup").append(
               E("div").addClass("popup-container").append(
@@ -116,18 +120,18 @@ export default class extends Page {
       )
     })
 
-    if (entity) {
-      const element = $(`.entity[data-id="${entity}"]`)
+    if (params.entity) {
+      const element = $(`.entity[data-id="${params.entity}"]`)
       if (element.length) element.click()
       else {
         const params = getURLParams() ?? {}
-        params.entity = entity.name
+        delete params.entity
         this.newState = `/cem/${toURLParams(params)}`
       }
     }
 
-    if (search) {
-      $("#search > input").val(search).trigger("input")
+    if (params.search) {
+      $("#search > input").val(params.search).trigger("input")
     }
   }
 
