@@ -13,7 +13,8 @@ export default class extends Page {
       else if ("features" in params) this.redirect = "features"
       else if ("privacy" in params) this.redirect = "privacy"
       else if (params.cem) this.redirect = `cem/?entity=${params.cem}`
-      else if ("cem" in params) this.redirect = `cem`
+      else if ("cem" in params) this.redirect = "cem"
+      else if ("cem_animation_doc" in params) this.redirect = "cemanimation"
     }
   }
 
