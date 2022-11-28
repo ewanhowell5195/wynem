@@ -70,7 +70,8 @@
                       "permissions": [
                         "Guild Only",
                         "Manage Guild"
-                      ]
+                      ],
+                      "slashCommand": "serverconfig/customcommands/addcustomcommand"
                     },
                     "removecustomcommand": {
                       "aliases": [
@@ -91,7 +92,8 @@
                       "permissions": [
                         "Guild Only",
                         "Manage Guild"
-                      ]
+                      ],
+                      "slashCommand": "serverconfig/customcommands/removecustomcommand"
                     }
                   }
                 },
@@ -175,7 +177,8 @@
                   "description": [
                     "Get a list of the bot's commands and information about each one.",
                     "Argument types:\n\n[arg] - A text argument\n<arg> - A discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
-                  ]
+                  ],
+                  "slashCommand": "help"
                 },
                 "prefixlessmode": {
                   "aliases": [
@@ -242,7 +245,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/prefixes/prefix"
                 },
                 "prefixalias": {
                   "aliases": [
@@ -257,7 +261,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/prefixes/prefixalias"
                 }
               }
             },
@@ -272,7 +277,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/toggle/quotes"
                 },
                 "togglescamdetection": {
                   "aliases": [
@@ -292,7 +298,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/toggle/scamdetection"
                 }
               }
             }
@@ -305,22 +312,27 @@
               ],
               "arguments": "[report]",
               "cooldown": 86400,
-              "description": "Submit a bug report for the bot."
+              "description": "Submit a bug report for the bot.",
+              "slashCommand": "bot/bugreport"
             },
             "contact": {
-              "description": "Get a list of ways to contact the bot developer."
+              "description": "Get a list of ways to contact the bot developer.",
+              "slashCommand": "bot/contact"
             },
             "credits": {
-              "description": "View the credits for Wynem."
+              "description": "View the credits for Wynem.",
+              "slashCommand": "bot/credits"
             },
             "discord": {
               "aliases": [
                 "botserver"
               ],
-              "description": "Get the invite link for the bot creators Discord server."
+              "description": "Get the invite link for the bot creators Discord server.",
+              "slashCommand": "bot/discord"
             },
             "donate": {
-              "description": "Get some links where you can donate to the bot developer to show your support!"
+              "description": "Get some links where you can donate to the bot developer to show your support!",
+              "slashCommand": "bot/donate"
             },
             "embedcolour": {
               "aliases": [
@@ -350,14 +362,16 @@
                 "owner",
                 "creator"
               ],
-              "description": "Get a link to the bot creators website."
+              "description": "Get a link to the bot creators website.",
+              "slashCommand": "bot/ewan"
             },
             "exportdata": {
               "arguments": "[type]",
               "description": [
                 "Export the data that the bot has stored about you or the server.",
                 "Types:\n- User\n- Server"
-              ]
+              ],
+              "slashCommand": "bot/exportdata"
             },
             "info": {
               "aliases": [
@@ -367,14 +381,16 @@
                 "binfo",
                 "about"
               ],
-              "description": "Get some information about the bot."
+              "description": "Get some information about the bot.",
+              "slashCommand": "bot/info"
             },
             "invite": {
               "aliases": [
                 "inv",
                 "i"
               ],
-              "description": "Get the bot's invite link."
+              "description": "Get the bot's invite link.",
+              "slashCommand": "bot/invite"
             },
             "notices": {
               "aliases": [
@@ -390,14 +406,16 @@
               "aliases": [
                 "pong"
               ],
-              "description": "Check what the bot's latency is."
+              "description": "Check what the bot's latency is.",
+              "slashCommand": "ping"
             },
             "privacy": {
               "aliases": [
                 "privacypolicy",
                 "policy"
               ],
-              "description": "View the privacy policy for the bot."
+              "description": "View the privacy policy for the bot.",
+              "slashCommand": "bot/privacy"
             },
             "resendjoininfo": {
               "aliases": [
@@ -408,7 +426,8 @@
               "description": "Resend the message the bot sends when it joins the message in the current channel.",
               "permissions": [
                 "Manage Guild"
-              ]
+              ],
+              "slashCommand": "serverconfig/resendjoininfo"
             },
             "reset": {
               "aliases": [
@@ -428,7 +447,8 @@
               "aliases": [
                 "guilds"
               ],
-              "description": "Show the top 10 biggest servers that the bot is in."
+              "description": "Show the top 10 biggest servers that the bot is in.",
+              "slashCommand": "bot/servers"
             },
             "suggest": {
               "aliases": [
@@ -438,26 +458,30 @@
               ],
               "arguments": "[suggestion]",
               "cooldown": 86400,
-              "description": "Make a suggestion for the bot."
+              "description": "Make a suggestion for the bot.",
+              "slashCommand": "bot/suggest"
             },
             "support": {
               "arguments": "[message]",
               "cooldown": 10,
-              "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!"
+              "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!",
+              "slashCommand": "bot/support"
             },
             "terms": {
               "aliases": [
                 "termsofservice",
                 "tos"
               ],
-              "description": "View the terms of service for the bot."
+              "description": "View the terms of service for the bot.",
+              "slashCommand": "bot/terms"
             },
             "website": {
               "aliases": [
                 "web",
                 "site"
               ],
-              "description": "Get a link to the bots website."
+              "description": "Get a link to the bots website.",
+              "slashCommand": "bot/website"
             }
           }
         },
@@ -1180,7 +1204,8 @@
                         "message"
                       ],
                       "arguments": "[message] [username] [colour] [botTag] {image}",
-                      "description": "Generate a discord message. Use quotes around arguments to use more than one word. Set \"botTag\" to \"false\" to disable it."
+                      "description": "Generate a discord message. Use quotes around arguments to use more than one word. Set \"botTag\" to \"false\" to disable it.",
+                      "slashCommand": "imagefun/texts/discordmessage"
                     },
                     "notification": {
                       "aliases": [
@@ -1243,7 +1268,8 @@
                         "rip"
                       ],
                       "arguments": "[text]",
-                      "description": "Put some text on a tombstone."
+                      "description": "Put some text on a tombstone.",
+                      "slashCommand": "imagefun/texts/tombstone"
                     },
                     "toptext": {
                       "aliases": [
@@ -1471,7 +1497,8 @@
                   "description": [
                     "Put a watermark over an image.",
                     "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
-                  ]
+                  ],
+                  "slashCommand": "image/utility/watermark"
                 }
               }
             },
@@ -1483,7 +1510,8 @@
                   ],
                   "arguments": "[colour] {image}",
                   "cooldown": 5,
-                  "description": "Set the background colour for an image with transparency."
+                  "description": "Set the background colour for an image with transparency.",
+                  "slashCommand": "image/manipulation/background"
                 },
                 "crop": {
                   "aliases": [
@@ -1511,7 +1539,9 @@
                     "Resize an image to a desired size.",
                     "Interpolation modes only work on static images.",
                     "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
-                  ]
+                  ],
+                  "slashCommand": "image/manipulation/resize",
+                  "contextCommand": "message/resize-image"
                 },
                 "rotate": {
                   "aliases": [
@@ -1527,7 +1557,9 @@
                     "upscale"
                   ],
                   "arguments": "{image}",
-                  "description": "Scale an image up to the max size discord displays images, making it easier to view small images."
+                  "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
+                  "slashCommand": "image/manipulation/scale",
+                  "contextCommand": "message/scale-image"
                 },
                 "square": {
                   "arguments": "{image}",
@@ -1777,7 +1809,8 @@
                     "texture"
                   ],
                   "arguments": "[texture] [version]",
-                  "description": "Get a vanilla minecraft texture."
+                  "description": "Get a vanilla minecraft texture.",
+                  "slashCommand": "minecraft/resourcepacks/minecrafttexture"
                 },
                 "minecrafttitleconverter": {
                   "aliases": [
@@ -1816,7 +1849,8 @@
                     "repeat"
                   ],
                   "arguments": "[width] [height] [randomRotationEnabled] {image}",
-                  "description": "Tile an image over a 5x5 area. Provide a custom width and height to customise the size."
+                  "description": "Tile an image over a 5x5 area. Provide a custom width and height to customise the size.",
+                  "slashCommand": "minecraft/resourcepacks/tile"
                 },
                 "versiondifference": {
                   "aliases": [
@@ -1910,7 +1944,8 @@
                     "mcskin"
                   ],
                   "arguments": "[username]",
-                  "description": "View the skin of a Minecraft Java edition player."
+                  "description": "View the skin of a Minecraft Java edition player.",
+                  "slashCommand": "minecraft/skin"
                 },
                 "skinconverter": {
                   "aliases": [
@@ -1996,7 +2031,8 @@
                   "description": "Ping the moderators of the current server. The roles can be configured with the \"setmodpingroles\" command",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "modping"
                 },
                 "setmodpingroles": {
                   "aliases": [
@@ -2048,7 +2084,8 @@
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
-              ]
+              ],
+              "slashCommand": "moderation/addnote"
             },
             "ban": {
               "arguments": "<member> [reason]",
@@ -2062,7 +2099,9 @@
               ],
               "botPermissions": [
                 "Ban Members"
-              ]
+              ],
+              "slashCommand": "ban",
+              "contextCommand": "user/ban-member"
             },
             "endtimeout": {
               "aliases": [
@@ -2078,7 +2117,8 @@
               ],
               "botPermissions": [
                 "Moderate Members"
-              ]
+              ],
+              "slashCommand": "moderation/endtimeout"
             },
             "kick": {
               "arguments": "<member> [reason]",
@@ -2092,7 +2132,9 @@
               ],
               "botPermissions": [
                 "Kick Members"
-              ]
+              ],
+              "slashCommand": "kick",
+              "contextCommand": "user/kick-member"
             },
             "purge": {
               "aliases": [
@@ -2113,7 +2155,8 @@
               ],
               "botPermissions": [
                 "Manage Messages"
-              ]
+              ],
+              "slashCommand": "purge"
             },
             "records": {
               "aliases": [
@@ -2135,7 +2178,8 @@
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
-              ]
+              ],
+              "slashCommand": "moderation/records"
             },
             "timeout": {
               "aliases": [
@@ -2154,7 +2198,8 @@
               ],
               "botPermissions": [
                 "Moderate Members"
-              ]
+              ],
+              "slashCommand": "timeout"
             },
             "unban": {
               "arguments": "<user> [reason]",
@@ -2165,7 +2210,8 @@
               ],
               "botPermissions": [
                 "Ban Members"
-              ]
+              ],
+              "slashCommand": "unban"
             },
             "warn": {
               "aliases": [
@@ -2180,7 +2226,8 @@
               "permissions": [
                 "Guild Only",
                 "Moderate Members"
-              ]
+              ],
+              "slashCommand": "warn"
             }
           }
         },
@@ -2290,7 +2337,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/faq/addfaq"
                 },
                 "editfaq": {
                   "aliases": [
@@ -2302,14 +2350,16 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/faq/editfaq"
                 },
                 "faq": {
                   "arguments": "[question]",
                   "description": "Ask a frequently asked question!",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "faq"
                 },
                 "faqdetails": {
                   "aliases": [
@@ -2321,7 +2371,8 @@
                   "description": "Get the full details about a certain faq.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "server/faqdetails"
                 },
                 "removefaq": {
                   "aliases": [
@@ -2334,7 +2385,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/faq/removefaq"
                 }
               }
             },
@@ -2525,7 +2577,8 @@
                   ],
                   "botPermissions": [
                     "Manage Roles"
-                  ]
+                  ],
+                  "slashCommand": "role/addrole"
                 },
                 "buttonroles": {
                   "aliases": [
@@ -2548,7 +2601,8 @@
                   ],
                   "botPermissions": [
                     "Manage Roles"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/roles/buttonroles"
                 },
                 "joinrole": {
                   "aliases": [
@@ -2572,7 +2626,8 @@
                   ],
                   "botPermissions": [
                     "Manage Roles"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/roles/joinrole"
                 },
                 "removerole": {
                   "aliases": [
@@ -2586,7 +2641,8 @@
                   ],
                   "botPermissions": [
                     "Manage Roles"
-                  ]
+                  ],
+                  "slashCommand": "role/removerole"
                 }
               }
             },
@@ -2747,7 +2803,8 @@
                   ],
                   "botPermissions": [
                     "Manage Threads"
-                  ]
+                  ],
+                  "slashCommand": "close"
                 },
                 "removethreadchannel": {
                   "aliases": [
@@ -2785,7 +2842,8 @@
               ],
               "botPermissions": [
                 "Manage Permissions"
-              ]
+              ],
+              "slashCommand": "channel/lock"
             },
             "namesearch": {
               "aliases": [
@@ -2805,7 +2863,9 @@
               "description": "Quote a discord message.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "server/quote",
+              "contextCommand": "message/quote-message"
             },
             "removemembercounter": {
               "aliases": [
@@ -2830,7 +2890,8 @@
               "description": "Get some infomation about the current server.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "server/info"
             },
             "setmembercounter": {
               "aliases": [
@@ -2864,7 +2925,8 @@
               ],
               "botPermissions": [
                 "Manage Permissions"
-              ]
+              ],
+              "slashCommand": "channel/slowmode"
             }
           }
         },
@@ -2880,7 +2942,9 @@
                 "picture"
               ],
               "arguments": "<member>",
-              "description": "Show a users avatar, with links to get it in different resolutions."
+              "description": "Show a users avatar, with links to get it in different resolutions.",
+              "slashCommand": "user/avatar",
+              "contextCommand": "user/get-avatar"
             },
             "joinposition": {
               "aliases": [
@@ -2890,7 +2954,8 @@
               "description": "View the position that a member joined the server in. To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "user/joinposition"
             },
             "userinfo": {
               "aliases": [
@@ -2902,7 +2967,9 @@
                 "userinformation"
               ],
               "arguments": "<user>",
-              "description": "Get info about a specified user."
+              "description": "Get info about a specified user.",
+              "slashCommand": "user/info",
+              "contextCommand": "user/user-information"
             }
           }
         },
@@ -2967,7 +3034,8 @@
               "description": [
                 "Preview a colour. This also converts it to a variety of different colour formats.",
                 "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
-              ]
+              ],
+              "slashCommand": "colour"
             },
             "createembed": {
               "aliases": [
@@ -2989,7 +3057,9 @@
                 "rawmessage"
               ],
               "arguments": "[messageURL]",
-              "description": "Get the raw text content of a discord message."
+              "description": "Get the raw text content of a discord message.",
+              "slashCommand": "utility/getrawmessage",
+              "contextCommand": "message/get-raw-message"
             },
             "google": {
               "aliases": [
@@ -3097,7 +3167,8 @@
                     "Read some text out loud. If you are in a voice channel, the bot will join the channel and read it out loud there, otherwise it sends an mp3.",
                     "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
                     "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
-                  ]
+                  ],
+                  "slashCommand": "voice/tts"
                 },
                 "viewignoredprefixes": {
                   "aliases": [
@@ -3156,7 +3227,8 @@
               "description": "Make the bot leave the current voice channel.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "voice/leave"
             }
           }
         }
@@ -3179,22 +3251,28 @@
                   "name": "image-attachment",
                   "description": "An image"
                 }
-              ]
+              ],
+              "prefixCommand": "bot/bugreport"
             },
             "contact": {
-              "description": "Get a list of ways to contact the bot developer."
+              "description": "Get a list of ways to contact the bot developer.",
+              "prefixCommand": "bot/contact"
             },
             "credits": {
-              "description": "View the credits for Wynem."
+              "description": "View the credits for Wynem.",
+              "prefixCommand": "bot/credits"
             },
             "discord": {
-              "description": "Get the invite link for the bot creators Discord server."
+              "description": "Get the invite link for the bot creators Discord server.",
+              "prefixCommand": "bot/discord"
             },
             "donate": {
-              "description": "Get some links where you can donate to the bot developer to show your support!"
+              "description": "Get some links where you can donate to the bot developer to show your support!",
+              "prefixCommand": "bot/donate"
             },
             "ewan": {
-              "description": "Get a link to the bot creators website."
+              "description": "Get a link to the bot creators website.",
+              "prefixCommand": "bot/ewan"
             },
             "exportdata": {
               "description": "Export the data that the bot has stored about you or the server.",
@@ -3203,19 +3281,24 @@
                   "name": "type",
                   "description": "The type of data to export (user/server)"
                 }
-              ]
+              ],
+              "prefixCommand": "bot/exportdata"
             },
             "info": {
-              "description": "Get some information about the bot."
+              "description": "Get some information about the bot.",
+              "prefixCommand": "bot/info"
             },
             "invite": {
-              "description": "Get the bot's invite link."
+              "description": "Get the bot's invite link.",
+              "prefixCommand": "bot/invite"
             },
             "privacy": {
-              "description": "View the privacy policy for the bot."
+              "description": "View the privacy policy for the bot.",
+              "prefixCommand": "bot/privacy"
             },
             "servers": {
-              "description": "Show the top 10 biggest servers that the bot is in."
+              "description": "Show the top 10 biggest servers that the bot is in.",
+              "prefixCommand": "bot/servers"
             },
             "suggest": {
               "description": "Make a suggestion for the bot.",
@@ -3230,7 +3313,8 @@
                   "name": "image-attachment",
                   "description": "An image"
                 }
-              ]
+              ],
+              "prefixCommand": "bot/suggest"
             },
             "support": {
               "description": "Get support for the bot. Run the command and we will get back to you as soon as possible!",
@@ -3245,13 +3329,16 @@
                   "name": "image-attachment",
                   "description": "An image"
                 }
-              ]
+              ],
+              "prefixCommand": "bot/support"
             },
             "terms": {
-              "description": "View the terms of service for the bot."
+              "description": "View the terms of service for the bot.",
+              "prefixCommand": "bot/terms"
             },
             "website": {
-              "description": "Get a link to the bots website."
+              "description": "Get a link to the bots website.",
+              "prefixCommand": "bot/website"
             }
           }
         },
@@ -3261,7 +3348,8 @@
               "description": "Toggle everyone's ability to send messages in the current channel.",
               "botPermissions": [
                 "Manage Permissions"
-              ]
+              ],
+              "prefixCommand": "server/lock"
             },
             "slowmode": {
               "description": "Set a custom slowmode for the current channel.",
@@ -3274,7 +3362,8 @@
               ],
               "botPermissions": [
                 "Manage Permissions"
-              ]
+              ],
+              "prefixCommand": "server/slowmode"
             }
           }
         },
@@ -3299,7 +3388,8 @@
                       "name": "image-string",
                       "description": "An image"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/manipulation/background"
                 },
                 "resize": {
                   "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
@@ -3325,7 +3415,9 @@
                       "name": "image-string",
                       "description": "An image"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/manipulation/resize",
+                  "contextCommand": "message/resize-image"
                 },
                 "scale": {
                   "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
@@ -3338,7 +3430,9 @@
                       "name": "image-string",
                       "description": "The image to scale"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/manipulation/scale",
+                  "contextCommand": "message/scale-image"
                 }
               }
             },
@@ -3370,7 +3464,8 @@
                       "name": "watermark-image-string",
                       "description": "The image use as a watermark instead of text"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/imageutility/watermark"
                 }
               }
             }
@@ -3408,7 +3503,8 @@
                       "name": "image-string",
                       "description": "An image"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/imagefun/texts/discordmessage"
                 },
                 "tombstone": {
                   "description": "Put some text on a tombstone.",
@@ -3418,7 +3514,8 @@
                       "description": "The text to put on the tombstone",
                       "required": true
                     }
-                  ]
+                  ],
+                  "prefixCommand": "images/imagefun/texts/tombstone"
                 }
               }
             }
@@ -3440,7 +3537,8 @@
                       "name": "version",
                       "description": "The Minecraft version to check"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
                 },
                 "tile": {
                   "description": "Tile an image over a 5x5 area.",
@@ -3465,7 +3563,8 @@
                       "name": "image-string",
                       "description": "An image"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/tile"
                 }
               }
             }
@@ -3478,7 +3577,8 @@
                   "name": "username",
                   "description": "The players username"
                 }
-              ]
+              ],
+              "prefixCommand": "minecraft/skins/skin"
             }
           }
         },
@@ -3497,7 +3597,8 @@
                   "description": "The note to add",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "moderation/addnote"
             },
             "endtimeout": {
               "description": "End the time out of a member who is timed out.",
@@ -3511,7 +3612,8 @@
                   "name": "reason",
                   "description": "The reason for ending the timeout"
                 }
-              ]
+              ],
+              "prefixCommand": "moderation/endtimeout"
             },
             "records": {
               "description": "View the moderation records for a member.",
@@ -3521,7 +3623,8 @@
                   "description": "The member to view the records of",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "moderation/records"
             }
           }
         },
@@ -3540,7 +3643,8 @@
                   "description": "The role to add to the member",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "server/roles/addrole"
             },
             "removerole": {
               "description": "Remove a role from a member.",
@@ -3555,7 +3659,8 @@
                   "description": "The role to remove from the member",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "server/roles/removerole"
             }
           }
         },
@@ -3569,10 +3674,12 @@
                   "description": "The frequently asked question",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "server/faqs/faqdetails"
             },
             "info": {
-              "description": "Get some infomation about the current server."
+              "description": "Get some infomation about the current server.",
+              "prefixCommand": "server/serverinfo"
             },
             "quote": {
               "description": "Quote a discord message.",
@@ -3582,7 +3689,9 @@
                   "description": "The message URL to quote",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "server/quotemessage",
+              "contextCommand": "message/quote-message"
             }
           }
         },
@@ -3591,7 +3700,8 @@
             "customcommands": {
               "commands": {
                 "addcustomcommand": {
-                  "description": "Run a builder that adds a new custom command for the server."
+                  "description": "Run a builder that adds a new custom command for the server.",
+                  "prefixCommand": "bot/commands/customcommands/addcustomcommand"
                 },
                 "removecustomcommand": {
                   "description": "Remove a custom command from the server.",
@@ -3601,14 +3711,16 @@
                       "description": "The custom command to remove",
                       "required": true
                     }
-                  ]
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/removecustomcommand"
                 }
               }
             },
             "faq": {
               "commands": {
                 "addfaq": {
-                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server."
+                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+                  "prefixCommand": "server/faqs/addfaq"
                 },
                 "editfaq": {
                   "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
@@ -3618,7 +3730,8 @@
                       "description": "The question to remove",
                       "required": true
                     }
-                  ]
+                  ],
+                  "prefixCommand": "server/faqs/editfaq"
                 },
                 "removefaq": {
                   "description": "Remove an FAQ from the server.",
@@ -3628,7 +3741,8 @@
                       "description": "The question to remove",
                       "required": true
                     }
-                  ]
+                  ],
+                  "prefixCommand": "server/faqs/removefaq"
                 }
               }
             },
@@ -3641,7 +3755,8 @@
                       "name": "prefix",
                       "description": "The new prefix to use"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "bot/prefixes/prefix"
                 },
                 "prefixalias": {
                   "description": "Add/remove a custom prefix alias. This is an alternative prefix you can use instead of the main one.",
@@ -3650,14 +3765,16 @@
                       "name": "prefix",
                       "description": "The custom prefix alias to add or remove"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "bot/prefixes/prefixalias"
                 }
               }
             },
             "roles": {
               "commands": {
                 "buttonroles": {
-                  "description": "Run a builder that sets up a message that members can use to to add roles to themselves."
+                  "description": "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                  "prefixCommand": "server/roles/buttonroles"
                 },
                 "joinrole": {
                   "description": [
@@ -3669,24 +3786,28 @@
                       "name": "role",
                       "description": "The role to add to the member"
                     }
-                  ]
+                  ],
+                  "prefixCommand": "server/roles/joinrole"
                 }
               }
             },
             "toggle": {
               "commands": {
                 "quotes": {
-                  "description": "Toggles whether the bot will quote a message whenever a message link is sent."
+                  "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+                  "prefixCommand": "bot/settings/togglequotes"
                 },
                 "scamdetection": {
-                  "description": "Toggles whether the bot will scan messages in the server for nitro scams."
+                  "description": "Toggles whether the bot will scan messages in the server for nitro scams.",
+                  "prefixCommand": "bot/settings/togglescamdetection"
                 }
               }
             }
           },
           "commands": {
             "resendjoininfo": {
-              "description": "Resend the message the bot sends when it joins the message in the current channel."
+              "description": "Resend the message the bot sends when it joins the message in the current channel.",
+              "prefixCommand": "bot/resendjoininfo"
             }
           }
         },
@@ -3699,7 +3820,9 @@
                   "name": "user",
                   "description": "The user to get the avatar of"
                 }
-              ]
+              ],
+              "prefixCommand": "user/avatar",
+              "contextCommand": "user/get-avatar"
             },
             "info": {
               "description": "Get info about a specified user.",
@@ -3708,7 +3831,9 @@
                   "name": "user",
                   "description": "The user to get the information of"
                 }
-              ]
+              ],
+              "prefixCommand": "user/userinfo",
+              "contextCommand": "user/user-information"
             },
             "joinposition": {
               "description": "View the position that a member joined the server in.",
@@ -3724,7 +3849,8 @@
               ],
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "prefixCommand": "user/joinposition"
             }
           }
         },
@@ -3738,14 +3864,17 @@
                   "description": "The message URL to get the raw content of",
                   "required": true
                 }
-              ]
+              ],
+              "prefixCommand": "utility/getrawmessage",
+              "contextCommand": "message/get-raw-message"
             }
           }
         },
         "voice": {
           "commands": {
             "leave": {
-              "description": "Make the bot leave the current voice channel."
+              "description": "Make the bot leave the current voice channel.",
+              "prefixCommand": "voice/leave"
             },
             "tts": {
               "description": "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
@@ -3760,7 +3889,8 @@
                   "name": "language",
                   "description": "The language to read the message in"
                 }
-              ]
+              ],
+              "prefixCommand": "voice/texttospeech/tts"
             }
           }
         }
@@ -3785,10 +3915,13 @@
           ],
           "botPermissions": [
             "Ban Members"
-          ]
+          ],
+          "prefixCommand": "moderation/ban",
+          "contextCommand": "user/ban-member"
         },
         "close": {
-          "description": "Close the current thread channel"
+          "description": "Close the current thread channel",
+          "prefixCommand": "server/threads/close"
         },
         "colour": {
           "description": "Preview a colour. This also converts it to a variety of different colour formats.",
@@ -3798,7 +3931,8 @@
               "description": "The colour to preview. HEX codes supported",
               "required": true
             }
-          ]
+          ],
+          "prefixCommand": "utility/colour"
         },
         "customcommand": {
           "description": "Run a custom command.",
@@ -3824,7 +3958,8 @@
           ],
           "permissions": [
             "Guild Only"
-          ]
+          ],
+          "prefixCommand": "server/faqs/faq"
         },
         "help": {
           "description": "Get a list of the bots commands and information about each one.",
@@ -3833,7 +3968,8 @@
               "name": "category-command",
               "description": "The category or command"
             }
-          ]
+          ],
+          "prefixCommand": "bot/commands/help"
         },
         "kick": {
           "description": "Kick a member from the server.",
@@ -3854,16 +3990,20 @@
           ],
           "botPermissions": [
             "Kick Members"
-          ]
+          ],
+          "prefixCommand": "moderation/kick",
+          "contextCommand": "user/kick-member"
         },
         "modping": {
           "description": "Ping the moderators of the current server.",
           "permissions": [
             "Guild Only"
-          ]
+          ],
+          "prefixCommand": "moderation/modpings/modping"
         },
         "ping": {
-          "description": "Check what the bot's latency is."
+          "description": "Check what the bot's latency is.",
+          "prefixCommand": "bot/ping"
         },
         "purge": {
           "description": "Bulk delete messages from a channel. Defaults to 5, maximum 99.",
@@ -3883,7 +4023,8 @@
           ],
           "botPermissions": [
             "Manage Messages"
-          ]
+          ],
+          "prefixCommand": "moderation/purge"
         },
         "timeout": {
           "description": "Give a member a time out so that they cannot type or speak.",
@@ -3908,7 +4049,8 @@
           ],
           "botPermissions": [
             "Moderate Members"
-          ]
+          ],
+          "prefixCommand": "moderation/timeout"
         },
         "unban": {
           "description": "Unban a user from the server.",
@@ -3929,7 +4071,8 @@
           ],
           "botPermissions": [
             "Ban Members"
-          ]
+          ],
+          "prefixCommand": "moderation/unban"
         },
         "warn": {
           "description": "Give a member a warning.",
@@ -3947,7 +4090,8 @@
           "permissions": [
             "Guild Only",
             "Moderate Members"
-          ]
+          ],
+          "prefixCommand": "moderation/warn"
         }
       }
     },
@@ -3957,7 +4101,9 @@
           "commands": {
             "get-avatar": {
               "description": "Show a users avatar, with links to get it in different resolutions.",
-              "type": "user"
+              "type": "user",
+              "prefixCommand": "user/avatar",
+              "slashCommand": "user/avatar"
             },
             "ban-member": {
               "description": "Ban a user from the server.",
@@ -3974,7 +4120,9 @@
                   "description": "The reason for the ban"
                 }
               ],
-              "type": "user"
+              "type": "user",
+              "prefixCommand": "moderation/ban",
+              "slashCommand": "ban"
             },
             "kick-member": {
               "description": "Kick a member from the server.",
@@ -3991,11 +4139,15 @@
                   "description": "The reason for the kick"
                 }
               ],
-              "type": "user"
+              "type": "user",
+              "prefixCommand": "moderation/kick",
+              "slashCommand": "kick"
             },
             "user-information": {
               "description": "Get info about a specified user.",
-              "type": "user"
+              "type": "user",
+              "prefixCommand": "user/userinfo",
+              "slashCommand": "user/info"
             }
           }
         },
@@ -4003,11 +4155,15 @@
           "commands": {
             "get-raw-message": {
               "description": "Get the raw text content of a discord message.",
-              "type": "message"
+              "type": "message",
+              "prefixCommand": "utility/getrawmessage",
+              "slashCommand": "utility/getrawmessage"
             },
             "quote-message": {
               "description": "Quote a discord message.",
-              "type": "message"
+              "type": "message",
+              "prefixCommand": "server/quotemessage",
+              "slashCommand": "server/quote"
             },
             "resize-image": {
               "description": "Resize an image to a desired size.",
@@ -4026,11 +4182,15 @@
                   "description": "The interpolation method for the resize"
                 }
               ],
-              "type": "message"
+              "type": "message",
+              "prefixCommand": "images/manipulation/resize",
+              "slashCommand": "image/manipulation/resize"
             },
             "scale-image": {
               "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
-              "type": "message"
+              "type": "message",
+              "prefixCommand": "images/manipulation/scale",
+              "slashCommand": "image/manipulation/scale"
             }
           }
         }
