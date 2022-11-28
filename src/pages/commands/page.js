@@ -111,6 +111,12 @@ export default class extends Page {
       for (const section of (Array.isArray(command.description) ? command.description : [command.description])) commandInfo.append(
         E("div").addClass("description").text(section)
       )
+      if (command.prefixCommand || command.slashCommand || command.contextCommand) {
+        const buttonRow = E("div").addClass("button-row").appendTo(commandInfo)
+        if (command.prefixCommand) buttonRow.append(E("a", { is: "f-a" }).attr("href", `/commands/prefix/${command.prefixCommand}`).append(E("span").text("Prefix Command")))
+        if (command.slashCommand) buttonRow.append(E("a", { is: "f-a" }).attr("href", `/commands/slash/${command.slashCommand}`).append(E("span").text("Slash Command")))
+        if (command.contextCommand) buttonRow.append(E("a", { is: "f-a" }).attr("href", `/commands/context/${command.contextCommand}`).append(E("span").text("Context Command")))
+      }
       if (path[0] === "prefix") commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
         E("div").addClass("formatting").text(`e!${command.name} ${command.arguments ?? ""}`)
