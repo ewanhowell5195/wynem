@@ -732,7 +732,7 @@
                     "Blur an image.",
                     "The amount defaults to 10."
                   ],
-                  "slashCommand": "image/filter/blur"
+                  "slashCommand": "imagefilter/blur"
                 },
                 "brightness": {
                   "aliases": [
@@ -746,7 +746,7 @@
                     "Change the brightness of an image.",
                     "The brightness is a range of -100 to 100."
                   ],
-                  "slashCommand": "image/filter/brightness"
+                  "slashCommand": "imagefilter/brightness"
                 },
                 "convert": {
                   "aliases": [
@@ -760,7 +760,7 @@
                     "Convert an image to a different colour mode.",
                     "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
                   ],
-                  "slashCommand": "image/filter/convert"
+                  "slashCommand": "imagefilter/convert"
                 },
                 "copypalette": {
                   "aliases": [
@@ -775,7 +775,7 @@
                     "Copy the palette of one image to another image.",
                     "Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
                   ],
-                  "slashCommand": "image/filter/copypalette"
+                  "slashCommand": "imagefilter/copypalette"
                 },
                 "greyscale": {
                   "aliases": [
@@ -788,7 +788,7 @@
                   ],
                   "arguments": "{image}",
                   "description": "Turn an image greyscale.",
-                  "slashCommand": "image/filter/greyscale"
+                  "slashCommand": "imagefilter/greyscale"
                 },
                 "hueshift": {
                   "aliases": [
@@ -796,7 +796,7 @@
                   ],
                   "arguments": "[angle] {image}",
                   "description": "Change the hue of an image. Defaults to 180°",
-                  "slashCommand": "image/filter/hueshift"
+                  "slashCommand": "imagefilter/hueshift"
                 },
                 "index": {
                   "aliases": [
@@ -811,7 +811,7 @@
                     "Limit an images colour palette to a provided amount.",
                     "Defaults to 10 colours."
                   ],
-                  "slashCommand": "image/filter/index"
+                  "slashCommand": "imagefilter/index"
                 },
                 "invert": {
                   "aliases": [
@@ -821,7 +821,7 @@
                   ],
                   "arguments": "{image}",
                   "description": "Invert an images colour.",
-                  "slashCommand": "image/filter/invert"
+                  "slashCommand": "imagefilter/invert"
                 },
                 "multiply": {
                   "aliases": [
@@ -829,7 +829,7 @@
                   ],
                   "arguments": "[colour] {image}",
                   "description": "Multiply an image by a colour.",
-                  "slashCommand": "image/filter/multiply"
+                  "slashCommand": "imagefilter/multiply"
                 },
                 "neon": {
                   "aliases": [
@@ -842,7 +842,7 @@
                   "arguments": "{image}",
                   "cooldown": 3,
                   "description": "Apply a sobel edge detection filter to an image.",
-                  "slashCommand": "image/filter/neon"
+                  "slashCommand": "imagefilter/neon"
                 },
                 "normalise": {
                   "aliases": [
@@ -850,7 +850,7 @@
                   ],
                   "arguments": "{image}",
                   "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
-                  "slashCommand": "image/filter/normalise"
+                  "slashCommand": "imagefilter/normalise"
                 },
                 "recolour": {
                   "aliases": [
@@ -859,12 +859,12 @@
                   ],
                   "arguments": "[colour] {image}",
                   "description": "Recolour an image to a specific colour, keeping the opacity.",
-                  "slashCommand": "image/filter/recolour"
+                  "slashCommand": "imagefilter/recolour"
                 },
                 "sepia": {
                   "arguments": "{image}",
                   "description": "Apply a sepia filter to an image.",
-                  "slashCommand": "image/filter/sepia"
+                  "slashCommand": "imagefilter/sepia"
                 },
                 "threshold": {
                   "arguments": "[amount] {image}",
@@ -873,7 +873,7 @@
                     "The threshold is a range of 0 to 255.",
                     "Any pixel value greater than or equal to the threshold value will be set to 255, otherwise it will be set to 0."
                   ],
-                  "slashCommand": "image/filter/threshold"
+                  "slashCommand": "imagefilter/threshold"
                 }
               }
             },
@@ -1574,7 +1574,8 @@
                     "cut"
                   ],
                   "arguments": "[x] [y] [width] [height] {image}",
-                  "description": "Crop a region of an image."
+                  "description": "Crop out a region of an image.",
+                  "slashCommand": "image/manipulation/crop"
                 },
                 "pad": {
                   "aliases": [
@@ -1630,55 +1631,65 @@
               "commands": {
                 "daad": {
                   "arguments": "{image}",
-                  "description": "Mirror the top left half of an image to the bottom right half."
+                  "description": "Mirror the top left half of an image to the bottom right half.",
+                  "slashCommand": "image/mirroring/daad"
                 },
                 "dood": {
                   "arguments": "{image}",
-                  "description": "Mirror the bottom right half of an image to the top left half."
+                  "description": "Mirror the bottom right half of an image to the top left half.",
+                  "slashCommand": "image/mirroring/dood"
                 },
                 "flip": {
                   "arguments": "{image}",
-                  "description": "Flip an image vertically."
+                  "description": "Flip an image vertically.",
+                  "slashCommand": "image/mirroring/flip"
                 },
                 "haah": {
                   "aliases": [
                     "fliptop"
                   ],
                   "arguments": "{image}",
-                  "description": "Flip the top half of an image to the bottom half."
+                  "description": "Flip the top half of an image to the bottom half.",
+                  "slashCommand": "image/mirroring/haah"
                 },
                 "hooh": {
                   "aliases": [
                     "flipbottom"
                   ],
                   "arguments": "{image}",
-                  "description": "Flip the bottom half of an image to the top half."
+                  "description": "Flip the bottom half of an image to the top half.",
+                  "slashCommand": "image/mirroring/hooh"
                 },
                 "mirror": {
                   "arguments": "{image}",
-                  "description": "Mirror an image horizontally."
+                  "description": "Mirror an image horizontally.",
+                  "slashCommand": "image/mirroring/mirror"
                 },
                 "taat": {
                   "arguments": "{image}",
-                  "description": "Mirror the bottom left half of an image to the top right half."
+                  "description": "Mirror the bottom left half of an image to the top right half.",
+                  "slashCommand": "image/mirroring/taat"
                 },
                 "toot": {
                   "arguments": "{image}",
-                  "description": "Mirror the top right half of an image to the bottom left half."
+                  "description": "Mirror the top right half of an image to the bottom left half.",
+                  "slashCommand": "image/mirroring/toot"
                 },
                 "waaw": {
                   "aliases": [
                     "mirrorleft"
                   ],
                   "arguments": "{image}",
-                  "description": "Mirror the left half of an image to the right half."
+                  "description": "Mirror the left half of an image to the right half.",
+                  "slashCommand": "image/mirroring/waaw"
                 },
                 "woow": {
                   "aliases": [
                     "mirrorright"
                   ],
                   "arguments": "{image}",
-                  "description": "Mirror the right half of an image to the left half."
+                  "description": "Mirror the right half of an image to the left half.",
+                  "slashCommand": "image/mirroring/woow"
                 }
               }
             }
@@ -3424,269 +3435,6 @@
         },
         "image": {
           "categories": {
-            "filter": {
-              "commands": {
-                "blur": {
-                  "description": [
-                    "Blur an image.",
-                    "The amount defaults to 10."
-                  ],
-                  "options": [
-                    {
-                      "name": "amount",
-                      "description": "The amount to blur the image"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/blur"
-                },
-                "brightness": {
-                  "description": [
-                    "Change the brightness of an image.",
-                    "The brightness is a range of -100 to 100."
-                  ],
-                  "options": [
-                    {
-                      "name": "amount",
-                      "description": "The amount to brighten the image by"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/brightness"
-                },
-                "convert": {
-                  "description": [
-                    "Convert an image to a different colour mode.",
-                    "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
-                  ],
-                  "options": [
-                    {
-                      "name": "mode",
-                      "description": "The image colour mode",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/convert"
-                },
-                "copypalette": {
-                  "description": [
-                    "Copy the palette of one image to another image.",
-                    "Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
-                  ],
-                  "options": [
-                    {
-                      "name": "source-attachment",
-                      "description": "The image to get the colours from"
-                    },
-                    {
-                      "name": "source-string",
-                      "description": "The image to get the colours from"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "The image to apply the colours to"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "The image to apply the colours to"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/copypalette"
-                },
-                "greyscale": {
-                  "description": "Turn an image greyscale.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/greyscale"
-                },
-                "hueshift": {
-                  "description": "Change the hue of an image. Defaults to 180°",
-                  "options": [
-                    {
-                      "name": "angle",
-                      "description": "The angle to hue shift the image"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/hueshift"
-                },
-                "index": {
-                  "description": [
-                    "Limit an images colour palette to a provided amount.",
-                    "Defaults to 10 colours."
-                  ],
-                  "options": [
-                    {
-                      "name": "count",
-                      "description": "The number of colours to limit the image to"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/index"
-                },
-                "invert": {
-                  "description": "Invert an images colour.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/invert"
-                },
-                "multiply": {
-                  "description": "Multiply an image by a colour.",
-                  "options": [
-                    {
-                      "name": "colour",
-                      "description": "The colour to multiply by",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/multiply"
-                },
-                "neon": {
-                  "description": "Apply a sobel edge detection filter to an image.",
-                  "cooldown": 3,
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/neon"
-                },
-                "normalise": {
-                  "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/normalise"
-                },
-                "recolour": {
-                  "description": "Recolour an image to a specific colour, keeping the opacity.",
-                  "options": [
-                    {
-                      "name": "colour",
-                      "description": "The colour to recolour to",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/recolour"
-                },
-                "sepia": {
-                  "description": "Apply a sepia filter to an image.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/sepia"
-                },
-                "threshold": {
-                  "description": [
-                    "Convert an image to black and white, based on a threshold.",
-                    "The threshold is a range of 0 to 255.",
-                    "Any pixel value greater than or equal to the threshold value will be set to 255, otherwise it will be set to 0."
-                  ],
-                  "options": [
-                    {
-                      "name": "threshold",
-                      "description": "The cut off threshold"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/filters/threshold"
-                }
-              }
-            },
             "manipulation": {
               "commands": {
                 "background": {
@@ -3708,6 +3456,40 @@
                     }
                   ],
                   "prefixCommand": "images/manipulation/background"
+                },
+                "crop": {
+                  "description": "Crop out a region of an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "The top left X coordinate of the crop region",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "The top left Y coordinate of the crop region",
+                      "required": true
+                    },
+                    {
+                      "name": "width",
+                      "description": "The width of the crop region",
+                      "required": true
+                    },
+                    {
+                      "name": "height",
+                      "description": "The height of the crop region",
+                      "required": true
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/manipulation/crop"
                 },
                 "resize": {
                   "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
@@ -3754,6 +3536,150 @@
                 }
               }
             },
+            "mirroring": {
+              "commands": {
+                "daad": {
+                  "description": "Mirror the top left half of an image to the bottom right half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/daad"
+                },
+                "dood": {
+                  "description": "Mirror the bottom right half of an image to the top left half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/dood"
+                },
+                "flip": {
+                  "description": "Flip an image vertically.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/flip"
+                },
+                "haah": {
+                  "description": "Flip the top half of an image to the bottom half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/haah"
+                },
+                "hooh": {
+                  "description": "Flip the bottom half of an image to the top half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/hooh"
+                },
+                "mirror": {
+                  "description": "Mirror an image horizontally.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/mirror"
+                },
+                "taat": {
+                  "description": "Mirror the bottom left half of an image to the top right half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/taat"
+                },
+                "toot": {
+                  "description": "Mirror the top right half of an image to the bottom left half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/toot"
+                },
+                "waaw": {
+                  "description": "Mirror the left half of an image to the right half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/waaw"
+                },
+                "woow": {
+                  "description": "Mirror the right half of an image to the left half.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/mirroring/woow"
+                }
+              }
+            },
             "utility": {
               "commands": {
                 "watermark": {
@@ -3786,6 +3712,269 @@
                   "prefixCommand": "images/imageutility/watermark"
                 }
               }
+            }
+          }
+        },
+        "imagefilter": {
+          "commands": {
+            "blur": {
+              "description": [
+                "Blur an image.",
+                "The amount defaults to 10."
+              ],
+              "options": [
+                {
+                  "name": "amount",
+                  "description": "The amount to blur the image"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/blur"
+            },
+            "brightness": {
+              "description": [
+                "Change the brightness of an image.",
+                "The brightness is a range of -100 to 100."
+              ],
+              "options": [
+                {
+                  "name": "amount",
+                  "description": "The amount to brighten the image by"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/brightness"
+            },
+            "convert": {
+              "description": [
+                "Convert an image to a different colour mode.",
+                "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
+              ],
+              "options": [
+                {
+                  "name": "mode",
+                  "description": "The image colour mode",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/convert"
+            },
+            "copypalette": {
+              "description": [
+                "Copy the palette of one image to another image.",
+                "Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
+              ],
+              "options": [
+                {
+                  "name": "source-attachment",
+                  "description": "The image to get the colours from"
+                },
+                {
+                  "name": "source-string",
+                  "description": "The image to get the colours from"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "The image to apply the colours to"
+                },
+                {
+                  "name": "image-string",
+                  "description": "The image to apply the colours to"
+                }
+              ],
+              "prefixCommand": "images/filters/copypalette"
+            },
+            "greyscale": {
+              "description": "Turn an image greyscale.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/greyscale"
+            },
+            "hueshift": {
+              "description": "Change the hue of an image. Defaults to 180°",
+              "options": [
+                {
+                  "name": "angle",
+                  "description": "The angle to hue shift the image"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/hueshift"
+            },
+            "index": {
+              "description": [
+                "Limit an images colour palette to a provided amount.",
+                "Defaults to 10 colours."
+              ],
+              "options": [
+                {
+                  "name": "count",
+                  "description": "The number of colours to limit the image to"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/index"
+            },
+            "invert": {
+              "description": "Invert an images colour.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/invert"
+            },
+            "multiply": {
+              "description": "Multiply an image by a colour.",
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The colour to multiply by",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/multiply"
+            },
+            "neon": {
+              "description": "Apply a sobel edge detection filter to an image.",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/neon"
+            },
+            "normalise": {
+              "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/normalise"
+            },
+            "recolour": {
+              "description": "Recolour an image to a specific colour, keeping the opacity.",
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The colour to recolour to",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/recolour"
+            },
+            "sepia": {
+              "description": "Apply a sepia filter to an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/sepia"
+            },
+            "threshold": {
+              "description": [
+                "Convert an image to black and white, based on a threshold.",
+                "The threshold is a range of 0 to 255.",
+                "Any pixel value greater than or equal to the threshold value will be set to 255, otherwise it will be set to 0."
+              ],
+              "options": [
+                {
+                  "name": "threshold",
+                  "description": "The cut off threshold"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/threshold"
             }
           }
         },
