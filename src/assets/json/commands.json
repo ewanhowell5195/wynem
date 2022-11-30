@@ -310,8 +310,7 @@
                 "reportbug",
                 "bug"
               ],
-              "arguments": "[report]",
-              "cooldown": 86400,
+              "cooldown": 3600,
               "description": "Submit a bug report for the bot.",
               "slashCommand": "bot/bugreport"
             },
@@ -456,8 +455,7 @@
                 "suggestions",
                 "feedback"
               ],
-              "arguments": "[suggestion]",
-              "cooldown": 86400,
+              "cooldown": 3600,
               "description": "Make a suggestion for the bot.",
               "slashCommand": "bot/suggest"
             },
@@ -1587,7 +1585,8 @@
                   "description": [
                     "Add padding to the sides of an image.",
                     "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
-                  ]
+                  ],
+                  "slashCommand": "image/manipulation/pad"
                 },
                 "resize": {
                   "arguments": "[width] [height] [mode] {image}",
@@ -2304,9 +2303,7 @@
               "commands": {
                 "artchive": {
                   "aliases": [
-                    "archive",
                     "art",
-                    "a",
                     "submit"
                   ],
                   "arguments": "[description]",
@@ -2861,9 +2858,14 @@
                   "aliases": [
                     "closethread",
                     "threadclose",
-                    "setarchived"
+                    "closepost",
+                    "closeforum",
+                    "postclose",
+                    "forumclose",
+                    "setarchived",
+                    "archive"
                   ],
-                  "description": "Close the current thread channel",
+                  "description": "Close the current thread channel or forum post.",
                   "permissions": [
                     "Guild Only"
                   ],
@@ -3306,18 +3308,7 @@
           "commands": {
             "bugreport": {
               "description": "Submit a bug report for the bot.",
-              "cooldown": 86400,
-              "options": [
-                {
-                  "name": "report",
-                  "description": "The bug report",
-                  "required": true
-                },
-                {
-                  "name": "image-attachment",
-                  "description": "An image"
-                }
-              ],
+              "cooldown": 3600,
               "prefixCommand": "bot/bugreport"
             },
             "contact": {
@@ -3368,18 +3359,7 @@
             },
             "suggest": {
               "description": "Make a suggestion for the bot.",
-              "cooldown": 86400,
-              "options": [
-                {
-                  "name": "suggestion",
-                  "description": "The suggestion",
-                  "required": true
-                },
-                {
-                  "name": "image-attachment",
-                  "description": "An image"
-                }
-              ],
+              "cooldown": 3600,
               "prefixCommand": "bot/suggest"
             },
             "support": {
@@ -3490,6 +3470,36 @@
                     }
                   ],
                   "prefixCommand": "images/manipulation/crop"
+                },
+                "pad": {
+                  "description": [
+                    "Add padding to the sides of an image.",
+                    "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+                  ],
+                  "options": [
+                    {
+                      "name": "size",
+                      "description": "The amount of pixels to pad",
+                      "required": true
+                    },
+                    {
+                      "name": "direction",
+                      "description": "The direction to apply the padding"
+                    },
+                    {
+                      "name": "colour",
+                      "description": "The colour of the padding"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/manipulation/pad"
                 },
                 "resize": {
                   "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
@@ -4427,7 +4437,7 @@
           "contextCommand": "user/ban-member"
         },
         "close": {
-          "description": "Close the current thread channel",
+          "description": "Close the current thread channel or forum post.",
           "prefixCommand": "server/threads/close"
         },
         "colour": {

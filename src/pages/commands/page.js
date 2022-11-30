@@ -188,6 +188,37 @@ export default class extends Page {
             )
           )
         }
+      } else {
+        if (index > 1) content.append(E("div").text("There are no commands in this category, please select a subcategory"))
+        else if (index === 0) {
+          content.append(E("div").addClass("commands-home").html(_pug`
+            h1#category-name Wynem Commands
+            p You can use the commands in Wynem to make funny images, configure settings, advance the management of your server, and much more!
+            p There are many Wynem commands, so they are sorted into categories which you can find on the left side of the screen!
+          `))
+        } else if (path[index - 1] === "prefix") {
+          $("#category-name").text("Prefix Commands")
+          content.append(E("div").addClass("category-info").html(_pug`
+            p Prefix commands are the original way to use bots on Discord.
+            p Simply start a message with the prefix <strong>e!</strong>, followed by the command name to run a prefix command.
+            p You can also run a prefix command by pinging <span class="ping">@Wynem</span> instead of using a prefix. Example: <span class="ping">@Wynem</span> help
+            h2 Custom prefixes
+            p The prefix that Wynem uses can be customised with the <a href="/commands/prefix/bot/prefixes" is="f-a">prefix commands</a>.
+            p If you are unsure what prefix Wynem is set to use in the current server, you can ping <span class="ping">@Wynem</span>, and it will tell you the current prefix.
+            img(src = "/assets/images/misc/ping.webp")
+          `))
+        } else {
+          $("#category-name").text("Context Commands")
+          content.append(E("div").addClass("category-info").html(_pug`
+            p Context commands are a way to run commands directly on a user or a message.
+            p To access context commands, right click on either a user or a message, and go to the <strong>Apps</strong> option.
+            img(src = "/assets/images/misc/context.webp")
+            h2 Users
+            p User context commands can be accessed by either right clicking the user in the sidebar, or their profile picture/name next to a message.
+            h2 Messages
+            p Message context commands can be accessed by right clicking on a message.
+          `))
+        }
       }
     }
     const searchResults = $("#search-results")

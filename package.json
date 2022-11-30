@@ -12,7 +12,8 @@
     },
     "stylusPaths": [
       "includes/stylus"
-    ]
+    ],
+    "useTaggedTemplateReplacer": true
   },
   "dependencies": {
     "webbuilder": "github:EvenTorset/WebBuilder"

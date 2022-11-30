@@ -27,7 +27,7 @@ class PageBody extends HTMLElement {
 }
 customElements.define("page-body", PageBody)
 
-class Page extends HTMLElement {
+window.Page = class Page extends HTMLElement {
   constructor(path, hasStyle = true, onReady = () => {}) {
     super()
     this.path = path
@@ -140,5 +140,3 @@ class Page extends HTMLElement {
     }
   }
 }
-
-export { Page }

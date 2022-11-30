@@ -1,6 +1,6 @@
-window.Page = (await import("/js/libs/pages.js")).Page
+import "/js/libs/pages.js"
 
-window.E = (tagName, options) => $(document.createElement(tagName, options))
+window.E = (tagName = "div", options) => $(document.createElement(tagName, options))
 
 const rgxURLParams = /(?:^\?|&)([A-z0-9-]+)(?:=([^&]+)|(?=&)|$|=)/g
 
