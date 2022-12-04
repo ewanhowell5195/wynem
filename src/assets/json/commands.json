@@ -1802,8 +1802,11 @@
               "description": "Replace a colour in an image."
             },
             "round": {
-              "arguments": "{image}",
-              "description": "Make an image round by cutting off the corners."
+              "arguments": "[size] {image}",
+              "description": [
+                "Make an image round by cutting off the corners.",
+                "The size can either be a number of pixels, or a percentage of the width and height of the image."
+              ]
             },
             "sticker": {
               "arguments": "<sticker>",
