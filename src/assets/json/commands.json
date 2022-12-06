@@ -821,6 +821,14 @@
                   "description": "Invert an images colour.",
                   "slashCommand": "imagefilter/invert"
                 },
+                "mask": {
+                  "arguments": "[mode] {image} {image}",
+                  "description": [
+                    "Use the transparency of one image as a mask for another image.",
+                    "Modes:\n\n- inside\n- outside"
+                  ],
+                  "slashCommand": "imagefilter/mask"
+                },
                 "multiply": {
                   "aliases": [
                     "tint"
@@ -1231,26 +1239,30 @@
                       ],
                       "arguments": "[text] {image}",
                       "cooldown": 5,
-                      "description": "Add a breaking news bar to an image."
+                      "description": "Add a breaking news bar to an image.",
+                      "slashCommand": "imagefun/texts/breakingnews"
                     },
                     "caption": {
                       "arguments": "[text] {image}",
                       "cooldown": 5,
-                      "description": "Add a caption to an image."
+                      "description": "Add a caption to an image.",
+                      "slashCommand": "imagefun/texts/caption"
                     },
                     "certifiedmoment": {
                       "aliases": [
                         "certified"
                       ],
                       "arguments": "[text]",
-                      "description": "Make a certified moment meme."
+                      "description": "Make a certified moment meme.",
+                      "slashCommand": "imagefun/texts/certifiedmoment"
                     },
                     "changemymind": {
                       "aliases": [
                         "changemind"
                       ],
                       "arguments": "[text]",
-                      "description": "Create a \"change my mind\" meme."
+                      "description": "Create a \"change my mind\" meme.",
+                      "slashCommand": "imagefun/texts/changemymind"
                     },
                     "discordmessage": {
                       "aliases": [
@@ -3867,6 +3879,35 @@
               ],
               "prefixCommand": "images/filters/invert"
             },
+            "mask": {
+              "description": [
+                "Use the transparency of one image as a mask for another image.",
+                "Modes:\n\n- inside\n- outside"
+              ],
+              "options": [
+                {
+                  "name": "mode",
+                  "description": "The masking mode to use"
+                },
+                {
+                  "name": "mask-attachment",
+                  "description": "The image to use as a mask"
+                },
+                {
+                  "name": "mask-string",
+                  "description": "The image to use as a mask"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/mask"
+            },
             "multiply": {
               "description": "Multiply an image by a colour.",
               "options": [
@@ -3976,6 +4017,68 @@
           "categories": {
             "texts": {
               "commands": {
+                "breakingnews": {
+                  "description": "Add a breaking news bar to an image.",
+                  "cooldown": 5,
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The text to put on the sign",
+                      "required": true
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/texts/breakingnews"
+                },
+                "caption": {
+                  "description": "Add a caption to an image.",
+                  "cooldown": 5,
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The caption text",
+                      "required": true
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/texts/caption"
+                },
+                "certifiedmoment": {
+                  "description": "Make a certified moment meme.",
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The moment that is certified",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/texts/certifiedmoment"
+                },
+                "changemymind": {
+                  "description": "Create a \"change my mind\" meme.",
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The text to put on the sign",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/texts/changemymind"
+                },
                 "discordmessage": {
                   "description": "Generate a discord message.",
                   "options": [
