@@ -2859,54 +2859,29 @@
                   ]
                 }
               }
-            },
-            "threads": {
-              "description": "A Wynem thread channel is a channel where every message sent turns into a thread. This can be used as a support channel, feature request channel, bug report channel, and many more!",
-              "commands": {
-                "close": {
-                  "aliases": [
-                    "closethread",
-                    "threadclose",
-                    "closepost",
-                    "closeforum",
-                    "postclose",
-                    "forumclose",
-                    "setarchived",
-                    "archive"
-                  ],
-                  "description": "Close the current thread channel or forum post.",
-                  "permissions": [
-                    "Guild Only"
-                  ],
-                  "botPermissions": [
-                    "Manage Threads"
-                  ],
-                  "slashCommand": "close"
-                },
-                "removethreadchannel": {
-                  "aliases": [
-                    "threadchannelremove",
-                    "removesupportchannel",
-                    "supportchannelremove",
-                    "deletethreadchannel",
-                    "threadchanneldelete",
-                    "deletesupportchannel",
-                    "supportchanneldelete"
-                  ],
-                  "arguments": "<channel>",
-                  "description": "Set a channel to be a Wynem thread channel.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ],
-                  "botPermissions": [
-                    "Manage Channels"
-                  ]
-                }
-              }
             }
           },
           "commands": {
+            "close": {
+              "aliases": [
+                "closethread",
+                "threadclose",
+                "closepost",
+                "closeforum",
+                "postclose",
+                "forumclose",
+                "setarchived",
+                "archive"
+              ],
+              "description": "Close the current thread channel or forum post.",
+              "permissions": [
+                "Guild Only"
+              ],
+              "botPermissions": [
+                "Manage Threads"
+              ],
+              "slashCommand": "close"
+            },
             "lock": {
               "aliases": [
                 "unlock",
@@ -4447,7 +4422,7 @@
         },
         "close": {
           "description": "Close the current thread channel or forum post.",
-          "prefixCommand": "server/threads/close"
+          "prefixCommand": "server/close"
         },
         "colour": {
           "description": "Preview a colour. This also converts it to a variety of different colour formats.",
