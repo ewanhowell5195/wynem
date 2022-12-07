@@ -1,5 +1,5 @@
 {
-  "version": "6.9.0",
+  "version": "6.10.0",
   "categories": [
     {
       "name": "Supported",
@@ -302,7 +302,6 @@
           "model": "tropical_fish_b"
         },
         "turtle",
-        "vex",
         {
           "name": "villager",
           "model": "villager",
@@ -1062,6 +1061,12 @@
           "file_name": "zombified_piglin",
           "texture_name": "zombified_piglin",
           "model": "piglin_16"
+        },
+        {
+          "name": "vex_19.2",
+          "display_name": "Vex [1.19.2]",
+          "file_name": "vex",
+          "texture_name": "vex"
         }
       ]
     },
@@ -1084,6 +1089,7 @@
           "display_name": "Arrow [Spectral]",
           "model": "arrow"
         },
+        "camel",
         "cape",
         {
           "name": "elder_guardian_ghost",
@@ -1092,43 +1098,23 @@
           "model": "guardian"
         },
         "elytra",
+        {
+          "name": "head_piglin",
+          "display_name": "Piglin Head"
+        },
         "player",
         {
           "name": "player_slim",
           "display_name": "Player [Slim]"
         },
+        "raft",
         "shield",
-        "trident_riptide"
-      ]
-    },
-    {
-      "name": "Unreleased",
-      "description": "The models from unreleased game versions.",
-      "icon": "more_time",
-      "entities": [
-        {
-          "name": "vex_19.3",
-          "display_name": "Vex [1.19.3]",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.19.3 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.19.3 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "camel",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.20 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.20 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
         {
           "name": "hanging_sign",
-          "display_name": "Sign [Hanging]",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.20 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.20 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
+          "display_name": "Sign [Hanging]"
         },
-        {
-          "name": "head_piglin",
-          "display_name": "Piglin Head",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.20 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.20 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "raft",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.20 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.20 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        }
+        "trident_riptide",
+        "vex"
       ]
     }
   ],
@@ -1663,10 +1649,10 @@
       "model": "{\"textureSize\":[128,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-5,10],\"boxes\":[{\"coordinates\":[-3,1,-13,6,5,6],\"textureOffset\":[3,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,10],\"boxes\":[{\"coordinates\":[-9.5,-10,-20,19,20,6],\"textureOffset\":[7,37]},{\"coordinates\":[-5.5,-8,-23,11,18,3],\"textureOffset\":[31,1]}]},{\"part\":\"body2\",\"id\":\"body2\",\"invertAxis\":\"xy\",\"translate\":[0,-13,10],\"boxes\":[{\"coordinates\":[-4.5,-8,-24,9,18,1],\"textureOffset\":[70,33]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3.5,-2,-11],\"boxes\":[{\"coordinates\":[1.5,1,11,4,1,10],\"textureOffset\":[1,23]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3.5,-2,-11],\"boxes\":[{\"coordinates\":[-5.5,1,11,4,1,10],\"textureOffset\":[1,12]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-5,-3,4],\"boxes\":[{\"coordinates\":[5,2,-6,13,1,5],\"textureOffset\":[27,30]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[5,-3,4],\"boxes\":[{\"coordinates\":[-18,2,-6,13,1,5],\"textureOffset\":[27,24]}]}]}"
     },
     "vex": {
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,8,8],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-2,8,12,4],\"textureOffset\":[16,16]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[40,16]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,16]}]},{\"part\":\"left_wing\",\"id\":\"left_wing\",\"invertAxis\":\"xy\",\"translate\":[0,-24,-2],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-20,12,2,20,12,1],\"textureOffset\":[0,32]}]},{\"part\":\"right_wing\",\"id\":\"right_wing\",\"invertAxis\":\"xy\",\"translate\":[0,-24,-2],\"boxes\":[{\"coordinates\":[0,12,2,20,12,1],\"textureOffset\":[0,32]}]},{\"part\":\"left_leg\"},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[-2.9,3,-2,6,10,4],\"textureOffset\":[32,0]}]}]}"
-    },
-    "vex_19.3": {
       "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-6,0],\"boxes\":[{\"coordinates\":[-2.5,6,-2.5,5,5,5],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-6,0],\"boxes\":[{\"coordinates\":[-1.5,2,-1,3,4,2],\"textureOffset\":[0,10]},{\"coordinates\":[-1.5,0,-1,3,5,2],\"textureOffset\":[0,16],\"sizeAdd\":-0.2}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-2,-5.5,0],\"boxes\":[{\"coordinates\":[1.5,2,-1,2,4,2],\"textureOffset\":[23,0]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[2,-5.5,0],\"boxes\":[{\"coordinates\":[-3.5,2,-1,2,4,2],\"textureOffset\":[23,6]}]},{\"part\":\"left_wing\",\"id\":\"left_wing\",\"invertAxis\":\"xy\",\"translate\":[0.5,-5,-1],\"boxes\":[{\"coordinates\":[-0.5,0,1,0,5,8],\"textureOffset\":[16,14]}]},{\"part\":\"right_wing\",\"id\":\"right_wing\",\"invertAxis\":\"xy\",\"translate\":[-0.5,-5,-1],\"boxes\":[{\"coordinates\":[0.5,0,1,0,5,8],\"textureOffset\":[16,14]}]}]}"
+    },
+    "vex_19.2": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,8,8],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-2,8,12,4],\"textureOffset\":[16,16]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[40,16]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,16]}]},{\"part\":\"left_wing\",\"id\":\"left_wing\",\"invertAxis\":\"xy\",\"translate\":[0,-24,-2],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[-20,12,2,20,12,1],\"textureOffset\":[0,32]}]},{\"part\":\"right_wing\",\"id\":\"right_wing\",\"invertAxis\":\"xy\",\"translate\":[0,-24,-2],\"boxes\":[{\"coordinates\":[0,12,2,20,12,1],\"textureOffset\":[0,32]}]},{\"part\":\"left_leg\"},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[-2.9,3,-2,6,10,4],\"textureOffset\":[32,0]}]}]}"
     },
     "villager": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAPFJREFUeF7tkkEKgzAQRbPuLpt0Lx6gELyAeAPxAG68gvUEeoXgsrvgBcQbiIdq4liGzpQG2kKR9u1meJKZPwpP7Ygcoo7u6xvnrmvjLEtBwJoJUhv7beFRTdfitXRoh3FYB62FqqoyKYq8n6ZxWJaZ1j8ihIP6JHgjAr86wX/GBehCv41TKkA3LOATbEjs+lh8JJiPdRijtZRrTKpM8n4cZrUlDAH3Y5Krcpj3LQTXFMhbwpOoQ38StviZSes1IfwEzIvjsiEVbAwLk/W4QAJiT1CBQYWDBS4aOFHhWANNtMGEDmjibCXdkfAXyC/Hz30FuD+uM2TUAc4AAAAASUVORK5CYII=",
