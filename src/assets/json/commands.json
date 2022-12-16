@@ -1748,6 +1748,20 @@
               "arguments": "[message]",
               "description": "Create an image from a message, which is encoded as pixel values."
             },
+            "extractchannel": {
+              "aliases": [
+                "channel",
+                "colourchannel",
+                "colorchannel",
+                "colchannel"
+              ],
+              "arguments": "[channel] {image}",
+              "description": [
+                "Extract a colour channel from an image.",
+                "Available channels:\n\n - Red\n - Green\n- Blue\n- Alpha"
+              ],
+              "slashCommand": "image/extractchannel"
+            },
             "getimage": {
               "aliases": [
                 "getimg",
@@ -1790,6 +1804,20 @@
               ],
               "arguments": "{image}",
               "description": "View the dimentions of an image."
+            },
+            "mergechannels": {
+              "aliases": [
+                "mergecolourchannels",
+                "mergecolorchannels",
+                "mergecolchannels",
+                "mergechannel",
+                "mergecolourchannel",
+                "mergecolorchannel",
+                "mergecolchannel"
+              ],
+              "arguments": "{redimage} {greenimage} {blueimage}",
+              "description": "Merge three images into a single image, using each image as the individual colour channels.",
+              "slashCommand": "image/mergechannels"
             },
             "palette": {
               "arguments": "{image}",
@@ -3718,6 +3746,60 @@
                   "prefixCommand": "images/imageutility/watermark"
                 }
               }
+            }
+          },
+          "commands": {
+            "extractchannel": {
+              "description": [
+                "Extract a colour channel from an image.",
+                "Available channels:\n\n - Red\n - Green\n- Blue\n- Alpha"
+              ],
+              "options": [
+                {
+                  "name": "channel",
+                  "description": "The colour channel to extract",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/extractchannel"
+            },
+            "mergechannels": {
+              "description": "Merge three images into a single image, using each image as the individual colour channels.",
+              "options": [
+                {
+                  "name": "red-image-attachment",
+                  "description": "The image to use as the red colour channel"
+                },
+                {
+                  "name": "red-image-string",
+                  "description": "The image to use as the red colour channel"
+                },
+                {
+                  "name": "green-image-attachment",
+                  "description": "The image to use as the green colour channel"
+                },
+                {
+                  "name": "green-image-string",
+                  "description": "The image to use as the green colour channel"
+                },
+                {
+                  "name": "blue-image-attachment",
+                  "description": "The image to use as the blue colour channel"
+                },
+                {
+                  "name": "blue-image-string",
+                  "description": "The image to use as the blue colour channel"
+                }
+              ],
+              "prefixCommand": "images/mergechannels"
             }
           }
         },
