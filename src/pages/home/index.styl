@@ -1,42 +1,63 @@
-.page-container
-  min-height: calc(100% - var(--header-height))
+@import "buttons.styl"
 
 .container
   max-width: var(--content-width)
   margin: 0 auto
-  flex: 1
-
-.img-block
-  max-height: 512px
-  min-height: 256px
-  height: calc(50vw / 2)
-  width: 100%
-  background-size: cover
-  background-position: 50% 50%
+  
+#front
   display: flex
   justify-content: center
-  box-shadow: var(--box-shadow)
-  
-h1
-  margin: 0
-  padding: 50px 0 0 10%
-  font-size: clamp(1.5em, 3em, 5vw)
-  text-shadow: -4px 4px 1px var(--color-text-shadow)
-
-a
-  color: var(--color-blue)
-  
-.text-block
-  max-width: 100%
-  min-height: 256px
-  display: flex
-  justify-content: space-around
   align-items: center
-  padding: 0 40px
-  flex-wrap: wrap;
-  box-sizing: border-box
+  min-height: calc(100vh - var(--header-height))
+  flex-direction: column
+  text-align: center
+  position: relative
+  
+  & > *
+    padding: 0 20px
 
-.text-box
-  padding: 10px
-  width: 300px
-  flex-shrink: 1
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    background-image: url("/assets/images/logo/wynem.svg")
+    background-size: 64px
+    filter: grayscale(1)
+    opacity: 0.1
+    background-repeat: space
+    -webkit-mask-image: linear-gradient(to right, black, #0002 15%, transparent 30%, transparent 70%, #0002 85%, black)
+  
+  svg, h1, p
+    filter: drop-shadow(0 10px 5px #0008)
+  
+  svg
+    width: 300px
+    height: 300px
+    min-width: 300px
+    min-height: 300px
+    margin-bottom: -50px
+  
+  h1
+    font-size: 3rem
+    margin-bottom: 2px
+
+  p
+    max-width: 640px
+    letter-spacing: 1px
+    opacity: .5
+
+  .button
+    min-width: 128px
+    border-radius: 7.5px
+
+.button-bar
+  display: flex
+  gap: 10px
+  margin: 20px 0
+  
+#about
+  display: flex

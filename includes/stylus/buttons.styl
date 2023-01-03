@@ -11,6 +11,8 @@
   gap: 4px
   cursor: pointer
   user-select: none
+  min-width: 128px
+  border-radius: 7.5px
   
   & > *
     transition: transform .15s
@@ -32,3 +34,11 @@
     height: 28px
     fill: white
     filter: drop-shadow(var(--text-shadow))
+    
+.secondary
+  background-color: var(--color-secondary)
+  transition: filter .15s
+  
+  &:hover
+    background-color: var(--color-secondary)
+    filter: brightness(1.25)
