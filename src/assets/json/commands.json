@@ -2112,6 +2112,12 @@
               "cooldown": 5,
               "description": "Get a link to download the latest OptiFine version."
             },
+            "plugin": {
+              "aliases": [
+                "plugins"
+              ],
+              "description": "View and get details about Blockbench plugins."
+            },
             "setmcaccount": {
               "aliases": [
                 "setaccount",
