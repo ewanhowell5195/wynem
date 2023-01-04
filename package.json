@@ -8,7 +8,7 @@
       "includes"
     ],
     "pugLocals": {
-      "domain": "beta.wynem.com"
+      "domain": "wynem.com"
     },
     "stylusPaths": [
       "includes/stylus"
