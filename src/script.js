@@ -18,9 +18,8 @@ window.getURLParams = s => {
 window.toURLParams = o => {
   let arr = []
   for (let k in o) if (o.hasOwnProperty(k) && o[k] != null) {
-    if (o[k] === true) {
-      arr.push(`${arr.length == 0 ? "?" : "&"}${k}`)
-    } else {
+    if (o[k] === true) arr.push(`${arr.length == 0 ? "?" : "&"}${k}`)
+    else {
       let encodedVal = encodeURIComponent(o[k])
         .replace(/%3A/g, ":")
         .replace(/%3B/g, ";")
@@ -47,9 +46,7 @@ window.imageObserver  =  new IntersectionObserver((entries, observer) => {
         entry.target.src  =  entry.target.dataset.src
         imageObserver.unobserve(entry.target)
       }
-    } else {
-      imageObserver.unobserve(entry.target)
-    }
+    } else imageObserver.unobserve(entry.target)
   })
 })
 
@@ -134,6 +131,7 @@ let pageLoadPromise = Promise.resolve()
 let isOpeningPage = false
 window.openPage = function(url, updateHistory = false, forceUpdate = false) {
   if (!forceUpdate && (isOpeningPage || compareURLs(url, location))) return
+  $(document.body).removeClass("no-scroll")
   return pageLoadPromise = pageLoadPromise.finally(async () => {
     $("#mobile-menu").addClass("hidden")
     $('link[rel="icon"][sizes="16x16"]').attr("href", "/assets/images/logo/logo_16.webp")
