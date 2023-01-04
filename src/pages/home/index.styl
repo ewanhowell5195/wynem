@@ -38,10 +38,8 @@
     filter: drop-shadow(0 10px 5px #0008)
   
   svg
-    width: 300px
-    height: 300px
-    min-width: 300px
-    min-height: 300px
+    width: @css{ min(300px, 60vw) }
+    height: @css{ min(300px, 60vw) }
     margin-bottom: -30px
   
   h1
@@ -90,9 +88,11 @@
   display: flex
   gap: 40px
   align-items: flex-start
+  max-width: calc(100vw - 80px)
 
   img
     width: 384px
+    max-width: calc(100vw - 80px)
 
 .content-box-text
   max-width: 512px
@@ -111,3 +111,51 @@
     
   .button
     margin-top: 20px
+
+@media only screen and (max-width: 768px)
+  #front
+    h1
+      transform: scale(0.9)
+      
+  .content-box
+    flex-direction: column
+    align-items: center
+    position: relative
+    gap: 20px
+    margin: 80px 0 40px
+    
+    &:nth-child(4)
+      margin-bottom: 100px
+      
+  .content-box-text
+    display: flex
+    flex-direction: column
+    align-items: center
+    order: 1
+    
+    p, h1
+      text-align: center
+      
+    h1
+      position: absolute
+      top: 0
+      transform: translateY(calc(-100% - 20px))
+      
+@media only screen and (max-width: 700px)
+  #front h1
+    transform: scale(0.8)
+    
+@media only screen and (max-width: 600px)
+  #front h1
+    transform: scale(0.7)
+    
+@media only screen and (max-width: 500px)
+  #front h1
+    transform: scale(0.6)
+    
+  .button-bar
+    flex-direction: column
+    
+@media only screen and (max-width: 450px)
+  #front h1
+    transform: scale(0.5)
