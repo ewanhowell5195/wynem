@@ -1,12 +1,51 @@
 #front
   include /assets/images/logo/wynem.svg
-  h1 A bot that does (almost) everything
+  h1 A bot that does 
+   span
+   |  everything
   p Wynem is a multipurpose discord bot that has a vast array of features for all sorts of purposes. From Moderation, to Fun, to Image Editing!
   .button-bar
-    a.button(href = `https://invite.${self.domain}/`)
-      span Invite
-    #about-button.button.secondary
-      span Learn more
+    a.button(href = `https://invite.${self.domain}/`): span Invite
+    #about-button.button.secondary: span Learn more
 .container
   #about
-    h1 hello there
+  .content-box
+    img(src = "./assets/images/home/snap.webp")
+    .content-box-text
+      h1 Advanced Image Commands
+      p Wynem has advanced image commands that allow you to manipulate images in a variety of ways. You can resize images, add text, merge multiple images, and much more!
+      p Images can be grabbed from a large variety of sources, such as previous messages, user avatars, user banners, YouTube thumbnails, Minecraft textures, and many others.
+      .spacer
+      a.button(href = "/commands/prefix/images", is = "f-a"): span View image commands
+  .content-box
+    .content-box-text
+      h1 Useful Utilities
+      p Wynem includes lots of useful utilities, such as:
+      ul
+        li Polls, which allow users to vote on a topic
+        li Reminders, to remind you of things that you need to do
+        li An Embed Builder, to create your own embeds with
+        li A Colour Previewer, to view a colour, and get it in other formats
+      .spacer
+      a.button(href = "/commands/prefix/images", is = "f-a"): span View utilities
+    img(src = "./assets/images/home/poll.webp")
+  .content-box
+    img(src = "./assets/images/home/records.webp")
+    .content-box-text
+      h1 Moderation Tools
+      p You can find all your standard tools for moderating your server:
+      ul
+        li Muting (using Discord's timeout system)
+        li Warning
+        li Kicking
+        li Banning
+      p Notes can be added to users by any of the moderators, allowing you to remember things about users later on, especially if they change their username or avatar.
+      p Wynem can purge messages from a channel, targeting all users, or just a specifc user.
+      .spacer
+      a.button(href = "/commands/prefix/moderation", is = "f-a"): span View image commands
+  .button-bar
+    a.button(href = `https://invite.${self.domain}/`): span Invite now!
+    a.button.secondary(href = "/features", is = "f-a")
+      span View 
+        s more
+        |  less features

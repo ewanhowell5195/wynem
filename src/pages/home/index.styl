@@ -3,6 +3,10 @@
 .container
   max-width: var(--content-width)
   margin: 0 auto
+  padding: 20px 20px 80px
+  display: flex
+  flex-direction: column
+  align-items: center
   
 #front
   display: flex
@@ -26,7 +30,6 @@
     z-index: -1
     background-image: url("/assets/images/logo/wynem.svg")
     background-size: 64px
-    filter: grayscale(1)
     opacity: 0.1
     background-repeat: space
     -webkit-mask-image: linear-gradient(to right, black, #0002 15%, transparent 30%, transparent 70%, #0002 85%, black)
@@ -39,11 +42,30 @@
     height: 300px
     min-width: 300px
     min-height: 300px
-    margin-bottom: -50px
+    margin-bottom: -30px
   
   h1
     font-size: 3rem
     margin-bottom: 2px
+    white-space: pre
+    
+    span
+      position: relative
+      opacity: 0.5
+      
+      &::before
+        content: "(almost)"
+        position: absolute
+        font-size: 1.25rem
+        vertical-align: middle
+        transform: translate(calc(-50% - 2px), -25px) rotateZ(-5deg)
+      
+      &::after
+        content: "\29fc"
+        position: absolute
+        font-size: 2.5rem
+        font-family: initial
+        transform: translate(-50%, -15px) scaleX(1) rotateZ(-95deg)
 
   p
     max-width: 640px
@@ -56,8 +78,36 @@
 
 .button-bar
   display: flex
-  gap: 10px
+  gap: 20px
   margin: 20px 0
-  
+
 #about
+  padding-top: calc(var(--header-height) + 20px)
+  margin-top: calc(-20px - var(--header-height))
+
+.content-box
+  margin-bottom: 100px
   display: flex
+  gap: 40px
+  align-items: flex-start
+
+  img
+    width: 384px
+
+.content-box-text
+  max-width: 512px
+  text-shadow: 0 2px 1px #0008
+
+  h1
+    text-shadow: 0 5px 3px #0008
+    padding-bottom: 20px
+    
+  p
+    font-size: 1.25rem
+    line-height: 1.75rem
+    
+  li
+    margin-bottom: 10px
+    
+  .button
+    margin-top: 20px

@@ -57,7 +57,7 @@ export default class extends Page {
           href: `/commands/${path.slice(0, index - 1).join("/")}${index !== 1 ? "/" : ""}`
         }).append(
           arrowLeft.clone(),
-          E("span").text("Previous category")
+          E("span").text("Parent category")
         )
       )
       if (category.commands) categories.append(
