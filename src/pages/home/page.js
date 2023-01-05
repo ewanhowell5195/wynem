@@ -1,9 +1,8 @@
 export default class extends Page {
   constructor() {
-    super("home", true, $ => {
+    super("home", $ => {
       $("#about-button").on("click", () => $("#about")[0].scrollIntoView({ behavior: "smooth" }))
     })
-    $("a").removeClass("selected")
     $('[href="/"]').addClass("selected")
   }
 

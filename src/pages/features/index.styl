@@ -1,6 +1,32 @@
 .container
   max-width: var(--content-width)
   margin: 0 auto
-
-p
   padding: 20px
+
+h1
+  font-size: 2.5rem
+  text-shadow: -4px 4px 1px var(--color-text-shadow)
+
+.features
+  display: flex
+  flex-direction: column
+  gap: 20px
+  padding-top: 20px
+
+.feature
+  background-color: var(--color-grey-light)
+  box-shadow: var(--box-shadow)
+  padding: 20px
+  color: var(--color-text-white)
+  text-decoration: none
+  transition: background-color .15s
+  border-radius: 10px
+  
+  &:hover
+    background-color: var(--color-blue)
+
+.title
+  font-size: 2rem
+  font-weight: 700
+  padding-bottom: 10px
+  text-shadow: -3px 3px 1px var(--color-text-shadow)

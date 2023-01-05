@@ -3,7 +3,6 @@ import "/js/libs/FileSaver.js"
 export default class extends Page {
   constructor() {
     super("cem")
-    $("a").removeClass("selected")
     $('[href="/cem"]').addClass("selected")
   }
 

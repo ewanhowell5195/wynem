@@ -47,7 +47,7 @@
                 },
                 "customcommands": {
                   "description": [
-                    "Custom commands are commands that you can configure do respond with whatever you want.",
+                    "Custom commands are commands that you can configure to respond with whatever you want.",
                     "You can use \"e!help custom\" to view all the custom commands.",
                     "Custom command types:\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an Image/Gif/Video in chat\nEmbed: Will send an embed"
                   ],

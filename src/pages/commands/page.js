@@ -1,7 +1,6 @@
 export default class extends Page {
   constructor() {
     super("commands")
-    $("a").removeClass("selected")
     $('[href="/commands"]').addClass("selected")
   }
 

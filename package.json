@@ -1,7 +1,8 @@
 {
   "type": "module",
   "webbuilder": {
-    "cloudflare_spa_router": true,
+    "cloudflareSPARouter": true,
+    "useTaggedTemplateReplacer": true,
     "uglify": true,
     "watch": [
       "src",
@@ -13,9 +14,12 @@
     "stylusPaths": [
       "includes/stylus"
     ],
-    "useTaggedTemplateReplacer": true
+    "forceHardReload": [
+      "src/pages",
+      "src/css"
+    ]
   },
   "dependencies": {
-    "webbuilder": "github:EvenTorset/WebBuilder"
+    "webbuilder": "github:EvenTorset/WebBuilder#56280536070bc7e59c3b53e2fdcac26a3b0513c6"
   }
 }

@@ -28,16 +28,13 @@ class PageBody extends HTMLElement {
 customElements.define("page-body", PageBody)
 
 window.Page = class Page extends HTMLElement {
-  constructor(path, hasStyle = true, onReady = () => {}) {
+  constructor(path, onReady = () => {}) {
     super()
     this.path = path
     this.hasBeenConnected = false
     this.hasLoaded = false
     this.setProgress = () => {}
     this.attachShadow({mode: "open"})
-    if (hasStyle) this.shadowRoot.append(
-      E("link").attr("rel", "stylesheet").attr("href", `/pages/${this.path}/index.css`)[0]
-    )
     this.ready = fetch(`/pages/${this.path}/`).then(e => e.text()).then(async content => {
       this.shadowBody = E("page-body")
       this.shadowBody.addClass("preload")

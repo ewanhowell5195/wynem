@@ -111,13 +111,14 @@ function pageRoute(path, rgx) {
 
 const routes = [
   pageRoute("home", "/"),
-  pageRoute("features"),
   pageRoute("commands", /\/commands(\/(?<path>.+))?/),
   pageRoute("colours"),
   pageRoute("privacy"),
   pageRoute("terms"),
   pageRoute("cem"),
-  pageRoute("cemanimation")
+  pageRoute("cemanimation"),
+  pageRoute("features"),
+  pageRoute("features/buttonroles")
 ]
 
 function compareURLs(a, b) {
@@ -132,6 +133,7 @@ let isOpeningPage = false
 window.openPage = function(url, updateHistory = false, forceUpdate = false) {
   if (!forceUpdate && (isOpeningPage || compareURLs(url, location))) return
   $(document.body).removeClass("no-scroll")
+  $("a").removeClass("selected")
   return pageLoadPromise = pageLoadPromise.finally(async () => {
     $("#mobile-menu").addClass("hidden")
     $('link[rel="icon"][sizes="16x16"]').attr("href", "/assets/images/logo/logo_16.webp")

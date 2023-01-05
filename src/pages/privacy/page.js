@@ -1,7 +1,6 @@
 export default class extends Page {
   constructor() {
     super("privacy")
-    $("a").removeClass("selected")
     $('[href="/privacy"]').addClass("selected")
   }
 
