@@ -49,7 +49,7 @@
                   "description": [
                     "Custom commands are commands that you can configure to respond with whatever you want.",
                     "You can use \"e!help custom\" to view all the custom commands.",
-                    "Custom command types:\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an Image/Gif/Video in chat\nEmbed: Will send an embed"
+                    "Custom command types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons"
                   ],
                   "commands": {
                     "addcustomcommand": {
@@ -335,7 +335,6 @@
             },
             "embedcolour": {
               "aliases": [
-                "customembed",
                 "customembedcolour",
                 "customcolour",
                 "customembedcolor",
@@ -2031,7 +2030,10 @@
                     "skinpreview"
                   ],
                   "arguments": "[format] {image}",
-                  "description": "Make a 2D preview for a skin texture. The format is either \"steve\" or \"alex\""
+                  "description": [
+                    "Make a 2D preview for a skin texture.",
+                    "The format is either \"steve\" or \"alex\""
+                  ]
                 },
                 "renderskin": {
                   "aliases": [
@@ -2392,6 +2394,64 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
+                  ]
+                }
+              }
+            },
+            "autoresponses": {
+              "description": [
+                "Auto-responses are a way to make the bot respond to triggers in regular messages.",
+                "Triggers have two modes, full and contains. Full mode will only match if the entire message is the same as the trigger. Contains mode will match if the message contains the trigger anywhere inside it.",
+                "Custom command types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons\nEmoji Reactions: Will react to the message with some emoji reactions"
+              ],
+              "commands": {
+                "addautoresponse": {
+                  "aliases": [
+                    "newautoresponse",
+                    "autoresponseadd",
+                    "autoresponsenew",
+                    "autoresponse"
+                  ],
+                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "removeautoresponse": {
+                  "aliases": [
+                    "deleteautoresponse",
+                    "autoresponseremove",
+                    "autoresponsedelete"
+                  ],
+                  "arguments": "[command]",
+                  "description": [
+                    "Remove an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "viewautoresponse": {
+                  "aliases": [
+                    "showautoresponse",
+                    "autoresponseview",
+                    "autoresponseshow",
+                    "viewautoresponses",
+                    "showautoresponses",
+                    "autoresponsesview",
+                    "autoresponsesshow"
+                  ],
+                  "arguments": "[command]",
+                  "description": [
+                    "View an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
                   ]
                 }
               }
@@ -3138,8 +3198,10 @@
             "createembed": {
               "aliases": [
                 "makeembed",
+                "customembed",
                 "embedcreate",
                 "embedmake",
+                "embedcustom",
                 "embed",
                 "mbed"
               ],
