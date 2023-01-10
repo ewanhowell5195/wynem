@@ -2402,7 +2402,7 @@
               "description": [
                 "Auto-responses are a way to make the bot respond to triggers in regular messages.",
                 "Triggers have two modes, full and contains. Full mode will only match if the entire message is the same as the trigger. Contains mode will match if the message contains the trigger anywhere inside it.",
-                "Custom command types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons\nEmoji Reactions: Will react to the message with some emoji reactions"
+                "Auto-response types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons\nEmoji Reactions: Will react to the message with some emoji reactions"
               ],
               "commands": {
                 "addautoresponse": {
