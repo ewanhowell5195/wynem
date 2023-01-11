@@ -2401,7 +2401,7 @@
             "autoresponses": {
               "description": [
                 "Auto-responses are a way to make the bot respond to triggers in regular messages.",
-                "Triggers have two modes, full and contains. Full mode will only match if the entire message is the same as the trigger. Contains mode will match if the message contains the trigger anywhere inside it.",
+                "Triggers have four modes: full, contains, words ordered, and words unordered.\n\nFull mode will only match if the entire message is the same as the trigger.\n\nContains mode will match if the message contains the trigger anywhere inside it.\n\nWords ordered mode will match as long as the message contains all the trigger's words in it, in the order that they were provided.\n\nWords unordered mode will match as long as the message contains all the trigger's words in it. The order the words appear in doesn't matter.\n\nFor both words modes, other words can appear in between the required words.",
                 "Auto-response types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons\nEmoji Reactions: Will react to the message with some emoji reactions"
               ],
               "commands": {
