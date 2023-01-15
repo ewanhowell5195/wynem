@@ -494,14 +494,16 @@
                   "description": "Play Connect 4 against another member.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "fun/games/connect4"
                 },
                 "rockpaperscissors": {
                   "aliases": [
                     "rps"
                   ],
                   "arguments": "<member>",
-                  "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them."
+                  "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
+                  "slashCommand": "fun/games/rockpaperscissors"
                 },
                 "tictactoe": {
                   "aliases": [
@@ -514,7 +516,8 @@
                   "description": [
                     "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
                     "Difficulties:\n\neasy\nmedium\nhard\nexpert"
-                  ]
+                  ],
+                  "slashCommand": "fun/games/tictactoe"
                 }
               }
             }
@@ -758,6 +761,16 @@
                     "The brightness is a range of -100 to 100."
                   ],
                   "slashCommand": "imagefilter/brightness"
+                },
+                "colourise": {
+                  "aliases": [
+                    "colorize",
+                    "colourize",
+                    "colorise"
+                  ],
+                  "arguments": "[colour] {image}",
+                  "description": "Colourise an image.",
+                  "slashCommand": "imagefilter/colourise"
                 },
                 "convert": {
                   "aliases": [
@@ -2430,7 +2443,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/autoresponses/addautoresponse"
                 },
                 "removeautoresponse": {
                   "aliases": [
@@ -2446,7 +2460,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/autoresponses/removeautoresponse"
                 },
                 "viewautoresponse": {
                   "aliases": [
@@ -2466,7 +2481,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/autoresponses/viewautoresponse"
                 }
               }
             },
@@ -3519,6 +3535,60 @@
             }
           }
         },
+        "fun": {
+          "categories": {
+            "games": {
+              "commands": {
+                "connect4": {
+                  "description": "Play Connect 4 against another member.",
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against",
+                      "required": true
+                    },
+                    {
+                      "name": "board-width",
+                      "description": "The width of the board"
+                    },
+                    {
+                      "name": "board-height",
+                      "description": "The height of the board"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/connect4"
+                },
+                "rockpaperscissors": {
+                  "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/rockpaperscissors"
+                },
+                "tictactoe": {
+                  "description": [
+                    "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
+                    "Difficulties:\n\neasy\nmedium\nhard\nexpert"
+                  ],
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against"
+                    },
+                    {
+                      "name": "difficulty",
+                      "description": "The difficulty of the AI (if no member provided)"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/tictactoe"
+                }
+              }
+            }
+          }
+        },
         "image": {
           "categories": {
             "manipulation": {
@@ -3928,6 +3998,25 @@
                 }
               ],
               "prefixCommand": "images/filters/brightness"
+            },
+            "colourise": {
+              "description": "Colourise an image.",
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The colour to colourise with",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/colourise"
             },
             "convert": {
               "description": [
@@ -4465,6 +4554,42 @@
         },
         "serverconfig": {
           "categories": {
+            "autoresponses": {
+              "commands": {
+                "addautoresponse": {
+                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "prefixCommand": "server/autoresponses/addautoresponse"
+                },
+                "removeautoresponse": {
+                  "description": [
+                    "Remove an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "options": [
+                    {
+                      "name": "auto-response",
+                      "description": "The auto-response to remove",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "server/autoresponses/removeautoresponse"
+                },
+                "viewautoresponse": {
+                  "description": [
+                    "View an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "options": [
+                    {
+                      "name": "auto-response",
+                      "description": "The auto-response to view",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "server/autoresponses/viewautoresponse"
+                }
+              }
+            },
             "customcommands": {
               "commands": {
                 "addcustomcommand": {
