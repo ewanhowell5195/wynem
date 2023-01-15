@@ -486,6 +486,16 @@
           "categories": {
             "games": {
               "commands": {
+                "connect4": {
+                  "aliases": [
+                    "c4"
+                  ],
+                  "arguments": "<member> [boardWidth] [boardHeight]",
+                  "description": "Play Connect 4 against another member.",
+                  "permissions": [
+                    "Guild Only"
+                  ]
+                },
                 "rockpaperscissors": {
                   "aliases": [
                     "rps"
@@ -682,8 +692,12 @@
                 "image": {
                   "aliases": [
                     "newimage",
+                    "createimage",
+                    "makeimage",
                     "img",
-                    "newimg"
+                    "newimg",
+                    "createimg",
+                    "makeimg"
                   ],
                   "arguments": "[width] [height] [colour]",
                   "description": "Generate a new blank image."
