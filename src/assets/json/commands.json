@@ -920,7 +920,8 @@
                         "sup"
                       ],
                       "arguments": "<member>",
-                      "description": "Make a member appear!"
+                      "description": "Make a member appear!",
+                      "slashCommand": "imagefun/avatars/appear"
                     },
                     "avatarpie": {
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
@@ -959,7 +960,8 @@
                         "peace"
                       ],
                       "arguments": "<member>",
-                      "description": "Make a member disappear!"
+                      "description": "Make a member disappear!",
+                      "slashCommand": "imagefun/avatars/disappear"
                     },
                     "distractedboyfriend": {
                       "aliases": [
@@ -4276,6 +4278,32 @@
         },
         "imagefun": {
           "categories": {
+            "avatars": {
+              "commands": {
+                "appear": {
+                  "description": "Make a member appear!",
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to appear",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/avatars/appear"
+                },
+                "disappear": {
+                  "description": "Make a member disappear!",
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to disappear",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/avatars/disappear"
+                }
+              }
+            },
             "texts": {
               "commands": {
                 "breakingnews": {
