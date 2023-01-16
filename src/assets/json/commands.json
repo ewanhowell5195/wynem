@@ -913,6 +913,15 @@
               "categories": {
                 "avatars": {
                   "commands": {
+                    "appear": {
+                      "aliases": [
+                        "arrive",
+                        "fadein",
+                        "sup"
+                      ],
+                      "arguments": "<member>",
+                      "description": "Make a member appear!"
+                    },
                     "avatarpie": {
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                       "description": "Merge a bunch of avatars into one image."
@@ -946,7 +955,6 @@
                       "aliases": [
                         "gone",
                         "fadeaway",
-                        "fade",
                         "peaceout",
                         "peace"
                       ],
