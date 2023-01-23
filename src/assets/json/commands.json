@@ -1658,7 +1658,7 @@
                   "arguments": "[colour] {image}",
                   "cooldown": 5,
                   "description": "Set the background colour for an image with transparency.",
-                  "slashCommand": "image/manipulation/background"
+                  "slashCommand": "imagemanipulation/background"
                 },
                 "crop": {
                   "aliases": [
@@ -1667,12 +1667,16 @@
                   ],
                   "arguments": "[x] [y] [width] [height] {image}",
                   "description": "Crop out a region of an image.",
-                  "slashCommand": "image/manipulation/crop"
+                  "slashCommand": "imagemanipulation/crop"
                 },
                 "overlay": {
-                  "arguments": "{overlayImage} {baseImage}",
-                  "description": "Overlay an image on top of another image, stretching it to fill the entire image.",
-                  "slashCommand": "image/manipulation/overlay"
+                  "arguments": "[location] [stretch] [blend] {overlayImg} {baseImg}",
+                  "description": [
+                    "Overlay an image on top of another image, filling the entire selected location.",
+                    "\"stretch\" is a boolean that controls whether the overlayed image will be stretched to fill the location.",
+                    "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
+                  ],
+                  "slashCommand": "imagemanipulation/overlay"
                 },
                 "pad": {
                   "aliases": [
@@ -1685,12 +1689,12 @@
                     "Add padding to the sides of an image.",
                     "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
                   ],
-                  "slashCommand": "image/manipulation/pad"
+                  "slashCommand": "imagemanipulation/pad"
                 },
                 "paste": {
                   "arguments": "[x] [y] [w] [h] {image} {image}",
                   "description": "Paste an image onto another image.",
-                  "slashCommand": "image/manipulation/paste"
+                  "slashCommand": "imagemanipulation/paste"
                 },
                 "resize": {
                   "arguments": "[width] [height] [mode] {image}",
@@ -1699,7 +1703,7 @@
                     "Interpolation modes only work on static images.",
                     "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
                   ],
-                  "slashCommand": "image/manipulation/resize",
+                  "slashCommand": "imagemanipulation/resize",
                   "contextCommand": "message/resize-image"
                 },
                 "rotate": {
@@ -1708,7 +1712,7 @@
                   ],
                   "arguments": "[degrees] {image}",
                   "description": "Rotate an image. Defaults to 90°.",
-                  "slashCommand": "image/manipulation/rotate"
+                  "slashCommand": "imagemanipulation/rotate"
                 },
                 "scale": {
                   "aliases": [
@@ -1718,18 +1722,18 @@
                   ],
                   "arguments": "{image}",
                   "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
-                  "slashCommand": "image/manipulation/scale",
+                  "slashCommand": "imagemanipulation/scale",
                   "contextCommand": "message/scale-image"
                 },
                 "square": {
                   "arguments": "{image}",
                   "description": "Add transparent padding to an image to make it a square.",
-                  "slashCommand": "image/manipulation/square"
+                  "slashCommand": "imagemanipulation/square"
                 },
                 "trim": {
                   "arguments": "{image}",
                   "description": "Remove the transparent pixels from the edge of an image.",
-                  "slashCommand": "image/manipulation/trim"
+                  "slashCommand": "imagemanipulation/trim"
                 }
               }
             },
@@ -3835,243 +3839,6 @@
         },
         "image": {
           "categories": {
-            "manipulation": {
-              "commands": {
-                "background": {
-                  "description": "Set the background colour for an image with transparency.",
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "colour",
-                      "description": "The new background colour",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/background"
-                },
-                "crop": {
-                  "description": "Crop out a region of an image.",
-                  "options": [
-                    {
-                      "name": "x",
-                      "description": "The top left X coordinate of the crop region",
-                      "required": true
-                    },
-                    {
-                      "name": "y",
-                      "description": "The top left Y coordinate of the crop region",
-                      "required": true
-                    },
-                    {
-                      "name": "width",
-                      "description": "The width of the crop region",
-                      "required": true
-                    },
-                    {
-                      "name": "height",
-                      "description": "The height of the crop region",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/crop"
-                },
-                "overlay": {
-                  "description": "Overlay an image on top of another image, stretching it to fill the entire image.",
-                  "options": [
-                    {
-                      "name": "overlay-image-attachment",
-                      "description": "The image to overlay"
-                    },
-                    {
-                      "name": "overlay-image-string",
-                      "description": "The image to overlay"
-                    },
-                    {
-                      "name": "base-image-attachment",
-                      "description": "The image to overlay onto"
-                    },
-                    {
-                      "name": "base-image-string",
-                      "description": "The image to overlay onto"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/overlay"
-                },
-                "pad": {
-                  "description": [
-                    "Add padding to the sides of an image.",
-                    "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
-                  ],
-                  "options": [
-                    {
-                      "name": "size",
-                      "description": "The amount of pixels to pad",
-                      "required": true
-                    },
-                    {
-                      "name": "direction",
-                      "description": "The direction to apply the padding"
-                    },
-                    {
-                      "name": "colour",
-                      "description": "The colour of the padding"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/pad"
-                },
-                "paste": {
-                  "description": "Paste an image onto another image.",
-                  "options": [
-                    {
-                      "name": "x",
-                      "description": "The x location of the pasted image"
-                    },
-                    {
-                      "name": "y",
-                      "description": "The y location of the pasted image"
-                    },
-                    {
-                      "name": "width",
-                      "description": "The width of the pasted image"
-                    },
-                    {
-                      "name": "height",
-                      "description": "The height of the pasted image"
-                    },
-                    {
-                      "name": "paste-image-attachment",
-                      "description": "The image to paste"
-                    },
-                    {
-                      "name": "paste-image-string",
-                      "description": "The image to paste"
-                    },
-                    {
-                      "name": "base-image-attachment",
-                      "description": "The image to paste onto"
-                    },
-                    {
-                      "name": "base-image-string",
-                      "description": "The image to paste onto"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/paste"
-                },
-                "resize": {
-                  "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
-                  "options": [
-                    {
-                      "name": "width",
-                      "description": "The new width of the image",
-                      "required": true
-                    },
-                    {
-                      "name": "height",
-                      "description": "The new height of the image"
-                    },
-                    {
-                      "name": "interpolation",
-                      "description": "The interpolation to use for the resize (static images only)"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/resize",
-                  "contextCommand": "message/resize-image"
-                },
-                "rotate": {
-                  "description": "Rotate an image. Defaults to 90°.",
-                  "options": [
-                    {
-                      "name": "degrees",
-                      "description": "The degrees to rotate the image"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/rotate"
-                },
-                "scale": {
-                  "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/scale",
-                  "contextCommand": "message/scale-image"
-                },
-                "square": {
-                  "description": "Add transparent padding to an image to make it a square.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/square"
-                },
-                "trim": {
-                  "description": "Remove the transparent pixels from the edge of an image.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/manipulation/trim"
-                }
-              }
-            },
             "mirroring": {
               "commands": {
                 "daad": {
@@ -5188,6 +4955,259 @@
             }
           }
         },
+        "imagemanipulation": {
+          "commands": {
+            "background": {
+              "description": "Set the background colour for an image with transparency.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The new background colour",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/background"
+            },
+            "crop": {
+              "description": "Crop out a region of an image.",
+              "options": [
+                {
+                  "name": "x",
+                  "description": "The top left X coordinate of the crop region",
+                  "required": true
+                },
+                {
+                  "name": "y",
+                  "description": "The top left Y coordinate of the crop region",
+                  "required": true
+                },
+                {
+                  "name": "width",
+                  "description": "The width of the crop region",
+                  "required": true
+                },
+                {
+                  "name": "height",
+                  "description": "The height of the crop region",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/crop"
+            },
+            "overlay": {
+              "description": [
+                "Overlay an image on top of another image, filling the entire selected location.",
+                "\"stretch\" is a boolean that controls whether the overlayed image will be stretched to fill the location.",
+                "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
+              ],
+              "options": [
+                {
+                  "name": "location",
+                  "description": "The location to overlay the image"
+                },
+                {
+                  "name": "stretch",
+                  "description": "If the overlay should be stretched to fill"
+                },
+                {
+                  "name": "blend-method",
+                  "description": "The blend method to use"
+                },
+                {
+                  "name": "overlay-image-attachment",
+                  "description": "The image to overlay"
+                },
+                {
+                  "name": "overlay-image-string",
+                  "description": "The image to overlay"
+                },
+                {
+                  "name": "base-image-attachment",
+                  "description": "The image to overlay onto"
+                },
+                {
+                  "name": "base-image-string",
+                  "description": "The image to overlay onto"
+                }
+              ],
+              "prefixCommand": "images/manipulation/overlay"
+            },
+            "pad": {
+              "description": [
+                "Add padding to the sides of an image.",
+                "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+              ],
+              "options": [
+                {
+                  "name": "size",
+                  "description": "The amount of pixels to pad",
+                  "required": true
+                },
+                {
+                  "name": "direction",
+                  "description": "The direction to apply the padding"
+                },
+                {
+                  "name": "colour",
+                  "description": "The colour of the padding"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/pad"
+            },
+            "paste": {
+              "description": "Paste an image onto another image.",
+              "options": [
+                {
+                  "name": "x",
+                  "description": "The x location of the pasted image"
+                },
+                {
+                  "name": "y",
+                  "description": "The y location of the pasted image"
+                },
+                {
+                  "name": "width",
+                  "description": "The width of the pasted image"
+                },
+                {
+                  "name": "height",
+                  "description": "The height of the pasted image"
+                },
+                {
+                  "name": "paste-image-attachment",
+                  "description": "The image to paste"
+                },
+                {
+                  "name": "paste-image-string",
+                  "description": "The image to paste"
+                },
+                {
+                  "name": "base-image-attachment",
+                  "description": "The image to paste onto"
+                },
+                {
+                  "name": "base-image-string",
+                  "description": "The image to paste onto"
+                }
+              ],
+              "prefixCommand": "images/manipulation/paste"
+            },
+            "resize": {
+              "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
+              "options": [
+                {
+                  "name": "width",
+                  "description": "The new width of the image",
+                  "required": true
+                },
+                {
+                  "name": "height",
+                  "description": "The new height of the image"
+                },
+                {
+                  "name": "interpolation",
+                  "description": "The interpolation to use for the resize (static images only)"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/resize",
+              "contextCommand": "message/resize-image"
+            },
+            "rotate": {
+              "description": "Rotate an image. Defaults to 90°.",
+              "options": [
+                {
+                  "name": "degrees",
+                  "description": "The degrees to rotate the image"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/rotate"
+            },
+            "scale": {
+              "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/scale",
+              "contextCommand": "message/scale-image"
+            },
+            "square": {
+              "description": "Add transparent padding to an image to make it a square.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/square"
+            },
+            "trim": {
+              "description": "Remove the transparent pixels from the edge of an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/trim"
+            }
+          }
+        },
         "imageutility": {
           "commands": {
             "watermark": {
@@ -5920,13 +5940,13 @@
               ],
               "type": "message",
               "prefixCommand": "images/manipulation/resize",
-              "slashCommand": "image/manipulation/resize"
+              "slashCommand": "imagemanipulation/resize"
             },
             "scale-image": {
               "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
               "type": "message",
               "prefixCommand": "images/manipulation/scale",
-              "slashCommand": "image/manipulation/scale"
+              "slashCommand": "imagemanipulation/scale"
             }
           }
         }
