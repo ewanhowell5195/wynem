@@ -287,27 +287,6 @@
                     "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/toggle/quotes"
-                },
-                "togglescamdetection": {
-                  "aliases": [
-                    "enablescamdetection",
-                    "disablescamdetection",
-                    "togglescams",
-                    "enablescams",
-                    "disablescams",
-                    "togglescam",
-                    "enablescam",
-                    "disablescam"
-                  ],
-                  "description": [
-                    "Toggles whether the bot will scan messages in the server for nitro scams.",
-                    "When a scam is detected, the message is deleted, the member is put in timeout, and the server moderators are pinged."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
-                  ],
-                  "slashCommand": "serverconfig/toggle/scamdetection"
                 }
               }
             }
@@ -1669,6 +1648,11 @@
                   "description": "Crop out a region of an image.",
                   "slashCommand": "imagemanipulation/crop"
                 },
+                "opacity": {
+                  "arguments": "[opacity] {image}",
+                  "description": "Change the opacity of an image.",
+                  "slashCommand": "imagemanipulation/opacity"
+                },
                 "overlay": {
                   "arguments": "[location] [stretch] [blend] {overlayImg} {baseImg}",
                   "description": [
@@ -1839,6 +1823,18 @@
               ],
               "arguments": "{image}",
               "description": "Decode an image which has a message encoded in the pixel values."
+            },
+            "emoji": {
+              "aliases": [
+                "emote",
+                "e"
+              ],
+              "arguments": "<emoji> [type/resolution]",
+              "description": [
+                "Get the image of an emoji.",
+                "The type or resolution is optional. Not every type has every emoji.",
+                "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
+              ]
             },
             "encodemessage": {
               "aliases": [
@@ -2272,7 +2268,7 @@
                     "enablemodping",
                     "disablemodping"
                   ],
-                  "description": "Toggles the ability for users to trigger a moderator ping. This also disables modpings on scam detections.",
+                  "description": "Toggles the ability for users to trigger a moderator ping.",
                   "permissions": [
                     "Guild Only",
                     "Administrator"
@@ -2566,18 +2562,6 @@
                     "Manage Emojis And Stickers"
                   ]
                 },
-                "emoji": {
-                  "aliases": [
-                    "emote",
-                    "e"
-                  ],
-                  "arguments": "<emoji> [type/resolution]",
-                  "description": [
-                    "Get the image of an emoji.",
-                    "The type or resolution is optional. Not every type has every emoji.",
-                    "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
-                  ]
-                },
                 "removeemoji": {
                   "aliases": [
                     "emojiremove",
@@ -2794,42 +2778,32 @@
             },
             "logs": {
               "commands": {
-                "removelogs": {
+                "managelogs": {
                   "aliases": [
-                    "removelog"
+                    "setlogs",
+                    "removelogs"
                   ],
-                  "arguments": "[category]",
-                  "description": "Remove a server log channel from the current server",
+                  "description": "Manage the bot logs for the server.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "setlogs": {
-                  "aliases": [
-                    "setlog",
-                    "addlogs",
-                    "addlog"
+                    "Manage Guild"
                   ],
-                  "arguments": "[category] <channel>",
-                  "description": [
-                    "Set the channels for the server logs to be sent to.",
-                    "Available categories:\n\n- all\n- automod\n- members\n- messages\n- moderation\n- server\n- voice"
+                  "botPermissions": [
+                    "Manage Webhooks"
                   ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
+                  "slashCommand": "serverconfig/logs/manage"
                 },
                 "viewlogs": {
                   "aliases": [
-                    "logs"
+                    "logs",
+                    "showlogs"
                   ],
-                  "description": "View the server log channels set up in the current server.",
+                  "description": "View the bot log channels for the server.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/logs/view"
                 }
               }
             },
@@ -5011,6 +4985,24 @@
               ],
               "prefixCommand": "images/manipulation/crop"
             },
+            "opacity": {
+              "description": "Change the opacity of an image.",
+              "options": [
+                {
+                  "name": "opacity",
+                  "description": "The new opacity"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/opacity"
+            },
             "overlay": {
               "description": [
                 "Overlay an image on top of another image, filling the entire selected location.",
@@ -5502,6 +5494,21 @@
                 }
               }
             },
+            "logs": {
+              "commands": {
+                "manage": {
+                  "description": "Manage the bot logs for the server.",
+                  "botPermissions": [
+                    "Manage Webhooks"
+                  ],
+                  "prefixCommand": "server/logs/managelogs"
+                },
+                "view": {
+                  "description": "View the bot log channels for the server.",
+                  "prefixCommand": "server/logs/viewlogs"
+                }
+              }
+            },
             "prefixes": {
               "commands": {
                 "prefix": {
@@ -5529,7 +5536,11 @@
             "roles": {
               "commands": {
                 "buttonroles": {
-                  "description": "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                  "description": [
+                    "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                    "For the role text, provide \"none\" to leave it blank.",
+                    "Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                  ],
                   "prefixCommand": "server/roles/buttonroles"
                 },
                 "joinrole": {
@@ -5552,10 +5563,6 @@
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
                   "prefixCommand": "bot/settings/togglequotes"
-                },
-                "scamdetection": {
-                  "description": "Toggles whether the bot will scan messages in the server for nitro scams.",
-                  "prefixCommand": "bot/settings/togglescamdetection"
                 }
               }
             }
