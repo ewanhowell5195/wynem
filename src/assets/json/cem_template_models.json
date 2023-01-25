@@ -1,5 +1,5 @@
 {
-  "version": "6.10.0",
+  "version": "6.11.0",
   "categories": [
     {
       "name": "Supported",
@@ -40,13 +40,16 @@
           "name": "cave_spider",
           "model": "spider"
         },
-        "chest",
+        {
+          "name": "chest",
+          "texture_name": "normal"
+        },
         {
           "name": "chest_large",
           "display_name": "Chest [Large]",
           "vanilla_textures": [
-            "chest_left",
-            "chest_right"
+            "normal_left",
+            "normal_right"
           ]
         },
         "chicken",
@@ -97,6 +100,7 @@
         "endermite",
         {
           "name": "ender_chest",
+          "texture_name": "ender",
           "model": "chest"
         },
         "end_crystal",
@@ -271,15 +275,16 @@
         },
         {
           "name": "trapped_chest",
-          "model": "chest",
-          "vanilla_textures": [
-            "trapped_left",
-            "trapped_right"
-          ]
+          "texture_name": "trapped",
+          "model": "chest"
         },
         {
           "name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
+          "vanilla_textures": [
+            "trapped_left",
+            "trapped_right"
+          ],
           "model": "chest_large"
         },
         "trident",
@@ -421,7 +426,6 @@
           "name": "chest_large_unedited",
           "file_name": "chest_large",
           "display_name": "Chest [Large]",
-          "texture_name": "chest_large",
           "vanilla_textures": [
             "chest_left",
             "chest_right"
@@ -667,7 +671,6 @@
           "name": "trapped_chest_large_unedited",
           "file_name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
-          "texture_name": "trapped_chest_large",
           "model": "chest_large_unedited",
           "vanilla_textures": [
             "trapped_chest_left",
@@ -745,6 +748,12 @@
       "icon": "build",
       "entities": [
         {
+          "name": "chest_old_uv",
+          "display_name": "Chest [Old UV]",
+          "file_name": "chest",
+          "texture_name": "chest"
+        },
+        {
           "name": "chest_large_old_uv",
           "display_name": "Chest [Large] [Old UV]",
           "file_name": "chest_large",
@@ -755,6 +764,13 @@
           "display_name": "Dragon [Neck & tail]",
           "file_name": "dragon",
           "texture_name": "dragon"
+        },
+        {
+          "name": "ender_chest_old_uv",
+          "display_name": "Ender Chest [Old UV]",
+          "file_name": "ender_chest",
+          "texture_name": "ender_chest",
+          "model": "chest_old_uv"
         },
         {
           "name": "iron_golem_destroy_stages",
@@ -771,6 +787,13 @@
           "popup_width": 600,
           "file_name": "mooshroom",
           "texture_name": "mooshroom"
+        },
+        {
+          "name": "trapped_chest_old_uv",
+          "display_name": "Trapped Chest [Old UV]",
+          "file_name": "trapped_chest",
+          "texture_name": "trapped_chest",
+          "model": "chest_old_uv"
         },
         {
           "name": "trapped_chest_large_old_uv",
@@ -878,7 +901,10 @@
           "name": "chest_large_single_bone",
           "file_name": "chest_large",
           "display_name": "Chest [Large]",
-          "texture_name": "chest_large"
+          "vanilla_textures": [
+            "chest_left",
+            "chest_right"
+          ]
         },
         {
           "name": "chicken_single_bone",
@@ -929,7 +955,10 @@
           "name": "trapped_chest_large_single_bone",
           "file_name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
-          "texture_name": "trapped_chest_large",
+          "vanilla_textures": [
+            "trapped_left",
+            "trapped_right"
+          ],
           "model": "chest_large_single_bone"
         }
       ]
@@ -986,7 +1015,7 @@
         },
         {
           "name": "chest_large_14",
-          "display_name": "Chest Large [1.14]",
+          "display_name": "Chest [Large] [1.14]",
           "file_name": "chest_large",
           "texture_name": "chest_large"
         },
@@ -1018,7 +1047,7 @@
         },
         {
           "name": "trapped_chest_large_14",
-          "display_name": "Trapped Chest Large [1.14]",
+          "display_name": "Trapped Chest [Large] [1.14]",
           "file_name": "trapped_chest_large",
           "texture_name": "trapped_chest_large",
           "model": "chest_large_14"
@@ -1061,6 +1090,45 @@
           "file_name": "zombified_piglin",
           "texture_name": "zombified_piglin",
           "model": "piglin_16"
+        },
+        {
+          "name": "chest_19.2",
+          "display_name": "Chest [1.19.2]",
+          "file_name": "chest",
+          "texture_name": "chest"
+        },
+        {
+          "name": "chest_large_19.2",
+          "display_name": "Chest [Large] [1.19.2]",
+          "file_name": "chest_large",
+          "vanilla_textures": [
+            "normal_left",
+            "normal_right"
+          ]
+        },
+        {
+          "name": "ender_chest_19.2",
+          "display_name": "Ender Chest [1.19.2]",
+          "file_name": "ender_chest",
+          "texture_name": "ender_chest",
+          "model": "chest_19.2"
+        },
+        {
+          "name": "trapped_chest_19.2",
+          "display_name": "Trapped Chest [1.19.2]",
+          "file_name": "trapped_chest",
+          "texture_name": "trapped_chest",
+          "model": "chest_19.2"
+        },
+        {
+          "name": "trapped_chest_large_19.2",
+          "display_name": "Trapped Chest [Large] [1.19.2]",
+          "file_name": "trapped_chest_large",
+          "vanilla_textures": [
+            "trapped_left",
+            "trapped_right"
+          ],
+          "model": "chest_large_19.2"
         },
         {
           "name": "vex_19.2",
@@ -1224,10 +1292,13 @@
     },
     "chest": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAPFBMVEUAAABD6I1TYXRbvPS01OH0hob43XL///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JnThCAQAAAACHRSTlMAAAAAAAAAALfnUqEAAAB1SURBVFjD7dU7EoAgDEXRCMhPRaL736uNStJK4zDvLOAWhABRSqXQIylFISXcKDLXnN/AIqSyCwMHNAQQ+LpMCitVyUoLbELkU+B6CDWvwq8CvWdAzhnTM4XJ2tn7jnswQADrjACeNAQG+hdCJwQQQAABBJoLHICGFVqXVikAAAAASUVORK5CYII=",
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,-10,9,14,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-8,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,4,7,14,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[-8,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,5,23,2,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,-10,9,14,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-8,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,4,7,14,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[-8,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,7,21,2,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "chest_14": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-7,-10,7],\"boxes\":[{\"coordinates\":[-7,0,-7,14,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-7,-9,-7],\"boxes\":[{\"coordinates\":[-7,9,-7,14,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"boxes\":[{\"coordinates\":[-1,7,-8,2,4,1],\"textureOffset\":[0,0]}]}]}"
+    },
+    "chest_19.2": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,-10,9,14,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-8,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,4,7,14,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[-8,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,5,23,2,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "chest_boat": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAAFUSURBVHhe7dZBagJBEEDRIiu3XqERBFfCmBs0WWQbvMGQA7iZA2Qz3iDZZV26c9l4AZkbDN4lQ0lJlQi23TAGp94BPmO1XTTAi5NmKP1CZzSHTl0AG0tdoJJmjRQRyP+CsCukha+V24H9biktyvWP8P0EAUTcOOcmyYFt02ymVTXkQP4QgVkg/TojC455HYCaFQyE3EDERnKeYWD3Bd4+T0rcH0/agQXyhwiXpwgKX+fkwO2Fcv7w82+5M8Cja3ma5f8K8BDTAyxhiLEBqJVC6SXgUQlOiQlsG+EQppWwurrS+g1ckxpIHiJLOsY+AsEpHpWYgJ7axUwHEcgf4jjB8wUsMPqaA99peYejA5P3AABrete+LjsfwwuQxwcskPdXdsQTJIFEB2irr+iJV9JKP9C7r318IHsGGadgd2EAAVsotlBsJ9pD0wIWsIAFLGABC8T5A6e6Y1haCjGuAAAAAElFTkSuQmCC",
@@ -1243,10 +1314,13 @@
     },
     "chest_large": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAGJJREFUSMdjYCpgAAElCFAvhwAGBJCaDKZUXMBAvQMM2umrAApGFTAQiCxBCFgFAStngsFkYwgAKRBLA4HENWfAYOVuMJgcCgbB1FFA0A0EfTEa3aNJbvgpIDZfjIJRMGQAAKihdpZIiKKOAAAAAElFTkSuQmCC",
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_left\",\"id\":\"lid_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_right\",\"id\":\"lid_right\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_left\",\"id\":\"knob_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,5,23,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_right\",\"id\":\"knob_right\",\"invertAxis\":\"xy\",\"translate\":[0,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,5,23,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_left\",\"id\":\"lid_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_right\",\"id\":\"lid_right\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_left\",\"id\":\"knob_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,7,21,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_right\",\"id\":\"knob_right\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,7,21,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "chest_large_14": {
       "model": "{\"textureSize\":[128,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-15,-10,7],\"boxes\":[{\"coordinates\":[-15,0,-7,30,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-15,-9,-7],\"boxes\":[{\"coordinates\":[-15,9,-7,30,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"boxes\":[{\"coordinates\":[-1,7,-8,2,4,1],\"textureOffset\":[0,0]}]}]}"
+    },
+    "chest_large_19.2": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,-10,9,15,10,14],\"textureOffset\":[0,19]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_left\",\"id\":\"lid_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"lid_right\",\"id\":\"lid_right\",\"invertAxis\":\"xy\",\"translate\":[0,-9,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,4,7,15,5,14],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_left\",\"id\":\"knob_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,5,23,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"knob_right\",\"id\":\"knob_right\",\"invertAxis\":\"xy\",\"translate\":[0,-8,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-1,5,23,1,4,1],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "chest_large_old_uv": {
       "model": "{\"textureSize\":[128,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,0,8],\"boxes\":[{\"coordinates\":[-15,0,-7,30,10,14],\"textureOffset\":[0,19]}],\"submodels\":[{\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[0,9,7],\"boxes\":[{\"coordinates\":[-15,0,-14,30,5,14],\"textureOffset\":[0,0]},{\"coordinates\":[-1,-2,-15,2,4,1],\"textureOffset\":[0,0]}]}],\"animations\":[{\"this.rx\":\"torad(180)\",\"lid.rx\":\"lid_left.rx\"}]},{\"part\":\"base_right\"},{\"part\":\"lid_left\"},{\"part\":\"lid_right\"},{\"part\":\"knob_left\"},{\"part\":\"knob_right\"}]}"
@@ -1256,14 +1330,17 @@
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,0,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[0,-10,8,15,10,14],\"textureOffset\":[0,19]}],\"submodels\":[{\"id\":\"left_lid\",\"invertAxis\":\"xy\",\"translate\":[0,-9,8],\"boxes\":[{\"coordinates\":[0,-2,14,1,4,1],\"textureOffset\":[0,0]},{\"coordinates\":[0,-5,0,15,5,14],\"textureOffset\":[0,0]}]}],\"animations\":[{\"this.rx\":0,\"left_lid.rx\":\"lid_left.rx\"}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,0,-7],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-15,-10,8,15,10,14],\"textureOffset\":[0,19]}],\"submodels\":[{\"id\":\"right_lid\",\"invertAxis\":\"xy\",\"translate\":[0,-9,8],\"boxes\":[{\"coordinates\":[-15,-5,0,15,5,14],\"textureOffset\":[0,0]},{\"coordinates\":[-1,-2,14,1,4,1],\"textureOffset\":[0,0]}]}],\"animations\":[{\"this.rx\":0,\"right_lid.rx\":\"lid_right.rx\"}]},{\"part\":\"lid_left\"},{\"part\":\"lid_right\"},{\"part\":\"knob_left\"},{\"part\":\"knob_right\"}]}"
     },
     "chest_large_unedited": {
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-14,8],\"boxes\":[{\"coordinates\":[0,4,-7,15,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,-14,8],\"boxes\":[{\"coordinates\":[-15,4,-7,15,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid_left\",\"id\":\"lid_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-5,7],\"boxes\":[{\"coordinates\":[0,0,-7,15,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"lid_right\",\"id\":\"lid_right\",\"invertAxis\":\"xy\",\"translate\":[0,-5,7],\"boxes\":[{\"coordinates\":[-15,0,-7,15,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob_left\",\"id\":\"knob_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-6,8],\"boxes\":[{\"coordinates\":[0,3,7,1,4,1],\"textureOffset\":[0,0]}]},{\"part\":\"knob_right\",\"id\":\"knob_right\",\"invertAxis\":\"xy\",\"translate\":[0,-6,8],\"boxes\":[{\"coordinates\":[-1,3,7,1,4,1],\"textureOffset\":[0,0]}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base_left\",\"id\":\"base_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-14,8],\"boxes\":[{\"coordinates\":[0,4,-7,15,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"base_right\",\"id\":\"base_right\",\"invertAxis\":\"xy\",\"translate\":[0,-14,8],\"boxes\":[{\"coordinates\":[-15,4,-7,15,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid_left\",\"id\":\"lid_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-5,7],\"boxes\":[{\"coordinates\":[0,0,-7,15,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"lid_right\",\"id\":\"lid_right\",\"invertAxis\":\"xy\",\"translate\":[0,-5,7],\"boxes\":[{\"coordinates\":[-15,0,-7,15,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob_left\",\"id\":\"knob_left\",\"invertAxis\":\"xy\",\"translate\":[-16,-5,7],\"boxes\":[{\"coordinates\":[0,3,7,1,4,1],\"textureOffset\":[0,0]}]},{\"part\":\"knob_right\",\"id\":\"knob_right\",\"invertAxis\":\"xy\",\"translate\":[0,-5,7],\"boxes\":[{\"coordinates\":[-1,3,7,1,4,1],\"textureOffset\":[0,0]}]}]}"
+    },
+    "chest_old_uv": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,8],\"boxes\":[{\"coordinates\":[-7,0,-7,14,10,14],\"textureOffset\":[0,19]}],\"submodels\":[{\"id\":\"lid2\",\"invertAxis\":\"xy\",\"translate\":[0,9,7],\"boxes\":[{\"coordinates\":[-7,0,-14,14,5,14],\"textureOffset\":[0,0]},{\"coordinates\":[-1,-2,-15,2,4,1],\"textureOffset\":[0,0]}]},{\"id\":\"bone\",\"invertAxis\":\"xy\",\"translate\":[8,10,-8]}],\"animations\":[{\"this.rx\":\"torad(180)\",\"lid2.rx\":\"lid.rx\"}]},{\"part\":\"lid\"},{\"part\":\"knob\"}]}"
     },
     "chest_single_bone": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAGVJREFUSMdjYFIvYAACJQgohwAGJCC10hhEqbiAgFNFBwi001kBFIwqgADckSUIAasgYCYEGEMAWIFYGggkrjkDAqdm7waBnaahIBBMJQUE3UDQF6PRPZrkhp8CYvPFKBgFQwYAAFYnZuqihhxmAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-7,-10,9,14,10,14],\"textureOffset\":[0,19]}],\"submodels\":[{\"id\":\"lid2\",\"invertAxis\":\"xy\",\"translate\":[0,-9,9],\"boxes\":[{\"coordinates\":[-7,-5,0,14,5,14],\"textureOffset\":[0,0]},{\"coordinates\":[-1,-2,14,2,4,1],\"textureOffset\":[0,0]}]}],\"animations\":[{\"this.rx\":0,\"lid2.rx\":\"lid.rx\"}]},{\"part\":\"lid\"},{\"part\":\"knob\"}]}"
     },
     "chest_unedited": {
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,-14,8],\"boxes\":[{\"coordinates\":[-7,4,-7,14,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-8,-5,7],\"boxes\":[{\"coordinates\":[-7,0,-7,14,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[-8,-6,8],\"boxes\":[{\"coordinates\":[-1,3,7,2,4,1],\"textureOffset\":[0,0]}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,-14,8],\"boxes\":[{\"coordinates\":[-7,4,-7,14,10,14],\"textureOffset\":[0,19]}]},{\"part\":\"lid\",\"id\":\"lid\",\"invertAxis\":\"xy\",\"translate\":[-8,-5,7],\"boxes\":[{\"coordinates\":[-7,0,-7,14,5,14],\"textureOffset\":[0,0]}]},{\"part\":\"knob\",\"id\":\"knob\",\"invertAxis\":\"xy\",\"translate\":[-8,-5,7],\"boxes\":[{\"coordinates\":[-1,3,7,2,4,1],\"textureOffset\":[0,0]}]}]}"
     },
     "chicken": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAKpJREFUOMtjYGAvL1JSYGAoL1dSYgByQGxUwN5R5IJQ0K6CqQBsgqCx8cxVq7CZIChsbAmUgigAcmbOWoWqQEw41HLnmlMM5UpgTvDsWafIUyAItIEIBdjcAHUkAz5gbGy8Cq8S09DgNWdO0U1BESFHYioQFBRUUlKaOXNmeXk5VgViaYkqLk6zd++s6GingwKgeyxnzpyFWwGQbbl7N6kKkL2J1YpRQBwAAPGNc0WDl7qEAAAAAElFTkSuQmCC",
