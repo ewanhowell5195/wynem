@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "path": "server/roles/buttonroles",
+        "name": "buttonroles"
+      }
+    ],
+    "slash": [
+      {
+        "path": "serverconfig/roles/buttonroles",
+        "name": "buttonroles"
+      }
+    ]
+  }
+}

@@ -1,6 +1,15 @@
 export default class extends Page {
   constructor() {
-    super("features")
+    super("features", async $ => {
+      await fetchJSON("features")
+      const section = $("#features")
+      for (const feature of features) {
+        E("a", { is: "f-a" }).attr("href", `/features/${feature.id}`).addClass("feature").append(
+          E("div").addClass("title").text(feature.name ?? feature.id.replace(/-/g, " ").toTitleCase()),
+          E("div").addClass("text").text(feature.description)
+        ).appendTo(section)
+      }
+    })
     $('[href="/features"]').addClass("selected")
   }
 

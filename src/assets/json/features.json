@@ -1,0 +1,10 @@
+[
+  {
+    "id": "button-roles",
+    "description": "A way for users to apply roles to themselves"
+  },
+  {
+    "id": "custom-commands",
+    "description": "Commands that you can configure to respond with whatever you want"
+  }
+]

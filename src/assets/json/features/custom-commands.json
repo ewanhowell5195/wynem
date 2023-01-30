@@ -1,0 +1,32 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "path": "bot/commands/customcommands/addcustomcommand",
+        "name": "addcustomcommand"
+      },
+      {
+        "path": "bot/commands/customcommands/removecustomcommand",
+        "name": "removecustomcommand"
+      },
+      {
+        "path": "bot/commands/help",
+        "name": "help custom"
+      }
+    ],
+    "slash": [
+      {
+        "path": "customcommand",
+        "name": "customcommand"
+      },
+      {
+        "path": "serverconfig/customcommands/addcustomcommand",
+        "name": "addcustomcommand"
+      },
+      {
+        "path": "serverconfig/customcommands/removecustomcommand",
+        "name": "removecustomcommand"
+      }
+    ]
+  }
+}

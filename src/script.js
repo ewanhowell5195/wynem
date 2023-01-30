@@ -118,7 +118,7 @@ const routes = [
   pageRoute("cem"),
   pageRoute("cemanimation"),
   pageRoute("features"),
-  pageRoute("features/buttonroles")
+  pageRoute("feature", "/features/:name")
 ]
 
 function compareURLs(a, b) {
@@ -208,8 +208,13 @@ customElements.define("f-a", FastAnchorElement, { extends: "a" })
 
 const jsonFetch = {}
 window.fetchJSON = async name => {
-  if (window[name] === undefined && jsonFetch[name] === undefined) jsonFetch[name] = fetch(`/assets/json/${name}.json`).then(e => e.json())
-  window[name] = await jsonFetch[name]
+  if (window[name] === undefined && jsonFetch[name] === undefined) try {
+    jsonFetch[name] = await fetch(`/assets/json/${name}.json`).then(e => e.json())
+  } catch {
+    return false
+  }
+  window[name] = jsonFetch[name]
+  return true
 }
 
 // end
