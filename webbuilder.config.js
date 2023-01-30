@@ -32,6 +32,15 @@ export default {
       }
     }
 
+    for (const f of fs.readdirSync("src/assets/json/features")) {
+      const data = JSON.parse(fs.readFileSync(`src/assets/json/features/${f}`))
+      const feature = path.basename(f, ".json")
+      writeIndex(path.join("features", feature), {
+        title: `${data.title ?? feature.replace(/-/g, " ").toTitleCase()} - Wynem`,
+        description: data.subtitle
+      })
+    }
+
     console.log("Generated open graph")
   }
 }

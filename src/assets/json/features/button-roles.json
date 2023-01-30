@@ -1,4 +1,5 @@
 {
+  "subtitle": "A way for users to apply roles to themselves",
   "commands": {
     "prefix": [
       {
@@ -12,5 +13,37 @@
         "name": "buttonroles"
       }
     ]
-  }
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are button roles?"
+    },
+    {
+      "type": "text",
+      "text": "Button roles are the next evolution of reaction roles, using buttons to apply roles instead of emojis.\n\nYou can create a message using Wynem that has buttons on it that users can click to add and remove roles from themselves."
+    },
+    "spacer",
+    {
+      "type": "image",
+      "name": "buttonroles"
+    },
+    "spacer",
+    {
+      "type": "heading",
+      "text": "Role Types"
+    },
+    {
+      "type": "text",
+      "text": "There are multiple different types of button role that you can create."
+    },
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Normal", "The user can add and remove \"normal\" roles as they wish"],
+        ["Binding", "Once a user has applied a \"binding\" role, it cannot be removed"],
+        ["Unique", "Users can only have one \"unique\" role from a button role message at a time"]
+      ]
+    }
+  ]
 }

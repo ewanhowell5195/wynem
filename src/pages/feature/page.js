@@ -15,7 +15,10 @@ export default class extends Page {
     if (!check) return false
     const $ = this.$
     const feature = window[`features/${args.name}`]
-    $("#title").text(feature.title ?? args.name.replace(/-/g, " ").toTitleCase())
+    const title = feature.title ?? args.name.replace(/-/g, " ").toTitleCase()
+    jQuery("title").text(`${title} - Wynem`)
+    $("#title").text(title)
+    $("#subtitle").text(feature.subtitle)
     if (feature.commands) {
       const commandTabs = $("#command-tabs")
       const commandLists = $("#command-lists")
@@ -42,5 +45,28 @@ export default class extends Page {
         })
       }
     }
+    addBlocks($("#description"), feature.description, args.name)
   }
+}
+
+function addBlocks(element, blocks, feature) {
+  const section = E("div").addClass("section")
+  for (const block of blocks) {
+    if (block === "spacer") {
+      E("div").appendTo(section)
+    } else if (block.type === "heading") {
+      E("div").addClass("heading").html(block.text).appendTo(section)
+    } else if (block.type === "text") {
+      E("div").addClass("text").html(block.text).appendTo(section)
+    } else if (block.type === "tablelist") {
+      const table = E("table").addClass("tablelist").appendTo(section)
+      for (const row of block.rows) {
+        const tr = E("tr").appendTo(table)
+        for (const [i, cell] of row.entries()) tr.append(E("td").html(cell))
+      }
+    } else if (block.type === "image") {
+      E("img").attr("src", `/assets/images/features/${feature}/${block.name}.webp`).css("max-height", `${block.height ?? 256}px`).appendTo(section)
+    }
+  }
+  element.append(section)
 }

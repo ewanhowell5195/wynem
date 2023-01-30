@@ -1,4 +1,5 @@
 {
+  "subtitle": "Commands that you can configure to respond with whatever you want",
   "commands": {
     "prefix": [
       {
@@ -28,5 +29,6 @@
         "name": "removecustomcommand"
       }
     ]
-  }
+  },
+  "description": []
 }
