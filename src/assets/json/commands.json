@@ -1243,7 +1243,11 @@
                   "commands": {
                     "gun": {
                       "arguments": "[expand] [double] {image}",
-                      "description": "Make an image hold a gun. \"expand\" and \"double\" are booleans. \"expand\" puts the gun over the edge of the image"
+                      "description": [
+                        "Make an image hold a gun.",
+                        "\"expand\" and \"double\" are true/false.",
+                        "\"expand\" puts the gun over the edge of the image"
+                      ]
                     },
                     "petpet": {
                       "aliases": [
@@ -1255,7 +1259,11 @@
                     },
                     "shoot": {
                       "arguments": "[expand] [double] {image}",
-                      "description": "Shoot an image. \"expand\" and \"double\" are booleans. \"expand\" puts the gun over the edge of the image"
+                      "description": [
+                        "Shoot an image.",
+                        "\"expand\" and \"double\" are true/false.",
+                        "\"expand\" puts the gun over the edge of the image"
+                      ]
                     },
                     "speechbubble": {
                       "aliases": [
@@ -1270,7 +1278,11 @@
                         "think"
                       ],
                       "arguments": "[expand] [double] [colour] {image}",
-                      "description": "Add a thinking hand to an image. \"expand\" and \"double\" are booleans. \"expand\" puts the hand over the edge of the image."
+                      "description": [
+                        "Add a thinking hand to an image.",
+                        "\"expand\" and \"double\" are true/false.",
+                        "\"expand\" puts the hand over the edge of the image."
+                      ]
                     },
                     "triggered": {
                       "aliases": [
@@ -1530,7 +1542,10 @@
                 "scan": {
                   "arguments": "[switchAxis] [reverse] [beamColour] {image}",
                   "cooldown": 5,
-                  "description": "Apply a time warp scan effect to a gif.\n\"switchAxis\" and \"reverse\" are both booleans."
+                  "description": [
+                    "Apply a time warp scan effect to a gif.",
+                    "\"switchAxis\" and \"reverse\" are both true/false."
+                  ]
                 },
                 "spin": {
                   "arguments": "{image}",
@@ -1657,7 +1672,7 @@
                   "arguments": "[location] [stretch] [blend] {overlayImg} {baseImg}",
                   "description": [
                     "Overlay an image on top of another image, filling the entire selected location.",
-                    "\"stretch\" is a boolean that controls whether the overlayed image will be stretched to fill the location.",
+                    "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
                     "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
                   ],
                   "slashCommand": "imagemanipulation/overlay"
@@ -1793,9 +1808,10 @@
               "aliases": [
                 "prepend"
               ],
-              "arguments": "[direction] [scaling] {image} {image}",
+              "arguments": "[direction] [scalingEnabled] {image} {image}",
               "description": [
-                "Append one image onto another image. Scaling is a boolean that will resize the appended image to be the same size.",
+                "Append one image onto another image.",
+                "Scaling is a true/false that will resize the appended image to be the same size.",
                 "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
               ]
             },
@@ -2544,6 +2560,107 @@
                 }
               }
             },
+            "channel": {
+              "commands": {
+                "close": {
+                  "aliases": [
+                    "closethread",
+                    "threadclose",
+                    "closepost",
+                    "closeforum",
+                    "postclose",
+                    "forumclose",
+                    "setarchived",
+                    "archive"
+                  ],
+                  "description": "Close the current thread channel or forum post.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "botPermissions": [
+                    "Manage Threads"
+                  ],
+                  "slashCommand": "close"
+                },
+                "lock": {
+                  "aliases": [
+                    "unlock",
+                    "lockdown"
+                  ],
+                  "description": "Toggle everyone's ability to send messages in the current channel.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Messages"
+                  ],
+                  "botPermissions": [
+                    "Manage Permissions"
+                  ],
+                  "slashCommand": "channel/lock"
+                },
+                "removemembercounter": {
+                  "aliases": [
+                    "membercounterremove",
+                    "deletemembercounter",
+                    "membercounterdelete"
+                  ],
+                  "description": "Remove the servers member counter.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Channels"
+                  ]
+                },
+                "repin": {
+                  "aliases": [
+                    "pin"
+                  ],
+                  "arguments": "[messageId/messageURL]",
+                  "description": "Re-pin a message to move it to the top of the channel pins.",
+                  "permissions": [
+                    "Manage Messages"
+                  ],
+                  "botPermissions": [
+                    "Manage Messages"
+                  ],
+                  "slashCommand": "channel/repin",
+                  "contextCommand": "message/re-pin-message"
+                },
+                "setmembercounter": {
+                  "aliases": [
+                    "membercounterset",
+                    "membercounter"
+                  ],
+                  "arguments": "<channel> [text]",
+                  "description": [
+                    "Set a channel to display the current number of members in the server.",
+                    "Any channel type can be used except for Threads.",
+                    "Use <count> in the text to incicate where the count should go.",
+                    "Example:`e!setmembercounter #channelname Member Count: <count>"
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Channels"
+                  ],
+                  "botPermissions": [
+                    "Manage Channels"
+                  ]
+                },
+                "slowmode": {
+                  "aliases": [
+                    "cooldown"
+                  ],
+                  "arguments": "[length]",
+                  "description": "Set a custom slowmode for the current channel.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Messages"
+                  ],
+                  "botPermissions": [
+                    "Manage Permissions"
+                  ],
+                  "slashCommand": "channel/slowmode"
+                }
+              }
+            },
             "emojis": {
               "commands": {
                 "addemoji": {
@@ -3034,41 +3151,6 @@
             }
           },
           "commands": {
-            "close": {
-              "aliases": [
-                "closethread",
-                "threadclose",
-                "closepost",
-                "closeforum",
-                "postclose",
-                "forumclose",
-                "setarchived",
-                "archive"
-              ],
-              "description": "Close the current thread channel or forum post.",
-              "permissions": [
-                "Guild Only"
-              ],
-              "botPermissions": [
-                "Manage Threads"
-              ],
-              "slashCommand": "close"
-            },
-            "lock": {
-              "aliases": [
-                "unlock",
-                "lockdown"
-              ],
-              "description": "Toggle everyone's ability to send messages in the current channel.",
-              "permissions": [
-                "Guild Only",
-                "Manage Messages"
-              ],
-              "botPermissions": [
-                "Manage Permissions"
-              ],
-              "slashCommand": "channel/lock"
-            },
             "namesearch": {
               "aliases": [
                 "names"
@@ -3091,18 +3173,6 @@
               "slashCommand": "server/quote",
               "contextCommand": "message/quote-message"
             },
-            "removemembercounter": {
-              "aliases": [
-                "membercounterremove",
-                "deletemembercounter",
-                "membercounterdelete"
-              ],
-              "description": "Remove the servers member counter.",
-              "permissions": [
-                "Guild Only",
-                "Manage Channels"
-              ]
-            },
             "serverinfo": {
               "aliases": [
                 "serverinformation",
@@ -3116,41 +3186,6 @@
                 "Guild Only"
               ],
               "slashCommand": "server/info"
-            },
-            "setmembercounter": {
-              "aliases": [
-                "membercounterset",
-                "membercounter"
-              ],
-              "arguments": "<channel> [text]",
-              "description": [
-                "Set a channel to display the current number of members in the server.",
-                "Any channel type can be used except for Threads.",
-                "Use <count> in the text to incicate where the count should go.",
-                "Example:`e!setmembercounter #channelname Member Count: <count>"
-              ],
-              "permissions": [
-                "Guild Only",
-                "Manage Channels"
-              ],
-              "botPermissions": [
-                "Manage Channels"
-              ]
-            },
-            "slowmode": {
-              "aliases": [
-                "cooldown"
-              ],
-              "arguments": "[length]",
-              "description": "Set a custom slowmode for the current channel.",
-              "permissions": [
-                "Guild Only",
-                "Manage Messages"
-              ],
-              "botPermissions": [
-                "Manage Permissions"
-              ],
-              "slashCommand": "channel/slowmode"
             }
           }
         },
@@ -3576,7 +3611,22 @@
               "botPermissions": [
                 "Manage Permissions"
               ],
-              "prefixCommand": "server/lock"
+              "prefixCommand": "server/channel/lock"
+            },
+            "repin": {
+              "description": "Re-pin a message to move it to the top of the channel pins.",
+              "options": [
+                {
+                  "name": "message",
+                  "description": "The message ID or URL to re-pin",
+                  "required": true
+                }
+              ],
+              "botPermissions": [
+                "Manage Messages"
+              ],
+              "prefixCommand": "server/channel/repin",
+              "contextCommand": "message/re-pin-message"
             },
             "slowmode": {
               "description": "Set a custom slowmode for the current channel.",
@@ -3590,7 +3640,7 @@
               "botPermissions": [
                 "Manage Permissions"
               ],
-              "prefixCommand": "server/slowmode"
+              "prefixCommand": "server/channel/slowmode"
             }
           }
         },
@@ -5006,7 +5056,7 @@
             "overlay": {
               "description": [
                 "Overlay an image on top of another image, filling the entire selected location.",
-                "\"stretch\" is a boolean that controls whether the overlayed image will be stretched to fill the location.",
+                "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
                 "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
               ],
               "options": [
@@ -5684,7 +5734,7 @@
         },
         "close": {
           "description": "Close the current thread channel or forum post.",
-          "prefixCommand": "server/close"
+          "prefixCommand": "server/channel/close"
         },
         "colour": {
           "description": "Preview a colour. This also converts it to a variety of different colour formats.",
@@ -5927,6 +5977,18 @@
               "type": "message",
               "prefixCommand": "server/quotemessage",
               "slashCommand": "server/quote"
+            },
+            "re-pin-message": {
+              "description": "Re-pin a message to move it to the top of the channel pins.",
+              "permissions": [
+                "Manage Messages"
+              ],
+              "botPermissions": [
+                "Manage Messages"
+              ],
+              "type": "message",
+              "prefixCommand": "server/channel/repin",
+              "slashCommand": "channel/repin"
             },
             "resize-image": {
               "description": "Resize an image to a desired size.",
