@@ -54,16 +54,17 @@ page-body
   padding: 20px
 
 #sidebar
-  margin: 20px
+  margin: 58px 20px 20px
   background-color: var(--color-grey-light)
   box-shadow: var(--box-shadow)
   padding: 20px
-  border-radius: 10px
+  border-radius: 0 0 10px 10px
   display: flex
   flex-direction: column
   gap: 16px
   align-items: center
   min-width: 300px
+  position: relative
 
   .button
     min-width: initial
@@ -73,22 +74,41 @@ page-body
   font-weight: 700
 
 #command-tabs
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  transform: translateY(-100%)
   display: flex
-  gap: 8px
-  width: 100%
-  margin-bottom: 10px
+  overflow: clip
 
 .command-tab
   text-transform: capitalize
   flex: 1
-  background-color: var(--color-grey-lighter)!important
+  background-color: var(--color-grey-dark)
   transition: .15s filter
+  height: 38px
+  display: flex
+  justify-content: center
+  align-items: center
+  user-select: none
+  cursor: pointer
+  border-radius: 10px 10px 0 0
+  transform: translateY(5px)
+  font-weight: 700
+  background: linear-gradient(to top, var(--color-grey-darker), var(--color-grey-dark), var(--color-grey-dark))
   
   &:hover
     filter: brightness(1.25)
 
 .active
-  background-color: var(--color-blue)!important
+  background: var(--color-grey-light)
+  transform: translateY(0)
+  filter: brightness(1)
+  transition: 0s filter
+  
+  &:hover
+    filter: brightness(1)
   
 #command-lists
   width: 100%

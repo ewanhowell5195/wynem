@@ -24,7 +24,7 @@ export default class extends Page {
       const commandLists = $("#command-lists")
       for (const [type, commands] of Object.entries(feature.commands)) {
         commandTabs.append(
-          E("div").addClass("command-tab button").append(E("span").text(type))
+          E("div").addClass("command-tab").append(E("span").text(type))
         )
         const commandList = E("div").attr("id", `command-list-${type}`).addClass("command-list").appendTo(commandLists)
         for (const command of commands) {

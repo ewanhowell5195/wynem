@@ -24,11 +24,11 @@ export default class extends Page {
       if (category.commands) {
         command = Object.entries(category.commands).find(e => e[0] === path[index] || e[1].aliases?.find(e => e === path[index]))
         if (command) {
-          command[1].name = command[0]
+          command[1].id = command[0]
           command = command[1]
         }
         if (command && index - 1 < path.length) {
-          this.newState = `/commands/${path.slice(0, index).join("/")}/${command.name}`
+          this.newState = `/commands/${path.slice(0, index).join("/")}/${command.id}`
         } else {
           this.newState = `/commands/${path.slice(0, index).join("/")}`
         }
@@ -93,7 +93,7 @@ export default class extends Page {
           id: "command-breadcrumb",
           href: `/commands/${path.slice(0, index + 1).join("/")}`
         }).append(
-          E("span").text(command.name)
+          E("span").text(command.id)
         ),
         arrowRight.clone()
       )
@@ -105,7 +105,7 @@ export default class extends Page {
           arrowLeft.clone(),
           E("span").text("Back to command list")
         ),
-        E("div").addClass("title").text(path[0] === "context" ? command.name.replace(/-/g, " ").toTitleCase() : command.name)
+        E("div").addClass("title").text(command.name ?? (path[0] === "context" ? command.id.replace(/-/g, " ").toTitleCase() : command.id))
       ).appendTo(content)
       for (const section of (Array.isArray(command.description) ? command.description : [command.description])) commandInfo.append(
         E("div").addClass("description").text(section)
@@ -118,7 +118,7 @@ export default class extends Page {
       }
       if (path[0] === "prefix") commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
-        E("div").addClass("formatting").text(`e!${command.name} ${command.arguments ?? ""}`)
+        E("div").addClass("formatting").text(`e!${command.id} ${command.arguments ?? ""}`)
       )
       else if (path[0] === "slash") commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
@@ -127,7 +127,7 @@ export default class extends Page {
       else {
         commandInfo.append(
           E("div").addClass("heading").text("How to use"),
-          E("div").html(`Right click on a <strong>${command.type ?? "message"}</strong>, go to <strong>Apps</strong>, then select <strong>${command.name.replace(/-/g, " ").toTitleCase()}</strong>`)
+          E("div").html(`Right click on a <strong>${command.type ?? "message"}</strong>, go to <strong>Apps</strong>, then select <strong>${command.id.replace(/-/g, " ").toTitleCase()}</strong>`)
         )
       }
       if (command.options) {
@@ -178,11 +178,12 @@ export default class extends Page {
       if (category.commands) {
         const commandsContainer = E("div").attr("id", "commands").appendTo(content)
         for (const [command, info] of Object.entries(category.commands)) {
+          console.log(info)
           commandsContainer.append(
             E("a", { is: "f-a" }).attr({
               href: `${pathStr}${command}`
             }).append(
-              E("div").addClass("command-name").text(path[0] === "context" ? command.replace(/-/g, " ").toTitleCase() : command),
+              E("div").addClass("command-name").text(info.name ?? (path[0] === "context" ? command.replace(/-/g, " ").toTitleCase() : command)),
               E("div").addClass("command-description").text(Array.isArray(info.description) ? info.description[0] : info.description)
             )
           )
