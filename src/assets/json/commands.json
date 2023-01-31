@@ -2837,7 +2837,7 @@
                   "description": [
                     "Run a builder that sets up a message that members can use to to add roles to themselves.",
                     "For the role text, provide \"none\" to leave it blank.",
-                    "Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                    "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
                   ],
                   "permissions": [
                     "Guild Only",
@@ -5539,7 +5539,7 @@
                   "description": [
                     "Run a builder that sets up a message that members can use to to add roles to themselves.",
                     "For the role text, provide \"none\" to leave it blank.",
-                    "Role types:\n\nNormal  - The user can add/remove the role away as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                    "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
                   ],
                   "prefixCommand": "server/roles/buttonroles"
                 },
