@@ -5979,6 +5979,7 @@
               "slashCommand": "server/quote"
             },
             "re-pin-message": {
+              "name": "Re-pin Message",
               "description": "Re-pin a message to move it to the top of the channel pins.",
               "permissions": [
                 "Manage Messages"
