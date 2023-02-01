@@ -70,7 +70,7 @@
           "height": 112
         },
         "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.",
-        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required."
+        "\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
       ]
     },
     {
