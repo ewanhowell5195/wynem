@@ -4,6 +4,14 @@ page-body
   display: flex
   flex-direction: column
 
+a
+  color: var(--color-blue-light)
+
+code
+  font-family: consolas, monospace
+  background-color: var(--color-grey-dark)
+  padding: 0 4px
+
 #banner
   position: relative
   overflow: clip
@@ -51,7 +59,10 @@ page-body
 
 #content
   flex: 1
-  padding: 20px
+  padding: 20px 0 20px 20px
+  display: flex
+  gap: 40px
+  flex-direction: column
 
 #sidebar
   margin: 58px 20px 20px
@@ -63,11 +74,12 @@ page-body
   flex-direction: column
   gap: 16px
   align-items: center
-  min-width: 300px
+  width: 300px
   position: relative
 
-  .button
-    min-width: initial
+  &.tabless
+    margin: 20px
+    border-radius: 10px
   
 #commands-title
   font-size: 1.75rem
@@ -82,7 +94,7 @@ page-body
   display: flex
   overflow: clip
 
-.command-tab
+.tab
   text-transform: capitalize
   flex: 1
   background-color: var(--color-grey-dark)
@@ -114,18 +126,38 @@ page-body
   width: 100%
 
 .command-list
-  height: 0
   overflow: hidden
-  display: flex
+  display: none
   flex-direction: column
-  gap: 8px
+  gap: 16px
 
   a
-    flex: 1
-
-.selected
-  height: initial
-  overflow: initial
+    height: 20px
+    
+    &:not(:last-child)
+      margin-bottom: 10px
+    
+  p
+    margin: 0
+    
+  h3
+    margin: 10px 0 0 15px
+    position: relative
+    text-shadow: -2px 2px 1px var(--color-text-shadow)
+    width
+    
+    &::before
+      content: ""
+      background-color: var(--color-blue)
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -15px
+      width: 5px
+      border-radius: 5px
+      
+    + div
+      margin-left: 20px
 
 .section
   display: flex
@@ -143,6 +175,7 @@ page-body
 
 .text
   white-space: pre-wrap
+  line-height: 24px
   
 .tablelist
   td:not(:last-child)
@@ -153,3 +186,35 @@ page-body
     white-space: nowrap!important
     display: list-item
     list-style: inside
+    
+#guides
+  flex: 1
+  display: flex
+  flex-direction: column
+  
+#guide-tabs
+  margin-top: 20px
+  display: flex
+  
+  .tab
+    padding: 0 20px
+    flex: initial
+    border-bottom: 10px solid var(--color-grey-dark)
+    margin-bottom: -10px
+    
+    &.active
+      border-bottom: 10px solid var(--color-grey-light)
+  
+#guide-content
+  border-radius: 10px 10px
+  background-color: var(--color-grey-light)
+  box-shadow: var(--box-shadow)
+  padding: 20px
+  flex: 1
+  z-index: 1
+  
+.guide
+  display: none
+  
+.selected
+  display: flex

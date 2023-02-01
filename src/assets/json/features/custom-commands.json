@@ -1,34 +1,25 @@
 {
-  "subtitle": "Commands that you can configure to respond with whatever you want",
   "commands": {
     "prefix": [
+      ["bot", "commands", "customcommands", "addcustomcommand"],
+      ["bot", "commands", "customcommands", "removecustomcommand"],
       {
-        "path": "bot/commands/customcommands/addcustomcommand",
-        "name": "addcustomcommand"
-      },
-      {
-        "path": "bot/commands/customcommands/removecustomcommand",
-        "name": "removecustomcommand"
-      },
-      {
-        "path": "bot/commands/help",
-        "name": "help custom"
+        "path": ["bot", "commands", "help"],
+        "description": "View all the available custom commands by using the <code>e!help custom</code> command."
       }
     ],
     "slash": [
-      {
-        "path": "customcommand",
-        "name": "customcommand"
-      },
-      {
-        "path": "serverconfig/customcommands/addcustomcommand",
-        "name": "addcustomcommand"
-      },
-      {
-        "path": "serverconfig/customcommands/removecustomcommand",
-        "name": "removecustomcommand"
-      }
+      ["customcommand"],
+      ["serverconfig", "customcommands", "addcustomcommand"],
+      ["serverconfig", "customcommands", "removecustomcommand"]
     ]
   },
-  "description": []
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are custom commands?"
+    },
+    "idk good question"
+  ],
+  "guides": []
 }

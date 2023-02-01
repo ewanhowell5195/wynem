@@ -1,0 +1,15 @@
+{
+  "commands": {
+    "prefix": [
+      ["utility", "createembed"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are custom embeds?"
+    },
+    "idk good question"
+  ],
+  "guides": []
+}

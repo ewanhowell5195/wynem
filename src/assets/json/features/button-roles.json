@@ -1,17 +1,10 @@
 {
-  "subtitle": "A way for users to apply roles to themselves",
   "commands": {
     "prefix": [
-      {
-        "path": "server/roles/buttonroles",
-        "name": "buttonroles"
-      }
+      ["server", "roles", "buttonroles"]
     ],
     "slash": [
-      {
-        "path": "serverconfig/roles/buttonroles",
-        "name": "buttonroles"
-      }
+      ["serverconfig", "roles", "buttonroles"]
     ]
   },
   "description": [
@@ -19,30 +12,71 @@
       "type": "heading",
       "text": "What are button roles?"
     },
-    {
-      "type": "text",
-      "text": "Button roles are the next evolution of reaction roles, using buttons to apply roles instead of emojis.\n\nYou can create a message using Wynem that has buttons on it that users can click to add and remove roles from themselves."
-    },
-    "spacer",
+    "Button roles are the next evolution of reaction roles, using buttons to apply roles instead of emojis.\n\nYou can create a message using Wynem that has buttons on it that users can click to add and remove roles from themselves.",
+    "",
     {
       "type": "image",
       "name": "buttonroles"
     },
-    "spacer",
+    "",
     {
       "type": "heading",
       "text": "Role Types"
     },
-    {
-      "type": "text",
-      "text": "There are multiple different types of button role that you can create."
-    },
+    "There are multiple different types of button role that you can create.",
     {
       "type": "tablelist",
       "rows": [
         ["Normal", "The user can add and remove \"normal\" roles as they wish"],
         ["Binding", "Once a user has applied a \"binding\" role, it cannot be removed"],
         ["Unique", "Users can only have one \"unique\" role from a button role message at a time"]
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "name": "Creating Button Roles",
+      "content": [
+        "To start setting up your own button roles, first, run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
+        {
+          "type": "image",
+          "name": "start",
+          "height": 112
+        },
+        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
+        {
+          "type": "image",
+          "name": "modal",
+          "height": 512
+        },
+        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
+        {
+          "type": "image",
+          "name": "more",
+          "height": 112
+        },
+        "\nFinally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
+        {
+          "type": "tablelist",
+          "rows": [
+            ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
+            ["Custom Embed", "Create your own custom embed, that can look however you want"],
+            ["No Embed", "Send no embed, the message be just the buttons on their own"]
+          ]
+        },
+        {
+          "type": "image",
+          "name": "type",
+          "height": 112
+        },
+        "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.",
+        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required."
+      ]
+    },
+    {
+      "name": "Removing Button Roles",
+      "content": [
+        "To remove button roles, simply delete the button role message!"
       ]
     }
   ]
