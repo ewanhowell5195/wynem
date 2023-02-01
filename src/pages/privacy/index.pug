@@ -20,7 +20,9 @@ style: include:styl index.styl
   p Wynem collects and stores Minecraft usernames that you tie to your Discord account. These are provided voluntarily and can be removed by the user at any time. This will only be personally identifiable if the username is personally identifiable. These are stored locally on the bot server.
   h3 Servers:
   p Whenever Wynem joins and leaves a server, a log is stored within a private Discord channel which lists the details of the server, such as name, member count, date created, and number of channels. This data is only stored within Discord and is never stored locally.
-  p Server logs may be enabled in any server that Wynem is in. Server logs log your activity in a server. The data logged includes edited message content, deleted message content, nicknames, voice channels joined, and any moderation taken against you. This data is only stored in the server the specific activity occurred in.
+  p Server logs may be enabled in any server that Wynem is in. Server logs log your activity in a server. The data logged includes edited message content, deleted message content, nicknames, voice channels joined, and any moderation taken against you. This data is only stored in the server the specific activity occurred in, or a server linked to it using the 
+    a(href="/commands/prefix/server/serverlinking" is="f-a") server linking
+    |  feature.
   p When a member is muted or warned, a moderation log is saved in a local file on the bot server. Only the 10 newest warn logs and 10 newest mute logs are stored. The total count is still tracked however.
   h3 Direct Messages:
   p When you send a direct message to Wynem, this message is sent to a private Discord channel. This logs the full message content, including attachments, except for stickers and emojis that Wynem does not have access to. This data is only stored within Discord and is never stored locally.
