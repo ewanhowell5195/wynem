@@ -2,6 +2,9 @@
   "commands": {
     "prefix": [
       ["utility", "createembed"]
+    ],
+    "slash": [
+      ["utility", "createembed"]
     ]
   },
   "description": [
@@ -9,7 +12,100 @@
       "type": "heading",
       "text": "What are custom embeds?"
     },
-    "idk good question"
+    "Discord embeds are a special type of message that allows you to present data with special formatting and structure.\nCustom embeds are a feature of Wynem that allow you to create your own embeds. This may be part of another command, or simply making one with the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command.",
+    {
+      "type": "image",
+      "name": "embed",
+      "height": 512
+    }
   ],
-  "guides": []
+  "guides": [{
+    "name": "Creating custom embeds",
+    "content": [
+      "Throughout this guide, there will be references to different sections of embeds. If you do not know what section is being mentioned, you can refer to the image above.\n\nTo start creating a custom embed, first, run the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command, and then click the button to start.\nIf the custom embed is being created by another command, you can ignore this step.",
+      {
+        "type": "image",
+        "name": "start",
+        "height": 112
+      },
+      "\nThe first modal you will see is for the main content of the embed.\nIf you do not wish to include any of these, just click submit while leaving all fields blank.",
+      {
+      "type": "tablelist",
+        "rows": [
+          ["Title", "The large text appears near the top."],
+          ["URL", "If you have a title, you can turn it into a clickable link with this URL."],
+          ["Description", "The main content of an embed. Supports up to 4000 characters and appears beneath the title."],
+          ["Colour", "The colour of the bar up the side of the embed."]
+        ]
+      },
+      {
+        "type": "image",
+        "name": "main",
+        "height": 512
+      },
+      "\nAfter each modal, you will be given the choice to add more content, skip past the suggested content types, or finish the embed.\nThe rest of this guide will assume you always choose the first button.",
+      {
+        "type": "image",
+        "name": "continue",
+        "height": 112
+      },
+      "\nThe next modal you see allows you to add the author and footer to the embed.",
+      {
+        "type": "tablelist",
+        "rows": [
+          ["Author", "A row of small text that appears above the title."],
+          ["Author Image URL", "A small image that appears to the left of the author."],
+          ["Author URL", "This URL turns the author text in to a clickable link."],
+          ["Footer", "The small text at the bottom of the embed. Supports multiple lines."],
+          ["Footer Image URL", "A small image that appears to the left of the footer."]
+        ]
+      },
+      {
+        "type": "image",
+        "name": "authorfooter",
+        "height": 512
+      },
+      "\nThe third modal is for adding both the main and thumbnail image to the embed.",
+      {
+        "type": "tablelist",
+        "rows": [
+          ["Image URL", "The URL for main image, which is the large image in the middle of the embed."],
+          ["Thumbnail URL", "The URL for the small image in the top right corner of the embed."]
+        ]
+      },
+      {
+        "type": "image",
+        "name": "images",
+        "height": 300
+      },
+      "\nNext you will have the option to add up to 25 fields to your custom embed.\nFields are small sections in the middle of the embed.\nSkipping a single field will skip all remaining fields.",
+      {
+        "type": "tablelist",
+        "rows": [
+          ["Field Name", "The name for the field."],
+          ["Field Value", "The main text of the field. Appears beneath the title."],
+          ["Inline", "Fields can be set to be inline, which is where they are allowed to be on the same row as another field. Up to three fields can appear on a single row.\nThis input is a simple yes or no."]
+        ]
+      },
+      {
+        "type": "image",
+        "name": "fields",
+        "height": 400
+      },
+      "\nFinally, you will be able to add up to 25 buttons to your custom embed.\nButtons are special links that appear beneath the embed.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skill all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+      {
+        "type": "tablelist",
+        "rows": [
+          ["Button Label", "The text that is displayed on the button."],
+          ["Button URL", "The URL to go to when you click on the button."]
+        ]
+      },
+      {
+        "type": "image",
+        "name": "buttons",
+        "height": 300
+      },
+      "Some commands that use custom embeds do not support buttons.\n\n\nCongratulations, you are finished. You have now created a custom embed!"
+    ]
+  }]
 }

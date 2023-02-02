@@ -3280,7 +3280,8 @@
                 "calc",
                 "math"
               ],
-              "description": "Summon a calculator."
+              "description": "Summon a calculator.",
+              "slashCommand": "utility/calculator"
             },
             "colour": {
               "aliases": [
@@ -3294,7 +3295,7 @@
                 "Preview a colour. This also converts it to a variety of different colour formats.",
                 "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
               ],
-              "slashCommand": "colour"
+              "slashCommand": "utility/colour"
             },
             "createembed": {
               "aliases": [
@@ -3306,11 +3307,13 @@
                 "embed",
                 "mbed"
               ],
-              "description": "Run a builder to create and send a custom embed."
+              "description": "Run a builder to create and send a custom embed.",
+              "slashCommand": "utility/createembed"
             },
             "filesize": {
               "arguments": "[url]",
-              "description": "View the file size of a file."
+              "description": "View the file size of a file.",
+              "slashCommand": "utility/filesize"
             },
             "getrawmessage": {
               "aliases": [
@@ -3327,7 +3330,8 @@
                 "search"
               ],
               "arguments": "[searchTerm]",
-              "description": "Use this command to generate a google search link because you are lazy and opening your browser manually is too much effort."
+              "description": "Make a Google search link for when people ask questions they could have easily searched themselves.",
+              "slashCommand": "utility/google"
             },
             "poll": {
               "aliases": [
@@ -3336,11 +3340,13 @@
               "description": "Run a builder that sets up a poll that members can vote on.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "utility/poll"
             },
             "tinyurl": {
               "arguments": "[url]",
-              "description": "Shorten a link using tinyurl."
+              "description": "Shorten a link using tinyurl.",
+              "slashCommand": "utility/tinyurl"
             }
           }
         },
@@ -5669,6 +5675,36 @@
         },
         "utility": {
           "commands": {
+            "calculator": {
+              "description": "Summon a calculator.",
+              "prefixCommand": "utility/calculator"
+            },
+            "colour": {
+              "description": "Preview a colour. This also converts it to a variety of different colour formats.",
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The colour to preview. HEX codes supported",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/colour"
+            },
+            "createembed": {
+              "description": "Run a builder to create and send a custom embed.",
+              "prefixCommand": "utility/createembed"
+            },
+            "filesize": {
+              "description": "View the file size of a file.",
+              "options": [
+                {
+                  "name": "file-url",
+                  "description": "The file URL to check the file size of",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/filesize"
+            },
             "getrawmessage": {
               "description": "Get the raw text content of a discord message.",
               "options": [
@@ -5680,6 +5716,32 @@
               ],
               "prefixCommand": "utility/getrawmessage",
               "contextCommand": "message/get-raw-message"
+            },
+            "google": {
+              "description": "Make a Google search link for when people ask questions they could have easily searched themselves.",
+              "options": [
+                {
+                  "name": "search-term",
+                  "description": "The term to search",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/google"
+            },
+            "poll": {
+              "description": "Run a builder that sets up a poll that members can vote on.",
+              "prefixCommand": "utility/poll"
+            },
+            "tinyurl": {
+              "description": "Shorten a link using tinyurl.",
+              "options": [
+                {
+                  "name": "url",
+                  "description": "The URL to shorten",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/tinyurl"
             }
           }
         },
@@ -5735,17 +5797,6 @@
         "close": {
           "description": "Close the current thread channel or forum post.",
           "prefixCommand": "server/channel/close"
-        },
-        "colour": {
-          "description": "Preview a colour. This also converts it to a variety of different colour formats.",
-          "options": [
-            {
-              "name": "colour",
-              "description": "The colour to preview. HEX codes supported",
-              "required": true
-            }
-          ],
-          "prefixCommand": "utility/colour"
         },
         "customcommand": {
           "description": "Run a custom command.",
