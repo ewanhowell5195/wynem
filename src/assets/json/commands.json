@@ -642,32 +642,57 @@
               "commands": {
                 "animate": {
                   "arguments": "[delay] [frameHeight] {image}",
-                  "description": "Animate a spritesheet texture"
+                  "description": "Animate a spritesheet texture",
+                  "slashCommand": "image/animation/animate"
                 },
                 "boomerang": {
                   "aliases": [
                     "pingpong"
                   ],
                   "arguments": "{gif}",
-                  "description": "Make a gif play forwards, then backwards, in a loop."
+                  "description": "Make a gif play forwards, then backwards, in a loop.",
+                  "slashCommand": "image/animation/boomerang"
+                },
+                "combinegif": {
+                  "aliases": [
+                    "combine",
+                    "merge",
+                    "concatenate",
+                    "concat",
+                    "joingif",
+                    "gifcombine",
+                    "gifjoin",
+                    "mergegif",
+                    "gifmerge"
+                  ],
+                  "arguments": "{gif} {gif}",
+                  "description": "Make a gif play in reverse.",
+                  "slashCommand": "image/animation/combinegif"
                 },
                 "frame": {
                   "aliases": [
                     "frames"
                   ],
                   "arguments": "[frame] {gif}",
-                  "description": "Get a specific frame of a gif. Leave frame blank to show how many frames a gif has. \"first\" gives the first frame, and \"last\" gives the last frame."
+                  "description": [
+                    "Get a specific frame of a gif.",
+                    "Leave frame blank to show how many frames a gif has.",
+                    "\"first\" gives the first frame, and \"last\" gives the last frame."
+                  ],
+                  "slashCommand": "image/animation/frame"
                 },
                 "reverse": {
                   "aliases": [
                     "backwards"
                   ],
                   "arguments": "{gif}",
-                  "description": "Make a gif play in reverse."
+                  "description": "Make a gif play in reverse.",
+                  "slashCommand": "image/animation/reverse"
                 },
                 "spritesheet": {
                   "arguments": "{gif}",
-                  "description": "Turn an animated GIF into a spritesheet of its frames."
+                  "description": "Turn an animated GIF into a spritesheet of its frames.",
+                  "slashCommand": "image/animation/spritesheet"
                 }
               }
             },
@@ -3330,7 +3355,7 @@
                 "search"
               ],
               "arguments": "[searchTerm]",
-              "description": "Make a Google search link for when people ask questions they could have easily searched themselves.",
+              "description": "Make a Google Search link for when people ask questions they could have easily searched themselves.",
               "slashCommand": "utility/google"
             },
             "poll": {
@@ -3869,6 +3894,118 @@
         },
         "image": {
           "categories": {
+            "animation": {
+              "commands": {
+                "animate": {
+                  "description": "Animate a spritesheet texture",
+                  "options": [
+                    {
+                      "name": "delay",
+                      "description": "The amount of delay between each frame"
+                    },
+                    {
+                      "name": "frame-height",
+                      "description": "The height of each frame"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/animate"
+                },
+                "boomerang": {
+                  "description": "Make a gif play forwards, then backwards, in a loop.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/boomerang"
+                },
+                "combinegif": {
+                  "description": "Make a gif play in reverse.",
+                  "options": [
+                    {
+                      "name": "image1-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image1-string",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image2-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image2-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/combinegif"
+                },
+                "frame": {
+                  "description": [
+                    "Get a specific frame of a gif.",
+                    "Leave frame blank to show how many frames a gif has.",
+                    "\"first\" gives the first frame, and \"last\" gives the last frame."
+                  ],
+                  "options": [
+                    {
+                      "name": "frame",
+                      "description": "The frame to get. Can be a number"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/frame"
+                },
+                "reverse": {
+                  "description": "Make a gif play in reverse.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/reverse"
+                },
+                "spritesheet": {
+                  "description": "Turn an animated GIF into a spritesheet of its frames.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/spritesheet"
+                }
+              }
+            },
             "mirroring": {
               "commands": {
                 "daad": {
@@ -5680,7 +5817,10 @@
               "prefixCommand": "utility/calculator"
             },
             "colour": {
-              "description": "Preview a colour. This also converts it to a variety of different colour formats.",
+              "description": [
+                "Preview a colour. This also converts it to a variety of different colour formats.",
+                "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+              ],
               "options": [
                 {
                   "name": "colour",
@@ -5718,7 +5858,7 @@
               "contextCommand": "message/get-raw-message"
             },
             "google": {
-              "description": "Make a Google search link for when people ask questions they could have easily searched themselves.",
+              "description": "Make a Google Search link for when people ask questions they could have easily searched themselves.",
               "options": [
                 {
                   "name": "search-term",
