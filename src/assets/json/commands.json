@@ -666,7 +666,7 @@
                     "gifmerge"
                   ],
                   "arguments": "{gif} {gif}",
-                  "description": "Make a gif play in reverse.",
+                  "description": "Combine two gifs so that one plays after the other.",
                   "slashCommand": "image/animation/combinegif"
                 },
                 "frame": {
@@ -3933,7 +3933,7 @@
                   "prefixCommand": "images/animation/boomerang"
                 },
                 "combinegif": {
-                  "description": "Make a gif play in reverse.",
+                  "description": "Combine two gifs so that one plays after the other.",
                   "options": [
                     {
                       "name": "image1-attachment",
