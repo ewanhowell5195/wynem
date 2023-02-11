@@ -478,7 +478,10 @@
                     "c4"
                   ],
                   "arguments": "<member> [boardWidth] [boardHeight]",
-                  "description": "Play Connect 4 against another member.",
+                  "description": [
+                    "Play Connect 4 against another member.",
+                    "The maximum board size is 21x15"
+                  ],
                   "permissions": [
                     "Guild Only"
                   ],
@@ -491,6 +494,15 @@
                   "arguments": "<member>",
                   "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
                   "slashCommand": "fun/games/rockpaperscissors"
+                },
+                "snakesandladders": {
+                  "aliases": [
+                    "sal"
+                  ],
+                  "description": "Play Snakes and Ladders.",
+                  "permissions": [
+                    "Guild Only"
+                  ]
                 },
                 "tictactoe": {
                   "aliases": [
@@ -3680,7 +3692,10 @@
             "games": {
               "commands": {
                 "connect4": {
-                  "description": "Play Connect 4 against another member.",
+                  "description": [
+                    "Play Connect 4 against another member.",
+                    "The maximum board size is 21x15"
+                  ],
                   "options": [
                     {
                       "name": "member",

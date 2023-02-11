@@ -1,6 +1,6 @@
 {
-  "version": "1.2.2",
-  "optifineVersion": "1.19.2 HD U I1 pre4",
+  "version": "1.3.2",
+  "optifineVersion": "1.19.3 HD U I2 pre3",
   "tabs": [
     {
       "name": "Structure",
@@ -245,6 +245,10 @@
             [
               "time",
               "The current world time in ticks."
+            ],
+            [
+              "rule_index",
+              "The active random model rule index from the properties file. Defaults to 0."
             ]
           ]
         },
@@ -303,10 +307,6 @@
             [
               "dimension",
               "The current dimension. Overworld: 0, Nether: -1, End: 1."
-            ],
-            [
-              "rule_index",
-              "The current index of the the first matching rule from the properties file. Defaults to 0."
             ]
           ]
         },
