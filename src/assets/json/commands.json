@@ -499,6 +499,7 @@
                   "aliases": [
                     "sal"
                   ],
+                  "arguments": "<member> <member2> <member3>",
                   "description": "Play Snakes and Ladders.",
                   "permissions": [
                     "Guild Only"
