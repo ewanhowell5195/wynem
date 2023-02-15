@@ -1663,7 +1663,7 @@
                 },
                 "save": {
                   "arguments": "{image}",
-                  "description": "Turn an image into a gif so that you can save it to your discord favourites list."
+                  "description": "Turn an image into a gif so that you can save it to your Discord favourites list."
                 },
                 "watermark": {
                   "aliases": [
@@ -2252,12 +2252,6 @@
               ],
               "cooldown": 5,
               "description": "Get a link to download the latest OptiFine version."
-            },
-            "plugin": {
-              "aliases": [
-                "plugins"
-              ],
-              "description": "View and get details about Blockbench plugins."
             },
             "setmcaccount": {
               "aliases": [
