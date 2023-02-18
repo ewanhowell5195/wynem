@@ -499,7 +499,7 @@
                   "aliases": [
                     "sal"
                   ],
-                  "arguments": "<member> <member2> <member3>",
+                  "arguments": "<member> <member2> <member3> [boardSize]",
                   "description": "Play Snakes and Ladders.",
                   "permissions": [
                     "Guild Only"
@@ -3342,6 +3342,11 @@
               "description": "Run a builder to create and send a custom embed.",
               "slashCommand": "utility/createembed"
             },
+            "exif": {
+              "arguments": "{file}",
+              "description": "View the exif data of a file.",
+              "slashCommand": "utility/exif"
+            },
             "filesize": {
               "arguments": "[url]",
               "description": "View the file size of a file.",
@@ -5843,6 +5848,20 @@
             "createembed": {
               "description": "Run a builder to create and send a custom embed.",
               "prefixCommand": "utility/createembed"
+            },
+            "exif": {
+              "description": "View the exif data of a file.",
+              "options": [
+                {
+                  "name": "file-attachment",
+                  "description": "A file"
+                },
+                {
+                  "name": "file-string",
+                  "description": "A file"
+                }
+              ],
+              "prefixCommand": "utility/exif"
             },
             "filesize": {
               "description": "View the file size of a file.",
