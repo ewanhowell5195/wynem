@@ -1965,6 +1965,14 @@
               "description": "Merge three images into a single image, using each image as the individual colour channels.",
               "slashCommand": "image/mergechannels"
             },
+            "outline": {
+              "aliases": [
+                "stroke"
+              ],
+              "arguments": "[width] [colour] {image}",
+              "cooldown": 5,
+              "description": "Add an outline to an image."
+            },
             "palette": {
               "arguments": "{image}",
               "description": "Show the palette of an image"
@@ -1990,14 +1998,6 @@
             "sticker": {
               "arguments": "<sticker>",
               "description": "View a sticker. Animated stickers are converted to gifs."
-            },
-            "stroke": {
-              "aliases": [
-                "outline"
-              ],
-              "arguments": "[width] [colour] {image}",
-              "cooldown": 5,
-              "description": "Add an outline to an image."
             }
           }
         },
