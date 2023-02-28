@@ -1563,7 +1563,8 @@
                   "aliases": [
                     "jpgify",
                     "jpeg",
-                    "jpg"
+                    "jpg",
+                    "crusty"
                   ],
                   "arguments": "[quality] {image}",
                   "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100"
@@ -1936,7 +1937,7 @@
                 "compare",
                 "comp"
               ],
-              "arguments": "{image} {image}",
+              "arguments": "{tolerance} {image} {image}",
               "description": [
                 "Compare two images, to see the differences between them.",
                 "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
@@ -1989,6 +1990,14 @@
             "sticker": {
               "arguments": "<sticker>",
               "description": "View a sticker. Animated stickers are converted to gifs."
+            },
+            "stroke": {
+              "aliases": [
+                "outline"
+              ],
+              "arguments": "[width] [colour] {image}",
+              "cooldown": 5,
+              "description": "Add an outline to an image."
             }
           }
         },
