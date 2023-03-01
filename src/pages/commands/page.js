@@ -172,9 +172,18 @@ export default class extends Page {
       }
     } else {
       if (path[index - 1]) content.append(E("div").attr("id", "category-name").text(path[index - 1]))
+      let description
       if (category.description) {
+        description = E("div").attr("id", "category-description")
+        description.append((Array.isArray(category.description) ? category.description : [category.description]).map(e => E("div").addClass("category-description").text(e)))
+      }
+      if (category.extra) {
+        if (!description) description = E("div").attr("id", "category-description")
+        description.append((Array.isArray(category.extra) ? category.extra : [category.extra]).map(e => E("div").addClass("category-description").text(e)))
+      }
+      if (description) {
         content.append(
-          E("div").attr("id", "category-description").append((Array.isArray(category.description) ? category.description : [category.description]).map(e => E("div").addClass("category-description").text(e))),
+          description,
           E("div").attr("id", "category-heading").text("Commands")
         )
       }
