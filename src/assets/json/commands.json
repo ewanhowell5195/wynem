@@ -650,6 +650,7 @@
             "Valid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
             "Leave it blank to target an image/url/emoji/sticker from a previous message in the channel. You can reply to a message to target an image in that message."
           ],
+          "extra": "There are certain image prefixes and shortcuts that you can use to change the image input.\n\nThese work on any command that accepts a member, or an image:\n^  - Target the member from the previous message\n<  - Target yourself\nme - Target yourself\n<< - Target your user (will ignore server avatar and get main avatar)\n\nThese work on any command that accepts an image:\nb:@ping          - get a users banner\nu:@ping          - get a user instead of a member (will ignore server avatar and get main avatar)\nmc:username      - get the minecraft skin of a Minecraft username\nmc:@ping         - get the minecraft skin of a member\nskin:username    - get the minecraft skin of a Minecraft username\nskin:@ping       - get the minecraft skin of a member\ncape:username    - get the minecraft cape of a Minecraft username\ncape:@ping       - get the minecraft cape of a member\ntexture:filename - get a minecraft texture",
           "categories": {
             "animation": {
               "commands": {
