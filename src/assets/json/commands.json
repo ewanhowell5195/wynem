@@ -1887,9 +1887,9 @@
               "arguments": "<emoji> [type/resolution]",
               "description": [
                 "Get the image of an emoji.",
-                "The type or resolution is optional. Not every type has every emoji.",
-                "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
-              ]
+                "The type or resolution is optional. Not every type has every emoji."
+              ],
+              "extra": "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
             },
             "encodemessage": {
               "aliases": [
