@@ -1605,6 +1605,14 @@
                   "arguments": "[mode] {image}",
                   "description": "Turn an image into ascii art using the braille characters. Available modes are \"average\" and \"edge\"."
                 },
+                "warp": {
+                  "arguments": "[switchAxis] [reverse] {image}",
+                  "cooldown": 5,
+                  "description": [
+                    "Apply a delay warp effect to a gif.",
+                    "\"switchAxis\" and \"reverse\" are both true/false."
+                  ]
+                },
                 "wynem": {
                   "arguments": "[vCol] [hCol] [bgCol] [sCol] {image}",
                   "description": [
