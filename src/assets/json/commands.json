@@ -710,6 +710,54 @@
                 }
               }
             },
+            "creation": {
+              "commands": {
+                "generatepalette": {
+                  "aliases": [
+                    "palettegenerate",
+                    "palettegen",
+                    "genpalette",
+                    "generategradient",
+                    "gradientgenerate",
+                    "gradientgen",
+                    "gengradient"
+                  ],
+                  "arguments": "[colour] [stepCount] [degrees]",
+                  "description": "Generate a gradient palette from a colour, with hue shifting."
+                },
+                "gradient": {
+                  "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
+                  "description": "Generate a gradient from a list of colours."
+                },
+                "image": {
+                  "aliases": [
+                    "newimage",
+                    "createimage",
+                    "makeimage",
+                    "img",
+                    "newimg",
+                    "createimg",
+                    "makeimg"
+                  ],
+                  "arguments": "[width] [height] [colour]",
+                  "description": "Generate a new blank image."
+                },
+                "mergechannels": {
+                  "aliases": [
+                    "mergecolourchannels",
+                    "mergecolorchannels",
+                    "mergecolchannels",
+                    "mergechannel",
+                    "mergecolourchannel",
+                    "mergecolorchannel",
+                    "mergecolchannel"
+                  ],
+                  "arguments": "{redimage} {greenimage} {blueimage}",
+                  "description": "Merge three images into a single image, using each image as the individual colour channels.",
+                  "slashCommand": "image/creation/mergechannels"
+                }
+              }
+            },
             "drawing": {
               "commands": {
                 "ellipse": {
@@ -726,19 +774,6 @@
                   ],
                   "arguments": "[x] [y] [colour] [tolerance] {image}",
                   "description": "Floodfill an area on an image."
-                },
-                "image": {
-                  "aliases": [
-                    "newimage",
-                    "createimage",
-                    "makeimage",
-                    "img",
-                    "newimg",
-                    "createimg",
-                    "makeimg"
-                  ],
-                  "arguments": "[width] [height] [colour]",
-                  "description": "Generate a new blank image."
                 },
                 "line": {
                   "arguments": "[x] [y] [x2] [y2] [colour] [thickness] {image}",
@@ -1585,7 +1620,8 @@
                   "description": [
                     "Apply a time warp scan effect to a gif.",
                     "\"switchAxis\" and \"reverse\" are both true/false."
-                  ]
+                  ],
+                  "slashCommand": "imagefun/scan"
                 },
                 "spin": {
                   "arguments": "{image}",
@@ -1611,7 +1647,8 @@
                   "description": [
                     "Apply a delay warp effect to a gif.",
                     "\"switchAxis\" and \"reverse\" are both true/false."
-                  ]
+                  ],
+                  "slashCommand": "imagefun/warp"
                 },
                 "wynem": {
                   "arguments": "[vCol] [hCol] [bgCol] [sCol] {image}",
@@ -1624,23 +1661,56 @@
             },
             "imageutility": {
               "commands": {
-                "generategradient": {
+                "averagecolour": {
                   "aliases": [
-                    "gradientgenerate",
-                    "gradientgen",
-                    "gengradient"
+                    "averagecolor",
+                    "colouraverage",
+                    "coloraverage",
+                    "avgcol",
+                    "colavg",
+                    "avgcolour",
+                    "avgcolor",
+                    "average",
+                    "avg"
                   ],
-                  "arguments": "[colour] [stepCount] [degrees]",
-                  "description": "Generate a gradient from a colour, with hue shifting."
+                  "arguments": "{image}",
+                  "description": "Get the average colour of an image.",
+                  "slashCommand": "imageutility/averagecolour"
                 },
-                "generatepalette": {
+                "commoncolour": {
                   "aliases": [
-                    "palettegenerate",
-                    "palettegen",
-                    "genpalette"
+                    "commoncolor",
+                    "commoncol"
                   ],
-                  "arguments": "[colourCount]",
-                  "description": "Generate a palette of random colours."
+                  "arguments": "{image}",
+                  "description": "Get the most common colour in an image.",
+                  "slashCommand": "imageutility/commoncolour"
+                },
+                "imagecompare": {
+                  "aliases": [
+                    "imagecomp",
+                    "imgcompare",
+                    "imgcomp",
+                    "imgdifference",
+                    "imgdiff",
+                    "difference",
+                    "diff",
+                    "compare",
+                    "comp"
+                  ],
+                  "arguments": "{tolerance} {image} {image}",
+                  "description": [
+                    "Compare two images, to see the differences between them.",
+                    "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+                  ]
+                },
+                "imagesize": {
+                  "aliases": [
+                    "getsize",
+                    "size"
+                  ],
+                  "arguments": "{image}",
+                  "description": "View the dimentions of an image."
                 },
                 "makeqrcode": {
                   "aliases": [
@@ -1656,6 +1726,10 @@
                   ],
                   "arguments": "[text]",
                   "description": "Create a QR code."
+                },
+                "palette": {
+                  "arguments": "{image}",
+                  "description": "Show the palette of an image"
                 },
                 "readqrcode": {
                   "aliases": [
@@ -1716,6 +1790,15 @@
                   "description": "Change the opacity of an image.",
                   "slashCommand": "imagemanipulation/opacity"
                 },
+                "outline": {
+                  "aliases": [
+                    "stroke"
+                  ],
+                  "arguments": "[width] [colour] {image}",
+                  "cooldown": 5,
+                  "description": "Add an outline to an image.",
+                  "slashCommand": "imagemanipulation/outline"
+                },
                 "overlay": {
                   "arguments": "[location] [stretch] [blend] {overlayImg} {baseImg}",
                   "description": [
@@ -1743,6 +1826,17 @@
                   "description": "Paste an image onto another image.",
                   "slashCommand": "imagemanipulation/paste"
                 },
+                "replacecolour": {
+                  "aliases": [
+                    "colourreplace",
+                    "replacecolor",
+                    "colorreplace",
+                    "replacecol",
+                    "colreplace"
+                  ],
+                  "arguments": "[originalColour] [replacementColour] [tolerance] {image}",
+                  "description": "Replace a colour in an image."
+                },
                 "resize": {
                   "arguments": "[width] [height] [mode] {image}",
                   "description": [
@@ -1760,6 +1854,13 @@
                   "arguments": "[degrees] {image}",
                   "description": "Rotate an image. Defaults to 90°.",
                   "slashCommand": "imagemanipulation/rotate"
+                },
+                "round": {
+                  "arguments": "[size] {image}",
+                  "description": [
+                    "Make an image round by cutting off the corners.",
+                    "The size can either be a number of pixels, or a percentage of the width and height of the image."
+                  ]
                 },
                 "scale": {
                   "aliases": [
@@ -1863,24 +1964,6 @@
                 "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
               ]
             },
-            "averagecolour": {
-              "aliases": [
-                "averagecolor",
-                "colouraverage",
-                "coloraverage",
-                "avgcol",
-                "colavg",
-                "avgcolour",
-                "avgcolor",
-                "average",
-                "avg",
-                "commoncolour",
-                "commoncolor",
-                "commoncol"
-              ],
-              "arguments": "{image}",
-              "description": "Get the average colour of an image."
-            },
             "decodemessage": {
               "aliases": [
                 "decode"
@@ -1907,19 +1990,21 @@
               "arguments": "[message]",
               "description": "Create an image from a message, which is encoded as pixel values."
             },
-            "extractchannel": {
+            "extractchannels": {
               "aliases": [
+                "channels",
+                "colourchannels",
+                "colorchannels",
+                "colchannels",
+                "extractchannel",
                 "channel",
                 "colourchannel",
                 "colorchannel",
                 "colchannel"
               ],
-              "arguments": "[channel] {image}",
-              "description": [
-                "Extract a colour channel from an image.",
-                "Available channels:\n\n - Red\n - Green\n- Blue\n- Alpha"
-              ],
-              "slashCommand": "image/extractchannel"
+              "arguments": "{image}",
+              "description": "Extract the colour channels from an image.",
+              "slashCommand": "image/extractchannels"
             },
             "getimage": {
               "aliases": [
@@ -1928,85 +2013,11 @@
                 "imgget"
               ],
               "arguments": "{image}",
-              "description": "Get an image. This can be used to show what image would be used in an image command. This can also be used to convert videos into gifs."
-            },
-            "gradient": {
-              "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
-              "description": "Generate a gradient from a list of colours."
-            },
-            "imagecompare": {
-              "aliases": [
-                "imagecomp",
-                "imgcompare",
-                "imgcomp",
-                "imgdifference",
-                "imgdiff",
-                "difference",
-                "diff",
-                "compare",
-                "comp"
-              ],
-              "arguments": "{tolerance} {image} {image}",
               "description": [
-                "Compare two images, to see the differences between them.",
-                "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+                "Get an image.",
+                "This can be used to show what image would be used in an image command.",
+                "This can also be used to convert videos into gifs, as well as converting stickers to gifs."
               ]
-            },
-            "imagesize": {
-              "aliases": [
-                "getsize",
-                "size"
-              ],
-              "arguments": "{image}",
-              "description": "View the dimentions of an image."
-            },
-            "mergechannels": {
-              "aliases": [
-                "mergecolourchannels",
-                "mergecolorchannels",
-                "mergecolchannels",
-                "mergechannel",
-                "mergecolourchannel",
-                "mergecolorchannel",
-                "mergecolchannel"
-              ],
-              "arguments": "{redimage} {greenimage} {blueimage}",
-              "description": "Merge three images into a single image, using each image as the individual colour channels.",
-              "slashCommand": "image/mergechannels"
-            },
-            "outline": {
-              "aliases": [
-                "stroke"
-              ],
-              "arguments": "[width] [colour] {image}",
-              "cooldown": 5,
-              "description": "Add an outline to an image."
-            },
-            "palette": {
-              "arguments": "{image}",
-              "description": "Show the palette of an image"
-            },
-            "replacecolour": {
-              "aliases": [
-                "colourreplace",
-                "replacecolor",
-                "colorreplace",
-                "replacecol",
-                "colreplace"
-              ],
-              "arguments": "[originalColour] [replacementColour] [tolerance] {image}",
-              "description": "Replace a colour in an image."
-            },
-            "round": {
-              "arguments": "[size] {image}",
-              "description": [
-                "Make an image round by cutting off the corners.",
-                "The size can either be a number of pixels, or a percentage of the width and height of the image."
-              ]
-            },
-            "sticker": {
-              "arguments": "<sticker>",
-              "description": "View a sticker. Animated stickers are converted to gifs."
             }
           }
         },
@@ -4039,6 +4050,40 @@
                 }
               }
             },
+            "creation": {
+              "commands": {
+                "mergechannels": {
+                  "description": "Merge three images into a single image, using each image as the individual colour channels.",
+                  "options": [
+                    {
+                      "name": "red-image-attachment",
+                      "description": "The image to use as the red colour channel"
+                    },
+                    {
+                      "name": "red-image-string",
+                      "description": "The image to use as the red colour channel"
+                    },
+                    {
+                      "name": "green-image-attachment",
+                      "description": "The image to use as the green colour channel"
+                    },
+                    {
+                      "name": "green-image-string",
+                      "description": "The image to use as the green colour channel"
+                    },
+                    {
+                      "name": "blue-image-attachment",
+                      "description": "The image to use as the blue colour channel"
+                    },
+                    {
+                      "name": "blue-image-string",
+                      "description": "The image to use as the blue colour channel"
+                    }
+                  ],
+                  "prefixCommand": "images/creation/mergechannels"
+                }
+              }
+            },
             "mirroring": {
               "commands": {
                 "daad": {
@@ -4185,17 +4230,9 @@
             }
           },
           "commands": {
-            "extractchannel": {
-              "description": [
-                "Extract a colour channel from an image.",
-                "Available channels:\n\n - Red\n - Green\n- Blue\n- Alpha"
-              ],
+            "extractchannels": {
+              "description": "Extract the colour channels from an image.",
               "options": [
-                {
-                  "name": "channel",
-                  "description": "The colour channel to extract",
-                  "required": true
-                },
                 {
                   "name": "image-attachment",
                   "description": "An image"
@@ -4205,37 +4242,7 @@
                   "description": "An image"
                 }
               ],
-              "prefixCommand": "images/extractchannel"
-            },
-            "mergechannels": {
-              "description": "Merge three images into a single image, using each image as the individual colour channels.",
-              "options": [
-                {
-                  "name": "red-image-attachment",
-                  "description": "The image to use as the red colour channel"
-                },
-                {
-                  "name": "red-image-string",
-                  "description": "The image to use as the red colour channel"
-                },
-                {
-                  "name": "green-image-attachment",
-                  "description": "The image to use as the green colour channel"
-                },
-                {
-                  "name": "green-image-string",
-                  "description": "The image to use as the green colour channel"
-                },
-                {
-                  "name": "blue-image-attachment",
-                  "description": "The image to use as the blue colour channel"
-                },
-                {
-                  "name": "blue-image-string",
-                  "description": "The image to use as the blue colour channel"
-                }
-              ],
-              "prefixCommand": "images/mergechannels"
+              "prefixCommand": "images/extractchannels"
             }
           }
         },
@@ -5153,6 +5160,64 @@
                 }
               }
             }
+          },
+          "commands": {
+            "scan": {
+              "description": [
+                "Apply a time warp scan effect to a gif.",
+                "\"switchAxis\" and \"reverse\" are both true/false."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "switch-axis",
+                  "description": "Switch which axis is scanned"
+                },
+                {
+                  "name": "reverse",
+                  "description": "Reverse the scanning direction"
+                },
+                {
+                  "name": "colour",
+                  "description": "The scan line colour"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/scan"
+            },
+            "warp": {
+              "description": [
+                "Apply a delay warp effect to a gif.",
+                "\"switchAxis\" and \"reverse\" are both true/false."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "switch-axis",
+                  "description": "Switch which axis is warped"
+                },
+                {
+                  "name": "reverse",
+                  "description": "Reverse the warping direction"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/warp"
+            }
           }
         },
         "imagemanipulation": {
@@ -5228,6 +5293,29 @@
                 }
               ],
               "prefixCommand": "images/manipulation/opacity"
+            },
+            "outline": {
+              "description": "Add an outline to an image.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "width",
+                  "description": "The outline width"
+                },
+                {
+                  "name": "colour",
+                  "description": "The outline colour"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/outline"
             },
             "overlay": {
               "description": [
@@ -5428,6 +5516,34 @@
         },
         "imageutility": {
           "commands": {
+            "averagecolour": {
+              "description": "Get the average colour of an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/averagecolour"
+            },
+            "commoncolour": {
+              "description": "Get the most common colour in an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/commoncolour"
+            },
             "watermark": {
               "description": [
                 "Put a watermark over an image.",
