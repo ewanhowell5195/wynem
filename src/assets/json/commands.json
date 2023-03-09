@@ -1344,8 +1344,13 @@
                         "speech",
                         "bubble"
                       ],
-                      "arguments": "{image}",
-                      "description": "Add a speech bubble to an image"
+                      "arguments": "[x] [y] {image}",
+                      "cooldown": 5,
+                      "description": [
+                        "Add a speech bubble to an image.",
+                        "The X and Y coordinates customise where the speech bubble points to.",
+                        "If no coordinates are provided, it will try to point to a face detected within the image."
+                      ]
                     },
                     "thinking": {
                       "aliases": [
