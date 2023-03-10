@@ -3382,6 +3382,9 @@
               "slashCommand": "utility/createembed"
             },
             "exif": {
+              "aliases": [
+                "xif"
+              ],
               "arguments": "{file}",
               "description": "View the exif data of a file.",
               "slashCommand": "utility/exif"
