@@ -408,6 +408,84 @@ page-body
   white-space: pre-wrap
   border-radius: 7.5px
   font-family: var(--font-code)
+  
+.extra-container
+  margin-bottom: 20px
+  border-radius: 7.5px
+  width: 100%
+  box-shadow: var(--box-shadow)
+  background-color: var(--color-grey-light)
+  overflow: hidden
+  font-family: Arial
+
+  & > div:first-child
+    padding: 5px 20px
+    cursor: pointer
+    user-select: none
+    transition: background-color .15s
+    fill: var(--color-text-white)
+    font-weight: 700
+    border-radius: 7.5px
+    height: 30px
+    
+    &:hover
+      background-color: var(--color-grey-lighter)
+      
+    & > div
+      display: flex
+      justify-content: space-between
+      align-items: center
+      transition: transform .15s
+      filter: drop-shadow(var(--text-shadow))
+      height: 100%
+        
+      & > svg
+        width: 24px
+        height: 24px
+        transform: rotateZ(90deg)
+        
+        &.flip
+          transform: rotateZ(-90deg)
+
+    &:active > div
+      transform: translateY(3px)
+
+.extra
+  max-height: 0
+  transition: max-height .5s
+
+.embed
+  padding: 10px 20px 20px
+  display: flex
+  flex-direction: column
+  gap: 10px
+  line-height: 1.25rem
+
+  & *
+    margin: 0
+    white-space: pre-wrap
+  
+  code
+    font-family: var(--font-code)
+    background-color: var(--color-grey)
+    padding: 2px 4px
+    
+.fields
+  display: flex
+  gap: 20px
+  flex-wrap: wrap
+
+  h4
+    margin-bottom: 10px
+    
+  > div
+    flex: 1
+
+.codeblock
+  font-family: var(--font-code)
+  background-color: var(--color-grey)
+  padding: 10px
+  border-radius: 5px
 
 .button-row
   display: flex

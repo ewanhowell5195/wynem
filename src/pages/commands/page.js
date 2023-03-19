@@ -110,9 +110,7 @@ export default class extends Page {
       for (const section of (Array.isArray(command.description) ? command.description : [command.description])) commandInfo.append(
         E("div").addClass("description").text(section)
       )
-      if (command.extra) for (const section of (Array.isArray(command.extra) ? command.extra : [command.extra])) commandInfo.append(
-        E("div").addClass("description").text(section)
-      )
+      if (command.extra) addMoreInfo(command.extra, commandInfo, arrowRight)
       if (command.prefixCommand || command.slashCommand || command.contextCommand) {
         const buttonRow = E("div").addClass("button-row").appendTo(commandInfo)
         if (command.prefixCommand) buttonRow.append(E("a", { is: "f-a" }).attr("href", `/commands/prefix/${command.prefixCommand}`).append(E("span").text("Prefix Command")))
@@ -179,7 +177,7 @@ export default class extends Page {
       }
       if (category.extra) {
         if (!description) description = E("div").attr("id", "category-description")
-        description.append((Array.isArray(category.extra) ? category.extra : [category.extra]).map(e => E("div").addClass("category-description").text(e)))
+        addMoreInfo(category.extra, description, arrowRight)
       }
       if (description) {
         content.append(
@@ -190,7 +188,6 @@ export default class extends Page {
       if (category.commands) {
         const commandsContainer = E("div").attr("id", "commands").appendTo(content)
         for (const [command, info] of Object.entries(category.commands)) {
-          console.log(info)
           commandsContainer.append(
             E("a", { is: "f-a" }).attr({
               href: `${pathStr}${command}`
@@ -304,5 +301,38 @@ export default class extends Page {
 
   onOpened() {
     history.replaceState({}, null, this.newState)
+  }
+}
+
+function addMoreInfo(embeds, parent, arrowRight) {
+  let arrow
+  const extra = E("div").addClass("extra").appendTo(
+    E("div").addClass("extra-container").append(
+      E("div").append(
+        E("div").append(
+          E("span").text("More information"),
+          arrow = arrowRight.clone()
+        )
+      ).on("click", e => {
+        arrow.toggleClass("flip")
+        if (extra.css("max-height") === "0px") extra.css("max-height", `${extra[0].scrollHeight}px`)
+        else extra.css("max-height", "0px")
+      })
+    ).appendTo(parent)
+  )
+  for (const embed of embeds) {
+    const section = E("div").addClass("embed").appendTo(extra)
+    if (embed.title) section.append(E("h3").text(embed.title))
+    if (embed.description) section.append(E("p").html(embed.description.replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>').replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")))
+    if (embed.fields) {
+      let fields
+      for (const field of embed.fields) {
+        if (!fields || !field[2]) fields = E("div").addClass("fields").appendTo(section)
+        fields.append(E("div").append(
+          E("h4").text(field[0]),
+          E("p").html(field[1].replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>').replace(/`((?:.|\n)+?)`/g, "<code>$1</code>"))
+        ))
+      }
+    }
   }
 }

@@ -646,11 +646,25 @@
         },
         "images": {
           "description": [
-            "These commands take many types of image inputs.",
-            "Valid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
-            "Leave it blank to target an image/url/emoji/sticker from a previous message in the channel. You can reply to a message to target an image in that message."
+            "Commands that modify and manipulate images.",
+            "These commands take many types of image inputs.\nValid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
+            "Leave the image argument blank to target an image from a previous message in the channel. You can also reply to a message or provide a message link to target an image in that message."
           ],
-          "extra": "There are certain image prefixes and shortcuts that you can use to change the image input.\n\nThese work on any command that accepts a member, or an image:\n^  - Target the member from the previous message\n<  - Target yourself\nme - Target yourself\n<< - Target your user (will ignore server avatar and get main avatar)\n\nThese work on any command that accepts an image:\nb:@ping          - get a users banner\nu:@ping          - get a user instead of a member (will ignore server avatar and get main avatar)\nmc:username      - get the minecraft skin of a Minecraft username\nmc:@ping         - get the minecraft skin of a member\nskin:username    - get the minecraft skin of a Minecraft username\nskin:@ping       - get the minecraft skin of a member\ncape:username    - get the minecraft cape of a Minecraft username\ncape:@ping       - get the minecraft cape of a member\ntexture:filename:version - get a minecraft texture",
+          "extra": [
+            {
+              "description": "There are certain image prefixes and shortcuts that you can use to change the image input.\n\nUsers and members are different things. A member is a user that is inside a server, so therefore may have a different server specific avatar that is different from the user avatar.",
+              "fields": [
+                [
+                  "These work on any command that accepts a member, or an image:",
+                  "```^  - Target the member from the previous message\n<  - Target yourself\nme - Target yourself\n<< - Target your user```"
+                ],
+                [
+                  "These work on any command that accepts an image:",
+                  "```b:@ping\n  - get a users banner\nu:@ping\n  - get a user\nmc:username\n  - get the minecraft skin of a Minecraft username\nmc:@ping\n  - get the minecraft skin of a member\nskin:username\n  - get the minecraft skin of a Minecraft username\nskin:@ping\n  - get the minecraft skin of a member\ncape:username\n  - get the minecraft cape of a Minecraft username\ncape:@ping\n  - get the minecraft cape of a member\ntexture:filename:version\n  - get a minecraft texture```"
+                ]
+              ]
+            }
+          ],
           "categories": {
             "animation": {
               "commands": {
@@ -994,6 +1008,9 @@
                       "slashCommand": "imagefun/avatars/appear"
                     },
                     "avatarpie": {
+                      "aliases": [
+                        "avpie"
+                      ],
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                       "description": "Merge a bunch of avatars into one image.",
                       "slashCommand": "imagefun/avatars/avatarpie"
@@ -1570,7 +1587,7 @@
                   "aliases": [
                     "mojify"
                   ],
-                  "arguments": "[mode] {image}",
+                  "arguments": "{image}",
                   "cooldown": 3,
                   "description": "Turn an image into a bunch of emojis! Available modes are \"default\" and \"all\"."
                 },
@@ -1981,12 +1998,125 @@
                 "emote",
                 "e"
               ],
-              "arguments": "<emoji> [type/resolution]",
+              "arguments": "<emoji> [resolution/type] [version]",
               "description": [
                 "Get the image of an emoji.",
-                "The type or resolution is optional. Not every type has every emoji."
+                "The type, resolution, and version are optional. Not every type has every emoji."
               ],
-              "extra": "Available types:\n\ntwitter\napple\nwindows\nwindows113d\nwindows10a\nwindows10\nwindows8.1\nwindows8\nandroid\nandroid9\nandroid7\nandroid6\nandroid5\nandroid4\ngmail\nsamsung\nsamsung9\nsamsung7.1\nsamsung7\nwhatsapp\nfacebook\nskype\njoypixels\nopenemoji\nemojidex\nmessenger\nlg\nhtc\nmozilla\nsoftbank\ndocomo\nau-kddi\nemojipedia"
+              "extra": [
+                {
+                  "title": "Emoji types",
+                  "description": "Use in the formatting `[type] [version]`\nThe version is optional",
+                  "fields": [
+                    [
+                      "Apple",
+                      "iOS 15.4\niOS 14.6\niOS 14.5\niOS 14.2\niOS 13.3\niOS 13.2\niOS 13.1\niOS 12.2\niOS 12.1\niOS 11.3\niOS 11.2\niOS 11.1\niOS 10.3\niOS 10.2\niOS 10.0\niOS 9.3\niOS 9.1\niOS 9.0\niOS 8.3\niOS 6.0\niOS 5.1\niOS 5.0\niOS 4.0\niOS 2.2",
+                      true
+                    ],
+                    [
+                      "Google Noto Color Emoji",
+                      "Android 15.0\nAndroid 12L\nAndroid 12.0\nAndroid 11.0 Dec 2020\nAndroid 11.0\nAndroid 10.0 Mar 2020\nAndroid 10.0\nAndroid 9.0\nAndroid 8.1\nAndroid 8.0\nAndroid 7.1\nAndroid 7.0\nAndroid 6.0.1\nAndroid 5.0\nAndroid 4.4\nAndroid 4.3\nGmail\nAnimated 14.0\nAnimated 14.0 b",
+                      true
+                    ],
+                    [
+                      "Samsung",
+                      "One UI 5.0\nOne UI 4.0 Jan 2022\nOne UI 4.0\nOne UI 3.1.1\nOne UI 2.5\nOne UI 2.1\nOne UI 2.0\nOne UI 1.5\nOne UI 1.0\nExperience 9.5\nExperience 9.1\nExperience 9.0\nExperience 8.5\nExperience 8.1\nExperience 8.0\nTouchWiz 7.1\nTouchWiz 7.0\nTouchwiz 6.0\nTouchWiz 5.1\nTouchWiz 2",
+                      true
+                    ],
+                    [
+                      "Microsoft",
+                      "Windows 11 22H2\nWindows 11 Nov 2021\nWindows 11 3D\nWindows 11\nWindows 10 May 2019\nWindows 10 Oct 2018\nWindows 10 Apr 2018\nWindows 10 Fall Creators\nWindows 10 Creators\nWindows 10 Anniversary\nWindows 10\nWindows 8.1\nWindows 8.0\nTeams 1.0\nSkype 1.2\nSkype 1.0",
+                      true
+                    ],
+                    [
+                      "WhatsApp",
+                      "2.22.8.79\n2.21.23.23\n2.21.16.20\n2.20.206.24\n2.20.198.15\n2.19.7\n2.19.62\n2.19.352\n2.19.244\n2.19.175\n2.18.379\n2.17\n2.16\n2.12\n2.11",
+                      true
+                    ],
+                    [
+                      "Twitter",
+                      "Twemoji 14.0\nTwemoji 13.1.1\nTwemoji 13.1\nTwemoji 13.0.2\nTwemoji 13.0.1\nTwemoji 13.0\nTwemoji 12.1.6\nTwemoji 12.1.5\nTwemoji 12.1.4\nTwemoji 12.1.3\nTwemoji 12.1\nTwemoji 12.0\nTwemoji 11.4\nTwemoji 11.3\nTwemoji 11.2\nTwemoji 11.1\nTwemoji 11.0\nTwemoji 2.7\nTwemoji 2.6\nTwemoji 2.5\nTwemoji 2.4\nTwemoji 2.3\nTwemoji 2.2.3\nTwemoji 2.2\nTwemoji 2.1.2\nTwemoji 2.1\nTwemoji 2.0\nTwemoji 1.0\nEmoji Stickers 13.1",
+                      true
+                    ],
+                    [
+                      "Facebook",
+                      "14.0\n13.0\n13.1\n4.0\n3.1\n3.0\n2.2.1\n2.1\n2.0\n1.0",
+                      true
+                    ],
+                    [
+                      "JoyPixels",
+                      "7.0\n6.6\n6.5\n6.0\n5.5\n5.0\n4.5\n4.0\n3.1\n3.1 b\n3.0\n2.2.5\n2.2.4\n2.2\n2.1\n2.0\n1.0",
+                      true
+                    ],
+                    [
+                      "Toss Face (토스페이스)",
+                      "1.3\nMar 2022\nFeb 2022",
+                      true
+                    ],
+                    [
+                      "Sony Playstation",
+                      "13.1",
+                      true
+                    ],
+                    [
+                      "Noto Emoji Font",
+                      "15.0",
+                      true
+                    ],
+                    [
+                      "OpenMoji",
+                      "14.0\n13.1\n13.0\n12.3\n12.2\n12.0\n1.0",
+                      true
+                    ],
+                    [
+                      "emojidex",
+                      "1.0.34\n1.0.33\n1.0.24\n1.0.22\n1.0.19\n1.0.14",
+                      true
+                    ],
+                    [
+                      "Messenger",
+                      "1.0",
+                      true
+                    ],
+                    [
+                      "LG",
+                      "Velvet\nG5\nG4\nG3",
+                      true
+                    ],
+                    [
+                      "HTC",
+                      "Sense 8\nSense 7",
+                      true
+                    ],
+                    [
+                      "Mozilla",
+                      "Firefox OS 2.5",
+                      true
+                    ],
+                    [
+                      "SoftBank",
+                      "2014\n2010\n2008\n2006\n2004\n2001\n2000\n1999\n1998\n1997",
+                      true
+                    ],
+                    [
+                      "Docomo",
+                      "2013\n2006\n2002\n2000\n1999",
+                      true
+                    ],
+                    [
+                      "au by KDDI",
+                      "Type F\nType D-3\nType D-2\nType D-1\nType C-2\nType B-3\nType B-2\nType A-2",
+                      true
+                    ],
+                    [
+                      "Emojipedia Sample Images",
+                      "14.0\n13.1\n13.0\n12.0\n11.1\n11.0\n6.0\n5.1\n5.0\n4.0\n3.0\n2.0\n1.0",
+                      true
+                    ]
+                  ]
+                }
+              ],
+              "slashCommand": "image/emoji"
             },
             "encodemessage": {
               "aliases": [
@@ -4243,6 +4373,24 @@
             }
           },
           "commands": {
+            "emoji": {
+              "description": [
+                "Get the image of an emoji.",
+                "The type, resolution, and version are optional. Not every type has every emoji."
+              ],
+              "options": [
+                {
+                  "name": "emoji",
+                  "description": "The emoji to get",
+                  "required": true
+                },
+                {
+                  "name": "type",
+                  "description": "The emoji type"
+                }
+              ],
+              "prefixCommand": "images/emoji"
+            },
             "extractchannels": {
               "description": "Extract the colour channels from an image.",
               "options": [
