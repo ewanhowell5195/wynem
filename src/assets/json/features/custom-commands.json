@@ -1,6 +1,12 @@
 {
   "commands": {
     "prefix": [
+      {
+        "type": "category",
+        "text": "Custom Commands",
+        "path": ["bot", "commands", "customcommands"]
+      },
+      ["bot", "commands", "customcommands", "addcustomcommand"],
       ["bot", "commands", "customcommands", "addcustomcommand"],
       ["bot", "commands", "customcommands", "removecustomcommand"],
       {
@@ -19,7 +25,46 @@
       "type": "heading",
       "text": "What are custom commands?"
     },
-    "idk good question"
+    "Custom commands are a way to create your own commands for Wynem. Users can run a custom command and Wynem will respond with a customised message that you create.",
+    "",
+    {
+      "type": "image",
+      "name": "crash",
+      "height": 112
+    },
+    "",
+    {
+      "type": "heading",
+      "text": "Custom command types"
+    },
+    "There are multiple different types of custom command that you can set up. Each one replies with a differnet type of message.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Message", "Wynem will reply with a regular Discord message"],
+        ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
+        ["Custom Embed", "Reply with your own custom embed that can look however you want"]
+      ]
+    }
   ],
-  "guides": []
+  "guides": [
+    {
+      "name": "Creating Custom Commands",
+      "content": [
+        "Create custom commands guide goes here"
+      ]
+    },
+    {
+      "name": "Using Custom Commands",
+      "content": [
+        "Use custom commands guide goes here"
+      ]
+    },
+    {
+      "name": "Removing Custom Commands",
+      "content": [
+        "Remove custom commands guide goes here"
+      ]
+    }
+  ]
 }

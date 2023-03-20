@@ -33,23 +33,31 @@ export default class extends Page {
         for (const commandData of related) {
           let commandPath = commandData
           if (!Array.isArray(commandPath)) commandPath = commandPath.path
-          let command = commands.categories[type]
-          for (let [i, part] of commandPath.entries()) {
-            if (i === commandPath.length - 1) command = command.commands[part]
-            else command = command.categories[part]
-          }
-          let commandName
-          if (type === "prefix") commandName = `e!${commandPath[commandPath.length - 1]}`
-          else if (type === "slash") commandName = `/${commandPath.join(" ")}`
-          else if (type === "context") commandName = command.name ?? commandPath[commandPath.length - 1].replace(/-/g, " ").toTitleCase()
-          commandList.append(
-            E("h3").text(commandName),
-            E("p").html(commandData.description ?? (Array.isArray(command.description) ? command.description[0] : command.description)),
+          if (commandData.type === "category") commandList.append(
             E("a", { is: "f-a" }).attr("href", `/commands/${type}/${commandPath.join("/")}`).addClass("button secondary").append(
               linkIcon.clone(true),
-              E("span").text("More info...")
+              E("span").text(commandData.text)
             )
           )
+          else {
+            let command = commands.categories[type]
+            for (let [i, part] of commandPath.entries()) {
+              if (i === commandPath.length - 1) command = command.commands[part]
+              else command = command.categories[part]
+            }
+            let commandName
+            if (type === "prefix") commandName = `e!${commandPath[commandPath.length - 1]}`
+            else if (type === "slash") commandName = `/${commandPath.join(" ")}`
+            else if (type === "context") commandName = command.name ?? commandPath[commandPath.length - 1].replace(/-/g, " ").toTitleCase()
+            commandList.append(
+              E("h3").text(commandName),
+              E("p").html(commandData.description ?? (Array.isArray(command.description) ? command.description[0] : command.description)),
+              E("a", { is: "f-a" }).attr("href", `/commands/${type}/${commandPath.join("/")}`).addClass("button secondary").append(
+                linkIcon.clone(true),
+                E("span").text("More info...")
+              )
+            )
+          }
         }
       }
       $(".command-list").first().addClass("selected")

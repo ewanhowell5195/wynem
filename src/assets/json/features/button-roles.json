@@ -21,7 +21,7 @@
     "",
     {
       "type": "heading",
-      "text": "Role Types"
+      "text": "Role types"
     },
     "There are multiple different types of button role that you can create.",
     {
@@ -60,7 +60,7 @@
           "type": "tablelist",
           "rows": [
             ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
-            ["Custom Embed", "Create your own custom embed, that can look however you want"],
+            ["Custom Embed", "Create your own custom embed that can look however you want"],
             ["No Embed", "Send no embed, the message be just the buttons on their own"]
           ]
         },
