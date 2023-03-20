@@ -7,7 +7,6 @@
         "path": ["bot", "commands", "customcommands"]
       },
       ["bot", "commands", "customcommands", "addcustomcommand"],
-      ["bot", "commands", "customcommands", "addcustomcommand"],
       ["bot", "commands", "customcommands", "removecustomcommand"],
       {
         "path": ["bot", "commands", "help"],
@@ -43,7 +42,8 @@
       "rows": [
         ["Message", "Wynem will reply with a regular Discord message"],
         ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
-        ["Custom Embed", "Reply with your own custom embed that can look however you want"]
+        ["Custom Embed", "Reply with your own custom embed that can look however you want"],
+        ["URL Buttons", "Will send a message containing some clickable URL buttons"]
       ]
     }
   ],
