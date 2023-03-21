@@ -25,11 +25,18 @@
       "text": "What are custom commands?"
     },
     "Custom commands are a way to create your own commands for Wynem. Users can run a custom command and Wynem will respond with a customised message that you create.",
-    "",
     {
-      "type": "image",
-      "name": "crash",
-      "height": 112
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "e!custom"
+        },
+        "title": "Custom command!",
+        "description": "You just ran a custom command!"
+      }
     },
     "",
     {
@@ -51,13 +58,57 @@
     {
       "name": "Creating Custom Commands",
       "content": [
-        "Create custom commands guide goes here"
+        "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/serverconfig customcommands addcustomcommand</code> command, and then click the button to start.",
+        {
+          "type": "embed",
+          "data": {
+            "description": "Press the button to start creating a custom command",
+            "buttons": [{
+              "label": "Create a custom command",
+              "emoji": "pencil"
+            }]
+          }
+        },
+        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
+        {
+          "type": "image",
+          "name": "modal",
+          "height": 384
+        },
+        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
+        {
+          "type": "embed",
+          "data": {
+            "description": "What type of custom command would you like to create?",
+            "fields": [
+              ["Message", "Will send a regular Discord message"],
+              ["Image/Gif/Video", "Will send an image/gif/video in chat"],
+              ["Custom Embed", "Will send a custom embed"],
+              ["URL Buttons", "Will send a message containing some URL buttons"]
+            ],
+            "buttons": [
+              {
+                "label": "Message"
+              },
+              {
+                "label": "Image/Gif/Video"
+              },
+              {
+                "label": "Custom Embed"
+              },
+              {
+                "label": "URL Buttons"
+              }
+            ] 
+          }
+        },
+        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section."
       ]
     },
     {
-      "name": "Using Custom Commands",
+      "name": "Running Custom Commands",
       "content": [
-        "Use custom commands guide goes here"
+        "To run a custom command, simply run the command <span class=\"command prefix\"><code>e![customcommandname]</code>. For example: <code>e!custom</code></span><span class=\"command slash\"><code>/customcommand command:[customcommandname]</code>. For example: <code>/customcommand command:custom</code></span>"
       ]
     },
     {

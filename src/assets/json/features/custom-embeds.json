@@ -17,16 +17,42 @@
       "type": "image",
       "name": "embed",
       "height": 512
+    },
+    {
+      "type": "embed",
+      "data": {
+        "author": ["This is the Author", "/assets/images/logo/logo.webp"],
+        "title": "This is the Title with a URL",
+        "url": "/",
+        "description": "This is the Description",
+        "fields": [
+          ["This is a Field Name", "This is a Field Value"],
+          ["This is an Inline Field", "This is an Inline Field"],
+          ["This is another Inline Field", "This is another Inline Field", true]
+        ],
+        "image": "/assets/images/logo/logo.webp",
+        "thumbnail": "/assets/images/logo/logo.webp",
+        "footer": ["This is the Footer", "/assets/images/logo/logo.webp"],
+        "buttons": [{
+          "label": "This is a button",
+          "url": "/"
+        }]
+      }
     }
   ],
   "guides": [{
     "name": "Creating custom embeds",
     "content": [
-      "Throughout this guide, there will be references to different sections of embeds. If you do not know what section is being mentioned, you can refer to the image above.\n\nTo start creating a custom embed, first, run the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command, and then click the button to start.\nIf the custom embed is being created by another command, you can ignore this step.",
+      "Throughout this guide, there will be references to different sections of embeds. If you do not know what section is being mentioned, you can refer to the image above.\n\nTo start creating a custom embed, first run the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command, and then click the button to start.\nIf the custom embed is being created by another command, you can ignore this step.",
       {
-        "type": "image",
-        "name": "start",
-        "height": 112
+        "type": "embed",
+        "data": {
+          "description": "Press the button to start creating a custom embed",
+          "buttons": [{
+            "label": "Create embed",
+            "emoji": "pencil"
+          }]
+        }
       },
       "\nThe first modal you will see is for the main content of the embed.\nIf you do not wish to include any of these, just click submit while leaving all fields blank.",
       {
@@ -45,9 +71,24 @@
       },
       "\nAfter each modal, you will be given the choice to add more content, skip past the suggested content types, or finish the embed.\nThe rest of this guide will assume you always choose the first button.",
       {
-        "type": "image",
-        "name": "continue",
-        "height": 112
+        "type": "embed",
+        "data": {
+          "description": "Press a button to continue creating the custom embed",
+          "buttons": [
+            {
+              "label": "Add author and footer",
+              "emoji": "pencil"
+            },
+            {
+              "label": "Skip",
+              "emoji": "arrow_right"
+            },
+            {
+              "label": "Finish",
+              "emoji": "flag"
+            }
+          ]
+        }
       },
       "\nThe next modal you see allows you to add the author and footer to the embed.",
       {

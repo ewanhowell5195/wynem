@@ -6266,7 +6266,7 @@
           "description": "Run a custom command.",
           "options": [
             {
-              "name": "custom-command",
+              "name": "command",
               "description": "The custom command to run",
               "required": true
             }

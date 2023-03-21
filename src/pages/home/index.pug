@@ -1,4 +1,5 @@
 style: include:styl index.styl
+include /../includes/embeds.pug
 #front
   include /assets/images/logo/wynem.svg
   h1 A bot that does 
@@ -11,11 +12,11 @@ style: include:styl index.styl
 .container
   #about
   .content-box
-    img(src = "./assets/images/home/snap.webp")
+    .showcase#image
     .content-box-text
       h1 Advanced Image Commands
       p Wynem has advanced image commands that allow you to manipulate images in a variety of ways. You can resize images, add text, merge multiple images, and much more!
-      p Images can be grabbed from a large variety of sources, such as previous messages, user avatars, user banners, YouTube thumbnails, Minecraft textures, and many others.
+      p Images can be grabbed from a large variety of sources, such as previous messages, user avatars, user banners, YouTube thumbnails, Minecraft textures, and many others!
       a.button(href = "/commands/prefix/images", is = "f-a"): span View image commands
   .content-box
     .content-box-text
@@ -27,9 +28,9 @@ style: include:styl index.styl
         li An Embed Builder, to create your own embeds with
         li A Colour Previewer, to view a colour, and get it in other formats
       a.button(href = "/commands/prefix/images", is = "f-a"): span View utilities
-    img(src = "./assets/images/home/poll.webp")
+    .showcase#utility
   .content-box
-    img(src = "./assets/images/home/records.webp")
+    .showcase#moderation
     .content-box-text
       h1 Moderation Tools
       p You can find all your standard tools for moderating your server:
@@ -46,7 +47,7 @@ style: include:styl index.styl
       h1 Minecraft
       p Wynem contains lots of Minecraft related commands. These include the ability to view player skins and capes, a command to get any texture from the game, lots of tools to help create resource packs, a command to render Minecraft models in 3D, and more! 
       a.button(href = "/commands/prefix/minecraft", is = "f-a"): span View Minecraft commands
-    img(src = "./assets/images/home/steve.webp")
+    .showcase#minecraft
   .button-bar
     a.button(href = `https://invite.${self.domain}/`): span Invite now!
     a.button.secondary(href = "/features", is = "f-a")

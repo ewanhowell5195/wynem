@@ -1,3 +1,5 @@
+import { makeEmbed } from "/js/embeds.js"
+
 export default class extends Page {
   constructor() {
     super("feature", async $ => {
@@ -76,7 +78,7 @@ export default class extends Page {
         }).first().addClass("active")
       }
     }
-    addBlocks($("#description"), feature.description, args.name)
+    addBlocks($, $("#description"), feature.description, args.name, { outline: true })
     $("#guides .heading").text(`How to use ${title}`)
     const guideTabs = $("#guide-tabs")
     const guideContent = $("#guide-content")
@@ -85,7 +87,7 @@ export default class extends Page {
         E("div").attr("data-guide", i).addClass("guide-tab tab").append(guide.name)
       )
       const section = E("div").attr("data-guide", i).addClass("guide")
-      addBlocks(section, guide.content, args.name)
+      addBlocks($, section, guide.content, args.name)
       guideContent.append(section)
     }
     $(".guide").first().addClass("selected")
@@ -99,7 +101,7 @@ export default class extends Page {
   }
 }
 
-function addBlocks(element, blocks, feature) {
+function addBlocks($, element, blocks, feature, args) {
   const section = E("div").addClass("section")
   for (const block of blocks) {
     if (typeof block === "string") {
@@ -114,6 +116,8 @@ function addBlocks(element, blocks, feature) {
       }
     } else if (block.type === "image") {
       E("img").attr("src", `/assets/images/features/${feature}/${block.name}.webp`).css("max-height", `${block.height ?? 256}px`).appendTo(section)
+    } else if (block.type === "embed") {
+      makeEmbed($, section, block.data, args)
     }
   }
   element.append(section)

@@ -13,10 +13,28 @@
       "text": "What are button roles?"
     },
     "Button roles are the next evolution of reaction roles, using buttons to apply roles instead of emojis.\n\nYou can create a message using Wynem that has buttons on it that users can click to add and remove roles from themselves.",
-    "",
     {
-      "type": "image",
-      "name": "buttonroles"
+      "type": "embed",
+      "data": {
+        "title": "Button roles!",
+        "fields": [
+          ["Wynem Notices", "For updates and notices about Wynem"],
+          ["Pack Announcements", "For whenever I update or release a resource pack"]
+        ],
+        "footer": ["Use the buttons below to apply the roles to yourself"],
+        "buttons": [
+          {
+            "label": "Wynem Notices",
+            "emoji": "wynem",
+            "style": "blue"
+          },
+          {
+            "label": "Pack Announcements",
+            "emoji": "grass",
+            "style": "green"
+          }
+        ]
+      }
     },
     "",
     {
@@ -37,11 +55,16 @@
     {
       "name": "Creating Button Roles",
       "content": [
-        "To start setting up your own button roles, first, run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
+        "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
         {
-          "type": "image",
-          "name": "start",
-          "height": 112
+          "type": "embed",
+          "data": {
+            "description": "Press the button to start setting up the button roles",
+            "buttons": [{
+              "label": "Set up button roles",
+              "emoji": "pencil"
+            }]
+          }
         },
         "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
         {
@@ -51,9 +74,20 @@
         },
         "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
         {
-          "type": "image",
-          "name": "more",
-          "height": 112
+          "type": "embed",
+          "data": {
+            "description": "Press a button to continue setting up the button roles",
+            "buttons": [
+              {
+                "label": "Add the 2nd role",
+                "emoji": "pencil"
+              },
+              {
+                "label": "Skip",
+                "emoji": "arrow_right"
+              }
+            ]
+          }
         },
         "\nFinally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
         {
@@ -65,9 +99,21 @@
           ]
         },
         {
-          "type": "image",
-          "name": "type",
-          "height": 112
+          "type": "embed",
+          "data": {
+            "description": "What embed type would you like for the button roles?",
+            "buttons": [
+              {
+                "label": "Default Embed"
+              },
+              {
+                "label": "Custom Embed"
+              },
+              {
+                "label": "No Embed"
+              }
+            ]
+          }
         },
         "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.",
         "\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
