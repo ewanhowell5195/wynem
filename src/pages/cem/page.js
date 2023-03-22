@@ -45,7 +45,6 @@ export default class extends Page {
               delete params.download
             }
             history.replaceState({}, null, `/cem/${toURLParams(params)}`)
-            $(document.body).addClass("no-scroll")
             const padding = [0, 1, 2].map(e => model.models.reduce((a, b) => Math.max(a, (b.translate?.[e] ?? 0).toString().split(".")[0].length), 0))
             const popup = E("div").addClass("popup").append(
               E("div").addClass("popup-container").append(
@@ -90,7 +89,6 @@ export default class extends Page {
                 delete params.entity
                 history.replaceState({}, null, `/cem/${toURLParams(params)}`)
                 popup.remove()
-                $(document.body).removeClass("no-scroll")
               }
             }).appendTo(this.shadowRoot)
           })

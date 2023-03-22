@@ -38,7 +38,6 @@
         "description": "You just ran a custom command!"
       }
     },
-    "",
     {
       "type": "heading",
       "text": "Custom command types"
@@ -69,13 +68,19 @@
             }]
           }
         },
-        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
+        "Next, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
         {
-          "type": "image",
-          "name": "modal",
-          "height": 384
+          "type": "modal",
+          "data": {
+            "title": "Custom Command Builder",
+            "rows": [
+              ["command name", "The name of the custom command", true],
+              ["the description of the custom command", "The description of the command", false, 512],
+              ["command aliases", "Alternative command names (comma separated)"]
+            ]
+          }
         },
-        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
+        "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
         {
           "type": "embed",
           "data": {
@@ -102,7 +107,7 @@
             ] 
           }
         },
-        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section."
+        "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section."
       ]
     },
     {

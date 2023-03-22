@@ -36,7 +36,6 @@
         ]
       }
     },
-    "",
     {
       "type": "heading",
       "text": "Role types"
@@ -66,13 +65,21 @@
             }]
           }
         },
-        "\nNext, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
+        "Next, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
         {
-          "type": "image",
-          "name": "modal",
-          "height": 512
+          "type": "modal",
+          "data": {
+            "title": "Button Role Builder",
+            "rows": [
+              ["1st role", "The name or ID of the 1st role", true],
+              ["1st role text", "The text that shows on the 1st role's button"],
+              ["1st role emoji", "The emoji that shows on the 1st role's button"],
+              ["1st colour", "The colour of the 1st role's button (red, green, blue, grey)"],
+              ["1st role type", "normal, binding, unique"]
+            ]
+          }
         },
-        "\nYou will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
+        "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
         {
           "type": "embed",
           "data": {
@@ -89,7 +96,7 @@
             ]
           }
         },
-        "\nFinally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
+        "Finally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
         {
           "type": "tablelist",
           "rows": [
@@ -115,8 +122,7 @@
             ]
           }
         },
-        "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.",
-        "\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
+        "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.\n\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
       ]
     },
     {

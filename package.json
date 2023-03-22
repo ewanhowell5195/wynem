@@ -16,7 +16,8 @@
     ],
     "forceHardReload": [
       "src/pages",
-      "src/css"
+      "src/css",
+      "includes/stylus"
     ]
   },
   "dependencies": {

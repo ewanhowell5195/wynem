@@ -1,5 +1,25 @@
+:host
+  --color-discord-ping: #414675
+  --color-discord-ping-hover: #5865F2
+  --color-discord-ping-text: #C2E2FD
+  --color-discord-text: #DBDEE1
+  --color-discord-text-light: #F2F3F5
+  --color-discord-button: #4E5058
+  --color-discord-button-hover: #6D6F78
+  --color-discord-button-active: #80848E
+  --color-discord-button-blue: #5865F2
+  --color-discord-button-blue-hover: #4752C4
+  --color-discord-button-blue-active: #3C45A5
+  --color-discord-button-green: #248046
+  --color-discord-button-green-hover: #1A6334
+  --color-discord-button-green-active: #15562B
+  --color-discord-button-red: #DA373C
+  --color-discord-button-red-hover: #A12828
+  --color-discord-button-red-active: #8F2022
+
 .embed-container 
   max-width: calc(100vw - 80px)
+  margin-bottom: 24px
 
   > div:last-child
     display: flex
@@ -19,6 +39,7 @@
   align-items: center
   font-size: 14px
   margin: 0 0 10px 60px
+  user-select: none
   
   img
     width: 16px
@@ -51,6 +72,7 @@
   width: 40px
   border-radius: 50%
   cursor: pointer
+  user-select: none
   
   &:hover
     filter: drop-shadow(0px 4px 4px #00000028)
@@ -149,7 +171,7 @@
   transition: background-color .17s
   user-select: none
   cursor: pointer
-  height: 16px
+  min-height: 16px
   font-size: 14px
   color: var(--color-text-white)
   text-decoration: none
@@ -288,3 +310,135 @@
   border-radius: 4px
   display: inline-block
   margin: 0 12px -4px 0
+  
+.modal-container
+  border-radius: 5px
+  background-color: var(--color-grey-lighter)
+  width: 440px
+  user-select: none
+  overflow: hidden
+  box-shadow: var(--box-shadow)
+  margin-bottom: 24px
+  
+.modal-top
+  padding: 16px 16px 32px 16px
+  display: flex
+  position: relative
+  gap: 8px
+  align-items: center
+  
+  > img
+    width: 24px
+    height: 24px
+    border-radius: 50%
+  
+  > div
+    font-size: 24px
+    color: var(--color-discord-text-light)
+
+  > svg
+    position: absolute
+    width: 28px
+    height: 28px
+    top: 16px
+    right: 16px
+    fill: var(--color-secondary)
+    cursor: pointer
+    transition: fill .2s ease-in-out
+    
+    &:hover
+      fill: var(--color-discord-text-light)
+      
+.modal-bottom
+  padding: 16px
+  display: flex
+  justify-content: flex-end
+  background-color: var(--color-grey-light)
+  
+  > div
+    width: 96px
+    height: 38px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    cursor: pointer
+    
+.modal-submit
+  transition: background-color .17s
+  border-radius: 3px
+  background-color: var(--color-discord-button-blue)
+  
+  &:hover
+    background-color: var(--color-discord-button-blue-hover)
+    
+  &:active
+    background-color: var(--color-discord-button-blue-active)
+    
+.modal-close:hover
+  text-decoration: underline
+  
+.modal
+  padding: 0 16px
+  
+.modal-row
+  margin-bottom: 16px
+  
+.modal-row-title
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: 700
+  color: var(--color-discord-text)
+  margin-bottom: 8px
+  
+  > span
+    color: var(--color-discord-button-red)
+    filter: brightness(1.25)
+
+.modal-row-input-container
+  position: relative
+  
+  > div
+    position: absolute
+    bottom: 12px
+    right: 14px
+    pointer-events: none
+    font-family: var(--font-code)
+    font-size: 12px
+    color: var(--color-secondary)
+
+.modal-row-input
+  background-color: var(--color-grey)
+  border-radius: 3px
+  padding: 10px
+  font-size: 15px
+  width: 100%
+  border: none
+  outline: none
+  box-sizing: border-box
+  
+  &::placeholder
+    color: var(--color-secondary)
+    letter-spacing: -0.2px
+    
+  &.long
+    resize: none
+    padding-right: 32px
+    font-family: var(--font)
+
+    &::-webkit-scrollbar
+      border: none
+      background: none
+      width: 14px
+      height: 14px
+      
+    &::-webkit-scrollbar-thumb
+      background-color: var(--color-grey-dark)
+    
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track
+      border-radius: 7px
+      background-clip: padding-box
+      border: 3px solid transparent
+      
+    &::-webkit-scrollbar-track
+      background-color: var(--color-grey-light)

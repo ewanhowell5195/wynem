@@ -14,11 +14,6 @@
     },
     "Discord embeds are a special type of message that allows you to present data with special formatting and structure.\nCustom embeds are a feature of Wynem that allow you to create your own embeds. This may be part of another command, or simply making one with the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command.",
     {
-      "type": "image",
-      "name": "embed",
-      "height": 512
-    },
-    {
       "type": "embed",
       "data": {
         "author": ["This is the Author", "/assets/images/logo/logo.webp"],
@@ -54,7 +49,7 @@
           }]
         }
       },
-      "\nThe first modal you will see is for the main content of the embed.\nIf you do not wish to include any of these, just click submit while leaving all fields blank.",
+      "The first modal you will see is for the main content of the embed.\nIf you do not wish to include any of these, just click submit while leaving all fields blank.",
       {
       "type": "tablelist",
         "rows": [
@@ -65,11 +60,18 @@
         ]
       },
       {
-        "type": "image",
-        "name": "main",
-        "height": 512
+        "type": "modal",
+        "data": {
+          "title": "Embed Builder",
+          "rows": [
+            ["title", "The title"],
+            ["url", "Turns the title into a clickable link (requires title)"],
+            ["description", "Appears underneath the title", false, 4000],
+            ["colour", "Changes the colour of the bar up the side"]
+          ]
+        }
       },
-      "\nAfter each modal, you will be given the choice to add more content, skip past the suggested content types, or finish the embed.\nThe rest of this guide will assume you always choose the first button.",
+      "After each modal, you will be given the choice to add more content, skip past the suggested content types, or finish the embed.\nThe rest of this guide will assume you always choose the first button.",
       {
         "type": "embed",
         "data": {
@@ -90,7 +92,7 @@
           ]
         }
       },
-      "\nThe next modal you see allows you to add the author and footer to the embed.",
+      "The next modal you see allows you to add the author and footer to the embed.",
       {
         "type": "tablelist",
         "rows": [
@@ -102,11 +104,19 @@
         ]
       },
       {
-        "type": "image",
-        "name": "authorfooter",
-        "height": 512
+        "type": "modal",
+        "data": {
+          "title": "Embed Builder",
+          "rows": [
+            ["author", "The small text at the top"],
+            ["author image url", "An image to display next to the author (requires author)"],
+            ["author url", "Turns the author into a clickable link (requires author)"],
+            ["footer", "The small text at the bottom", false, 1024],
+            ["footer image url", "An image to display next to the footer (requires footer)"]
+          ]
+        }
       },
-      "\nThe third modal is for adding both the main and thumbnail image to the embed.",
+      "The third modal is for adding both the main and thumbnail image to the embed.",
       {
         "type": "tablelist",
         "rows": [
@@ -115,11 +125,16 @@
         ]
       },
       {
-        "type": "image",
-        "name": "images",
-        "height": 300
+        "type": "modal",
+        "data": {
+          "title": "Embed Builder",
+          "rows": [
+            ["image url", "A large image in the middle"],
+            ["thumbnail url", "A small image on the top right"]
+          ]
+        }
       },
-      "\nNext you will have the option to add up to 25 fields to your custom embed.\nFields are small sections in the middle of the embed.\nSkipping a single field will skip all remaining fields.",
+      "Next you will have the option to add up to 25 fields to your custom embed.\nFields are small sections in the middle of the embed.\nSkipping a single field will skip all remaining fields.",
       {
         "type": "tablelist",
         "rows": [
@@ -129,11 +144,17 @@
         ]
       },
       {
-        "type": "image",
-        "name": "fields",
-        "height": 400
+        "type": "modal",
+        "data": {
+          "title": "Embed Builder",
+          "rows": [
+            ["field name", "The name of the field", true],
+            ["field value", "The value of the field", true],
+            ["would you like the field to be inline?", false, 1024]
+          ]
+        }
       },
-      "\nFinally, you will be able to add up to 25 buttons to your custom embed.\nButtons are special links that appear beneath the embed.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skill all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+      "Finally, you will be able to add up to 25 buttons to your custom embed.\nButtons are special links that appear beneath the embed.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skill all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
       {
         "type": "tablelist",
         "rows": [
@@ -142,9 +163,14 @@
         ]
       },
       {
-        "type": "image",
-        "name": "buttons",
-        "height": 300
+        "type": "modal",
+        "data": {
+          "title": "Embed Builder",
+          "rows": [
+            ["button label", "The text on the button", true],
+            ["button url", "The URL to go to when clicking the button", true]
+          ]
+        }
       },
       "Some commands that use custom embeds do not support buttons.\n\n\nCongratulations, you are finished. You have now created a custom embed!"
     ]

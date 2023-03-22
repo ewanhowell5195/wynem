@@ -1,3 +1,5 @@
+import { makeEmbed } from "/js/embeds.js"
+
 export default class extends Page {
   constructor() {
     super("commands")
@@ -214,8 +216,18 @@ export default class extends Page {
             h2 Custom prefixes
             p The prefix that Wynem uses can be customised with the <a href="/commands/prefix/bot/prefixes" is="f-a">prefix commands</a>.
             p If you are unsure what prefix Wynem is set to use in the current server, you can ping <span class="ping">@Wynem</span>, and it will tell you the current prefix.
-            img(src = "/assets/images/misc/ping.webp")
           `))
+          makeEmbed($, content, {
+            reply: {
+              name: "Ewan",
+              colour: "#D14949",
+              image: "/assets/images/logo/ewan.webp",
+              message: "<@Wynem>"
+            },
+            title: "Wynem",
+            description: "My default prefix is `e!`\n\nUse `e!help` to view the commands that are available",
+            thumbnail: "/assets/images/logo/logo.webp"
+          }, { outline: true })
         } else {
           $("#category-name").text("Context Commands")
           content.append(E("div").addClass("category-info").html(_pug`

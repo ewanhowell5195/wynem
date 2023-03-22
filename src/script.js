@@ -1,4 +1,6 @@
-import "/js/libs/pages.js"
+import { Page } from "/js/libs/pages.js"
+
+window.Page = Page
 
 window.E = (tagName = "div", options) => $(document.createElement(tagName, options))
 
@@ -132,7 +134,6 @@ let pageLoadPromise = Promise.resolve()
 let isOpeningPage = false
 window.openPage = function(url, updateHistory = false, forceUpdate = false) {
   if (!forceUpdate && (isOpeningPage || compareURLs(url, location))) return
-  $(document.body).removeClass("no-scroll")
   $("a").removeClass("selected")
   return pageLoadPromise = pageLoadPromise.finally(async () => {
     $("#mobile-menu").addClass("hidden")

@@ -1,3 +1,5 @@
+import { popupImage } from "/js/popupImage.js"
+
 function setInnerHTML(elm, html) {
   elm.innerHTML = html
   for (const oldScript of elm.querySelectorAll("script")) {
@@ -9,7 +11,6 @@ function setInnerHTML(elm, html) {
     oldScript.parentNode.replaceChild(newScript, oldScript)
   }
 }
-
 function setProgressFor(page) {
   const progressBar = $(".progress-bar", page.shadowRoot)
   return function(done, progress, total) {
@@ -27,7 +28,7 @@ class PageBody extends HTMLElement {
 }
 customElements.define("page-body", PageBody)
 
-window.Page = class Page extends HTMLElement {
+class Page extends HTMLElement {
   constructor(path, onReady = () => {}) {
     super()
     this.path = path
@@ -45,6 +46,7 @@ window.Page = class Page extends HTMLElement {
       this.shadowRoot.append(this.shadowBody[0])
       setInnerHTML(this.shadowBody[0], content)
       this.$ = (...args) => $(...args, this.shadowRoot)
+      this.$(this.shadowBody).on("click", "img.popupable", e => popupImage(e.currentTarget.getAttribute("src"), e.currentTarget.getAttribute("scale")))
       await onReady(this.$)
       this.hasLoaded = true
       this.classList.remove("loading")
@@ -137,3 +139,5 @@ window.Page = class Page extends HTMLElement {
     }
   }
 }
+
+export { Page }

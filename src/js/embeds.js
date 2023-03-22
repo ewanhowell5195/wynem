@@ -1,6 +1,4 @@
 export function makeEmbed($, parent, data, args = {}) {
-  const checkIcon = $("#check-icon").contents()
-  const externalIcon = $("#external-icon").contents()
   let reply, embed, buttons, text, thumbnail
   const container = E("div").addClass("embed-container").append(
     reply = E("div").addClass("reply-container"),
@@ -12,7 +10,7 @@ export function makeEmbed($, parent, data, args = {}) {
         E("div").addClass("name-row").append(
           E("div").addClass("name").text("Wynem"),
           E("div").addClass("tag").append(
-            checkIcon.clone(),
+            $("#check-icon").contents().clone(),
             E("div").text("BOT")
           )
         ),
@@ -56,10 +54,12 @@ export function makeEmbed($, parent, data, args = {}) {
     }
   }
   if (data.image) {
-    E("img").addClass("embed-image").attr("src", data.image).appendTo(embed)
+    E("img").addClass("embed-image popupable").attr("src", data.image).appendTo(embed)
   }
   if (data.thumbnail) {
-    E("img").addClass("embed-thumbnail").attr("src", data.thumbnail).appendTo(thumbnail)
+    E("img").addClass("embed-thumbnail popupable").attr("src", data.thumbnail).appendTo(thumbnail)
+  } else {
+    thumbnail.remove()
   }
   if (data.footer) {
     E("div").addClass("embed-footer").append(
@@ -72,8 +72,40 @@ export function makeEmbed($, parent, data, args = {}) {
     E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(
       button.emoji ? E("img").attr("src", `/assets/images/emojis/${button.emoji}.webp`) : undefined,
       button.label ? E("div").text(button.label) : undefined,
-      button.url ? externalIcon.clone() : undefined
+      button.url ? $("#external-icon").contents().clone() : undefined
     ).appendTo(buttons)
+  }
+  parent.append(container)
+}
+
+export function makeModal($, parent, data, args = {}) {
+  let modal
+  const container = E("div").addClass("modal-container").append(
+    E("div").addClass("modal-top").append(
+      E("img").attr("src", "/assets/images/logo/logo.webp"),
+      E("div").text(data.title),
+      $("#close-icon").contents().clone()
+    ),
+    modal = E("div").addClass("modal"),
+    E("div").addClass("modal-bottom").append(
+      E("div").addClass("modal-close").text("Close"),
+      E("div").addClass("modal-submit").text("Submit")
+    )
+  )
+  for (const row of data.rows) {
+    let input, count
+    E("div").addClass("modal-row").append(
+      E("div").addClass("modal-row-title").html(`${row[0]}${row[2] ? " <span>*</span>" : ""}`),
+      E("div").addClass("modal-row-input-container").append(
+        input = E(row[3] ? "textarea" : "input").addClass(`modal-row-input${row[3] ? " long" : ""}`).attr({
+          placeholder: row[1],
+          rows: 3,
+          maxlength: row[3] ?? 128
+        }),
+        row[3] ? count = E("div").addClass("count").text(row[3]) : undefined
+      )
+    ).appendTo(modal)
+    if (count) input.on("input", e => count.text(row[3] - parseInt(input.val().length)))
   }
   parent.append(container)
 }
