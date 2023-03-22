@@ -119,7 +119,27 @@ function addBlocks($, element, blocks, feature, args) {
     } else if (block.type === "embed") {
       makeEmbed($, section, block.data, args)
     } else if (block.type === "modal") {
-      makeModal($, section, block.data, args)
+      makeModal($, section, block.data)
+    } else if (block.type === "tabs") {
+      let tabs, sections
+      E("div").addClass(`tab-container${block.light ? " light" : ""}`).append(
+        tabs = E("div").addClass("tabs"),
+        sections = E("div").addClass("tab-sections sections")
+      ).appendTo(section)
+      for (const [i, sect] of block.tabs.entries()) {
+        tabs.append(
+          E("div").attr("data-tab", i).addClass("section-tab tab").append(sect.name)
+        )
+        const section2 = E("div").attr("data-tab", i).addClass("tab-section")
+        addBlocks($, section2, sect.content, feature)
+        sections.append(section2)
+      }
+      sections.children().first().addClass("selected")
+      tabs.children().on("click", e => {
+        sections.children().removeClass("selected")
+        tabs.children().removeClass("active")
+        sections.find(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
+      }).first().addClass("active")
     }
   }
   element.append(section)

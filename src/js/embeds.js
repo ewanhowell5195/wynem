@@ -14,7 +14,7 @@ export function makeEmbed($, parent, data, args = {}) {
             E("div").text("BOT")
           )
         ),
-        embed = E("div").addClass("embed").append(
+        embed = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
           E("div").append(
             text = E("div"),
             thumbnail = E("div")
@@ -35,6 +35,11 @@ export function makeEmbed($, parent, data, args = {}) {
     E("div").addClass("embed-author").append(
       data.author[1] ? E("img").attr("src", data.author[1]) : undefined,
       E("div").text(data.author[0])
+    ).appendTo(text)
+  } else if (data.warning) {
+    E("div").addClass("embed-author").append(
+      E("img").attr("src", "/assets/images/emojis/warn.webp"),
+      E("div").text("Warning!")
     ).appendTo(text)
   }
   if (data.title) {
@@ -78,7 +83,7 @@ export function makeEmbed($, parent, data, args = {}) {
   parent.append(container)
 }
 
-export function makeModal($, parent, data, args = {}) {
+export function makeModal($, parent, data) {
   let modal
   const container = E("div").addClass("modal-container").append(
     E("div").addClass("modal-top").append(

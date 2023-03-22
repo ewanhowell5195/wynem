@@ -196,7 +196,7 @@ code
   display: flex
   flex-direction: column
   
-#guide-tabs
+.tabs
   margin-top: 20px
   display: flex
   
@@ -208,16 +208,29 @@ code
     &.active
       border-bottom: 10px solid var(--color-grey-light)
   
-#guide-content
+.sections
   border-radius: 10px 10px
   background-color: var(--color-grey-light)
   box-shadow: var(--box-shadow)
   padding: 20px
   flex: 1
   z-index: 1
+  position: relative
   
-.guide
+.guide, .tab-section
   display: none
   
 .selected
   display: flex
+  
+.tab-container.light
+  .tab
+    background: linear-gradient(to top, var(--color-grey-dark), var(--color-grey), var(--color-grey))
+    border-bottom: 10px solid var(--color-grey)
+
+  .active
+    background: #323235
+    border-bottom: 10px solid #323235
+  
+  .tab-sections
+    background-color: #323235

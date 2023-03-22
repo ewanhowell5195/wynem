@@ -1996,7 +1996,9 @@
             "emoji": {
               "aliases": [
                 "emote",
-                "e"
+                "e",
+                "moji",
+                "mote"
               ],
               "arguments": "<emoji> [resolution/type] [version]",
               "description": [
@@ -5958,7 +5960,7 @@
                   "description": "Remove a custom command from the server.",
                   "options": [
                     {
-                      "name": "custom-command",
+                      "name": "command",
                       "description": "The custom command to remove",
                       "required": true
                     }
