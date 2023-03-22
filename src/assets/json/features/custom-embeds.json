@@ -154,7 +154,7 @@
           ]
         }
       },
-      "Finally, you will be able to add up to 25 buttons to your custom embed.\nButtons are special links that appear beneath the embed.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skill all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+      "Finally, you will be able to add up to 25 buttons to your custom embed.\nButtons are special links that appear beneath the embed.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
       {
         "type": "tablelist",
         "rows": [
