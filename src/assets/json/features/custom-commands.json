@@ -51,214 +51,222 @@
         ["Custom Embed", "Reply with your own custom embed that can look however you want"],
         ["URL Buttons", "Will send a message containing some clickable URL buttons"]
       ]
-    }
-  ],
-  "guides": [
+    },
     {
-      "name": "Creating Custom Commands",
-      "content": [
-        "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/serverconfig customcommands addcustomcommand</code> command, and then click the button to start.",
+      "type": "heading",
+      "text": "How to use Custom Commands"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
         {
-          "type": "embed",
-          "data": {
-            "description": "Press the button to start creating a custom command",
-            "buttons": [{
-              "label": "Create a custom command",
-              "emoji": "pencil"
-            }]
-          }
-        },
-        "Next, a modal will appear, where you can enter the information for the custom command.\nFill in this modal and then click submit. Only the first field is required.",
-        {
-          "type": "modal",
-          "data": {
-            "title": "Custom Command Builder",
-            "rows": [
-              ["command name", "The name of the custom command", true],
-              ["the description of the custom command", "The description of the command", false, 512],
-              ["command aliases", "Alternative command names (comma separated)"]
-            ]
-          }
-        },
-        "You will then be given a choice of what type of custom command you want to create. Pick a type.",
-        {
-          "type": "embed",
-          "data": {
-            "description": "What type of custom command would you like to create?",
-            "fields": [
-              ["Message", "Will send a regular Discord message"],
-              ["Image/Gif/Video", "Will send an image/gif/video in chat"],
-              ["Custom Embed", "Will send a custom embed"],
-              ["URL Buttons", "Will send a message containing some URL buttons"]
-            ],
-            "buttons": [
-              {
-                "label": "Message"
-              },
-              {
-                "label": "Image/Gif/Video"
-              },
-              {
-                "label": "Custom Embed"
-              },
-              {
-                "label": "URL Buttons"
+          "name": "Creating Custom Commands",
+          "content": [
+            "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/serverconfig customcommands addcustomcommand</code> command, and then click the button to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to start creating a custom command",
+                "buttons": [{
+                  "label": "Create a custom command",
+                  "emoji": "pencil"
+                }]
               }
-            ] 
-          }
-        },
-        {
-          "type": "tabs",
-          "light": true,
-          "tabs": [
+            },
+            "Next, a modal will appear, where you can enter the information for the custom command.\nFill in this modal and then click submit. Only the first field is required.",
             {
-              "name": "Message",
-              "content": [
-                "You will be presented with a button to add the custom command's message. Press it to continue.",
-                {
-                  "type": "embed",
-                  "data": {
-                    "description": "Press the button to add the custom command's message",
-                    "buttons": [{
-                      "label": "Add Message",
-                      "emoji": "pencil"
-                    }] 
+              "type": "modal",
+              "data": {
+                "title": "Custom Command Builder",
+                "rows": [
+                  ["command name", "The name of the custom command", true],
+                  ["the description of the custom command", "The description of the command", false, 512],
+                  ["command aliases", "Alternative command names (comma separated)"]
+                ]
+              }
+            },
+            "You will then be given a choice of what type of custom command you want to create. Pick a type.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "What type of custom command would you like to create?",
+                "fields": [
+                  ["Message", "Will send a regular Discord message"],
+                  ["Image/Gif/Video", "Will send an image/gif/video in chat"],
+                  ["Custom Embed", "Will send a custom embed"],
+                  ["URL Buttons", "Will send a message containing some URL buttons"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Message"
+                  },
+                  {
+                    "label": "Image/Gif/Video"
+                  },
+                  {
+                    "label": "Custom Embed"
+                  },
+                  {
+                    "label": "URL Buttons"
                   }
-                },
-                "A modal will appear where you can enter the message. Enter in your message and then submit it.",
-                {
-                  "type": "modal",
-                  "data": {
-                    "title": "Custom Command Builder",
-                    "rows": [
-                      ["message", "The message to send", true, 2000]
-                    ]
-                  }
-                }
-              ]
+                ] 
+              }
             },
             {
-              "name": "Image/Gif/Video",
-              "content": [
-                "You will be presented with a button to add the custom command's message. Press it to continue.",
+              "type": "tabs",
+              "tabs": [
                 {
-                  "type": "embed",
-                  "data": {
-                    "description": "Press the button to add the custom command's image/gif/video",
-                    "buttons": [{
-                      "label": "Add Image/Gif/Video",
-                      "emoji": "pencil"
-                    }] 
-                  }
-                },
-                "A modal will appear where you can enter the image/gif/video URL. Enter in your URL and then submit it.",
-                {
-                  "type": "modal",
-                  "data": {
-                    "title": "Custom Command Builder",
-                    "rows": [
-                      ["image/gif/video", "https://imgur.com/gallery/pmSuXlo", true]
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Custom Embed",
-              "content": [
-                "The custom embeds option will start the custom embed builder. For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature."
-              ]
-            },
-            {
-              "name": "URL Buttons",
-              "content": [
-                "You will be presented with a button to add the custom command's URL buttons. Press it to continue.",
-                {
-                  "type": "embed",
-                  "data": {
-                    "description": "Press the button to add the custom command's URL buttons",
-                    "buttons": [{
-                      "label": "Add URL Buttons",
-                      "emoji": "pencil"
-                    }] 
-                  }
-                },
-                "You will be able to add up to 25 buttons to your custom command.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
-                {
-                  "type": "tablelist",
-                  "rows": [
-                    ["Button Label", "The text that is displayed on the button."],
-                    ["Button URL", "The URL to go to when you click on the button."]
+                  "name": "Message",
+                  "content": [
+                    "You will be presented with a button to add the custom command's message. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the custom command's message",
+                        "buttons": [{
+                          "label": "Add Message",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter the message. Enter in your message and then submit it.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Custom Command Builder",
+                        "rows": [
+                          ["message", "The message to send", true, 2000]
+                        ]
+                      }
+                    }
                   ]
                 },
                 {
-                  "type": "modal",
-                  "data": {
-                    "title": "URL Button Builder",
-                    "rows": [
-                      ["button label", "The text on the button", true],
-                      ["button url", "The URL to go to when clicking the button", true]
-                    ]
-                  }
-                },
-                "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
-                {
-                  "type": "embed",
-                  "data": {
-                    "description": "Press a button to continue adding URL buttons",
-                    "buttons": [
-                      {
-                        "label": "Add button #2 to row #1",
-                        "emoji": "pencil"
-                      },
-                      {
-                        "label": "Skip",
-                        "emoji": "arrow_right"
-                      },
-                      {
-                        "label": "Finish",
-                        "emoji": "flag"
+                  "name": "Image/Gif/Video",
+                  "content": [
+                    "You will be presented with a button to add the custom command's message. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the custom command's image/gif/video",
+                        "buttons": [{
+                          "label": "Add Image/Gif/Video",
+                          "emoji": "pencil"
+                        }] 
                       }
-                    ] 
-                  }
+                    },
+                    "A modal will appear where you can enter the image/gif/video URL. Enter in your URL and then submit it.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Custom Command Builder",
+                        "rows": [
+                          ["image/gif/video", "https://imgur.com/gallery/pmSuXlo", true]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom Embed",
+                  "content": [
+                    "The custom embeds option will start the custom embed builder. For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature."
+                  ]
+                },
+                {
+                  "name": "URL Buttons",
+                  "content": [
+                    "You will be presented with a button to add the custom command's URL buttons. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the custom command's URL buttons",
+                        "buttons": [{
+                          "label": "Add URL Buttons",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "You will be able to add up to 25 buttons to your custom command.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+                    {
+                      "type": "tablelist",
+                      "rows": [
+                        ["Button Label", "The text that is displayed on the button."],
+                        ["Button URL", "The URL to go to when you click on the button."]
+                      ]
+                    },
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "URL Button Builder",
+                        "rows": [
+                          ["button label", "The text on the button", true],
+                          ["button url", "The URL to go to when clicking the button", true]
+                        ]
+                      }
+                    },
+                    "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press a button to continue adding URL buttons",
+                        "buttons": [
+                          {
+                            "label": "Add button #2 to row #1",
+                            "emoji": "pencil"
+                          },
+                          {
+                            "label": "Skip",
+                            "emoji": "arrow_right"
+                          },
+                          {
+                            "label": "Finish",
+                            "emoji": "flag"
+                          }
+                        ] 
+                      }
+                    }
+                  ]
                 }
               ]
-            }
+            },
+            "You are finished! Your custom command has been created and is now active and ready for you to use!"
           ]
         },
-        "You are finished! Your custom command has been created and is now active and ready for you to use!"
-      ]
-    },
-    {
-      "name": "Running Custom Commands",
-      "content": [
-        "To run a custom command, simply run the command <span class=\"command prefix\"><code>e![customcommandname]</code>.\nFor example: <code>e!example</code></span><span class=\"command slash\"><code>/customcommand command:[customcommandname]</code>.\nFor example: <code>/customcommand command:example</code></span>"
-      ]
-    },
-    {
-      "name": "Removing Custom Commands",
-      "content": [
-        "To remove custom command, start by running the command <span class=\"command prefix\"><code>e!removecustomcommand [customcommandname]</code>.\nFor example: <code>e!removecustomcommand example</code></span><span class=\"command slash\"><code>/serverconfig customcommands removecustomcommand command:[customcommandname]</code>.\nFor example: <code>/serverconfig customcommands removecustomcommand command:example</code></span>\n\nYou will be prompted to confirm that you want to remove the custom command. Press remove to continue.",
         {
-          "type": "embed",
-          "data": {
-            "warning": true,
-            "description": "This action will remove the `example` command\n\nAre you sure you want to continue?",
-            "buttons": [
-              {
-                "label": "Remove",
-                "emoji": "bin",
-                "style": "red"
-              },
-              {
-                "label": "Cancel",
-                "emoji": "cross"
-              }
-            ] 
-          }
+          "name": "Running Custom Commands",
+          "content": [
+            "To run a custom command, simply run the command <span class=\"command prefix\"><code>e![customcommandname]</code>.\nFor example: <code>e!example</code></span><span class=\"command slash\"><code>/customcommand command:[customcommandname]</code>.\nFor example: <code>/customcommand command:example</code></span>"
+          ]
         },
-        "After confirming, the custom command will have been removed."
+        {
+          "name": "Removing Custom Commands",
+          "content": [
+            "To remove custom command, start by running the command <span class=\"command prefix\"><code>e!removecustomcommand [customcommandname]</code>.\nFor example: <code>e!removecustomcommand example</code></span><span class=\"command slash\"><code>/serverconfig customcommands removecustomcommand command:[customcommandname]</code>.\nFor example: <code>/serverconfig customcommands removecustomcommand command:example</code></span>\n\nYou will be prompted to confirm that you want to remove the custom command. Press remove to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "This action will remove the `example` command\n\nAre you sure you want to continue?",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ] 
+              }
+            },
+            "After confirming, the custom command will have been removed."
+          ]
+        }
       ]
     }
+  ],
+  "guides": [
   ]
 }

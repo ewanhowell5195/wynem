@@ -64,34 +64,37 @@ code
   flex-direction: column
 
 #sidebar
-  margin: 58px 20px 20px
-  background-color: var(--color-grey-light)
-  box-shadow: var(--box-shadow)
+  margin: 20px 20px 20px
+  display: flex
+  flex-direction: column
+
+  &.tabless
+    margin: 20px
+    border-radius: 10px
+    
+#commands
   padding: 20px
-  border-radius: 0 0 10px 10px
+  border-radius: 10px
   display: flex
   flex-direction: column
   gap: 16px
   align-items: center
   width: 300px
+  background-color: var(--color-grey-light)
+  z-index: 1
   position: relative
-
-  &.tabless
-    margin: 20px
-    border-radius: 10px
+  flex: 1
   
 #commands-title
   font-size: 1.75rem
   font-weight: 700
+  text-align: center
 
 #command-tabs
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  transform: translateY(-100%)
-  display: flex
-  overflow: clip
+  margin-top: 0
+  
+  .tab
+    flex: 1
 
 .tab
   text-transform: capitalize
@@ -110,18 +113,19 @@ code
   transform: translateY(5px)
   font-weight: 700
   background: linear-gradient(to top, var(--color-grey-darker), var(--color-grey-dark), var(--color-grey-dark))
+  flex: initial
+  border-bottom: 10px solid var(--color-grey-dark)
+  margin-bottom: -10px
+  
+  &.active
+    border-bottom: 10px solid var(--color-grey-light)
+    background: var(--color-grey-light)
+    transform: translateY(0)
+    filter: brightness(1)!important
+    transition: 0s filter
   
   &:hover
     filter: brightness(1.25)
-
-.active
-  background: var(--color-grey-light)
-  transform: translateY(0)
-  filter: brightness(1)
-  transition: 0s filter
-  
-  &:hover
-    filter: brightness(1)
   
 #command-lists
   width: 100%
@@ -164,6 +168,7 @@ code
   display: flex
   flex-direction: column
   gap: 20px
+  max-width: 100%
   
   img
     object-fit: contain
@@ -190,26 +195,14 @@ code
     white-space: nowrap!important
     display: list-item
     list-style: inside
-    
-#guides
-  flex: 1
-  display: flex
-  flex-direction: column
   
 .tabs
   margin-top: 20px
   display: flex
-  
-  .tab
-    flex: initial
-    border-bottom: 10px solid var(--color-grey-dark)
-    margin-bottom: -10px
-    
-    &.active
-      border-bottom: 10px solid var(--color-grey-light)
+  width: 100%
   
 .sections
-  border-radius: 10px 10px
+  border-radius: 10px
   background-color: var(--color-grey-light)
   box-shadow: var(--box-shadow)
   padding: 20px
@@ -217,7 +210,7 @@ code
   z-index: 1
   position: relative
   
-.guide, .tab-section
+.tab-section
   display: none
   
 .selected
@@ -234,3 +227,13 @@ code
   
   .tab-sections
     background-color: #323235
+    
+@media only screen and (max-width: 768px)
+  #feature-content
+    flex-direction: column
+    
+  #content
+    padding: 20px
+    
+  #commands
+    width: initial

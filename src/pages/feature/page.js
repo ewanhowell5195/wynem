@@ -79,25 +79,6 @@ export default class extends Page {
       }
     }
     addBlocks($, $("#description"), feature.description, args.name, { outline: true })
-    $("#guides .heading").text(`How to use ${title}`)
-    const guideTabs = $("#guide-tabs")
-    const guideContent = $("#guide-content")
-    for (const [i, guide] of feature.guides.entries()) {
-      guideTabs.append(
-        E("div").attr("data-guide", i).addClass("guide-tab tab").append(guide.name)
-      )
-      const section = E("div").attr("data-guide", i).addClass("guide")
-      addBlocks($, section, guide.content, args.name)
-      guideContent.append(section)
-    }
-    $(".guide").first().addClass("selected")
-    $(".guide-tab").on("click", e => {
-      $(".guide.selected").removeClass("selected")
-      $(".guide-tab.active").removeClass("active")
-      $(`.guide[data-guide="${$(e.currentTarget).addClass("active").attr("data-guide")}"]`).addClass("selected")
-    }).first().addClass("active")
-    $(".slash").css("display", "none")
-    $(".context").css("display", "none")
   }
 }
 
@@ -122,7 +103,7 @@ function addBlocks($, element, blocks, feature, args) {
       makeModal($, section, block.data)
     } else if (block.type === "tabs") {
       let tabs, sections
-      E("div").addClass(`tab-container${block.light ? " light" : ""}`).append(
+      E("div").addClass(`tab-container${args?.depth === 1 ? " light" : ""}`).append(
         tabs = E("div").addClass("tabs"),
         sections = E("div").addClass("tab-sections sections")
       ).appendTo(section)
@@ -131,7 +112,7 @@ function addBlocks($, element, blocks, feature, args) {
           E("div").attr("data-tab", i).addClass("section-tab tab").append(sect.name)
         )
         const section2 = E("div").attr("data-tab", i).addClass("tab-section")
-        addBlocks($, section2, sect.content, feature)
+        addBlocks($, section2, sect.content, feature, { depth: 1 })
         sections.append(section2)
       }
       sections.children().first().addClass("selected")

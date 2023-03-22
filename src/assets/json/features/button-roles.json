@@ -48,88 +48,97 @@
         ["Binding", "Once a user has applied a \"binding\" role, it cannot be removed"],
         ["Unique", "Users can only have one \"unique\" role from a button role message at a time"]
       ]
-    }
-  ],
-  "guides": [
+    },
     {
-      "name": "Creating Button Roles",
-      "content": [
-        "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
+      "type": "heading",
+      "text": "How to use Button Roles"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
         {
-          "type": "embed",
-          "data": {
-            "description": "Press the button to start setting up the button roles",
-            "buttons": [{
-              "label": "Set up button roles",
-              "emoji": "pencil"
-            }]
-          }
-        },
-        "Next, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
-        {
-          "type": "modal",
-          "data": {
-            "title": "Button Role Builder",
-            "rows": [
-              ["1st role", "The name or ID of the 1st role", true],
-              ["1st role text", "The text that shows on the 1st role's button"],
-              ["1st role emoji", "The emoji that shows on the 1st role's button"],
-              ["1st colour", "The colour of the 1st role's button (red, green, blue, grey)"],
-              ["1st role type", "normal, binding, unique"]
-            ]
-          }
-        },
-        "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
-        {
-          "type": "embed",
-          "data": {
-            "description": "Press a button to continue setting up the button roles",
-            "buttons": [
-              {
-                "label": "Add the 2nd role",
-                "emoji": "pencil"
-              },
-              {
-                "label": "Skip",
-                "emoji": "arrow_right"
+          "name": "Creating Button Roles",
+          "content": [
+            "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to start setting up the button roles",
+                "buttons": [{
+                  "label": "Set up button roles",
+                  "emoji": "pencil"
+                }]
               }
-            ]
-          }
-        },
-        "Finally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
-        {
-          "type": "tablelist",
-          "rows": [
-            ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
-            ["Custom Embed", "Create your own custom embed that can look however you want"],
-            ["No Embed", "Send no embed, the message be just the buttons on their own"]
+            },
+            "Next, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Button Role Builder",
+                "rows": [
+                  ["1st role", "The name or ID of the 1st role", true],
+                  ["1st role text", "The text that shows on the 1st role's button"],
+                  ["1st role emoji", "The emoji that shows on the 1st role's button"],
+                  ["1st colour", "The colour of the 1st role's button (red, green, blue, grey)"],
+                  ["1st role type", "normal, binding, unique"]
+                ]
+              }
+            },
+            "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press a button to continue setting up the button roles",
+                "buttons": [
+                  {
+                    "label": "Add the 2nd role",
+                    "emoji": "pencil"
+                  },
+                  {
+                    "label": "Skip",
+                    "emoji": "arrow_right"
+                  }
+                ]
+              }
+            },
+            "Finally, you will be given a choice for the button role embed type. This decides how the button role message will look.\nThere are three options:",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
+                ["Custom Embed", "Create your own custom embed that can look however you want"],
+                ["No Embed", "Send no embed, the message be just the buttons on their own"]
+              ]
+            },
+            {
+              "type": "embed",
+              "data": {
+                "description": "What embed type would you like for the button roles?",
+                "buttons": [
+                  {
+                    "label": "Default Embed"
+                  },
+                  {
+                    "label": "Custom Embed"
+                  },
+                  {
+                    "label": "No Embed"
+                  }
+                ]
+              }
+            },
+            "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.\n\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
           ]
         },
         {
-          "type": "embed",
-          "data": {
-            "description": "What embed type would you like for the button roles?",
-            "buttons": [
-              {
-                "label": "Default Embed"
-              },
-              {
-                "label": "Custom Embed"
-              },
-              {
-                "label": "No Embed"
-              }
-            ]
-          }
-        },
-        "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.\n\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
-      ]
-    },
-    {
-      "name": "Removing Button Roles",
-      "content": [
-        "To remove button roles, simply delete the button role message!"
+          "name": "Removing Button Roles",
+          "content": [
+            "To remove button roles, simply delete the button role message!"
+          ]
+        }
       ]
     }
+  ],
+  "guides": [
   ]
 }
