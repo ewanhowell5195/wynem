@@ -42,7 +42,7 @@
       "type": "heading",
       "text": "Custom command types"
     },
-    "There are multiple different types of custom command that you can set up. Each one replies with a differnet type of message.",
+    "There are multiple different types of custom command that you can set up. Each one replies with a different type of message.",
     {
       "type": "tablelist",
       "rows": [
