@@ -235,8 +235,8 @@
                     {
                       "type": "tablelist",
                       "rows": [
-                        ["Button Label", "The text that is displayed on the button."],
-                        ["Button URL", "The URL to go to when you click on the button."]
+                        ["Button Label", "The text that is displayed on the button"],
+                        ["Button URL", "The URL to go to when you click on the button"]
                       ]
                     },
                     {
@@ -275,7 +275,7 @@
                 {
                   "name": "Emoji Reactions",
                   "content": [
-                    "You will be presented with a button to add the auto-response's URL buttons. Press it to continue.",
+                    "You will be presented with a button to add the auto-response's resaction emojis. Press it to continue.",
                     {
                       "type": "embed",
                       "data": {
@@ -286,14 +286,7 @@
                         }] 
                       }
                     },
-                    "You will be able to add up to 25 buttons to your auto-response.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
-                    {
-                      "type": "tablelist",
-                      "rows": [
-                        ["Button Label", "The text that is displayed on the button."],
-                        ["Button URL", "The URL to go to when you click on the button."]
-                      ]
-                    },
+                    "You will be able to add up to 5 emojis. You can provide either the emoji character, or the emoji name. If you use custom emojis, they can only be from the current server.",
                     {
                       "type": "modal",
                       "data": {
@@ -305,27 +298,6 @@
                           ["emoji 4", "An emoji to react with"],
                           ["emoji 5", "An emoji to react with"]
                         ]
-                      }
-                    },
-                    "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
-                    {
-                      "type": "embed",
-                      "data": {
-                        "description": "Press a button to continue adding URL buttons",
-                        "buttons": [
-                          {
-                            "label": "Add button #2 to row #1",
-                            "emoji": "pencil"
-                          },
-                          {
-                            "label": "Skip",
-                            "emoji": "arrow_right"
-                          },
-                          {
-                            "label": "Finish",
-                            "emoji": "flag"
-                          }
-                        ] 
                       }
                     }
                   ]

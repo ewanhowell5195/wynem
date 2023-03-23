@@ -191,8 +191,8 @@
                     {
                       "type": "tablelist",
                       "rows": [
-                        ["Button Label", "The text that is displayed on the button."],
-                        ["Button URL", "The URL to go to when you click on the button."]
+                        ["Button Label", "The text that is displayed on the button"],
+                        ["Button URL", "The URL to go to when you click on the button"]
                       ]
                     },
                     {
