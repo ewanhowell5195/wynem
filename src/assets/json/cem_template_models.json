@@ -1,5 +1,5 @@
 {
-  "version": "7.1.0",
+  "version": "7.2.0",
   "categories": [
     {
       "name": "Supported",
@@ -307,6 +307,7 @@
           "model": "tropical_fish_b"
         },
         "turtle",
+        "vex",
         {
           "name": "villager",
           "model": "villager",
@@ -1160,6 +1161,17 @@
         "camel",
         "cape",
         {
+          "name": "decorated_pot",
+          "texture_name": [
+            "decorated_pot_base",
+            "decorated_pot_side"
+          ],
+          "vanilla_textures": [
+            "decorated_pot_base",
+            "decorated_pot_side"
+          ]
+        },
+        {
           "name": "elder_guardian_ghost",
           "display_name": "Elder Guardian [Ghost]",
           "description": "The ghostly Elder Guardian that appears when you get mining fatigue",
@@ -1181,31 +1193,8 @@
           "name": "hanging_sign",
           "display_name": "Sign [Hanging]"
         },
-        "trident_riptide",
-        "vex"
-      ]
-    },
-    {
-      "name": "Unreleased",
-      "description": "The models from unreleased game versions.",
-      "icon": "more_time",
-      "entities": [
-        {
-          "name": "decorated_pot",
-          "texture_name": [
-            "decorated_pot_base",
-            "decorated_pot_side"
-          ],
-          "vanilla_textures": [
-            "decorated_pot_base",
-            "decorated_pot_side"
-          ],
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.19.4 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.19.4 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "sniffer",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.19.4 snapshots. The model and UV may not be final, and may not be the same when it releases in the final 1.19.4 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        }
+        "sniffer",
+        "trident_riptide"
       ]
     }
   ],
@@ -1406,10 +1395,10 @@
     },
     "decorated_pot": {
       "texture_data": [
-        "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEUAAAD0hob43XL///+01OH/p6T/+JlTYXS01OFTYXRbvPRD6I3s+P30hob43XJ71P97/6NueIz/p6T/+Jl2UpMuAAAACHRSTlMAAAAAAAAAALfnUqEAAABhSURBVHhe7c5JCoAwEETRDA6Zne5/V9vSkAiGCIgbfcvmQzXbKdDQ4yIPMXBE6Ym8H9SftGDAQ4AUjMSagRg/Ex8WUg/uT6iTlohukwKXUQ3nXEApYNHzwR/krgJZ8LFgBSxGFoamk6NmAAAAAElFTkSuQmCC",
+        "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAZlBMVEUAAAD///+01OHQ5u/s+P2frLik2vlTYXRlmsCRprb43XKDmqqIyOpXjrSY8MWjc31hbYCtuMSxf4lD6I205v5ueIx0psX0hoZ83rdbvPR7/6NgbICY1PCphIyY6cJnmrn/p6T/+JlGbi1iAAAAAnRSTlMAAHaTzTgAAACMSURBVHhe7dHHDsIwDIDhYDuze5c53v8laU0qpQVUThUHvmt+WY4sJuBpTywBMdAN2zzgFRFRShnp4/uAkAhlUdj8Y4AIkbU2X36zYn2qlIoTY0yZdcx5ojqMLqmq69O1bU15vo06d2dumtDHg2SQvUxgexY+ia/pGZh5Bk1AAwW2Df7B+rF2K34heADqGB4/jmWg/QAAAABJRU5ErkJggg==",
         "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///9bvPR71P9U2V2rAAAAAXRSTlMAQObYZgAAABZJREFUeF5jEA0NDWGQWrVqCcUE2CgA0c0fI50J9QcAAAAASUVORK5CYII="
       ],
-      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"pot\",\"id\":\"pot\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-3,16,-3,6,4,6],\"uvNorth\":[6,6,12,10],\"uvEast\":[0,6,6,10],\"uvSouth\":[18,6,24,10],\"uvWest\":[12,6,18,10],\"uvUp\":[12,6,6,0],\"uvDown\":[18,0,12,6]},{\"coordinates\":[-7,0,-7,14,16,14],\"uvUp\":[14,10,0,24],\"uvDown\":[14,10,0,24]}]},{\"part\":\"front\",\"id\":\"front\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,-7,14,16,0],\"uvNorth\":[30,0,2,32]}]},{\"part\":\"left\",\"id\":\"left\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,-7,0,16,14],\"uvWest\":[30,0,2,32]}]},{\"part\":\"right\",\"id\":\"right\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[7,0,-7,0,16,14],\"uvEast\":[30,0,2,32]}]},{\"part\":\"back\",\"id\":\"back\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,7,14,16,0],\"uvSouth\":[30,0,2,32]}]}]}"
+      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"pot\",\"id\":\"pot\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-3,16,-3,6,1,6],\"uvNorth\":[6,11,12,12],\"uvEast\":[0,11,6,12],\"uvSouth\":[18,11,24,12],\"uvWest\":[12,11,18,12],\"uvUp\":[12,11,6,5],\"uvDown\":[18,5,12,11],\"sizeAdd\":0.25},{\"coordinates\":[-4,17.15,-4,8,3,8],\"uvNorth\":[8,8,16,11],\"uvEast\":[0,8,8,11],\"uvSouth\":[24,8,32,11],\"uvWest\":[16,8,24,11],\"uvUp\":[16,8,8,0],\"uvDown\":[24,0,16,8]},{\"coordinates\":[-7,0,-7,14,16,14],\"uvUp\":[28,13,14,27],\"uvDown\":[14,27,0,13]}]},{\"part\":\"front\",\"id\":\"front\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,-7,14,16,0],\"uvNorth\":[30,0,2,32]}]},{\"part\":\"left\",\"id\":\"left\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,-7,0,16,14],\"uvWest\":[30,0,2,32]}]},{\"part\":\"right\",\"id\":\"right\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[7,0,-7,0,16,14],\"uvEast\":[30,0,2,32]}]},{\"part\":\"back\",\"id\":\"back\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-7,0,7,14,16,0],\"uvSouth\":[30,0,2,32]}]}]}"
     },
     "dolphin": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-4,6],\"boxes\":[{\"coordinates\":[-4,0,-9,8,7,6],\"textureOffset\":[0,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,0,3],\"boxes\":[{\"coordinates\":[-1,0,-13,2,2,4],\"textureOffset\":[0,13]},{\"coordinates\":[-4,0,-3,8,7,13],\"textureOffset\":[22,0]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0,-2.5,-11],\"boxes\":[{\"coordinates\":[-2,0,10,4,5,11],\"textureOffset\":[0,19]}]},{\"part\":\"right_fin\",\"id\":\"right_fin\",\"invertAxis\":\"xy\",\"translate\":[-4.5,0,2],\"boxes\":[{\"coordinates\":[4,0,-2,1,4,7],\"textureOffset\":[48,20]}]},{\"part\":\"left_fin\",\"id\":\"left_fin\",\"invertAxis\":\"xy\",\"translate\":[4.5,0,2],\"boxes\":[{\"coordinates\":[-5,0,-2,1,4,7],\"textureOffset\":[48,20]}]},{\"part\":\"back_fin\",\"id\":\"back_fin\",\"invertAxis\":\"xy\",\"translate\":[0,-11,5],\"boxes\":[{\"coordinates\":[-0.5,7,3,1,4,5],\"textureOffset\":[51,0]}]},{\"part\":\"tail_fin\",\"id\":\"tail_fin\",\"invertAxis\":\"xy\",\"translate\":[0,-2.5,-20],\"boxes\":[{\"coordinates\":[-5,2,19,10,1,6],\"textureOffset\":[19,20]}]}]}"
