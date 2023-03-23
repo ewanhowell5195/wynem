@@ -7,13 +7,13 @@
         "path": ["server", "autoresponses"]
       },
       ["server", "autoresponses", "addautoresponse"],
-      ["server", "autoresponses", "removeautoresponse"],
-      ["server", "autoresponses", "viewautoresponse"]
+      ["server", "autoresponses", "viewautoresponse"],
+      ["server", "autoresponses", "removeautoresponse"]
     ],
     "slash": [
       ["serverconfig", "autoresponses", "addautoresponse"],
-      ["serverconfig", "autoresponses", "removeautoresponse"],
-      ["serverconfig", "autoresponses", "viewautoresponse"]
+      ["serverconfig", "autoresponses", "viewautoresponse"],
+      ["serverconfig", "autoresponses", "removeautoresponse"]
     ]
   },
   "description": [
@@ -308,9 +308,33 @@
           ]
         },
         {
-          "name": "Triggering Auto-responses",
+          "name": "Viewing Auto-responses",
           "content": [
-            "To trigger an auto-response, send a messgage that matches the auto-response's trigger."
+            "To view all the auto-responses currently active in the server, use the <code class=\"command prefix\">e!viewautoresponse</code><code class=\"command slash\">/serverconfig autoresponses viewautoresponse</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Active auto-responses",
+                "description": "`packdownload` `websites` `dontask`"
+              }
+            },
+            "To view a specific auto-response, you can use the command <span class=\"command prefix\"><code>e!viewautoresponse [autoresponse]</code>.\nFor example: <code>e!viewautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses viewautoresponse auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses viewautoresponse auto-response:packdownload</code></span>.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Auto-response `packdownload`",
+                "fields": [
+                  ["Trigger", "where pack download"],
+                  ["Trigger Type", "Words Unordered", true],
+                  ["Response Type", "Buttons", true],
+                  ["Buttons", "Shown below"]
+                ],
+                "buttons": [{
+                  "label": "All resource pack downloads can be found here",
+                  "url": "https://ewanhowell.com/resourcepacks/"
+                }] 
+              }
+            }
           ]
         },
         {

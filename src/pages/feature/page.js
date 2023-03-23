@@ -29,7 +29,7 @@ export default class extends Page {
       const commandLists = $("#command-lists")
       for (const [type, related] of Object.entries(feature.commands)) {
         commandTabs.append(
-          E("div").addClass("command-tab tab").append(E("span").text(type))
+          E("div").addClass("command-tab tab").append(E("span").text(type.toTitleCase()))
         )
         const commandList = E("div").attr("id", `command-list-${type}`).addClass("command-list").appendTo(commandLists)
         for (const commandData of related) {
@@ -66,19 +66,20 @@ export default class extends Page {
       if (Object.keys(feature.commands).length === 1) {
         commandTabs.css("display", "none")
         $("#sidebar").addClass("tabless")
-      }
-      else {
+      } else {
         $(".command-tab").on("click", e => {
           $(".command-list.selected").removeClass("selected")
           $(".command-tab.active").removeClass("active")
           $(e.currentTarget).addClass("active")
-          $(`#command-list-${e.currentTarget.textContent}`).addClass("selected")
+          $(`#command-list-${e.currentTarget.textContent.toLowerCase()}`).addClass("selected")
           $(".command").css("display", "none")
-          $(`.${e.currentTarget.textContent}`).css("display", "")
+          $(`.${e.currentTarget.textContent.toLowerCase()}`).css("display", "")
         }).first().addClass("active")
       }
     }
     addBlocks($, $("#description"), feature.description, args.name, { outline: true })
+    $(".command").css("display", "none")
+    $(".prefix").css("display", "")
   }
 }
 

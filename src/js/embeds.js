@@ -43,7 +43,7 @@ export function makeEmbed($, parent, data, args = {}) {
     ).appendTo(text)
   }
   if (data.title) {
-    E(data.url ? "a" : "div").attr({ href: data.url, target: "_blank" }).addClass("embed-title").attr("href", data.url).text(data.title).appendTo(text)
+    E(data.url ? "a" : "div").attr({ href: data.url, target: "_blank" }).addClass("embed-title").attr("href", data.url).html(parseString(data.title)).appendTo(text)
   }
   if (data.description) {
     E("div").addClass("embed-description").html(parseString(data.description)).appendTo(text)
