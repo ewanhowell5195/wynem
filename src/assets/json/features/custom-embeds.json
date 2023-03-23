@@ -36,7 +36,7 @@
     },
     {
       "type": "heading",
-      "text": "How to use Custom Embeds"
+      "text": "How to use custom embeds"
     },
     "Throughout this guide, there will be references to different sections of embeds. If you do not know what section is being mentioned, you can refer to the image above.\n\nTo start creating a custom embed, first run the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command, and then click the button to start.\nIf the custom embed is being created by another command, you can ignore this step.",
     {

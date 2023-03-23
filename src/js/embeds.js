@@ -72,6 +72,7 @@ export function makeEmbed($, parent, data, args = {}) {
       E("div").text(data.footer[0])
     ).appendTo(embed)
   }
+  if (!(data.author || data.warning || data.title || data.description || data.fields || data.image || data.thumbnail || data.footer)) embed.remove()
   if (data.buttons) {
     for (const button of data.buttons)
     E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(

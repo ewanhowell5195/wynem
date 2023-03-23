@@ -10,5 +10,10 @@
   {
     "id": "custom-embeds",
     "description": "Create custom embeds that are sent by Wynem and say whatever you want"
+  },
+  {
+    "id": "auto-responses",
+    "name": "Auto-responses",
+    "description": "A way to make Wynem respond to triggers in regular messages"
   }
 ]

@@ -1,0 +1,380 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Auto-responses",
+        "path": ["server", "autoresponses"]
+      },
+      ["server", "autoresponses", "addautoresponse"],
+      ["server", "autoresponses", "removeautoresponse"],
+      ["server", "autoresponses", "viewautoresponse"]
+    ],
+    "slash": [
+      ["serverconfig", "autoresponses", "addautoresponse"],
+      ["serverconfig", "autoresponses", "removeautoresponse"],
+      ["serverconfig", "autoresponses", "viewautoresponse"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are Auto-responses?"
+    },
+    "Auto-responses are way to make Wynem respond to triggers in regular messages. A member will send a message in the server, and if the message meets the criteria of one of the auto-responses, Wynem will reply to that message with a customisable response.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "Where can I download the pack?"
+        },
+        "buttons": [{
+          "label": "All resource pack downloads can be found here",
+          "url": "https://ewanhowell.com/resourcepacks/"
+        }]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Auto-response triggers"
+    },
+    "The triggers are the things that must be inside a members message in order for Wynem to respond. There are 4 different types of trigger that you can use:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Full", "Will only match if the entire message is the same as the trigger"],
+        ["Contains", "Will match if the message contains the trigger anywhere inside it"],
+        ["Words ordered", "Will match as long as the message contains all the trigger's words in it, in the order that they were provided"],
+        ["Words unordered", "Will match as long as the message contains all the trigger's words in it. The order the words appear in doesn't matter"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Auto-response types"
+    },
+    "There are multiple different types of response that you can set up for auto-responses. Each one responds in a different way.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Message", "Wynem will reply with a regular Discord message"],
+        ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
+        ["Custom Embed", "Reply with your own custom embed that can look however you want"],
+        ["URL Buttons", "Will send a message containing some clickable URL buttons"],
+        ["Emoji Reactions", "Will react to the message with some emoji reactions"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use auto-responses"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Creating Auto-responses",
+          "content": [
+            "To start setting up your own auto-responses, first run the <code class=\"command prefix\">e!addautoresponse</code><code class=\"command slash\">/serverconfig autoresponses addautoresponse</code> command, and then click the button to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to start creating an auto-response",
+                "buttons": [{
+                  "label": "Create an auto-response",
+                  "emoji": "pencil"
+                }]
+              }
+            },
+            "Next, a modal will appear, where you can enter the information for the ID and trigger of the auto-response.\nThe ID is something for you to identify the auto-response by when viewing all auto-responses or trying to remove them.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Auto-response Builder",
+                "rows": [
+                  ["auto-response id", "The ID for you to identify the auto-response by", true],
+                  ["auto-response trigger", "The text that will trigger the auto-response", true]
+                ]
+              }
+            },
+            "You will then be given a choice of what trigger type the auto-response should use. Pick a type to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "What type of trigger would you like the auto-response to use?",
+                "fields": [
+                  ["Full message is trigger", "The entire message has to equal the trigger for it to respond"],
+                  ["Message contains trigger", "The message has to contain the trigger somewhere in it for it to respond"],
+                  ["Words required in order", "The words in the trigger are all required to be in the message, in the order provided. Other words can appear between them however"],
+                  ["Words required any order", "The words in the trigger are all required to be in the message. Other words can appear between them and their order does not matter"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Full message is trigger"
+                  },
+                  {
+                    "label": "Message contains trigger"
+                  },
+                  {
+                    "label": "Words required in order"
+                  },
+                  {
+                    "label": "Words required any order"
+                  }
+                ] 
+              }
+            },
+            "Next, you will get to choose what type of response will get sent when the trigger is fired. Choose the type to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "What type of auto-response would you like to create?",
+                "fields": [
+                  ["Message", "Will send a regular Discord message"],
+                  ["Image/Gif/Video", "Will send an image/gif/video in chat"],
+                  ["Custom Embed", "Will send a custom embed"],
+                  ["URL Buttons", "Will send a message containing some URL buttons"],
+                  ["Emoji Reactions", "Will react to the message with some emoji reactions"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Message"
+                  },
+                  {
+                    "label": "Image/Gif/Video"
+                  },
+                  {
+                    "label": "Custom Embed"
+                  },
+                  {
+                    "label": "URL Buttons"
+                  },
+                  {
+                    "label": "Emoji Reactions"
+                  }
+                ] 
+              }
+            },
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "name": "Message",
+                  "content": [
+                    "You will be presented with a button to add the auto-response's message. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the auto-response's message",
+                        "buttons": [{
+                          "label": "Add Message",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter the message. Enter in your message and then submit it.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Auto-response Builder",
+                        "rows": [
+                          ["message", "The message to send", true, 2000]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Image/Gif/Video",
+                  "content": [
+                    "You will be presented with a button to add the auto-response's message. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the auto-response's image/gif/video",
+                        "buttons": [{
+                          "label": "Add Image/Gif/Video",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter the image/gif/video URL. Enter in your URL and then submit it.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Auto-response Builder",
+                        "rows": [
+                          ["image/gif/video", "https://imgur.com/gallery/pmSuXlo", true]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom Embed",
+                  "content": [
+                    "The custom embeds option will start the custom embed builder. For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature."
+                  ]
+                },
+                {
+                  "name": "URL Buttons",
+                  "content": [
+                    "You will be presented with a button to add the auto-response's URL buttons. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the auto-response's URL buttons",
+                        "buttons": [{
+                          "label": "Add URL Buttons",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "You will be able to add up to 25 buttons to your auto-response.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+                    {
+                      "type": "tablelist",
+                      "rows": [
+                        ["Button Label", "The text that is displayed on the button."],
+                        ["Button URL", "The URL to go to when you click on the button."]
+                      ]
+                    },
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "URL Button Builder",
+                        "rows": [
+                          ["button label", "The text on the button", true],
+                          ["button url", "The URL to go to when clicking the button", true]
+                        ]
+                      }
+                    },
+                    "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press a button to continue adding URL buttons",
+                        "buttons": [
+                          {
+                            "label": "Add button #2 to row #1",
+                            "emoji": "pencil"
+                          },
+                          {
+                            "label": "Skip",
+                            "emoji": "arrow_right"
+                          },
+                          {
+                            "label": "Finish",
+                            "emoji": "flag"
+                          }
+                        ] 
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Emoji Reactions",
+                  "content": [
+                    "You will be presented with a button to add the auto-response's URL buttons. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the auto-response's reaction emojis",
+                        "buttons": [{
+                          "label": "Add reaction emojis",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "You will be able to add up to 25 buttons to your auto-response.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
+                    {
+                      "type": "tablelist",
+                      "rows": [
+                        ["Button Label", "The text that is displayed on the button."],
+                        ["Button URL", "The URL to go to when you click on the button."]
+                      ]
+                    },
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Auto-response Builder",
+                        "rows": [
+                          ["emoji 1", "An emoji to react with", true],
+                          ["emoji 2", "An emoji to react with"],
+                          ["emoji 3", "An emoji to react with"],
+                          ["emoji 4", "An emoji to react with"],
+                          ["emoji 5", "An emoji to react with"]
+                        ]
+                      }
+                    },
+                    "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press a button to continue adding URL buttons",
+                        "buttons": [
+                          {
+                            "label": "Add button #2 to row #1",
+                            "emoji": "pencil"
+                          },
+                          {
+                            "label": "Skip",
+                            "emoji": "arrow_right"
+                          },
+                          {
+                            "label": "Finish",
+                            "emoji": "flag"
+                          }
+                        ] 
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "You are finished! Your auto-response has been created and is now active and ready for you to use!"
+          ]
+        },
+        {
+          "name": "Triggering Auto-responses",
+          "content": [
+            "To trigger an auto-response, send a messgage that matches the auto-response's trigger."
+          ]
+        },
+        {
+          "name": "Removing Auto-responses",
+          "content": [
+            "To remove an auto-response, start by running the command <span class=\"command prefix\"><code>e!removeautoresponse [autoresponse]</code>.\nFor example: <code>e!removeautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses removeautoresponse auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses removeautoresponse auto-response:packdownload</code></span>\n\nYou will be prompted to confirm that you want to remove the auto-response. Press remove to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "This action will remove the `packdownload` auto-response\n\nAre you sure you want to continue?",
+                "fields": [
+                  ["Trigger", "where pack download"],
+                  ["Trigger Type", "Words Unordered", true],
+                  ["Response Type", "Buttons", true],
+                  ["Buttons", "`All resource p…` - `https://www.ew…`"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ] 
+              }
+            },
+            "After confirming, the auto-response will have been removed."
+          ]
+        }
+      ]
+    }
+  ],
+  "guides": [
+  ]
+}

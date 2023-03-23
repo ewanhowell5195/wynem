@@ -19,7 +19,7 @@ export default class extends Page {
     await fetchJSON("commands")
     const $ = this.$
     const feature = window[`features/${args.name}`]
-    const title = feature.title ?? args.name.replace(/-/g, " ").toTitleCase()
+    const title = features.find(e => e.id === args.name).name ?? args.name.replace(/-/g, " ").toTitleCase()
     jQuery("title").text(`${title} - Wynem`)
     const linkIcon = $("#link-icon").contents()
     $("#title").text(title)
