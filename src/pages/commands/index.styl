@@ -440,39 +440,19 @@ page-body
 .extra
   max-height: 0
   transition: max-height .5s
-
-.embed
-  padding: 10px 20px 20px
-  display: flex
-  flex-direction: column
-  gap: 10px
-  line-height: 1.25rem
-
-  & *
-    margin: 0
-    white-space: pre-wrap
+  padding: 0 15px
   
-  code
-    font-family: var(--font-code)
-    background-color: var(--color-grey)
-    padding: 2px 4px
+  .embed-container
+    margin: initial
+  
+  .reply-container, .pfp-container, .name-row
+    display: none
     
-.fields
-  display: flex
-  gap: 20px
-  flex-wrap: wrap
-
-  h4
-    margin-bottom: 10px
-    
-  > div
-    flex-grow: 1
-
-.codeblock
-  font-family: var(--font-code)
-  background-color: var(--color-grey)
-  padding: 10px
-  border-radius: 5px
+  .embed
+    background-color: initial
+    box-shadow: initial
+    border: none
+    max-width: initial
 
 .button-row
   display: flex

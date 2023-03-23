@@ -333,18 +333,6 @@ function addMoreInfo(embeds, parent, arrowRight) {
     ).appendTo(parent)
   )
   for (const embed of embeds) {
-    const section = E("div").addClass("embed").appendTo(extra)
-    if (embed.title) section.append(E("h3").text(embed.title))
-    if (embed.description) section.append(E("p").html(embed.description.replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>').replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")))
-    if (embed.fields) {
-      let fields
-      for (const field of embed.fields) {
-        if (!fields || !field[2]) fields = E("div").addClass("fields").appendTo(section)
-        fields.append(E("div").append(
-          E("h4").text(field[0]),
-          E("p").html(field[1].replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>').replace(/`((?:.|\n)+?)`/g, "<code>$1</code>"))
-        ))
-      }
-    }
+    makeEmbed($, extra, embed)
   }
 }
