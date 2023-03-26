@@ -26,7 +26,7 @@ export default class extends Page {
         name: "Ewan",
         colour: "#D14949",
         image: "/assets/images/logo/ewan.webp",
-        message: "<@pynk>"
+        message: "e!snap <@pynk>"
       },
       image: "/assets/images/home/snapped.webp",
       footer: ["snapped.png - 420x517 - 430.2 KB"]

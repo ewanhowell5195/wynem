@@ -1154,10 +1154,22 @@
                     "linus": {
                       "aliases": [
                         "techtips",
-                        "linustechtips"
+                        "linustechtips",
+                        "ltt"
                       ],
                       "arguments": "{image}",
                       "description": "Put an image into Linus Sebastian's hands"
+                    },
+                    "linusscreen": {
+                      "aliases": [
+                        "linuscreen",
+                        "techtipscreen",
+                        "linustechtipscreen",
+                        "ltts",
+                        "lttscreen"
+                      ],
+                      "arguments": "{image}",
+                      "description": "Put an image into an art gallery."
                     },
                     "locket": {
                       "aliases": [
@@ -2221,7 +2233,22 @@
                     "texture"
                   ],
                   "arguments": "[texture] [version]",
-                  "description": "Get a vanilla minecraft texture.",
+                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
+                  "extra": [
+                    {
+                      "title": "Supported versions",
+                      "fields": [
+                        [
+                          "Official Versions",
+                          "Any version from the official Minecraft launcher"
+                        ],
+                        [
+                          "Resource Packs",
+                          "`4thful`\n`barebones`\n`barely_default`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`"
+                        ]
+                      ]
+                    }
+                  ],
                   "slashCommand": "minecraft/resourcepacks/minecrafttexture"
                 },
                 "minecrafttitleconverter": {
@@ -2245,7 +2272,8 @@
                 "reloadpack": {
                   "arguments": "[version]",
                   "cooldown": 20,
-                  "description": "Reload a resource pack that is used as a custom minecraft assets version."
+                  "description": "Reload a resource pack that is used as a custom minecraft assets version.",
+                  "slashCommand": "minecraft/resourcepacks/reloadpack"
                 },
                 "rendermodel": {
                   "aliases": [
@@ -5791,7 +5819,7 @@
             "resourcepacks": {
               "commands": {
                 "minecrafttexture": {
-                  "description": "Get a vanilla minecraft texture.",
+                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
                   "options": [
                     {
                       "name": "texture",
@@ -5804,6 +5832,17 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
+                },
+                "reloadpack": {
+                  "description": "Reload a resource pack that is used as a custom minecraft assets version.",
+                  "cooldown": 20,
+                  "options": [
+                    {
+                      "name": "pack",
+                      "description": "The resource pack to reload"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/reloadpack"
                 },
                 "tile": {
                   "description": "Tile an image over a 5x5 area.",

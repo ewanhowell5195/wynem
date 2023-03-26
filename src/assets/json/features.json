@@ -15,5 +15,10 @@
     "id": "auto-responses",
     "name": "Auto-responses",
     "description": "A way to make Wynem respond to triggers in regular messages"
+  },
+  {
+    "id": "minecraft-textures",
+    "name": "Minecraft Textures",
+    "description": "Get and view textures from Minecraft versions or resource packs"
   }
 ]
