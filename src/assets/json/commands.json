@@ -1720,6 +1720,14 @@
                   "description": "Get the most common colour in an image.",
                   "slashCommand": "imageutility/commoncolour"
                 },
+                "compareslide": {
+                  "aliases": [
+                    "slidecompare"
+                  ],
+                  "arguments": "[sliderColour] {image} {image}",
+                  "cooldown": 5,
+                  "description": "Compare two images by having it slide between them both."
+                },
                 "imagecompare": {
                   "aliases": [
                     "imagecomp",
