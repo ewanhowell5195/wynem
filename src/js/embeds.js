@@ -120,6 +120,7 @@ function parseString(str) {
   return str.replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
             .replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")
             .replace(/<(@.+?)>/g, '<span class="ping">$1</span>')
+            .replace(/<:(\/.+?)>/g, (s, m) => `<a is="f-a" class="ping" href="/commands/slash${m.replace(/\s/g, "/")}">${m}</a>`)
             .replace(/<:(.+?):>/g, '<img class="emoji" src="/assets/images/emojis/$1.webp" />')
             .replace(/<t:(.+?)>/g, '<span class="timestamp">$1</span>')
             .replace(/\*\*((?:.|\n)+?)\*\*/g, "<strong>$1</strong>")

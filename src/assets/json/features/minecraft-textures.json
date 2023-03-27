@@ -61,7 +61,53 @@
                   { "emoji": "b" }
                 ]
               }
-            }
+            },
+            {
+              "type": "heading",
+              "text": "Viewing all available resource packs"
+            },
+            "To view all the available resource packs, first run the <code class=\"command prefix\">e!help minecrafttexture</code><code class=\"command slash\">/help category-command:minecrafttexture</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["minecrafttexture", "/assets/images/icons/help.webp"],
+                "description": "```Get a minecraft texture from any vanilla version or a supported resource pack.``````Press the \"More information\" to see extra information.```",
+                "fields": [
+                  ["Formatting", "`e!minecrafttexture [texture] [version]`"],
+                  ["Aliases", "`mctexture` `texture`"],
+                  ["Cooldown", "`1 second`"],
+                  ["Slash command", "<:/minecraft resourcepacks minecrafttexture>"]
+                ],
+                "footer": ["Status: Enabled\nUsage count: 671\nCategory: Minecraft > Resourcepacks"],
+                "buttons": [
+                  {
+                    "label": "More information",
+                    "emoji": "info"
+                  },
+                  {
+                    "label": "View online",
+                    "url": "/commands/prefix/minecraft/resourcepacks/minecrafttexture"
+                  },
+                  {
+                    "label": "Submit a resource pack",
+                    "url": "https://github.com/ewanhowell5195/WynemResourcePacks"
+                  }
+                ]
+              }
+            },
+            "From here, click the <code>More information</code> button.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["minecrafttexture - More information", "/assets/images/icons/info.webp"],
+                "title": "Supported versions",
+                "fields": [
+                  ["Official Versions", "Any version from the official Minecraft launcher"],
+                  ["Resource Packs", "`f8thful`\n`dokucraft_light`\n`barebones`"]
+                ]
+              }
+            },
+            "You will then see a list of supported versions and resourcepacks.\nPlease note, the example list above the actual supported packs list."
           ]
         },
         {
