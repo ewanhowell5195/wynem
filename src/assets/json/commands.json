@@ -1720,14 +1720,6 @@
                   "description": "Get the most common colour in an image.",
                   "slashCommand": "imageutility/commoncolour"
                 },
-                "compareslide": {
-                  "aliases": [
-                    "slidecompare"
-                  ],
-                  "arguments": "[sliderColour] {image} {image}",
-                  "cooldown": 5,
-                  "description": "Compare two images by having it slide between them both."
-                },
                 "imagecompare": {
                   "aliases": [
                     "imagecomp",
@@ -1790,6 +1782,14 @@
                 "save": {
                   "arguments": "{image}",
                   "description": "Turn an image into a gif so that you can save it to your Discord favourites list."
+                },
+                "slidecompare": {
+                  "aliases": [
+                    "compareslide"
+                  ],
+                  "arguments": "[sliderColour] {image} {image}",
+                  "cooldown": 5,
+                  "description": "Compare two images by having it slide between them both."
                 },
                 "watermark": {
                   "aliases": [
