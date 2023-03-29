@@ -977,6 +977,17 @@
                   "description": "Recolour an image to a specific colour, keeping the opacity.",
                   "slashCommand": "imagefilter/recolour"
                 },
+                "saturate": {
+                  "aliases": [
+                    "saturation"
+                  ],
+                  "arguments": "[percentage] {image}",
+                  "description": [
+                    "Change the saturation of an image.",
+                    "The brightness is a range of -100 to 100."
+                  ],
+                  "slashCommand": "imagefilter/saturate"
+                },
                 "sepia": {
                   "arguments": "{image}",
                   "description": "Apply a sepia filter to an image.",
@@ -4765,6 +4776,27 @@
                 }
               ],
               "prefixCommand": "images/filters/recolour"
+            },
+            "saturate": {
+              "description": [
+                "Change the saturation of an image.",
+                "The brightness is a range of -100 to 100."
+              ],
+              "options": [
+                {
+                  "name": "percentage",
+                  "description": "The percentage to saturate the image by"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/saturate"
             },
             "sepia": {
               "description": "Apply a sepia filter to an image.",
