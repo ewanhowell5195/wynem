@@ -842,7 +842,7 @@
                   "arguments": "[amount] {image}",
                   "description": [
                     "Change the brightness of an image.",
-                    "The brightness is a range of -100 to 100."
+                    "The amount is a range of -100 to 100."
                   ],
                   "slashCommand": "imagefilter/brightness"
                 },
@@ -984,7 +984,7 @@
                   "arguments": "[percentage] {image}",
                   "description": [
                     "Change the saturation of an image.",
-                    "The brightness is a range of -100 to 100."
+                    "The percentage is a range of -100 to 100."
                   ],
                   "slashCommand": "imagefilter/saturate"
                 },
@@ -4530,7 +4530,7 @@
             "brightness": {
               "description": [
                 "Change the brightness of an image.",
-                "The brightness is a range of -100 to 100."
+                "The amount is a range of -100 to 100."
               ],
               "options": [
                 {
@@ -4780,7 +4780,7 @@
             "saturate": {
               "description": [
                 "Change the saturation of an image.",
-                "The brightness is a range of -100 to 100."
+                "The percentage is a range of -100 to 100."
               ],
               "options": [
                 {
