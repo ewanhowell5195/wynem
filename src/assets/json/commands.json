@@ -1800,7 +1800,8 @@
                   ],
                   "arguments": "[sliderColour] {image} {image}",
                   "cooldown": 5,
-                  "description": "Compare two images by having it slide between them both."
+                  "description": "Compare two images by having it slide between them both.",
+                  "slashCommand": "imageutility/slidecompare"
                 },
                 "watermark": {
                   "aliases": [
@@ -3653,6 +3654,19 @@
               "arguments": "[url]",
               "description": "Shorten a link using tinyurl.",
               "slashCommand": "utility/tinyurl"
+            },
+            "translate": {
+              "arguments": [
+                "toLanguage",
+                "fromLanguage",
+                "message"
+              ],
+              "cooldown": 5,
+              "description": [
+                "Translate a message to another language",
+                "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
+              ],
+              "slashCommand": "utility/translate"
             }
           }
         },
@@ -5457,7 +5471,7 @@
                   "description": "Reverse the scanning direction"
                 },
                 {
-                  "name": "colour",
+                  "name": "line-colour",
                   "description": "The scan line colour"
                 },
                 {
@@ -5822,6 +5836,33 @@
                 }
               ],
               "prefixCommand": "images/imageutility/commoncolour"
+            },
+            "slidecompare": {
+              "description": "Compare two images by having it slide between them both.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "line-colour",
+                  "description": "The compare line colour"
+                },
+                {
+                  "name": "left-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "left-image-string",
+                  "description": "An image"
+                },
+                {
+                  "name": "right-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "right-image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/slidecompare"
             },
             "watermark": {
               "description": [
@@ -6335,6 +6376,29 @@
                 }
               ],
               "prefixCommand": "utility/tinyurl"
+            },
+            "translate": {
+              "description": [
+                "Translate a message to another language",
+                "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "message",
+                  "description": "The message to translate",
+                  "required": true
+                },
+                {
+                  "name": "to-language",
+                  "description": "The language to translate to"
+                },
+                {
+                  "name": "from-language",
+                  "description": "The language to translate from"
+                }
+              ],
+              "prefixCommand": "utility/translate"
             }
           }
         },
@@ -6398,6 +6462,18 @@
               "name": "command",
               "description": "The custom command to run",
               "required": true
+            },
+            {
+              "name": "arg1",
+              "description": "Argument 1"
+            },
+            {
+              "name": "arg2",
+              "description": "Argument 2"
+            },
+            {
+              "name": "arg3",
+              "description": "Argument 3"
             }
           ],
           "permissions": [
