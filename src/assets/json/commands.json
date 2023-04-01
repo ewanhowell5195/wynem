@@ -3656,11 +3656,7 @@
               "slashCommand": "utility/tinyurl"
             },
             "translate": {
-              "arguments": [
-                "toLanguage",
-                "fromLanguage",
-                "message"
-              ],
+              "arguments": "[toLanguage] [fromLanguage] [message]",
               "cooldown": 5,
               "description": [
                 "Translate a message to another language",
