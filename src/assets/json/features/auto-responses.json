@@ -11,9 +11,9 @@
       ["server", "autoresponses", "removeautoresponse"]
     ],
     "slash": [
-      ["serverconfig", "autoresponses", "addautoresponse"],
-      ["serverconfig", "autoresponses", "viewautoresponse"],
-      ["serverconfig", "autoresponses", "removeautoresponse"]
+      ["serverconfig", "autoresponses", "add"],
+      ["serverconfig", "autoresponses", "view"],
+      ["serverconfig", "autoresponses", "remove"]
     ]
   },
   "description": [
@@ -76,7 +76,7 @@
         {
           "name": "Creating Auto-responses",
           "content": [
-            "To start setting up your own auto-responses, first run the <code class=\"command prefix\">e!addautoresponse</code><code class=\"command slash\">/serverconfig autoresponses addautoresponse</code> command, and then click the button to start.",
+            "To start setting up your own auto-responses, first run the <code class=\"command prefix\">e!addautoresponse</code><code class=\"command slash\">/serverconfig autoresponses add</code> command, and then click the button to start.",
             {
               "type": "embed",
               "data": {
@@ -310,7 +310,7 @@
         {
           "name": "Viewing Auto-responses",
           "content": [
-            "To view all the auto-responses currently active in the server, use the <code class=\"command prefix\">e!viewautoresponse</code><code class=\"command slash\">/serverconfig autoresponses viewautoresponse</code> command.",
+            "To view all the auto-responses currently active in the server, use the <code class=\"command prefix\">e!viewautoresponse</code><code class=\"command slash\">/serverconfig autoresponses view</code> command.",
             {
               "type": "embed",
               "data": {
@@ -318,7 +318,7 @@
                 "description": "`packdownload` `websites` `dontask`"
               }
             },
-            "To view a specific auto-response, you can use the command <span class=\"command prefix\"><code>e!viewautoresponse [autoresponse]</code>.\nFor example: <code>e!viewautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses viewautoresponse auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses viewautoresponse auto-response:packdownload</code></span>.",
+            "To view a specific auto-response, you can use the command <span class=\"command prefix\"><code>e!viewautoresponse [autoresponse]</code>.\nFor example: <code>e!viewautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses view auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses view auto-response:packdownload</code></span>.",
             {
               "type": "embed",
               "data": {
@@ -340,7 +340,7 @@
         {
           "name": "Removing Auto-responses",
           "content": [
-            "To remove an auto-response, start by running the command <span class=\"command prefix\"><code>e!removeautoresponse [autoresponse]</code>.\nFor example: <code>e!removeautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses removeautoresponse auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses removeautoresponse auto-response:packdownload</code></span>\n\nYou will be prompted to confirm that you want to remove the auto-response. Press remove to continue.",
+            "To remove an auto-response, start by running the command <span class=\"command prefix\"><code>e!removeautoresponse [autoresponse]</code>.\nFor example: <code>e!removeautoresponse packdownload</code></span><span class=\"command slash\"><code>/serverconfig autoresponses remove auto-response:[autoresponses]</code>.\nFor example: <code>/serverconfig autoresponses remove auto-response:packdownload</code></span>\n\nYou will be prompted to confirm that you want to remove the auto-response. Press remove to continue.",
             {
               "type": "embed",
               "data": {

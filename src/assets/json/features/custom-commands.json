@@ -15,8 +15,8 @@
     ],
     "slash": [
       ["customcommand"],
-      ["serverconfig", "customcommands", "addcustomcommand"],
-      ["serverconfig", "customcommands", "removecustomcommand"]
+      ["serverconfig", "customcommands", "add"],
+      ["serverconfig", "customcommands", "remove"]
     ]
   },
   "description": [
@@ -62,7 +62,7 @@
         {
           "name": "Creating Custom Commands",
           "content": [
-            "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/serverconfig customcommands addcustomcommand</code> command, and then click the button to start.",
+            "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/serverconfig customcommands add</code> command, and then click the button to start.",
             {
               "type": "embed",
               "data": {
@@ -242,7 +242,7 @@
         {
           "name": "Removing Custom Commands",
           "content": [
-            "To remove custom command, start by running the command <span class=\"command prefix\"><code>e!removecustomcommand [customcommandname]</code>.\nFor example: <code>e!removecustomcommand example</code></span><span class=\"command slash\"><code>/serverconfig customcommands removecustomcommand command:[customcommandname]</code>.\nFor example: <code>/serverconfig customcommands removecustomcommand command:example</code></span>\n\nYou will be prompted to confirm that you want to remove the custom command. Press remove to continue.",
+            "To remove custom command, start by running the command <span class=\"command prefix\"><code>e!removecustomcommand [customcommandname]</code>.\nFor example: <code>e!removecustomcommand example</code></span><span class=\"command slash\"><code>/serverconfig customcommands remove command:[customcommandname]</code>.\nFor example: <code>/serverconfig customcommands remove command:example</code></span>\n\nYou will be prompted to confirm that you want to remove the custom command. Press remove to continue.",
             {
               "type": "embed",
               "data": {

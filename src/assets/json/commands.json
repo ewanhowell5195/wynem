@@ -71,7 +71,7 @@
                         "Guild Only",
                         "Manage Guild"
                       ],
-                      "slashCommand": "serverconfig/customcommands/addcustomcommand"
+                      "slashCommand": "serverconfig/customcommands/add"
                     },
                     "removecustomcommand": {
                       "aliases": [
@@ -93,7 +93,7 @@
                         "Guild Only",
                         "Manage Guild"
                       ],
-                      "slashCommand": "serverconfig/customcommands/removecustomcommand"
+                      "slashCommand": "serverconfig/customcommands/remove"
                     }
                   }
                 },
@@ -1446,14 +1446,6 @@
                       "arguments": "[text]",
                       "description": "Create a \"change my mind\" meme.",
                       "slashCommand": "imagefun/texts/changemymind"
-                    },
-                    "discordmessage": {
-                      "aliases": [
-                        "message"
-                      ],
-                      "arguments": "[message] [username] [colour] [botTag] {image}",
-                      "description": "Generate a discord message. Use quotes around arguments to use more than one word. Set \"botTag\" to \"false\" to disable it.",
-                      "slashCommand": "imagefun/texts/discordmessage"
                     },
                     "notification": {
                       "aliases": [
@@ -2817,7 +2809,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/addautoresponse"
+                  "slashCommand": "serverconfig/autoresponses/add"
                 },
                 "removeautoresponse": {
                   "aliases": [
@@ -2834,7 +2826,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/removeautoresponse"
+                  "slashCommand": "serverconfig/autoresponses/remove"
                 },
                 "viewautoresponse": {
                   "aliases": [
@@ -2855,7 +2847,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/viewautoresponse"
+                  "slashCommand": "serverconfig/autoresponses/view"
                 }
               }
             },
@@ -3539,10 +3531,12 @@
                   "aliases": [
                     "remind",
                     "remindme",
-                    "rm"
+                    "rm",
+                    "addreminder"
                   ],
                   "arguments": "[duration] [reminder]",
-                  "description": "Set a reminder for yourself."
+                  "description": "Set a reminder for yourself.",
+                  "slashCommand": "utility/reminders/reminder"
                 },
                 "repeatingreminder": {
                   "aliases": [
@@ -3554,7 +3548,8 @@
                     "rrm"
                   ],
                   "arguments": "[duration] [reminder]",
-                  "description": "Set a reminder for yourself that repeats at a regular interval."
+                  "description": "Set a reminder for yourself that repeats at a regular interval.",
+                  "slashCommand": "utility/reminders/repeatingreminder"
                 },
                 "viewreminders": {
                   "aliases": [
@@ -3568,7 +3563,11 @@
                     "mrm"
                   ],
                   "arguments": "<member/channel>",
-                  "description": "View and remove your existing reminders. If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
+                  "description": [
+                    "View and remove your existing reminders.",
+                    "If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
+                  ],
+                  "slashCommand": "utility/reminders/view"
                 }
               }
             }
@@ -5275,37 +5274,6 @@
                   ],
                   "prefixCommand": "images/imagefun/texts/changemymind"
                 },
-                "discordmessage": {
-                  "description": "Generate a discord message.",
-                  "options": [
-                    {
-                      "name": "message",
-                      "description": "The message to generate",
-                      "required": true
-                    },
-                    {
-                      "name": "username",
-                      "description": "The username of the user sending the message"
-                    },
-                    {
-                      "name": "colour",
-                      "description": "The role colour"
-                    },
-                    {
-                      "name": "bot-tag",
-                      "description": "The text for the bot tag"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/discordmessage"
-                },
                 "notification": {
                   "description": "Add a custom Discord notification to an image.",
                   "options": [
@@ -6080,11 +6048,11 @@
           "categories": {
             "autoresponses": {
               "commands": {
-                "addautoresponse": {
+                "add": {
                   "description": "Run a builder that adds a new auto-response for the server.",
                   "prefixCommand": "server/autoresponses/addautoresponse"
                 },
-                "removeautoresponse": {
+                "remove": {
                   "description": [
                     "Remove an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
@@ -6098,7 +6066,7 @@
                   ],
                   "prefixCommand": "server/autoresponses/removeautoresponse"
                 },
-                "viewautoresponse": {
+                "view": {
                   "description": [
                     "View an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
@@ -6116,11 +6084,11 @@
             },
             "customcommands": {
               "commands": {
-                "addcustomcommand": {
+                "add": {
                   "description": "Run a builder that adds a new custom command for the server.",
                   "prefixCommand": "bot/commands/customcommands/addcustomcommand"
                 },
-                "removecustomcommand": {
+                "remove": {
                   "description": "Remove a custom command from the server.",
                   "options": [
                     {
@@ -6287,6 +6255,51 @@
           }
         },
         "utility": {
+          "categories": {
+            "reminders": {
+              "commands": {
+                "reminder": {
+                  "description": "Set a reminder for yourself.",
+                  "options": [
+                    {
+                      "name": "duration",
+                      "description": "How long should the reminder last",
+                      "required": true
+                    },
+                    {
+                      "name": "reminder",
+                      "description": "The reminder message",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "utility/reminders/reminder"
+                },
+                "repeatingreminder": {
+                  "description": "Set a reminder for yourself that repeats at a regular interval.",
+                  "options": [
+                    {
+                      "name": "duration",
+                      "description": "How often should the reminder repeat",
+                      "required": true
+                    },
+                    {
+                      "name": "reminder",
+                      "description": "The reminder message",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "utility/reminders/repeatingreminder"
+                },
+                "view": {
+                  "description": [
+                    "View and remove your existing reminders.",
+                    "If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
+                  ],
+                  "prefixCommand": "utility/reminders/viewreminders"
+                }
+              }
+            }
+          },
           "commands": {
             "calculator": {
               "description": "Summon a calculator.",

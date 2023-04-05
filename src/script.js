@@ -77,6 +77,20 @@ $(window).on({
   }
 })
 
+;(async () => {
+  try {
+    const data = await fetch("https://api.wynem.com/info").then(e => e.json())
+    $("#bot-info-extra").append(
+      E("div").html(`Ping: <strong>${data.ping.toLocaleString("en")} ms</strong>`),
+      E("div").html(`Servers: <strong>${data.guilds.toLocaleString("en")}</strong>`)
+    )
+  } catch {
+    $("#bot-info-status-icon").addClass("offline")
+    $("#bot-info-status > strong").text("Offline")
+    $("#bot-info-extra").next().remove()
+  }
+})()
+
 // pages
 
 async function setupPage(PageClass, container, data) {
