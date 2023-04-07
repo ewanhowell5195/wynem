@@ -2912,8 +2912,7 @@
                   "botPermissions": [
                     "Manage Messages"
                   ],
-                  "slashCommand": "channel/repin",
-                  "contextCommand": "message/re-pin-message"
+                  "slashCommand": "channel/repin"
                 },
                 "setmembercounter": {
                   "aliases": [
@@ -3536,7 +3535,7 @@
                   ],
                   "arguments": "[duration] [reminder]",
                   "description": "Set a reminder for yourself.",
-                  "slashCommand": "utility/reminders/reminder"
+                  "slashCommand": "utility/reminders/set"
                 },
                 "repeatingreminder": {
                   "aliases": [
@@ -3549,7 +3548,7 @@
                   ],
                   "arguments": "[duration] [reminder]",
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
-                  "slashCommand": "utility/reminders/repeatingreminder"
+                  "slashCommand": "utility/reminders/setrepeating"
                 },
                 "viewreminders": {
                   "aliases": [
@@ -3661,140 +3660,25 @@
                 "Translate a message to another language",
                 "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
               ],
-              "slashCommand": "utility/translate"
+              "slashCommand": "utility/translate",
+              "contextCommand": "message/translate-message"
             }
           }
         },
         "voice": {
-          "categories": {
-            "texttospeech": {
-              "commands": {
-                "ignoreprefix": {
-                  "aliases": [
-                    "disableprefix",
-                    "blockprefix",
-                    "disallowprefix",
-                    "addignoredprefix"
-                  ],
-                  "arguments": "[prefix]",
-                  "description": "Add prefixes to ignore in the autotts channel. This can be used to stop other bot commands being read out loud.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "removeautotts": {
-                  "aliases": [
-                    "autottsremove",
-                    "deleteautotts",
-                    "autottsdelete"
-                  ],
-                  "description": "Remove the servers autotts channel.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "removeignoredprefix": {
-                  "aliases": [
-                    "removedisabledprefix",
-                    "removeblockedprefix",
-                    "removedisallowedprefix",
-                    "allowprefix",
-                    "enableprefix",
-                    "unblockprefix"
-                  ],
-                  "arguments": "[prefix]",
-                  "description": "Remove prefixes that are currently being ignored in autotts.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "setautotts": {
-                  "aliases": [
-                    "autottsset",
-                    "autotts"
-                  ],
-                  "arguments": "<channel>",
-                  "description": [
-                    "Set a channel where messages to be automatically read out loud in a voice channel.",
-                    "Messages will not be read for users who not in the voice channel, or if the message starts with a URL."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "setttslanguage": {
-                  "aliases": [
-                    "ttslanguage",
-                    "setttslang",
-                    "ttslang"
-                  ],
-                  "arguments": "[language]",
-                  "description": "Set a default language for your TTS to be read in."
-                },
-                "tts": {
-                  "aliases": [
-                    "t",
-                    "texttospeech",
-                    "textspeech",
-                    "read",
-                    "speak"
-                  ],
-                  "arguments": "[language] [text]",
-                  "cooldown": "3",
-                  "description": [
-                    "Read some text out loud. If you are in a voice channel, the bot will join the channel and read it out loud there, otherwise it sends an mp3.",
-                    "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
-                    "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
-                  ],
-                  "slashCommand": "voice/tts"
-                },
-                "viewignoredprefixes": {
-                  "aliases": [
-                    "viewdisabledprefixes",
-                    "viewblockedprefixes",
-                    "viewdisallowedprefixes",
-                    "showignoredprefixes",
-                    "showdisabledprefixes",
-                    "showblockedprefixes",
-                    "showdisallowedprefixes",
-                    "ignoredprefixes",
-                    "disabledprefixes",
-                    "blockedprefixes",
-                    "disallowedprefixes"
-                  ],
-                  "description": "View the prefixes currently being ignored in autotts.",
-                  "permissions": [
-                    "Guild Only"
-                  ]
-                }
-              }
-            }
-          },
           "commands": {
-            "activity": {
+            "ignoreprefix": {
               "aliases": [
-                "together",
-                "youtubetogether",
-                "yttogether",
-                "play",
-                "p",
-                "activities",
-                "games"
+                "disableprefix",
+                "blockprefix",
+                "disallowprefix",
+                "addignoredprefix"
               ],
-              "arguments": "[type]",
-              "description": [
-                "Start an activity in the current voice channel.",
-                "Activity types:\n\nbetrayal\ncheckers\nchess\nfishington\nletterleague\nocho\npokernight\nsketchheads\nspellcast\nwordsnacks\nyoutube"
-              ],
+              "arguments": "[prefix]",
+              "description": "Add prefixes to ignore in the autotts channel. This can be used to stop other bot commands being read out loud.",
               "permissions": [
-                "Guild Only"
-              ],
-              "botPermissions": [
-                "Create Instant Invite"
+                "Guild Only",
+                "Manage Channels"
               ]
             },
             "leave": {
@@ -3811,6 +3695,95 @@
                 "Guild Only"
               ],
               "slashCommand": "voice/leave"
+            },
+            "removeautotts": {
+              "aliases": [
+                "autottsremove",
+                "deleteautotts",
+                "autottsdelete"
+              ],
+              "description": "Remove the servers autotts channel.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "removeignoredprefix": {
+              "aliases": [
+                "removedisabledprefix",
+                "removeblockedprefix",
+                "removedisallowedprefix",
+                "allowprefix",
+                "enableprefix",
+                "unblockprefix"
+              ],
+              "arguments": "[prefix]",
+              "description": "Remove prefixes that are currently being ignored in autotts.",
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setautotts": {
+              "aliases": [
+                "autottsset",
+                "autotts"
+              ],
+              "arguments": "<channel>",
+              "description": [
+                "Set a channel where messages to be automatically read out loud in a voice channel.",
+                "Messages will not be read for users who not in the voice channel, or if the message starts with a URL."
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Channels"
+              ]
+            },
+            "setttslanguage": {
+              "aliases": [
+                "ttslanguage",
+                "setttslang",
+                "ttslang"
+              ],
+              "arguments": "[language]",
+              "description": "Set a default language for your TTS to be read in.",
+              "slashCommand": "voice/setttslanguage"
+            },
+            "tts": {
+              "aliases": [
+                "t",
+                "texttospeech",
+                "textspeech",
+                "read",
+                "speak"
+              ],
+              "arguments": "[language] [text]",
+              "cooldown": "3",
+              "description": [
+                "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
+                "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
+                "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+              ],
+              "slashCommand": "voice/tts"
+            },
+            "viewignoredprefixes": {
+              "aliases": [
+                "viewdisabledprefixes",
+                "viewblockedprefixes",
+                "viewdisallowedprefixes",
+                "showignoredprefixes",
+                "showdisabledprefixes",
+                "showblockedprefixes",
+                "showdisallowedprefixes",
+                "ignoredprefixes",
+                "disabledprefixes",
+                "blockedprefixes",
+                "disallowedprefixes"
+              ],
+              "description": "View the prefixes currently being ignored in autotts.",
+              "permissions": [
+                "Guild Only"
+              ]
             }
           }
         }
@@ -3946,8 +3919,7 @@
               "botPermissions": [
                 "Manage Messages"
               ],
-              "prefixCommand": "server/channel/repin",
-              "contextCommand": "message/re-pin-message"
+              "prefixCommand": "server/channel/repin"
             },
             "slowmode": {
               "description": "Set a custom slowmode for the current channel.",
@@ -6258,7 +6230,7 @@
           "categories": {
             "reminders": {
               "commands": {
-                "reminder": {
+                "set": {
                   "description": "Set a reminder for yourself.",
                   "options": [
                     {
@@ -6274,7 +6246,7 @@
                   ],
                   "prefixCommand": "utility/reminders/reminder"
                 },
-                "repeatingreminder": {
+                "setrepeating": {
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
                   "options": [
                     {
@@ -6407,7 +6379,8 @@
                   "description": "The language to translate from"
                 }
               ],
-              "prefixCommand": "utility/translate"
+              "prefixCommand": "utility/translate",
+              "contextCommand": "message/translate-message"
             }
           }
         },
@@ -6417,8 +6390,23 @@
               "description": "Make the bot leave the current voice channel.",
               "prefixCommand": "voice/leave"
             },
+            "setttslanguage": {
+              "description": "Set a default language for your TTS to be read in.",
+              "options": [
+                {
+                  "name": "language",
+                  "description": "The language to use for TTS",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "voice/setttslanguage"
+            },
             "tts": {
-              "description": "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
+              "description": [
+                "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
+                "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
+                "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+              ],
               "cooldown": "3",
               "options": [
                 {
@@ -6431,7 +6419,7 @@
                   "description": "The language to read the message in"
                 }
               ],
-              "prefixCommand": "voice/texttospeech/tts"
+              "prefixCommand": "voice/tts"
             }
           }
         }
@@ -6707,19 +6695,6 @@
               "prefixCommand": "server/quotemessage",
               "slashCommand": "server/quote"
             },
-            "re-pin-message": {
-              "name": "Re-pin Message",
-              "description": "Re-pin a message to move it to the top of the channel pins.",
-              "permissions": [
-                "Manage Messages"
-              ],
-              "botPermissions": [
-                "Manage Messages"
-              ],
-              "type": "message",
-              "prefixCommand": "server/channel/repin",
-              "slashCommand": "channel/repin"
-            },
             "resize-image": {
               "description": "Resize an image to a desired size.",
               "options": [
@@ -6746,6 +6721,23 @@
               "type": "message",
               "prefixCommand": "images/manipulation/scale",
               "slashCommand": "imagemanipulation/scale"
+            },
+            "translate-message": {
+              "description": "Translate a message to another language",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "Language to translate to",
+                  "description": "Defaults to English"
+                },
+                {
+                  "name": "Language to translate from",
+                  "description": "Defaults to auto detection"
+                }
+              ],
+              "type": "message",
+              "prefixCommand": "utility/translate",
+              "slashCommand": "utility/translate"
             }
           }
         }
