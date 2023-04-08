@@ -191,12 +191,15 @@
                 },
                 "stats": {
                   "aliases": [
-                    "botstats"
+                    "botstats",
+                    "mystats",
+                    "userstats"
                   ],
                   "arguments": "[command]",
                   "description": [
                     "View the number of times a command has been used.",
-                    "Don't provide a command to view the top 10 most used commands."
+                    "Don't provide a command to view the top 10 most used commands.",
+                    "Use the \"mystats\" or \"userstats\" alias to view your personal stats."
                   ],
                   "slashCommand": "bot/commands/stats"
                 },
@@ -3798,12 +3801,17 @@
                 "stats": {
                   "description": [
                     "View the number of times a command has been used.",
-                    "Don't provide a command to view the top 10 most used commands."
+                    "Don't provide a command to view the top 10 most used commands.",
+                    "Use the \"mystats\" or \"userstats\" alias to view your personal stats."
                   ],
                   "options": [
                     {
                       "name": "command",
                       "description": "The command to view the stats of"
+                    },
+                    {
+                      "name": "type",
+                      "description": "View the global stats, or your personal stats"
                     }
                   ],
                   "prefixCommand": "bot/commands/stats"
