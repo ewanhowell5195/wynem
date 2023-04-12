@@ -1,11 +1,14 @@
+@import "buttons.styl"
+
 .container
   max-width: var(--content-width)
   margin: 0 auto
   flex: 1
   
-.color-container
+#color-container
   display: flex
   flex-wrap: wrap
+  justify-content: center
 
 .colour
   min-width: 128px
@@ -39,7 +42,12 @@
 #text-copier
   position: fixed
   top: -100vh
-  
+
+#load-more
+  justify-content: center
+  padding: 40px
+  display: none
+
 @media only screen and (max-width: 768px)
   .text
     opacity: 1
