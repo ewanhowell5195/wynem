@@ -27,7 +27,7 @@ export default class ColoursPage extends Page {
       loadMore.css("display", "flex").on("click", e => {
         loadPalette(this.$, container, palette.slice(offset, offset + 128))
         offset += 128
-        if (offset === palette.length) loadMore.css("display", "none")
+        if (offset >= palette.length) loadMore.css("display", "none")
       })
     }
   }
