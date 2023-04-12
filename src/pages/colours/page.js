@@ -16,7 +16,7 @@ export default class ColoursPage extends Page {
       container.append(
         E("p").text("Palette not found. It probably timed out.")
       )
-      return console.log("error")
+      return
     }
     const palette = await r.json()
     const slice = palette.slice(0, 128)
