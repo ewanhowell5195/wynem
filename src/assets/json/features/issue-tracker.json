@@ -99,7 +99,7 @@
               "type": "embed",
               "data": {
                 "warning": true,
-                "description": "Are you sure you want to remove the issue tracker <a href=\"https://github.com/JannisX11/blockbench\" target=\"_blank\">https://github.com/JannisX11/blockbench/issues/</a> ?",
+                "description": "Are you sure you want to remove the issue tracker <a href=\"https://github.com/JannisX11/blockbench/issues/\" target=\"_blank\">https://github.com/JannisX11/blockbench/issues/</a> ?",
                 "buttons": [
                   {
                     "label": "Remove",
