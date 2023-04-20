@@ -3060,17 +3060,6 @@
                   ],
                   "slashCommand": "server/issuetracker/issue"
                 },
-                "issuetracker": {
-                  "aliases": [
-                    "git",
-                    "github"
-                  ],
-                  "description": "View the issue tracker for the current server.",
-                  "permissions": [
-                    "Guild Only"
-                  ],
-                  "slashCommand": "server/issuetracker/repo"
-                },
                 "setissuetracker": {
                   "aliases": [
                     "setgitrepo",
@@ -3084,6 +3073,20 @@
                     "Guild Only"
                   ],
                   "slashCommand": "serverconfig/setissuetracker"
+                },
+                "showissuetracker": {
+                  "aliases": [
+                    "showgit",
+                    "showgithub",
+                    "issuetracker",
+                    "git",
+                    "github"
+                  ],
+                  "description": "View the issue tracker for the current server.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "slashCommand": "server/issuetracker/repo"
                 },
                 "toggleautoissues": {
                   "aliases": [
@@ -6061,7 +6064,7 @@
                 },
                 "repo": {
                   "description": "View the issue tracker for the current server.",
-                  "prefixCommand": "server/issuetracker/issuetracker"
+                  "prefixCommand": "server/issuetracker/showissuetracker"
                 }
               }
             }

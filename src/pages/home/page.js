@@ -60,7 +60,7 @@ export default class extends Page {
       },
       author: ["Member records", "/assets/images/icons/logs.webp"],
       description: "**Records for** <@CCCode>\n\n**Total records:** 3\n**Total notes:** 1\n**Total warnings:** 1\n**Total timeouts:** 1\n\n<:warn:> **Warning\nGiven by** <@Ewan> **on <t:3 January 2023>\nReason:**\n> Breaking rule 17\nRecord ID: `1056`\n\n<:note:> **Note\nGiven by** <@Ewan> **on <t:3 January 2023>\nReason:**\n> Doesn't like Hunt Down the Freeman\nRecord ID: `1055`\n\n<:mute:> **Timeout\nGiven by** <@Ewan> **on <t:3 January 2023> for `10m`\nReason:**\n> Preferring Half-Life 2 over Hunt Down the Freeman\nRecord ID: `1054`",
-      thumbnail: "/assets/images/home/cccode.webp",
+      thumbnail: "/assets/images/avatars/cccode.webp",
       footer: ["User ID: 144918157377798144"],
       buttons: [{
         style: "red",

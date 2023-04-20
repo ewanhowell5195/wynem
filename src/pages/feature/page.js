@@ -1,4 +1,4 @@
-import { makeEmbed, makeModal } from "/js/embeds.js"
+import { makeEmbed, makeMessage, makeModal } from "/js/embeds.js"
 
 export default class extends Page {
   constructor() {
@@ -100,6 +100,8 @@ function addBlocks($, element, blocks, feature, args) {
       E("img").attr("src", `/assets/images/features/${feature}/${block.name}.webp`).css("max-height", `${block.height ?? 256}px`).appendTo(section)
     } else if (block.type === "embed") {
       makeEmbed($, section, block.data, args)
+    } else if (block.type === "message") {
+      makeMessage($, section, block.data, args)
     } else if (block.type === "modal") {
       makeModal($, section, block.data)
     } else if (block.type === "tabs") {

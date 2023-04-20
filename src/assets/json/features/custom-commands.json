@@ -258,7 +258,7 @@
                     "label": "Cancel",
                     "emoji": "cross"
                   }
-                ] 
+                ]
               }
             },
             "After confirming, the custom command will have been removed."
@@ -266,7 +266,5 @@
         }
       ]
     }
-  ],
-  "guides": [
   ]
 }

@@ -84,6 +84,24 @@ export function makeEmbed($, parent, data, args = {}) {
   parent.append(container)
 }
 
+export function makeMessage($, parent, data, args = {}) {
+  let message
+  const container = E("div").addClass("embed-container message-container").append(
+    E("div").append(
+      E("div").addClass("pfp-container").append(
+        E("img").addClass(args.outline ? "outline" : undefined).attr("src", data.image)
+      ),
+      E("div").addClass("embed-content").append(
+        E("div").addClass("name-row").append(
+          E("div").addClass("name").text(data.name).css("color", data.colour)
+        ),
+        message = E("div").addClass("message").text(data.message)
+      )
+    )
+  )
+  parent.append(container)
+}
+
 export function makeModal($, parent, data) {
   let modal
   const container = E("div").addClass("modal-container").append(

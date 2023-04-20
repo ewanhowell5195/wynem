@@ -1,0 +1,155 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "issuetracker", "issue"],
+      ["server", "issuetracker", "showissuetracker"],
+      ["server", "issuetracker", "setissuetracker"],
+      ["server", "issuetracker", "toggleautoissues"]
+    ],
+    "slash": [
+      ["server", "issuetracker", "issue"],
+      ["server", "issuetracker", "repo"],
+      ["serverconfig", "setissuetracker"],
+      ["serverconfig", "toggle", "autoissues"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is the issue tracker?"
+    },
+    "The issue tracker is a way to quickly link directly to GitHub issues from a GitHub repository of your choice, as well as a fast way to direct people to the GitHub issue tracker.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "e!issue #123"
+        },
+        "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+        "fields": [
+          ["Issue #123", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">The issue tracker doesn't reply to issue numbers correctly</a>"],
+          ["Created", "<t:20 April 2023>"],
+          ["Closed", "<t:1 month ago>", true],
+          ["Status", "Closed", true]
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Automatic issues"
+    },
+    "When someone sends an issue number in chat, for example: <code>#123</code>, Wynem will automatically recognise it, and if it matches an issue from the configured GitHub repository, will reply with an embed detailing the mentioned issue.",
+    {
+      "type": "message",
+      "data": {
+        "name": "TheAnnoying",
+        "colour": "#E67E22",
+        "image": "/assets/images/avatars/theannoying.webp",
+        "message": "Hey does anyone know if #456 has been fixed yet?"
+      }
+    },
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "TheAnnoying",
+          "colour": "#E67E22",
+          "image": "/assets/images/avatars/theannoying.webp",
+          "message": "Hey does anyone know if #456 has been fixed yet?"
+        },
+        "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+        "fields": [
+          ["Issue #456", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">Wynem fails to get some emoji images in image commands</a>"],
+          ["Created", "<t:22 April 2023>"],
+          ["Status", "Open", true]
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use the issue tracker"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting a GitHub repo",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Setting a new GitHub repo"
+            },
+            "To configure a GitHub repo to use for issue tracking, run the <code class=\"command prefix\">e!setissuetracker [url]</code><code class=\"command slash\">/serverconfig setissuetracker url:[url]</code> command, for example: <code class=\"command prefix\">e!setissuetracker https://github.com/JannisX11/blockbench</code><code class=\"command slash\">/serverconfig setissuetracker url:https://github.com/JannisX11/blockbench</code>.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Issue tracker enabled",
+                "description": "The issue tracker has been enabled for the repository <a href=\"https://github.com/JannisX11/blockbench\" target=\"_blank\">https://github.com/JannisX11/blockbench</a>"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Removing a GitHub repo"
+            },
+            "To remove the configured GitHub repo, simply run the same command but without a URL: <code class=\"command prefix\">e!setissuetracker</code><code class=\"command slash\">/serverconfig setissuetracker</code>",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the issue tracker <a href=\"https://github.com/JannisX11/blockbench\" target=\"_blank\">https://github.com/JannisX11/blockbench/issues/</a> ?",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "You will be prompted to confirm you want to remove the issue tracker. Click remove to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Issue tracker removed",
+                "description": "The issue tracker has been removed from the server"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing issues",
+          "content": [
+            "To view an issue, you can either use the <code class=\"command prefix\">e!issue [issueNumber]</code><code class=\"command slash\">/server issuetracker issue issueNumber:[issueNumber]</code> command, or just send the issue number in chat, following the formatting of: <code>#123</code>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+                "fields": [
+                  ["Issue #123", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">The issue tracker doesn't reply to issue numbers correctly</a>"],
+                  ["Created", "<t:20 April 2023>"],
+                  ["Closed", "<t:1 month ago>", true],
+                  ["Status", "Closed", true]
+                ]
+              }
+            },
+            "If you want to disable issue numbers being automatically detected in chat, you can use the <code class=\"command prefix\">e!toggleautoissues</code><code class=\"command slash\">/serverconfig toggle autoissues</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Auto issues disabled",
+                "description": "I will no longer automatically reply to GitHub issue numbers in this server"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

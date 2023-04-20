@@ -362,7 +362,7 @@
                     "label": "Cancel",
                     "emoji": "cross"
                   }
-                ] 
+                ]
               }
             },
             "After confirming, the auto-response will have been removed."
@@ -370,7 +370,5 @@
         }
       ]
     }
-  ],
-  "guides": [
   ]
 }
