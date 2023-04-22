@@ -326,7 +326,8 @@
               "permissions": [
                 "Guild Only",
                 "Manage Guild"
-              ]
+              ],
+              "slashCommand": "serverconfig/embedcolour"
             },
             "ewan": {
               "aliases": [
@@ -372,7 +373,8 @@
                 "changelogs",
                 "announcements"
               ],
-              "description": "View the latest Wynem notices."
+              "description": "View the latest Wynem notices.",
+              "slashCommand": "bot/notices"
             },
             "ping": {
               "aliases": [
@@ -407,20 +409,14 @@
               ],
               "cooldown": 60,
               "description": [
-                "Reset the bot to its default state on this server as well as clearing any files related to this server.",
+                "Reset the bot to its default state on the server.",
                 "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data."
               ],
               "permissions": [
                 "Guild Only",
                 "Administrator"
-              ]
-            },
-            "servers": {
-              "aliases": [
-                "guilds"
               ],
-              "description": "Show the top 10 biggest servers that the bot is in.",
-              "slashCommand": "bot/servers"
+              "slashCommand": "reset"
             },
             "suggest": {
               "aliases": [
@@ -445,18 +441,6 @@
               ],
               "description": "View the terms of service for the bot.",
               "slashCommand": "bot/terms"
-            },
-            "togglequotes": {
-              "aliases": [
-                "enablequotes",
-                "disablequotes"
-              ],
-              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
-              "permissions": [
-                "Guild Only",
-                "Manage Guild"
-              ],
-              "slashCommand": "serverconfig/toggle/quotes"
             },
             "website": {
               "aliases": [
@@ -2193,7 +2177,8 @@
                     "customentitymodel"
                   ],
                   "arguments": "[entity]",
-                  "description": "Get a list of bone names for each entity supported by OptiFine CEM"
+                  "description": "Get a list of bone names for each entity supported by OptiFine CEM",
+                  "slashCommand": "minecraft/resourcepacks/cem"
                 },
                 "chestconverter": {
                   "aliases": [
@@ -2204,7 +2189,8 @@
                     "chests"
                   ],
                   "arguments": "{image} {image}",
-                  "description": "Convert chests between the 1.14 and 1.15 format."
+                  "description": "Convert chests between the 1.14 and 1.15 format.",
+                  "slashCommand": "minecraft/resourcepacks/chestconverter"
                 },
                 "ctmconverter": {
                   "aliases": [
@@ -2213,7 +2199,8 @@
                     "convertctm"
                   ],
                   "arguments": "{image}",
-                  "description": "Convert compact CTM to full CTM or overlay CTM."
+                  "description": "Convert compact CTM to full CTM or overlay CTM.",
+                  "slashCommand": "minecraft/resourcepacks/ctmconverter"
                 },
                 "ctmpreviewer": {
                   "aliases": [
@@ -2221,7 +2208,8 @@
                     "previewctm"
                   ],
                   "arguments": "{image}",
-                  "description": "Generate a preview image for full CTM."
+                  "description": "Generate a preview image for full CTM.",
+                  "slashCommand": "minecraft/resourcepacks/ctmpreviewer"
                 },
                 "ctmsplitter": {
                   "aliases": [
@@ -2229,14 +2217,16 @@
                     "splitctm"
                   ],
                   "arguments": "[tileResolution] {image}",
-                  "description": "Split a CTM template image up into its individual images for use with OptiFine CTM."
+                  "description": "Split a CTM template image up into its individual images for use with OptiFine CTM.",
+                  "slashCommand": "minecraft/resourcepacks/ctmsplitter"
                 },
                 "minecraftassets": {
                   "aliases": [
                     "mcassets"
                   ],
                   "arguments": "[version]",
-                  "description": "Get a link to download the Minecraft assets of a specific version."
+                  "description": "Get a link to download the Minecraft assets of a specific version.",
+                  "slashCommand": "minecraft/resourcepacks/minecraftassets"
                 },
                 "minecrafttexture": {
                   "aliases": [
@@ -2270,7 +2260,8 @@
                     "titleconverter"
                   ],
                   "arguments": "{image}",
-                  "description": "Convert an image into a Minecraft title texture for use in a resource pack."
+                  "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
+                  "slashCommand": "minecraft/resourcepacks/minecrafttitleconverter"
                 },
                 "mojangconverter": {
                   "aliases": [
@@ -2278,7 +2269,8 @@
                     "mojang"
                   ],
                   "arguments": "{image}",
-                  "description": "Convert between the 1.15 and 1.16 Mojang logo formats."
+                  "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
+                  "slashCommand": "minecraft/resourcepacks/mojangconverter"
                 },
                 "reloadpack": {
                   "arguments": "[version]",
@@ -2298,14 +2290,41 @@
                   ],
                   "arguments": "[model] {images}",
                   "cooldown": 5,
-                  "description": "Render an image/images onto a 3D model. Run without any arguments to see the list of supported models."
+                  "description": [
+                    "Render an image/images onto a 3D model.",
+                    "Run without any arguments to see the list of supported models."
+                  ],
+                  "extra": [
+                    {
+                      "title": "Supported models",
+                      "description": "\n\n**Entities**\n`allay` `armor_stand` `axolotl` `banner` `bat` `bed` `bee` `bell` `blaze` `boat` `cape` `cat` `cave_spider` `chest` `chest_boat` `chest_large` `chest_minecart` `chicken` `cod` `command_block_minecart` `conduit` `cow` `creeper` `creeper_head` `dolphin` `donkey` `dragon` `dragon_head` `drowned` `elder_guardian` `enchanting_book` `enderman` `endermite` `ender_chest` `ender_dragon` `end_crystal` `evoker` `evoker_fangs` `fox` `frog` `frog_tongue` `furnace_minecart` `ghast` `giant` `glow_squid` `goat` `guardian` `hoglin` `hopper_minecart` `horse` `husk` `illusioner` `iron_golem` `lead_knot` `lectern_book` `llama` `llama_spit` `magma_cube` `minecart` `mooshroom` `mule` `ocelot` `panda` `parrot` `phantom` `pig` `piglin` `piglin_brute` `salmon` `shulker` `shulker_box` `shulker_bullet` `skeleton` `skeleton_head` `skeleton_horse` `slime` `spawner_minecart` `spider` `squid` `stray` `tadpole` `tnt_minecart` `trader_llama` `trapped_chest` `trapped_chest_large` `turtle` `villager` `vindicator` `wandering_trader` `warden` `witch` `wither` `wither_skeleton` `wither_skeleton_head` `wither_skull` `wolf` `zoglin` `zombie` `zombie_head` `zombie_horse` `zombified_piglin`",
+                      "fields": [
+                        [
+                          "Blocks",
+                          "`crop` `cube` `cube_sides` `cube_tiled`"
+                        ],
+                        [
+                          "Fun",
+                          "`cube_spin` `donut` `kick` `kick_normal_slim` `kick_slim` `kick_slim_normal` `prism_spin` `sphere`"
+                        ],
+                        [
+                          "Player",
+                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_flop` `player_flop_slim` `player_head` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
+                        ]
+                      ]
+                    }
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/rendermodel"
                 },
                 "tile": {
                   "aliases": [
                     "repeat"
                   ],
                   "arguments": "[width] [height] [randomRotationEnabled] {image}",
-                  "description": "Tile an image over a 5x5 area. Provide a custom width and height to customise the size.",
+                  "description": [
+                    "Tile an image over a 5x5 area.",
+                    "Provide a custom width and height to customise the size."
+                  ],
                   "slashCommand": "minecraft/resourcepacks/tile"
                 },
                 "versiondifference": {
@@ -2323,7 +2342,11 @@
                     "mccomp"
                   ],
                   "arguments": "[version] [version]",
-                  "description": "Get a link to quickly compare the assets of 2 versions of Minecraft against eachother. Saying \"latest\" will automatically compare the newest 2 versions."
+                  "description": [
+                    "Compare the assets of two Minecraft versions against eachother.",
+                    "Saying \"latest\" will automatically compare the newest 2 versions."
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/versiondifference"
                 }
               }
             },
@@ -3530,6 +3553,18 @@
                 "Guild Only"
               ],
               "slashCommand": "server/info"
+            },
+            "togglequotes": {
+              "aliases": [
+                "enablequotes",
+                "disablequotes"
+              ],
+              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/toggle/quotes"
             }
           }
         },
@@ -3921,13 +3956,13 @@
               "description": "Get the bot's invite link.",
               "prefixCommand": "bot/invite"
             },
+            "notices": {
+              "description": "View the latest Wynem notices.",
+              "prefixCommand": "bot/notices"
+            },
             "privacy": {
               "description": "View the privacy policy for the bot.",
               "prefixCommand": "bot/privacy"
-            },
-            "servers": {
-              "description": "Show the top 10 biggest servers that the bot is in.",
-              "prefixCommand": "bot/servers"
             },
             "suggest": {
               "description": "Make a suggestion for the bot.",
@@ -5897,6 +5932,95 @@
           "categories": {
             "resourcepacks": {
               "commands": {
+                "cem": {
+                  "description": "Get a list of bone names for each entity supported by OptiFine CEM",
+                  "options": [
+                    {
+                      "name": "entity",
+                      "description": "The entity"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/cem"
+                },
+                "chestconverter": {
+                  "description": "Convert chests between the 1.14 and 1.15 format.",
+                  "options": [
+                    {
+                      "name": "normal-or-left-attachment",
+                      "description": "The normal, double, or left chest texture"
+                    },
+                    {
+                      "name": "normal-or-left-string",
+                      "description": "The normal, double, or left chest texture"
+                    },
+                    {
+                      "name": "right-attachment",
+                      "description": "The right chest texture"
+                    },
+                    {
+                      "name": "right-string",
+                      "description": "The right chest texture"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/chestconverter"
+                },
+                "ctmconverter": {
+                  "description": "Convert compact CTM to full CTM or overlay CTM.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/ctmconverter"
+                },
+                "ctmpreviewer": {
+                  "description": "Generate a preview image for full CTM.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/ctmpreviewer"
+                },
+                "ctmsplitter": {
+                  "description": "Split a CTM template image up into its individual images for use with OptiFine CTM.",
+                  "options": [
+                    {
+                      "name": "tile-resolution",
+                      "description": "The size of the individual textures",
+                      "required": true
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/ctmsplitter"
+                },
+                "minecraftassets": {
+                  "description": "Get a link to download the Minecraft assets of a specific version.",
+                  "options": [
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecraftassets"
+                },
                 "minecrafttexture": {
                   "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
                   "options": [
@@ -5912,6 +6036,34 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
                 },
+                "minecrafttitleconverter": {
+                  "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecrafttitleconverter"
+                },
+                "mojangconverter": {
+                  "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/mojangconverter"
+                },
                 "reloadpack": {
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "cooldown": 20,
@@ -5923,8 +6075,49 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/reloadpack"
                 },
+                "rendermodel": {
+                  "description": [
+                    "Render an image/images onto a 3D model.",
+                    "Run without any arguments to see the list of supported models."
+                  ],
+                  "cooldown": 5,
+                  "options": [
+                    {
+                      "name": "model",
+                      "description": "The model to render"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image2-attachment",
+                      "description": "Not used on all models"
+                    },
+                    {
+                      "name": "image2-string",
+                      "description": "Not used on all models"
+                    },
+                    {
+                      "name": "image3-attachment",
+                      "description": "Not used on all models"
+                    },
+                    {
+                      "name": "image3-string",
+                      "description": "Not used on all models"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/rendermodel"
+                },
                 "tile": {
-                  "description": "Tile an image over a 5x5 area.",
+                  "description": [
+                    "Tile an image over a 5x5 area.",
+                    "Provide a custom width and height to customise the size."
+                  ],
                   "options": [
                     {
                       "name": "width",
@@ -5948,6 +6141,23 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/tile"
+                },
+                "versiondifference": {
+                  "description": [
+                    "Compare the assets of two Minecraft versions against eachother.",
+                    "Saying \"latest\" will automatically compare the newest 2 versions."
+                  ],
+                  "options": [
+                    {
+                      "name": "old-version",
+                      "description": "The old Minecraft version"
+                    },
+                    {
+                      "name": "new-version",
+                      "description": "The new Minecraft version"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/versiondifference"
                 }
               }
             }
@@ -6258,12 +6468,26 @@
                 },
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
-                  "prefixCommand": "bot/togglequotes"
+                  "prefixCommand": "server/togglequotes"
                 }
               }
             }
           },
           "commands": {
+            "embedcolour": {
+              "description": [
+                "Change the bots embed colour on the current server.",
+                "The embed colour is the coloured bar down the side of each message.",
+                "Set the colour to \"default\" to return it to the default colour."
+              ],
+              "options": [
+                {
+                  "name": "colour",
+                  "description": "The new embed colour"
+                }
+              ],
+              "prefixCommand": "bot/embedcolour"
+            },
             "resendjoininfo": {
               "description": "Resend the message the bot sends when it joins the message in the current channel.",
               "prefixCommand": "bot/resendjoininfo"
@@ -6655,6 +6879,18 @@
             "Manage Messages"
           ],
           "prefixCommand": "moderation/purge"
+        },
+        "reset": {
+          "description": [
+            "Reset the bot to its default state on the server.",
+            "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data."
+          ],
+          "cooldown": 60,
+          "permissions": [
+            "Guild Only",
+            "Administrator"
+          ],
+          "prefixCommand": "bot/reset"
         },
         "timeout": {
           "description": "Give a member a time out so that they cannot type or speak.",
