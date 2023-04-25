@@ -2874,6 +2874,66 @@
               }
             },
             "channel": {
+              "categories": {
+                "forums": {
+                  "commands": {
+                    "followforum": {
+                      "aliases": [
+                        "followchannel"
+                      ],
+                      "arguments": "[forumChannelLink] <sendChannel>",
+                      "description": [
+                        "Follow a forum channel from another server.",
+                        "When a post in the forum is made, you will recieve a message in your chosen channel.",
+                        "This is basically announcement channels, but with a forum."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "botPermissions": [
+                        "Manage Webhooks"
+                      ],
+                      "slashCommand": "serverconfig/channel/followforum"
+                    },
+                    "togglefollowableforum": {
+                      "aliases": [
+                        "setfollowableforum",
+                        "togglefollowable",
+                        "setfollowable"
+                      ],
+                      "arguments": "<channel>",
+                      "description": [
+                        "Set a forum channel to be followable.",
+                        "Run again on a followable forum channel to make it unfollowable."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "botPermissions": [
+                        "Manage Channels"
+                      ],
+                      "slashCommand": "serverconfig/toggle/followableforum"
+                    },
+                    "unfollowforum": {
+                      "aliases": [
+                        "unfollowchannel"
+                      ],
+                      "arguments": "<channel>",
+                      "description": [
+                        "Unfollow a forum channel that is being followed.",
+                        "Provide no arguments to view a list of all followed channels"
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "serverconfig/channel/unfollowforum"
+                    }
+                  }
+                }
+              },
               "commands": {
                 "close": {
                   "aliases": [
@@ -6347,6 +6407,43 @@
                 }
               }
             },
+            "channel": {
+              "commands": {
+                "followforum": {
+                  "description": [
+                    "Follow a forum channel from another server.",
+                    "When a post in the forum is made, you will recieve a message in your chosen channel.",
+                    "This is basically announcement channels, but with a forum."
+                  ],
+                  "options": [
+                    {
+                      "name": "forum-channel-link",
+                      "description": "The link to the forum channel",
+                      "required": true
+                    },
+                    {
+                      "name": "send-channel",
+                      "description": "The channel to send forum posts to",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "server/channel/forums/followforum"
+                },
+                "unfollowforum": {
+                  "description": [
+                    "Unfollow a forum channel that is being followed.",
+                    "Provide no arguments to view a list of all followed channels"
+                  ],
+                  "options": [
+                    {
+                      "name": "channel",
+                      "description": "The forum channel"
+                    }
+                  ],
+                  "prefixCommand": "server/channel/forums/unfollowforum"
+                }
+              }
+            },
             "customcommands": {
               "commands": {
                 "add": {
@@ -6465,6 +6562,20 @@
                 "autoissues": {
                   "description": "Toggles whether the bot will automatically reply to GitHub issue numbers.",
                   "prefixCommand": "server/issuetracker/toggleautoissues"
+                },
+                "followableforum": {
+                  "description": [
+                    "Set a forum channel to be followable.",
+                    "Run again on a followable forum channel to make it unfollowable."
+                  ],
+                  "options": [
+                    {
+                      "name": "channel",
+                      "description": "The forum channel",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "server/channel/forums/togglefollowableforum"
                 },
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
