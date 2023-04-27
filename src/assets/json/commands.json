@@ -410,7 +410,8 @@
               "cooldown": 60,
               "description": [
                 "Reset the bot to its default state on the server.",
-                "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data."
+                "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data.",
+                "If the server is linked to another server, this will remove that link."
               ],
               "permissions": [
                 "Guild Only",
@@ -2923,13 +2924,46 @@
                       "arguments": "<channel>",
                       "description": [
                         "Unfollow a forum channel that is being followed.",
-                        "Provide no arguments to view a list of all followed channels"
+                        "Provide no arguments to view a list of all followed channels."
                       ],
                       "permissions": [
                         "Guild Only",
                         "Manage Guild"
                       ],
                       "slashCommand": "serverconfig/channel/unfollowforum"
+                    }
+                  }
+                },
+                "tunnel": {
+                  "commands": {
+                    "createtunnel": {
+                      "aliases": [
+                        "linkchannel"
+                      ],
+                      "description": [
+                        "Create a tunnel to a channel from another server.",
+                        "Any message sent in either channel will be automatically sent to the other one."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "botPermissions": [
+                        "Manage Webhooks"
+                      ]
+                    },
+                    "removetunnel": {
+                      "aliases": [
+                        "unlinkchannel"
+                      ],
+                      "description": [
+                        "Remove an existing channel tunnel.",
+                        "Provide no arguments to view a list of all channel tunnels."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ]
                     }
                   }
                 }
@@ -6432,7 +6466,7 @@
                 "unfollowforum": {
                   "description": [
                     "Unfollow a forum channel that is being followed.",
-                    "Provide no arguments to view a list of all followed channels"
+                    "Provide no arguments to view a list of all followed channels."
                   ],
                   "options": [
                     {
@@ -6994,7 +7028,8 @@
         "reset": {
           "description": [
             "Reset the bot to its default state on the server.",
-            "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data."
+            "WARNING:\nThis will remove any saved data, including moderation log. There is no way to recover this data.",
+            "If the server is linked to another server, this will remove that link."
           ],
           "cooldown": 60,
           "permissions": [
