@@ -2876,6 +2876,46 @@
             },
             "channel": {
               "categories": {
+                "bridges": {
+                  "commands": {
+                    "createbridge": {
+                      "aliases": [
+                        "linkchannel",
+                        "createtunnel"
+                      ],
+                      "arguments": "[channelLink] <channel>",
+                      "description": [
+                        "Create a bridge to a channel from another server.",
+                        "Any message sent in either channel will be automatically sent to the other one.",
+                        "The first argument is the link to a channel from another server, the second argument is the channel from the current server."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "botPermissions": [
+                        "Manage Webhooks"
+                      ],
+                      "slashCommand": "serverconfig/channel/createbridge"
+                    },
+                    "removebridge": {
+                      "aliases": [
+                        "unlinkchannel",
+                        "removetunnel"
+                      ],
+                      "arguments": "<channel>",
+                      "description": [
+                        "Remove an existing channel bridge.",
+                        "Provide no arguments to view a list of all channel bridges."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "serverconfig/channel/removebridge"
+                    }
+                  }
+                },
                 "forums": {
                   "commands": {
                     "followforum": {
@@ -2931,39 +2971,6 @@
                         "Manage Guild"
                       ],
                       "slashCommand": "serverconfig/channel/unfollowforum"
-                    }
-                  }
-                },
-                "tunnel": {
-                  "commands": {
-                    "createtunnel": {
-                      "aliases": [
-                        "linkchannel"
-                      ],
-                      "description": [
-                        "Create a tunnel to a channel from another server.",
-                        "Any message sent in either channel will be automatically sent to the other one."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "botPermissions": [
-                        "Manage Webhooks"
-                      ]
-                    },
-                    "removetunnel": {
-                      "aliases": [
-                        "unlinkchannel"
-                      ],
-                      "description": [
-                        "Remove an existing channel tunnel.",
-                        "Provide no arguments to view a list of all channel tunnels."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ]
                     }
                   }
                 }
@@ -3612,6 +3619,54 @@
             }
           },
           "commands": {
+            "addautomod": {
+              "aliases": [
+                "createautomod",
+                "automod"
+              ],
+              "arguments": "[type]",
+              "cooldown": 20,
+              "description": "Add one of Wynem's automod templates to the server's automod.",
+              "extra": [
+                {
+                  "title": "Automod types",
+                  "fields": [
+                    [
+                      "all",
+                      "Add all available rule types"
+                    ],
+                    [
+                      "discordlinks",
+                      "Block users hiding Discord links inside a markdown disguised link:\n`[message](https://discord.gg/pkRxtGw)`"
+                    ],
+                    [
+                      "markdownlinks",
+                      "Block users from using any markdown disguised links:\n`[message](https://wynem.com/)`"
+                    ],
+                    [
+                      "invites",
+                      "Block users sending Discord invite links:\n`https://discord.gg/pkRxtGw`"
+                    ],
+                    [
+                      "markdowntitles",
+                      "Block users sending large text using markdown:\n`# THIS TEXT IS LARGE`\nThis will only work if the title is in the first line of the message"
+                    ],
+                    [
+                      "letterspam",
+                      "Block messages containing a continuous line of 35 or more characters:\n`fhewruofhweouhfguipewgfufewhuopfbon`"
+                    ]
+                  ]
+                }
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "botPermissions": [
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/addautomod"
+            },
             "namesearch": {
               "aliases": [
                 "names"
@@ -6443,6 +6498,25 @@
             },
             "channel": {
               "commands": {
+                "createbridge": {
+                  "description": [
+                    "Create a bridge to a channel from another server.",
+                    "Any message sent in either channel will be automatically sent to the other one.",
+                    "The first argument is the link to a channel from another server, the second argument is the channel from the current server."
+                  ],
+                  "options": [
+                    {
+                      "name": "channel-link",
+                      "description": "The link to the channel from the other server",
+                      "required": true
+                    },
+                    {
+                      "name": "channel",
+                      "description": "The channel from the current server"
+                    }
+                  ],
+                  "prefixCommand": "server/channel/bridges/createbridge"
+                },
                 "followforum": {
                   "description": [
                     "Follow a forum channel from another server.",
@@ -6457,11 +6531,23 @@
                     },
                     {
                       "name": "send-channel",
-                      "description": "The channel to send forum posts to",
-                      "required": true
+                      "description": "The channel to send forum posts to"
                     }
                   ],
                   "prefixCommand": "server/channel/forums/followforum"
+                },
+                "removebridge": {
+                  "description": [
+                    "Remove an existing channel bridge.",
+                    "Provide no arguments to view a list of all channel bridges."
+                  ],
+                  "options": [
+                    {
+                      "name": "channel",
+                      "description": "The channel"
+                    }
+                  ],
+                  "prefixCommand": "server/channel/bridges/removebridge"
                 },
                 "unfollowforum": {
                   "description": [
@@ -6619,6 +6705,17 @@
             }
           },
           "commands": {
+            "addautomod": {
+              "description": "Add one of Wynem's automod templates to the server's automod.",
+              "cooldown": 20,
+              "options": [
+                {
+                  "name": "type",
+                  "description": "The automod type"
+                }
+              ],
+              "prefixCommand": "server/addautomod"
+            },
             "embedcolour": {
               "description": [
                 "Change the bots embed colour on the current server.",
