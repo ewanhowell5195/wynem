@@ -1,6 +1,8 @@
 import { makeEmbed } from "/js/embeds.js"
 
 export default class extends Page {
+  #resizePage
+
   constructor() {
     super("commands")
     $('[href="/commands"]').addClass("selected")
@@ -309,10 +311,23 @@ export default class extends Page {
       main.removeClass("opened")
       categoryContainer.removeClass("closed")
     })
+
+    this.#resizePage = () => {
+      this.shadowBody[0].querySelectorAll(".extra").forEach(e => {
+        if (e.style.maxHeight && e.style.maxHeight !== "0px") {
+          e.style.maxHeight = `${e.scrollHeight}px`
+        }
+      })
+    }
+    window.addEventListener("resize", this.#resizePage)
   }
 
   onOpened() {
     history.replaceState({}, null, this.newState)
+  }
+
+  onClosed() {
+    window.removeEventListener("resize", this.#resizePage)
   }
 }
 

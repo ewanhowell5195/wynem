@@ -1,0 +1,67 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "addautomod"]
+    ],
+    "slash": [
+      ["serverconfig", "addautomod"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is automod?"
+    },
+    "Automod is a built in system within Discord that helps you moderate your server. Wynem includes some automod templates to help you quickly block things you may not want in the sever.",
+    {
+      "type": "heading",
+      "text": "Automod types"
+    },
+    "These are the automod types that you can add to the server using Wynem.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["all", "This type will add all the types to the server in one go\n\n"],
+        ["discordlinks", "Block users hiding Discord links inside a markdown disguised link:\n\n<code>[message](https://discord.gg/pkRxtGw)</code>\n\n"],
+        ["markdownlinks", "Block users from using any markdown disguised links:\n\n<code>[message](https://wynem.com/)</code>\n\n"],
+        ["invites", "Block users sending Discord invite links:\n\n<code>https://discord.gg/pkRxtGw</code>\n\n"],
+        ["markdowntitles", "Block users sending large text using markdown:\n\n<code># THIS TEXT IS LARGE</code>\n\nThis will only work if the title is in the first line of the message\n\n"],
+        ["letterspam", "Block messages containing a continuous line of 35 or more characters:\n\n<code>fhewruofhweouhfguipewgfufewhuopfbon</code>"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use automod"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding automod types",
+          "content": [
+            "To add an automod type, run the <code class=\"command prefix\">e!addautomod [type]</code><code class=\"command slash\">/serverconfig addautomod type:[type]</code> command, for example: <code class=\"command prefix\">e!addautomod invites</code><code class=\"command slash\">/serverconfig addautomod type:invites</code>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!addautomod invites</span><span class=\"command slash\">used <span class=\"link\">/serverconfig addautomod</span></span>"
+                },
+                "title": "Automod rule added",
+                "description": "The automod rule `invites` has been added to the server\n\nYou can customise it further from the server's automod settings page"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Customising and removing automod rules",
+          "content": [
+            "To customise or remove the automod rules, go to the automod settings in your server!"
+          ]
+        }
+      ]
+    }
+  ]
+}

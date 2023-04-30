@@ -23,5 +23,9 @@
   {
     "id": "issue-tracker",
     "description": "Easily view the issues from a GitHub repository in your server"
+  },
+  {
+    "id": "automod",
+    "description": "Add Wynem's automod templates to the server"
   }
 ]
