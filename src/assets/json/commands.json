@@ -461,10 +461,10 @@
                   "aliases": [
                     "c4"
                   ],
-                  "arguments": "<member> [boardWidth] [boardHeight]",
+                  "arguments": "<member> <member2> <member3> [boardWidth] [boardHeight]",
                   "description": [
-                    "Play Connect 4 against another member.",
-                    "The maximum board size is 21x15"
+                    "Play Connect 4.",
+                    "The maximum board size is `21x15`."
                   ],
                   "permissions": [
                     "Guild Only"
@@ -484,10 +484,81 @@
                     "sal"
                   ],
                   "arguments": "<member> <member2> <member3> [boardSize]",
-                  "description": "Play Snakes and Ladders.",
+                  "description": [
+                    "Play Snakes and Ladders.",
+                    "The maximum board size is `16x16`"
+                  ],
+                  "extra": [
+                    {
+                      "title": "Snakes and Ladders available items",
+                      "fields": [
+                        [
+                          "switch",
+                          "Turn snakes into ladders, and ladders into snakes"
+                        ],
+                        [
+                          "transpose",
+                          "Swap places with the leading player. If you are leading it will be the second player"
+                        ],
+                        [
+                          "forwardOne",
+                          "Move forwards one position on the board"
+                        ],
+                        [
+                          "backOne",
+                          "Move backwards one position on the board"
+                        ],
+                        [
+                          "upOne",
+                          "Move up one row on the board"
+                        ],
+                        [
+                          "downOne",
+                          "Move down one row on the board"
+                        ],
+                        [
+                          "d12",
+                          "Roll a 12-sided dice and move forward that amount"
+                        ],
+                        [
+                          "mystery",
+                          "???"
+                        ],
+                        [
+                          "diagonalFlip",
+                          "Diagonally flip the board"
+                        ],
+                        [
+                          "steal",
+                          "Steal an item from a random player"
+                        ],
+                        [
+                          "checkpoint",
+                          "Place a checkpoint that you will return to if you go behind it"
+                        ],
+                        [
+                          "teleport",
+                          "Teleport to a random position on the board"
+                        ],
+                        [
+                          "setback",
+                          "Roll a dice. All other players will move backwards that amount"
+                        ],
+                        [
+                          "silence",
+                          "Disable all item usage for a round"
+                        ],
+                        [
+                          "banana",
+                          "Drop a banana peel that causes someone to slip to the row below"
+                        ]
+                      ]
+                    }
+                  ],
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "fun/games/snakesandladders"
                 },
                 "tictactoe": {
                   "aliases": [
@@ -1311,6 +1382,17 @@
                       ],
                       "arguments": "{image}",
                       "description": "Place emojis on someones face!"
+                    },
+                    "enlargeeyes": {
+                      "aliases": [
+                        "eyeenlarge",
+                        "bigeyes",
+                        "bigeye",
+                        "largeeyes",
+                        "largeeye"
+                      ],
+                      "arguments": "[strength] {image}",
+                      "description": "Make someones eyes larger."
                     },
                     "makeup": {
                       "arguments": "[lipsCol] [outerEyeCol] [innerEyeCol] {image}",
@@ -4189,14 +4271,22 @@
               "commands": {
                 "connect4": {
                   "description": [
-                    "Play Connect 4 against another member.",
-                    "The maximum board size is 21x15"
+                    "Play Connect 4.",
+                    "The maximum board size is `21x15`."
                   ],
                   "options": [
                     {
                       "name": "member",
                       "description": "The member to play against",
                       "required": true
+                    },
+                    {
+                      "name": "member2",
+                      "description": "3rd player"
+                    },
+                    {
+                      "name": "member3",
+                      "description": "4th player"
                     },
                     {
                       "name": "board-width",
@@ -4218,6 +4308,32 @@
                     }
                   ],
                   "prefixCommand": "fun/games/rockpaperscissors"
+                },
+                "snakesandladders": {
+                  "description": [
+                    "Play Snakes and Ladders.",
+                    "The maximum board size is `16x16`"
+                  ],
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against",
+                      "required": true
+                    },
+                    {
+                      "name": "member2",
+                      "description": "3rd player"
+                    },
+                    {
+                      "name": "member3",
+                      "description": "4th player"
+                    },
+                    {
+                      "name": "board-size",
+                      "description": "The size of the board"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/snakesandladders"
                 },
                 "tictactoe": {
                   "description": [
