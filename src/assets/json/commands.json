@@ -3513,7 +3513,7 @@
                   "botPermissions": [
                     "Manage Roles"
                   ],
-                  "slashCommand": "serverconfig/roles/buttonroles"
+                  "slashCommand": "role/buttonroles"
                 },
                 "joinrole": {
                   "aliases": [
@@ -3533,12 +3533,12 @@
                   ],
                   "permissions": [
                     "Guild Only",
-                    "Manage Guild"
+                    "Manage Roles"
                   ],
                   "botPermissions": [
                     "Manage Roles"
                   ],
-                  "slashCommand": "serverconfig/roles/joinrole"
+                  "slashCommand": "role/joinrole"
                 },
                 "removerole": {
                   "aliases": [
@@ -4230,6 +4230,9 @@
           "commands": {
             "lock": {
               "description": "Toggle everyone's ability to send messages in the current channel.",
+              "permissions": [
+                "Manage Messages"
+              ],
               "botPermissions": [
                 "Manage Permissions"
               ],
@@ -4244,6 +4247,9 @@
                   "required": true
                 }
               ],
+              "permissions": [
+                "Manage Messages"
+              ],
               "botPermissions": [
                 "Manage Messages"
               ],
@@ -4257,6 +4263,9 @@
                   "description": "The length of the cooldown",
                   "required": true
                 }
+              ],
+              "permissions": [
+                "Manage Messages"
               ],
               "botPermissions": [
                 "Manage Permissions"
@@ -6456,6 +6465,9 @@
                   "required": true
                 }
               ],
+              "permissions": [
+                "Moderate Members"
+              ],
               "prefixCommand": "moderation/addnote"
             },
             "endtimeout": {
@@ -6471,6 +6483,12 @@
                   "description": "The reason for ending the timeout"
                 }
               ],
+              "permissions": [
+                "Moderate Members"
+              ],
+              "botPermissions": [
+                "Moderate Members"
+              ],
               "prefixCommand": "moderation/endtimeout"
             },
             "records": {
@@ -6481,6 +6499,9 @@
                   "description": "The member to view the records of",
                   "required": true
                 }
+              ],
+              "permissions": [
+                "Moderate Members"
               ],
               "prefixCommand": "moderation/records"
             }
@@ -6502,7 +6523,46 @@
                   "required": true
                 }
               ],
+              "permissions": [
+                "Manage Roles"
+              ],
+              "botPermissions": [
+                "Manage Roles"
+              ],
               "prefixCommand": "server/roles/addrole"
+            },
+            "buttonroles": {
+              "description": [
+                "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                "For the role text, provide \"none\" to leave it blank.",
+                "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+              ],
+              "permissions": [
+                "Manage Roles"
+              ],
+              "botPermissions": [
+                "Manage Roles"
+              ],
+              "prefixCommand": "server/roles/buttonroles"
+            },
+            "joinrole": {
+              "description": [
+                "Add or remove a role that users will gain when joining the server.",
+                "Provide no arguments to view the current join roles."
+              ],
+              "options": [
+                {
+                  "name": "role",
+                  "description": "The role to add to the member"
+                }
+              ],
+              "permissions": [
+                "Manage Roles"
+              ],
+              "botPermissions": [
+                "Manage Roles"
+              ],
+              "prefixCommand": "server/roles/joinrole"
             },
             "removerole": {
               "description": "Remove a role from a member.",
@@ -6517,6 +6577,12 @@
                   "description": "The role to remove from the member",
                   "required": true
                 }
+              ],
+              "permissions": [
+                "Manage Roles"
+              ],
+              "botPermissions": [
+                "Manage Roles"
               ],
               "prefixCommand": "server/roles/removerole"
             }
@@ -6580,6 +6646,9 @@
               "commands": {
                 "add": {
                   "description": "Run a builder that adds a new auto-response for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/autoresponses/addautoresponse"
                 },
                 "remove": {
@@ -6594,6 +6663,9 @@
                       "required": true
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/autoresponses/removeautoresponse"
                 },
                 "view": {
@@ -6607,6 +6679,9 @@
                       "description": "The auto-response to view",
                       "required": true
                     }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/autoresponses/viewautoresponse"
                 }
@@ -6631,6 +6706,12 @@
                       "description": "The channel from the current server"
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Webhooks"
+                  ],
                   "prefixCommand": "server/channel/bridges/createbridge"
                 },
                 "followforum": {
@@ -6650,6 +6731,12 @@
                       "description": "The channel to send forum posts to"
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Webhooks"
+                  ],
                   "prefixCommand": "server/channel/forums/followforum"
                 },
                 "removebridge": {
@@ -6662,6 +6749,9 @@
                       "name": "channel",
                       "description": "The channel"
                     }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/channel/bridges/removebridge"
                 },
@@ -6676,6 +6766,9 @@
                       "description": "The forum channel"
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/channel/forums/unfollowforum"
                 }
               }
@@ -6684,6 +6777,9 @@
               "commands": {
                 "add": {
                   "description": "Run a builder that adds a new custom command for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "bot/commands/customcommands/addcustomcommand"
                 },
                 "remove": {
@@ -6695,6 +6791,9 @@
                       "required": true
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "bot/commands/customcommands/removecustomcommand"
                 }
               }
@@ -6703,6 +6802,9 @@
               "commands": {
                 "addfaq": {
                   "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/faqs/addfaq"
                 },
                 "editfaq": {
@@ -6713,6 +6815,9 @@
                       "description": "The question to remove",
                       "required": true
                     }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/editfaq"
                 },
@@ -6725,6 +6830,9 @@
                       "required": true
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/faqs/removefaq"
                 }
               }
@@ -6733,6 +6841,9 @@
               "commands": {
                 "manage": {
                   "description": "Manage the bot logs for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "botPermissions": [
                     "Manage Webhooks"
                   ],
@@ -6740,6 +6851,9 @@
                 },
                 "view": {
                   "description": "View the bot log channels for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/logs/viewlogs"
                 }
               }
@@ -6754,6 +6868,9 @@
                       "description": "The new prefix to use"
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "bot/prefixes/prefix"
                 },
                 "prefixalias": {
@@ -6764,32 +6881,10 @@
                       "description": "The custom prefix alias to add or remove"
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "bot/prefixes/prefixalias"
-                }
-              }
-            },
-            "roles": {
-              "commands": {
-                "buttonroles": {
-                  "description": [
-                    "Run a builder that sets up a message that members can use to to add roles to themselves.",
-                    "For the role text, provide \"none\" to leave it blank.",
-                    "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
-                  ],
-                  "prefixCommand": "server/roles/buttonroles"
-                },
-                "joinrole": {
-                  "description": [
-                    "Add or remove a role that users will gain when joining the server.",
-                    "Provide no arguments to view the current join roles."
-                  ],
-                  "options": [
-                    {
-                      "name": "role",
-                      "description": "The role to add to the member"
-                    }
-                  ],
-                  "prefixCommand": "server/roles/joinrole"
                 }
               }
             },
@@ -6797,6 +6892,9 @@
               "commands": {
                 "autoissues": {
                   "description": "Toggles whether the bot will automatically reply to GitHub issue numbers.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/issuetracker/toggleautoissues"
                 },
                 "followableforum": {
@@ -6811,10 +6909,19 @@
                       "required": true
                     }
                   ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Channels"
+                  ],
                   "prefixCommand": "server/channel/forums/togglefollowableforum"
                 },
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
                   "prefixCommand": "server/togglequotes"
                 }
               }
@@ -6830,6 +6937,12 @@
                   "description": "The automod type"
                 }
               ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "botPermissions": [
+                "Manage Guild"
+              ],
               "prefixCommand": "server/addautomod"
             },
             "embedcolour": {
@@ -6844,10 +6957,16 @@
                   "description": "The new embed colour"
                 }
               ],
+              "permissions": [
+                "Manage Guild"
+              ],
               "prefixCommand": "bot/embedcolour"
             },
             "resendjoininfo": {
               "description": "Resend the message the bot sends when it joins the message in the current channel.",
+              "permissions": [
+                "Manage Guild"
+              ],
               "prefixCommand": "bot/resendjoininfo"
             },
             "setissuetracker": {
@@ -7132,6 +7251,9 @@
         },
         "close": {
           "description": "Close the current thread channel or forum post.",
+          "botPermissions": [
+            "Manage Threads"
+          ],
           "prefixCommand": "server/channel/close"
         },
         "customcommand": {
