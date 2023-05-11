@@ -1627,10 +1627,14 @@
               },
               "commands": {
                 "blockify": {
+                  "aliases": [
+                    "blockifystats"
+                  ],
                   "arguments": "[mode] {image}",
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
+                    "Use the \"blockifystats\" alias to get stats on the textures used.",
                     "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
                   ]
                 },
