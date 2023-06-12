@@ -743,7 +743,7 @@
         },
         {
           "type": "code",
-          "text": "{\n  \"head2.rx\": \"head.rx\",\n  \"head2.ry\": \"head.ry\",\n  \"head2.rz\": \"head.rz\",\n  \"left_arm2.rx\": \"left_arm.rx\",\n  \"right_arm2.rx\": \"right_arm.rx\",\n  \"left_leg2.rx\": \"left_leg.rx\",\n  \"right_leg2.rx\": \"right_leg.rx\",\n}"
+          "text": "{\n  \"head2.rx\": \"head.rx\",\n  \"head2.ry\": \"head.ry\",\n  \"head2.rz\": \"head.rz\",\n  \"left_arm2.rx\": \"left_arm.rx\",\n  \"right_arm2.rx\": \"right_arm.rx\",\n  \"left_leg2.rx\": \"left_leg.rx\",\n  \"right_leg2.rx\": \"right_leg.rx\"\n}"
         },
         {
           "type": "text",
