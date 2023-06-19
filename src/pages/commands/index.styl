@@ -225,7 +225,6 @@ page-body
   z-index: -1
 
 .search-result
-  color: var(--color-text-white)
   text-decoration: none
   padding: 10px
   transition: background-color .15s
@@ -234,9 +233,13 @@ page-body
   &:hover
     background-color: var(--color-blue)
 
+  *
+    color: var(--color-text-white) !important
+
   > .name
     font-size: 1.5rem
     font-weight: 700
+    text-decoration: none !important
     
     > span
       opacity: 0.5
@@ -251,8 +254,8 @@ page-body
       text-transform: capitalize
 
     > svg
-      width: 14px!important
-      height: 14px!important
+      width: 14px !important
+      height: 14px !important
       filter: drop-shadow(-2px 2px 1px black)
       transform: translateY(2px)
 
@@ -503,14 +506,14 @@ page-body
   display: none
 
 .mobile-only
-  display: none!important
+  display: none !important
 
 @media only screen and (max-width: 768px)
   .desktop-only
-    display: none!important
+    display: none !important
 
   .mobile-only
-    display: inherit!important
+    display: inherit !important
 
   #mobile-switch-left
     left: 0

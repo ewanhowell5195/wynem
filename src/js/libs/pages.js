@@ -73,8 +73,8 @@ class Page extends HTMLElement {
             min-height: calc(100vh - var(--header-height) * 2);
           }
           page-body.preload * {
-            animation-duration: 0s!important;
-            transition: all 0s!important;
+            animation-duration: 0s !important;
+            transition: all 0s !important;
           }
           img.popupable {
             cursor: pointer;

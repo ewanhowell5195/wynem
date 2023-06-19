@@ -971,7 +971,7 @@
                   ],
                   "arguments": "[colourCount] {image}",
                   "description": [
-                    "Limit an images colour palette to a provided amount.",
+                    "Limit an image's colour palette to a provided amount.",
                     "Defaults to 10 colours."
                   ],
                   "slashCommand": "imagefilter/index"
@@ -983,7 +983,7 @@
                     "flipcolor"
                   ],
                   "arguments": "{image}",
-                  "description": "Invert an images colour.",
+                  "description": "Invert an image's colours.",
                   "slashCommand": "imagefilter/invert"
                 },
                 "mask": {
@@ -2313,7 +2313,7 @@
                   ],
                   "arguments": "[version]",
                   "description": "Get a link to download the Minecraft assets of a specific version.",
-                  "slashCommand": "minecraft/resourcepacks/minecraftassets"
+                  "slashCommand": "minecraft/resourcepacks/assets"
                 },
                 "minecrafttexture": {
                   "aliases": [
@@ -2337,18 +2337,16 @@
                       ]
                     }
                   ],
-                  "slashCommand": "minecraft/resourcepacks/minecrafttexture"
+                  "slashCommand": "minecraft/resourcepacks/texture"
                 },
                 "minecrafttitleconverter": {
                   "aliases": [
-                    "minecrafttitle",
                     "mctitleconverter",
-                    "mctitle",
                     "titleconverter"
                   ],
                   "arguments": "{image}",
                   "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
-                  "slashCommand": "minecraft/resourcepacks/minecrafttitleconverter"
+                  "slashCommand": "minecraft/resourcepacks/titleconverter"
                 },
                 "mojangconverter": {
                   "aliases": [
@@ -2545,6 +2543,23 @@
               ],
               "arguments": "<member>",
               "description": "View the minecraft account tied to someones discord."
+            },
+            "minecrafttitlegenerator": {
+              "aliases": [
+                "minecrafttitle",
+                "mctitlegenerator",
+                "mctitle",
+                "mctc",
+                "mct"
+              ],
+              "arguments": "[toptext] [toptexture] [bottomtext] [bottomtexture] [smalltext] [smalltexture]",
+              "description": [
+                "Generate a Minecraft-styled title logo.",
+                "Use \"default\" to use the default texture.",
+                "Provide no arguments to view a list of all textures.",
+                "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
+              ],
+              "slashCommand": "minecraft/titlegenerator"
             },
             "minecraftwiki": {
               "aliases": [
@@ -5004,7 +5019,7 @@
             },
             "index": {
               "description": [
-                "Limit an images colour palette to a provided amount.",
+                "Limit an image's colour palette to a provided amount.",
                 "Defaults to 10 colours."
               ],
               "options": [
@@ -5024,7 +5039,7 @@
               "prefixCommand": "images/filters/index"
             },
             "invert": {
-              "description": "Invert an images colour.",
+              "description": "Invert an image's colours.",
               "options": [
                 {
                   "name": "image-attachment",
@@ -6210,6 +6225,16 @@
           "categories": {
             "resourcepacks": {
               "commands": {
+                "assets": {
+                  "description": "Get a link to download the Minecraft assets of a specific version.",
+                  "options": [
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecraftassets"
+                },
                 "cem": {
                   "description": "Get a list of bone names for each entity supported by OptiFine CEM",
                   "options": [
@@ -6289,45 +6314,6 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/ctmsplitter"
                 },
-                "minecraftassets": {
-                  "description": "Get a link to download the Minecraft assets of a specific version.",
-                  "options": [
-                    {
-                      "name": "version",
-                      "description": "The Minecraft version"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/minecraftassets"
-                },
-                "minecrafttexture": {
-                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
-                  "options": [
-                    {
-                      "name": "texture",
-                      "description": "The name of the texture",
-                      "required": true
-                    },
-                    {
-                      "name": "version",
-                      "description": "The Minecraft version to check"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
-                },
-                "minecrafttitleconverter": {
-                  "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/minecrafttitleconverter"
-                },
                 "mojangconverter": {
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
                   "options": [
@@ -6391,6 +6377,21 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/rendermodel"
                 },
+                "texture": {
+                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
+                  "options": [
+                    {
+                      "name": "texture",
+                      "description": "The name of the texture",
+                      "required": true
+                    },
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version to check"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
+                },
                 "tile": {
                   "description": [
                     "Tile an image over a 5x5 area.",
@@ -6419,6 +6420,20 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/tile"
+                },
+                "titleconverter": {
+                  "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecrafttitleconverter"
                 },
                 "versiondifference": {
                   "description": [
@@ -6450,6 +6465,41 @@
                 }
               ],
               "prefixCommand": "minecraft/skins/skin"
+            },
+            "titlegenerator": {
+              "description": [
+                "Generate a Minecraft-styled title logo.",
+                "Use \"default\" to use the default texture.",
+                "Provide no arguments to view a list of all textures.",
+                "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
+              ],
+              "options": [
+                {
+                  "name": "top-text",
+                  "description": "The top text"
+                },
+                {
+                  "name": "top-texture",
+                  "description": "The top texture"
+                },
+                {
+                  "name": "bottom-text",
+                  "description": "The bottom text"
+                },
+                {
+                  "name": "bottom-texture",
+                  "description": "The bottom texture"
+                },
+                {
+                  "name": "small-text",
+                  "description": "The small text"
+                },
+                {
+                  "name": "small-texture",
+                  "description": "The small texture"
+                }
+              ],
+              "prefixCommand": "minecraft/minecrafttitlegenerator"
             }
           }
         },
