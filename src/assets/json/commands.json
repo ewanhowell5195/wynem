@@ -2553,6 +2553,7 @@
                 "mct"
               ],
               "arguments": "[toptext] [toptexture] [bottomtext] [bottomtexture] [smalltext] [smalltexture]",
+              "cooldown": 5,
               "description": [
                 "Generate a Minecraft-styled title logo.",
                 "Use \"default\" to use the default texture.",
@@ -6473,6 +6474,7 @@
                 "Provide no arguments to view a list of all textures.",
                 "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
               ],
+              "cooldown": 5,
               "options": [
                 {
                   "name": "top-text",
