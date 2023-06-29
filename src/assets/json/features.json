@@ -27,5 +27,9 @@
   {
     "id": "automod",
     "description": "Add Wynem's automod templates to the server"
+  },
+  {
+    "id": "starboard",
+    "description": "Add a channel where messages are sent after they reach a certain number of a reaction, usually a star."
   }
 ]

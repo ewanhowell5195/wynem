@@ -1,0 +1,161 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "channel", "starboards", "starboard"],
+      ["server", "channel", "starboards", "starboardinfo"],
+      ["server", "channel", "starboards", "starboardblacklist"]
+    ],
+    "slash": [
+      ["serverconfig", "channel", "starboard"],
+      ["server", "starboardinfo"],
+      ["serverconfig", "channel", "starboardblacklist"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is this feature?"
+    },
+    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.\n\nAfter a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change.",
+    {
+      "type": "embed",
+      "data": {
+        "content": "<:star:> 5",
+        "author": ["Ewan", "/assets/images/logo/ewan.webp"],
+        "description": "My GLaDOS model!",
+        "fields": [
+          ["Original message", "<a href=\"/\">Jump to message!</a>"]
+        ],
+        "image": "/assets/images/features/glados.webp",
+        "footer": ["Starboard • Today at 12:34"]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use the Starboard"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Creating a starboard",
+          "content": [
+            "A single server can have up to 3 starboards active at a time.",
+            "To create a starboard, you can use the <code class=\"command prefix\">e!starboard [channel] [count] [emoji]</code><code class=\"command slash\">/serverconfig channel starboard channel:[channel] count:[count] emoji:[emoji]</code> command. The count and emoji are optional, and default to a count of 5 and the star ⭐ emoji.",
+            "For example: <code class=\"command prefix\">e!starboard #starboard 8 ⭐</code><code class=\"command slash\">/serverconfig channel starboard channel:#starboard count:8 emoji:⭐</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Starboard channel set",
+                "description": "A starboard has been created in <#starboard> with a requirement of `8` <:star:>"
+              }
+            },
+            "Your starboard has been created and is ready to be used!",
+            "Please note: Any messages sent in a starboard channel are automatically ignored and will not be sent to another starboard. Messages from NSFW channels will not be sent into a non NSFW starboard channel."
+          ]
+        },
+        {
+          "name": "Viewing the starboards",
+          "content": [
+            "To view the current enabled starboards, use the <code class=\"command prefix\">e!starboardinfo</code><code class=\"command slash\">/server starboardinfo</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Starboard info", "/assets/images/icons/star.webp"],
+                "fields": [
+                  ["Channel", "<#starboard>"],
+                  ["Emoji", "<:star:>", true],
+                  ["Reaction count", "8", true]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Editing a starboard",
+          "content": [
+            "To edit an existing starboard, use the same command as the one used to create the starboard.",
+            "For example: <code class=\"command prefix\">e!starboard #starboard 16 ⭐</code><code class=\"command slash\">/serverconfig channel starboard channel:#starboard count:16 emoji:⭐</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Starboard updated",
+                "description": "The starboard in <#starboard> has been updated to have a requirement of `16` <:star:>"
+              }
+            },
+            "Your starboard has now been updated to use the new settings!"
+          ]
+        },
+        {
+          "name": "Removing a starboard",
+          "content": [
+            "To remove a starboard, use the <code class=\"command prefix\">e!starboard [channel]</code><code class=\"command slash\">/serverconfig channel starboard channel:[channel]</code> command, providing only the channel argument.",
+            "For example: <code class=\"command prefix\">e!starboard #starboard</code><code class=\"command slash\">/serverconfig channel starboard channel:#starboard</code>",
+            "You will prompted to confirm you want to remove the starboard",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the starboard in <#starboard>",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the starboard will have been removed."
+          ]
+        }
+      ]
+    },
+    "",
+    {
+      "type": "heading",
+      "text": "Starboard blacklists"
+    },
+    "Channels can be blacklisted from the starboards so that they do not have their messages sent to it. If a category is blacklisted, all channels within it will be blacklisted.",
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Blacklisting a channel",
+          "content": [
+            "To blacklist a channel, use the <code class=\"command prefix\">e!starboardblacklist [starboardChannel] [blacklistChannel]</code><code class=\"command slash\">/serverconfig channel starboardblacklist starboard-channel:[starboardChannel] blacklist-channel:[blacklistChannel]</code> command.",
+            "For example: <code class=\"command prefix\">e!starboardblacklist #starboard #general</code><code class=\"command slash\">/serverconfig channel starboardblacklist starboard-channel:#starboard blacklist-channel:#general</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Channel blacklisted",
+                "description": "The channel <#general> has been blacklisted from the <#starboard> starboard"
+              }
+            },
+            "The channel is now blacklisted from the starboard and will no longer have its messages sent to the starboard.",
+            "To view the starboard, you can use the <code class=\"command prefix\">e!starboardinfo</code><code class=\"command slash\">/server starboardinfo</code> command."
+          ]
+        },
+        {
+          "name": "Unblacklisting a channel",
+          "content": [
+            "To remove a channel from the starboard blacklist, run the same blacklist command again.",
+            "For example: <code class=\"command prefix\">e!starboardblacklist #starboard #general</code><code class=\"command slash\">/serverconfig channel starboardblacklist starboard-channel:#starboard blacklist-channel:#general</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Channel removed from the blacklist",
+                "description": "The channel <#general> has been removed from the <#starboard> starboard blacklist"
+              }
+            },
+            "The channel will be removed from the blacklist and its messages allowed to be sent to the blacklist."
+          ]
+        }
+      ]
+    }
+  ]
+}

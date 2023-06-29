@@ -4,7 +4,7 @@
       ["server", "roles", "buttonroles"]
     ],
     "slash": [
-      ["serverconfig", "roles", "buttonroles"]
+      ["role", "buttonroles"]
     ]
   },
   "description": [

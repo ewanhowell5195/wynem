@@ -122,7 +122,7 @@ function addBlocks($, element, blocks, feature, args) {
       tabs.children().on("click", e => {
         sections.children().removeClass("selected")
         tabs.children().removeClass("active")
-        sections.find(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
+        sections.children(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
       }).first().addClass("active")
     }
   }

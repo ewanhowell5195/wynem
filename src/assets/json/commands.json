@@ -3075,6 +3075,58 @@
                       "slashCommand": "serverconfig/channel/unfollowforum"
                     }
                   }
+                },
+                "starboards": {
+                  "description": [
+                    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.",
+                    "After a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change."
+                  ],
+                  "commands": {
+                    "starboard": {
+                      "aliases": [
+                        "sb"
+                      ],
+                      "arguments": "<channel> [count] [emoji]",
+                      "description": [
+                        "Manage the starboards for the server.",
+                        "Provide a channel to create a new starboard. Provide the same channel again to remove it."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "serverconfig/channel/starboard"
+                    },
+                    "starboardblacklist": {
+                      "aliases": [
+                        "sbblacklist",
+                        "starboardbl",
+                        "sbbl"
+                      ],
+                      "arguments": "<starboardChannel> <blacklistChannel>",
+                      "description": [
+                        "Blacklist a category or channel from having its messages sent to a starboard.",
+                        "Provide a channel to blacklist it. Provide the same channel again to unblacklist it."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "serverconfig/channel/starboardblacklist"
+                    },
+                    "starboardinfo": {
+                      "aliases": [
+                        "starboards",
+                        "viewstarboard",
+                        "showstarboard",
+                        "viewsb",
+                        "showsb",
+                        "sbinfo"
+                      ],
+                      "description": "Get the information about the servers starboards.",
+                      "slashCommand": "server/starboardinfo"
+                    }
+                  }
                 }
               },
               "commands": {
@@ -3613,108 +3665,6 @@
                   "description": "View the current server links of the current server.",
                   "permissions": [
                     "Guild Only"
-                  ]
-                }
-              }
-            },
-            "starboards": {
-              "commands": {
-                "addstarboardblacklist": {
-                  "aliases": [
-                    "addsbblacklist",
-                    "addstarboardbl",
-                    "addsbbl",
-                    "starboardblacklistadd",
-                    "sbblacklistadd",
-                    "starboardbladd",
-                    "sbbladd",
-                    "starboardblacklist",
-                    "sbblacklist",
-                    "starboardbl",
-                    "sbbl"
-                  ],
-                  "arguments": "<channel>",
-                  "description": "Blacklist a category or channel from having its messages sent to the starboard.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "removestarboard": {
-                  "aliases": [
-                    "starboardremove",
-                    "deletestarboard",
-                    "starboarddelete",
-                    "removesb",
-                    "sbremove",
-                    "deletesb",
-                    "sbdelete"
-                  ],
-                  "description": "Remove the servers starboard channel.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "removestarboardblacklist": {
-                  "aliases": [
-                    "removesbblacklist",
-                    "removestarboardbl",
-                    "removesbbl",
-                    "starboardblacklistremove",
-                    "sbblacklistremove",
-                    "starboardblremove",
-                    "sbblremove",
-                    "deletesbblacklist",
-                    "deletestarboardbl",
-                    "deletesbbl",
-                    "starboardblacklistdelete",
-                    "sbblacklistdelete",
-                    "starboardbldelete",
-                    "sbbldelete"
-                  ],
-                  "arguments": "<channel>",
-                  "description": "Remove a category or channel from being blacklisted from the starboard.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "setstarboard": {
-                  "aliases": [
-                    "starboardset",
-                    "starboard",
-                    "setsb",
-                    "sbset",
-                    "sb"
-                  ],
-                  "arguments": "<channel> [count] [emoji]",
-                  "description": [
-                    "Set a channel to use as a starboard for the server.",
-                    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
-                },
-                "starboardinfo": {
-                  "aliases": [
-                    "viewstarboard",
-                    "showstarboard",
-                    "infostarboard",
-                    "starboardview",
-                    "starboardshow",
-                    "viewsb",
-                    "showsb",
-                    "infosb",
-                    "sbview",
-                    "sbshow",
-                    "sbinfo"
-                  ],
-                  "description": [
-                    "Set a channel to use as a starboard for the server.",
-                    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star."
                   ]
                 }
               }
@@ -6693,6 +6643,10 @@
               ],
               "prefixCommand": "server/quotemessage",
               "contextCommand": "message/quote-message"
+            },
+            "starboardinfo": {
+              "description": "Get the information about the servers starboards.",
+              "prefixCommand": "server/channel/starboards/starboardinfo"
             }
           }
         },
@@ -6810,6 +6764,53 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/channel/bridges/removebridge"
+                },
+                "starboard": {
+                  "description": [
+                    "Manage the starboards for the server.",
+                    "Provide a channel to create a new starboard. Provide the same channel again to remove it."
+                  ],
+                  "options": [
+                    {
+                      "name": "channel",
+                      "description": "The starboard channel",
+                      "required": true
+                    },
+                    {
+                      "name": "count",
+                      "description": "The reaction count"
+                    },
+                    {
+                      "name": "emoji",
+                      "description": "The reaction emoji"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/channel/starboards/starboard"
+                },
+                "starboardblacklist": {
+                  "description": [
+                    "Blacklist a category or channel from having its messages sent to a starboard.",
+                    "Provide a channel to blacklist it. Provide the same channel again to unblacklist it."
+                  ],
+                  "options": [
+                    {
+                      "name": "starboard-channel",
+                      "description": "The starboard channel",
+                      "required": true
+                    },
+                    {
+                      "name": "blacklist-channel",
+                      "description": "The blacklist channel",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/channel/starboards/starboardblacklist"
                 },
                 "unfollowforum": {
                   "description": [

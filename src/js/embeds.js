@@ -31,6 +31,9 @@ export function makeEmbed($, parent, data, args = {}) {
       E("div").html(parseString(data.reply.message))
     )
   }
+  if (data.content) {
+    E("div").addClass("text-content").html(parseString(data.content)).insertBefore(embed)
+  }
   if (data.author) {
     E("div").addClass("embed-author").append(
       data.author[1] ? E("img").attr("src", data.author[1]) : undefined,
@@ -137,7 +140,7 @@ export function makeModal($, parent, data) {
 function parseString(str) {
   return str.replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
             .replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")
-            .replace(/<(@.+?)>/g, '<span class="ping">$1</span>')
+            .replace(/<([@#].+?)>/g, '<span class="ping">$1</span>')
             .replace(/<:(\/.+?)>/g, (s, m) => `<a is="f-a" class="ping" href="/commands/slash${m.replace(/\s/g, "/")}">${m}</a>`)
             .replace(/<:(.+?):>/g, '<img class="emoji" src="/assets/images/emojis/$1.webp" />')
             .replace(/<t:(.+?)>/g, '<span class="timestamp">$1</span>')
