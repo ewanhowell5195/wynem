@@ -16,7 +16,7 @@
       "type": "heading",
       "text": "What is this feature?"
     },
-    "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.\n\nAfter a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change.",
+    "A starboard is a channel where messages are sent after they reach a certain number of a reactions, usually a star.\n\nAfter a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change.",
     {
       "type": "embed",
       "data": {
