@@ -940,6 +940,14 @@
                   ],
                   "slashCommand": "imagefilter/copypalette"
                 },
+                "dropshadow": {
+                  "aliases": [
+                    "shadow"
+                  ],
+                  "arguments": "[xOffset] [yOffset] [blur] [colour] {image}",
+                  "description": "Add a drop shadow to a transparent image.",
+                  "slashCommand": "imagefilter/dropshadow"
+                },
                 "greyscale": {
                   "aliases": [
                     "grayscale",
@@ -4935,6 +4943,36 @@
                 }
               ],
               "prefixCommand": "images/filters/copypalette"
+            },
+            "dropshadow": {
+              "description": "Add a drop shadow to a transparent image.",
+              "options": [
+                {
+                  "name": "x-offset",
+                  "description": "The X offset"
+                },
+                {
+                  "name": "y-offset",
+                  "description": "The Y offset"
+                },
+                {
+                  "name": "blur",
+                  "description": "The blur amount"
+                },
+                {
+                  "name": "colour",
+                  "description": "The colour"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/filters/dropshadow"
             },
             "greyscale": {
               "description": "Turn an image greyscale.",
