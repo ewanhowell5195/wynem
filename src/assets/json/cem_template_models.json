@@ -1,5 +1,5 @@
 {
-  "version": "7.5.1",
+  "version": "7.6.0",
   "categories": [
     {
       "name": "Supported",
@@ -649,6 +649,12 @@
           "model": "piglin"
         },
         {
+          "name": "head_piglin_unedited",
+          "file_name": "head_piglin",
+          "display_name": "Piglin Head",
+          "texture_name": "head_piglin"
+        },
+        {
           "name": "polar_bear_unedited",
           "file_name": "polar_bear",
           "display_name": "Polar Bear",
@@ -1000,6 +1006,12 @@
           "display_name": "Ocelot",
           "texture_name": "ocelot",
           "model": "cat_single_bone"
+        },
+        {
+          "name": "head_piglin_single_bone",
+          "file_name": "head_piglin",
+          "display_name": "Piglin Head",
+          "texture_name": "head_piglin"
         },
         {
           "name": "raft_single_bone",
@@ -1571,7 +1583,13 @@
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,8,8],\"textureOffset\":[0,0]}]}]}"
     },
     "head_piglin": {
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-5,0,-4,10,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,0,-5,4,4,1],\"textureOffset\":[31,1]},{\"coordinates\":[-3,0,-5,1,2,1],\"textureOffset\":[2,4]},{\"coordinates\":[2,0,-5,1,2,1],\"textureOffset\":[2,0]}],\"submodels\":[{\"id\":\"left_ear\",\"invertAxis\":\"xy\",\"translate\":[-4.5,6,0],\"rotate\":[0,0,-35],\"boxes\":[{\"coordinates\":[-1,-5,-2,1,5,4],\"textureOffset\":[51,6]}]},{\"id\":\"right_ear\",\"invertAxis\":\"xy\",\"translate\":[4.5,6,0],\"rotate\":[0,0,35],\"boxes\":[{\"coordinates\":[0,-5,-2,1,5,4],\"textureOffset\":[39,6]}]}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-5,0,-4,10,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,0,-5,4,4,1],\"textureOffset\":[31,1]},{\"coordinates\":[-3,0,-5,1,2,1],\"textureOffset\":[2,4]},{\"coordinates\":[2,0,-5,1,2,1],\"textureOffset\":[2,0]}]},{\"part\":\"left_ear\",\"id\":\"left_ear\",\"invertAxis\":\"xy\",\"translate\":[4.5,-6,0],\"rotate\":[0,0,-35],\"boxes\":[{\"coordinates\":[-5.5,1,-2,1,5,4],\"textureOffset\":[51,6]}],\"animations\":[{\"this.rz\":0}]},{\"part\":\"right_ear\",\"id\":\"right_ear\",\"invertAxis\":\"xy\",\"translate\":[-4.5,-6,0],\"rotate\":[0,0,35],\"boxes\":[{\"coordinates\":[4.5,1,-2,1,5,4],\"textureOffset\":[39,6]}],\"animations\":[{\"this.rz\":0}]}]}"
+    },
+    "head_piglin_single_bone": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-5,0,-4,10,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,0,-5,4,4,1],\"textureOffset\":[31,1]},{\"coordinates\":[-3,0,-5,1,2,1],\"textureOffset\":[2,4]},{\"coordinates\":[2,0,-5,1,2,1],\"textureOffset\":[2,0]}],\"submodels\":[{\"id\":\"ear_left\",\"invertAxis\":\"xy\",\"translate\":[-4.5,6,0],\"rotate\":[0,0,-35],\"boxes\":[{\"coordinates\":[-1,-5,-2,1,5,4],\"textureOffset\":[51,6]}]},{\"id\":\"ear_right\",\"invertAxis\":\"xy\",\"translate\":[4.5,6,0],\"rotate\":[0,0,35],\"boxes\":[{\"coordinates\":[0,-5,-2,1,5,4],\"textureOffset\":[39,6]}]}],\"animations\":[{\"ear_left.rz\":\"left_ear.rz\",\"ear_right.rz\":\"right_ear.rz\"}]},{\"part\":\"left_ear\"},{\"part\":\"right_ear\"}]}"
+    },
+    "head_piglin_unedited": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-5,0,-4,10,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,0,-5,4,4,1],\"textureOffset\":[31,1]},{\"coordinates\":[-3,0,-5,1,2,1],\"textureOffset\":[2,4]},{\"coordinates\":[2,0,-5,1,2,1],\"textureOffset\":[2,0]}]},{\"part\":\"left_ear\",\"id\":\"left_ear\",\"invertAxis\":\"xy\",\"translate\":[4.5,-6,0],\"boxes\":[{\"coordinates\":[-5.5,1,-2,1,5,4],\"textureOffset\":[51,6]}]},{\"part\":\"right_ear\",\"id\":\"right_ear\",\"invertAxis\":\"xy\",\"translate\":[-4.5,-6,0],\"boxes\":[{\"coordinates\":[4.5,1,-2,1,5,4],\"textureOffset\":[39,6]}]}]}"
     },
     "head_player": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-4,0,-4,8,8,8],\"textureOffset\":[32,0],\"sizeAdd\":0.5}]}]}"
