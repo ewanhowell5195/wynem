@@ -1993,7 +1993,7 @@
                     "upscale"
                   ],
                   "arguments": "{image}",
-                  "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
+                  "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
                   "slashCommand": "imagemanipulation/scale",
                   "contextCommand": "message/scale-image"
                 },
@@ -2340,7 +2340,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`\n`umbrella_villagers`"
                         ]
                       ]
                     }
@@ -6078,7 +6078,7 @@
               "prefixCommand": "images/manipulation/rotate"
             },
             "scale": {
-              "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
               "options": [
                 {
                   "name": "image-attachment",
@@ -7629,7 +7629,7 @@
               "slashCommand": "imagemanipulation/resize"
             },
             "scale-image": {
-              "description": "Scale an image up to the max size discord displays images, making it easier to view small images.",
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
               "type": "message",
               "prefixCommand": "images/manipulation/scale",
               "slashCommand": "imagemanipulation/scale"
