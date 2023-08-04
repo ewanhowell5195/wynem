@@ -35,8 +35,11 @@ window.toURLParams = o => {
   return arr.join("")
 }
 
-if (!String.prototype.toTitleCase) String.prototype.toTitleCase = function() {
-  return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase()})
+String.prototype.toTitleCase = function(c, n) {
+  let t
+  if (c) t = this.replace(/\s/g, "").replace(n ? /([A-Z])/g : /([A-Z0-9])/g, " $1").replace(/[_-]/g, " ")
+  else t = this
+  return t.replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()).trim()
 }
 
 // analytics
@@ -44,9 +47,20 @@ if (!String.prototype.toTitleCase) String.prototype.toTitleCase = function() {
 window.lastAnalytics = ""
 window.analytics = () => {
   if (location.href === lastAnalytics) return
-  console.log(document.title)
+  const title = document.title.split(" - ").filter(e => e !== "Wynem")
+  if (!title.length) title.push("Home")
+  const params = new URL(location).searchParams
+  if (location.pathname.startsWith("/commands")) {
+    const path = location.pathname.split("/").filter(e => e).slice(1)
+    if (path.length) {
+      title.push(path[0].toTitleCase())
+      if (path.length > 1) title.push(path[path.length - 1].toTitleCase())
+    }
+  } else if (location.pathname === "/cem") {
+    if (params.get("entity")) title.push(params.get("entity").toTitleCase(true))
+  }
   gtag("event", "page_view", {
-    page_title: document.title,
+    page_title: title.join(" - "),
     page_path: location.pathname,
     page_location: location.href
   })

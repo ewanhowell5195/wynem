@@ -91,12 +91,14 @@ export default class extends Page {
                 popup.remove()
               }
             }).appendTo(this.shadowRoot)
+            analytics()
           })
         )
       }
     }
-
+    let searchTimeout
     $("#search > input").on("input", e => {
+      clearTimeout(searchTimeout)
       const val = e.currentTarget.value.toLowerCase().replace(/_/g, " ")
       
       const params = getURLParams() ?? {}
@@ -115,6 +117,9 @@ export default class extends Page {
       if (!$(".category-heading").toArray().some(e => e.style.display === "")) entityContainer.append(
         E("h2").addClass("no-results").text("No results")
       )
+      searchTimeout = setTimeout(() => {
+        gtag("event", "search", { "search_term": `CEM: ${val}` })
+      }, 1000)
     })
 
     if (params.entity) {

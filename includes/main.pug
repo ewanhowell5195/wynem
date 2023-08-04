@@ -44,7 +44,8 @@ html(lang = "en")
       function gtag(){dataLayer.push(arguments)}
       gtag("js", new Date())
       gtag("config", "G-DH61BQEMV2", {
-        "send_page_view": false
+        send_page_view: false,
+        cookie_flags: "max-age=7200;SameSite=Strict"
       })
   body
     #header-container

@@ -254,7 +254,9 @@ export default class extends Page {
         searchInput.trigger("input")
       }
     })
+    let searchTimeout
     searchInput.on("input", e => {
+      clearTimeout(searchTimeout)
       searchResults.empty()
       const val = e.currentTarget.value.toLowerCase()
       if (!val) return
@@ -300,6 +302,9 @@ export default class extends Page {
           ).on("click", e => searchResults.empty())
         )
       }
+      searchTimeout = setTimeout(() => {
+        gtag("event", "search", { "search_term": `Command: ${val}` })
+      }, 1000)
     })
     const switchLeft = $("#mobile-switch-left")
     const switchRight = $("#mobile-switch-right")
