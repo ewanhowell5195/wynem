@@ -876,6 +876,8 @@
               "commands": {
                 "blur": {
                   "aliases": [
+                    "blurry",
+                    "blurrify",
                     "unsharpen",
                     "unfocus",
                     "lostmyglasses"
@@ -1666,6 +1668,14 @@
                     "Turn two images into one image, where it shows a different one depending on if you are using dark mode or light mode",
                     "The first image will be visible while in dark mode, the second while in light mode."
                   ]
+                },
+                "deepfry": {
+                  "aliases": [
+                    "nuke"
+                  ],
+                  "arguments": "{image}",
+                  "description": "Deepfry an image.",
+                  "slashCommand": "imagefilter/deepfry"
                 },
                 "dumpy": {
                   "aliases": [
@@ -4359,7 +4369,8 @@
               "options": [
                 {
                   "name": "member",
-                  "description": "The member to bean"
+                  "description": "The member to bean",
+                  "required": true
                 },
                 {
                   "name": "reason",
@@ -4943,6 +4954,20 @@
                 }
               ],
               "prefixCommand": "images/filters/copypalette"
+            },
+            "deepfry": {
+              "description": "Deepfry an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/deepfry"
             },
             "dropshadow": {
               "description": "Add a drop shadow to a transparent image.",
