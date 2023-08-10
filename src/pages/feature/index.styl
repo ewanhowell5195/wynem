@@ -98,8 +98,6 @@ code
     flex: 1
 
 .tab
-  flex: 1
-  background-color: var(--color-grey-dark)
   transition: .15s filter
   min-height: 18px
   padding: 10px 20px
@@ -178,6 +176,9 @@ code
   font-size: 2rem
   font-weight: 700
   text-shadow: -3px 3px 1px var(--color-text-shadow)
+
+  &:not(:first-child)
+    margin-top: 20px
 
 .text
   white-space: pre-wrap
