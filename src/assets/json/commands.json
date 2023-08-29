@@ -618,6 +618,10 @@
               "slashCommand": "fun/cowsay"
             },
             "dice": {
+              "aliases": [
+                "roll",
+                "d6"
+              ],
               "arguments": "[count]",
               "description": "Roll some dice! You can roll a total of 1 to 6 dice in one go.",
               "slashCommand": "fun/dice"
@@ -2680,6 +2684,54 @@
             }
           },
           "commands": {
+            "addautomod": {
+              "aliases": [
+                "createautomod",
+                "automod"
+              ],
+              "arguments": "[type]",
+              "cooldown": 20,
+              "description": "Add one of Wynem's automod templates to the server's automod.",
+              "extra": [
+                {
+                  "title": "Automod types",
+                  "fields": [
+                    [
+                      "all",
+                      "Add all available rule types"
+                    ],
+                    [
+                      "discordlinks",
+                      "Block users hiding Discord links inside a markdown disguised link:\n`[message](https://discord.gg/pkRxtGw)`"
+                    ],
+                    [
+                      "markdownlinks",
+                      "Block users from using any markdown disguised links:\n`[message](https://wynem.com/)`"
+                    ],
+                    [
+                      "invites",
+                      "Block users sending Discord invite links:\n`https://discord.gg/pkRxtGw`"
+                    ],
+                    [
+                      "markdowntitles",
+                      "Block users sending large text using markdown:\n`# THIS TEXT IS LARGE`\nThis will only work if the title is in the first line of the message"
+                    ],
+                    [
+                      "letterspam",
+                      "Block messages containing a continuous line of 35 or more characters:\n`fhewruofhweouhfguipewgfufewhuopfbon`"
+                    ]
+                  ]
+                }
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "botPermissions": [
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/addautomod"
+            },
             "addnote": {
               "aliases": [
                 "note"
@@ -3689,54 +3741,6 @@
             }
           },
           "commands": {
-            "addautomod": {
-              "aliases": [
-                "createautomod",
-                "automod"
-              ],
-              "arguments": "[type]",
-              "cooldown": 20,
-              "description": "Add one of Wynem's automod templates to the server's automod.",
-              "extra": [
-                {
-                  "title": "Automod types",
-                  "fields": [
-                    [
-                      "all",
-                      "Add all available rule types"
-                    ],
-                    [
-                      "discordlinks",
-                      "Block users hiding Discord links inside a markdown disguised link:\n`[message](https://discord.gg/pkRxtGw)`"
-                    ],
-                    [
-                      "markdownlinks",
-                      "Block users from using any markdown disguised links:\n`[message](https://wynem.com/)`"
-                    ],
-                    [
-                      "invites",
-                      "Block users sending Discord invite links:\n`https://discord.gg/pkRxtGw`"
-                    ],
-                    [
-                      "markdowntitles",
-                      "Block users sending large text using markdown:\n`# THIS TEXT IS LARGE`\nThis will only work if the title is in the first line of the message"
-                    ],
-                    [
-                      "letterspam",
-                      "Block messages containing a continuous line of 35 or more characters:\n`fhewruofhweouhfguipewgfufewhuopfbon`"
-                    ]
-                  ]
-                }
-              ],
-              "permissions": [
-                "Guild Only",
-                "Manage Guild"
-              ],
-              "botPermissions": [
-                "Manage Guild"
-              ],
-              "slashCommand": "serverconfig/addautomod"
-            },
             "namesearch": {
               "aliases": [
                 "names"
@@ -6348,7 +6352,8 @@
                   "options": [
                     {
                       "name": "pack",
-                      "description": "The resource pack to reload"
+                      "description": "The resource pack to reload",
+                      "required": true
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/reloadpack"
@@ -7063,7 +7068,7 @@
               "botPermissions": [
                 "Manage Guild"
               ],
-              "prefixCommand": "server/addautomod"
+              "prefixCommand": "moderation/addautomod"
             },
             "embedcolour": {
               "description": [
