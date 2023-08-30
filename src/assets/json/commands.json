@@ -471,6 +471,28 @@
                   ],
                   "slashCommand": "fun/games/connect4"
                 },
+                "dice": {
+                  "aliases": [
+                    "roll",
+                    "d6"
+                  ],
+                  "arguments": "[count] [sides]",
+                  "description": [
+                    "Roll some dice!",
+                    "You can roll up to 9 dice with 16 sides each in one go."
+                  ],
+                  "slashCommand": "fun/dice"
+                },
+                "knucklebones": {
+                  "aliases": [
+                    "kb"
+                  ],
+                  "arguments": "<member> <member2> [diceSides]",
+                  "description": "Play Knucklebones against someone.",
+                  "permissions": [
+                    "Guild Only"
+                  ]
+                },
                 "rockpaperscissors": {
                   "aliases": [
                     "rps"
@@ -616,15 +638,6 @@
               "arguments": "[character] [message]",
               "description": "Make a cow say something!",
               "slashCommand": "fun/cowsay"
-            },
-            "dice": {
-              "aliases": [
-                "roll",
-                "d6"
-              ],
-              "arguments": "[count]",
-              "description": "Roll some dice! You can roll a total of 1 to 6 dice in one go.",
-              "slashCommand": "fun/dice"
             },
             "flow": {
               "aliases": [
@@ -3346,7 +3359,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/faq/addfaq"
+                  "slashCommand": "serverconfig/faq/add"
                 },
                 "editfaq": {
                   "aliases": [
@@ -3359,7 +3372,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/faq/editfaq"
+                  "slashCommand": "serverconfig/faq/edit"
                 },
                 "faq": {
                   "arguments": "[question]",
@@ -3394,7 +3407,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/faq/removefaq"
+                  "slashCommand": "serverconfig/faq/remove"
                 }
               }
             },
@@ -3696,6 +3709,55 @@
                     "Manage Roles"
                   ],
                   "slashCommand": "role/removerole"
+                }
+              }
+            },
+            "rules": {
+              "commands": {
+                "addrule": {
+                  "aliases": [
+                    "ruleadd"
+                  ],
+                  "description": "Add a new rule to the server rules.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/rule/add"
+                },
+                "editrule": {
+                  "aliases": [
+                    "ruleedit"
+                  ],
+                  "arguments": "[rule]",
+                  "description": "Edit one of the server rules.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/rule/edit"
+                },
+                "removerule": {
+                  "aliases": [
+                    "ruleremove"
+                  ],
+                  "arguments": "[rule]",
+                  "description": "Remove a rule from the server rules.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "slashCommand": "serverconfig/rule/remove"
+                },
+                "rule": {
+                  "aliases": [
+                    "rules"
+                  ],
+                  "arguments": "[rule]",
+                  "description": "View the server rules.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "slashCommand": "server/rules"
                 }
               }
             },
@@ -4413,14 +4475,17 @@
               "prefixCommand": "fun/cowsay"
             },
             "dice": {
-              "description": "Roll some dice! You can roll a total of 1 to 6 dice in one go.",
+              "description": [
+                "Roll some dice!",
+                "You can roll up to 9 dice with 16 sides each in one go."
+              ],
               "options": [
                 {
                   "name": "count",
                   "description": "The amount of dice"
                 }
               ],
-              "prefixCommand": "fun/dice"
+              "prefixCommand": "fun/games/dice"
             },
             "flow": {
               "description": "Generate an \"inspirational\" flow of images and quotes.",
@@ -6712,6 +6777,16 @@
               "prefixCommand": "server/quotemessage",
               "contextCommand": "message/quote-message"
             },
+            "rules": {
+              "description": "View the server rules.",
+              "options": [
+                {
+                  "name": "rule",
+                  "description": "The rule number"
+                }
+              ],
+              "prefixCommand": "server/rules/rule"
+            },
             "starboardinfo": {
               "description": "Get the information about the servers starboards.",
               "prefixCommand": "server/channel/starboards/starboardinfo"
@@ -6925,14 +7000,14 @@
             },
             "faq": {
               "commands": {
-                "addfaq": {
+                "add": {
                   "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
                   "permissions": [
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/addfaq"
                 },
-                "editfaq": {
+                "edit": {
                   "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
                   "options": [
                     {
@@ -6946,7 +7021,7 @@
                   ],
                   "prefixCommand": "server/faqs/editfaq"
                 },
-                "removefaq": {
+                "remove": {
                   "description": "Remove an FAQ from the server.",
                   "options": [
                     {
@@ -7010,6 +7085,40 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/prefixes/prefixalias"
+                }
+              }
+            },
+            "rule": {
+              "commands": {
+                "add": {
+                  "description": "Add a new rule to the server rules.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/rules/addrule"
+                },
+                "edit": {
+                  "description": "Edit one of the server rules.",
+                  "options": [
+                    {
+                      "name": "rule",
+                      "description": "The rule number"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/rules/editrule"
+                },
+                "remove": {
+                  "description": "Remove a rule from the server rules.",
+                  "options": [
+                    {
+                      "name": "rule",
+                      "description": "The rule number"
+                    }
+                  ],
+                  "prefixCommand": "server/rules/removerule"
                 }
               }
             },
