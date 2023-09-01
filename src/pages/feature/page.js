@@ -145,12 +145,10 @@ function addBlocks($, element, blocks, feature, args) {
           if (tabPath.length === args.view.length) scrollTo = tab
         }
       }
-      sections.children().first().addClass("selected")
-      tabs.children().on("click", e => {
-        sections.children().removeClass("selected")
-        tabs.children().removeClass("active")
-        sections.children(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
-      }).first().addClass("active")
+      if (!tabs.find(".active").length) {
+        tabs.children().first().addClass("active")
+        sections.children().first().addClass("selected")
+      }
     }
     if (!scrollTo) if (blockPath.length === args.view.length && blockPath.every((val, index) => val == args.view[index])) scrollTo = section.children().last()
   }
