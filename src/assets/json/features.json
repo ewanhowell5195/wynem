@@ -31,5 +31,9 @@
   {
     "id": "starboard",
     "description": "Add a channel where messages are sent after they reach a certain number of a reaction, usually a star."
+  },
+  {
+    "id": "rules",
+    "description": "Add your servers rules into Wynem so that you can easily list them all, indivually quote rules, and create a stylised rules message for your rules channel."
   }
 ]

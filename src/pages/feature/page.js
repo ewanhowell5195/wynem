@@ -1,4 +1,4 @@
-import { makeEmbed, makeMessage, makeModal } from "/js/embeds.js"
+import { makeEmbed, makeMessage, makeModal, parseString } from "/js/embeds.js"
 
 export default class extends Page {
   constructor() {
@@ -87,7 +87,7 @@ function addBlocks($, element, blocks, feature, args) {
   const section = E("div").addClass("section")
   for (const block of blocks) {
     if (typeof block === "string") {
-      E("div").addClass("text").html(block).appendTo(section)
+      E("div").addClass("text").html(parseString(block)).appendTo(section)
     } else if (block.type === "heading") {
       E("div").addClass("heading").html(block.text).appendTo(section)
     } else if (block.type === "tablelist") {

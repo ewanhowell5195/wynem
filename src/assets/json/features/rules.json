@@ -1,0 +1,209 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "rules", "rule"],
+      ["server", "rules", "addrule"],
+      ["server", "rules", "editrule"],
+      ["server", "rules", "removerule"],
+      ["server", "rules", "embedrules"]
+    ],
+    "slash": [
+      ["server", "rules"],
+      ["serverconfig", "rule", "add"],
+      ["serverconfig", "rule", "edit"],
+      ["serverconfig", "rule", "remove"],
+      ["serverconfig", "rule", "embed"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is this feature?"
+    },
+    "The rules system allows you to add your servers rules into Wynem. This allows members to quickly and easily quickly quotes messages to people, rather than having to redirect them to the rules channel to read them there.",
+    "You can even create a stylised rule showcase message for your rules channel!",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Rules", "/assets/images/icons/logs.webp"],
+        "title": "Welcome to Ewan's Server!",
+        "description": "Please follow these simple rules:\n## 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.\n## 2: Be respectful and mature\nKeep a respectful tone and be mature throughout conversation. If you have an issue with a member please take it to DMs.\n## 3: No discrimination\nNo toxicity, racism, bullying, transphobia, homophobia, etc., will be tolerated in this server.## 4: Use appropriate channels for messages\nPlease keep messages in their appropriate channels. For example commands go in <#commands> and memes go in <#memes>.\n## 5: English only\nPlease only speak English in this discord server. It is the only language the moderators know, so therefore the only one we can moderate.\n## 6: No alternate accounts\nAlternate accounts are not allowed on this server.",
+        "thumbnail": "/assets/images/logo/ewan_large.webp",
+        "image": "/assets/images/features/rules.webp",
+        "colour": "#AC3535"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use the Rules"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Quoting rules",
+          "content": [
+            "To quote all the server rules, you can use the <command:rule|server rules> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Rules", "/assets/images/icons/logs.webp"],
+                "description": "## 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.\n## 2: Be respectful and mature\nKeep a respectful tone and be mature throughout conversation. If you have an issue with a member please take it to DMs.\n## 3: No discrimination\nNo toxicity, racism, bullying, transphobia, homophobia, etc., will be tolerated in this server.## 4: Use appropriate channels for messages\nPlease keep messages in their appropriate channels. For example commands go in <#commands> and memes go in <#memes>.\n## 5: English only\nPlease only speak English in this discord server. It is the only language the moderators know, so therefore the only one we can moderate.\n## 6: No alternate accounts\nAlternate accounts are not allowed on this server."
+              }
+            },
+            "To quote an individual rule, you can use the <command:rule [rule]|server rules rule:[rule]> command. For example: <command:rule 1|server rules rule:1>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Rules", "/assets/images/icons/logs.webp"],
+                "description": "## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Adding rules",
+          "content": [
+            "To add a new rule to the server, first run the <command:addrule|serverconfig rule add> command, and then click the button to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to add a new rule",
+                "buttons": [
+                  {
+                    "label": "Add new rule",
+                    "emoji": "pencil"
+                  }
+                ]
+              }
+            },
+            "A modal will appear where you can enter in the details for the rule.",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Rule", "The rule itself."],
+                ["Rule Description", "A description for the rule. This is optional."]
+              ]
+            },
+            {
+              "type": "modal",
+              "data": {
+                "title": "Rule Creator",
+                "rows": [
+                  ["rule", "No breaking the rules!", true],
+                  ["rule description", "Do not break the rules or you will be banned", false, 256]
+                ]
+              }
+            },
+            "After sumitting the rule, your rule will have been created and added to the server!",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Rule added",
+                "description": "The rule has been added to the server\n\nHere is a preview of the rule:",
+                "embeds": [{
+                  "author": ["Rules", "/assets/images/icons/logs.webp"],
+                  "description": "## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server."
+                }]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Editing rules",
+          "content": [
+            "To add an existing rule, use the <command:editrule [rule]|serverconfig rule edit rule:[rule]> command. For example: <command:editrule 1|serverconfig rule edit rule:1>. Click the button on the resulting message to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to edit the rule:\n## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.",
+                "buttons": [
+                  {
+                    "label": "Edit rule",
+                    "emoji": "pencil"
+                  }
+                ]
+              }
+            },
+            "A modal will appear where you can enter in the new details for the rule.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Rule Creator",
+                "rows": [
+                  ["rule", "Follow the Discord Terms of Service", true],
+                  ["rule description", "Please follow the Discord Terms of Service in all regards withi…", false, 256]
+                ]
+              }
+            },
+            "After sumitting the rule changes, your rule will have been updated!",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Rule updated",
+                "description": "Rule `1` has been updated\n\nHere is a preview of the rule:",
+                "embeds": [{
+                  "author": ["Rules", "/assets/images/icons/logs.webp"],
+                  "description": "## Rule 1: This rule has been edited\nHello there, I am a description."
+                }]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing rules",
+          "content": [
+            "To remove an existing rule, use the <command:removerule [rule]|serverconfig rule remove rule:[rule]> command. For example: <command:removerule 1|serverconfig rule remove rule:1>.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to edit the rule:\n## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.",
+                "buttons": [
+                  {
+                    "label": "Edit rule",
+                    "emoji": "pencil"
+                  }
+                ]
+              }
+            },
+            "You will be prompted to confirm you want to remove the rule. Press remove to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove rule `1`?",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the rule will have been removed!",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Rule removed",
+                "description": "Rule `1` has been removed"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Embedding rules",
+          "content": [
+            "You are able to create a custom embed that showcases the server rules. For an example of this, refer to the top of this page.",
+            "To do this, use the <command:embedrules|serverconfig rule embed> command.",
+            "This command will launch the embed builder. For more information on that, see the [Custom Embeds](/features/custom-embeds) feature."
+          ]
+        }
+      ]
+    }
+  ]
+}

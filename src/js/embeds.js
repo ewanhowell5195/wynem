@@ -1,39 +1,5 @@
-export function makeEmbed($, parent, data, args = {}) {
-  let reply, embed, buttons, text, thumbnail
-  const container = E("div").addClass("embed-container").append(
-    reply = E("div").addClass("reply-container"),
-    E("div").append(
-      E("div").addClass("pfp-container").append(
-        E("img").addClass(args.outline ? "outline" : undefined).attr("src", "/assets/images/logo/logo.webp")
-      ),
-      E("div").addClass("embed-content").append(
-        E("div").addClass("name-row").append(
-          E("div").addClass("name").text("Wynem"),
-          E("div").addClass("tag").append(
-            $("#check-icon").contents().clone(),
-            E("div").text("BOT")
-          )
-        ),
-        embed = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
-          E("div").append(
-            text = E("div"),
-            thumbnail = E("div")
-          )
-        ),
-        buttons = E("div").addClass("embed-buttons")
-      )
-    )
-  )
-  if (data.reply) {
-    reply.append(
-      E("img").attr("src", data.reply.image),
-      E("div").css("color", data.reply.colour).text(data.reply.name),
-      E("div").html(parseString(data.reply.message))
-    )
-  }
-  if (data.content) {
-    E("div").addClass("text-content").html(parseString(data.content)).insertBefore(embed)
-  }
+function populateEmbed(embed, text, thumbnail, data) {
+  if (data.colour) embed.css("border-left", `4px solid ${data.colour}`)
   if (data.author) {
     E("div").addClass("embed-author").append(
       data.author[1] ? E("img").attr("src", data.author[1]) : undefined,
@@ -76,6 +42,55 @@ export function makeEmbed($, parent, data, args = {}) {
     ).appendTo(embed)
   }
   if (!(data.author || data.warning || data.title || data.description || data.fields || data.image || data.thumbnail || data.footer)) embed.remove()
+}
+
+export function makeEmbed($, parent, data, args = {}) {
+  let reply, embed, buttons, text, thumbnail
+  const container = E("div").addClass("embed-container").append(
+    reply = E("div").addClass("reply-container"),
+    E("div").append(
+      E("div").addClass("pfp-container").append(
+        E("img").addClass(args.outline ? "outline" : undefined).attr("src", "/assets/images/logo/logo.webp")
+      ),
+      E("div").addClass("embed-content").append(
+        E("div").addClass("name-row").append(
+          E("div").addClass("name").text("Wynem"),
+          E("div").addClass("tag").append(
+            $("#check-icon").contents().clone(),
+            E("div").text("BOT")
+          )
+        ),
+        embed = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
+          E("div").append(
+            text = E("div"),
+            thumbnail = E("div")
+          )
+        ),
+        buttons = E("div").addClass("embed-buttons")
+      )
+    )
+  )
+  populateEmbed(embed, text, thumbnail, data)
+  if (data.embeds) for (const data2 of data.embeds) {
+    let text2, thumbnail2
+    const embed2 = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
+      E("div").append(
+        text2 = E("div"),
+        thumbnail2 = E("div")
+      )
+    ).insertAfter(embed)
+    populateEmbed(embed2, text2, thumbnail2, data2)
+  }
+  if (data.reply) {
+    reply.append(
+      E("img").attr("src", data.reply.image),
+      E("div").css("color", data.reply.colour).text(data.reply.name),
+      E("div").html(parseString(data.reply.message))
+    )
+  }
+  if (data.content) {
+    E("div").addClass("text-content").html(parseString(data.content)).insertBefore(embed)
+  }
   if (data.buttons) {
     for (const button of data.buttons)
     E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(
@@ -137,8 +152,9 @@ export function makeModal($, parent, data) {
   parent.append(container)
 }
 
-function parseString(str) {
-  return str.replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
+export function parseString(str) {
+  return str.replace(/<command:(.+?)\|(.+?)>/g, '<code class="command prefix">e!$1</code><code class="command slash">/$2</code>')
+            .replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
             .replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")
             .replace(/<([@#].+?)>/g, '<span class="ping">$1</span>')
             .replace(/<:(\/.+?)>/g, (s, m) => `<a is="f-a" class="ping" href="/commands/slash${m.replace(/\s/g, "/")}">${m}</a>`)
@@ -146,4 +162,9 @@ function parseString(str) {
             .replace(/<t:(.+?)>/g, '<span class="timestamp">$1</span>')
             .replace(/\*\*((?:.|\n)+?)\*\*/g, "<strong>$1</strong>")
             .replace(/^>\s/gm, '<span class="listbar"></span>')
+            .replace(/^##\s(.*)$/gm, '<div class="heading2">$1</div>')
+            .replace(/\[([^\[\]]+?)\]\((.+?)\)/g, (m, s, l) => {
+              if (l.startsWith("/")) return `<a is="f-a" href="${l}">${s}</a>`
+              return `<a href="${l}" target="_blank">${s}</a>`
+            })
 }

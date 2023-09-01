@@ -116,12 +116,13 @@
         ]
       }
     },
-    "The third modal is for adding both the main and thumbnail image to the embed.",
+    "The third modal is for adding both the main and thumbnail image to the embed. This is also where you can add the embed timestamp.",
     {
       "type": "tablelist",
       "rows": [
         ["Image URL", "The URL for main image, which is the large image in the middle of the embed."],
-        ["Thumbnail URL", "The URL for the small image in the top right corner of the embed."]
+        ["Thumbnail URL", "The URL for the small image in the top right corner of the embed."],
+        ["Timestamp", "A date that will appear on the right side of the footer."]
       ]
     },
     {
@@ -130,7 +131,8 @@
         "title": "Embed Builder",
         "rows": [
           ["image url", "A large image in the middle"],
-          ["thumbnail url", "A small image on the top right"]
+          ["thumbnail url", "A small image on the top right"],
+          ["timestamp", "2020/07/26 23:55"]
         ]
       }
     },

@@ -3713,6 +3713,7 @@
               }
             },
             "rules": {
+              "description": "Add your servers rules into Wynem so that you can easily list them all, indivually quote rules, and create a stylised rules message for your rules channel.",
               "commands": {
                 "addrule": {
                   "aliases": [
@@ -3736,6 +3737,19 @@
                     "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/rule/edit"
+                },
+                "embedrules": {
+                  "aliases": [
+                    "rulesembed",
+                    "embedrule",
+                    "ruleembed"
+                  ],
+                  "description": "Create an embed showcasing the server rules.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/rule/embed"
                 },
                 "removerule": {
                   "aliases": [
@@ -7109,6 +7123,13 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/rules/editrule"
+                },
+                "embed": {
+                  "description": "Create an embed showcasing the server rules.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/rules/embedrules"
                 },
                 "remove": {
                   "description": "Remove a rule from the server rules.",
