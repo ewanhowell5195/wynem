@@ -77,19 +77,33 @@ export default class extends Page {
         }).first().addClass("active")
       }
     }
-    addBlocks($, $("#description"), feature.description, args.name, { outline: true })
+
+    addBlocks($, $("#description"), feature.description, args.name, {
+      outline: true,
+      view: args.searchParams.view?.split(",") ?? []
+    })
+    if (scrollTo) setTimeout(() => scrollTo[0].scrollIntoView({
+      behavior: "smooth"
+    }), 100)
+
     $(".command").css("display", "none")
     $(".prefix").css("display", "")
   }
+
+  onClosed() {
+    scrollTo = null
+  }
 }
 
+let scrollTo
 function addBlocks($, element, blocks, feature, args) {
   const section = E("div").addClass("section")
-  for (const block of blocks) {
+  for (const [b, block] of blocks.entries()) {
+    const blockPath = (args.blockPath ?? []).concat(b)
     if (typeof block === "string") {
       E("div").addClass("text").html(parseString(block)).appendTo(section)
     } else if (block.type === "heading") {
-      E("div").addClass("heading").html(block.text).appendTo(section)
+      copyHandler(E("div").addClass("heading").html(block.text).appendTo(section), blockPath)
     } else if (block.type === "tablelist") {
       const table = E("table").addClass("tablelist").appendTo(section)
       for (const row of block.rows) {
@@ -111,12 +125,25 @@ function addBlocks($, element, blocks, feature, args) {
         sections = E("div").addClass("tab-sections sections")
       ).appendTo(section)
       for (const [i, sect] of block.tabs.entries()) {
-        tabs.append(
-          E("div").attr("data-tab", i).addClass("section-tab tab").append(sect.name)
-        )
+        const tab = E("div").attr("data-tab", i).addClass("section-tab tab").append(sect.name).on("click", e => {
+          sections.children().removeClass("selected")
+          tabs.children().removeClass("active")
+          sections.children(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
+          history.replaceState({}, null, `${location.pathname}?view=${blockPath.concat(i).join()}`)
+        }).appendTo(tabs)
         const section2 = E("div").attr("data-tab", i).addClass("tab-section")
-        addBlocks($, section2, sect.content, feature, { depth: 1 })
+        const tabPath = blockPath.concat(i)
+        addBlocks($, section2, sect.content, feature, {
+          depth: (args.depth ?? 0) + 1,
+          blockPath: tabPath,
+          view: args.view
+        })
         sections.append(section2)
+        if (tabPath.every((val, index) => val == args.view[index])) {
+          tab.addClass("active")
+          section2.addClass("selected")
+          if (tabPath.length === args.view.length) scrollTo = tab
+        }
       }
       sections.children().first().addClass("selected")
       tabs.children().on("click", e => {
@@ -125,6 +152,17 @@ function addBlocks($, element, blocks, feature, args) {
         sections.children(`[data-tab="${$(e.currentTarget).addClass("active").attr("data-tab")}"]`).addClass("selected")
       }).first().addClass("active")
     }
+    if (!scrollTo) if (blockPath.length === args.view.length && blockPath.every((val, index) => val == args.view[index])) scrollTo = section.children().last()
   }
   element.append(section)
+}
+
+function copyHandler(element, path) {
+  let timeout
+  element.on("click", e => {
+    clearTimeout(timeout)
+    navigator.clipboard.writeText(`${location.href.split("?")[0]}?view=${path.join()}`)
+    element.addClass("copied")
+    timeout = setTimeout(() => element.removeClass("copied"), 2000)
+  })
 }
