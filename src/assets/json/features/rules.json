@@ -20,7 +20,7 @@
       "type": "heading",
       "text": "What is this feature?"
     },
-    "The rules system allows you to add your servers rules into Wynem. This allows members to quickly and easily quickly quotes messages to people, rather than having to redirect them to the rules channel to read them there.",
+    "The rules system allows you to add your server's rules into Wynem. This allows members to quickly and easily quote messages to people, rather than having to redirect them to the rules channel to read them there.",
     "You can even create a stylised rule showcase message for your rules channel!",
     {
       "type": "embed",
@@ -95,7 +95,7 @@
                 ]
               }
             },
-            "After sumitting the rule, your rule will have been created and added to the server!",
+            "After submitting the rule, your rule will have been created and added to the server!",
             {
               "type": "embed",
               "data": {
@@ -112,7 +112,7 @@
         {
           "name": "Editing rules",
           "content": [
-            "To add an existing rule, use the <command:editrule [rule]|serverconfig rule edit rule:[rule]> command. For example: <command:editrule 1|serverconfig rule edit rule:1>. Click the button on the resulting message to start.",
+            "To edit an existing rule, use the <command:editrule [rule]|serverconfig rule edit rule:[rule]> command. For example: <command:editrule 1|serverconfig rule edit rule:1>. Click the button on the resulting message to start.",
             {
               "type": "embed",
               "data": {
@@ -136,7 +136,7 @@
                 ]
               }
             },
-            "After sumitting the rule changes, your rule will have been updated!",
+            "After submitting the rule changes, your rule will have been updated!",
             {
               "type": "embed",
               "data": {
