@@ -19,7 +19,7 @@
   "description": [
     {
       "type": "heading",
-      "text": "What are Auto-responses?"
+      "text": "What are auto-responses?"
     },
     "Auto-responses are way to make Wynem respond to triggers in regular messages. A member will send a message in the server, and if the message meets the criteria of one of the auto-responses, Wynem will reply to that message with a customisable response.",
     {

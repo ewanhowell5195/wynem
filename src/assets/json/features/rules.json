@@ -18,7 +18,7 @@
   "description": [
     {
       "type": "heading",
-      "text": "What is this feature?"
+      "text": "What is the rules system?"
     },
     "The rules system allows you to add your server's rules into Wynem. This allows members to quickly and easily quote messages to people, rather than having to redirect them to the rules channel to read them there.",
     "You can even create a stylised rule showcase message for your rules channel!",
