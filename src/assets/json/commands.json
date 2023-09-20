@@ -3105,64 +3105,6 @@
                     }
                   }
                 },
-                "forums": {
-                  "commands": {
-                    "followforum": {
-                      "aliases": [
-                        "followchannel"
-                      ],
-                      "arguments": "[forumChannelLink] <sendChannel>",
-                      "description": [
-                        "Follow a forum channel from another server.",
-                        "When a post in the forum is made, you will recieve a message in your chosen channel.",
-                        "This is basically announcement channels, but with a forum."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "botPermissions": [
-                        "Manage Webhooks"
-                      ],
-                      "slashCommand": "serverconfig/channel/followforum"
-                    },
-                    "togglefollowableforum": {
-                      "aliases": [
-                        "setfollowableforum",
-                        "togglefollowable",
-                        "setfollowable"
-                      ],
-                      "arguments": "<channel>",
-                      "description": [
-                        "Set a forum channel to be followable.",
-                        "Run again on a followable forum channel to make it unfollowable."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "botPermissions": [
-                        "Manage Channels"
-                      ],
-                      "slashCommand": "serverconfig/toggle/followableforum"
-                    },
-                    "unfollowforum": {
-                      "aliases": [
-                        "unfollowchannel"
-                      ],
-                      "arguments": "<channel>",
-                      "description": [
-                        "Unfollow a forum channel that is being followed.",
-                        "Provide no arguments to view a list of all followed channels."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "slashCommand": "serverconfig/channel/unfollowforum"
-                    }
-                  }
-                },
                 "starboards": {
                   "description": [
                     "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.",
@@ -6885,31 +6827,6 @@
                   ],
                   "prefixCommand": "server/channel/bridges/createbridge"
                 },
-                "followforum": {
-                  "description": [
-                    "Follow a forum channel from another server.",
-                    "When a post in the forum is made, you will recieve a message in your chosen channel.",
-                    "This is basically announcement channels, but with a forum."
-                  ],
-                  "options": [
-                    {
-                      "name": "forum-channel-link",
-                      "description": "The link to the forum channel",
-                      "required": true
-                    },
-                    {
-                      "name": "send-channel",
-                      "description": "The channel to send forum posts to"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "botPermissions": [
-                    "Manage Webhooks"
-                  ],
-                  "prefixCommand": "server/channel/forums/followforum"
-                },
                 "removebridge": {
                   "description": [
                     "Remove an existing channel bridge.",
@@ -6972,22 +6889,6 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/channel/starboards/starboardblacklist"
-                },
-                "unfollowforum": {
-                  "description": [
-                    "Unfollow a forum channel that is being followed.",
-                    "Provide no arguments to view a list of all followed channels."
-                  ],
-                  "options": [
-                    {
-                      "name": "channel",
-                      "description": "The forum channel"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "server/channel/forums/unfollowforum"
                 }
               }
             },
@@ -7155,26 +7056,6 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/issuetracker/toggleautoissues"
-                },
-                "followableforum": {
-                  "description": [
-                    "Set a forum channel to be followable.",
-                    "Run again on a followable forum channel to make it unfollowable."
-                  ],
-                  "options": [
-                    {
-                      "name": "channel",
-                      "description": "The forum channel",
-                      "required": true
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "botPermissions": [
-                    "Manage Channels"
-                  ],
-                  "prefixCommand": "server/channel/forums/togglefollowableforum"
                 },
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
