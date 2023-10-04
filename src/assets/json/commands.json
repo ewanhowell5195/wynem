@@ -2371,7 +2371,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`umbrella_villagers`"
                         ]
                       ]
                     }
@@ -2646,6 +2646,55 @@
         },
         "moderation": {
           "categories": {
+            "bans": {
+              "commands": {
+                "ban": {
+                  "arguments": "<member> [reason]",
+                  "description": [
+                    "Ban a user from the server.",
+                    "The user is sent a message saying they were banned, along with the reason.",
+                    "A ban appeal link will also be sent if you have configured one. See the \"setbanappeal\" command."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Ban Members"
+                  ],
+                  "botPermissions": [
+                    "Ban Members"
+                  ],
+                  "slashCommand": "ban",
+                  "contextCommand": "user/ban-member"
+                },
+                "banappeal": {
+                  "aliases": [
+                    "banappeallink"
+                  ],
+                  "description": "Get the ban appeal link for the current server.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "slashCommand": "server/banappeal"
+                },
+                "setbanappeal": {
+                  "aliases": [
+                    "banappealset",
+                    "setbanappeallink",
+                    "banappeallinkset"
+                  ],
+                  "arguments": "[url]",
+                  "description": [
+                    "Set or remove a ban appeal link that gets sent to the user when they get banned."
+                  ],
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "botPermissions": [
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/setbanappeal"
+                }
+              }
+            },
             "modpings": {
               "description": [
                 "Moderator pings are a system that allow members to quickly and easily get the attention of moderators for whatever reason is necessary.",
@@ -2764,22 +2813,6 @@
                 "Moderate Members"
               ],
               "slashCommand": "moderation/addnote"
-            },
-            "ban": {
-              "arguments": "<member> [reason]",
-              "description": [
-                "Ban a user from the server.",
-                "The user is sent a message saying they were banned, along with the reason."
-              ],
-              "permissions": [
-                "Guild Only",
-                "Ban Members"
-              ],
-              "botPermissions": [
-                "Ban Members"
-              ],
-              "slashCommand": "ban",
-              "contextCommand": "user/ban-member"
             },
             "endtimeout": {
               "aliases": [
@@ -6710,6 +6743,10 @@
             }
           },
           "commands": {
+            "banappeal": {
+              "description": "Get the ban appeal link for the current server.",
+              "prefixCommand": "moderation/bans/banappeal"
+            },
             "faqdetails": {
               "description": "Get the full details about a certain faq.",
               "options": [
@@ -7109,12 +7146,27 @@
               ],
               "prefixCommand": "bot/resendjoininfo"
             },
+            "setbanappeal": {
+              "description": [
+                "Set or remove a ban appeal link that gets sent to the user when they get banned."
+              ],
+              "options": [
+                {
+                  "name": "url",
+                  "description": "The ban appeal link"
+                }
+              ],
+              "botPermissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "moderation/bans/setbanappeal"
+            },
             "setissuetracker": {
               "description": "Set or remove a GitHub repo to use for issue tracking.",
               "options": [
                 {
                   "name": "url",
-                  "description": "The GitHub repo URL to use for issue tracking."
+                  "description": "The GitHub repo URL to use for issue tracking"
                 }
               ],
               "prefixCommand": "server/issuetracker/setissuetracker"
@@ -7386,7 +7438,7 @@
           "botPermissions": [
             "Ban Members"
           ],
-          "prefixCommand": "moderation/ban",
+          "prefixCommand": "moderation/bans/ban",
           "contextCommand": "user/ban-member"
         },
         "close": {
@@ -7608,7 +7660,7 @@
                 }
               ],
               "type": "user",
-              "prefixCommand": "moderation/ban",
+              "prefixCommand": "moderation/bans/ban",
               "slashCommand": "ban"
             },
             "kick-member": {
