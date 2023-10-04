@@ -2692,6 +2692,18 @@
                     "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/setbanappeal"
+                },
+                "unban": {
+                  "arguments": "<user> [reason]",
+                  "description": "Unban a user from the server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Ban Members"
+                  ],
+                  "botPermissions": [
+                    "Ban Members"
+                  ],
+                  "slashCommand": "unban"
                 }
               }
             },
@@ -2911,18 +2923,6 @@
                 "Moderate Members"
               ],
               "slashCommand": "timeout"
-            },
-            "unban": {
-              "arguments": "<user> [reason]",
-              "description": "Unban a user from the server.",
-              "permissions": [
-                "Guild Only",
-                "Ban Members"
-              ],
-              "botPermissions": [
-                "Ban Members"
-              ],
-              "slashCommand": "unban"
             },
             "warn": {
               "aliases": [
@@ -7611,7 +7611,7 @@
           "botPermissions": [
             "Ban Members"
           ],
-          "prefixCommand": "moderation/unban"
+          "prefixCommand": "moderation/bans/unban"
         },
         "warn": {
           "description": "Give a member a warning.",
