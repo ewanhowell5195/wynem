@@ -1241,6 +1241,22 @@
                       "arguments": "{image}",
                       "description": "Put an image onto a billboard in New York."
                     },
+                    "billboard2": {
+                      "arguments": "[text]/{image} [text]/{image}",
+                      "cooldown": 3,
+                      "description": [
+                        "Put images/text into a heart shaped locket.",
+                        "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+                      ]
+                    },
+                    "flag2": {
+                      "arguments": "[text]/{image} [text]/{image}",
+                      "cooldown": 3,
+                      "description": [
+                        "Put images/text into a heart shaped locket.",
+                        "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+                      ]
+                    },
                     "gallery": {
                       "aliases": [
                         "artgallery"
