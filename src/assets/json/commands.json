@@ -483,11 +483,21 @@
                   ],
                   "slashCommand": "fun/dice"
                 },
+                "hangman": {
+                  "aliases": [
+                    "hm"
+                  ],
+                  "arguments": "<member> <member2> <member3> [letterCount/mode]",
+                  "description": [
+                    "Play Hangman.",
+                    "Set the mode to \"custom\" to select your own word."
+                  ]
+                },
                 "knucklebones": {
                   "aliases": [
                     "kb"
                   ],
-                  "arguments": "<member> <member2> [diceSides]",
+                  "arguments": "<member> [diceSides]",
                   "description": "Play Knucklebones against someone.",
                   "permissions": [
                     "Guild Only"
@@ -2383,7 +2393,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
                         ]
                       ]
                     }
