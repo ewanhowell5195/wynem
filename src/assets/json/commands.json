@@ -1118,7 +1118,9 @@
                       "aliases": [
                         "decoration",
                         "avatardecorate",
-                        "decorate"
+                        "decorate",
+                        "avatardecor",
+                        "decor"
                       ],
                       "arguments": "[decoration] [zoomLevel]",
                       "description": [
