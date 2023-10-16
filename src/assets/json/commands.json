@@ -1114,6 +1114,18 @@
                       "description": "Make a member appear!",
                       "slashCommand": "imagefun/avatars/appear"
                     },
+                    "avatardecoration": {
+                      "aliases": [
+                        "decoration",
+                        "avatardecorate",
+                        "decorate"
+                      ],
+                      "arguments": "[decoration] [zoomLevel]",
+                      "description": [
+                        "Add an avatar decoration to your avatar.",
+                        "Zoom levels:\n\n- Avatar\n- Decoration\n- Normal"
+                      ]
+                    },
                     "avatarpie": {
                       "aliases": [
                         "avpie"
