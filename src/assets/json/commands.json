@@ -1122,10 +1122,10 @@
                         "avatardecor",
                         "decor"
                       ],
-                      "arguments": "[decoration] [zoomLevel]",
+                      "arguments": "[decoration] [zoomLevel] {image}",
                       "description": [
                         "Add an avatar decoration to your avatar.",
-                        "Zoom levels:\n\n- Avatar\n- Decoration\n- Normal"
+                        "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
                       ]
                     },
                     "avatarpie": {
