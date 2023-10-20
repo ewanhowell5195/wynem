@@ -3790,6 +3790,49 @@
                 }
               }
             },
+            "serverinvites": {
+              "description": "A system to quickly and easily bring up server invites.",
+              "commands": {
+                "addserverinvite": {
+                  "aliases": [
+                    "addserver"
+                  ],
+                  "arguments": "[name] [invite]",
+                  "description": "Add a new server invite.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "removeserverinvite": {
+                  "aliases": [
+                    "removeserver"
+                  ],
+                  "arguments": "[name]",
+                  "description": "Remove a server invite.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "serverinvite": {
+                  "aliases": [
+                    "server",
+                    "serverinvites",
+                    "servers"
+                  ],
+                  "arguments": "[name]",
+                  "description": [
+                    "Get a server invite link.",
+                    "Provide no arguments to view a list of all available arguments."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                }
+              }
+            },
             "serverlinking": {
               "commands": {
                 "linkserver": {
