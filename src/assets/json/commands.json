@@ -3827,8 +3827,7 @@
                     "Provide no arguments to view a list of all available arguments."
                   ],
                   "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
+                    "Guild Only"
                   ]
                 }
               }
