@@ -481,7 +481,7 @@
                     "Roll some dice!",
                     "You can roll up to 9 dice with 16 sides each in one go."
                   ],
-                  "slashCommand": "fun/dice"
+                  "slashCommand": "fun/games/dice"
                 },
                 "hangman": {
                   "aliases": [
@@ -491,7 +491,8 @@
                   "description": [
                     "Play Hangman.",
                     "Set the mode to \"custom\" to select your own word."
-                  ]
+                  ],
+                  "slashCommand": "fun/games/hangman"
                 },
                 "knucklebones": {
                   "aliases": [
@@ -501,7 +502,8 @@
                   "description": "Play Knucklebones against someone.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "fun/games/knucklebones"
                 },
                 "rockpaperscissors": {
                   "aliases": [
@@ -1126,7 +1128,8 @@
                       "description": [
                         "Add an avatar decoration to your avatar.",
                         "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
-                      ]
+                      ],
+                      "slashCommand": "imagefun/avatars/avatardecoration"
                     },
                     "avatarpie": {
                       "aliases": [
@@ -3802,7 +3805,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/serverinvite/add"
                 },
                 "removeserverinvite": {
                   "aliases": [
@@ -3813,7 +3817,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/serverinvite/remove"
                 },
                 "serverinvite": {
                   "aliases": [
@@ -3828,7 +3833,8 @@
                   ],
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "server/serverinvites"
                 }
               }
             },
@@ -4433,6 +4439,67 @@
                   ],
                   "prefixCommand": "fun/games/connect4"
                 },
+                "dice": {
+                  "description": [
+                    "Roll some dice!",
+                    "You can roll up to 9 dice with 16 sides each in one go."
+                  ],
+                  "options": [
+                    {
+                      "name": "count",
+                      "description": "The number of dice"
+                    },
+                    {
+                      "name": "sides",
+                      "description": "How many sides the dice have"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/dice"
+                },
+                "hangman": {
+                  "description": [
+                    "Play Hangman.",
+                    "Set the mode to \"custom\" to select your own word."
+                  ],
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against"
+                    },
+                    {
+                      "name": "member2",
+                      "description": "3rd player"
+                    },
+                    {
+                      "name": "member3",
+                      "description": "4th player"
+                    },
+                    {
+                      "name": "letter-count",
+                      "description": "Force the word to be a certain length"
+                    },
+                    {
+                      "name": "custom-game",
+                      "description": "Select the word for the other players to guess"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/hangman"
+                },
+                "knucklebones": {
+                  "description": "Play Knucklebones against someone.",
+                  "options": [
+                    {
+                      "name": "member",
+                      "description": "The member to play against",
+                      "required": true
+                    },
+                    {
+                      "name": "dice-sides",
+                      "description": "How many sides the dice have"
+                    }
+                  ],
+                  "prefixCommand": "fun/games/knucklebones"
+                },
                 "rockpaperscissors": {
                   "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
                   "options": [
@@ -4544,19 +4611,6 @@
                 }
               ],
               "prefixCommand": "fun/cowsay"
-            },
-            "dice": {
-              "description": [
-                "Roll some dice!",
-                "You can roll up to 9 dice with 16 sides each in one go."
-              ],
-              "options": [
-                {
-                  "name": "count",
-                  "description": "The amount of dice"
-                }
-              ],
-              "prefixCommand": "fun/games/dice"
             },
             "flow": {
               "description": "Generate an \"inspirational\" flow of images and quotes.",
@@ -5375,6 +5429,32 @@
                     }
                   ],
                   "prefixCommand": "images/imagefun/avatars/appear"
+                },
+                "avatardecoration": {
+                  "description": [
+                    "Add an avatar decoration to your avatar.",
+                    "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
+                  ],
+                  "options": [
+                    {
+                      "name": "decoration",
+                      "description": "The avatar decoration",
+                      "required": true
+                    },
+                    {
+                      "name": "zoom-level",
+                      "description": "The output image zoom level"
+                    },
+                    {
+                      "name": "avatar-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "avatar-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/avatars/avatardecoration"
                 },
                 "avatarpie": {
                   "description": "Merge a bunch of avatars into one image.",
@@ -6862,6 +6942,19 @@
               ],
               "prefixCommand": "server/rules/rule"
             },
+            "serverinvites": {
+              "description": [
+                "Get a server invite link.",
+                "Provide no arguments to view a list of all available arguments."
+              ],
+              "options": [
+                {
+                  "name": "name",
+                  "description": "The server name"
+                }
+              ],
+              "prefixCommand": "server/serverinvites/serverinvite"
+            },
             "starboardinfo": {
               "description": "Get the information about the servers starboards.",
               "prefixCommand": "server/channel/starboards/starboardinfo"
@@ -7160,6 +7253,42 @@
                     }
                   ],
                   "prefixCommand": "server/rules/removerule"
+                }
+              }
+            },
+            "serverinvite": {
+              "commands": {
+                "add": {
+                  "description": "Add a new server invite.",
+                  "options": [
+                    {
+                      "name": "name",
+                      "description": "The server name",
+                      "required": true
+                    },
+                    {
+                      "name": "invite",
+                      "description": "The invite link",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/serverinvites/addserverinvite"
+                },
+                "remove": {
+                  "description": "Remove a server invite.",
+                  "options": [
+                    {
+                      "name": "name",
+                      "description": "The server name"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/serverinvites/removeserverinvite"
                 }
               }
             },
