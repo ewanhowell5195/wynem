@@ -1264,12 +1264,14 @@
                     "billboard": {
                       "arguments": "{image}",
                       "cooldown": 3,
-                      "description": "Put an image onto a billboard."
+                      "description": "Put an image onto a billboard.",
+                      "slashCommand": "imagecompositing/billboard"
                     },
                     "flag": {
                       "arguments": "{image}",
                       "cooldown": 3,
-                      "description": "Put an image onto a flag."
+                      "description": "Put an image onto a flag.",
+                      "slashCommand": "imagecompositing/flag"
                     },
                     "fortunecookie": {
                       "aliases": [
@@ -1277,14 +1279,16 @@
                       ],
                       "arguments": "{image}",
                       "cooldown": 3,
-                      "description": "Put an image into a fortune cookie."
+                      "description": "Put an image into a fortune cookie.",
+                      "slashCommand": "imagecompositing/fortunecookie"
                     },
                     "gallery": {
                       "aliases": [
                         "artgallery"
                       ],
                       "arguments": "{image}",
-                      "description": "Put an image into an art gallery."
+                      "description": "Put an image into an art gallery.",
+                      "slashCommand": "imagecompositing/gallery"
                     },
                     "linus": {
                       "aliases": [
@@ -1293,7 +1297,8 @@
                         "ltt"
                       ],
                       "arguments": "{image}",
-                      "description": "Put an image into Linus Sebastian's hands"
+                      "description": "Put an image into Linus Sebastian's hands",
+                      "slashCommand": "imagecompositing/linus"
                     },
                     "linusscreen": {
                       "aliases": [
@@ -1304,7 +1309,8 @@
                         "lttscreen"
                       ],
                       "arguments": "{image}",
-                      "description": "Put an image into an art gallery."
+                      "description": "Put an image into an art gallery.",
+                      "slashCommand": "imagecompositing/linusscreen"
                     },
                     "locket": {
                       "aliases": [
@@ -1318,15 +1324,18 @@
                       "description": [
                         "Put images/text into a heart shaped locket.",
                         "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
-                      ]
+                      ],
+                      "slashCommand": "imagecompositing/locket"
                     },
                     "newyork": {
                       "arguments": "{image}",
-                      "description": "Put an image onto a billboard in New York."
+                      "description": "Put an image onto a billboard in New York.",
+                      "slashCommand": "imagecompositing/newyork"
                     },
                     "salute": {
                       "arguments": "{image}",
-                      "description": "Put an image onto a flag that is being saluted."
+                      "description": "Put an image onto a flag that is being saluted.",
+                      "slashCommand": "imagecompositing/salute"
                     },
                     "samepicture": {
                       "aliases": [
@@ -1335,7 +1344,8 @@
                         "sameimg"
                       ],
                       "arguments": "{image} {image}",
-                      "description": "Show that two images are the same picture."
+                      "description": "Show that two images are the same picture.",
+                      "slashCommand": "imagecompositing/samepicture"
                     },
                     "scottthewoz": {
                       "aliases": [
@@ -1344,11 +1354,13 @@
                         "tv"
                       ],
                       "arguments": "{image}",
-                      "description": "Put an image onto Scott Wozniak's TV."
+                      "description": "Put an image onto Scott Wozniak's TV.",
+                      "slashCommand": "imagecompositing/scottthewoz"
                     },
                     "spongebob": {
                       "arguments": "{image}",
-                      "description": "Put an image into Spongebob's hands."
+                      "description": "Put an image into Spongebob's hands.",
+                      "slashCommand": "imagecompositing/spongebob"
                     },
                     "trump": {
                       "aliases": [
@@ -1356,11 +1368,13 @@
                         "donald"
                       ],
                       "arguments": "{image}",
-                      "description": "Put an image into Donald Trump's hands."
+                      "description": "Put an image into Donald Trump's hands.",
+                      "slashCommand": "imagecompositing/trump"
                     },
                     "worthless": {
                       "arguments": "{image}",
-                      "description": "Make an image worthless."
+                      "description": "Make an image worthless.",
+                      "slashCommand": "imagecompositing/worthless"
                     }
                   }
                 },
@@ -5036,6 +5050,237 @@
                 }
               ],
               "prefixCommand": "images/extractchannels"
+            }
+          }
+        },
+        "imagecompositing": {
+          "commands": {
+            "billboard": {
+              "description": "Put an image onto a billboard.",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/billboard"
+            },
+            "flag": {
+              "description": "Put an image onto a flag.",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/flag"
+            },
+            "fortunecookie": {
+              "description": "Put an image into a fortune cookie.",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/fortunecookie"
+            },
+            "gallery": {
+              "description": "Put an image into an art gallery.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/gallery"
+            },
+            "linus": {
+              "description": "Put an image into Linus Sebastian's hands",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/linus"
+            },
+            "linusscreen": {
+              "description": "Put an image into an art gallery.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/linusscreen"
+            },
+            "locket": {
+              "description": [
+                "Put images/text into a heart shaped locket.",
+                "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
+              ],
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "left-text",
+                  "description": "Text for the left side"
+                },
+                {
+                  "name": "left-image-attachment",
+                  "description": "Image for the left side"
+                },
+                {
+                  "name": "left-image-string",
+                  "description": "Image for the left side"
+                },
+                {
+                  "name": "right-text",
+                  "description": "Text for the right side"
+                },
+                {
+                  "name": "right-image-attachment",
+                  "description": "Image for the right side"
+                },
+                {
+                  "name": "right-image-string",
+                  "description": "Image for the right side"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/locket"
+            },
+            "newyork": {
+              "description": "Put an image onto a billboard in New York.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/newyork"
+            },
+            "salute": {
+              "description": "Put an image onto a flag that is being saluted.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/salute"
+            },
+            "samepicture": {
+              "description": "Show that two images are the same picture.",
+              "options": [
+                {
+                  "name": "left-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "left-image-string",
+                  "description": "An image"
+                },
+                {
+                  "name": "right-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "right-image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/samepicture"
+            },
+            "scottthewoz": {
+              "description": "Put an image onto Scott Wozniak's TV.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/scottthewoz"
+            },
+            "spongebob": {
+              "description": "Put an image into Spongebob's hands.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/spongebob"
+            },
+            "trump": {
+              "description": "Put an image into Donald Trump's hands.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/trump"
+            },
+            "worthless": {
+              "description": "Make an image worthless.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/compositing/worthless"
             }
           }
         },
