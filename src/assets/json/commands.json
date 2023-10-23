@@ -176,7 +176,7 @@
                   "arguments": "[category/command]",
                   "description": [
                     "Get a list of the bot's commands and information about each one.",
-                    "Argument types:\n\n[arg] - A text argument\n<arg> - A discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
+                    "Argument types:\n\n[arg] - A text argument\n<arg> - A Discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
                   ],
                   "slashCommand": "help"
                 },
@@ -2634,7 +2634,7 @@
                 "minecraftaccount"
               ],
               "arguments": "<member>",
-              "description": "View the minecraft account tied to someones discord."
+              "description": "View the minecraft account tied to someones Discord."
             },
             "minecrafttitlegenerator": {
               "aliases": [
@@ -3909,7 +3909,7 @@
                 "messagequote"
               ],
               "arguments": "[messageURL]",
-              "description": "Quote a discord message.",
+              "description": "Quote a Discord message.",
               "permissions": [
                 "Guild Only"
               ],
@@ -4091,7 +4091,7 @@
                 "rawmessage"
               ],
               "arguments": "[messageURL]",
-              "description": "Get the raw text content of a discord message.",
+              "description": "Get the raw text content of a Discord message.",
               "slashCommand": "utility/getrawmessage",
               "contextCommand": "message/get-raw-message"
             },
@@ -7166,7 +7166,7 @@
               "prefixCommand": "server/serverinfo"
             },
             "quote": {
-              "description": "Quote a discord message.",
+              "description": "Quote a Discord message.",
               "options": [
                 {
                   "name": "message-url",
@@ -7763,7 +7763,7 @@
               "prefixCommand": "utility/filesize"
             },
             "getrawmessage": {
-              "description": "Get the raw text content of a discord message.",
+              "description": "Get the raw text content of a Discord message.",
               "options": [
                 {
                   "name": "message-url",
@@ -8145,13 +8145,13 @@
         "message": {
           "commands": {
             "get-raw-message": {
-              "description": "Get the raw text content of a discord message.",
+              "description": "Get the raw text content of a Discord message.",
               "type": "message",
               "prefixCommand": "utility/getrawmessage",
               "slashCommand": "utility/getrawmessage"
             },
             "quote-message": {
-              "description": "Quote a discord message.",
+              "description": "Quote a Discord message.",
               "type": "message",
               "prefixCommand": "server/quotemessage",
               "slashCommand": "server/quote"
