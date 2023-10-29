@@ -3300,7 +3300,7 @@
                     "Manage Messages"
                   ],
                   "botPermissions": [
-                    "Manage Permissions"
+                    "Manage Channels"
                   ],
                   "slashCommand": "channel/lock"
                 },
@@ -3361,7 +3361,7 @@
                     "Manage Messages"
                   ],
                   "botPermissions": [
-                    "Manage Permissions"
+                    "Manage Channels"
                   ],
                   "slashCommand": "channel/slowmode"
                 }
@@ -4403,7 +4403,7 @@
                 "Manage Messages"
               ],
               "botPermissions": [
-                "Manage Permissions"
+                "Manage Channels"
               ],
               "prefixCommand": "server/channel/lock"
             },
@@ -4437,7 +4437,7 @@
                 "Manage Messages"
               ],
               "botPermissions": [
-                "Manage Permissions"
+                "Manage Channels"
               ],
               "prefixCommand": "server/channel/slowmode"
             }
