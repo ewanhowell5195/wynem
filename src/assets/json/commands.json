@@ -1946,7 +1946,8 @@
                 },
                 "save": {
                   "arguments": "{image}",
-                  "description": "Turn an image into a gif so that you can save it to your Discord favourites list."
+                  "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
+                  "slashCommand": "imageutility/save"
                 },
                 "slidecompare": {
                   "aliases": [
@@ -2449,6 +2450,20 @@
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
                   "slashCommand": "minecraft/resourcepacks/mojangconverter"
                 },
+                "mojangtext": {
+                  "aliases": [
+                    "mojangfont",
+                    "mjfont",
+                    "mjtext",
+                    "mjt"
+                  ],
+                  "arguments": "[text]",
+                  "description": [
+                    "Generate some text in the Mojang font.",
+                    "This can be used for the loading screen in Minecraft if used with the \"e!mojangconverter\" command."
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/mojangtext"
+                },
                 "reloadpack": {
                   "arguments": "[version]",
                   "cooldown": 20,
@@ -2538,7 +2553,8 @@
                     "elytra"
                   ],
                   "arguments": "[username]",
-                  "description": "View the cape and elytra of a Minecraft Java edition player."
+                  "description": "View the cape and elytra of a Minecraft Java edition player.",
+                  "slashCommand": "minecraft/skins/cape"
                 },
                 "head": {
                   "aliases": [
@@ -2546,11 +2562,12 @@
                     "mchead"
                   ],
                   "arguments": "[username]",
-                  "description": "View the head of a Minecraft Java edition player."
+                  "description": "View the head of a Minecraft Java edition player.",
+                  "slashCommand": "minecraft/skins/head"
                 },
-                "mcavatar": {
+                "minecraftavatar": {
                   "aliases": [
-                    "minecraftavatar",
+                    "mcavatar",
                     "minecraftav",
                     "minecraftpfp",
                     "minecraftprofilepic",
@@ -2565,14 +2582,16 @@
                     "mcpicture"
                   ],
                   "arguments": "[username] {image}",
-                  "description": "Create a minecraft avatar."
+                  "description": "Create a minecraft avatar.",
+                  "slashCommand": "minecraft/skins/avatar"
                 },
-                "mckick": {
+                "minecraftkick": {
                   "aliases": [
-                    "minecraftkick"
+                    "mckick"
                   ],
                   "arguments": "[username] [username]",
-                  "description": "Make one minecraft player kick another minecraft player!"
+                  "description": "Make one minecraft player kick another minecraft player!",
+                  "slashCommand": "minecraft/skins/kick"
                 },
                 "previewskin": {
                   "aliases": [
@@ -2582,7 +2601,8 @@
                   "description": [
                     "Make a 2D preview for a skin texture.",
                     "The format is either \"steve\" or \"alex\""
-                  ]
+                  ],
+                  "slashCommand": "minecraft/skins/preview"
                 },
                 "renderskin": {
                   "aliases": [
@@ -2594,8 +2614,9 @@
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
-                    "Formats:\n\n- player\n- round\n- spin\n- flop\n- back\n- wave\n- squish\n- head\n- gigachad\n- buff"
-                  ]
+                    "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
+                  ],
+                  "slashCommand": "minecraft/skins/render"
                 },
                 "skin": {
                   "aliases": [
@@ -2604,7 +2625,7 @@
                   ],
                   "arguments": "[username]",
                   "description": "View the skin of a Minecraft Java edition player.",
-                  "slashCommand": "minecraft/skin"
+                  "slashCommand": "minecraft/skins/skin"
                 },
                 "skinconverter": {
                   "aliases": [
@@ -2612,7 +2633,8 @@
                     "convertskin"
                   ],
                   "arguments": "{image}",
-                  "description": "Convert between the new and old Minecraft skin formats."
+                  "description": "Convert between the new and old Minecraft skin formats.",
+                  "slashCommand": "minecraft/skins/converter"
                 },
                 "skinify": {
                   "aliases": [
@@ -2622,19 +2644,21 @@
                     "img2skin"
                   ],
                   "arguments": "{image}",
-                  "description": "Turn any image into a minecraft skin."
+                  "description": "Turn any image into a minecraft skin.",
+                  "slashCommand": "minecraft/skins/skinify"
                 }
               }
             }
           },
           "commands": {
-            "mcaccount": {
+            "minecraftaccount": {
               "aliases": [
                 "account",
-                "minecraftaccount"
+                "mcaccount"
               ],
               "arguments": "<member>",
-              "description": "View the minecraft account tied to someones Discord."
+              "description": "View the minecraft account tied to someones Discord.",
+              "slashCommand": "minecraft/account"
             },
             "minecraftdungeonstitlegenerator": {
               "aliases": [
@@ -2686,29 +2710,21 @@
               ],
               "arguments": "[searchTerm]",
               "cooldown": 5,
-              "description": "Search for something on the Minecraft Wiki."
-            },
-            "mojangtext": {
-              "aliases": [
-                "mojangfont",
-                "mjfont",
-                "mjtext",
-                "mjt"
-              ],
-              "arguments": "[text]",
-              "description": "Generate some text in the Mojang font. This can be used for the loading screen in Minecraft if used with the \"e!mojangconverter\" command."
+              "description": "Search for something on the Minecraft Wiki.",
+              "slashCommand": "minecraft/wiki"
             },
             "optifine": {
               "aliases": [
                 "of"
               ],
               "cooldown": 5,
-              "description": "Get a link to download the latest OptiFine version."
+              "description": "Get a link to download the latest OptiFine version.",
+              "slashCommand": "minecraft/optifine"
             },
-            "setmcaccount": {
+            "setminecraftaccount": {
               "aliases": [
                 "setaccount",
-                "setminecraftaccount",
+                "setmcaccount",
                 "linkaccount",
                 "accountlink",
                 "removemcaccount",
@@ -2717,7 +2733,11 @@
                 "rmminecraftaccount"
               ],
               "arguments": "[username]",
-              "description": "Tie a minecraft account to your Discord, so you can run the Minecraft commands without specifying a user.\n\nLeave blank to remove your account."
+              "description": [
+                "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
+                "Leave blank to remove your account."
+              ],
+              "slashCommand": "minecraft/setaccount"
             }
           }
         },
@@ -3375,7 +3395,7 @@
                     "newemoji",
                     "emojinew"
                   ],
-                  "arguments": "[name]",
+                  "arguments": "[name] {image}",
                   "description": "Add an emoji to the server.",
                   "permissions": [
                     "Guild Only",
@@ -3383,13 +3403,15 @@
                   ],
                   "botPermissions": [
                     "Manage Emojis And Stickers"
-                  ]
+                  ],
+                  "slashCommand": "emoji/add"
                 },
                 "removeemoji": {
                   "aliases": [
                     "emojiremove",
                     "deleteemoji"
                   ],
+                  "arguments": "<emoji>",
                   "description": "Remove an emoji from the server.",
                   "permissions": [
                     "Guild Only",
@@ -3397,7 +3419,8 @@
                   ],
                   "botPermissions": [
                     "Manage Emojis And Stickers"
-                  ]
+                  ],
+                  "slashCommand": "emoji/remove"
                 }
               }
             },
@@ -3885,11 +3908,16 @@
                     "guildlink"
                   ],
                   "arguments": "[serverId]",
-                  "description": "Link a server to the current server, sharing bot settings, moderation logs, timeouts, kicks, and bans.\n\nThe current server will become the parent server, and any linked servers will become child servers.",
+                  "description": [
+                    "Link a server to the current server",
+                    "Bot settings, moderation logs, timeouts, kicks, and bans get shared between them.",
+                    "The current server will become the parent server, and any linked servers will become child servers."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Administrator"
-                  ]
+                  ],
+                  "slashCommand": "serverlinking/link"
                 },
                 "unlinkserver": {
                   "aliases": [
@@ -3902,17 +3930,19 @@
                   "permissions": [
                     "Guild Only",
                     "Administrator"
-                  ]
+                  ],
+                  "slashCommand": "serverlinking/unlink"
                 },
                 "viewserverlinks": {
                   "aliases": [
                     "viewlinks",
                     "viewguildlinks"
                   ],
-                  "description": "View the current server links of the current server.",
+                  "description": "View the current server links for the current server.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "server/viewserverlinks"
                 }
               }
             }
@@ -3922,11 +3952,12 @@
               "aliases": [
                 "names"
               ],
-              "arguments": "[search]",
+              "arguments": "[text]",
               "description": "Search for users with certain text in their name.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "server/namesearch"
             },
             "quotemessage": {
               "aliases": [
@@ -4440,6 +4471,50 @@
                 "Manage Channels"
               ],
               "prefixCommand": "server/channel/slowmode"
+            }
+          }
+        },
+        "emoji": {
+          "commands": {
+            "add": {
+              "description": "Add an emoji to the server.",
+              "options": [
+                {
+                  "name": "name",
+                  "description": "The emoji name"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "permissions": [
+                "Manage Emojis And Stickers"
+              ],
+              "botPermissions": [
+                "Manage Emojis And Stickers"
+              ],
+              "prefixCommand": "server/emojis/addemoji"
+            },
+            "remove": {
+              "description": "Remove an emoji from the server.",
+              "options": [
+                {
+                  "name": "emoji",
+                  "description": "The emoji to remove"
+                }
+              ],
+              "permissions": [
+                "Manage Emojis And Stickers"
+              ],
+              "botPermissions": [
+                "Manage Emojis And Stickers"
+              ],
+              "prefixCommand": "server/emojis/removeemoji"
             }
           }
         },
@@ -6666,6 +6741,20 @@
               ],
               "prefixCommand": "images/imageutility/commoncolour"
             },
+            "save": {
+              "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/save"
+            },
             "slidecompare": {
               "description": "Compare two images by having it slide between them both.",
               "cooldown": 5,
@@ -6831,6 +6920,20 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/mojangconverter"
                 },
+                "mojangtext": {
+                  "description": [
+                    "Generate some text in the Mojang font.",
+                    "This can be used for the loading screen in Minecraft if used with the \"e!mojangconverter\" command."
+                  ],
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The text",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/mojangtext"
+                },
                 "reloadpack": {
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "cooldown": 20,
@@ -6957,9 +7060,149 @@
                   "prefixCommand": "minecraft/resourcepacks/versiondifference"
                 }
               }
+            },
+            "skins": {
+              "commands": {
+                "avatar": {
+                  "description": "Create a minecraft avatar.",
+                  "options": [
+                    {
+                      "name": "username",
+                      "description": "The players username"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/minecraftavatar"
+                },
+                "cape": {
+                  "description": "View the cape and elytra of a Minecraft Java edition player.",
+                  "options": [
+                    {
+                      "name": "username",
+                      "description": "The players username"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/cape"
+                },
+                "converter": {
+                  "description": "Convert between the new and old Minecraft skin formats.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/skinconverter"
+                },
+                "head": {
+                  "description": "View the head of a Minecraft Java edition player.",
+                  "options": [
+                    {
+                      "name": "username",
+                      "description": "The players username"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/head"
+                },
+                "kick": {
+                  "description": "Make one minecraft player kick another minecraft player!",
+                  "options": [
+                    {
+                      "name": "username1",
+                      "description": "The 1st players username",
+                      "required": true
+                    },
+                    {
+                      "name": "username2",
+                      "description": "The 2nd players username"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/minecraftkick"
+                },
+                "preview": {
+                  "description": [
+                    "Make a 2D preview for a skin texture.",
+                    "The format is either \"steve\" or \"alex\""
+                  ],
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/previewskin"
+                },
+                "render": {
+                  "description": [
+                    "Render a minecraft skin in 3D.",
+                    "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
+                  ],
+                  "cooldown": 5,
+                  "options": [
+                    {
+                      "name": "format",
+                      "description": "The format to render"
+                    },
+                    {
+                      "name": "username",
+                      "description": "The players username"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/renderskin"
+                },
+                "skin": {
+                  "description": "View the skin of a Minecraft Java edition player.",
+                  "options": [
+                    {
+                      "name": "username",
+                      "description": "The players username"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/skin"
+                },
+                "skinify": {
+                  "description": "Turn any image into a minecraft skin.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/skins/skinify"
+                }
+              }
             }
           },
           "commands": {
+            "account": {
+              "description": "View the minecraft account tied to someones Discord.",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user"
+                }
+              ],
+              "prefixCommand": "minecraft/minecraftaccount"
+            },
             "dungeonstitlegenerator": {
               "description": [
                 "Generate a Minecraft Dungeons-styled title logo.",
@@ -6992,15 +7235,29 @@
               ],
               "prefixCommand": "minecraft/minecraftdungeonstitlegenerator"
             },
-            "skin": {
-              "description": "View the skin of a Minecraft Java edition player.",
+            "optifine": {
+              "description": "Get a link to download the latest OptiFine version.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "version",
+                  "description": "The Minecraft version"
+                }
+              ],
+              "prefixCommand": "minecraft/optifine"
+            },
+            "setaccount": {
+              "description": [
+                "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
+                "Leave blank to remove your account."
+              ],
               "options": [
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "Your Minecraft username"
                 }
               ],
-              "prefixCommand": "minecraft/skins/skin"
+              "prefixCommand": "minecraft/setminecraftaccount"
             },
             "titlegenerator": {
               "description": [
@@ -7037,6 +7294,18 @@
                 }
               ],
               "prefixCommand": "minecraft/minecrafttitlegenerator"
+            },
+            "wiki": {
+              "description": "Search for something on the Minecraft Wiki.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "search-term",
+                  "description": "The search term",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "minecraft/minecraftwiki"
             }
           }
         },
@@ -7221,6 +7490,17 @@
               "description": "Get some infomation about the current server.",
               "prefixCommand": "server/serverinfo"
             },
+            "namesearch": {
+              "description": "Search for users with certain text in their name.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text to search for",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "server/namesearch"
+            },
             "quote": {
               "description": "Quote a Discord message.",
               "options": [
@@ -7259,6 +7539,10 @@
             "starboardinfo": {
               "description": "Get the information about the servers starboards.",
               "prefixCommand": "server/channel/starboards/starboardinfo"
+            },
+            "viewserverlinks": {
+              "description": "View the current server links for the current server.",
+              "prefixCommand": "server/serverlinking/viewserverlinks"
             }
           }
         },
@@ -7678,6 +7962,42 @@
                 }
               ],
               "prefixCommand": "server/issuetracker/setissuetracker"
+            }
+          }
+        },
+        "serverlinking": {
+          "commands": {
+            "link": {
+              "description": [
+                "Link a server to the current server",
+                "Bot settings, moderation logs, timeouts, kicks, and bans get shared between them.",
+                "The current server will become the parent server, and any linked servers will become child servers."
+              ],
+              "options": [
+                {
+                  "name": "server-id",
+                  "description": "The server ID",
+                  "required": true
+                }
+              ],
+              "permissions": [
+                "Administrator"
+              ],
+              "prefixCommand": "server/serverlinking/linkserver"
+            },
+            "unlink": {
+              "description": "Unlink a server from the current server.",
+              "options": [
+                {
+                  "name": "server-id",
+                  "description": "The server ID",
+                  "required": true
+                }
+              ],
+              "permissions": [
+                "Administrator"
+              ],
+              "prefixCommand": "server/serverlinking/unlinkserver"
             }
           }
         },
