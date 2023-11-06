@@ -2435,7 +2435,11 @@
                 "minecrafttitleconverter": {
                   "aliases": [
                     "mctitleconverter",
-                    "titleconverter"
+                    "titleconverter",
+                    "minecraftconverter",
+                    "minecraftconvert",
+                    "mcconverter",
+                    "mcconvert"
                   ],
                   "arguments": "{image}",
                   "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
