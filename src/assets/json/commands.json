@@ -2811,7 +2811,7 @@
             "modpings": {
               "description": [
                 "Moderator pings are a system that allow members to quickly and easily get the attention of moderators for whatever reason is necessary.",
-                "During a mod ping, Wynem will ping three members of the lowest ranking moderator role, with 60 seconds between each ping. If no moderator has responded, it will ping the entire role. If still no one has responded, it repeats this process two more times with the next two heigher tiers of moderator role.",
+                "During a mod ping, Wynem will ping three members of the lowest ranking moderator role, with 60 seconds between each ping. If no moderator has responded, it will ping the entire role. If still no one has responded, it repeats this process two more times with the next two higher tiers of moderator role.",
                 "By default, moderator role tiers are guessed, but they can be manually configured with the \"setmodpingroles\" command.",
                 "Modpings can also be triggered by pinging any role named \"@Modping\" or \"@Moderator Ping\""
               ],
