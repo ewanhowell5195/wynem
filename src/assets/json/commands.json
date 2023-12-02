@@ -797,6 +797,17 @@
                   ],
                   "slashCommand": "image/animation/frame"
                 },
+                "loops": {
+                  "aliases": [
+                    "loop"
+                  ],
+                  "arguments": "[loopCount] {gif}",
+                  "description": [
+                    "Set the number of times a gif should loop.",
+                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
+                  ],
+                  "slashCommand": "image/animation/loops"
+                },
                 "reverse": {
                   "aliases": [
                     "backwards"
@@ -4911,6 +4922,27 @@
                     }
                   ],
                   "prefixCommand": "images/animation/frame"
+                },
+                "loops": {
+                  "description": [
+                    "Set the number of times a gif should loop.",
+                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
+                  ],
+                  "options": [
+                    {
+                      "name": "loop-count",
+                      "description": "The number of times to loop the gif"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/loops"
                 },
                 "reverse": {
                   "description": "Make a gif play in reverse.",
