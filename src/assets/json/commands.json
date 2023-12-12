@@ -986,6 +986,14 @@
                   ],
                   "slashCommand": "imagefilter/copypalette"
                 },
+                "deepfry": {
+                  "aliases": [
+                    "nuke"
+                  ],
+                  "arguments": "{image}",
+                  "description": "Deepfry an image.",
+                  "slashCommand": "imagefilter/deepfry"
+                },
                 "dropshadow": {
                   "aliases": [
                     "shadow"
@@ -1125,7 +1133,7 @@
                       ],
                       "arguments": "<member>",
                       "description": "Make a member appear!",
-                      "slashCommand": "imagefun/avatars/appear"
+                      "slashCommand": "avatars/appear"
                     },
                     "avatardecoration": {
                       "aliases": [
@@ -1140,7 +1148,7 @@
                         "Add an avatar decoration to your avatar.",
                         "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
                       ],
-                      "slashCommand": "imagefun/avatars/avatardecoration"
+                      "slashCommand": "avatars/avatardecoration"
                     },
                     "avatarpie": {
                       "aliases": [
@@ -1148,7 +1156,7 @@
                       ],
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                       "description": "Merge a bunch of avatars into one image.",
-                      "slashCommand": "imagefun/avatars/avatarpie"
+                      "slashCommand": "avatars/avatarpie"
                     },
                     "award": {
                       "aliases": [
@@ -1156,12 +1164,12 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Give another member an award!",
-                      "slashCommand": "imagefun/avatars/award"
+                      "slashCommand": "avatars/award"
                     },
                     "band": {
                       "arguments": "<member> <member> <member> <member>",
                       "description": "Put members into a band.",
-                      "slashCommand": "imagefun/avatars/band"
+                      "slashCommand": "avatars/band"
                     },
                     "birthday": {
                       "arguments": "<member> <member> <member> <member> <member>",
@@ -1171,12 +1179,12 @@
                         "If members are not specified, random members from the server will be picked.",
                         "The birthday member will always be Wynem on \"26/7\"."
                       ],
-                      "slashCommand": "imagefun/avatars/birthday"
+                      "slashCommand": "avatars/birthday"
                     },
                     "bonk": {
                       "arguments": "<member> [text]",
                       "description": "Bonk a member.",
-                      "slashCommand": "imagefun/avatars/bonk"
+                      "slashCommand": "avatars/bonk"
                     },
                     "disappear": {
                       "aliases": [
@@ -1187,7 +1195,7 @@
                       ],
                       "arguments": "<member>",
                       "description": "Make a member disappear!",
-                      "slashCommand": "imagefun/avatars/disappear"
+                      "slashCommand": "avatars/disappear"
                     },
                     "distractedboyfriend": {
                       "aliases": [
@@ -1197,7 +1205,7 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Get distracted by another member.",
-                      "slashCommand": "imagefun/avatars/distractedboyfriend"
+                      "slashCommand": "avatars/distractedboyfriend"
                     },
                     "guyslook": {
                       "aliases": [
@@ -1207,7 +1215,7 @@
                       ],
                       "arguments": "<member> {image}",
                       "description": "Show some guys an image",
-                      "slashCommand": "imagefun/avatars/guyslook"
+                      "slashCommand": "avatars/guyslook"
                     },
                     "kickface": {
                       "aliases": [
@@ -1215,12 +1223,12 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Kick a member in the face!",
-                      "slashCommand": "imagefun/avatars/kickface"
+                      "slashCommand": "avatars/kickface"
                     },
                     "marry": {
                       "arguments": "<member> <member>",
                       "description": "Marry two members.",
-                      "slashCommand": "imagefun/avatars/marry"
+                      "slashCommand": "avatars/marry"
                     },
                     "monkey": {
                       "aliases": [
@@ -1229,7 +1237,7 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Turn some members into a group of monkeys!",
-                      "slashCommand": "imagefun/avatars/monkey"
+                      "slashCommand": "avatars/monkey"
                     },
                     "monkeyband": {
                       "aliases": [
@@ -1237,12 +1245,12 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Turn some members into a band of monkeys!",
-                      "slashCommand": "imagefun/avatars/monkeyband"
+                      "slashCommand": "avatars/monkeyband"
                     },
                     "silence": {
                       "arguments": "<member>",
                       "description": "Silence a member.",
-                      "slashCommand": "imagefun/avatars/silence"
+                      "slashCommand": "avatars/silence"
                     },
                     "slap": {
                       "aliases": [
@@ -1250,23 +1258,23 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Slap a member!",
-                      "slashCommand": "imagefun/avatars/slap"
+                      "slashCommand": "avatars/slap"
                     },
                     "snap": {
                       "arguments": "<member> <member>",
                       "description": "Snap a user out of existence.",
-                      "slashCommand": "imagefun/avatars/snap"
+                      "slashCommand": "avatars/snap"
                     },
                     "unband": {
                       "arguments": "<member> <member> <member> <member>",
                       "description": "Remove members from a band.",
-                      "slashCommand": "imagefun/avatars/unband"
+                      "slashCommand": "avatars/unband"
                     },
                     "yeet": {
                       "arguments": "<member> <member>",
                       "cooldown": 3,
                       "description": "Throw a member really far.",
-                      "slashCommand": "imagefun/avatars/yeet"
+                      "slashCommand": "avatars/yeet"
                     }
                   }
                 },
@@ -1396,7 +1404,8 @@
                         "pinch"
                       ],
                       "arguments": "[strength] [x] [y] [radius] {image}",
-                      "description": "Apply a bulge or a pinch effect to an image."
+                      "description": "Apply a bulge or a pinch effect to an image.",
+                      "slashCommand": "imagefun/distortions/bulge"
                     },
                     "gmagick": {
                       "aliases": [
@@ -1411,7 +1420,8 @@
                         "gifcontentaware"
                       ],
                       "arguments": "{image}",
-                      "description": "Content aware scales an image. Outputs a GIF."
+                      "description": "Content aware scales an image. Outputs a GIF.",
+                      "slashCommand": "imagefun/distortions/gmagick"
                     },
                     "magick": {
                       "aliases": [
@@ -1421,14 +1431,16 @@
                         "contentaware"
                       ],
                       "arguments": "[intensity] {image}",
-                      "description": "Content aware scales an image. Outputs a static image."
+                      "description": "Content aware scales an image. Outputs a static image.",
+                      "slashCommand": "imagefun/distortions/magick"
                     },
                     "twist": {
                       "aliases": [
                         "twirl"
                       ],
                       "arguments": "[degrees] [x] [y] [radius] {image}",
-                      "description": "Apply a twist effect to an image."
+                      "description": "Apply a twist effect to an image.",
+                      "slashCommand": "imagefun/distortions/twist"
                     }
                   }
                 },
@@ -1584,13 +1596,13 @@
                       "arguments": "[text] {image}",
                       "cooldown": 5,
                       "description": "Add a breaking news bar to an image.",
-                      "slashCommand": "imagefun/texts/breakingnews"
+                      "slashCommand": "imagetext/breakingnews"
                     },
                     "caption": {
                       "arguments": "[text] {image}",
                       "cooldown": 5,
                       "description": "Add a caption to an image.",
-                      "slashCommand": "imagefun/texts/caption"
+                      "slashCommand": "imagetext/caption"
                     },
                     "certifiedmoment": {
                       "aliases": [
@@ -1598,7 +1610,7 @@
                       ],
                       "arguments": "[text]",
                       "description": "Make a certified moment meme.",
-                      "slashCommand": "imagefun/texts/certifiedmoment"
+                      "slashCommand": "imagetext/certifiedmoment"
                     },
                     "changemymind": {
                       "aliases": [
@@ -1606,7 +1618,7 @@
                       ],
                       "arguments": "[text]",
                       "description": "Create a \"change my mind\" meme.",
-                      "slashCommand": "imagefun/texts/changemymind"
+                      "slashCommand": "imagetext/changemymind"
                     },
                     "notification": {
                       "aliases": [
@@ -1620,7 +1632,7 @@
                       ],
                       "arguments": "[text] {image}",
                       "description": "Add a custom Discord notification to an image.",
-                      "slashCommand": "imagefun/texts/notification"
+                      "slashCommand": "imagetext/notification"
                     },
                     "peter": {
                       "aliases": [
@@ -1636,7 +1648,7 @@
                         "Add Peter Griffin to an image.",
                         "Use \"peter2\" to put him on the opposite side."
                       ],
-                      "slashCommand": "imagefun/texts/peter"
+                      "slashCommand": "imagetext/peter"
                     },
                     "sneak": {
                       "aliases": [
@@ -1649,7 +1661,7 @@
                         "Add the \"Sneak 100\" image to the bottom of an image.",
                         "The text is customisable."
                       ],
-                      "slashCommand": "imagefun/texts/sneak"
+                      "slashCommand": "imagetext/sneak"
                     },
                     "stuff": {
                       "aliases": [
@@ -1667,7 +1679,7 @@
                         "Add Robert Downey Jr. to an image.",
                         "Use \"stuff2\" to put him on the opposite side."
                       ],
-                      "slashCommand": "imagefun/texts/stuff"
+                      "slashCommand": "imagetext/stuff"
                     },
                     "tombstone": {
                       "aliases": [
@@ -1677,7 +1689,7 @@
                       ],
                       "arguments": "[text]",
                       "description": "Put some text on a tombstone.",
-                      "slashCommand": "imagefun/texts/tombstone"
+                      "slashCommand": "imagetext/tombstone"
                     },
                     "toptext": {
                       "aliases": [
@@ -1702,7 +1714,7 @@
                         "Defaults to the top of the image",
                         "Use the middle or bottom aliases to put the text in the middle or on the bottom."
                       ],
-                      "slashCommand": "imagefun/texts/addtext"
+                      "slashCommand": "imagetext/addtext"
                     },
                     "valentines": {
                       "aliases": [
@@ -1710,28 +1722,25 @@
                       ],
                       "arguments": "<member>",
                       "description": "Generate a minecraft valentines image for that special someone in your life.",
-                      "slashCommand": "imagefun/texts/valentines"
+                      "slashCommand": "imagetext/valentines"
                     },
                     "what": {
                       "arguments": "[text] {image}",
                       "description": "What.",
-                      "slashCommand": "imagefun/texts/what"
+                      "slashCommand": "imagetext/what"
                     }
                   }
                 }
               },
               "commands": {
                 "blockify": {
-                  "aliases": [
-                    "blockifystats"
-                  ],
-                  "arguments": "[mode] {image}",
+                  "arguments": "[type] [statsEnabled] {image}",
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
-                    "Use the \"blockifystats\" alias to get stats on the textures used.",
                     "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
-                  ]
+                  ],
+                  "slashCommand": "imagefun/blockify"
                 },
                 "blurplify": {
                   "aliases": [
@@ -1740,7 +1749,8 @@
                     "blurple"
                   ],
                   "arguments": "{image}",
-                  "description": "Turn an image blurple!"
+                  "description": "Turn an image blurple!",
+                  "slashCommand": "imagefun/blurplify"
                 },
                 "darkmodelightmode": {
                   "aliases": [
@@ -1750,17 +1760,10 @@
                   ],
                   "arguments": "{image} {image}",
                   "description": [
-                    "Turn two images into one image, where it shows a different one depending on if you are using dark mode or light mode",
+                    "Merge two images into one, where a different one shows if you are using dark or light mode.",
                     "The first image will be visible while in dark mode, the second while in light mode."
-                  ]
-                },
-                "deepfry": {
-                  "aliases": [
-                    "nuke"
                   ],
-                  "arguments": "{image}",
-                  "description": "Deepfry an image.",
-                  "slashCommand": "imagefilter/deepfry"
+                  "slashCommand": "imagefun/darkmodelightmode"
                 },
                 "dumpy": {
                   "aliases": [
@@ -1769,7 +1772,8 @@
                     "amogustwerk"
                   ],
                   "arguments": "{image}",
-                  "description": "Make an image into an Among Us Dumpy gif!"
+                  "description": "Make an image into an Among Us Dumpy gif!",
+                  "slashCommand": "imagefun/dumpy"
                 },
                 "emojify": {
                   "aliases": [
@@ -1777,7 +1781,8 @@
                   ],
                   "arguments": "{image}",
                   "cooldown": 3,
-                  "description": "Turn an image into a bunch of emojis! Available modes are \"default\" and \"all\"."
+                  "description": "Turn an image into a bunch of emojis!",
+                  "slashCommand": "imagefun/emojify"
                 },
                 "hiddenimage": {
                   "aliases": [
@@ -1788,7 +1793,8 @@
                   "description": [
                     "Hide an image in plain sight.",
                     "Colour modes:\n- dark\n- light"
-                  ]
+                  ],
+                  "slashCommand": "imagefun/hiddenimage"
                 },
                 "impostor": {
                   "aliases": [
@@ -1803,7 +1809,8 @@
                   "description": [
                     "Create a custom Among Us character!",
                     "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
-                  ]
+                  ],
+                  "slashCommand": "imagefun/impostor"
                 },
                 "jpegify": {
                   "aliases": [
@@ -1813,7 +1820,8 @@
                     "crusty"
                   ],
                   "arguments": "[quality] {image}",
-                  "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100"
+                  "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100",
+                  "slashCommand": "imagefun/jpegify"
                 },
                 "rainbow": {
                   "aliases": [
@@ -1822,7 +1830,8 @@
                   ],
                   "arguments": "{image}",
                   "cooldown": 5,
-                  "description": "Make an image cycle through the rainbow!"
+                  "description": "Make an image cycle through the rainbow!",
+                  "slashCommand": "imagefun/rainbow"
                 },
                 "scan": {
                   "arguments": "[switchAxis] [reverse] [beamColour] {image}",
@@ -1834,22 +1843,31 @@
                   "slashCommand": "imagefun/scan"
                 },
                 "spin": {
-                  "arguments": "{image}",
-                  "description": "Make an image spin!"
+                  "arguments": "[speed] [expandEnabled] {image}",
+                  "description": "Make an image spin!",
+                  "slashCommand": "imagefun/spin"
                 },
                 "squarify": {
                   "aliases": [
                     "squareify"
                   ],
                   "arguments": "[squareSize] [gapSize] {image}",
-                  "description": "Squarifies an image. The first number is the square size, the second is the size of the gap between each square."
+                  "description": [
+                    "Squarifies an image.",
+                    "The first number is the square size, the second is the size of the gap between each square."
+                  ],
+                  "slashCommand": "imagefun/squarify"
                 },
                 "textify": {
                   "aliases": [
                     "asciiart"
                   ],
                   "arguments": "[mode] {image}",
-                  "description": "Turn an image into ascii art using the braille characters. Available modes are \"average\" and \"edge\"."
+                  "description": [
+                    "Turn an image into ascii art using the braille characters.",
+                    "Available modes are \"edge\" and \"average\"."
+                  ],
+                  "slashCommand": "imagefun/textify"
                 },
                 "warp": {
                   "arguments": "[switchAxis] [reverse] {image}",
@@ -1865,7 +1883,8 @@
                   "description": [
                     "Create a custom Wynem logo!",
                     "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
-                  ]
+                  ],
+                  "slashCommand": "imagefun/wynem"
                 }
               }
             },
@@ -3960,6 +3979,97 @@
                   "slashCommand": "server/viewserverlinks"
                 }
               }
+            },
+            "tickets": {
+              "description": [
+                "Tickets are a system that allows users to create private tickets in a server that can be managed by users with a special role for handling tickets",
+                "Tickets use their own channel where a message exists that allows users to create and close tickets.",
+                "When a user creates a ticket, they are shown a list of customisable ticket types, where they select the one relevant to their issue. Upon selecting the ticket type, one of two things will happen:\n\nIf the ticket type is set to \"Create\", they will be presented with a customisable form that they then fill out with information related to the ticket type. Upon filling out the form, the ticket will be created.\n\nIf the ticket type is set to \"Error\", they will be shown a customisable message that explains why the ticket could not be created, useful for stopping people from creating tickets about certain topics."
+              ],
+              "commands": {
+                "addtickettype": {
+                  "aliases": [
+                    "tickettypeadd"
+                  ],
+                  "description": [
+                    "Add a new ticket type.",
+                    "The ticket types are the options that the user can select from when creating a ticket.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nError: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "edittickettype": {
+                  "aliases": [
+                    "tickettypeedit"
+                  ],
+                  "arguments": "[ticketTypeId]",
+                  "description": [
+                    "Edit a ticket type.",
+                    "Leave fields blank to leave them unedited.",
+                    "Only limited editing is possible. For editing that removes stuff, changes type, or adds new entry fields, instead remove and re-add the ticket type."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "removetickets": {
+                  "aliases": [
+                    "ticketsremove"
+                  ],
+                  "description": "Remove the tickets system from the server.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "removetickettype": {
+                  "aliases": [
+                    "tickettyperemove"
+                  ],
+                  "arguments": "[ticketTypeId]",
+                  "description": "Remove the a ticket type from the tickets system.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ]
+                },
+                "settickets": {
+                  "aliases": [
+                    "ticketsset"
+                  ],
+                  "arguments": "<channel> <role>",
+                  "description": [
+                    "Set a channel and role to be used for the tickets system.",
+                    "The channel is where users will be able to create tickets. The channel should be an empty channel. The permissions will be changed so users cannot send messages there.",
+                    "The role is the role that will be managing the tickets. When a ticket is created, the role members get added to the ticket, and a random role member gets pinged."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Channels"
+                  ]
+                },
+                "viewtickets": {
+                  "aliases": [
+                    "ticketsview",
+                    "tickets",
+                    "viewtickettypes",
+                    "tickettypesview"
+                  ],
+                  "arguments": "[ticketTypeId]",
+                  "description": "View the servers tickets system and the ticket types.",
+                  "permissions": [
+                    "Guild Only"
+                  ]
+                }
+              }
             }
           },
           "commands": {
@@ -4329,6 +4439,367 @@
     },
     "slash": {
       "categories": {
+        "avatars": {
+          "commands": {
+            "appear": {
+              "description": "Make a member appear!",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user to appear",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/appear"
+            },
+            "avatardecoration": {
+              "description": [
+                "Add an avatar decoration to your avatar.",
+                "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
+              ],
+              "options": [
+                {
+                  "name": "decoration",
+                  "description": "The avatar decoration",
+                  "required": true
+                },
+                {
+                  "name": "zoom-level",
+                  "description": "The output image zoom level"
+                },
+                {
+                  "name": "avatar-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "avatar-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/avatardecoration"
+            },
+            "avatarpie": {
+              "description": "Merge a bunch of avatars into one image.",
+              "options": [
+                {
+                  "name": "user1",
+                  "description": "User 1",
+                  "required": true
+                },
+                {
+                  "name": "user2",
+                  "description": "User 2",
+                  "required": true
+                },
+                {
+                  "name": "user3",
+                  "description": "User 3"
+                },
+                {
+                  "name": "user4",
+                  "description": "User 4"
+                },
+                {
+                  "name": "user5",
+                  "description": "User 5"
+                },
+                {
+                  "name": "user6",
+                  "description": "User 6"
+                },
+                {
+                  "name": "user7",
+                  "description": "User 7"
+                },
+                {
+                  "name": "user8",
+                  "description": "User 8"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/avatarpie"
+            },
+            "award": {
+              "description": "Give another member an award!",
+              "options": [
+                {
+                  "name": "awardee",
+                  "description": "The awardee",
+                  "required": true
+                },
+                {
+                  "name": "awarder",
+                  "description": "The awarder"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/award"
+            },
+            "band": {
+              "description": "Put members into a band.",
+              "options": [
+                {
+                  "name": "user1",
+                  "description": "Band member 1",
+                  "required": true
+                },
+                {
+                  "name": "user2",
+                  "description": "Band member 2"
+                },
+                {
+                  "name": "user3",
+                  "description": "Band member 3"
+                },
+                {
+                  "name": "user4",
+                  "description": "Band member 4"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/band"
+            },
+            "birthday": {
+              "description": [
+                "Throw a birthday party for someone!",
+                "If members are not specified, random members from the server will be picked.",
+                "The birthday member will always be Wynem on \"26/7\"."
+              ],
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "birthday-user",
+                  "description": "Birthday user"
+                },
+                {
+                  "name": "guest1",
+                  "description": "Guest 1"
+                },
+                {
+                  "name": "guest2",
+                  "description": "Guest 2"
+                },
+                {
+                  "name": "guest3",
+                  "description": "Guest 3"
+                },
+                {
+                  "name": "guest4",
+                  "description": "Guest 4"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/birthday"
+            },
+            "bonk": {
+              "description": "Bonk a member.",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user to bonk",
+                  "required": true
+                },
+                {
+                  "name": "text",
+                  "description": "The bonk message"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/bonk"
+            },
+            "disappear": {
+              "description": "Make a member disappear!",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user to disappear",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/disappear"
+            },
+            "distractedboyfriend": {
+              "description": "Get distracted by another member.",
+              "options": [
+                {
+                  "name": "distraction",
+                  "description": "The distraction",
+                  "required": true
+                },
+                {
+                  "name": "girlfriend",
+                  "description": "The girlfriend"
+                },
+                {
+                  "name": "boyfriend",
+                  "description": "The boyfriend"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/distractedboyfriend"
+            },
+            "guyslook": {
+              "description": "Show some guys an image",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/guyslook"
+            },
+            "kickface": {
+              "description": "Kick a member in the face!",
+              "options": [
+                {
+                  "name": "reciever",
+                  "description": "The kick reciever",
+                  "required": true
+                },
+                {
+                  "name": "giver",
+                  "description": "The kick giver"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/kickface"
+            },
+            "marry": {
+              "description": "Marry two members.",
+              "options": [
+                {
+                  "name": "bride",
+                  "description": "The bride",
+                  "required": true
+                },
+                {
+                  "name": "groom",
+                  "description": "The groom"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/marry"
+            },
+            "monkey": {
+              "description": "Turn some members into a group of monkeys!",
+              "options": [
+                {
+                  "name": "monkey1",
+                  "description": "Monkey 1",
+                  "required": true
+                },
+                {
+                  "name": "monkey2",
+                  "description": "Monkey 2"
+                },
+                {
+                  "name": "monkey3",
+                  "description": "Monkey 3"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/monkey"
+            },
+            "monkeyband": {
+              "description": "Turn some members into a band of monkeys!",
+              "options": [
+                {
+                  "name": "monkey1",
+                  "description": "Monkey 1",
+                  "required": true
+                },
+                {
+                  "name": "monkey2",
+                  "description": "Monkey 2"
+                },
+                {
+                  "name": "monkey3",
+                  "description": "Monkey 3"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/monkeyband"
+            },
+            "silence": {
+              "description": "Silence a member.",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "The user to silence",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/silence"
+            },
+            "slap": {
+              "description": "Slap a member!",
+              "options": [
+                {
+                  "name": "reciever",
+                  "description": "The slap reciever",
+                  "required": true
+                },
+                {
+                  "name": "giver",
+                  "description": "The slap giver"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/slap"
+            },
+            "snap": {
+              "description": "Snap a user out of existence.",
+              "options": [
+                {
+                  "name": "peter",
+                  "description": "Peter Parker",
+                  "required": true
+                },
+                {
+                  "name": "thanos",
+                  "description": "Thanos"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/snap"
+            },
+            "unband": {
+              "description": "Remove members from a band.",
+              "options": [
+                {
+                  "name": "user1",
+                  "description": "Band member 1",
+                  "required": true
+                },
+                {
+                  "name": "user2",
+                  "description": "Band member 2"
+                },
+                {
+                  "name": "user3",
+                  "description": "Band member 3"
+                },
+                {
+                  "name": "user4",
+                  "description": "Band member 4"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/unband"
+            },
+            "yeet": {
+              "description": "Throw a member really far.",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "reciever",
+                  "description": "The yeet reciever",
+                  "required": true
+                },
+                {
+                  "name": "yeeter",
+                  "description": "The yeeter"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/yeet"
+            }
+          }
+        },
         "bot": {
           "categories": {
             "commands": {
@@ -5541,7 +6012,7 @@
                   "description": "An image"
                 }
               ],
-              "prefixCommand": "images/imagefun/deepfry"
+              "prefixCommand": "images/filters/deepfry"
             },
             "dropshadow": {
               "description": "Add a drop shadow to a transparent image.",
@@ -5797,205 +6268,30 @@
         },
         "imagefun": {
           "categories": {
-            "avatars": {
+            "distortions": {
               "commands": {
-                "appear": {
-                  "description": "Make a member appear!",
+                "bulge": {
+                  "description": "Apply a bulge or a pinch effect to an image.",
                   "options": [
                     {
-                      "name": "user",
-                      "description": "The user to appear",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/appear"
-                },
-                "avatardecoration": {
-                  "description": [
-                    "Add an avatar decoration to your avatar.",
-                    "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
-                  ],
-                  "options": [
-                    {
-                      "name": "decoration",
-                      "description": "The avatar decoration",
-                      "required": true
+                      "name": "strength",
+                      "description": "The bulge strength"
                     },
                     {
-                      "name": "zoom-level",
-                      "description": "The output image zoom level"
+                      "name": "x",
+                      "description": "The X coordinate to bulge from"
                     },
                     {
-                      "name": "avatar-attachment",
-                      "description": "An image"
+                      "name": "y",
+                      "description": "The Y coordinate to bulge from"
                     },
                     {
-                      "name": "avatar-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/avatardecoration"
-                },
-                "avatarpie": {
-                  "description": "Merge a bunch of avatars into one image.",
-                  "options": [
-                    {
-                      "name": "user1",
-                      "description": "User 1",
-                      "required": true
+                      "name": "radius",
+                      "description": "How large the bulge radius should be"
                     },
                     {
-                      "name": "user2",
-                      "description": "User 2",
-                      "required": true
-                    },
-                    {
-                      "name": "user3",
-                      "description": "User 3"
-                    },
-                    {
-                      "name": "user4",
-                      "description": "User 4"
-                    },
-                    {
-                      "name": "user5",
-                      "description": "User 5"
-                    },
-                    {
-                      "name": "user6",
-                      "description": "User 6"
-                    },
-                    {
-                      "name": "user7",
-                      "description": "User 7"
-                    },
-                    {
-                      "name": "user8",
-                      "description": "User 8"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/avatarpie"
-                },
-                "award": {
-                  "description": "Give another member an award!",
-                  "options": [
-                    {
-                      "name": "awardee",
-                      "description": "The awardee",
-                      "required": true
-                    },
-                    {
-                      "name": "awarder",
-                      "description": "The awarder"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/award"
-                },
-                "band": {
-                  "description": "Put members into a band.",
-                  "options": [
-                    {
-                      "name": "user1",
-                      "description": "Band member 1",
-                      "required": true
-                    },
-                    {
-                      "name": "user2",
-                      "description": "Band member 2"
-                    },
-                    {
-                      "name": "user3",
-                      "description": "Band member 3"
-                    },
-                    {
-                      "name": "user4",
-                      "description": "Band member 4"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/band"
-                },
-                "birthday": {
-                  "description": [
-                    "Throw a birthday party for someone!",
-                    "If members are not specified, random members from the server will be picked.",
-                    "The birthday member will always be Wynem on \"26/7\"."
-                  ],
-                  "cooldown": 3,
-                  "options": [
-                    {
-                      "name": "birthday-user",
-                      "description": "Birthday user"
-                    },
-                    {
-                      "name": "guest1",
-                      "description": "Guest 1"
-                    },
-                    {
-                      "name": "guest2",
-                      "description": "Guest 2"
-                    },
-                    {
-                      "name": "guest3",
-                      "description": "Guest 3"
-                    },
-                    {
-                      "name": "guest4",
-                      "description": "Guest 4"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/birthday"
-                },
-                "bonk": {
-                  "description": "Bonk a member.",
-                  "options": [
-                    {
-                      "name": "user",
-                      "description": "The user to bonk",
-                      "required": true
-                    },
-                    {
-                      "name": "text",
-                      "description": "The bonk message"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/bonk"
-                },
-                "disappear": {
-                  "description": "Make a member disappear!",
-                  "options": [
-                    {
-                      "name": "user",
-                      "description": "The user to disappear",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/disappear"
-                },
-                "distractedboyfriend": {
-                  "description": "Get distracted by another member.",
-                  "options": [
-                    {
-                      "name": "distraction",
-                      "description": "The distraction",
-                      "required": true
-                    },
-                    {
-                      "name": "girlfriend",
-                      "description": "The girlfriend"
-                    },
-                    {
-                      "name": "boyfriend",
-                      "description": "The boyfriend"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/distractedboyfriend"
-                },
-                "guyslook": {
-                  "description": "Show some guys an image",
-                  "options": [
-                    {
-                      "name": "user",
-                      "description": "The user"
+                      "name": "mode",
+                      "description": "Bulge or pinch"
                     },
                     {
                       "name": "image-attachment",
@@ -6006,176 +6302,28 @@
                       "description": "An image"
                     }
                   ],
-                  "prefixCommand": "images/imagefun/avatars/guyslook"
+                  "prefixCommand": "images/imagefun/distortions/bulge"
                 },
-                "kickface": {
-                  "description": "Kick a member in the face!",
+                "gmagick": {
+                  "description": "Content aware scales an image. Outputs a GIF.",
                   "options": [
                     {
-                      "name": "reciever",
-                      "description": "The kick reciever",
-                      "required": true
+                      "name": "image-attachment",
+                      "description": "An image"
                     },
                     {
-                      "name": "giver",
-                      "description": "The kick giver"
+                      "name": "image-string",
+                      "description": "An image"
                     }
                   ],
-                  "prefixCommand": "images/imagefun/avatars/kickface"
+                  "prefixCommand": "images/imagefun/distortions/gmagick"
                 },
-                "marry": {
-                  "description": "Marry two members.",
+                "magick": {
+                  "description": "Content aware scales an image. Outputs a static image.",
                   "options": [
                     {
-                      "name": "bride",
-                      "description": "The bride",
-                      "required": true
-                    },
-                    {
-                      "name": "groom",
-                      "description": "The groom"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/marry"
-                },
-                "monkey": {
-                  "description": "Turn some members into a group of monkeys!",
-                  "options": [
-                    {
-                      "name": "monkey1",
-                      "description": "Monkey 1",
-                      "required": true
-                    },
-                    {
-                      "name": "monkey2",
-                      "description": "Monkey 2"
-                    },
-                    {
-                      "name": "monkey3",
-                      "description": "Monkey 3"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/monkey"
-                },
-                "monkeyband": {
-                  "description": "Turn some members into a band of monkeys!",
-                  "options": [
-                    {
-                      "name": "monkey1",
-                      "description": "Monkey 1",
-                      "required": true
-                    },
-                    {
-                      "name": "monkey2",
-                      "description": "Monkey 2"
-                    },
-                    {
-                      "name": "monkey3",
-                      "description": "Monkey 3"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/monkeyband"
-                },
-                "silence": {
-                  "description": "Silence a member.",
-                  "options": [
-                    {
-                      "name": "user",
-                      "description": "The user to silence",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/silence"
-                },
-                "slap": {
-                  "description": "Slap a member!",
-                  "options": [
-                    {
-                      "name": "reciever",
-                      "description": "The slap reciever",
-                      "required": true
-                    },
-                    {
-                      "name": "giver",
-                      "description": "The slap giver"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/slap"
-                },
-                "snap": {
-                  "description": "Snap a user out of existence.",
-                  "options": [
-                    {
-                      "name": "peter",
-                      "description": "Peter Parker",
-                      "required": true
-                    },
-                    {
-                      "name": "thanos",
-                      "description": "Thanos"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/snap"
-                },
-                "unband": {
-                  "description": "Remove members from a band.",
-                  "options": [
-                    {
-                      "name": "user1",
-                      "description": "Band member 1",
-                      "required": true
-                    },
-                    {
-                      "name": "user2",
-                      "description": "Band member 2"
-                    },
-                    {
-                      "name": "user3",
-                      "description": "Band member 3"
-                    },
-                    {
-                      "name": "user4",
-                      "description": "Band member 4"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/unband"
-                },
-                "yeet": {
-                  "description": "Throw a member really far.",
-                  "cooldown": 3,
-                  "options": [
-                    {
-                      "name": "reciever",
-                      "description": "The yeet reciever",
-                      "required": true
-                    },
-                    {
-                      "name": "yeeter",
-                      "description": "The yeeter"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/avatars/yeet"
-                }
-              }
-            },
-            "texts": {
-              "commands": {
-                "addtext": {
-                  "description": [
-                    "Add some text to the top, middle, or bottom of an image.",
-                    "Defaults to the top of the image",
-                    "Use the middle or bottom aliases to put the text in the middle or on the bottom."
-                  ],
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The caption text",
-                      "required": true
-                    },
-                    {
-                      "name": "location",
-                      "description": "The location of the text"
+                      "name": "intensity",
+                      "description": "The magick intensity"
                     },
                     {
                       "name": "image-attachment",
@@ -6186,16 +6334,26 @@
                       "description": "An image"
                     }
                   ],
-                  "prefixCommand": "images/imagefun/texts/toptext"
+                  "prefixCommand": "images/imagefun/distortions/magick"
                 },
-                "breakingnews": {
-                  "description": "Add a breaking news bar to an image.",
-                  "cooldown": 5,
+                "twist": {
+                  "description": "Apply a twist effect to an image.",
                   "options": [
                     {
-                      "name": "text",
-                      "description": "The text to put on the sign",
-                      "required": true
+                      "name": "degrees",
+                      "description": "The degrees to twist"
+                    },
+                    {
+                      "name": "x",
+                      "description": "The X coordinate to twist from"
+                    },
+                    {
+                      "name": "y",
+                      "description": "The Y coordinate to twist from"
+                    },
+                    {
+                      "name": "radius",
+                      "description": "How large the twist radius should be"
                     },
                     {
                       "name": "image-attachment",
@@ -6206,195 +6364,209 @@
                       "description": "An image"
                     }
                   ],
-                  "prefixCommand": "images/imagefun/texts/breakingnews"
-                },
-                "caption": {
-                  "description": "Add a caption to an image.",
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The caption text",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/caption"
-                },
-                "certifiedmoment": {
-                  "description": "Make a certified moment meme.",
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The moment that is certified",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/certifiedmoment"
-                },
-                "changemymind": {
-                  "description": "Create a \"change my mind\" meme.",
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The text to put on the sign",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/changemymind"
-                },
-                "notification": {
-                  "description": "Add a custom Discord notification to an image.",
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The notification",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/notification"
-                },
-                "peter": {
-                  "description": [
-                    "Add Peter Griffin to an image.",
-                    "Use \"peter2\" to put him on the opposite side."
-                  ],
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The text for Peter to say",
-                      "required": true
-                    },
-                    {
-                      "name": "sideswap",
-                      "description": "Swap the side Peter is on"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/peter"
-                },
-                "sneak": {
-                  "description": [
-                    "Add the \"Sneak 100\" image to the bottom of an image.",
-                    "The text is customisable."
-                  ],
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The sneak text",
-                      "required": true
-                    },
-                    {
-                      "name": "number",
-                      "description": "The sneak value"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/sneak"
-                },
-                "stuff": {
-                  "description": [
-                    "Add Robert Downey Jr. to an image.",
-                    "Use \"stuff2\" to put him on the opposite side."
-                  ],
-                  "cooldown": 5,
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The text for Robert to say",
-                      "required": true
-                    },
-                    {
-                      "name": "sideswap",
-                      "description": "Swap the side Robert is on"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/stuff"
-                },
-                "tombstone": {
-                  "description": "Put some text on a tombstone.",
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The text to put on the tombstone",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/tombstone"
-                },
-                "valentines": {
-                  "description": "Generate a minecraft valentines image for that special someone in your life.",
-                  "options": [
-                    {
-                      "name": "user",
-                      "description": "Your valentine",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/valentines"
-                },
-                "what": {
-                  "description": "What.",
-                  "options": [
-                    {
-                      "name": "text",
-                      "description": "The what text",
-                      "required": true
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/texts/what"
+                  "prefixCommand": "images/imagefun/distortions/twist"
                 }
               }
             }
           },
           "commands": {
+            "blockify": {
+              "description": [
+                "Turn an image into Minecraft block art!",
+                "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+              ],
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "type",
+                  "description": "The blockify type"
+                },
+                {
+                  "name": "stats",
+                  "description": "Show the texture stats"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/blockify"
+            },
+            "blurplify": {
+              "description": "Turn an image blurple!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/blurplify"
+            },
+            "darkmodelightmode": {
+              "description": [
+                "Merge two images into one, where a different one shows if you are using dark or light mode.",
+                "The first image will be visible while in dark mode, the second while in light mode."
+              ],
+              "options": [
+                {
+                  "name": "dark-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "dark-image-string",
+                  "description": "An image"
+                },
+                {
+                  "name": "light-image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "light-image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/darkmodelightmode"
+            },
+            "dumpy": {
+              "description": "Make an image into an Among Us Dumpy gif!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/dumpy"
+            },
+            "emojify": {
+              "description": "Turn an image into a bunch of emojis!",
+              "cooldown": 3,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/emojify"
+            },
+            "hiddenimage": {
+              "description": [
+                "Hide an image in plain sight.",
+                "Colour modes:\n- dark\n- light"
+              ],
+              "options": [
+                {
+                  "name": "mode",
+                  "description": "The theme colour to use"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/hiddenimage"
+            },
+            "impostor": {
+              "description": [
+                "Create a custom Among Us character!",
+                "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
+              ],
+              "options": [
+                {
+                  "name": "outline",
+                  "description": "The outline colour",
+                  "required": true
+                },
+                {
+                  "name": "hair",
+                  "description": "The hair colour",
+                  "required": true
+                },
+                {
+                  "name": "head",
+                  "description": "The head colour",
+                  "required": true
+                },
+                {
+                  "name": "visor",
+                  "description": "The visor colour",
+                  "required": true
+                },
+                {
+                  "name": "body",
+                  "description": "The body colour",
+                  "required": true
+                },
+                {
+                  "name": "backpack",
+                  "description": "The backpack colour",
+                  "required": true
+                },
+                {
+                  "name": "left-leg",
+                  "description": "The left leg colour",
+                  "required": true
+                },
+                {
+                  "name": "right-leg",
+                  "description": "The right leg colour",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/impostor"
+            },
+            "jpegify": {
+              "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100",
+              "options": [
+                {
+                  "name": "quality",
+                  "description": "The JPEG quality"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/jpegify"
+            },
+            "rainbow": {
+              "description": "Make an image cycle through the rainbow!",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/rainbow"
+            },
             "scan": {
               "description": [
                 "Apply a time warp scan effect to a gif.",
@@ -6425,6 +6597,74 @@
               ],
               "prefixCommand": "images/imagefun/scan"
             },
+            "spin": {
+              "description": "Make an image spin!",
+              "options": [
+                {
+                  "name": "speed",
+                  "description": "Spin speed"
+                },
+                {
+                  "name": "expand-enabled",
+                  "description": "Do not cut the corners off"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/spin"
+            },
+            "squarify": {
+              "description": [
+                "Squarifies an image.",
+                "The first number is the square size, the second is the size of the gap between each square."
+              ],
+              "options": [
+                {
+                  "name": "square-size",
+                  "description": "The size of the squares"
+                },
+                {
+                  "name": "gap-size",
+                  "description": "The size of the gaps between the squares"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/squarify"
+            },
+            "textify": {
+              "description": [
+                "Turn an image into ascii art using the braille characters.",
+                "Available modes are \"edge\" and \"average\"."
+              ],
+              "options": [
+                {
+                  "name": "mode",
+                  "description": "The mode"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/textify"
+            },
             "warp": {
               "description": [
                 "Apply a delay warp effect to a gif.",
@@ -6450,6 +6690,43 @@
                 }
               ],
               "prefixCommand": "images/imagefun/warp"
+            },
+            "wynem": {
+              "description": [
+                "Create a custom Wynem logo!",
+                "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
+              ],
+              "options": [
+                {
+                  "name": "vertical-bars",
+                  "description": "The vertical bar colour",
+                  "required": true
+                },
+                {
+                  "name": "horizontal-bars",
+                  "description": "The horizontal bar colour",
+                  "required": true
+                },
+                {
+                  "name": "background",
+                  "description": "The background colour",
+                  "required": true
+                },
+                {
+                  "name": "shadow",
+                  "description": "The shadow colour",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/wynem"
             }
           }
         },
@@ -6744,6 +7021,241 @@
                 }
               ],
               "prefixCommand": "images/manipulation/trim"
+            }
+          }
+        },
+        "imagetext": {
+          "commands": {
+            "addtext": {
+              "description": [
+                "Add some text to the top, middle, or bottom of an image.",
+                "Defaults to the top of the image",
+                "Use the middle or bottom aliases to put the text in the middle or on the bottom."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The caption text",
+                  "required": true
+                },
+                {
+                  "name": "location",
+                  "description": "The location of the text"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/toptext"
+            },
+            "breakingnews": {
+              "description": "Add a breaking news bar to an image.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text to put on the sign",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/breakingnews"
+            },
+            "caption": {
+              "description": "Add a caption to an image.",
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The caption text",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/caption"
+            },
+            "certifiedmoment": {
+              "description": "Make a certified moment meme.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The moment that is certified",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/certifiedmoment"
+            },
+            "changemymind": {
+              "description": "Create a \"change my mind\" meme.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text to put on the sign",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/changemymind"
+            },
+            "notification": {
+              "description": "Add a custom Discord notification to an image.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The notification",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/notification"
+            },
+            "peter": {
+              "description": [
+                "Add Peter Griffin to an image.",
+                "Use \"peter2\" to put him on the opposite side."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text for Peter to say",
+                  "required": true
+                },
+                {
+                  "name": "sideswap",
+                  "description": "Swap the side Peter is on"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/peter"
+            },
+            "sneak": {
+              "description": [
+                "Add the \"Sneak 100\" image to the bottom of an image.",
+                "The text is customisable."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The sneak text",
+                  "required": true
+                },
+                {
+                  "name": "number",
+                  "description": "The sneak value"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/sneak"
+            },
+            "stuff": {
+              "description": [
+                "Add Robert Downey Jr. to an image.",
+                "Use \"stuff2\" to put him on the opposite side."
+              ],
+              "cooldown": 5,
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text for Robert to say",
+                  "required": true
+                },
+                {
+                  "name": "sideswap",
+                  "description": "Swap the side Robert is on"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/stuff"
+            },
+            "tombstone": {
+              "description": "Put some text on a tombstone.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text to put on the tombstone",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/tombstone"
+            },
+            "valentines": {
+              "description": "Generate a minecraft valentines image for that special someone in your life.",
+              "options": [
+                {
+                  "name": "user",
+                  "description": "Your valentine",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/valentines"
+            },
+            "what": {
+              "description": "What.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The what text",
+                  "required": true
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/what"
             }
           }
         },
