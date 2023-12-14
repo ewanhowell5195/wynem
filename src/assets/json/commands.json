@@ -804,7 +804,7 @@
                     "setfps"
                   ],
                   "arguments": "[frameRate] {gif}",
-                  "description": "Change the fps of a GIF.",
+                  "description": "Change the frame rate of a GIF.",
                   "slashCommand": "image/animation/framerate"
                 },
                 "loops": {
@@ -5419,7 +5419,7 @@
                   "prefixCommand": "images/animation/frame"
                 },
                 "framerate": {
-                  "description": "Change the fps of a GIF.",
+                  "description": "Change the frame rate of a GIF.",
                   "options": [
                     {
                       "name": "frame-rate",
