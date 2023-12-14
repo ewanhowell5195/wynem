@@ -785,15 +785,6 @@
                   "description": "Combine two GIFs so that one plays after the other.",
                   "slashCommand": "image/animation/combinegif"
                 },
-                "fps": {
-                  "aliases": [
-                    "framespersecond",
-                    "framerate"
-                  ],
-                  "arguments": "[frameRate] {gif}",
-                  "description": "Change the fps of a GIF.",
-                  "slashCommand": "image/animation/fps"
-                },
                 "frame": {
                   "aliases": [
                     "frames"
@@ -805,6 +796,16 @@
                     "\"first\" gives the first frame, and \"last\" gives the last frame."
                   ],
                   "slashCommand": "image/animation/frame"
+                },
+                "framerate": {
+                  "aliases": [
+                    "framespersecond",
+                    "fps",
+                    "setfps"
+                  ],
+                  "arguments": "[frameRate] {gif}",
+                  "description": "Change the fps of a GIF.",
+                  "slashCommand": "image/animation/framerate"
                 },
                 "loops": {
                   "aliases": [
@@ -5395,24 +5396,6 @@
                   ],
                   "prefixCommand": "images/animation/combinegif"
                 },
-                "fps": {
-                  "description": "Change the fps of a GIF.",
-                  "options": [
-                    {
-                      "name": "frame-rate",
-                      "description": "The frame rate"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/fps"
-                },
                 "frame": {
                   "description": [
                     "Get a specific frame of a GIF.",
@@ -5434,6 +5417,24 @@
                     }
                   ],
                   "prefixCommand": "images/animation/frame"
+                },
+                "framerate": {
+                  "description": "Change the fps of a GIF.",
+                  "options": [
+                    {
+                      "name": "frame-rate",
+                      "description": "The frame rate"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/framerate"
                 },
                 "loops": {
                   "description": [
