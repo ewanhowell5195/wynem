@@ -1536,6 +1536,14 @@
                         "\"expand\" puts the gun over the edge of the image"
                       ]
                     },
+                    "jolly": {
+                      "aliases": [
+                        "christmas"
+                      ],
+                      "arguments": "{image}",
+                      "description": "Make an image jolly!",
+                      "slashCommand": "imagefun/overlays/jolly"
+                    },
                     "petpet": {
                       "aliases": [
                         "pet"
@@ -4000,7 +4008,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/tickets/addtype"
                 },
                 "edittickettype": {
                   "aliases": [
@@ -4015,7 +4024,8 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/tickets/edittype"
                 },
                 "removetickets": {
                   "aliases": [
@@ -4025,18 +4035,20 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/tickets/remove"
                 },
                 "removetickettype": {
                   "aliases": [
                     "tickettyperemove"
                   ],
                   "arguments": "[ticketTypeId]",
-                  "description": "Remove the a ticket type from the tickets system.",
+                  "description": "Remove a ticket type from the tickets system.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/tickets/removetype"
                 },
                 "settickets": {
                   "aliases": [
@@ -4054,7 +4066,8 @@
                   ],
                   "botPermissions": [
                     "Manage Channels"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/tickets/set"
                 },
                 "viewtickets": {
                   "aliases": [
@@ -4067,7 +4080,8 @@
                   "description": "View the servers tickets system and the ticket types.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "server/viewtickets"
                 }
               }
             }
@@ -6367,6 +6381,24 @@
                   "prefixCommand": "images/imagefun/distortions/twist"
                 }
               }
+            },
+            "overlays": {
+              "commands": {
+                "jolly": {
+                  "description": "Make an image jolly!",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/jolly"
+                }
+              }
             }
           },
           "commands": {
@@ -8091,6 +8123,16 @@
             "viewserverlinks": {
               "description": "View the current server links for the current server.",
               "prefixCommand": "server/serverlinking/viewserverlinks"
+            },
+            "viewtickets": {
+              "description": "View the servers tickets system and the ticket types.",
+              "options": [
+                {
+                  "name": "ticket-type",
+                  "description": "The ticket type"
+                }
+              ],
+              "prefixCommand": "server/tickets/viewtickets"
             }
           }
         },
@@ -8422,6 +8464,87 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serverinvites/removeserverinvite"
+                }
+              }
+            },
+            "tickets": {
+              "commands": {
+                "addtype": {
+                  "description": [
+                    "Add a new ticket type.",
+                    "The ticket types are the options that the user can select from when creating a ticket.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nError: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/tickets/addtickettype"
+                },
+                "edittype": {
+                  "description": [
+                    "Edit a ticket type.",
+                    "Leave fields blank to leave them unedited.",
+                    "Only limited editing is possible. For editing that removes stuff, changes type, or adds new entry fields, instead remove and re-add the ticket type."
+                  ],
+                  "options": [
+                    {
+                      "name": "ticket-type",
+                      "description": "The ticket type",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/tickets/edittickettype"
+                },
+                "remove": {
+                  "description": "Remove the tickets system from the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/tickets/removetickets"
+                },
+                "removetype": {
+                  "description": "Remove a ticket type from the tickets system.",
+                  "options": [
+                    {
+                      "name": "ticket-type",
+                      "description": "The ticket type",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/tickets/removetickettype"
+                },
+                "set": {
+                  "description": [
+                    "Set a channel and role to be used for the tickets system.",
+                    "The channel is where users will be able to create tickets. The channel should be an empty channel. The permissions will be changed so users cannot send messages there.",
+                    "The role is the role that will be managing the tickets. When a ticket is created, the role members get added to the ticket, and a random role member gets pinged."
+                  ],
+                  "options": [
+                    {
+                      "name": "channel",
+                      "description": "The ticket channel",
+                      "required": true
+                    },
+                    {
+                      "name": "role",
+                      "description": "The role for handling tickets",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Channels"
+                  ],
+                  "prefixCommand": "server/tickets/settickets"
                 }
               }
             },
