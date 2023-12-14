@@ -766,7 +766,7 @@
                     "pingpong"
                   ],
                   "arguments": "{gif}",
-                  "description": "Make a gif play forwards, then backwards, in a loop.",
+                  "description": "Make a GIF play forwards, then backwards, in a loop.",
                   "slashCommand": "image/animation/boomerang"
                 },
                 "combinegif": {
@@ -782,8 +782,17 @@
                     "gifmerge"
                   ],
                   "arguments": "{gif} {gif}",
-                  "description": "Combine two gifs so that one plays after the other.",
+                  "description": "Combine two GIFs so that one plays after the other.",
                   "slashCommand": "image/animation/combinegif"
+                },
+                "fps": {
+                  "aliases": [
+                    "framespersecond",
+                    "framerate"
+                  ],
+                  "arguments": "[frameRate] {gif}",
+                  "description": "Change the fps of a GIF.",
+                  "slashCommand": "image/animation/fps"
                 },
                 "frame": {
                   "aliases": [
@@ -791,8 +800,8 @@
                   ],
                   "arguments": "[frame] {gif}",
                   "description": [
-                    "Get a specific frame of a gif.",
-                    "Leave frame blank to show how many frames a gif has.",
+                    "Get a specific frame of a GIF.",
+                    "Leave frame blank to show how many frames a GIF has.",
                     "\"first\" gives the first frame, and \"last\" gives the last frame."
                   ],
                   "slashCommand": "image/animation/frame"
@@ -803,7 +812,7 @@
                   ],
                   "arguments": "[loopCount] {gif}",
                   "description": [
-                    "Set the number of times a gif should loop.",
+                    "Set the number of times a GIF should loop.",
                     "-1      - Infinite loops\n0-65535 - Exact loop amount"
                   ],
                   "slashCommand": "image/animation/loops"
@@ -813,7 +822,7 @@
                     "backwards"
                   ],
                   "arguments": "{gif}",
-                  "description": "Make a gif play in reverse.",
+                  "description": "Make a GIF play in reverse.",
                   "slashCommand": "image/animation/reverse"
                 },
                 "spritesheet": {
@@ -5351,7 +5360,7 @@
                   "prefixCommand": "images/animation/animate"
                 },
                 "boomerang": {
-                  "description": "Make a gif play forwards, then backwards, in a loop.",
+                  "description": "Make a GIF play forwards, then backwards, in a loop.",
                   "options": [
                     {
                       "name": "image-attachment",
@@ -5365,7 +5374,7 @@
                   "prefixCommand": "images/animation/boomerang"
                 },
                 "combinegif": {
-                  "description": "Combine two gifs so that one plays after the other.",
+                  "description": "Combine two GIFs so that one plays after the other.",
                   "options": [
                     {
                       "name": "image1-attachment",
@@ -5386,10 +5395,28 @@
                   ],
                   "prefixCommand": "images/animation/combinegif"
                 },
+                "fps": {
+                  "description": "Change the fps of a GIF.",
+                  "options": [
+                    {
+                      "name": "frame-rate",
+                      "description": "The frame rate"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/animation/fps"
+                },
                 "frame": {
                   "description": [
-                    "Get a specific frame of a gif.",
-                    "Leave frame blank to show how many frames a gif has.",
+                    "Get a specific frame of a GIF.",
+                    "Leave frame blank to show how many frames a GIF has.",
                     "\"first\" gives the first frame, and \"last\" gives the last frame."
                   ],
                   "options": [
@@ -5410,7 +5437,7 @@
                 },
                 "loops": {
                   "description": [
-                    "Set the number of times a gif should loop.",
+                    "Set the number of times a GIF should loop.",
                     "-1      - Infinite loops\n0-65535 - Exact loop amount"
                   ],
                   "options": [
@@ -5430,7 +5457,7 @@
                   "prefixCommand": "images/animation/loops"
                 },
                 "reverse": {
-                  "description": "Make a gif play in reverse.",
+                  "description": "Make a GIF play in reverse.",
                   "options": [
                     {
                       "name": "image-attachment",
