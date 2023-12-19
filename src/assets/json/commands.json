@@ -4000,9 +4000,9 @@
             },
             "tickets": {
               "description": [
-                "Tickets are a system that allows users to create private tickets in a server that can be managed by users with a special role for handling tickets",
+                "Tickets is a system that allows users to create private tickets in a server that can be managed by users with a special role for handling tickets.",
                 "Tickets use their own channel where a message exists that allows users to create and close tickets.",
-                "When a user creates a ticket, they are shown a list of customisable ticket types, where they select the one relevant to their issue. Upon selecting the ticket type, one of two things will happen:\n\nIf the ticket type is set to \"Create\", they will be presented with a customisable form that they then fill out with information related to the ticket type. Upon filling out the form, the ticket will be created.\n\nIf the ticket type is set to \"Error\", they will be shown a customisable message that explains why the ticket could not be created, useful for stopping people from creating tickets about certain topics."
+                "When a user creates a ticket, they are shown a list of customisable ticket types, where they select the one relevant to their issue. Upon selecting the ticket type, one of two things will happen:\n\nIf the ticket type is set to \"Create\" mode, they will be presented with a customisable form that they then fill out with information related to the ticket type. Upon filling out the form, the ticket will be created.\n\nIf the ticket type is set to \"Deny\" mode, they will be shown a customisable message that explains why the ticket could not be created, useful for stopping people from creating tickets about certain topics."
               ],
               "commands": {
                 "addtickettype": {
@@ -4012,7 +4012,7 @@
                   "description": [
                     "Add a new ticket type.",
                     "The ticket types are the options that the user can select from when creating a ticket.",
-                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nError: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
                     "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
                   ],
                   "permissions": [
@@ -8501,7 +8501,7 @@
                   "description": [
                     "Add a new ticket type.",
                     "The ticket types are the options that the user can select from when creating a ticket.",
-                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nError: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
                     "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
                   ],
                   "permissions": [

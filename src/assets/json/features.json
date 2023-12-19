@@ -35,5 +35,9 @@
   {
     "id": "rules",
     "description": "Add your server's rules into Wynem so that you can easily list them all, individually quote rules, and create a stylised rules message for your rules channel."
+  },
+  {
+    "id": "tickets",
+    "description": "A system that allows users to create private tickets in a server that can be managed by users with a special role for handling tickets."
   }
 ]

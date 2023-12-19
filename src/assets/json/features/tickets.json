@@ -1,0 +1,657 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "tickets", "settickets"],
+      ["server", "tickets", "viewtickets"],
+      ["server", "tickets", "removetickets"],
+      ["server", "tickets", "addtickettype"],
+      ["server", "tickets", "edittickettype"],
+      ["server", "tickets", "removetickettype"]
+    ],
+    "slash": [
+      ["serverconfig", "tickets", "set"],
+      ["server", "viewtickets"],
+      ["serverconfig", "tickets", "remove"],
+      ["serverconfig", "tickets", "addtype"],
+      ["serverconfig", "tickets", "edittype"],
+      ["serverconfig", "tickets", "removetype"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are tickets?"
+    },
+    "Tickets is a system that allows server owners to create a channel where users will be able to create tickets.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Tickets", "/assets/images/icons/faq.webp"],
+        "description": "Click below t create a new <#tickets> ticket!",
+        "buttons": [
+          {
+            "label": "Create Ticket",
+            "emoji": "plus",
+            "style": "green"
+          },
+          {
+            "label": "Close Ticket",
+            "emoji": "door",
+            "style": "red"
+          }
+        ]
+      }
+    },
+    "Tickets use their own channel where a message exists that allows users to create and close tickets.",
+    "When a user creates a ticket, they are shown a list of customisable ticket types, where they select the one relevant to their issue. Upon selecting the ticket type, one of two things could happen depending on the ticket types mode.",
+    {
+      "type": "heading",
+      "text": "How to use tickets"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Enabling Tickets",
+          "content": [
+            "To enable tickets in your server, run the <code class=\"command prefix\">e!settickets &lt;channel&gt; &lt;role&gt;</code><code class=\"command slash\">/serverconfig tickets set channel:&lt;channel&gt; role:&lt;role&gt;</code>. For example: <code class=\"command prefix\">e!settickets #tickets @support</code><code class=\"command slash\">/serverconfig tickets set channel:#tickets role:@Support</code>",
+            "The channel is the channel you would like tickets to be created in.\nThe role is the role that you will give to users that you want to handle the tickets. Users with this role will be added to tickets when one is created, and one of them will be randomly assigned to handle the ticket.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Tickets set",
+                "description": "Tickets have been set to <#tickets> with the role <@&Support>"
+              }
+            },
+            "After running the command, tickets will now be enabled in the selected channel!",
+            "In the tickets channel, a ticket creation message is sent, and the channel permissions get changed. Regular users are no longer allowed to send messages or create threads there.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Tickets", "/assets/images/icons/faq.webp"],
+                "description": "Click below t create a new <#tickets> ticket!",
+                "buttons": [
+                  {
+                    "label": "Create Ticket",
+                    "emoji": "plus",
+                    "style": "green"
+                  },
+                  {
+                    "label": "Close Ticket",
+                    "emoji": "door",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "Even though tickets have been enabled, they will not function until you add at least one ticket type."
+          ]
+        },
+        {
+          "name": "Viewing Tickets",
+          "content": [
+            "To see what channel and role the tickets system is set up for, you can use the <code class=\"command prefix\">e!viewtickets</code><code class=\"command slash\">/server viewtickets</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Tickets", "/assets/images/icons/faq.webp"],
+                "description": "Tickets are enabled in <#tickets> and the role for handling tickets is <@&Support>\n\nGo to <#tickets> to create a ticket!"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing Tickets",
+          "content": [
+            "To remove the tickets system, use the <code class=\"command prefix\">e!removetickets</code><code class=\"command slash\">/serverconfig tickets remove</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the tickets system from the server?",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "You will be prompted to confirm you want to remove the tickets system. Click `Remove` to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Tickets system removed",
+                "description": "The tickets system has been removed from the server"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Creating Tickets",
+          "content": [
+            "To create a ticket, head over to the ticket channel. The channel can be found by running the <code class=\"command prefix\">e!viewtickets</code><code class=\"command slash\">/server viewtickets</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Tickets", "/assets/images/icons/faq.webp"],
+                "description": "Click below to create a new <#tickets> ticket!",
+                "buttons": [
+                  {
+                    "label": "Create Ticket",
+                    "emoji": "plus",
+                    "style": "green"
+                  },
+                  {
+                    "label": "Close Ticket",
+                    "emoji": "door",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "Press the `Create Ticket` button to start creating a new ticket.",
+            "You will be shows a select menu where you then select ticket type that you want to create.",
+            {
+              "type": "embed",
+              "data": {
+                "select": {
+                  "placeholder": "Please select a type",
+                  "options": [
+                    ["Ban Appeal", "You would like to submit a ban appeal"],
+                    ["Ban Application", "You would like to get banned"]
+                  ]
+                },
+                "buttons": [
+                  {
+                    "label": "Create",
+                    "emoji": "plus",
+                    "style": "green"
+                  }
+                ]
+              }
+            },
+            "After making a selection and clicking `Create`, you will be presented with a modal where you can fill in any relevant information for your ticket.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Ticket: Ban Appeal",
+                "rows": [
+                  ["discord username", "Your banned Discord account username", true],
+                  ["why were you banned?", "What was the reason that you were banned?", true, 1000],
+                  ["why should you be unbanned?", "For what reason should you be unbanned?", true, 1000]
+                ]
+              }
+            },
+            "After completing the form and submitting it, a new ticket will be created!",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ticket created",
+                "description": "A ticket has been created! <#[Ban Appeal] Ewan's Ticket>"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Closing Tickets",
+          "content": [
+            "To close a ticket, use the `Close Ticket` button in the tickets channel.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Tickets", "/assets/images/icons/faq.webp"],
+                "description": "Click below to create a new <#tickets> ticket!",
+                "buttons": [
+                  {
+                    "label": "Create Ticket",
+                    "emoji": "plus",
+                    "style": "green"
+                  },
+                  {
+                    "label": "Close Ticket",
+                    "emoji": "door",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "Clicking this will close your open ticket.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ticket closed",
+                "description": "The ticket can be reopened at any time via the channel threads menu"
+              }
+            },
+            "Tickets can also be closed by using the <code class=\"command prefix\">e!close</code><code class=\"command slash\">/close</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Ticket closed by <@Ewan>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ticket types"
+    },
+    "Ticket types are the different options that a user gets to select when creating a ticket. These control whether the ticket can be created, and what information needs to be filled out from them before the ticket is created.",
+    {
+      "type": "heading",
+      "text": "Ticket type modes"
+    },
+    "Ticket types have different modes that change their behaviour when a user tries to create a ticket using that ticket type.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Create", "If the ticket type is set to \"Create\" mode, they will be presented with a customisable form that they then fill out with information related to the ticket type. Upon filling out the form, the ticket will be created."],
+        ["Deny", "If the ticket type is set to \"Deny\" mode, they will be shown a customisable message that explains why the ticket could not be created, useful for stopping people from creating tickets about certain topics."]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use ticket types"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding Ticket Types",
+          "content": [
+            "To add a new ticket type, first run the <code class=\"command prefix\">e!addtickettype</code><code class=\"command slash\">/serverconfig tickets addtype</code> command, and then click the button to start.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to add a new ticket type",
+                "buttons": [{
+                  "label": "Add new ticket type",
+                  "emoji": "pencil"
+                }]
+              }
+            },
+            "Next, a modal will appear, where you can enter the information for the ticket type.\nFill in this modal and then click submit.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Ticket Type Builder",
+                "rows": [
+                  ["id", "A short ID that is added before the thread names", true],
+                  ["name", "The name of the ticket type", true],
+                  ["the description of the ticket", "The description of the ticket type", true, 52],
+                  ["sort priority number", "Higher priority appears first in the list"]
+                ]
+              }
+            },
+            "The `Sort Priority Number` controls the order that the ticket types will appear in the select menu that users use to create tickets.",
+            "You will then be asked to pick the mode for the ticket type. Select the type to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ticket type mode",
+                "description": "What would you like this ticket type to do?",
+                "fields": [
+                  ["Create", "Allow the user to fill in a form and create a ticket"],
+                  ["Deny", "Deny the ticket creation and show a custom message"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Create"
+                  },
+                  {
+                    "label": "Deny"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "name": "Create mode",
+                  "content": [
+                    "You will be prompted to add a text entry field. These are the individual parts of the form that a user will have to complete before the ticket is created. You can add up to five fields in total.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add a text entry field to the form users will fill out when creating the ticket",
+                        "buttons": [{
+                          "label": "Add field 1",
+                          "emoji": "pencil"
+                        }]
+                      }
+                    },
+                    "Upon clicking the button, you will be shown a modal where you can fill in the detals for the text field.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Ticket Type Builder",
+                        "rows": [
+                          ["entry label (this text)", "The label of the text entry", true],
+                          ["entry placeholder", "The placeholder text (this text)", true],
+                          ["should the text entry be multi-line?", "Yes / No"],
+                          ["should the text entry be required?", "Yes / No"],
+                          ["minimum number of characters for the entry", "Defaults to 3"]
+                        ]
+                      }
+                    },
+                    "After submitting, the ticket type will be have been created!",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Ticket type created",
+                        "description": "The ticket type `Ban Appeal` has been created",
+                        "fields": [
+                          ["Ticket Type ID", "Ban Appeal"],
+                          ["Ticket Type Name", "Ban Appeal"],
+                          ["Ticket Type Description", "You would like to submit a ban appeal"],
+                          ["Ticket Type Sort Priority", "0"],
+                          ["Ticket Type Mode", "Create"],
+                          ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
+                          ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 32```"],
+                          ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 3```"]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Deny mode",
+                  "content": [
+                    "You will be prompted to add the reason the ticket could not be created. This is a message that is shown to the user when they attempt to create a ticket using this ticket type.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button set the reason the ticket could not be created",
+                        "buttons": [{
+                          "label": "Set denial message",
+                          "emoji": "pencil"
+                        }]
+                      }
+                    },
+                    "Upon clicking the button, you will be shown a modal where you can fill in the detals for the denial message.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Ticket Type Builder",
+                        "rows": [
+                          ["title", "The title", true],
+                          ["message", "The reason the ticket could not be created", true, 512]
+                        ]
+                      }
+                    },
+                    "After submitting, the ticket type will be have been created!",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Ticket type created",
+                        "description": "The ticket type `Ban Appeal` has been created",
+                        "fields": [
+                          ["Ticket Type ID", "Ban Appeal"],
+                          ["Ticket Type Name", "Ban Appeal"],
+                          ["Ticket Type Description", "You would like to submit a ban appeal"],
+                          ["Ticket Type Sort Priority", "0"],
+                          ["Ticket Type Mode", "Deny"],
+                          ["Denial Title", "Unable to create ban appeal"],
+                          ["Denial Message", "You must have ban evaded to create this ticket. Ban evading is against the Discord Terms of Service. You can stay banned."]
+                        ]
+                      }
+                    },
+                    "When a user tries to create a ticket using this ticket type, they will be denied and shown this denial reason.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "author": ["Your ticket could not be created", "/assets/images/emojis/error.webp"],
+                        "title": "Unable to create ban appeal",
+                        "description": "You must have ban evaded to create this ticket. Ban evading is against the Discord Terms of Service. You can stay banned.",
+                        "colour": "#DD2E44"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Viewing Ticket Types",
+          "content": [
+            "If you have the permissions to manage the tickets system in the bot, you are able to use the <code class=\"command prefix\">e!viewtickets</code><code class=\"command slash\">/server viewtickets</code> command to view the ticket types.",
+            "Using the command without any arguments will show you a list of the current ticket types.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Tickets", "/assets/images/icons/faq.webp"],
+                "description": "Tickets are enabled in <#tickets> and the role for handling tickets is <@&Support>",
+                "fields": [["Ticket types", "`Ban Appeal`, `Ban Application`"]]
+              }
+            },
+            "To view a specific ticket type, use the command <code class=\"command prefix\">e!viewtickets [type]</code><code class=\"command slash\">/server viewtickets ticket-type:[type]</code> command. For example: <code class=\"command prefix\">e!viewtickets Ban Appeal</code><code class=\"command slash\">/server viewtickets ticket-type:Ban Appeal</code>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Ticket Type", "/assets/images/icons/faq.webp"],
+                "fields": [
+                  ["Ticket Type ID", "Ban Appeal"],
+                  ["Ticket Type Name", "Ban Appeal"],
+                  ["Ticket Type Description", "You would like to submit a ban appeal"],
+                  ["Ticket Type Sort Priority", "0"],
+                  ["Ticket Type Mode", "Create"],
+                  ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
+                  ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 32```"],
+                  ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 3```"]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Editing Ticket Types",
+          "content": [
+            "Ticket types can be edited to a limited degree. To edit a ticket type, first run the <code class=\"command prefix\">e!edittickettype [ticketTypeId]</code><code class=\"command slash\">/serverconfig tickets edittype ticket-type:[ticketTypeId]</code> command. For example: <code class=\"command prefix\">e!edittickettype Ban Appeal</code><code class=\"command slash\">/serverconfig tickets edittype ticket-type:Ban Appeal</code>. Either click the button to edit the listed details, or skip this step.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to edit the ticket type's `ID`, `Name`, `Description`, and `Sort Priority Number`",
+                "buttons": [
+                  {
+                    "label": "Edit ticket type",
+                    "emoji": "pencil"
+                  },
+                  {
+                    "label": "Skip",
+                    "emoji": "arrow_right"
+                  }
+                ]
+              }
+            },
+            "After selecting to edit the ticket type, a modal will appear, where you can update the ticket type's information.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Ticket Type Builder",
+                "rows": [
+                  ["id", "Ban Appeal"],
+                  ["name", "Ban Appeal"],
+                  ["the description of the ticket", "You would like to submit a ban appeal", false, 52],
+                  ["sort priority number", "0"]
+                ]
+              }
+            },
+            "You will then be shown different things depending on what mode the ticket type was originally set to.",
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "name": "Create mode",
+                  "content": [
+                    "You will be prompted to update the text entry fields. You can choose to update them, or skip/finish editing the ticket type.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press a button to edit entry field 1",
+                        "buttons": [
+                          {
+                            "label": "Edit field 1",
+                            "emoji": "pencil"
+                          },
+                          {
+                            "label": "Skip",
+                            "emoji": "arrow_right"
+                          },
+                          {
+                            "label": "Finish",
+                            "emoji": "flag"
+                          }
+                        ]
+                      }
+                    },
+                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated detals for the text field.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Ticket Type Builder",
+                        "rows": [
+                          ["entry label (this text)", "Discord Username"],
+                          ["entry placeholder", "Your banned Discord account username"],
+                          ["should the text entry be multi-line?", "Yes / No"],
+                          ["should the text entry be required?", "true"],
+                          ["minimum number of characters for the entry", "3"]
+                        ]
+                      }
+                    },
+                    "After submitting, the ticket type will be have been updated!",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Ticket type updated",
+                        "description": "The ticket type `Ban Appeal` has been updated",
+                        "fields": [
+                          ["Ticket Type ID", "Ban Appeal"],
+                          ["Ticket Type Name", "Discord Ban Appeal"],
+                          ["Ticket Type Description", "You would like to submit a ban appeal"],
+                          ["Ticket Type Sort Priority", "0"],
+                          ["Ticket Type Mode", "Create"],
+                          ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
+                          ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 64```"],
+                          ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 64```"]
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Deny mode",
+                  "content": [
+                    "You will be prompted to update the reason the ticket could not be created.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button edit the reason the ticket could not be created",
+                        "buttons": [
+                          {
+                            "label": "Set denial message",
+                            "emoji": "pencil"
+                          },
+                          {
+                            "label": "Finish",
+                            "emoji": "flag"
+                          }
+                        ]
+                      }
+                    },
+                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated detals for the denial message.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Ticket Type Builder",
+                        "rows": [
+                          ["title", "Unable to create ban appeal"],
+                          ["message", "You must have ban evaded to create this ticket. Ban evading is against the Discord Terms of Service…", false, 512]
+                        ]
+                      }
+                    },
+                    "After submitting, the ticket type will be have been updated!",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Ticket type created",
+                        "description": "The ticket type `Ban Appeal` has been updated",
+                        "fields": [
+                          ["Ticket Type ID", "Ban Appeal"],
+                          ["Ticket Type Name", "Ban Appeal"],
+                          ["Ticket Type Description", "You would like to submit a ban appeal"],
+                          ["Ticket Type Sort Priority", "0"],
+                          ["Ticket Type Mode", "Deny"],
+                          ["Denial Title", "Unable to create the ban appeal"],
+                          ["Denial Message", "You must have ban evaded on an alt account to create this ticket. Ban evading is against the Discord Terms of Service. You can stay banned."]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Removing Ticket Types",
+          "content": [
+            "To remove ticket types, use the <code class=\"command prefix\">e!removetickettype [ticketTypeId]</code><code class=\"command slash\">/serverconfig tickets removetype ticket-type:[ticketTypeId]</code> command. For example: <code class=\"command prefix\">e!removetickettype Ban Appeal</code><code class=\"command slash\">/serverconfig tickets removetype ticket-type:Ban Appeal</code>",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the ticket type `Ban Appeal` from the tickets system?"
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "userless": true,
+                "author": ["Ticket Type", "/assets/images/icons/faq.webp"],
+                "fields": [
+                  ["Ticket Type ID", "Ban Appeal"],
+                  ["Ticket Type Name", "Ban Appeal"],
+                  ["Ticket Type Description", "You would like to submit a ban appeal"],
+                  ["Ticket Type Sort Priority", "0"],
+                  ["Ticket Type Mode", "Create"],
+                  ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
+                  ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 32```"],
+                  ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 3```"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "You will be prompted to confirm you want to remove the ticket type. Click `Remove` to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ticket type removed",
+                "description": "The ticket type `Ban Appeal` has been removed from the tickets system"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -262,6 +262,20 @@ window.fetchJSON = async name => {
   return true
 }
 
+// select menus
+
+globalThis.openSelects = []
+document.addEventListener("click", e => {
+  const path = e.composedPath()
+  for (const select of openSelects.slice()) {
+    if (!path.some(e => select.includes(e))) {
+      select[0].classList.remove("active")
+      $(select[1]).hide()
+      openSelects.splice(openSelects.indexOf(select), 1)
+    }
+  }
+})
+
 // end
 
 addEventListener("popstate", onLoad)

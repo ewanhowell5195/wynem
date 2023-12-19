@@ -45,9 +45,9 @@ function populateEmbed(embed, text, thumbnail, data) {
 }
 
 export function makeEmbed($, parent, data, args = {}) {
-  let reply, embed, buttons, text, thumbnail
+  let reply, embed, selectContainer, buttons, text, thumbnail
   const container = E("div").addClass("embed-container").append(
-    reply = E("div").addClass("reply-container"),
+    reply = E("div").addClass("reply-container").css("display", "none"),
     E("div").append(
       E("div").addClass("pfp-container").append(
         E("img").addClass(args.outline ? "outline" : undefined).attr("src", "/assets/images/logo/logo.webp")
@@ -66,10 +66,12 @@ export function makeEmbed($, parent, data, args = {}) {
             thumbnail = E("div")
           )
         ),
-        buttons = E("div").addClass("embed-buttons")
+        selectContainer = E("div").addClass("embed-select-container").css("display", "none"),
+        buttons = E("div").addClass("embed-buttons").css("display", "none")
       )
     )
   )
+  if (data.userless) container.addClass("userless")
   populateEmbed(embed, text, thumbnail, data)
   if (data.embeds) for (const data2 of data.embeds) {
     let text2, thumbnail2
@@ -82,7 +84,7 @@ export function makeEmbed($, parent, data, args = {}) {
     populateEmbed(embed2, text2, thumbnail2, data2)
   }
   if (data.reply) {
-    reply.append(
+    reply.css("display", "flex").append(
       E("img").attr("src", data.reply.image),
       E("div").css("color", data.reply.colour).text(data.reply.name),
       E("div").html(parseString(data.reply.message))
@@ -91,12 +93,41 @@ export function makeEmbed($, parent, data, args = {}) {
   if (data.content) {
     E("div").addClass("text-content").html(parseString(data.content)).insertBefore(embed)
   }
+  if (data.select) {
+    selectContainer.css("display", "initial")
+    let text
+    const drop = E("div").addClass("embed-select").append(
+      text = E("div").text(data.select.placeholder).addClass("placeholder"),
+      $("#drop-icon").contents().clone(),
+    ).on("click", e => {
+      const select = $(e.currentTarget)
+      select.toggleClass("active")
+      options.toggle()
+      if (select.hasClass("active")) {
+        openSelects.push([select[0], options[0]])
+      }
+    }).appendTo(selectContainer)
+    const options = E("div").addClass("embed-select-options").hide().appendTo(selectContainer)
+    for (const option of data.select.options) {
+      const div = E("div").append(
+        E("div").text(option[0]),
+        E("div").text(option[1]),
+        $("#check-icon").contents().clone()
+      ).on("click", e => {
+        text.text(option[0]).removeClass("placeholder")
+        drop.click()
+        options.find(".active").removeClass("active")
+        div.addClass("active")
+      }).appendTo(options)
+    }
+  }
   if (data.buttons) {
+    buttons.css("display", "flex")
     for (const button of data.buttons)
     E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(
       button.emoji ? E("img").attr("src", `/assets/images/emojis/${button.emoji}.webp`) : undefined,
       button.label ? E("div").text(button.label) : undefined,
-      button.url ? $("#external-icon").contents().clone() : undefined
+      button.url ? $("#url-icon").contents().clone() : undefined
     ).appendTo(buttons)
   }
   parent.append(container)
@@ -130,7 +161,7 @@ export function makeModal($, parent, data) {
     ),
     modal = E("div").addClass("modal"),
     E("div").addClass("modal-bottom").append(
-      E("div").addClass("modal-close").text("Close"),
+      E("div").addClass("modal-close").text("Cancel"),
       E("div").addClass("modal-submit").text("Submit")
     )
   )
@@ -156,6 +187,7 @@ export function parseString(str) {
   return str.replace(/<command:(.+?)\|(.+?)>/g, '<code class="command prefix">e!$1</code><code class="command slash">/$2</code>')
             .replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
             .replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")
+            .replace(/<@&(.+?)>/g, '<span class="ping role">@$1</span>')
             .replace(/<([@#].+?)>/g, '<span class="ping">$1</span>')
             .replace(/<:(\/.+?)>/g, (s, m) => `<a is="f-a" class="ping" href="/commands/slash${m.replace(/\s/g, "/")}">${m}</a>`)
             .replace(/<:(.+?):>/g, '<img class="emoji" src="/assets/images/emojis/$1.webp" />')
