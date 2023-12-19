@@ -68,7 +68,7 @@
               "type": "embed",
               "data": {
                 "author": ["Tickets", "/assets/images/icons/faq.webp"],
-                "description": "Click below t create a new <#tickets> ticket!",
+                "description": "Click below to create a new <#tickets> ticket!",
                 "buttons": [
                   {
                     "label": "Create Ticket",
