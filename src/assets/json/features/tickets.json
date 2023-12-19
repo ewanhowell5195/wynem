@@ -43,7 +43,6 @@
       }
     },
     "Tickets use their own channel where a message exists that allows users to create and close tickets.",
-    "When a user creates a ticket, they are shown a list of customisable ticket types, where they select the one relevant to their issue. Upon selecting the ticket type, one of two things could happen depending on the ticket types mode.",
     {
       "type": "heading",
       "text": "How to use tickets"
