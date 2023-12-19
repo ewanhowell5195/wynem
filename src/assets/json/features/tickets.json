@@ -54,7 +54,7 @@
           "name": "Enabling Tickets",
           "content": [
             "To enable tickets in your server, run the <code class=\"command prefix\">e!settickets &lt;channel&gt; &lt;role&gt;</code><code class=\"command slash\">/serverconfig tickets set channel:&lt;channel&gt; role:&lt;role&gt;</code> command. For example: <code class=\"command prefix\">e!settickets #tickets @support</code><code class=\"command slash\">/serverconfig tickets set channel:#tickets role:@Support</code>",
-            "The channel is the channel you would like tickets to be created in.\nThe role is the role that you will manually give to users that you want to handle the tickets. Users with this role will be added to tickets when one is created, and one of them will be randomly assigned to handle the ticket.",
+            "The `&lt;channel&gt;` is the channel you would like tickets to be created in.\nThe `&lt;role&gt;` is a role that grants users the ability to handle the tickets. Users with this role will be added to tickets when one is created, and one of them will be randomly assigned to handle the ticket.",
             {
               "type": "embed",
               "data": {
@@ -243,7 +243,7 @@
       "type": "heading",
       "text": "Ticket types"
     },
-    "Ticket types are the different options that a user gets to select when creating a ticket. These control whether the ticket can be created, and what information needs to be filled out from them before the ticket is created.",
+    "Ticket types are the different options that a user gets to select when creating a ticket. These control whether the ticket can be created, and what information the user needs to fill out before their ticket is created.",
     {
       "type": "heading",
       "text": "Ticket type modes"
