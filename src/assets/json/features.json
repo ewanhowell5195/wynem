@@ -38,6 +38,6 @@
   },
   {
     "id": "tickets",
-    "description": "A system that allows users to create private tickets, that get assigned and handled by users with a special role."
+    "description": "A system that allows users to create private tickets, that get assigned to and handled by users with a special role."
   }
 ]
