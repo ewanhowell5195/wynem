@@ -155,7 +155,7 @@
               }
             },
             "Press the `Create Ticket` button to start creating a new ticket.",
-            "You will be shows a select menu where you then select ticket type that you want to create.",
+            "You will be shown a select menu where you can select the ticket type you'd like to use for your ticket.",
             {
               "type": "embed",
               "data": {
@@ -328,7 +328,7 @@
                         }]
                       }
                     },
-                    "Upon clicking the button, you will be shown a modal where you can fill in the detals for the text field.",
+                    "Upon clicking the button, you will be shown a modal where you can fill in the details for the text field.",
                     {
                       "type": "modal",
                       "data": {
@@ -376,7 +376,7 @@
                         }]
                       }
                     },
-                    "Upon clicking the button, you will be shown a modal where you can fill in the detals for the denial message.",
+                    "Upon clicking the button, you will be shown a modal where you can fill in the details for the denial message.",
                     {
                       "type": "modal",
                       "data": {
@@ -513,7 +513,7 @@
                         ]
                       }
                     },
-                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated detals for the text field.",
+                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated details for the text field.",
                     {
                       "type": "modal",
                       "data": {
@@ -567,7 +567,7 @@
                         ]
                       }
                     },
-                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated detals for the denial message.",
+                    "Upon clicking the edit button, you will be shown a modal where you can fill in the updated details for the denial message.",
                     {
                       "type": "modal",
                       "data": {
