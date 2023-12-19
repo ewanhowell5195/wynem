@@ -53,7 +53,7 @@
         {
           "name": "Enabling Tickets",
           "content": [
-            "To enable tickets in your server, run the <code class=\"command prefix\">e!settickets &lt;channel&gt; &lt;role&gt;</code><code class=\"command slash\">/serverconfig tickets set channel:&lt;channel&gt; role:&lt;role&gt;</code>. For example: <code class=\"command prefix\">e!settickets #tickets @support</code><code class=\"command slash\">/serverconfig tickets set channel:#tickets role:@Support</code>",
+            "To enable tickets in your server, run the <code class=\"command prefix\">e!settickets &lt;channel&gt; &lt;role&gt;</code><code class=\"command slash\">/serverconfig tickets set channel:&lt;channel&gt; role:&lt;role&gt;</code> command. For example: <code class=\"command prefix\">e!settickets #tickets @support</code><code class=\"command slash\">/serverconfig tickets set channel:#tickets role:@Support</code>",
             "The channel is the channel you would like tickets to be created in.\nThe role is the role that you will give to users that you want to handle the tickets. Users with this role will be added to tickets when one is created, and one of them will be randomly assigned to handle the ticket.",
             {
               "type": "embed",
