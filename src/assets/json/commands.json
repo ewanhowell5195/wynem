@@ -664,6 +664,10 @@
               "description": "Generate an \"inspirational\" flow of images and quotes.",
               "slashCommand": "fun/flow"
             },
+            "freenitro": {
+              "cooldown": 10,
+              "description": "Get 1 month free nitro!"
+            },
             "hate": {
               "aliases": [
                 "h8"
@@ -754,85 +758,6 @@
             }
           ],
           "categories": {
-            "animation": {
-              "commands": {
-                "animate": {
-                  "arguments": "[delay] [frameHeight] {image}",
-                  "description": "Animate a spritesheet texture",
-                  "slashCommand": "image/animation/animate"
-                },
-                "boomerang": {
-                  "aliases": [
-                    "pingpong"
-                  ],
-                  "arguments": "{gif}",
-                  "description": "Make a GIF play forwards, then backwards, in a loop.",
-                  "slashCommand": "image/animation/boomerang"
-                },
-                "combinegif": {
-                  "aliases": [
-                    "combine",
-                    "merge",
-                    "concatenate",
-                    "concat",
-                    "joingif",
-                    "gifcombine",
-                    "gifjoin",
-                    "mergegif",
-                    "gifmerge"
-                  ],
-                  "arguments": "{gif} {gif}",
-                  "description": "Combine two GIFs so that one plays after the other.",
-                  "slashCommand": "image/animation/combinegif"
-                },
-                "frame": {
-                  "aliases": [
-                    "frames"
-                  ],
-                  "arguments": "[frame] {gif}",
-                  "description": [
-                    "Get a specific frame of a GIF.",
-                    "Leave frame blank to show how many frames a GIF has.",
-                    "\"first\" gives the first frame, and \"last\" gives the last frame."
-                  ],
-                  "slashCommand": "image/animation/frame"
-                },
-                "framerate": {
-                  "aliases": [
-                    "framespersecond",
-                    "fps",
-                    "setfps"
-                  ],
-                  "arguments": "[frameRate] {gif}",
-                  "description": "Change the frame rate of a GIF.",
-                  "slashCommand": "image/animation/framerate"
-                },
-                "loops": {
-                  "aliases": [
-                    "loop"
-                  ],
-                  "arguments": "[loopCount] {gif}",
-                  "description": [
-                    "Set the number of times a GIF should loop.",
-                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
-                  ],
-                  "slashCommand": "image/animation/loops"
-                },
-                "reverse": {
-                  "aliases": [
-                    "backwards"
-                  ],
-                  "arguments": "{gif}",
-                  "description": "Make a GIF play in reverse.",
-                  "slashCommand": "image/animation/reverse"
-                },
-                "spritesheet": {
-                  "arguments": "{gif}",
-                  "description": "Turn an animated GIF into a spritesheet of its frames.",
-                  "slashCommand": "image/animation/spritesheet"
-                }
-              }
-            },
             "creation": {
               "commands": {
                 "generatepalette": {
@@ -845,12 +770,14 @@
                     "gradientgen",
                     "gengradient"
                   ],
-                  "arguments": "[colour] [stepCount] [degrees]",
-                  "description": "Generate a gradient palette from a colour, with hue shifting."
+                  "arguments": "[colour] [colourCount] [angle]",
+                  "description": "Generate a gradient palette from a colour, with hue shifting.",
+                  "slashCommand": "image/creation/palette"
                 },
                 "gradient": {
                   "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
-                  "description": "Generate a gradient from a list of colours."
+                  "description": "Generate a gradient from a list of colours.",
+                  "slashCommand": "image/creation/gradient"
                 },
                 "image": {
                   "aliases": [
@@ -863,7 +790,8 @@
                     "makeimg"
                   ],
                   "arguments": "[width] [height] [colour]",
-                  "description": "Generate a new blank image."
+                  "description": "Generate a new blank image.",
+                  "slashCommand": "image/creation/image"
                 },
                 "mergechannels": {
                   "aliases": [
@@ -888,7 +816,8 @@
                     "circle"
                   ],
                   "arguments": "[x] [y] [width] [height] [colour] {image}",
-                  "description": "Draw a ellipse on an image."
+                  "description": "Draw a ellipse on an image.",
+                  "slashCommand": "image/drawing/ellipse"
                 },
                 "floodfill": {
                   "aliases": [
@@ -896,33 +825,43 @@
                     "fill"
                   ],
                   "arguments": "[x] [y] [colour] [tolerance] {image}",
-                  "description": "Floodfill an area on an image."
+                  "description": "Floodfill an area on an image.",
+                  "slashCommand": "image/drawing/floodfill"
                 },
                 "line": {
                   "arguments": "[x] [y] [x2] [y2] [colour] [thickness] {image}",
-                  "description": "Draw a line on an image."
+                  "description": "Draw a line on an image.",
+                  "slashCommand": "image/drawing/line"
                 },
                 "pixel": {
                   "arguments": "[x] [y] [colour] {image}",
-                  "description": "Add a single pixel to an image."
+                  "description": "Add a single pixel to an image.",
+                  "slashCommand": "image/drawing/pixel"
                 },
                 "polygon": {
                   "aliases": [
                     "shape"
                   ],
                   "arguments": "[x] [y] [diameter] [sides] [colour] {image}",
-                  "description": "Draw a regular polygon on an image."
+                  "description": "Draw a regular polygon on an image.",
+                  "slashCommand": "image/drawing/polygon"
                 },
                 "rectangle": {
                   "aliases": [
                     "rect"
                   ],
                   "arguments": "[x] [y] [width] [height] [colour] {image}",
-                  "description": "Draw a rectangle on an image."
+                  "description": "Draw a rectangle on an image.",
+                  "slashCommand": "image/drawing/rectangle"
                 },
                 "text": {
                   "arguments": "[text] [x] [y] [size] [colour] [font] [align] {image}",
-                  "description": "Write some text over an image.\n\"Put an argument inside quotation marks to use spaces\".\nThe \"align\" options are \"center\", \"left\", and \"right\""
+                  "description": [
+                    "Write some text over an image.",
+                    "Put an argument inside quotation marks to use spaces",
+                    "The \"align\" options are \"center\", \"left\", and \"right\""
+                  ],
+                  "slashCommand": "image/drawing/text"
                 }
               }
             },
@@ -1131,6 +1070,85 @@
                 }
               }
             },
+            "gifs": {
+              "commands": {
+                "animate": {
+                  "arguments": "[delay] [frameHeight] {image}",
+                  "description": "Animate a spritesheet texture.",
+                  "slashCommand": "gif/animate"
+                },
+                "boomerang": {
+                  "aliases": [
+                    "pingpong"
+                  ],
+                  "arguments": "{gif}",
+                  "description": "Make a GIF play forwards, then backwards, in a loop.",
+                  "slashCommand": "gif/boomerang"
+                },
+                "combinegif": {
+                  "aliases": [
+                    "combine",
+                    "merge",
+                    "concatenate",
+                    "concat",
+                    "joingif",
+                    "gifcombine",
+                    "gifjoin",
+                    "mergegif",
+                    "gifmerge"
+                  ],
+                  "arguments": "{gif} {gif}",
+                  "description": "Combine two GIFs so that one plays after the other.",
+                  "slashCommand": "gif/combine"
+                },
+                "frame": {
+                  "aliases": [
+                    "frames"
+                  ],
+                  "arguments": "[frame] {gif}",
+                  "description": [
+                    "Get a specific frame of a GIF.",
+                    "Leave frame blank to show how many frames a GIF has.",
+                    "\"first\" gives the first frame, and \"last\" gives the last frame."
+                  ],
+                  "slashCommand": "gif/frame"
+                },
+                "framerate": {
+                  "aliases": [
+                    "framespersecond",
+                    "fps",
+                    "setfps"
+                  ],
+                  "arguments": "[frameRate] {gif}",
+                  "description": "Change the frame rate of a GIF.",
+                  "slashCommand": "gif/framerate"
+                },
+                "loops": {
+                  "aliases": [
+                    "loop"
+                  ],
+                  "arguments": "[loopCount] {gif}",
+                  "description": [
+                    "Set the number of times a GIF should loop.",
+                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
+                  ],
+                  "slashCommand": "gif/loops"
+                },
+                "reverse": {
+                  "aliases": [
+                    "backwards"
+                  ],
+                  "arguments": "{gif}",
+                  "description": "Make a GIF play in reverse.",
+                  "slashCommand": "gif/reverse"
+                },
+                "spritesheet": {
+                  "arguments": "{gif}",
+                  "description": "Turn an animated GIF into a spritesheet of its frames.",
+                  "slashCommand": "gif/spritesheet"
+                }
+              }
+            },
             "imagefun": {
               "categories": {
                 "avatars": {
@@ -1158,7 +1176,7 @@
                         "Add an avatar decoration to your avatar.",
                         "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
                       ],
-                      "slashCommand": "avatars/avatardecoration"
+                      "slashCommand": "avatars/decoration"
                     },
                     "avatarpie": {
                       "aliases": [
@@ -1166,7 +1184,7 @@
                       ],
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                       "description": "Merge a bunch of avatars into one image.",
-                      "slashCommand": "avatars/avatarpie"
+                      "slashCommand": "avatars/pie"
                     },
                     "award": {
                       "aliases": [
@@ -1462,7 +1480,8 @@
                         "anime"
                       ],
                       "arguments": "{image}",
-                      "description": "Place anime eyes over someones face!"
+                      "description": "Place anime eyes over someones face!",
+                      "slashCommand": "imagefaces/animeeyes"
                     },
                     "bulgeface": {
                       "aliases": [
@@ -1471,14 +1490,16 @@
                         "facepinch"
                       ],
                       "arguments": "[strength] {image}",
-                      "description": "Apply a bulge or a pinch effect to a face."
+                      "description": "Apply a bulge or a pinch effect to a face.",
+                      "slashCommand": "imagefaces/bulge"
                     },
                     "dealwithit": {
                       "aliases": [
                         "thuglife"
                       ],
                       "arguments": "{image}",
-                      "description": "Place MLG glasses over someones face!"
+                      "description": "Place MLG glasses over someones face!",
+                      "slashCommand": "imagefaces/dealwithit"
                     },
                     "detectface": {
                       "aliases": [
@@ -1491,32 +1512,34 @@
                         "faceview"
                       ],
                       "arguments": "{image}",
-                      "description": "Detect a face in an image"
+                      "description": "Detect a face in an image",
+                      "slashCommand": "imagefaces/detect"
                     },
                     "emojiface": {
                       "aliases": [
                         "faceemoji"
                       ],
                       "arguments": "{image}",
-                      "description": "Place emojis on someones face!"
+                      "description": "Place emojis on someones face!",
+                      "slashCommand": "imagefaces/emojiface"
                     },
                     "enlargeeyes": {
                       "aliases": [
-                        "eyeenlarge",
                         "bigeyes",
-                        "bigeye",
                         "largeeyes",
-                        "largeeye"
+                        "bulgeeyes"
                       ],
                       "arguments": "[strength] {image}",
-                      "description": "Make someones eyes larger."
+                      "description": "Make someones eyes larger.",
+                      "slashCommand": "imagefaces/enlargeeyes"
                     },
                     "makeup": {
                       "arguments": "[lipsCol] [outerEyeCol] [innerEyeCol] {image}",
                       "description": [
                         "Apply makeup to someone's face!",
                         "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
-                      ]
+                      ],
+                      "slashCommand": "imagefaces/makeup"
                     },
                     "steveface": {
                       "aliases": [
@@ -1528,11 +1551,13 @@
                         "facealex"
                       ],
                       "arguments": "{image}",
-                      "description": "Place Steve or Alex's face over someones face!"
+                      "description": "Place Steve or Alex's face over someones face!",
+                      "slashCommand": "imagefaces/steve"
                     },
                     "trollface": {
                       "arguments": "{image}",
-                      "description": "Place a trollface over someones face!"
+                      "description": "Place a trollface over someones face!",
+                      "slashCommand": "imagefaces/trollface"
                     }
                   }
                 },
@@ -1544,7 +1569,8 @@
                         "Make an image hold a gun.",
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the gun over the edge of the image"
-                      ]
+                      ],
+                      "slashCommand": "imagefun/overlays/gun"
                     },
                     "jolly": {
                       "aliases": [
@@ -1560,7 +1586,8 @@
                       ],
                       "arguments": "{image}",
                       "cooldown": 3,
-                      "description": "Pet an image!"
+                      "description": "Pet an image!",
+                      "slashCommand": "imagefun/overlays/petpet"
                     },
                     "shoot": {
                       "arguments": "[expand] [double] {image}",
@@ -1568,7 +1595,8 @@
                         "Shoot an image.",
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the gun over the edge of the image"
-                      ]
+                      ],
+                      "slashCommand": "imagefun/overlays/shoot"
                     },
                     "speechbubble": {
                       "aliases": [
@@ -1581,7 +1609,8 @@
                         "Add a speech bubble to an image.",
                         "The X and Y coordinates customise where the speech bubble points to.",
                         "If no coordinates are provided, it will try to point to a face detected within the image."
-                      ]
+                      ],
+                      "slashCommand": "imagefun/overlays/speechbubble"
                     },
                     "thinking": {
                       "aliases": [
@@ -1592,14 +1621,16 @@
                         "Add a thinking hand to an image.",
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the hand over the edge of the image."
-                      ]
+                      ],
+                      "slashCommand": "imagefun/overlays/thinking"
                     },
                     "triggered": {
                       "aliases": [
                         "trigger"
                       ],
                       "arguments": "{image}",
-                      "description": "Make an image triggered."
+                      "description": "Make an image triggered.",
+                      "slashCommand": "imagefun/overlays/triggered"
                     }
                   }
                 },
@@ -1949,7 +1980,8 @@
                   "description": [
                     "Compare two images, to see the differences between them.",
                     "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
-                  ]
+                  ],
+                  "slashCommand": "imageutility/compare"
                 },
                 "imagesize": {
                   "aliases": [
@@ -1957,7 +1989,8 @@
                     "size"
                   ],
                   "arguments": "{image}",
-                  "description": "View the dimentions of an image."
+                  "description": "View the dimentions of an image.",
+                  "slashCommand": "imageutility/size"
                 },
                 "makeqrcode": {
                   "aliases": [
@@ -1972,11 +2005,13 @@
                     "qr"
                   ],
                   "arguments": "[text]",
-                  "description": "Create a QR code."
+                  "description": "Create a QR code.",
+                  "slashCommand": "imageutility/makeqrcode"
                 },
                 "palette": {
                   "arguments": "{image}",
-                  "description": "Show the palette of an image"
+                  "description": "Show the palette of an image.",
+                  "slashCommand": "imageutility/palette"
                 },
                 "readqrcode": {
                   "aliases": [
@@ -1990,7 +2025,8 @@
                     "unqr"
                   ],
                   "arguments": "{image}",
-                  "description": "Read a QR code in an image."
+                  "description": "Read a QR code in an image.",
+                  "slashCommand": "imageutility/readqrcode"
                 },
                 "save": {
                   "arguments": "{image}",
@@ -2092,7 +2128,8 @@
                     "colreplace"
                   ],
                   "arguments": "[originalColour] [replacementColour] [tolerance] {image}",
-                  "description": "Replace a colour in an image."
+                  "description": "Replace a colour in an image.",
+                  "slashCommand": "imagemanipulation/replacecolour"
                 },
                 "resize": {
                   "arguments": "[width] [height] [mode] {image}",
@@ -2117,7 +2154,8 @@
                   "description": [
                     "Make an image round by cutting off the corners.",
                     "The size can either be a number of pixels, or a percentage of the width and height of the image."
-                  ]
+                  ],
+                  "slashCommand": "imagemanipulation/round"
                 },
                 "scale": {
                   "aliases": [
@@ -2219,14 +2257,16 @@
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
                 "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
-              ]
+              ],
+              "slashCommand": "image/append"
             },
             "decodemessage": {
               "aliases": [
                 "decode"
               ],
               "arguments": "{image}",
-              "description": "Decode an image which has a message encoded in the pixel values."
+              "description": "Decode an image which has a message encoded in the pixel values.",
+              "slashCommand": "image/decodemessage"
             },
             "emoji": {
               "aliases": [
@@ -2360,7 +2400,8 @@
                 "encode"
               ],
               "arguments": "[message]",
-              "description": "Create an image from a message, which is encoded as pixel values."
+              "description": "Create an image from a message, which is encoded as pixel values.",
+              "slashCommand": "image/encodemessage"
             },
             "extractchannels": {
               "aliases": [
@@ -2389,7 +2430,8 @@
                 "Get an image.",
                 "This can be used to show what image would be used in an image command.",
                 "This can also be used to convert videos into gifs, as well as converting stickers to gifs."
-              ]
+              ],
+              "slashCommand": "image/get"
             }
           }
         },
@@ -3401,26 +3443,6 @@
                     "Manage Messages"
                   ],
                   "slashCommand": "channel/repin"
-                },
-                "setmembercounter": {
-                  "aliases": [
-                    "membercounterset",
-                    "membercounter"
-                  ],
-                  "arguments": "<channel> [text]",
-                  "description": [
-                    "Set a channel to display the current number of members in the server.",
-                    "Any channel type can be used except for Threads.",
-                    "Use <count> in the text to incicate where the count should go.",
-                    "Example:`e!setmembercounter #channelname Member Count: <count>"
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ],
-                  "botPermissions": [
-                    "Manage Channels"
-                  ]
                 },
                 "slowmode": {
                   "aliases": [
@@ -4476,72 +4498,6 @@
               ],
               "prefixCommand": "images/imagefun/avatars/appear"
             },
-            "avatardecoration": {
-              "description": [
-                "Add an avatar decoration to your avatar.",
-                "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
-              ],
-              "options": [
-                {
-                  "name": "decoration",
-                  "description": "The avatar decoration",
-                  "required": true
-                },
-                {
-                  "name": "zoom-level",
-                  "description": "The output image zoom level"
-                },
-                {
-                  "name": "avatar-attachment",
-                  "description": "An image"
-                },
-                {
-                  "name": "avatar-string",
-                  "description": "An image"
-                }
-              ],
-              "prefixCommand": "images/imagefun/avatars/avatardecoration"
-            },
-            "avatarpie": {
-              "description": "Merge a bunch of avatars into one image.",
-              "options": [
-                {
-                  "name": "user1",
-                  "description": "User 1",
-                  "required": true
-                },
-                {
-                  "name": "user2",
-                  "description": "User 2",
-                  "required": true
-                },
-                {
-                  "name": "user3",
-                  "description": "User 3"
-                },
-                {
-                  "name": "user4",
-                  "description": "User 4"
-                },
-                {
-                  "name": "user5",
-                  "description": "User 5"
-                },
-                {
-                  "name": "user6",
-                  "description": "User 6"
-                },
-                {
-                  "name": "user7",
-                  "description": "User 7"
-                },
-                {
-                  "name": "user8",
-                  "description": "User 8"
-                }
-              ],
-              "prefixCommand": "images/imagefun/avatars/avatarpie"
-            },
             "award": {
               "description": "Give another member an award!",
               "options": [
@@ -4625,6 +4581,32 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/bonk"
+            },
+            "decoration": {
+              "description": [
+                "Add an avatar decoration to your avatar.",
+                "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
+              ],
+              "options": [
+                {
+                  "name": "decoration",
+                  "description": "The avatar decoration",
+                  "required": true
+                },
+                {
+                  "name": "zoom-level",
+                  "description": "The output image zoom level"
+                },
+                {
+                  "name": "avatar-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "avatar-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/avatardecoration"
             },
             "disappear": {
               "description": "Make a member disappear!",
@@ -4741,6 +4723,46 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/monkeyband"
+            },
+            "pie": {
+              "description": "Merge a bunch of avatars into one image.",
+              "options": [
+                {
+                  "name": "user1",
+                  "description": "User 1",
+                  "required": true
+                },
+                {
+                  "name": "user2",
+                  "description": "User 2",
+                  "required": true
+                },
+                {
+                  "name": "user3",
+                  "description": "User 3"
+                },
+                {
+                  "name": "user4",
+                  "description": "User 4"
+                },
+                {
+                  "name": "user5",
+                  "description": "User 5"
+                },
+                {
+                  "name": "user6",
+                  "description": "User 6"
+                },
+                {
+                  "name": "user7",
+                  "description": "User 7"
+                },
+                {
+                  "name": "user8",
+                  "description": "User 8"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/avatarpie"
             },
             "silence": {
               "description": "Silence a member.",
@@ -5334,161 +5356,220 @@
             }
           }
         },
+        "gif": {
+          "commands": {
+            "animate": {
+              "description": "Animate a spritesheet texture.",
+              "options": [
+                {
+                  "name": "delay",
+                  "description": "The amount of delay between each frame"
+                },
+                {
+                  "name": "frame-height",
+                  "description": "The height of each frame"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/animate"
+            },
+            "boomerang": {
+              "description": "Make a GIF play forwards, then backwards, in a loop.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/boomerang"
+            },
+            "combine": {
+              "description": "Combine two GIFs so that one plays after the other.",
+              "options": [
+                {
+                  "name": "image1-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image1-string",
+                  "description": "An image"
+                },
+                {
+                  "name": "image2-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image2-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/combinegif"
+            },
+            "frame": {
+              "description": [
+                "Get a specific frame of a GIF.",
+                "Leave frame blank to show how many frames a GIF has.",
+                "\"first\" gives the first frame, and \"last\" gives the last frame."
+              ],
+              "options": [
+                {
+                  "name": "frame",
+                  "description": "The frame to get. Can be a number"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/frame"
+            },
+            "framerate": {
+              "description": "Change the frame rate of a GIF.",
+              "options": [
+                {
+                  "name": "frame-rate",
+                  "description": "The frame rate"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/framerate"
+            },
+            "loops": {
+              "description": [
+                "Set the number of times a GIF should loop.",
+                "-1      - Infinite loops\n0-65535 - Exact loop amount"
+              ],
+              "options": [
+                {
+                  "name": "loop-count",
+                  "description": "The number of times to loop the gif"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/loops"
+            },
+            "reverse": {
+              "description": "Make a GIF play in reverse.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/reverse"
+            },
+            "spritesheet": {
+              "description": "Turn an animated GIF into a spritesheet of its frames.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/gifs/spritesheet"
+            }
+          }
+        },
         "image": {
           "categories": {
-            "animation": {
-              "commands": {
-                "animate": {
-                  "description": "Animate a spritesheet texture",
-                  "options": [
-                    {
-                      "name": "delay",
-                      "description": "The amount of delay between each frame"
-                    },
-                    {
-                      "name": "frame-height",
-                      "description": "The height of each frame"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/animate"
-                },
-                "boomerang": {
-                  "description": "Make a GIF play forwards, then backwards, in a loop.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/boomerang"
-                },
-                "combinegif": {
-                  "description": "Combine two GIFs so that one plays after the other.",
-                  "options": [
-                    {
-                      "name": "image1-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image1-string",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image2-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image2-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/combinegif"
-                },
-                "frame": {
-                  "description": [
-                    "Get a specific frame of a GIF.",
-                    "Leave frame blank to show how many frames a GIF has.",
-                    "\"first\" gives the first frame, and \"last\" gives the last frame."
-                  ],
-                  "options": [
-                    {
-                      "name": "frame",
-                      "description": "The frame to get. Can be a number"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/frame"
-                },
-                "framerate": {
-                  "description": "Change the frame rate of a GIF.",
-                  "options": [
-                    {
-                      "name": "frame-rate",
-                      "description": "The frame rate"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/framerate"
-                },
-                "loops": {
-                  "description": [
-                    "Set the number of times a GIF should loop.",
-                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
-                  ],
-                  "options": [
-                    {
-                      "name": "loop-count",
-                      "description": "The number of times to loop the gif"
-                    },
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/loops"
-                },
-                "reverse": {
-                  "description": "Make a GIF play in reverse.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/reverse"
-                },
-                "spritesheet": {
-                  "description": "Turn an animated GIF into a spritesheet of its frames.",
-                  "options": [
-                    {
-                      "name": "image-attachment",
-                      "description": "An image"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "An image"
-                    }
-                  ],
-                  "prefixCommand": "images/animation/spritesheet"
-                }
-              }
-            },
             "creation": {
               "commands": {
+                "gradient": {
+                  "description": "Generate a gradient from a list of colours.",
+                  "options": [
+                    {
+                      "name": "colour1",
+                      "description": "Colour 1",
+                      "required": true
+                    },
+                    {
+                      "name": "colour2",
+                      "description": "Colour 2",
+                      "required": true
+                    },
+                    {
+                      "name": "colour3",
+                      "description": "Colour 3"
+                    },
+                    {
+                      "name": "colour4",
+                      "description": "Colour 4"
+                    },
+                    {
+                      "name": "colour5",
+                      "description": "Colour 5"
+                    },
+                    {
+                      "name": "colour6",
+                      "description": "Colour 6"
+                    },
+                    {
+                      "name": "colour7",
+                      "description": "Colour 7"
+                    },
+                    {
+                      "name": "colour8",
+                      "description": "Colour 8"
+                    }
+                  ],
+                  "prefixCommand": "images/creation/gradient"
+                },
+                "image": {
+                  "description": "Generate a new blank image.",
+                  "options": [
+                    {
+                      "name": "width",
+                      "description": "Image width",
+                      "required": true
+                    },
+                    {
+                      "name": "height",
+                      "description": "Image height"
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Image colour"
+                    }
+                  ],
+                  "prefixCommand": "images/creation/image"
+                },
                 "mergechannels": {
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
                   "options": [
@@ -5518,6 +5599,295 @@
                     }
                   ],
                   "prefixCommand": "images/creation/mergechannels"
+                },
+                "palette": {
+                  "description": "Generate a gradient palette from a colour, with hue shifting.",
+                  "options": [
+                    {
+                      "name": "colour",
+                      "description": "Palette colour",
+                      "required": true
+                    },
+                    {
+                      "name": "step-count",
+                      "description": "The amount of colours"
+                    },
+                    {
+                      "name": "angle",
+                      "description": "The hue shifting angle"
+                    }
+                  ],
+                  "prefixCommand": "images/creation/generatepalette"
+                }
+              }
+            },
+            "drawing": {
+              "commands": {
+                "ellipse": {
+                  "description": "Draw a ellipse on an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "width",
+                      "description": "Width",
+                      "required": true
+                    },
+                    {
+                      "name": "height",
+                      "description": "Height",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/ellipse"
+                },
+                "floodfill": {
+                  "description": "Floodfill an area on an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "tolerance",
+                      "description": "The amount the colours can differ"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/floodfill"
+                },
+                "line": {
+                  "description": "Draw a line on an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "Start X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Start Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "x2",
+                      "description": "End X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y2",
+                      "description": "End Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "thickness",
+                      "description": "The thickness"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/line"
+                },
+                "pixel": {
+                  "description": "Add a single pixel to an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/pixel"
+                },
+                "polygon": {
+                  "description": "Draw a regular polygon on an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "diameter",
+                      "description": "Diameter",
+                      "required": true
+                    },
+                    {
+                      "name": "sides",
+                      "description": "Side count",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/polygon"
+                },
+                "rectangle": {
+                  "description": "Draw a rectangle on an image.",
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "width",
+                      "description": "Width",
+                      "required": true
+                    },
+                    {
+                      "name": "height",
+                      "description": "Height",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/rectangle"
+                },
+                "text": {
+                  "description": [
+                    "Write some text over an image.",
+                    "Put an argument inside quotation marks to use spaces",
+                    "The \"align\" options are \"center\", \"left\", and \"right\""
+                  ],
+                  "options": [
+                    {
+                      "name": "text",
+                      "description": "The text",
+                      "required": true
+                    },
+                    {
+                      "name": "x",
+                      "description": "X coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "y",
+                      "description": "Y coordinate",
+                      "required": true
+                    },
+                    {
+                      "name": "size",
+                      "description": "Font Size",
+                      "required": true
+                    },
+                    {
+                      "name": "colour",
+                      "description": "Colour"
+                    },
+                    {
+                      "name": "font",
+                      "description": "Font"
+                    },
+                    {
+                      "name": "align",
+                      "description": "Alignment"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/drawing/text"
                 }
               }
             },
@@ -5667,6 +6037,54 @@
             }
           },
           "commands": {
+            "append": {
+              "description": [
+                "Append one image onto another image.",
+                "Scaling is a true/false that will resize the appended image to be the same size.",
+                "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+              ],
+              "options": [
+                {
+                  "name": "direction",
+                  "description": "The direction to append onto"
+                },
+                {
+                  "name": "scaling-enabled",
+                  "description": "The appended image should scale to match the original image"
+                },
+                {
+                  "name": "appended-image-attachment",
+                  "description": "Appended image"
+                },
+                {
+                  "name": "appended-image-string",
+                  "description": "Appended image"
+                },
+                {
+                  "name": "original-image-attachment",
+                  "description": "Original image"
+                },
+                {
+                  "name": "original-image-string",
+                  "description": "Original image"
+                }
+              ],
+              "prefixCommand": "images/append"
+            },
+            "decodemessage": {
+              "description": "Decode an image which has a message encoded in the pixel values.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/decodemessage"
+            },
             "emoji": {
               "description": [
                 "Get the image of an emoji.",
@@ -5685,6 +6103,17 @@
               ],
               "prefixCommand": "images/emoji"
             },
+            "encodemessage": {
+              "description": "Create an image from a message, which is encoded as pixel values.",
+              "options": [
+                {
+                  "name": "message",
+                  "description": "The message to encode",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/encodemessage"
+            },
             "extractchannels": {
               "description": "Extract the colour channels from an image.",
               "options": [
@@ -5698,6 +6127,24 @@
                 }
               ],
               "prefixCommand": "images/extractchannels"
+            },
+            "get": {
+              "description": [
+                "Get an image.",
+                "This can be used to show what image would be used in an image command.",
+                "This can also be used to convert videos into gifs, as well as converting stickers to gifs."
+              ],
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/getimage"
             }
           }
         },
@@ -5929,6 +6376,163 @@
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/worthless"
+            }
+          }
+        },
+        "imagefaces": {
+          "commands": {
+            "animeeyes": {
+              "description": "Place anime eyes over someones face!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/animeeyes"
+            },
+            "bulge": {
+              "description": "Apply a bulge or a pinch effect to a face.",
+              "options": [
+                {
+                  "name": "strength",
+                  "description": "The bulge strength"
+                },
+                {
+                  "name": "mode",
+                  "description": "Bulge or pinch"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/bulgeface"
+            },
+            "dealwithit": {
+              "description": "Place MLG glasses over someones face!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/dealwithit"
+            },
+            "detect": {
+              "description": "Detect a face in an image",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/detectface"
+            },
+            "emojiface": {
+              "description": "Place emojis on someones face!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/emojiface"
+            },
+            "enlargeeyes": {
+              "description": "Make someones eyes larger.",
+              "options": [
+                {
+                  "name": "strength",
+                  "description": "The bulge strength"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/enlargeeyes"
+            },
+            "makeup": {
+              "description": [
+                "Apply makeup to someone's face!",
+                "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
+              ],
+              "options": [
+                {
+                  "name": "lips-colour",
+                  "description": "The lips colour"
+                },
+                {
+                  "name": "outer-eye-colour",
+                  "description": "The outer eye colour"
+                },
+                {
+                  "name": "inner-eye-colour",
+                  "description": "The inner eye colour"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/makeup"
+            },
+            "steve": {
+              "description": "Place Steve or Alex's face over someones face!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/steveface"
+            },
+            "trollface": {
+              "description": "Place a trollface over someones face!",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imagefun/faces/trollface"
             }
           }
         },
@@ -6412,6 +7016,32 @@
             },
             "overlays": {
               "commands": {
+                "gun": {
+                  "description": [
+                    "Make an image hold a gun.",
+                    "\"expand\" and \"double\" are true/false.",
+                    "\"expand\" puts the gun over the edge of the image"
+                  ],
+                  "options": [
+                    {
+                      "name": "expand",
+                      "description": "Put the gun over the edge of the image"
+                    },
+                    {
+                      "name": "double",
+                      "description": "Hold a gun in both hands"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/gun"
+                },
                 "jolly": {
                   "description": "Make an image jolly!",
                   "options": [
@@ -6425,6 +7055,118 @@
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/jolly"
+                },
+                "petpet": {
+                  "description": "Pet an image!",
+                  "cooldown": 3,
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/petpet"
+                },
+                "shoot": {
+                  "description": [
+                    "Shoot an image.",
+                    "\"expand\" and \"double\" are true/false.",
+                    "\"expand\" puts the gun over the edge of the image"
+                  ],
+                  "options": [
+                    {
+                      "name": "expand",
+                      "description": "Put the gun over the edge of the image"
+                    },
+                    {
+                      "name": "double",
+                      "description": "Hold a gun in both hands"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/shoot"
+                },
+                "speechbubble": {
+                  "description": [
+                    "Add a speech bubble to an image.",
+                    "The X and Y coordinates customise where the speech bubble points to.",
+                    "If no coordinates are provided, it will try to point to a face detected within the image."
+                  ],
+                  "cooldown": 5,
+                  "options": [
+                    {
+                      "name": "x",
+                      "description": "The X coordinate to point to"
+                    },
+                    {
+                      "name": "y",
+                      "description": "The Y coordinate to point to"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/speechbubble"
+                },
+                "thinking": {
+                  "description": [
+                    "Add a thinking hand to an image.",
+                    "\"expand\" and \"double\" are true/false.",
+                    "\"expand\" puts the hand over the edge of the image."
+                  ],
+                  "options": [
+                    {
+                      "name": "expand",
+                      "description": "Put the hand over the edge of the image"
+                    },
+                    {
+                      "name": "double",
+                      "description": "Have two hands"
+                    },
+                    {
+                      "name": "colour",
+                      "description": "The hand colour"
+                    },
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/thinking"
+                },
+                "triggered": {
+                  "description": "Make an image triggered.",
+                  "options": [
+                    {
+                      "name": "image-attachment",
+                      "description": "An image"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "An image"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/overlays/triggered"
                 }
               }
             }
@@ -6993,6 +7735,33 @@
               ],
               "prefixCommand": "images/manipulation/paste"
             },
+            "replacecolour": {
+              "description": "Replace a colour in an image.",
+              "options": [
+                {
+                  "name": "original-colour",
+                  "description": "The colour to replace",
+                  "required": true
+                },
+                {
+                  "name": "replacement-colour",
+                  "description": "The colour to replace with"
+                },
+                {
+                  "name": "tolerance",
+                  "description": "The amount the colours can differ"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/replacecolour"
+            },
             "resize": {
               "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
               "options": [
@@ -7038,6 +7807,27 @@
                 }
               ],
               "prefixCommand": "images/manipulation/rotate"
+            },
+            "round": {
+              "description": [
+                "Make an image round by cutting off the corners.",
+                "The size can either be a number of pixels, or a percentage of the width and height of the image."
+              ],
+              "options": [
+                {
+                  "name": "size",
+                  "description": "The size to round"
+                },
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/manipulation/round"
             },
             "scale": {
               "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
@@ -7349,6 +8139,74 @@
               ],
               "prefixCommand": "images/imageutility/commoncolour"
             },
+            "compare": {
+              "description": [
+                "Compare two images, to see the differences between them.",
+                "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
+              ],
+              "options": [
+                {
+                  "name": "tolerance",
+                  "description": "The amount the colours can differ"
+                },
+                {
+                  "name": "image1-attachment",
+                  "description": "First image"
+                },
+                {
+                  "name": "image1-string",
+                  "description": "First image"
+                },
+                {
+                  "name": "image2-attachment",
+                  "description": "Second image"
+                },
+                {
+                  "name": "image2-string",
+                  "description": "Second image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/imagecompare"
+            },
+            "makeqrcode": {
+              "description": "Create a QR code.",
+              "options": [
+                {
+                  "name": "text",
+                  "description": "The text to encode",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imageutility/makeqrcode"
+            },
+            "palette": {
+              "description": "Show the palette of an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/palette"
+            },
+            "readqrcode": {
+              "description": "Read a QR code in an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/readqrcode"
+            },
             "save": {
               "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
               "options": [
@@ -7362,6 +8220,20 @@
                 }
               ],
               "prefixCommand": "images/imageutility/save"
+            },
+            "size": {
+              "description": "View the dimentions of an image.",
+              "options": [
+                {
+                  "name": "image-attachment",
+                  "description": "An image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "An image"
+                }
+              ],
+              "prefixCommand": "images/imageutility/imagesize"
             },
             "slidecompare": {
               "description": "Compare two images by having it slide between them both.",
