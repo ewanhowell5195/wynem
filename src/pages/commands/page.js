@@ -135,7 +135,7 @@ export default class extends Page {
           E("div").html(`Right click on a <strong>${command.type ?? "message"}</strong>, go to <strong>Apps</strong>, then select <strong>${command.id.replace(/-/g, " ").toTitleCase()}</strong>`)
         )
       }
-      if (command.arguments) {
+      if (command.arguments && path[0] !== "prefix") {
         commandInfo.append(E("div").addClass("heading").text("Arguments"))
         for (const option of command.arguments) {
           commandInfo.append(
