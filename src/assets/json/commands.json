@@ -4488,7 +4488,7 @@
           "commands": {
             "appear": {
               "description": "Make a member appear!",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to appear",
@@ -4499,7 +4499,7 @@
             },
             "award": {
               "description": "Give another member an award!",
-              "options": [
+              "arguments": [
                 {
                   "name": "awardee",
                   "description": "The awardee",
@@ -4514,7 +4514,7 @@
             },
             "band": {
               "description": "Put members into a band.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user1",
                   "description": "Band member 1",
@@ -4542,7 +4542,7 @@
                 "The birthday member will always be Wynem on \"26/7\"."
               ],
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "birthday-user",
                   "description": "Birthday user"
@@ -4568,7 +4568,7 @@
             },
             "bonk": {
               "description": "Bonk a member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to bonk",
@@ -4586,7 +4586,7 @@
                 "Add an avatar decoration to your avatar.",
                 "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "decoration",
                   "description": "The avatar decoration",
@@ -4609,7 +4609,7 @@
             },
             "disappear": {
               "description": "Make a member disappear!",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to disappear",
@@ -4620,7 +4620,7 @@
             },
             "distractedboyfriend": {
               "description": "Get distracted by another member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "distraction",
                   "description": "The distraction",
@@ -4639,12 +4639,18 @@
             },
             "get": {
               "description": "Show a users avatar, with links to get it in different resolutions.",
+              "arguments": [
+                {
+                  "name": "User",
+                  "description": "The user to get the avatar of"
+                }
+              ],
               "prefixCommand": "user/avatar",
               "contextCommand": "user/get-avatar"
             },
             "guyslook": {
               "description": "Show some guys an image",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user"
@@ -4662,7 +4668,7 @@
             },
             "kickface": {
               "description": "Kick a member in the face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "reciever",
                   "description": "The kick reciever",
@@ -4677,7 +4683,7 @@
             },
             "marry": {
               "description": "Marry two members.",
-              "options": [
+              "arguments": [
                 {
                   "name": "bride",
                   "description": "The bride",
@@ -4692,7 +4698,7 @@
             },
             "monkey": {
               "description": "Turn some members into a group of monkeys!",
-              "options": [
+              "arguments": [
                 {
                   "name": "monkey1",
                   "description": "Monkey 1",
@@ -4711,7 +4717,7 @@
             },
             "monkeyband": {
               "description": "Turn some members into a band of monkeys!",
-              "options": [
+              "arguments": [
                 {
                   "name": "monkey1",
                   "description": "Monkey 1",
@@ -4730,7 +4736,7 @@
             },
             "pie": {
               "description": "Merge a bunch of avatars into one image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user1",
                   "description": "User 1",
@@ -4770,7 +4776,7 @@
             },
             "silence": {
               "description": "Silence a member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to silence",
@@ -4781,7 +4787,7 @@
             },
             "slap": {
               "description": "Slap a member!",
-              "options": [
+              "arguments": [
                 {
                   "name": "reciever",
                   "description": "The slap reciever",
@@ -4796,7 +4802,7 @@
             },
             "snap": {
               "description": "Snap a user out of existence.",
-              "options": [
+              "arguments": [
                 {
                   "name": "peter",
                   "description": "Peter Parker",
@@ -4811,7 +4817,7 @@
             },
             "unband": {
               "description": "Remove members from a band.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user1",
                   "description": "Band member 1",
@@ -4835,7 +4841,7 @@
             "yeet": {
               "description": "Throw a member really far.",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "reciever",
                   "description": "The yeet reciever",
@@ -4860,7 +4866,7 @@
                     "Don't provide a command to view the top 10 most used commands.",
                     "Use the \"mystats\" or \"userstats\" alias to view your personal stats."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "command",
                       "description": "The command to view the stats of"
@@ -4907,7 +4913,7 @@
             },
             "exportdata": {
               "description": "Export the data that the bot has stored about you or the server.",
-              "options": [
+              "arguments": [
                 {
                   "name": "type",
                   "description": "The type of data to export (user/server)"
@@ -4939,7 +4945,7 @@
             "support": {
               "description": "Get support for the bot. Run the command and we will get back to you as soon as possible!",
               "cooldown": 10,
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The support message",
@@ -4976,7 +4982,7 @@
             },
             "repin": {
               "description": "Re-pin a message to move it to the top of the channel pins.",
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The message ID or URL to re-pin",
@@ -4993,7 +4999,7 @@
             },
             "slowmode": {
               "description": "Set a custom slowmode for the current channel.",
-              "options": [
+              "arguments": [
                 {
                   "name": "length",
                   "description": "The length of the cooldown",
@@ -5014,6 +5020,21 @@
           "commands": {
             "add": {
               "description": "Add an emoji to the server.",
+              "arguments": [
+                {
+                  "name": "Name",
+                  "description": "The emoji name",
+                  "required": true
+                },
+                {
+                  "name": "Image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "Image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
               "permissions": [
                 "Manage Emojis And Stickers"
               ],
@@ -5024,6 +5045,13 @@
             },
             "remove": {
               "description": "Remove an emoji from the server.",
+              "arguments": [
+                {
+                  "name": "Emoji",
+                  "description": "The emoji to remove",
+                  "required": true
+                }
+              ],
               "permissions": [
                 "Manage Emojis And Stickers"
               ],
@@ -5043,7 +5071,7 @@
                     "Play Connect 4.",
                     "The maximum board size is `21x15`."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against",
@@ -5073,7 +5101,7 @@
                     "Roll some dice!",
                     "You can roll up to 9 dice with 16 sides each in one go."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "count",
                       "description": "The number of dice"
@@ -5090,7 +5118,7 @@
                     "Play Hangman.",
                     "Set the mode to \"custom\" to select your own word."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against"
@@ -5116,7 +5144,7 @@
                 },
                 "knucklebones": {
                   "description": "Play Knucklebones against someone.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against",
@@ -5131,7 +5159,7 @@
                 },
                 "rockpaperscissors": {
                   "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against"
@@ -5144,7 +5172,7 @@
                     "Play Snakes and Ladders.",
                     "The maximum board size is `16x16`"
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against",
@@ -5170,7 +5198,7 @@
                     "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
                     "Difficulties:\n\neasy\nmedium\nhard\nexpert"
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "member",
                       "description": "The member to play against"
@@ -5188,7 +5216,7 @@
           "commands": {
             "8ball": {
               "description": "Ask the magic eight-ball a question.",
-              "options": [
+              "arguments": [
                 {
                   "name": "question",
                   "description": "The question to ask",
@@ -5199,7 +5227,7 @@
             },
             "bean": {
               "description": "Bean a user.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to bean",
@@ -5214,7 +5242,7 @@
             },
             "bubblewrap": {
               "description": "Create some bubblewrap with a hidden message!",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The bubble contents"
@@ -5228,7 +5256,7 @@
             },
             "cowsay": {
               "description": "Make a cow say something!",
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The message to speak",
@@ -5248,7 +5276,7 @@
             },
             "hate": {
               "description": "Discover how much you hate someone/something!",
-              "options": [
+              "arguments": [
                 {
                   "name": "thing1",
                   "description": "The first thing",
@@ -5273,7 +5301,7 @@
                 "Kill a user with a Minecraft death message.",
                 "\"<member>\" and \"[weapon]\" are optional."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to kill",
@@ -5288,7 +5316,7 @@
             },
             "leet": {
               "description": "Convert text to Leetspeak.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to convert",
@@ -5299,7 +5327,7 @@
             },
             "love": {
               "description": "Discover how much you love someone/something!",
-              "options": [
+              "arguments": [
                 {
                   "name": "thing1",
                   "description": "The first thing",
@@ -5314,7 +5342,7 @@
             },
             "mock": {
               "description": "Convert some text to CoNsTaNtLy sWiTcHiNg cAsEs.",
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The message to mock",
@@ -5325,7 +5353,7 @@
             },
             "monketest": {
               "description": "Test how much of a monkey someone is!",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user to test",
@@ -5344,7 +5372,7 @@
           "commands": {
             "animate": {
               "description": "Animate a spritesheet texture.",
-              "options": [
+              "arguments": [
                 {
                   "name": "delay",
                   "description": "The amount of delay between each frame"
@@ -5366,7 +5394,7 @@
             },
             "boomerang": {
               "description": "Make a GIF play forwards, then backwards, in a loop.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -5380,7 +5408,7 @@
             },
             "combine": {
               "description": "Combine two GIFs so that one plays after the other.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image1-file",
                   "description": "A file"
@@ -5406,7 +5434,7 @@
                 "Leave frame blank to show how many frames a GIF has.",
                 "\"first\" gives the first frame, and \"last\" gives the last frame."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "frame",
                   "description": "The frame to get. Can be a number"
@@ -5424,7 +5452,7 @@
             },
             "framerate": {
               "description": "Change the frame rate of a GIF.",
-              "options": [
+              "arguments": [
                 {
                   "name": "frame-rate",
                   "description": "The frame rate"
@@ -5445,7 +5473,7 @@
                 "Set the number of times a GIF should loop.",
                 "-1      - Infinite loops\n0-65535 - Exact loop amount"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "loop-count",
                   "description": "The number of times to loop the gif"
@@ -5463,7 +5491,7 @@
             },
             "reverse": {
               "description": "Make a GIF play in reverse.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -5477,7 +5505,7 @@
             },
             "spritesheet": {
               "description": "Turn an animated GIF into a spritesheet of its frames.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -5497,7 +5525,7 @@
               "commands": {
                 "gradient": {
                   "description": "Generate a gradient from a list of colours.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "colour1",
                       "description": "Colour 1",
@@ -5537,7 +5565,7 @@
                 },
                 "image": {
                   "description": "Generate a new blank image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "width",
                       "description": "Image width",
@@ -5556,7 +5584,7 @@
                 },
                 "mergechannels": {
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "red-image-file",
                       "description": "The image to use as the red colour channel"
@@ -5586,7 +5614,7 @@
                 },
                 "palette": {
                   "description": "Generate a gradient palette from a colour, with hue shifting.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "colour",
                       "description": "Palette colour",
@@ -5609,7 +5637,7 @@
               "commands": {
                 "ellipse": {
                   "description": "Draw a ellipse on an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "X coordinate",
@@ -5647,7 +5675,7 @@
                 },
                 "floodfill": {
                   "description": "Floodfill an area on an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "X coordinate",
@@ -5679,7 +5707,7 @@
                 },
                 "line": {
                   "description": "Draw a line on an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "Start X coordinate",
@@ -5721,7 +5749,7 @@
                 },
                 "pixel": {
                   "description": "Add a single pixel to an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "X coordinate",
@@ -5749,7 +5777,7 @@
                 },
                 "polygon": {
                   "description": "Draw a regular polygon on an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "X coordinate",
@@ -5787,7 +5815,7 @@
                 },
                 "rectangle": {
                   "description": "Draw a rectangle on an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "X coordinate",
@@ -5829,7 +5857,7 @@
                     "Put an argument inside quotation marks to use spaces",
                     "The \"align\" options are \"center\", \"left\", and \"right\""
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "text",
                       "description": "The text",
@@ -5879,7 +5907,7 @@
               "commands": {
                 "daad": {
                   "description": "Mirror the top left half of an image to the bottom right half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5893,7 +5921,7 @@
                 },
                 "dood": {
                   "description": "Mirror the bottom right half of an image to the top left half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5907,7 +5935,7 @@
                 },
                 "flip": {
                   "description": "Flip an image vertically.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5921,7 +5949,7 @@
                 },
                 "haah": {
                   "description": "Flip the top half of an image to the bottom half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5935,7 +5963,7 @@
                 },
                 "hooh": {
                   "description": "Flip the bottom half of an image to the top half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5949,7 +5977,7 @@
                 },
                 "mirror": {
                   "description": "Mirror an image horizontally.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5963,7 +5991,7 @@
                 },
                 "taat": {
                   "description": "Mirror the bottom left half of an image to the top right half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5977,7 +6005,7 @@
                 },
                 "toot": {
                   "description": "Mirror the top right half of an image to the bottom left half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -5991,7 +6019,7 @@
                 },
                 "waaw": {
                   "description": "Mirror the left half of an image to the right half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -6005,7 +6033,7 @@
                 },
                 "woow": {
                   "description": "Mirror the right half of an image to the left half.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -6027,7 +6055,7 @@
                 "Scaling is a true/false that will resize the appended image to be the same size.",
                 "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "direction",
                   "description": "The direction to append onto"
@@ -6057,7 +6085,7 @@
             },
             "decodemessage": {
               "description": "Decode an image which has a message encoded in the pixel values.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6074,7 +6102,7 @@
                 "Get the image of an emoji.",
                 "The type, resolution, and version are optional. Not every type has every emoji."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "emoji",
                   "description": "The emoji to get",
@@ -6089,7 +6117,7 @@
             },
             "encodemessage": {
               "description": "Create an image from a message, which is encoded as pixel values.",
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The message to encode",
@@ -6100,7 +6128,7 @@
             },
             "extractchannels": {
               "description": "Extract the colour channels from an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6118,7 +6146,7 @@
                 "This can be used to show what image would be used in an image command.",
                 "This can also be used to convert videos into gifs, as well as converting stickers to gifs."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6137,7 +6165,7 @@
             "billboard": {
               "description": "Put an image onto a billboard.",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6152,7 +6180,7 @@
             "flag": {
               "description": "Put an image onto a flag.",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6167,7 +6195,7 @@
             "fortunecookie": {
               "description": "Put an image into a fortune cookie.",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6181,7 +6209,7 @@
             },
             "gallery": {
               "description": "Put an image into an art gallery.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6195,7 +6223,7 @@
             },
             "linus": {
               "description": "Put an image into Linus Sebastian's hands",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6209,7 +6237,7 @@
             },
             "linusscreen": {
               "description": "Put an image into an art gallery.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6227,7 +6255,7 @@
                 "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
               ],
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "left-text",
                   "description": "Text for the left side"
@@ -6257,7 +6285,7 @@
             },
             "newyork": {
               "description": "Put an image onto a billboard in New York.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6271,7 +6299,7 @@
             },
             "salute": {
               "description": "Put an image onto a flag that is being saluted.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6285,7 +6313,7 @@
             },
             "samepicture": {
               "description": "Show that two images are the same picture.",
-              "options": [
+              "arguments": [
                 {
                   "name": "left-image-file",
                   "description": "A file"
@@ -6307,7 +6335,7 @@
             },
             "scottthewoz": {
               "description": "Put an image onto Scott Wozniak's TV.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6321,7 +6349,7 @@
             },
             "spongebob": {
               "description": "Put an image into Spongebob's hands.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6335,7 +6363,7 @@
             },
             "trump": {
               "description": "Put an image into Donald Trump's hands.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6349,7 +6377,7 @@
             },
             "worthless": {
               "description": "Make an image worthless.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6367,7 +6395,7 @@
           "commands": {
             "animeeyes": {
               "description": "Place anime eyes over someones face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6381,7 +6409,7 @@
             },
             "bulge": {
               "description": "Apply a bulge or a pinch effect to a face.",
-              "options": [
+              "arguments": [
                 {
                   "name": "strength",
                   "description": "The bulge strength"
@@ -6403,7 +6431,7 @@
             },
             "dealwithit": {
               "description": "Place MLG glasses over someones face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6417,7 +6445,7 @@
             },
             "detect": {
               "description": "Detect a face in an image",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6431,7 +6459,7 @@
             },
             "emojiface": {
               "description": "Place emojis on someones face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6445,7 +6473,7 @@
             },
             "enlargeeyes": {
               "description": "Make someones eyes larger.",
-              "options": [
+              "arguments": [
                 {
                   "name": "strength",
                   "description": "The bulge strength"
@@ -6466,7 +6494,7 @@
                 "Apply makeup to someone's face!",
                 "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "lips-colour",
                   "description": "The lips colour"
@@ -6492,7 +6520,7 @@
             },
             "steve": {
               "description": "Place Steve or Alex's face over someones face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6506,7 +6534,7 @@
             },
             "trollface": {
               "description": "Place a trollface over someones face!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6527,7 +6555,7 @@
                 "Blur an image.",
                 "The amount defaults to 10."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "amount",
                   "description": "The amount to blur the image"
@@ -6548,7 +6576,7 @@
                 "Change the brightness of an image.",
                 "The amount is a range from -100 to 100."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "amount",
                   "description": "The amount to brighten the image by"
@@ -6566,7 +6594,7 @@
             },
             "colourise": {
               "description": "Colourise an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The colour to colourise with",
@@ -6588,7 +6616,7 @@
                 "Convert an image to a different colour mode.",
                 "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "mode",
                   "description": "The image colour mode",
@@ -6610,7 +6638,7 @@
                 "Copy the palette of one image to another image.",
                 "Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "source-file",
                   "description": "The image to get the colours from"
@@ -6632,7 +6660,7 @@
             },
             "deepfry": {
               "description": "Deepfry an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6646,7 +6674,7 @@
             },
             "dropshadow": {
               "description": "Add a drop shadow to a transparent image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "x-offset",
                   "description": "The X offset"
@@ -6676,7 +6704,7 @@
             },
             "greyscale": {
               "description": "Turn an image greyscale.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6690,7 +6718,7 @@
             },
             "hueshift": {
               "description": "Change the hue of an image. Defaults to 180°",
-              "options": [
+              "arguments": [
                 {
                   "name": "angle",
                   "description": "The angle to hue shift the image"
@@ -6711,7 +6739,7 @@
                 "Limit an image's colour palette to a provided amount.",
                 "Defaults to 10 colours."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "count",
                   "description": "The number of colours to limit the image to"
@@ -6729,7 +6757,7 @@
             },
             "invert": {
               "description": "Invert an image's colours.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6746,7 +6774,7 @@
                 "Use the transparency of one image as a mask for another image.",
                 "Modes:\n\n- inside\n- outside"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "mode",
                   "description": "The masking mode to use"
@@ -6772,7 +6800,7 @@
             },
             "multiply": {
               "description": "Multiply an image by a colour.",
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The colour to multiply by",
@@ -6792,7 +6820,7 @@
             "neon": {
               "description": "Apply a sobel edge detection filter to an image.",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6806,7 +6834,7 @@
             },
             "normalise": {
               "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6820,7 +6848,7 @@
             },
             "recolour": {
               "description": "Recolour an image to a specific colour, keeping the opacity.",
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The colour to recolour to",
@@ -6842,7 +6870,7 @@
                 "Change the saturation of an image.",
                 "The percentage is a range from 0 to 200."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "percentage",
                   "description": "The percentage to saturate the image by"
@@ -6860,7 +6888,7 @@
             },
             "sepia": {
               "description": "Apply a sepia filter to an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -6878,7 +6906,7 @@
                 "The threshold is a range of 0 to 255.",
                 "Any pixel value greater than or equal to the threshold value will be set to 255, otherwise it will be set to 0."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "threshold",
                   "description": "The cut off threshold"
@@ -6902,7 +6930,7 @@
               "commands": {
                 "bulge": {
                   "description": "Apply a bulge or a pinch effect to an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "strength",
                       "description": "The bulge strength"
@@ -6936,7 +6964,7 @@
                 },
                 "gmagick": {
                   "description": "Content aware scales an image. Outputs a GIF.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -6950,7 +6978,7 @@
                 },
                 "magick": {
                   "description": "Content aware scales an image. Outputs a static image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "intensity",
                       "description": "The magick intensity"
@@ -6968,7 +6996,7 @@
                 },
                 "twist": {
                   "description": "Apply a twist effect to an image.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "degrees",
                       "description": "The degrees to twist"
@@ -7006,7 +7034,7 @@
                     "\"expand\" and \"double\" are true/false.",
                     "\"expand\" puts the gun over the edge of the image"
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "expand",
                       "description": "Put the gun over the edge of the image"
@@ -7028,7 +7056,7 @@
                 },
                 "jolly": {
                   "description": "Make an image jolly!",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -7043,7 +7071,7 @@
                 "petpet": {
                   "description": "Pet an image!",
                   "cooldown": 3,
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -7061,7 +7089,7 @@
                     "\"expand\" and \"double\" are true/false.",
                     "\"expand\" puts the gun over the edge of the image"
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "expand",
                       "description": "Put the gun over the edge of the image"
@@ -7088,7 +7116,7 @@
                     "If no coordinates are provided, it will try to point to a face detected within the image."
                   ],
                   "cooldown": 5,
-                  "options": [
+                  "arguments": [
                     {
                       "name": "x",
                       "description": "The X coordinate to point to"
@@ -7114,7 +7142,7 @@
                     "\"expand\" and \"double\" are true/false.",
                     "\"expand\" puts the hand over the edge of the image."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "expand",
                       "description": "Put the hand over the edge of the image"
@@ -7140,7 +7168,7 @@
                 },
                 "triggered": {
                   "description": "Make an image triggered.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -7162,7 +7190,7 @@
                 "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
               ],
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "type",
                   "description": "The blockify type"
@@ -7184,7 +7212,7 @@
             },
             "blurplify": {
               "description": "Turn an image blurple!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7201,7 +7229,7 @@
                 "Merge two images into one, where a different one shows if you are using dark or light mode.",
                 "The first image will be visible while in dark mode, the second while in light mode."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "dark-image-file",
                   "description": "A file"
@@ -7223,7 +7251,7 @@
             },
             "dumpy": {
               "description": "Make an image into an Among Us Dumpy gif!",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7238,7 +7266,7 @@
             "emojify": {
               "description": "Turn an image into a bunch of emojis!",
               "cooldown": 3,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7255,7 +7283,7 @@
                 "Hide an image in plain sight.",
                 "Colour modes:\n- dark\n- light"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "mode",
                   "description": "The theme colour to use"
@@ -7276,7 +7304,7 @@
                 "Create a custom Among Us character!",
                 "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "outline",
                   "description": "The outline colour",
@@ -7322,7 +7350,7 @@
             },
             "jpegify": {
               "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100",
-              "options": [
+              "arguments": [
                 {
                   "name": "quality",
                   "description": "The JPEG quality"
@@ -7341,7 +7369,7 @@
             "rainbow": {
               "description": "Make an image cycle through the rainbow!",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7359,7 +7387,7 @@
                 "\"switchAxis\" and \"reverse\" are both true/false."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "switch-axis",
                   "description": "Switch which axis is scanned"
@@ -7385,7 +7413,7 @@
             },
             "spin": {
               "description": "Make an image spin!",
-              "options": [
+              "arguments": [
                 {
                   "name": "speed",
                   "description": "Spin speed"
@@ -7410,7 +7438,7 @@
                 "Squarifies an image.",
                 "The first number is the square size, the second is the size of the gap between each square."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "square-size",
                   "description": "The size of the squares"
@@ -7435,7 +7463,7 @@
                 "Turn an image into ascii art using the braille characters.",
                 "Available modes are \"edge\" and \"average\"."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "mode",
                   "description": "The mode"
@@ -7457,7 +7485,7 @@
                 "\"switchAxis\" and \"reverse\" are both true/false."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "switch-axis",
                   "description": "Switch which axis is warped"
@@ -7482,7 +7510,7 @@
                 "Create a custom Wynem logo!",
                 "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "vertical-bars",
                   "description": "The vertical bar colour",
@@ -7521,7 +7549,7 @@
             "background": {
               "description": "Set the background colour for an image with transparency.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The new background colour",
@@ -7540,7 +7568,7 @@
             },
             "crop": {
               "description": "Crop out a region of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "x",
                   "description": "The top left X coordinate of the crop region",
@@ -7574,7 +7602,7 @@
             },
             "opacity": {
               "description": "Change the opacity of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "opacity",
                   "description": "The new opacity"
@@ -7593,7 +7621,7 @@
             "outline": {
               "description": "Add an outline to an image.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "width",
                   "description": "The outline width"
@@ -7619,7 +7647,7 @@
                 "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
                 "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "location",
                   "description": "The location to overlay the image"
@@ -7656,7 +7684,7 @@
                 "Add padding to the sides of an image.",
                 "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "size",
                   "description": "The amount of pixels to pad",
@@ -7683,7 +7711,7 @@
             },
             "paste": {
               "description": "Paste an image onto another image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "x",
                   "description": "The x location of the pasted image"
@@ -7721,7 +7749,7 @@
             },
             "replacecolour": {
               "description": "Replace a colour in an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "original-colour",
                   "description": "The colour to replace",
@@ -7752,12 +7780,35 @@
                 "Interpolation modes only work on static images.",
                 "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
               ],
+              "arguments": [
+                {
+                  "name": "Width",
+                  "description": "The new width",
+                  "required": true
+                },
+                {
+                  "name": "Height",
+                  "description": "The new height"
+                },
+                {
+                  "name": "Interpolation",
+                  "description": "The resize interpolation method (static images only)"
+                },
+                {
+                  "name": "Image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "Image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
               "prefixCommand": "images/manipulation/resize",
               "contextCommand": "message/resize-image"
             },
             "rotate": {
               "description": "Rotate an image. Defaults to 90°.",
-              "options": [
+              "arguments": [
                 {
                   "name": "degrees",
                   "description": "The degrees to rotate the image"
@@ -7778,7 +7829,7 @@
                 "Make an image round by cutting off the corners.",
                 "The size can either be a number of pixels, or a percentage of the width and height of the image."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "size",
                   "description": "The size to round"
@@ -7796,12 +7847,22 @@
             },
             "scale": {
               "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
+              "arguments": [
+                {
+                  "name": "Image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "Image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
               "prefixCommand": "images/manipulation/scale",
               "contextCommand": "message/scale-image"
             },
             "square": {
               "description": "Add transparent padding to an image to make it a square.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7815,7 +7876,7 @@
             },
             "trim": {
               "description": "Remove the transparent pixels from the edge of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -7838,7 +7899,7 @@
                 "Use the middle or bottom aliases to put the text in the middle or on the bottom."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The caption text",
@@ -7862,7 +7923,7 @@
             "breakingnews": {
               "description": "Add a breaking news bar to an image.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to put on the sign",
@@ -7882,7 +7943,7 @@
             "caption": {
               "description": "Add a caption to an image.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The caption text",
@@ -7901,7 +7962,7 @@
             },
             "certifiedmoment": {
               "description": "Make a certified moment meme.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The moment that is certified",
@@ -7912,7 +7973,7 @@
             },
             "changemymind": {
               "description": "Create a \"change my mind\" meme.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to put on the sign",
@@ -7923,7 +7984,7 @@
             },
             "notification": {
               "description": "Add a custom Discord notification to an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The notification",
@@ -7946,7 +8007,7 @@
                 "Use \"peter2\" to put him on the opposite side."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text for Peter to say",
@@ -7973,7 +8034,7 @@
                 "The text is customisable."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The sneak text",
@@ -8000,7 +8061,7 @@
                 "Use \"stuff2\" to put him on the opposite side."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text for Robert to say",
@@ -8023,7 +8084,7 @@
             },
             "tombstone": {
               "description": "Put some text on a tombstone.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to put on the tombstone",
@@ -8034,7 +8095,7 @@
             },
             "valentines": {
               "description": "Generate a minecraft valentines image for that special someone in your life.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "Your valentine",
@@ -8045,7 +8106,7 @@
             },
             "what": {
               "description": "What.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The what text",
@@ -8068,7 +8129,7 @@
           "commands": {
             "averagecolour": {
               "description": "Get the average colour of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8082,7 +8143,7 @@
             },
             "commoncolour": {
               "description": "Get the most common colour in an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8099,7 +8160,7 @@
                 "Compare two images, to see the differences between them.",
                 "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "tolerance",
                   "description": "The amount the colours can differ"
@@ -8125,7 +8186,7 @@
             },
             "makeqrcode": {
               "description": "Create a QR code.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to encode",
@@ -8136,7 +8197,7 @@
             },
             "palette": {
               "description": "Show the palette of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8150,7 +8211,7 @@
             },
             "readqrcode": {
               "description": "Read a QR code in an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8164,7 +8225,7 @@
             },
             "save": {
               "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8178,7 +8239,7 @@
             },
             "size": {
               "description": "View the dimentions of an image.",
-              "options": [
+              "arguments": [
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -8193,7 +8254,7 @@
             "slidecompare": {
               "description": "Compare two images by having it slide between them both.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "line-colour",
                   "description": "The compare line colour"
@@ -8222,7 +8283,7 @@
                 "Put a watermark over an image.",
                 "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to draw over the image as the watermark"
@@ -8254,7 +8315,7 @@
               "commands": {
                 "assets": {
                   "description": "Get a link to download the Minecraft assets of a specific version.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "version",
                       "description": "The Minecraft version"
@@ -8264,7 +8325,7 @@
                 },
                 "cem": {
                   "description": "Get a list of bone names for each entity supported by OptiFine CEM",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "entity",
                       "description": "The entity"
@@ -8274,7 +8335,7 @@
                 },
                 "chestconverter": {
                   "description": "Convert chests between the 1.14 and 1.15 format.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "normal-or-left-file",
                       "description": "The normal, double, or left chest texture"
@@ -8296,7 +8357,7 @@
                 },
                 "ctmconverter": {
                   "description": "Convert compact CTM to full CTM or overlay CTM.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8310,7 +8371,7 @@
                 },
                 "ctmpreviewer": {
                   "description": "Generate a preview image for full CTM.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8324,7 +8385,7 @@
                 },
                 "ctmsplitter": {
                   "description": "Split a CTM template image up into its individual images for use with OptiFine CTM.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "tile-resolution",
                       "description": "The size of the individual textures",
@@ -8343,7 +8404,7 @@
                 },
                 "mojangconverter": {
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8360,7 +8421,7 @@
                     "Generate some text in the Mojang font.",
                     "This can be used for the loading screen in Minecraft if used with the \"e!mojangconverter\" command."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "text",
                       "description": "The text",
@@ -8372,7 +8433,7 @@
                 "reloadpack": {
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "cooldown": 20,
-                  "options": [
+                  "arguments": [
                     {
                       "name": "pack",
                       "description": "The resource pack to reload",
@@ -8387,7 +8448,7 @@
                     "Run without any arguments to see the list of supported models."
                   ],
                   "cooldown": 5,
-                  "options": [
+                  "arguments": [
                     {
                       "name": "model",
                       "description": "The model to render"
@@ -8421,7 +8482,7 @@
                 },
                 "texture": {
                   "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "texture",
                       "description": "The name of the texture",
@@ -8439,7 +8500,7 @@
                     "Tile an image over a 5x5 area.",
                     "Provide a custom width and height to customise the size."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "width",
                       "description": "The width to tile over (1-10)"
@@ -8465,7 +8526,7 @@
                 },
                 "titleconverter": {
                   "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8482,7 +8543,7 @@
                     "Compare the assets of two Minecraft versions against eachother.",
                     "Saying \"latest\" will automatically compare the newest 2 versions."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "old-version",
                       "description": "The old Minecraft version"
@@ -8500,7 +8561,7 @@
               "commands": {
                 "avatar": {
                   "description": "Create a minecraft avatar.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "username",
                       "description": "The players username"
@@ -8518,7 +8579,7 @@
                 },
                 "cape": {
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "username",
                       "description": "The players username"
@@ -8528,7 +8589,7 @@
                 },
                 "converter": {
                   "description": "Convert between the new and old Minecraft skin formats.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8542,7 +8603,7 @@
                 },
                 "head": {
                   "description": "View the head of a Minecraft Java edition player.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "username",
                       "description": "The players username"
@@ -8552,7 +8613,7 @@
                 },
                 "kick": {
                   "description": "Make one minecraft player kick another minecraft player!",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "username1",
                       "description": "The 1st players username",
@@ -8570,7 +8631,7 @@
                     "Make a 2D preview for a skin texture.",
                     "The format is either \"steve\" or \"alex\""
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8588,7 +8649,7 @@
                     "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
                   ],
                   "cooldown": 5,
-                  "options": [
+                  "arguments": [
                     {
                       "name": "format",
                       "description": "The format to render"
@@ -8602,7 +8663,7 @@
                 },
                 "skin": {
                   "description": "View the skin of a Minecraft Java edition player.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "username",
                       "description": "The players username"
@@ -8612,7 +8673,7 @@
                 },
                 "skinify": {
                   "description": "Turn any image into a minecraft skin.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -8630,7 +8691,7 @@
           "commands": {
             "account": {
               "description": "View the minecraft account tied to someones Discord.",
-              "options": [
+              "arguments": [
                 {
                   "name": "user",
                   "description": "The user"
@@ -8646,7 +8707,7 @@
                 "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "top-text",
                   "description": "The top text"
@@ -8673,7 +8734,7 @@
             "optifine": {
               "description": "Get a link to download the latest OptiFine version.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "version",
                   "description": "The Minecraft version"
@@ -8686,7 +8747,7 @@
                 "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
                 "Leave blank to remove your account."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "username",
                   "description": "Your Minecraft username"
@@ -8702,7 +8763,7 @@
                 "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
               ],
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "top-text",
                   "description": "The top text"
@@ -8733,7 +8794,7 @@
             "wiki": {
               "description": "Search for something on the Minecraft Wiki.",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "search-term",
                   "description": "The search term",
@@ -8748,7 +8809,7 @@
           "commands": {
             "addnote": {
               "description": "Add a note to a member. Notes are stored as a record.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to add the note too",
@@ -8767,7 +8828,7 @@
             },
             "endtimeout": {
               "description": "End the time out of a member who is timed out.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to end the timeout of",
@@ -8788,7 +8849,7 @@
             },
             "records": {
               "description": "View the moderation records for a member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to view the records of",
@@ -8806,7 +8867,7 @@
           "commands": {
             "addrole": {
               "description": "Add a role to a member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to add the role to",
@@ -8845,7 +8906,7 @@
                 "Add or remove a role that users will gain when joining the server.",
                 "Provide no arguments to view the current join roles."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "role",
                   "description": "The role to add to the member"
@@ -8861,7 +8922,7 @@
             },
             "removerole": {
               "description": "Remove a role from a member.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to remove the role from",
@@ -8889,7 +8950,7 @@
               "commands": {
                 "issue": {
                   "description": "View an issue from the issue tracker configured for the server.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "issue-number",
                       "description": "The issue number",
@@ -8912,7 +8973,7 @@
             },
             "faqdetails": {
               "description": "Get the full details about a certain faq.",
-              "options": [
+              "arguments": [
                 {
                   "name": "question",
                   "description": "The frequently asked question",
@@ -8927,7 +8988,7 @@
             },
             "namesearch": {
               "description": "Search for users with certain text in their name.",
-              "options": [
+              "arguments": [
                 {
                   "name": "text",
                   "description": "The text to search for",
@@ -8941,12 +9002,19 @@
                 "Quote someone elses message.",
                 "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
               ],
+              "arguments": [
+                {
+                  "name": "message-url",
+                  "description": "The message URL to quote",
+                  "required": true
+                }
+              ],
               "prefixCommand": "server/quotemessage",
               "contextCommand": "message/quote-message"
             },
             "rules": {
               "description": "View the server rules.",
-              "options": [
+              "arguments": [
                 {
                   "name": "rule",
                   "description": "The rule number"
@@ -8959,7 +9027,7 @@
                 "Get a server invite link.",
                 "Provide no arguments to view a list of all available arguments."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "name",
                   "description": "The server name"
@@ -8977,7 +9045,7 @@
             },
             "viewtickets": {
               "description": "View the servers tickets system and the ticket types.",
-              "options": [
+              "arguments": [
                 {
                   "name": "ticket-type",
                   "description": "The ticket type"
@@ -9003,7 +9071,7 @@
                     "Remove an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "auto-response",
                       "description": "The auto-response to remove",
@@ -9020,7 +9088,7 @@
                     "View an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "auto-response",
                       "description": "The auto-response to view",
@@ -9042,7 +9110,7 @@
                     "Any message sent in either channel will be automatically sent to the other one.",
                     "The first argument is the link to a channel from another server, the second argument is the channel from the current server."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "channel-link",
                       "description": "The link to the channel from the other server",
@@ -9066,7 +9134,7 @@
                     "Remove an existing channel bridge.",
                     "Provide no arguments to view a list of all channel bridges."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "channel",
                       "description": "The channel"
@@ -9082,7 +9150,7 @@
                     "Manage the starboards for the server.",
                     "Provide a channel to create a new starboard. Provide the same channel again to remove it."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "channel",
                       "description": "The starboard channel",
@@ -9107,7 +9175,7 @@
                     "Blacklist a category or channel from having its messages sent to a starboard.",
                     "Provide a channel to blacklist it. Provide the same channel again to unblacklist it."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "starboard-channel",
                       "description": "The starboard channel",
@@ -9137,7 +9205,7 @@
                 },
                 "remove": {
                   "description": "Remove a custom command from the server.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "command",
                       "description": "The custom command to remove",
@@ -9162,7 +9230,7 @@
                 },
                 "edit": {
                   "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "question",
                       "description": "The question to remove",
@@ -9176,7 +9244,7 @@
                 },
                 "remove": {
                   "description": "Remove an FAQ from the server.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "question",
                       "description": "The question to remove",
@@ -9215,7 +9283,7 @@
               "commands": {
                 "prefix": {
                   "description": "Change the prefix for the bot in the current server.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "prefix",
                       "description": "The new prefix to use"
@@ -9228,7 +9296,7 @@
                 },
                 "prefixalias": {
                   "description": "Add/remove a custom prefix alias. This is an alternative prefix you can use instead of the main one.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "prefix",
                       "description": "The custom prefix alias to add or remove"
@@ -9252,7 +9320,7 @@
                 },
                 "edit": {
                   "description": "Edit one of the server rules.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "rule",
                       "description": "The rule number"
@@ -9272,7 +9340,7 @@
                 },
                 "remove": {
                   "description": "Remove a rule from the server rules.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "rule",
                       "description": "The rule number"
@@ -9286,7 +9354,7 @@
               "commands": {
                 "add": {
                   "description": "Add a new server invite.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "name",
                       "description": "The server name",
@@ -9305,7 +9373,7 @@
                 },
                 "remove": {
                   "description": "Remove a server invite.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "name",
                       "description": "The server name"
@@ -9338,7 +9406,7 @@
                     "Leave fields blank to leave them unedited.",
                     "Only limited editing is possible. For editing that removes stuff, changes type, or adds new entry fields, instead remove and re-add the ticket type."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "ticket-type",
                       "description": "The ticket type",
@@ -9359,7 +9427,7 @@
                 },
                 "removetype": {
                   "description": "Remove a ticket type from the tickets system.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "ticket-type",
                       "description": "The ticket type",
@@ -9377,7 +9445,7 @@
                     "The channel is where users will be able to create tickets. The channel should be an empty channel. The permissions will be changed so users cannot send messages there.",
                     "The role is the role that will be managing the tickets. When a ticket is created, the role members get added to the ticket, and a random role member gets pinged."
                   ],
-                  "options": [
+                  "arguments": [
                     {
                       "name": "channel",
                       "description": "The ticket channel",
@@ -9422,7 +9490,7 @@
             "addautomod": {
               "description": "Add one of Wynem's automod templates to the server's automod.",
               "cooldown": 20,
-              "options": [
+              "arguments": [
                 {
                   "name": "type",
                   "description": "The automod type"
@@ -9442,7 +9510,7 @@
                 "The embed colour is the coloured bar down the side of each message.",
                 "Set the colour to \"default\" to return it to the default colour."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The new embed colour"
@@ -9464,7 +9532,7 @@
               "description": [
                 "Set or remove a ban appeal link that gets sent to the user when they get banned."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "url",
                   "description": "The ban appeal link"
@@ -9477,7 +9545,7 @@
             },
             "setissuetracker": {
               "description": "Set or remove a GitHub repo to use for issue tracking.",
-              "options": [
+              "arguments": [
                 {
                   "name": "url",
                   "description": "The GitHub repo URL to use for issue tracking"
@@ -9495,7 +9563,7 @@
                 "Bot settings, moderation logs, timeouts, kicks, and bans get shared between them.",
                 "The current server will become the parent server, and any linked servers will become child servers."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "server-id",
                   "description": "The server ID",
@@ -9509,7 +9577,7 @@
             },
             "unlink": {
               "description": "Unlink a server from the current server.",
-              "options": [
+              "arguments": [
                 {
                   "name": "server-id",
                   "description": "The server ID",
@@ -9527,12 +9595,18 @@
           "commands": {
             "info": {
               "description": "Get info about a specified user.",
+              "arguments": [
+                {
+                  "name": "User",
+                  "description": "The user to get the information of"
+                }
+              ],
               "prefixCommand": "user/userinfo",
               "contextCommand": "user/user-information"
             },
             "joinposition": {
               "description": "View the position that a member joined the server in.",
-              "options": [
+              "arguments": [
                 {
                   "name": "member",
                   "description": "The member to get the join position of"
@@ -9555,7 +9629,7 @@
               "commands": {
                 "set": {
                   "description": "Set a reminder for yourself.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "duration",
                       "description": "How long should the reminder last",
@@ -9571,7 +9645,7 @@
                 },
                 "setrepeating": {
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
-                  "options": [
+                  "arguments": [
                     {
                       "name": "duration",
                       "description": "How often should the reminder repeat",
@@ -9605,7 +9679,7 @@
                 "Preview a colour. This also converts it to a variety of different colour formats.",
                 "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "colour",
                   "description": "The colour to preview. HEX codes supported",
@@ -9620,7 +9694,7 @@
             },
             "exif": {
               "description": "View the exif data of a file.",
-              "options": [
+              "arguments": [
                 {
                   "name": "file-file",
                   "description": "A file"
@@ -9634,7 +9708,7 @@
             },
             "filesize": {
               "description": "View the file size of a file.",
-              "options": [
+              "arguments": [
                 {
                   "name": "file-url",
                   "description": "The file URL to check the file size of",
@@ -9645,6 +9719,13 @@
             },
             "getrawmessage": {
               "description": "Get the raw text content of a Discord message.",
+              "arguments": [
+                {
+                  "name": "message-url",
+                  "description": "The message URL to get the raw content of",
+                  "required": true
+                }
+              ],
               "prefixCommand": "utility/getrawmessage",
               "contextCommand": "message/get-raw-message"
             },
@@ -9653,7 +9734,7 @@
                 "Make a Google Search link for when people ask questions they could have easily searched themselves.",
                 "Reply to a message to use that message's content as the search term."
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "search-term",
                   "description": "The term to search",
@@ -9668,7 +9749,7 @@
             },
             "tinyurl": {
               "description": "Shorten a link using tinyurl.",
-              "options": [
+              "arguments": [
                 {
                   "name": "url",
                   "description": "The URL to shorten",
@@ -9683,6 +9764,21 @@
                 "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
               ],
               "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "message",
+                  "description": "The message to translate",
+                  "required": true
+                },
+                {
+                  "name": "to-language",
+                  "description": "The language to translate to"
+                },
+                {
+                  "name": "from-language",
+                  "description": "The language to translate from"
+                }
+              ],
               "prefixCommand": "utility/translate",
               "contextCommand": "message/translate-message"
             }
@@ -9696,7 +9792,7 @@
             },
             "setttslanguage": {
               "description": "Set a default language for your TTS to be read in.",
-              "options": [
+              "arguments": [
                 {
                   "name": "language",
                   "description": "The language to use for TTS",
@@ -9712,7 +9808,7 @@
                 "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
               ],
               "cooldown": "3",
-              "options": [
+              "arguments": [
                 {
                   "name": "message",
                   "description": "The message to read out loud",
@@ -9731,6 +9827,17 @@
       "commands": {
         "ban": {
           "description": "Ban a user from the server.",
+          "arguments": [
+            {
+              "name": "User",
+              "description": "The user to ban",
+              "required": true
+            },
+            {
+              "name": "Reason",
+              "description": "The reason for the ban"
+            }
+          ],
           "permissions": [
             "Guild Only",
             "Ban Members"
@@ -9750,7 +9857,7 @@
         },
         "customcommand": {
           "description": "Run a custom command.",
-          "options": [
+          "arguments": [
             {
               "name": "command",
               "description": "The custom command to run",
@@ -9775,7 +9882,7 @@
         },
         "faq": {
           "description": "Ask a frequently asked question!",
-          "options": [
+          "arguments": [
             {
               "name": "question",
               "description": "The frequently asked question",
@@ -9789,7 +9896,7 @@
         },
         "help": {
           "description": "Get a list of the bots commands and information about each one.",
-          "options": [
+          "arguments": [
             {
               "name": "category-command",
               "description": "The category or command"
@@ -9799,6 +9906,17 @@
         },
         "kick": {
           "description": "Kick a member from the server.",
+          "arguments": [
+            {
+              "name": "Member",
+              "description": "The member to kick",
+              "required": true
+            },
+            {
+              "name": "Reason",
+              "description": "The reason for the kick"
+            }
+          ],
           "permissions": [
             "Guild Only",
             "Kick Members"
@@ -9822,7 +9940,7 @@
         },
         "purge": {
           "description": "Bulk delete messages from a channel. Defaults to 5, maximum 99.",
-          "options": [
+          "arguments": [
             {
               "name": "limit",
               "description": "The number of messages to purge"
@@ -9856,7 +9974,7 @@
         },
         "timeout": {
           "description": "Give a member a time out so that they cannot type or speak.",
-          "options": [
+          "arguments": [
             {
               "name": "member",
               "description": "The member to timeout",
@@ -9882,7 +10000,7 @@
         },
         "unban": {
           "description": "Unban a user from the server.",
-          "options": [
+          "arguments": [
             {
               "name": "user",
               "description": "The user to unban",
@@ -9904,7 +10022,7 @@
         },
         "warn": {
           "description": "Give a member a warning.",
-          "options": [
+          "arguments": [
             {
               "name": "member",
               "description": "The member to warn",
@@ -9942,7 +10060,7 @@
               "botPermissions": [
                 "Ban Members"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "Reason",
                   "description": "The reason for the ban"
@@ -9961,7 +10079,7 @@
               "botPermissions": [
                 "Kick Members"
               ],
-              "options": [
+              "arguments": [
                 {
                   "name": "Reason",
                   "description": "The reason for the kick"
@@ -9995,7 +10113,7 @@
             },
             "resize-image": {
               "description": "Resize an image to a desired size.",
-              "options": [
+              "arguments": [
                 {
                   "name": "Width",
                   "description": "The width of the resized image",
@@ -10023,7 +10141,7 @@
             "translate-message": {
               "description": "Translate a message to another language",
               "cooldown": 5,
-              "options": [
+              "arguments": [
                 {
                   "name": "Language to translate to",
                   "description": "Defaults to English"

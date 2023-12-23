@@ -127,7 +127,7 @@ export default class extends Page {
       )
       else if (path[0] === "slash") commandInfo.append(
         E("div").addClass("heading").text("Formatting"),
-        E("div").addClass("formatting").text(`/${path.slice(1, index + 1).join(" ")} ${command.options?.map(e => `${e.name}:${e.required ? "required" : "optional"}`).join(" ") ?? ""}`)
+        E("div").addClass("formatting").text(`/${path.slice(1, index + 1).join(" ")} ${command.arguments?.map(e => `${e.name}:${e.required ? "required" : "optional"}`).join(" ") ?? ""}`)
       )
       else {
         commandInfo.append(
@@ -135,9 +135,9 @@ export default class extends Page {
           E("div").html(`Right click on a <strong>${command.type ?? "message"}</strong>, go to <strong>Apps</strong>, then select <strong>${command.id.replace(/-/g, " ").toTitleCase()}</strong>`)
         )
       }
-      if (command.options) {
-        commandInfo.append(E("div").addClass("heading").text("Options"))
-        for (const option of command.options) {
+      if (command.arguments) {
+        commandInfo.append(E("div").addClass("heading").text("Arguments"))
+        for (const option of command.arguments) {
           commandInfo.append(
             E("div").addClass("option-name").html(`${option.name}${option.required ? ' <span class="option-required">(required)</span>' : ""}`),
             E("div").addClass("option-description").text(option.description)
