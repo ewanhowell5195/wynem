@@ -664,10 +664,6 @@
               "description": "Generate an \"inspirational\" flow of images and quotes.",
               "slashCommand": "fun/flow"
             },
-            "freenitro": {
-              "cooldown": 10,
-              "description": "Get 1 month free nitro!"
-            },
             "hate": {
               "aliases": [
                 "h8"
@@ -1161,7 +1157,7 @@
                       ],
                       "arguments": "<member>",
                       "description": "Make a member appear!",
-                      "slashCommand": "avatars/appear"
+                      "slashCommand": "avatar/appear"
                     },
                     "avatardecoration": {
                       "aliases": [
@@ -1176,7 +1172,7 @@
                         "Add an avatar decoration to your avatar.",
                         "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
                       ],
-                      "slashCommand": "avatars/decoration"
+                      "slashCommand": "avatar/decoration"
                     },
                     "avatarpie": {
                       "aliases": [
@@ -1184,7 +1180,7 @@
                       ],
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
                       "description": "Merge a bunch of avatars into one image.",
-                      "slashCommand": "avatars/pie"
+                      "slashCommand": "avatar/pie"
                     },
                     "award": {
                       "aliases": [
@@ -1192,12 +1188,12 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Give another member an award!",
-                      "slashCommand": "avatars/award"
+                      "slashCommand": "avatar/award"
                     },
                     "band": {
                       "arguments": "<member> <member> <member> <member>",
                       "description": "Put members into a band.",
-                      "slashCommand": "avatars/band"
+                      "slashCommand": "avatar/band"
                     },
                     "birthday": {
                       "arguments": "<member> <member> <member> <member> <member>",
@@ -1207,12 +1203,12 @@
                         "If members are not specified, random members from the server will be picked.",
                         "The birthday member will always be Wynem on \"26/7\"."
                       ],
-                      "slashCommand": "avatars/birthday"
+                      "slashCommand": "avatar/birthday"
                     },
                     "bonk": {
                       "arguments": "<member> [text]",
                       "description": "Bonk a member.",
-                      "slashCommand": "avatars/bonk"
+                      "slashCommand": "avatar/bonk"
                     },
                     "disappear": {
                       "aliases": [
@@ -1223,7 +1219,7 @@
                       ],
                       "arguments": "<member>",
                       "description": "Make a member disappear!",
-                      "slashCommand": "avatars/disappear"
+                      "slashCommand": "avatar/disappear"
                     },
                     "distractedboyfriend": {
                       "aliases": [
@@ -1233,7 +1229,7 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Get distracted by another member.",
-                      "slashCommand": "avatars/distractedboyfriend"
+                      "slashCommand": "avatar/distractedboyfriend"
                     },
                     "guyslook": {
                       "aliases": [
@@ -1243,7 +1239,7 @@
                       ],
                       "arguments": "<member> {image}",
                       "description": "Show some guys an image",
-                      "slashCommand": "avatars/guyslook"
+                      "slashCommand": "avatar/guyslook"
                     },
                     "kickface": {
                       "aliases": [
@@ -1251,12 +1247,12 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Kick a member in the face!",
-                      "slashCommand": "avatars/kickface"
+                      "slashCommand": "avatar/kickface"
                     },
                     "marry": {
                       "arguments": "<member> <member>",
                       "description": "Marry two members.",
-                      "slashCommand": "avatars/marry"
+                      "slashCommand": "avatar/marry"
                     },
                     "monkey": {
                       "aliases": [
@@ -1265,7 +1261,7 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Turn some members into a group of monkeys!",
-                      "slashCommand": "avatars/monkey"
+                      "slashCommand": "avatar/monkey"
                     },
                     "monkeyband": {
                       "aliases": [
@@ -1273,12 +1269,12 @@
                       ],
                       "arguments": "<member> <member> <member>",
                       "description": "Turn some members into a band of monkeys!",
-                      "slashCommand": "avatars/monkeyband"
+                      "slashCommand": "avatar/monkeyband"
                     },
                     "silence": {
                       "arguments": "<member>",
                       "description": "Silence a member.",
-                      "slashCommand": "avatars/silence"
+                      "slashCommand": "avatar/silence"
                     },
                     "slap": {
                       "aliases": [
@@ -1286,23 +1282,23 @@
                       ],
                       "arguments": "<member> <member>",
                       "description": "Slap a member!",
-                      "slashCommand": "avatars/slap"
+                      "slashCommand": "avatar/slap"
                     },
                     "snap": {
                       "arguments": "<member> <member>",
                       "description": "Snap a user out of existence.",
-                      "slashCommand": "avatars/snap"
+                      "slashCommand": "avatar/snap"
                     },
                     "unband": {
                       "arguments": "<member> <member> <member> <member>",
                       "description": "Remove members from a band.",
-                      "slashCommand": "avatars/unband"
+                      "slashCommand": "avatar/unband"
                     },
                     "yeet": {
                       "arguments": "<member> <member>",
                       "cooldown": 3,
                       "description": "Throw a member really far.",
-                      "slashCommand": "avatars/yeet"
+                      "slashCommand": "avatar/yeet"
                     }
                   }
                 },
@@ -2132,7 +2128,7 @@
                   "slashCommand": "imagemanipulation/replacecolour"
                 },
                 "resize": {
-                  "arguments": "[width] [height] [mode] {image}",
+                  "arguments": "[width] [height] [interpolation] {image}",
                   "description": [
                     "Resize an image to a desired size.",
                     "Interpolation modes only work on static images.",
@@ -2164,7 +2160,7 @@
                     "upscale"
                   ],
                   "arguments": "{image}",
-                  "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
+                  "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
                   "slashCommand": "imagemanipulation/scale",
                   "contextCommand": "message/scale-image"
                 },
@@ -4135,7 +4131,10 @@
                 "messagequote"
               ],
               "arguments": "[messageURL]",
-              "description": "Quote a Discord message.",
+              "description": [
+                "Quote someone elses message.",
+                "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
+              ],
               "permissions": [
                 "Guild Only"
               ],
@@ -4183,7 +4182,7 @@
               ],
               "arguments": "<member>",
               "description": "Show a users avatar, with links to get it in different resolutions.",
-              "slashCommand": "user/avatar",
+              "slashCommand": "avatar/get",
               "contextCommand": "user/get-avatar"
             },
             "joinposition": {
@@ -4485,7 +4484,7 @@
     },
     "slash": {
       "categories": {
-        "avatars": {
+        "avatar": {
           "commands": {
             "appear": {
               "description": "Make a member appear!",
@@ -4598,12 +4597,12 @@
                   "description": "The output image zoom level"
                 },
                 {
-                  "name": "avatar-attachment",
-                  "description": "An image"
+                  "name": "avatar-file",
+                  "description": "A file"
                 },
                 {
                   "name": "avatar-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/avatardecoration"
@@ -4638,6 +4637,11 @@
               ],
               "prefixCommand": "images/imagefun/avatars/distractedboyfriend"
             },
+            "get": {
+              "description": "Show a users avatar, with links to get it in different resolutions.",
+              "prefixCommand": "user/avatar",
+              "contextCommand": "user/get-avatar"
+            },
             "guyslook": {
               "description": "Show some guys an image",
               "options": [
@@ -4646,12 +4650,12 @@
                   "description": "The user"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/guyslook"
@@ -4942,8 +4946,8 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 }
               ],
               "prefixCommand": "bot/support"
@@ -5010,20 +5014,6 @@
           "commands": {
             "add": {
               "description": "Add an emoji to the server.",
-              "options": [
-                {
-                  "name": "name",
-                  "description": "The emoji name"
-                },
-                {
-                  "name": "image-attachment",
-                  "description": "An image"
-                },
-                {
-                  "name": "image-string",
-                  "description": "An image"
-                }
-              ],
               "permissions": [
                 "Manage Emojis And Stickers"
               ],
@@ -5034,12 +5024,6 @@
             },
             "remove": {
               "description": "Remove an emoji from the server.",
-              "options": [
-                {
-                  "name": "emoji",
-                  "description": "The emoji to remove"
-                }
-              ],
               "permissions": [
                 "Manage Emojis And Stickers"
               ],
@@ -5370,12 +5354,12 @@
                   "description": "The height of each frame"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/animate"
@@ -5384,12 +5368,12 @@
               "description": "Make a GIF play forwards, then backwards, in a loop.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/boomerang"
@@ -5398,20 +5382,20 @@
               "description": "Combine two GIFs so that one plays after the other.",
               "options": [
                 {
-                  "name": "image1-attachment",
-                  "description": "An image"
+                  "name": "image1-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image1-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "image2-attachment",
-                  "description": "An image"
+                  "name": "image2-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image2-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/combinegif"
@@ -5428,12 +5412,12 @@
                   "description": "The frame to get. Can be a number"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/frame"
@@ -5446,12 +5430,12 @@
                   "description": "The frame rate"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/framerate"
@@ -5467,12 +5451,12 @@
                   "description": "The number of times to loop the gif"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/loops"
@@ -5481,12 +5465,12 @@
               "description": "Make a GIF play in reverse.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/reverse"
@@ -5495,12 +5479,12 @@
               "description": "Turn an animated GIF into a spritesheet of its frames.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/gifs/spritesheet"
@@ -5574,7 +5558,7 @@
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
                   "options": [
                     {
-                      "name": "red-image-attachment",
+                      "name": "red-image-file",
                       "description": "The image to use as the red colour channel"
                     },
                     {
@@ -5582,7 +5566,7 @@
                       "description": "The image to use as the red colour channel"
                     },
                     {
-                      "name": "green-image-attachment",
+                      "name": "green-image-file",
                       "description": "The image to use as the green colour channel"
                     },
                     {
@@ -5590,7 +5574,7 @@
                       "description": "The image to use as the green colour channel"
                     },
                     {
-                      "name": "blue-image-attachment",
+                      "name": "blue-image-file",
                       "description": "The image to use as the blue colour channel"
                     },
                     {
@@ -5651,12 +5635,12 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/ellipse"
@@ -5683,12 +5667,12 @@
                       "description": "The amount the colours can differ"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/floodfill"
@@ -5725,12 +5709,12 @@
                       "description": "The thickness"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/line"
@@ -5753,12 +5737,12 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/pixel"
@@ -5791,12 +5775,12 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/polygon"
@@ -5829,12 +5813,12 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/rectangle"
@@ -5879,12 +5863,12 @@
                       "description": "Alignment"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/drawing/text"
@@ -5897,12 +5881,12 @@
                   "description": "Mirror the top left half of an image to the bottom right half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/daad"
@@ -5911,12 +5895,12 @@
                   "description": "Mirror the bottom right half of an image to the top left half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/dood"
@@ -5925,12 +5909,12 @@
                   "description": "Flip an image vertically.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/flip"
@@ -5939,12 +5923,12 @@
                   "description": "Flip the top half of an image to the bottom half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/haah"
@@ -5953,12 +5937,12 @@
                   "description": "Flip the bottom half of an image to the top half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/hooh"
@@ -5967,12 +5951,12 @@
                   "description": "Mirror an image horizontally.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/mirror"
@@ -5981,12 +5965,12 @@
                   "description": "Mirror the bottom left half of an image to the top right half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/taat"
@@ -5995,12 +5979,12 @@
                   "description": "Mirror the top right half of an image to the bottom left half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/toot"
@@ -6009,12 +5993,12 @@
                   "description": "Mirror the left half of an image to the right half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/waaw"
@@ -6023,12 +6007,12 @@
                   "description": "Mirror the right half of an image to the left half.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/mirroring/woow"
@@ -6053,7 +6037,7 @@
                   "description": "The appended image should scale to match the original image"
                 },
                 {
-                  "name": "appended-image-attachment",
+                  "name": "appended-image-file",
                   "description": "Appended image"
                 },
                 {
@@ -6061,7 +6045,7 @@
                   "description": "Appended image"
                 },
                 {
-                  "name": "original-image-attachment",
+                  "name": "original-image-file",
                   "description": "Original image"
                 },
                 {
@@ -6075,12 +6059,12 @@
               "description": "Decode an image which has a message encoded in the pixel values.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/decodemessage"
@@ -6118,12 +6102,12 @@
               "description": "Extract the colour channels from an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/extractchannels"
@@ -6136,12 +6120,12 @@
               ],
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/getimage"
@@ -6155,12 +6139,12 @@
               "cooldown": 3,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/billboard"
@@ -6170,12 +6154,12 @@
               "cooldown": 3,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/flag"
@@ -6185,12 +6169,12 @@
               "cooldown": 3,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/fortunecookie"
@@ -6199,12 +6183,12 @@
               "description": "Put an image into an art gallery.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/gallery"
@@ -6213,12 +6197,12 @@
               "description": "Put an image into Linus Sebastian's hands",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/linus"
@@ -6227,12 +6211,12 @@
               "description": "Put an image into an art gallery.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/linusscreen"
@@ -6249,7 +6233,7 @@
                   "description": "Text for the left side"
                 },
                 {
-                  "name": "left-image-attachment",
+                  "name": "left-image-file",
                   "description": "Image for the left side"
                 },
                 {
@@ -6261,7 +6245,7 @@
                   "description": "Text for the right side"
                 },
                 {
-                  "name": "right-image-attachment",
+                  "name": "right-image-file",
                   "description": "Image for the right side"
                 },
                 {
@@ -6275,12 +6259,12 @@
               "description": "Put an image onto a billboard in New York.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/newyork"
@@ -6289,12 +6273,12 @@
               "description": "Put an image onto a flag that is being saluted.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/salute"
@@ -6303,20 +6287,20 @@
               "description": "Show that two images are the same picture.",
               "options": [
                 {
-                  "name": "left-image-attachment",
-                  "description": "An image"
+                  "name": "left-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "left-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "right-image-attachment",
-                  "description": "An image"
+                  "name": "right-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "right-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/samepicture"
@@ -6325,12 +6309,12 @@
               "description": "Put an image onto Scott Wozniak's TV.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/scottthewoz"
@@ -6339,12 +6323,12 @@
               "description": "Put an image into Spongebob's hands.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/spongebob"
@@ -6353,12 +6337,12 @@
               "description": "Put an image into Donald Trump's hands.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/trump"
@@ -6367,12 +6351,12 @@
               "description": "Make an image worthless.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/worthless"
@@ -6385,12 +6369,12 @@
               "description": "Place anime eyes over someones face!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/animeeyes"
@@ -6407,12 +6391,12 @@
                   "description": "Bulge or pinch"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/bulgeface"
@@ -6421,12 +6405,12 @@
               "description": "Place MLG glasses over someones face!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/dealwithit"
@@ -6435,12 +6419,12 @@
               "description": "Detect a face in an image",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/detectface"
@@ -6449,12 +6433,12 @@
               "description": "Place emojis on someones face!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/emojiface"
@@ -6467,12 +6451,12 @@
                   "description": "The bulge strength"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/enlargeeyes"
@@ -6496,12 +6480,12 @@
                   "description": "The inner eye colour"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/makeup"
@@ -6510,12 +6494,12 @@
               "description": "Place Steve or Alex's face over someones face!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/steveface"
@@ -6524,12 +6508,12 @@
               "description": "Place a trollface over someones face!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/faces/trollface"
@@ -6549,12 +6533,12 @@
                   "description": "The amount to blur the image"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/blur"
@@ -6570,12 +6554,12 @@
                   "description": "The amount to brighten the image by"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/brightness"
@@ -6589,12 +6573,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/colourise"
@@ -6611,12 +6595,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/convert"
@@ -6628,7 +6612,7 @@
               ],
               "options": [
                 {
-                  "name": "source-attachment",
+                  "name": "source-file",
                   "description": "The image to get the colours from"
                 },
                 {
@@ -6636,7 +6620,7 @@
                   "description": "The image to get the colours from"
                 },
                 {
-                  "name": "image-attachment",
+                  "name": "image-file",
                   "description": "The image to apply the colours to"
                 },
                 {
@@ -6650,12 +6634,12 @@
               "description": "Deepfry an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/deepfry"
@@ -6680,12 +6664,12 @@
                   "description": "The colour"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/dropshadow"
@@ -6694,12 +6678,12 @@
               "description": "Turn an image greyscale.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/greyscale"
@@ -6712,12 +6696,12 @@
                   "description": "The angle to hue shift the image"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/hueshift"
@@ -6733,12 +6717,12 @@
                   "description": "The number of colours to limit the image to"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/index"
@@ -6747,12 +6731,12 @@
               "description": "Invert an image's colours.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/invert"
@@ -6768,7 +6752,7 @@
                   "description": "The masking mode to use"
                 },
                 {
-                  "name": "mask-attachment",
+                  "name": "mask-file",
                   "description": "The image to use as a mask"
                 },
                 {
@@ -6776,12 +6760,12 @@
                   "description": "The image to use as a mask"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/mask"
@@ -6795,12 +6779,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/multiply"
@@ -6810,12 +6794,12 @@
               "cooldown": 3,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/neon"
@@ -6824,12 +6808,12 @@
               "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/normalise"
@@ -6843,12 +6827,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/recolour"
@@ -6864,12 +6848,12 @@
                   "description": "The percentage to saturate the image by"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/saturate"
@@ -6878,12 +6862,12 @@
               "description": "Apply a sepia filter to an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/sepia"
@@ -6900,12 +6884,12 @@
                   "description": "The cut off threshold"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/filters/threshold"
@@ -6940,12 +6924,12 @@
                       "description": "Bulge or pinch"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/distortions/bulge"
@@ -6954,12 +6938,12 @@
                   "description": "Content aware scales an image. Outputs a GIF.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/distortions/gmagick"
@@ -6972,12 +6956,12 @@
                       "description": "The magick intensity"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/distortions/magick"
@@ -7002,12 +6986,12 @@
                       "description": "How large the twist radius should be"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/distortions/twist"
@@ -7032,12 +7016,12 @@
                       "description": "Hold a gun in both hands"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/gun"
@@ -7046,12 +7030,12 @@
                   "description": "Make an image jolly!",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/jolly"
@@ -7061,12 +7045,12 @@
                   "cooldown": 3,
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/petpet"
@@ -7087,12 +7071,12 @@
                       "description": "Hold a gun in both hands"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/shoot"
@@ -7114,12 +7098,12 @@
                       "description": "The Y coordinate to point to"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/speechbubble"
@@ -7144,12 +7128,12 @@
                       "description": "The hand colour"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/thinking"
@@ -7158,12 +7142,12 @@
                   "description": "Make an image triggered.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/overlays/triggered"
@@ -7188,12 +7172,12 @@
                   "description": "Show the texture stats"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/blockify"
@@ -7202,12 +7186,12 @@
               "description": "Turn an image blurple!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/blurplify"
@@ -7219,20 +7203,20 @@
               ],
               "options": [
                 {
-                  "name": "dark-image-attachment",
-                  "description": "An image"
+                  "name": "dark-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "dark-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "light-image-attachment",
-                  "description": "An image"
+                  "name": "light-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "light-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/darkmodelightmode"
@@ -7241,12 +7225,12 @@
               "description": "Make an image into an Among Us Dumpy gif!",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/dumpy"
@@ -7256,12 +7240,12 @@
               "cooldown": 3,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/emojify"
@@ -7277,12 +7261,12 @@
                   "description": "The theme colour to use"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/hiddenimage"
@@ -7344,12 +7328,12 @@
                   "description": "The JPEG quality"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/jpegify"
@@ -7359,12 +7343,12 @@
               "cooldown": 5,
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/rainbow"
@@ -7389,12 +7373,12 @@
                   "description": "The scan line colour"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/scan"
@@ -7411,12 +7395,12 @@
                   "description": "Do not cut the corners off"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/spin"
@@ -7436,12 +7420,12 @@
                   "description": "The size of the gaps between the squares"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/squarify"
@@ -7457,12 +7441,12 @@
                   "description": "The mode"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/textify"
@@ -7483,12 +7467,12 @@
                   "description": "Reverse the warping direction"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/warp"
@@ -7520,12 +7504,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/wynem"
@@ -7544,12 +7528,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/background"
@@ -7578,12 +7562,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/crop"
@@ -7596,12 +7580,12 @@
                   "description": "The new opacity"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/opacity"
@@ -7619,12 +7603,12 @@
                   "description": "The outline colour"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/outline"
@@ -7649,7 +7633,7 @@
                   "description": "The blend method to use"
                 },
                 {
-                  "name": "overlay-image-attachment",
+                  "name": "overlay-image-file",
                   "description": "The image to overlay"
                 },
                 {
@@ -7657,7 +7641,7 @@
                   "description": "The image to overlay"
                 },
                 {
-                  "name": "base-image-attachment",
+                  "name": "base-image-file",
                   "description": "The image to overlay onto"
                 },
                 {
@@ -7687,12 +7671,12 @@
                   "description": "The colour of the padding"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/pad"
@@ -7717,7 +7701,7 @@
                   "description": "The height of the pasted image"
                 },
                 {
-                  "name": "paste-image-attachment",
+                  "name": "paste-image-file",
                   "description": "The image to paste"
                 },
                 {
@@ -7725,7 +7709,7 @@
                   "description": "The image to paste"
                 },
                 {
-                  "name": "base-image-attachment",
+                  "name": "base-image-file",
                   "description": "The image to paste onto"
                 },
                 {
@@ -7752,40 +7736,21 @@
                   "description": "The amount the colours can differ"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/replacecolour"
             },
             "resize": {
-              "description": "Resize an image to a desired size. Interpolation modes only work on static images.",
-              "options": [
-                {
-                  "name": "width",
-                  "description": "The new width of the image",
-                  "required": true
-                },
-                {
-                  "name": "height",
-                  "description": "The new height of the image"
-                },
-                {
-                  "name": "interpolation",
-                  "description": "The interpolation to use for the resize (static images only)"
-                },
-                {
-                  "name": "image-attachment",
-                  "description": "An image"
-                },
-                {
-                  "name": "image-string",
-                  "description": "An image"
-                }
+              "description": [
+                "Resize an image to a desired size.",
+                "Interpolation modes only work on static images.",
+                "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
               ],
               "prefixCommand": "images/manipulation/resize",
               "contextCommand": "message/resize-image"
@@ -7798,12 +7763,12 @@
                   "description": "The degrees to rotate the image"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/rotate"
@@ -7819,28 +7784,18 @@
                   "description": "The size to round"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/round"
             },
             "scale": {
-              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
-              "options": [
-                {
-                  "name": "image-attachment",
-                  "description": "An image"
-                },
-                {
-                  "name": "image-string",
-                  "description": "An image"
-                }
-              ],
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
               "prefixCommand": "images/manipulation/scale",
               "contextCommand": "message/scale-image"
             },
@@ -7848,12 +7803,12 @@
               "description": "Add transparent padding to an image to make it a square.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/square"
@@ -7862,12 +7817,12 @@
               "description": "Remove the transparent pixels from the edge of an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/manipulation/trim"
@@ -7894,12 +7849,12 @@
                   "description": "The location of the text"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/toptext"
@@ -7914,12 +7869,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/breakingnews"
@@ -7934,12 +7889,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/caption"
@@ -7975,12 +7930,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/notification"
@@ -8002,12 +7957,12 @@
                   "description": "Swap the side Peter is on"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/peter"
@@ -8029,12 +7984,12 @@
                   "description": "The sneak value"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/sneak"
@@ -8056,12 +8011,12 @@
                   "description": "Swap the side Robert is on"
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/stuff"
@@ -8097,12 +8052,12 @@
                   "required": true
                 },
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imagefun/texts/what"
@@ -8115,12 +8070,12 @@
               "description": "Get the average colour of an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/averagecolour"
@@ -8129,12 +8084,12 @@
               "description": "Get the most common colour in an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/commoncolour"
@@ -8150,7 +8105,7 @@
                   "description": "The amount the colours can differ"
                 },
                 {
-                  "name": "image1-attachment",
+                  "name": "image1-file",
                   "description": "First image"
                 },
                 {
@@ -8158,7 +8113,7 @@
                   "description": "First image"
                 },
                 {
-                  "name": "image2-attachment",
+                  "name": "image2-file",
                   "description": "Second image"
                 },
                 {
@@ -8183,12 +8138,12 @@
               "description": "Show the palette of an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/palette"
@@ -8197,12 +8152,12 @@
               "description": "Read a QR code in an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/readqrcode"
@@ -8211,12 +8166,12 @@
               "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/save"
@@ -8225,12 +8180,12 @@
               "description": "View the dimentions of an image.",
               "options": [
                 {
-                  "name": "image-attachment",
-                  "description": "An image"
+                  "name": "image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/imagesize"
@@ -8244,20 +8199,20 @@
                   "description": "The compare line colour"
                 },
                 {
-                  "name": "left-image-attachment",
-                  "description": "An image"
+                  "name": "left-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "left-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "right-image-attachment",
-                  "description": "An image"
+                  "name": "right-image-file",
+                  "description": "A file"
                 },
                 {
                   "name": "right-image-string",
-                  "description": "An image"
+                  "description": "URL, Emoji, etc"
                 }
               ],
               "prefixCommand": "images/imageutility/slidecompare"
@@ -8273,7 +8228,7 @@
                   "description": "The text to draw over the image as the watermark"
                 },
                 {
-                  "name": "image-attachment",
+                  "name": "image-file",
                   "description": "The image to draw the watermark over"
                 },
                 {
@@ -8281,7 +8236,7 @@
                   "description": "The image to draw the watermark over"
                 },
                 {
-                  "name": "watermark-image-attachment",
+                  "name": "watermark-image-file",
                   "description": "The image use as a watermark instead of text"
                 },
                 {
@@ -8321,7 +8276,7 @@
                   "description": "Convert chests between the 1.14 and 1.15 format.",
                   "options": [
                     {
-                      "name": "normal-or-left-attachment",
+                      "name": "normal-or-left-file",
                       "description": "The normal, double, or left chest texture"
                     },
                     {
@@ -8329,7 +8284,7 @@
                       "description": "The normal, double, or left chest texture"
                     },
                     {
-                      "name": "right-attachment",
+                      "name": "right-file",
                       "description": "The right chest texture"
                     },
                     {
@@ -8343,12 +8298,12 @@
                   "description": "Convert compact CTM to full CTM or overlay CTM.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/ctmconverter"
@@ -8357,12 +8312,12 @@
                   "description": "Generate a preview image for full CTM.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/ctmpreviewer"
@@ -8376,12 +8331,12 @@
                       "required": true
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/ctmsplitter"
@@ -8390,12 +8345,12 @@
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/mojangconverter"
@@ -8438,15 +8393,15 @@
                       "description": "The model to render"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     },
                     {
-                      "name": "image2-attachment",
+                      "name": "image2-file",
                       "description": "Not used on all models"
                     },
                     {
@@ -8454,7 +8409,7 @@
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image3-attachment",
+                      "name": "image3-file",
                       "description": "Not used on all models"
                     },
                     {
@@ -8498,12 +8453,12 @@
                       "description": "Enable randomly rotated tiles"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/tile"
@@ -8512,12 +8467,12 @@
                   "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecrafttitleconverter"
@@ -8551,12 +8506,12 @@
                       "description": "The players username"
                     },
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/skins/minecraftavatar"
@@ -8575,12 +8530,12 @@
                   "description": "Convert between the new and old Minecraft skin formats.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/skins/skinconverter"
@@ -8617,12 +8572,12 @@
                   ],
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/skins/previewskin"
@@ -8659,12 +8614,12 @@
                   "description": "Turn any image into a minecraft skin.",
                   "options": [
                     {
-                      "name": "image-attachment",
-                      "description": "An image"
+                      "name": "image-file",
+                      "description": "A file"
                     },
                     {
                       "name": "image-string",
-                      "description": "An image"
+                      "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "minecraft/skins/skinify"
@@ -8982,13 +8937,9 @@
               "prefixCommand": "server/namesearch"
             },
             "quote": {
-              "description": "Quote a Discord message.",
-              "options": [
-                {
-                  "name": "message-url",
-                  "description": "The message URL to quote",
-                  "required": true
-                }
+              "description": [
+                "Quote someone elses message.",
+                "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
               ],
               "prefixCommand": "server/quotemessage",
               "contextCommand": "message/quote-message"
@@ -9574,25 +9525,8 @@
         },
         "user": {
           "commands": {
-            "avatar": {
-              "description": "Show a users avatar, with links to get it in different resolutions.",
-              "options": [
-                {
-                  "name": "user",
-                  "description": "The user to get the avatar of"
-                }
-              ],
-              "prefixCommand": "user/avatar",
-              "contextCommand": "user/get-avatar"
-            },
             "info": {
               "description": "Get info about a specified user.",
-              "options": [
-                {
-                  "name": "user",
-                  "description": "The user to get the information of"
-                }
-              ],
               "prefixCommand": "user/userinfo",
               "contextCommand": "user/user-information"
             },
@@ -9688,7 +9622,7 @@
               "description": "View the exif data of a file.",
               "options": [
                 {
-                  "name": "file-attachment",
+                  "name": "file-file",
                   "description": "A file"
                 },
                 {
@@ -9711,13 +9645,6 @@
             },
             "getrawmessage": {
               "description": "Get the raw text content of a Discord message.",
-              "options": [
-                {
-                  "name": "message-url",
-                  "description": "The message URL to get the raw content of",
-                  "required": true
-                }
-              ],
               "prefixCommand": "utility/getrawmessage",
               "contextCommand": "message/get-raw-message"
             },
@@ -9756,21 +9683,6 @@
                 "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
               ],
               "cooldown": 5,
-              "options": [
-                {
-                  "name": "message",
-                  "description": "The message to translate",
-                  "required": true
-                },
-                {
-                  "name": "to-language",
-                  "description": "The language to translate to"
-                },
-                {
-                  "name": "from-language",
-                  "description": "The language to translate from"
-                }
-              ],
               "prefixCommand": "utility/translate",
               "contextCommand": "message/translate-message"
             }
@@ -9819,17 +9731,6 @@
       "commands": {
         "ban": {
           "description": "Ban a user from the server.",
-          "options": [
-            {
-              "name": "user",
-              "description": "The user to ban",
-              "required": true
-            },
-            {
-              "name": "reason",
-              "description": "The reason for the ban"
-            }
-          ],
           "permissions": [
             "Guild Only",
             "Ban Members"
@@ -9898,17 +9799,6 @@
         },
         "kick": {
           "description": "Kick a member from the server.",
-          "options": [
-            {
-              "name": "member",
-              "description": "The member to kick",
-              "required": true
-            },
-            {
-              "name": "reason",
-              "description": "The reason for the kick"
-            }
-          ],
           "permissions": [
             "Guild Only",
             "Kick Members"
@@ -10041,7 +9931,7 @@
               "description": "Show a users avatar, with links to get it in different resolutions.",
               "type": "user",
               "prefixCommand": "user/avatar",
-              "slashCommand": "user/avatar"
+              "slashCommand": "avatar/get"
             },
             "ban-member": {
               "description": "Ban a user from the server.",
@@ -10098,7 +9988,7 @@
               "slashCommand": "utility/getrawmessage"
             },
             "quote-message": {
-              "description": "Quote a Discord message.",
+              "description": "Quote someone elses message.",
               "type": "message",
               "prefixCommand": "server/quotemessage",
               "slashCommand": "server/quote"
@@ -10125,7 +10015,7 @@
               "slashCommand": "imagemanipulation/resize"
             },
             "scale-image": {
-              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300",
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
               "type": "message",
               "prefixCommand": "images/manipulation/scale",
               "slashCommand": "imagemanipulation/scale"
