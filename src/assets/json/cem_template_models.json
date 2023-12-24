@@ -403,7 +403,7 @@
     {
       "name": "Unedited",
       "description": "Some of the supported models have been edited to make them easier to understand and edit. These models have had those edits removed.",
-      "icon": "mode_edit",
+      "icon": "edit_off",
       "entities": [
         {
           "name": "bed_unedited",
@@ -876,7 +876,7 @@
     {
       "name": "Single-Bone",
       "description": "Entity models built off of a single bone, making it easier to create custom animations.",
-      "icon": "looks_one",
+      "icon": "pet_supplies",
       "entities": [
         {
           "name": "armor_stand_single_bone",
