@@ -2917,34 +2917,42 @@
                 },
                 "setmodpingroles": {
                   "aliases": [
-                    "setmoderatorpingrole",
-                    "moderatorpingroles",
-                    "moderatorpingrole",
-                    "setmoderatorpingroles",
-                    "modpingroles",
-                    "setmodpingrole",
-                    "modpingrole",
-                    "setmodping",
-                    "setmoderatorping"
+                    "setmoderatorpingroles"
                   ],
                   "arguments": "<role> <role> <role>",
-                  "description": "Set up to three custom roles to be used with moderator pings. The order of the roles is the order of priority. Running this will overwrite any previously set roles. Provide no roles to remove the current ones.",
+                  "description": [
+                    "Set up to three custom roles to be used with moderator pings.",
+                    "The order of the roles is the order of priority. Running this will overwrite any previously set roles. Provide no roles to remove the current ones."
+                  ],
                   "permissions": [
                     "Guild Only",
-                    "Administrator"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/modpingroles/set"
                 },
                 "togglemodping": {
                   "aliases": [
-                    "togglemoderatorping",
-                    "modpingtoggle",
-                    "moderatorpingtoggle"
+                    "togglemoderatorping"
                   ],
                   "description": "Toggles the ability for users to trigger a moderator ping.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/toggle/modping"
+                },
+                "viewmodpingroles": {
+                  "aliases": [
+                    "modpingroles",
+                    "viewmoderatorpingroles",
+                    "moderatorpingroles"
+                  ],
+                  "description": "View the roles set to be used in moderator pings.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/modpingroles/view"
                 }
               }
             }
@@ -9276,6 +9284,41 @@
                 }
               }
             },
+            "modpingroles": {
+              "commands": {
+                "set": {
+                  "description": [
+                    "Set up to three custom roles to be used with moderator pings.",
+                    "The order of the roles is the order of priority. Running this will overwrite any previously set roles. Provide no roles to remove the current ones."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "Role",
+                      "description": "The first role"
+                    },
+                    {
+                      "name": "Role 2",
+                      "description": "The second role"
+                    },
+                    {
+                      "name": "Role 3",
+                      "description": "The third role"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "moderation/modpings/setmodpingroles"
+                },
+                "view": {
+                  "description": "View the roles set to be used in moderator pings.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "moderation/modpings/viewmodpingroles"
+                }
+              }
+            },
             "prefixes": {
               "commands": {
                 "prefix": {
@@ -9472,6 +9515,13 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/issuetracker/toggleautoissues"
+                },
+                "modping": {
+                  "description": "Toggles the ability for users to trigger a moderator ping.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "moderation/modpings/togglemodping"
                 },
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
