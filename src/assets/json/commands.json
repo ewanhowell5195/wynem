@@ -20,7 +20,7 @@
                         "unblacklist"
                       ],
                       "arguments": "<member/channel/category>",
-                      "description": "Toggle having a member, channel, or category blacklisted from running commands. Threads are not supported. Moderators can bypass channel blacklists, and Administrators can bypass member blacklists.",
+                      "description": "[DEPRECATED] Toggle having a member, channel, or category blacklisted from running commands. Threads are not supported. Moderators can bypass channel blacklists, and Administrators can bypass member blacklists.",
                       "permissions": [
                         "Manage Channels"
                       ]
@@ -41,7 +41,7 @@
                         "blshow",
                         "bls"
                       ],
-                      "description": "View the currently blacklisted members, channels, and categories."
+                      "description": "[DEPRECATED] View the currently blacklisted members, channels, and categories."
                     }
                   }
                 },
@@ -112,7 +112,7 @@
                         "rolerequire"
                       ],
                       "arguments": "[command/category] <role>",
-                      "description": "Limit a command to only be used by members with a certain role. You can set up to 5 roles per command. Members only need one of the roles to be able to use it.",
+                      "description": "[DEPRECATED] Limit a command to only be used by members with a certain role. You can set up to 5 roles per command. Members only need one of the roles to be able to use it.",
                       "permissions": [
                         "Guild Only",
                         "Manage Roles"
@@ -126,7 +126,7 @@
                         "removerr"
                       ],
                       "arguments": "[command/category] <role>",
-                      "description": "Remove a role from being a requirement of a command.",
+                      "description": "[DEPRECATED] Remove a role from being a requirement of a command.",
                       "permissions": [
                         "Guild Only",
                         "Manage Roles"
@@ -140,7 +140,7 @@
                         "rolerequirements"
                       ],
                       "arguments": "[command/category]",
-                      "description": "View the role requirements set up in the current server.",
+                      "description": "[DEPRECATED] View the role requirements set up in the current server.",
                       "permissions": [
                         "Guild Only",
                         "Manage Roles"
@@ -159,7 +159,7 @@
                     "toggleenable"
                   ],
                   "arguments": "[category/command]",
-                  "description": "Toggle a category/command being disabled in the current server.",
+                  "description": "[DEPRECATED] Toggle a category/command being disabled in the current server.",
                   "permissions": [
                     "Guild Only",
                     "Administrator"
@@ -212,7 +212,7 @@
                     "showdisabled",
                     "disabled"
                   ],
-                  "description": "View which categories/commands are disabled in the current server.",
+                  "description": "[DEPRECATED] View which categories/commands are disabled in the current server.",
                   "permissions": [
                     "Guild Only",
                     "Administrator"
@@ -225,7 +225,7 @@
                     "showwhitelisted",
                     "whitelisted"
                   ],
-                  "description": "View which categories/commands are whitelisted in the current server.",
+                  "description": "[DEPRECATED] View which categories/commands are whitelisted in the current server.",
                   "permissions": [
                     "Guild Only",
                     "Administrator"
@@ -237,7 +237,7 @@
                     "togglewhitelist"
                   ],
                   "arguments": "[category/command]",
-                  "description": "Toggle a category/command being whitelisted in the current server. Whitelisting a category/command allows it to bypass being disabled by a parent category.",
+                  "description": "[DEPRECATED] Toggle a category/command being whitelisted in the current server. Whitelisting a category/command allows it to bypass being disabled by a parent category.",
                   "permissions": [
                     "Guild Only",
                     "Administrator"
@@ -2906,7 +2906,10 @@
                   "aliases": [
                     "moderatorping"
                   ],
-                  "description": "Ping the moderators of the current server. The roles can be configured with the \"setmodpingroles\" command",
+                  "description": [
+                    "Ping the moderators of the current server.",
+                    "The roles can be configured with the \"setmodpingroles\" command"
+                  ],
                   "permissions": [
                     "Guild Only"
                   ],
@@ -2933,16 +2936,14 @@
                 },
                 "togglemodping": {
                   "aliases": [
-                    "enablemoderatorping",
-                    "disablemoderatorping",
                     "togglemoderatorping",
-                    "enablemodping",
-                    "disablemodping"
+                    "modpingtoggle",
+                    "moderatorpingtoggle"
                   ],
                   "description": "Toggles the ability for users to trigger a moderator ping.",
                   "permissions": [
                     "Guild Only",
-                    "Administrator"
+                    "Manage Guild"
                   ]
                 }
               }
@@ -4156,10 +4157,6 @@
               "slashCommand": "server/info"
             },
             "togglequotes": {
-              "aliases": [
-                "enablequotes",
-                "disablequotes"
-              ],
               "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
               "permissions": [
                 "Guild Only",
