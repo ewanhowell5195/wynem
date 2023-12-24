@@ -1050,43 +1050,94 @@
       "icon": "history",
       "entities": [
         {
-          "name": "horse_10",
-          "display_name": "Horse [1.10]",
-          "file_name": "horse",
-          "texture_name": "horse"
+          "name": "bat_20.2",
+          "display_name": "Bat [1.20.2]",
+          "file_name": "bat",
+          "texture_name": "bat"
         },
         {
-          "name": "donkey_12",
-          "display_name": "Donkey [1.12]",
-          "file_name": "donkey",
-          "texture_name": "donkey"
+          "name": "chest_19.2",
+          "display_name": "Chest [1.19.2]",
+          "file_name": "chest",
+          "texture_name": "chest"
         },
         {
-          "name": "horse_12",
-          "display_name": "Horse [1.12]",
-          "file_name": "horse",
-          "texture_name": "horse"
+          "name": "chest_large_19.2",
+          "display_name": "Chest [Large] [1.19.2]",
+          "file_name": "chest_large",
+          "vanilla_textures": [
+            "normal_left",
+            "normal_right"
+          ]
         },
         {
-          "name": "mule_12",
-          "display_name": "Mule [1.12]",
-          "file_name": "mule",
-          "texture_name": "mule",
-          "model": "donkey_12"
+          "name": "ender_chest_19.2",
+          "display_name": "Ender Chest [1.19.2]",
+          "file_name": "ender_chest",
+          "texture_name": "ender_chest",
+          "model": "chest_19.2"
         },
         {
-          "name": "skeleton_horse_12",
-          "display_name": "Skeleton Horse [1.12]",
-          "file_name": "skeleton_horse",
-          "texture_name": "skeleton_horse",
-          "model": "horse_12"
+          "name": "trapped_chest_19.2",
+          "display_name": "Trapped Chest [1.19.2]",
+          "file_name": "trapped_chest",
+          "texture_name": "trapped_chest",
+          "model": "chest_19.2"
         },
         {
-          "name": "zombie_horse_12",
-          "display_name": "Zombie Horse [1.12]",
-          "file_name": "zombie_horse",
-          "texture_name": "zombie_horse",
-          "model": "horse_12"
+          "name": "trapped_chest_large_19.2",
+          "display_name": "Trapped Chest [Large] [1.19.2]",
+          "file_name": "trapped_chest_large",
+          "vanilla_textures": [
+            "trapped_left",
+            "trapped_right"
+          ],
+          "model": "chest_large_19.2"
+        },
+        {
+          "name": "vex_19.2",
+          "display_name": "Vex [1.19.2]",
+          "file_name": "vex",
+          "texture_name": "vex"
+        },
+        {
+          "name": "iron_golem_16",
+          "display_name": "Iron Golem [1.16]",
+          "file_name": "iron_golem",
+          "texture_name": "iron_golem"
+        },
+        {
+          "name": "piglin_16",
+          "display_name": "Piglin [1.16]",
+          "file_name": "piglin",
+          "texture_name": "piglin"
+        },
+        {
+          "name": "piglin_brute_16",
+          "display_name": "Piglin Brute [1.16]",
+          "file_name": "piglin_brute",
+          "texture_name": "piglin_brute",
+          "model": "piglin_16"
+        },
+        {
+          "name": "zombified_piglin_16",
+          "display_name": "Zombified Piglin [1.16]",
+          "file_name": "zombified_piglin",
+          "texture_name": "zombified_piglin",
+          "model": "piglin_16"
+        },
+        {
+          "name": "book_15",
+          "display_name": "Book [1.15]",
+          "file_name": "book",
+          "texture_name": "book",
+          "model": "book"
+        },
+        {
+          "name": "zombie_pigman_15",
+          "display_name": "Zombie Pigman [1.15]",
+          "file_name": "zombie_pigman",
+          "texture_name": "zombie_pigman"
         },
         {
           "name": "chest_14",
@@ -1141,94 +1192,43 @@
           "model": "trident_14"
         },
         {
-          "name": "book_15",
-          "display_name": "Book [1.15]",
-          "file_name": "book",
-          "texture_name": "book",
-          "model": "book"
+          "name": "donkey_12",
+          "display_name": "Donkey [1.12]",
+          "file_name": "donkey",
+          "texture_name": "donkey"
         },
         {
-          "name": "zombie_pigman_15",
-          "display_name": "Zombie Pigman [1.15]",
-          "file_name": "zombie_pigman",
-          "texture_name": "zombie_pigman"
+          "name": "horse_12",
+          "display_name": "Horse [1.12]",
+          "file_name": "horse",
+          "texture_name": "horse"
         },
         {
-          "name": "iron_golem_16",
-          "display_name": "Iron Golem [1.16]",
-          "file_name": "iron_golem",
-          "texture_name": "iron_golem"
+          "name": "mule_12",
+          "display_name": "Mule [1.12]",
+          "file_name": "mule",
+          "texture_name": "mule",
+          "model": "donkey_12"
         },
         {
-          "name": "piglin_16",
-          "display_name": "Piglin [1.16]",
-          "file_name": "piglin",
-          "texture_name": "piglin"
+          "name": "skeleton_horse_12",
+          "display_name": "Skeleton Horse [1.12]",
+          "file_name": "skeleton_horse",
+          "texture_name": "skeleton_horse",
+          "model": "horse_12"
         },
         {
-          "name": "piglin_brute_16",
-          "display_name": "Piglin Brute [1.16]",
-          "file_name": "piglin_brute",
-          "texture_name": "piglin_brute",
-          "model": "piglin_16"
+          "name": "zombie_horse_12",
+          "display_name": "Zombie Horse [1.12]",
+          "file_name": "zombie_horse",
+          "texture_name": "zombie_horse",
+          "model": "horse_12"
         },
         {
-          "name": "zombified_piglin_16",
-          "display_name": "Zombified Piglin [1.16]",
-          "file_name": "zombified_piglin",
-          "texture_name": "zombified_piglin",
-          "model": "piglin_16"
-        },
-        {
-          "name": "chest_19.2",
-          "display_name": "Chest [1.19.2]",
-          "file_name": "chest",
-          "texture_name": "chest"
-        },
-        {
-          "name": "chest_large_19.2",
-          "display_name": "Chest [Large] [1.19.2]",
-          "file_name": "chest_large",
-          "vanilla_textures": [
-            "normal_left",
-            "normal_right"
-          ]
-        },
-        {
-          "name": "ender_chest_19.2",
-          "display_name": "Ender Chest [1.19.2]",
-          "file_name": "ender_chest",
-          "texture_name": "ender_chest",
-          "model": "chest_19.2"
-        },
-        {
-          "name": "trapped_chest_19.2",
-          "display_name": "Trapped Chest [1.19.2]",
-          "file_name": "trapped_chest",
-          "texture_name": "trapped_chest",
-          "model": "chest_19.2"
-        },
-        {
-          "name": "trapped_chest_large_19.2",
-          "display_name": "Trapped Chest [Large] [1.19.2]",
-          "file_name": "trapped_chest_large",
-          "vanilla_textures": [
-            "trapped_left",
-            "trapped_right"
-          ],
-          "model": "chest_large_19.2"
-        },
-        {
-          "name": "vex_19.2",
-          "display_name": "Vex [1.19.2]",
-          "file_name": "vex",
-          "texture_name": "vex"
-        },
-        {
-          "name": "bat_20.2",
-          "display_name": "Bat [1.20.2]",
-          "file_name": "bat",
-          "texture_name": "bat"
+          "name": "horse_10",
+          "display_name": "Horse [1.10]",
+          "file_name": "horse",
+          "texture_name": "horse"
         }
       ]
     },
