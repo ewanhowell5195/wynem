@@ -1447,6 +1447,16 @@
                       "description": "Content aware scales an image. Outputs a GIF.",
                       "slashCommand": "imagefun/distortions/gmagick"
                     },
+                    "localtwist": {
+                      "aliases": [
+                        "localtwirl",
+                        "areatwist",
+                        "areatwirl"
+                      ],
+                      "arguments": "[degrees] [x] [y] [radius] {image}",
+                      "description": "Apply a twist effect to an image over a certain area.",
+                      "slashCommand": "imagefun/distortions/localtwist"
+                    },
                     "magick": {
                       "aliases": [
                         "magic",
@@ -1458,11 +1468,27 @@
                       "description": "Content aware scales an image. Outputs a static image.",
                       "slashCommand": "imagefun/distortions/magick"
                     },
+                    "sinetwist": {
+                      "aliases": [
+                        "sinetwirl",
+                        "sinetwister",
+                        "sintwist",
+                        "sintwirl",
+                        "sintwister",
+                        "wibbly",
+                        "wobbly",
+                        "wibblywobbly",
+                        "wibblify"
+                      ],
+                      "arguments": "[amplitude] [period] [x] [y] [phaseShift] {image}",
+                      "description": "Apply an occilating twist effect to an image.",
+                      "slashCommand": "imagefun/distortions/sinetwist"
+                    },
                     "twist": {
                       "aliases": [
                         "twirl"
                       ],
-                      "arguments": "[degrees] [x] [y] [radius] {image}",
+                      "arguments": "[degrees] [x] [y] {image}",
                       "description": "Apply a twist effect to an image.",
                       "slashCommand": "imagefun/distortions/twist"
                     }
@@ -1566,7 +1592,7 @@
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the gun over the edge of the image"
                       ],
-                      "slashCommand": "imagefun/overlays/gun"
+                      "slashCommand": "imageoverlays/gun"
                     },
                     "jolly": {
                       "aliases": [
@@ -1574,7 +1600,7 @@
                       ],
                       "arguments": "{image}",
                       "description": "Make an image jolly!",
-                      "slashCommand": "imagefun/overlays/jolly"
+                      "slashCommand": "imageoverlays/jolly"
                     },
                     "petpet": {
                       "aliases": [
@@ -1583,7 +1609,7 @@
                       "arguments": "{image}",
                       "cooldown": 3,
                       "description": "Pet an image!",
-                      "slashCommand": "imagefun/overlays/petpet"
+                      "slashCommand": "imageoverlays/petpet"
                     },
                     "shoot": {
                       "arguments": "[expand] [double] {image}",
@@ -1592,7 +1618,7 @@
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the gun over the edge of the image"
                       ],
-                      "slashCommand": "imagefun/overlays/shoot"
+                      "slashCommand": "imageoverlays/shoot"
                     },
                     "speechbubble": {
                       "aliases": [
@@ -1606,7 +1632,7 @@
                         "The X and Y coordinates customise where the speech bubble points to.",
                         "If no coordinates are provided, it will try to point to a face detected within the image."
                       ],
-                      "slashCommand": "imagefun/overlays/speechbubble"
+                      "slashCommand": "imageoverlays/speechbubble"
                     },
                     "thinking": {
                       "aliases": [
@@ -1618,7 +1644,7 @@
                         "\"expand\" and \"double\" are true/false.",
                         "\"expand\" puts the hand over the edge of the image."
                       ],
-                      "slashCommand": "imagefun/overlays/thinking"
+                      "slashCommand": "imageoverlays/thinking"
                     },
                     "triggered": {
                       "aliases": [
@@ -1626,7 +1652,7 @@
                       ],
                       "arguments": "{image}",
                       "description": "Make an image triggered.",
-                      "slashCommand": "imagefun/overlays/triggered"
+                      "slashCommand": "imageoverlays/triggered"
                     }
                   }
                 },
@@ -2838,9 +2864,9 @@
                 "ban": {
                   "arguments": "<member> [reason]",
                   "description": [
-                    "Ban a user from the server.",
-                    "The user is sent a message saying they were banned, along with the reason.",
-                    "A ban appeal link will also be sent if you have configured one. See the \"setbanappeal\" command."
+                    "Ban a member from the server.",
+                    "The member is sent a message saying they were banned, along with the reason.",
+                    "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command."
                   ],
                   "permissions": [
                     "Guild Only",
@@ -4646,8 +4672,8 @@
               "description": "Show a users avatar, with links to get it in different resolutions.",
               "arguments": [
                 {
-                  "name": "User",
-                  "description": "The user to get the avatar of"
+                  "name": "Member",
+                  "description": "The member to get the avatar of"
                 }
               ],
               "prefixCommand": "user/avatar",
@@ -6981,6 +7007,36 @@
                   ],
                   "prefixCommand": "images/imagefun/distortions/gmagick"
                 },
+                "localtwist": {
+                  "description": "Apply a twist effect to an image over a certain area.",
+                  "arguments": [
+                    {
+                      "name": "Degrees",
+                      "description": "Degrees to twist"
+                    },
+                    {
+                      "name": "X",
+                      "description": "X coordinate to twist from"
+                    },
+                    {
+                      "name": "Y",
+                      "description": "Y coordinate to twist from"
+                    },
+                    {
+                      "name": "Radius",
+                      "description": "How large the twist radius should be"
+                    },
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/distortions/localtwist"
+                },
                 "magick": {
                   "description": "Content aware scales an image. Outputs a static image.",
                   "arguments": [
@@ -6999,191 +7055,65 @@
                   ],
                   "prefixCommand": "images/imagefun/distortions/magick"
                 },
+                "sinetwist": {
+                  "description": "Apply an occilating twist effect to an image.",
+                  "arguments": [
+                    {
+                      "name": "Amplitude",
+                      "description": "Maximum intensity of the twist"
+                    },
+                    {
+                      "name": "Period",
+                      "description": "The length of one cycle"
+                    },
+                    {
+                      "name": "X",
+                      "description": "X coordinate to twist from"
+                    },
+                    {
+                      "name": "Y",
+                      "description": "Y coordinate to twist from"
+                    },
+                    {
+                      "name": "Phase Shift",
+                      "description": "Sine wave offset"
+                    },
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/distortions/sinetwist"
+                },
                 "twist": {
                   "description": "Apply a twist effect to an image.",
                   "arguments": [
                     {
-                      "name": "degrees",
-                      "description": "The degrees to twist"
+                      "name": "Degrees",
+                      "description": "Degrees to twist"
                     },
                     {
-                      "name": "x",
-                      "description": "The X coordinate to twist from"
+                      "name": "X",
+                      "description": "X coordinate to twist from"
                     },
                     {
-                      "name": "y",
-                      "description": "The Y coordinate to twist from"
+                      "name": "Y",
+                      "description": "Y coordinate to twist from"
                     },
                     {
-                      "name": "radius",
-                      "description": "How large the twist radius should be"
-                    },
-                    {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
                   "prefixCommand": "images/imagefun/distortions/twist"
-                }
-              }
-            },
-            "overlays": {
-              "commands": {
-                "gun": {
-                  "description": [
-                    "Make an image hold a gun.",
-                    "\"expand\" and \"double\" are true/false.",
-                    "\"expand\" puts the gun over the edge of the image"
-                  ],
-                  "arguments": [
-                    {
-                      "name": "expand",
-                      "description": "Put the gun over the edge of the image"
-                    },
-                    {
-                      "name": "double",
-                      "description": "Hold a gun in both hands"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/gun"
-                },
-                "jolly": {
-                  "description": "Make an image jolly!",
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/jolly"
-                },
-                "petpet": {
-                  "description": "Pet an image!",
-                  "cooldown": 3,
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/petpet"
-                },
-                "shoot": {
-                  "description": [
-                    "Shoot an image.",
-                    "\"expand\" and \"double\" are true/false.",
-                    "\"expand\" puts the gun over the edge of the image"
-                  ],
-                  "arguments": [
-                    {
-                      "name": "expand",
-                      "description": "Put the gun over the edge of the image"
-                    },
-                    {
-                      "name": "double",
-                      "description": "Hold a gun in both hands"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/shoot"
-                },
-                "speechbubble": {
-                  "description": [
-                    "Add a speech bubble to an image.",
-                    "The X and Y coordinates customise where the speech bubble points to.",
-                    "If no coordinates are provided, it will try to point to a face detected within the image."
-                  ],
-                  "cooldown": 5,
-                  "arguments": [
-                    {
-                      "name": "x",
-                      "description": "The X coordinate to point to"
-                    },
-                    {
-                      "name": "y",
-                      "description": "The Y coordinate to point to"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/speechbubble"
-                },
-                "thinking": {
-                  "description": [
-                    "Add a thinking hand to an image.",
-                    "\"expand\" and \"double\" are true/false.",
-                    "\"expand\" puts the hand over the edge of the image."
-                  ],
-                  "arguments": [
-                    {
-                      "name": "expand",
-                      "description": "Put the hand over the edge of the image"
-                    },
-                    {
-                      "name": "double",
-                      "description": "Have two hands"
-                    },
-                    {
-                      "name": "colour",
-                      "description": "The hand colour"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/thinking"
-                },
-                "triggered": {
-                  "description": "Make an image triggered.",
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/overlays/triggered"
                 }
               }
             }
@@ -7892,6 +7822,162 @@
                 }
               ],
               "prefixCommand": "images/manipulation/trim"
+            }
+          }
+        },
+        "imageoverlays": {
+          "commands": {
+            "gun": {
+              "description": [
+                "Make an image hold a gun.",
+                "\"expand\" and \"double\" are true/false.",
+                "\"expand\" puts the gun over the edge of the image"
+              ],
+              "arguments": [
+                {
+                  "name": "expand",
+                  "description": "Put the gun over the edge of the image"
+                },
+                {
+                  "name": "double",
+                  "description": "Hold a gun in both hands"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/gun"
+            },
+            "jolly": {
+              "description": "Make an image jolly!",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/jolly"
+            },
+            "petpet": {
+              "description": "Pet an image!",
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/petpet"
+            },
+            "shoot": {
+              "description": [
+                "Shoot an image.",
+                "\"expand\" and \"double\" are true/false.",
+                "\"expand\" puts the gun over the edge of the image"
+              ],
+              "arguments": [
+                {
+                  "name": "expand",
+                  "description": "Put the gun over the edge of the image"
+                },
+                {
+                  "name": "double",
+                  "description": "Hold a gun in both hands"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/shoot"
+            },
+            "speechbubble": {
+              "description": [
+                "Add a speech bubble to an image.",
+                "The X and Y coordinates customise where the speech bubble points to.",
+                "If no coordinates are provided, it will try to point to a face detected within the image."
+              ],
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "x",
+                  "description": "The X coordinate to point to"
+                },
+                {
+                  "name": "y",
+                  "description": "The Y coordinate to point to"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/speechbubble"
+            },
+            "thinking": {
+              "description": [
+                "Add a thinking hand to an image.",
+                "\"expand\" and \"double\" are true/false.",
+                "\"expand\" puts the hand over the edge of the image."
+              ],
+              "arguments": [
+                {
+                  "name": "expand",
+                  "description": "Put the hand over the edge of the image"
+                },
+                {
+                  "name": "double",
+                  "description": "Have two hands"
+                },
+                {
+                  "name": "colour",
+                  "description": "The hand colour"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/thinking"
+            },
+            "triggered": {
+              "description": "Make an image triggered.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/triggered"
             }
           }
         },
@@ -9644,8 +9730,8 @@
               "description": "Get info about a specified user.",
               "arguments": [
                 {
-                  "name": "User",
-                  "description": "The user to get the information of"
+                  "name": "Member",
+                  "description": "The member to get the information of"
                 }
               ],
               "prefixCommand": "user/userinfo",
@@ -9876,8 +9962,8 @@
           "description": "Ban a user from the server.",
           "arguments": [
             {
-              "name": "User",
-              "description": "The user to ban",
+              "name": "Member",
+              "description": "The member to ban",
               "required": true
             },
             {
@@ -10099,7 +10185,7 @@
               "slashCommand": "avatar/get"
             },
             "ban-member": {
-              "description": "Ban a user from the server.",
+              "description": "Ban a member from the server.",
               "permissions": [
                 "Guild Only",
                 "Ban Members"
