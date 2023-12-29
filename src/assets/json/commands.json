@@ -3178,34 +3178,40 @@
                   "description": "Add an image to the Artchive! Requires an image attachment.",
                   "permissions": [
                     "Guild Only"
-                  ]
+                  ],
+                  "slashCommand": "server/artchive/submit"
                 },
                 "removeartchive": {
                   "aliases": [
-                    "removearchive",
-                    "artchiveremove",
-                    "archiveremove"
+                    "removearchive"
                   ],
                   "description": "Remove the servers Artchive channel.",
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/artchive/remove"
                 },
                 "setartchive": {
                   "aliases": [
                     "addartchive",
-                    "artchiveset",
-                    "artchiveadd",
                     "setarchive",
-                    "archiveset"
+                    "addarchive"
                   ],
                   "arguments": "<channel>",
                   "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/artchive/set"
+                },
+                "viewartchive": {
+                  "description": "Show the servers Artchive channel.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
+                  "slashCommand": "server/artchive/view"
                 }
               }
             },
@@ -3448,18 +3454,6 @@
                     "Manage Channels"
                   ],
                   "slashCommand": "channel/lock"
-                },
-                "removemembercounter": {
-                  "aliases": [
-                    "membercounterremove",
-                    "deletemembercounter",
-                    "membercounterdelete"
-                  ],
-                  "description": "Remove the servers member counter.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Channels"
-                  ]
                 },
                 "repin": {
                   "aliases": [
@@ -9037,6 +9031,42 @@
         },
         "server": {
           "categories": {
+            "artchive": {
+              "commands": {
+                "submit": {
+                  "description": "Add an image to the Artchive! Requires an image attachment.",
+                  "arguments": [
+                    {
+                      "name": "description",
+                      "description": "The description of the artwork",
+                      "required": true
+                    },
+                    {
+                      "name": "image",
+                      "description": "The image to submit",
+                      "required": true
+                    },
+                    {
+                      "name": "image2",
+                      "description": "A second image"
+                    },
+                    {
+                      "name": "image3",
+                      "description": "A third image"
+                    },
+                    {
+                      "name": "image4",
+                      "description": "A fourth image"
+                    }
+                  ],
+                  "prefixCommand": "server/artchives/artchive"
+                },
+                "view": {
+                  "description": "Show the servers Artchive channel.",
+                  "prefixCommand": "server/artchives/viewartchive"
+                }
+              }
+            },
             "issuetracker": {
               "commands": {
                 "issue": {
@@ -9148,6 +9178,30 @@
         },
         "serverconfig": {
           "categories": {
+            "artchive": {
+              "commands": {
+                "remove": {
+                  "description": "Remove the servers Artchive channel.",
+                  "permissions": [
+                    "Manage Channels"
+                  ],
+                  "prefixCommand": "server/artchives/removeartchive"
+                },
+                "set": {
+                  "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
+                  "arguments": [
+                    {
+                      "name": "Channel",
+                      "description": "The channel to use"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/artchives/setartchive"
+                }
+              }
+            },
             "autoresponses": {
               "commands": {
                 "add": {
