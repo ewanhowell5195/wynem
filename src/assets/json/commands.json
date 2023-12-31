@@ -71,7 +71,7 @@
                         "Guild Only",
                         "Manage Guild"
                       ],
-                      "slashCommand": "serverconfig/customcommands/add"
+                      "slashCommand": "botconfig/customcommands/add"
                     },
                     "removecustomcommand": {
                       "aliases": [
@@ -93,7 +93,7 @@
                         "Guild Only",
                         "Manage Guild"
                       ],
-                      "slashCommand": "serverconfig/customcommands/remove"
+                      "slashCommand": "botconfig/customcommands/remove"
                     }
                   }
                 },
@@ -257,7 +257,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/prefixes/prefix"
+                  "slashCommand": "botconfig/prefixes/prefix"
                 },
                 "prefixalias": {
                   "aliases": [
@@ -273,7 +273,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/prefixes/prefixalias"
+                  "slashCommand": "botconfig/prefixes/prefixalias"
                 }
               }
             }
@@ -327,7 +327,7 @@
                 "Guild Only",
                 "Manage Guild"
               ],
-              "slashCommand": "serverconfig/embedcolour"
+              "slashCommand": "botconfig/embedcolour"
             },
             "ewan": {
               "aliases": [
@@ -3282,7 +3282,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/add"
+                  "slashCommand": "botconfig/autoresponses/add"
                 },
                 "removeautoresponse": {
                   "aliases": [
@@ -3299,7 +3299,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/remove"
+                  "slashCommand": "botconfig/autoresponses/remove"
                 },
                 "viewautoresponse": {
                   "aliases": [
@@ -3320,7 +3320,7 @@
                     "Guild Only",
                     "Manage Guild"
                   ],
-                  "slashCommand": "serverconfig/autoresponses/view"
+                  "slashCommand": "botconfig/autoresponses/view"
                 }
               }
             },
@@ -3652,7 +3652,7 @@
                     "joindmremove",
                     "joindmdelete"
                   ],
-                  "description": "Remove the servers join DM.",
+                  "description": "Remove the server's join DM.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -3684,9 +3684,7 @@
                 },
                 "setjoindm": {
                   "aliases": [
-                    "joindmset",
                     "addjoindm",
-                    "joindmadd",
                     "joindm"
                   ],
                   "arguments": "[message]",
@@ -3850,14 +3848,7 @@
                 },
                 "joinrole": {
                   "aliases": [
-                    "addjoinrole",
-                    "removejoinrole",
-                    "setjoinrole",
-                    "deletejoinrole",
-                    "togglejoinrole",
-                    "joinroles",
-                    "viewjoinroles",
-                    "viewjoinrole"
+                    "joinroles"
                   ],
                   "arguments": "<role>",
                   "description": [
@@ -4190,7 +4181,7 @@
                 "Guild Only",
                 "Manage Guild"
               ],
-              "slashCommand": "serverconfig/toggle/quotes"
+              "slashCommand": "botconfig/togglequotes"
             }
           }
         },
@@ -4387,17 +4378,20 @@
           "commands": {
             "ignoreprefix": {
               "aliases": [
-                "disableprefix",
-                "blockprefix",
-                "disallowprefix",
-                "addignoredprefix"
+                "ignoredprefix",
+                "ignoredprefixes"
               ],
               "arguments": "[prefix]",
-              "description": "Add prefixes to ignore in the autotts channel. This can be used to stop other bot commands being read out loud.",
+              "description": [
+                "Add prefixes to ignore in the AutoTTS channel.",
+                "This can be used to stop other bot commands being read out loud.",
+                "Provide no arguments to view the currently ignored prefixes."
+              ],
               "permissions": [
                 "Guild Only",
-                "Manage Channels"
-              ]
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/autotts/ignoreprefix"
             },
             "leave": {
               "aliases": [
@@ -4415,47 +4409,27 @@
               "slashCommand": "voice/leave"
             },
             "removeautotts": {
-              "aliases": [
-                "autottsremove",
-                "deleteautotts",
-                "autottsdelete"
-              ],
-              "description": "Remove the servers autotts channel.",
+              "description": "Remove the servers AutoTTS channel.",
               "permissions": [
                 "Guild Only",
-                "Manage Channels"
-              ]
-            },
-            "removeignoredprefix": {
-              "aliases": [
-                "removedisabledprefix",
-                "removeblockedprefix",
-                "removedisallowedprefix",
-                "allowprefix",
-                "enableprefix",
-                "unblockprefix"
+                "Manage Guild"
               ],
-              "arguments": "[prefix]",
-              "description": "Remove prefixes that are currently being ignored in autotts.",
-              "permissions": [
-                "Guild Only",
-                "Manage Channels"
-              ]
+              "slashCommand": "serverconfig/autotts/remove"
             },
             "setautotts": {
               "aliases": [
-                "autottsset",
                 "autotts"
               ],
               "arguments": "<channel>",
               "description": [
                 "Set a channel where messages to be automatically read out loud in a voice channel.",
-                "Messages will not be read for users who not in the voice channel, or if the message starts with a URL."
+                "Messages will not be read for users who are not in the voice channel, or if the message starts with a URL."
               ],
               "permissions": [
                 "Guild Only",
-                "Manage Channels"
-              ]
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/autotts/set"
             },
             "setttslanguage": {
               "aliases": [
@@ -4476,7 +4450,7 @@
                 "speak"
               ],
               "arguments": "[language] [text]",
-              "cooldown": "3",
+              "cooldown": 3,
               "description": [
                 "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
                 "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
@@ -4484,24 +4458,12 @@
               ],
               "slashCommand": "voice/tts"
             },
-            "viewignoredprefixes": {
-              "aliases": [
-                "viewdisabledprefixes",
-                "viewblockedprefixes",
-                "viewdisallowedprefixes",
-                "showignoredprefixes",
-                "showdisabledprefixes",
-                "showblockedprefixes",
-                "showdisallowedprefixes",
-                "ignoredprefixes",
-                "disabledprefixes",
-                "blockedprefixes",
-                "disallowedprefixes"
-              ],
-              "description": "View the prefixes currently being ignored in autotts.",
+            "viewautotts": {
+              "description": "Show the servers AutoTTS channel.",
               "permissions": [
                 "Guild Only"
-              ]
+              ],
+              "slashCommand": "voice/viewautotts"
             }
           }
         }
@@ -4990,6 +4952,136 @@
             "website": {
               "description": "Get a link to the bots website.",
               "prefixCommand": "bot/website"
+            }
+          }
+        },
+        "botconfig": {
+          "categories": {
+            "autoresponses": {
+              "commands": {
+                "add": {
+                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/autoresponses/addautoresponse"
+                },
+                "remove": {
+                  "description": [
+                    "Remove an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "auto-response",
+                      "description": "The auto-response to remove",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/autoresponses/removeautoresponse"
+                },
+                "view": {
+                  "description": [
+                    "View an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "auto-response",
+                      "description": "The auto-response to view",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/autoresponses/viewautoresponse"
+                }
+              }
+            },
+            "customcommands": {
+              "commands": {
+                "add": {
+                  "description": "Run a builder that adds a new custom command for the server.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/addcustomcommand"
+                },
+                "remove": {
+                  "description": "Remove a custom command from the server.",
+                  "arguments": [
+                    {
+                      "name": "command",
+                      "description": "The custom command to remove",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/removecustomcommand"
+                }
+              }
+            },
+            "prefixes": {
+              "commands": {
+                "prefix": {
+                  "description": "Change the prefix for the bot in the current server.",
+                  "arguments": [
+                    {
+                      "name": "prefix",
+                      "description": "The new prefix to use"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/prefixes/prefix"
+                },
+                "prefixalias": {
+                  "description": "Add/remove a custom prefix alias. This is an alternative prefix you can use instead of the main one.",
+                  "arguments": [
+                    {
+                      "name": "prefix",
+                      "description": "The custom prefix alias to add or remove"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/prefixes/prefixalias"
+                }
+              }
+            }
+          },
+          "commands": {
+            "embedcolour": {
+              "description": [
+                "Change the bots embed colour on the current server.",
+                "The embed colour is the coloured bar down the side of each message.",
+                "Set the colour to \"default\" to return it to the default colour."
+              ],
+              "arguments": [
+                {
+                  "name": "colour",
+                  "description": "The new embed colour"
+                }
+              ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "bot/embedcolour"
+            },
+            "togglequotes": {
+              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+              "permissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "server/togglequotes"
             }
           }
         },
@@ -9202,48 +9294,47 @@
                 }
               }
             },
-            "autoresponses": {
+            "autotts": {
               "commands": {
-                "add": {
-                  "description": "Run a builder that adds a new auto-response for the server.",
+                "ignoreprefix": {
+                  "description": [
+                    "Add prefixes to ignore in the AutoTTS channel.",
+                    "This can be used to stop other bot commands being read out loud.",
+                    "Provide no arguments to view the currently ignored prefixes."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "Prefix",
+                      "description": "The prefix to ignore/unignore"
+                    }
+                  ],
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/addautoresponse"
+                  "prefixCommand": "voice/ignoreprefix"
                 },
                 "remove": {
-                  "description": [
-                    "Remove an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
-                  ],
-                  "arguments": [
-                    {
-                      "name": "auto-response",
-                      "description": "The auto-response to remove",
-                      "required": true
-                    }
-                  ],
+                  "description": "Remove the servers AutoTTS channel.",
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/removeautoresponse"
+                  "prefixCommand": "voice/removeautotts"
                 },
-                "view": {
+                "set": {
                   "description": [
-                    "View an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
+                    "Set a channel where messages to be automatically read out loud in a voice channel.",
+                    "Messages will not be read for users who are not in the voice channel, or if the message starts with a URL."
                   ],
                   "arguments": [
                     {
-                      "name": "auto-response",
-                      "description": "The auto-response to view",
-                      "required": true
+                      "name": "Channel",
+                      "description": "The channel to use"
                     }
                   ],
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/viewautoresponse"
+                  "prefixCommand": "voice/setautotts"
                 }
               }
             },
@@ -9339,31 +9430,6 @@
                 }
               }
             },
-            "customcommands": {
-              "commands": {
-                "add": {
-                  "description": "Run a builder that adds a new custom command for the server.",
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "bot/commands/customcommands/addcustomcommand"
-                },
-                "remove": {
-                  "description": "Remove a custom command from the server.",
-                  "arguments": [
-                    {
-                      "name": "command",
-                      "description": "The custom command to remove",
-                      "required": true
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "bot/commands/customcommands/removecustomcommand"
-                }
-              }
-            },
             "faq": {
               "commands": {
                 "add": {
@@ -9456,36 +9522,6 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/viewmodpingroles"
-                }
-              }
-            },
-            "prefixes": {
-              "commands": {
-                "prefix": {
-                  "description": "Change the prefix for the bot in the current server.",
-                  "arguments": [
-                    {
-                      "name": "prefix",
-                      "description": "The new prefix to use"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "bot/prefixes/prefix"
-                },
-                "prefixalias": {
-                  "description": "Add/remove a custom prefix alias. This is an alternative prefix you can use instead of the main one.",
-                  "arguments": [
-                    {
-                      "name": "prefix",
-                      "description": "The custom prefix alias to add or remove"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "bot/prefixes/prefixalias"
                 }
               }
             },
@@ -9662,13 +9698,6 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/togglemodping"
-                },
-                "quotes": {
-                  "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "server/togglequotes"
                 }
               }
             }
@@ -9690,23 +9719,6 @@
                 "Manage Guild"
               ],
               "prefixCommand": "moderation/addautomod"
-            },
-            "embedcolour": {
-              "description": [
-                "Change the bots embed colour on the current server.",
-                "The embed colour is the coloured bar down the side of each message.",
-                "Set the colour to \"default\" to return it to the default colour."
-              ],
-              "arguments": [
-                {
-                  "name": "colour",
-                  "description": "The new embed colour"
-                }
-              ],
-              "permissions": [
-                "Manage Guild"
-              ],
-              "prefixCommand": "bot/embedcolour"
             },
             "resendjoininfo": {
               "description": "Resend the message the bot sends when it joins the message in the current channel.",
@@ -9994,7 +10006,7 @@
                 "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
                 "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
               ],
-              "cooldown": "3",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "message",
@@ -10004,9 +10016,17 @@
                 {
                   "name": "language",
                   "description": "The language to read the message in"
+                },
+                {
+                  "name": "send-as-file",
+                  "description": "Send as a file instead of reading in the current voice channel"
                 }
               ],
               "prefixCommand": "voice/tts"
+            },
+            "viewautotts": {
+              "description": "Show the servers AutoTTS channel.",
+              "prefixCommand": "voice/viewautotts"
             }
           }
         }
