@@ -4,6 +4,120 @@
       "categories": {
         "bot": {
           "categories": {
+            "autoresponses": {
+              "description": "Auto-responses are a way to make the bot respond to triggers in regular messages.",
+              "extra": [
+                {
+                  "title": "Auto-response triggers",
+                  "description": "Triggers have four modes: `full`, `contains`, `words ordered`, and `words unordered`.",
+                  "fields": [
+                    [
+                      "Full",
+                      "Will only match if the entire message is the same as the trigger"
+                    ],
+                    [
+                      "Contains",
+                      "Will match if the message contains the trigger anywhere inside it"
+                    ],
+                    [
+                      "Words ordered",
+                      "Will match as long as the message contains all the trigger's words in it, in the order that they were provided"
+                    ],
+                    [
+                      "Words unordered",
+                      "Will match as long as the message contains all the trigger's words in it. The order the words appear in doesn't matter"
+                    ]
+                  ],
+                  "footer": [
+                    "For both words modes, other words can appear in between the required words."
+                  ]
+                },
+                {
+                  "title": "Auto-response types",
+                  "fields": [
+                    [
+                      "Message",
+                      "Will send a regular Discord message"
+                    ],
+                    [
+                      "Image/Gif/Video",
+                      "Will send an image/gif/video in chat"
+                    ],
+                    [
+                      "Custom Embed",
+                      "Will send a custom embed"
+                    ],
+                    [
+                      "URL Buttons",
+                      "Will send a message containing some URL buttons"
+                    ],
+                    [
+                      "Emoji Reactions",
+                      "Will react to the message with some emoji reactions"
+                    ]
+                  ]
+                }
+              ],
+              "commands": {
+                "addautoresponse": {
+                  "aliases": [
+                    "newautoresponse",
+                    "autoresponseadd",
+                    "autoresponsenew",
+                    "autoresponse"
+                  ],
+                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                    }
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "botconfig/autoresponses/add"
+                },
+                "removeautoresponse": {
+                  "aliases": [
+                    "deleteautoresponse",
+                    "autoresponseremove",
+                    "autoresponsedelete"
+                  ],
+                  "arguments": "[command]",
+                  "description": [
+                    "Remove an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "botconfig/autoresponses/remove"
+                },
+                "viewautoresponse": {
+                  "aliases": [
+                    "showautoresponse",
+                    "autoresponseview",
+                    "autoresponseshow",
+                    "viewautoresponses",
+                    "showautoresponses",
+                    "autoresponsesview",
+                    "autoresponsesshow"
+                  ],
+                  "arguments": "[command]",
+                  "description": [
+                    "View an auto-response from the server.",
+                    "Provide no arguments to view a list of active auto-responses."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "botconfig/autoresponses/view"
+                }
+              }
+            },
             "commands": {
               "categories": {
                 "blacklists": {
@@ -67,6 +181,11 @@
                         "ccnew"
                       ],
                       "description": "Run a builder that adds a new custom command for the server.",
+                      "extra": [
+                        {
+                          "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                        }
+                      ],
                       "permissions": [
                         "Guild Only",
                         "Manage Guild"
@@ -3215,115 +3334,6 @@
                 }
               }
             },
-            "autoresponses": {
-              "description": "Auto-responses are a way to make the bot respond to triggers in regular messages.",
-              "extra": [
-                {
-                  "title": "Auto-response triggers",
-                  "description": "Triggers have four modes: `full`, `contains`, `words ordered`, and `words unordered`.",
-                  "fields": [
-                    [
-                      "Full",
-                      "Will only match if the entire message is the same as the trigger"
-                    ],
-                    [
-                      "Contains",
-                      "Will match if the message contains the trigger anywhere inside it"
-                    ],
-                    [
-                      "Words ordered",
-                      "Will match as long as the message contains all the trigger's words in it, in the order that they were provided"
-                    ],
-                    [
-                      "Words unordered",
-                      "Will match as long as the message contains all the trigger's words in it. The order the words appear in doesn't matter"
-                    ]
-                  ],
-                  "footer": [
-                    "For both words modes, other words can appear in between the required words."
-                  ]
-                },
-                {
-                  "title": "Auto-response types",
-                  "fields": [
-                    [
-                      "Message",
-                      "Will send a regular Discord message"
-                    ],
-                    [
-                      "Image/Gif/Video",
-                      "Will send an image/gif/video in chat"
-                    ],
-                    [
-                      "Custom Embed",
-                      "Will send a custom embed"
-                    ],
-                    [
-                      "URL Buttons",
-                      "Will send a message containing some URL buttons"
-                    ],
-                    [
-                      "Emoji Reactions",
-                      "Will react to the message with some emoji reactions"
-                    ]
-                  ]
-                }
-              ],
-              "commands": {
-                "addautoresponse": {
-                  "aliases": [
-                    "newautoresponse",
-                    "autoresponseadd",
-                    "autoresponsenew",
-                    "autoresponse"
-                  ],
-                  "description": "Run a builder that adds a new auto-response for the server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
-                  ],
-                  "slashCommand": "botconfig/autoresponses/add"
-                },
-                "removeautoresponse": {
-                  "aliases": [
-                    "deleteautoresponse",
-                    "autoresponseremove",
-                    "autoresponsedelete"
-                  ],
-                  "arguments": "[command]",
-                  "description": [
-                    "Remove an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
-                  ],
-                  "slashCommand": "botconfig/autoresponses/remove"
-                },
-                "viewautoresponse": {
-                  "aliases": [
-                    "showautoresponse",
-                    "autoresponseview",
-                    "autoresponseshow",
-                    "viewautoresponses",
-                    "showautoresponses",
-                    "autoresponsesview",
-                    "autoresponsesshow"
-                  ],
-                  "arguments": "[command]",
-                  "description": [
-                    "View an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
-                  ],
-                  "slashCommand": "botconfig/autoresponses/view"
-                }
-              }
-            },
             "channel": {
               "categories": {
                 "bridges": {
@@ -3688,6 +3698,11 @@
                   ],
                   "arguments": "[message]",
                   "description": "Set a message that is sent to members through DM when they join the server.",
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server```"
+                    }
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -3713,8 +3728,11 @@
                     "joinmessage"
                   ],
                   "arguments": "<channel> [message]",
-                  "description": [
-                    "Set a message that gets sent to a channel with an image when a member joins the server."
+                  "description": "Set a message that gets sent to a channel with an image when a member joins the server.",
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server```"
+                    }
                   ],
                   "permissions": [
                     "Guild Only",
@@ -3741,8 +3759,11 @@
                     "leavemessage"
                   ],
                   "arguments": "<channel> [message]",
-                  "description": [
-                    "Set a message that gets sent to a channel with an image when a member leaves the server."
+                  "description": "Set a message that gets sent to a channel with an image when a member leaves the server.",
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server```"
+                    }
                   ],
                   "permissions": [
                     "Guild Only",
@@ -3832,6 +3853,11 @@
                     "For the role text, provide \"none\" to leave it blank.",
                     "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
                   ],
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                    }
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Roles"
@@ -3909,6 +3935,11 @@
                     "ruleembed"
                   ],
                   "description": "Create an embed showcasing the server rules.",
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                    }
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -4306,6 +4337,11 @@
                 "mbed"
               ],
               "description": "Run a builder to create and send a custom embed.",
+              "extra": [
+                {
+                  "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                }
+              ],
               "slashCommand": "utility/createembed"
             },
             "exif": {
@@ -4962,7 +4998,7 @@
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/addautoresponse"
+                  "prefixCommand": "bot/autoresponses/addautoresponse"
                 },
                 "remove": {
                   "description": [
@@ -4979,7 +5015,7 @@
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/removeautoresponse"
+                  "prefixCommand": "bot/autoresponses/removeautoresponse"
                 },
                 "view": {
                   "description": [
@@ -4996,7 +5032,7 @@
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/autoresponses/viewautoresponse"
+                  "prefixCommand": "bot/autoresponses/viewautoresponse"
                 }
               }
             },
@@ -9529,9 +9565,7 @@
                   "prefixCommand": "server/joinmessages/setjoinimage"
                 },
                 "setjoinmessage": {
-                  "description": [
-                    "Set a message that gets sent to a channel with an image when a member joins the server."
-                  ],
+                  "description": "Set a message that gets sent to a channel with an image when a member joins the server.",
                   "arguments": [
                     {
                       "name": "Channel",
@@ -9566,9 +9600,7 @@
                   "prefixCommand": "server/joinmessages/setleaveimage"
                 },
                 "setleavemessage": {
-                  "description": [
-                    "Set a message that gets sent to a channel with an image when a member leaves the server."
-                  ],
+                  "description": "Set a message that gets sent to a channel with an image when a member leaves the server.",
                   "arguments": [
                     {
                       "name": "Channel",

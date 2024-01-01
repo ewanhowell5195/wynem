@@ -4,16 +4,16 @@
       {
         "type": "category",
         "text": "Auto-responses",
-        "path": ["server", "autoresponses"]
+        "path": ["bot", "autoresponses"]
       },
-      ["server", "autoresponses", "addautoresponse"],
-      ["server", "autoresponses", "viewautoresponse"],
-      ["server", "autoresponses", "removeautoresponse"]
+      ["bot", "autoresponses", "addautoresponse"],
+      ["bot", "autoresponses", "viewautoresponse"],
+      ["bot", "autoresponses", "removeautoresponse"]
     ],
     "slash": [
-      ["serverconfig", "autoresponses", "add"],
-      ["serverconfig", "autoresponses", "view"],
-      ["serverconfig", "autoresponses", "remove"]
+      ["botconfig", "autoresponses", "add"],
+      ["botconfig", "autoresponses", "view"],
+      ["botconfig", "autoresponses", "remove"]
     ]
   },
   "description": [

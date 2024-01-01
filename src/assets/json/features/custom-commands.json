@@ -15,8 +15,8 @@
     ],
     "slash": [
       ["customcommand"],
-      ["serverconfig", "customcommands", "add"],
-      ["serverconfig", "customcommands", "remove"]
+      ["botconfig", "customcommands", "add"],
+      ["botconfig", "customcommands", "remove"]
     ]
   },
   "description": [
