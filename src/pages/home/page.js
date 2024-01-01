@@ -72,11 +72,11 @@ export default class extends Page {
         name: "Ewan",
         colour: "#D14949",
         image: "/assets/images/logo/ewan.webp",
-        message: "e!texture steve 1.19.4"
+        message: "e!texture steve 1.20.4"
       },
       title: "steve.png",
       fields: [
-        ["Version", "`1.19.4`"],
+        ["Version", "`1.20.4`"],
         ["Resolution", "`64x64`", true],
         ["File location", "`/assets/minecraft/textures/entity/player/wide/steve.png`"]
       ],

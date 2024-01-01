@@ -22,11 +22,11 @@
           "name": "Ewan",
           "colour": "#D14949",
           "image": "/assets/images/logo/ewan.webp",
-          "message": "e!texture steve 1.19.4"
+          "message": "e!texture steve 1.20.4"
         },
         "title": "steve.png",
         "fields": [
-          ["Version", "`1.19.4`"],
+          ["Version", "`1.20.4`"],
           ["Resolution", "`64x64`", true],
           ["File location", "`/assets/minecraft/textures/entity/player/wide/steve.png`"]
         ],
@@ -44,7 +44,7 @@
         {
           "name": "The minecrafttexture command",
           "content": [
-            "The <code class=\"command prefix\">e!minecrafttexture</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture</code> command can be used to grab any texture from any Minecraft version, as well as third party supported resource packs.\n\nTo use this command, use the formatting <code class=\"command prefix\">e!minecrafttexture [texture] [version]</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture texture:[texture] version:[version]</code>, where the texture is what texture you want to get, and the version is the Minecraft version or resource pack to get the texture from.\nFor example: <code class=\"command prefix\">e!minecrafttexture steve 1.19.4</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture texture:steve version:1.19.4</code>.\n\nThe version is optional, and will default to the latest release version of Minecraft.\n\nIf your texture name matches multiple textures from within the assets, you will be given a choice between which texture you want to grab. Just click the corresponding button for your desired texture to select it.",
+            "The <code class=\"command prefix\">e!minecrafttexture</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture</code> command can be used to grab any texture from any Minecraft version, as well as third party supported resource packs.\n\nTo use this command, use the formatting <code class=\"command prefix\">e!minecrafttexture [texture] [version]</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture texture:[texture] version:[version]</code>, where the texture is what texture you want to get, and the version is the Minecraft version or resource pack to get the texture from.\nFor example: <code class=\"command prefix\">e!minecrafttexture steve 1.20.4</code><code class=\"command slash\">/minecraft resourcepacks minecrafttexture texture:steve version:1.20.4</code>.\n\nThe version is optional, and will default to the latest release version of Minecraft.\n\nIf your texture name matches multiple textures from within the assets, you will be given a choice between which texture you want to grab. Just click the corresponding button for your desired texture to select it.",
             {
               "type": "embed",
               "data": {
@@ -52,14 +52,17 @@
                   "name": "Ewan",
                   "colour": "#D14949",
                   "image": "/assets/images/logo/ewan.webp",
-                  "message": "e!texture steve 1.19.4"
+                  "message": "e!texture steve 1.20.4"
                 },
                 "title": "Multiple textures found",
-                "description": "Please select a texture\n\n<:a:> - `/assets/minecraft/textures/entity/player/slim/steve.png`\n<:b:> - `/assets/minecraft/textures/entity/player/wide/steve.png`",
-                "buttons": [
-                  { "emoji": "a" },
-                  { "emoji": "b" }
-                ]
+                "description": "`2` total matches were found, please select a texture",
+                "select": {
+                  "placeholder": "Please select a texture",
+                  "options": [
+                    ["steve", "...s/minecraft/textures/entity/player/slim/steve.png"],
+                    ["steve", "...s/minecraft/textures/entity/player/wide/steve.png"]
+                  ]
+                }
               }
             },
             {
@@ -113,7 +116,7 @@
         {
           "name": "Using with image commands",
           "content": [
-            "Minecraft textures can be used in any image command that accepts a custom image.\n\nTo use a Minecraft texture in an image command, you can use the formatting <code>texture:[texture]:[version]</code> for the image argument of the desired command, for example: <code>e!getimage texture:steve:1.19.4</code>.\n\nThe version is optional, and will default to the latest release version of Minecraft, so you can also use the formatting <code>texture:[texture]</code>.\n\nIf your texture name matches multiple textures from within the assets, you will be given a choice between which texture you want to grab. Just click the corresponding button for your desired texture to select it.",
+            "Minecraft textures can be used in any image command that accepts a custom image.\n\nTo use a Minecraft texture in an image command, you can use the formatting <code>texture:[texture]:[version]</code> for the image argument of the desired command, for example: <code>e!getimage texture:steve:1.20.4</code>.\n\nThe version is optional, and will default to the latest release version of Minecraft, so you can also use the formatting <code>texture:[texture]</code>.\n\nIf your texture name matches multiple textures from within the assets, you will be given a choice between which texture you want to grab. Just click the corresponding button for your desired texture to select it.",
             {
               "type": "embed",
               "data": {
@@ -121,14 +124,17 @@
                   "name": "Ewan",
                   "colour": "#D14949",
                   "image": "/assets/images/logo/ewan.webp",
-                  "message": "e!texture steve 1.19.4"
+                  "message": "e!texture steve 1.20.4"
                 },
                 "title": "Multiple textures found",
-                "description": "Please select a texture\n\n<:a:> - `/assets/minecraft/textures/entity/player/slim/steve.png`\n<:b:> - `/assets/minecraft/textures/entity/player/wide/steve.png`",
-                "buttons": [
-                  { "emoji": "a" },
-                  { "emoji": "b" }
-                ]
+                "description": "`2` total matches were found, please select a texture",
+                "select": {
+                  "placeholder": "Please select a texture",
+                  "options": [
+                    ["steve", "...s/minecraft/textures/entity/player/slim/steve.png"],
+                    ["steve", "...s/minecraft/textures/entity/player/wide/steve.png"]
+                  ]
+                }
               }
             }
           ]
