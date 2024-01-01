@@ -329,6 +329,10 @@
               ],
               "slashCommand": "botconfig/embedcolour"
             },
+            "emit": {
+              "arguments": "<member> [join/leave]",
+              "description": "Emit a join or leave event"
+            },
             "ewan": {
               "aliases": [
                 "wan",
@@ -2991,7 +2995,7 @@
               ],
               "arguments": "[type]",
               "cooldown": 20,
-              "description": "Add one of Wynem's automod templates to the server's automod.",
+              "description": "Add one of Wynem's AutoMod templates to the server's AutoMod.",
               "extra": [
                 {
                   "title": "Automod types",
@@ -3656,31 +3660,30 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/removejoindm"
                 },
                 "removejoinmessage": {
                   "aliases": [
-                    "deletejoinmessage",
-                    "joinmessageremove",
-                    "joinmessagedelete"
+                    "deletejoinmessage"
                   ],
-                  "description": "Remove the servers join message.",
+                  "description": "Remove the server's join message.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/removejoinmessage"
                 },
                 "removeleavemessage": {
                   "aliases": [
-                    "deleteleavemessage",
-                    "leavemessageremove",
-                    "leavemessagedelete"
+                    "deleteleavemessage"
                   ],
-                  "description": "Remove the servers leave message.",
+                  "description": "Remove the server's leave message.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/removeleavemessage"
                 },
                 "setjoindm": {
                   "aliases": [
@@ -3692,85 +3695,81 @@
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/setjoindm"
                 },
                 "setjoinimage": {
                   "aliases": [
-                    "joinimageset",
                     "addjoinimage",
-                    "joinimageadd",
                     "joinimage"
                   ],
-                  "arguments": "<image>",
-                  "description": "Set the image that will be used with the join message. \"default\" will set it back to the default image.",
+                  "arguments": "{image}",
+                  "description": "Set the image that will be used with the join message.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/setjoinimage"
                 },
                 "setjoinmessage": {
                   "aliases": [
-                    "joinmessageset",
                     "addjoinmessage",
-                    "joinmessageadd",
                     "joinmessage"
                   ],
                   "arguments": "<channel> [message]",
-                  "description": "Set a channel to send an image with a message when a member joins the server. The message is in the format [message] <member>, where you set the message part.",
+                  "description": [
+                    "Set a message that gets sent to a channel with an image when a member joins the server."
+                  ],
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/setjoinmessage"
                 },
                 "setleaveimage": {
                   "aliases": [
-                    "leaveimageset",
                     "addleaveimage",
-                    "leaveimageadd",
                     "leaveimage"
                   ],
-                  "arguments": "<image>",
-                  "description": "Set the image that will be used with the leave message. \"default\" will set it back to the default image.",
+                  "arguments": "{image}",
+                  "description": "Set the image that will be used with the leave message.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/setleaveimage"
                 },
                 "setleavemessage": {
                   "aliases": [
-                    "leavemessageset",
                     "addleavemessage",
-                    "leavemessageadd",
                     "leavemessage"
                   ],
                   "arguments": "<channel> [message]",
-                  "description": "Set a channel to send an image with a message when a member leaves the server. The message is in the format [message] <member>, where you set the message part.",
+                  "description": [
+                    "Set a message that gets sent to a channel with an image when a member leaves the server."
+                  ],
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
-                  ]
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/setleavemessage"
                 },
                 "viewjoinmessages": {
                   "aliases": [
                     "showjoinmessages",
                     "previewjoinmessages",
-                    "joinmessagesview",
-                    "joinmessagesshow",
-                    "joinmessagespreview",
-                    "viewjoinmessage",
-                    "showjoinmessage",
-                    "previewjoinmessage",
-                    "joinmessageview",
-                    "joinmessageshow",
-                    "joinmessagepreview",
-                    "joinmessages"
+                    "joinmessages",
+                    "viewjoindm",
+                    "showjoindm",
+                    "previewjoindm"
                   ],
                   "cooldown": 5,
-                  "description": "View what the current servers join messages are.",
+                  "description": "View what the join messages for the current server.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
-                  ]
+                  ],
+                  "slashCommand": "serverconfig/joinmessages/view"
                 }
               }
             },
@@ -4899,7 +4898,10 @@
               "prefixCommand": "bot/ewan"
             },
             "exportdata": {
-              "description": "Export the data that the bot has stored about you or the server.",
+              "description": [
+                "Export the data that the bot has stored about you or the server.",
+                "Types:\n- User\n- Server"
+              ],
               "arguments": [
                 {
                   "name": "type",
@@ -4930,7 +4932,7 @@
               "prefixCommand": "bot/suggest"
             },
             "support": {
-              "description": "Get support for the bot. Run the command and we will get back to you as soon as possible!",
+              "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!",
               "cooldown": 10,
               "arguments": [
                 {
@@ -5030,7 +5032,10 @@
             "prefixes": {
               "commands": {
                 "prefix": {
-                  "description": "Change the prefix for the bot in the current server.",
+                  "description": [
+                    "Change the prefix for the bot in the current server.",
+                    "Set the prefix to \"default\", \"normal\", or \"reset\" to return it back to the default prefix."
+                  ],
                   "arguments": [
                     {
                       "name": "prefix",
@@ -5043,7 +5048,7 @@
                   "prefixCommand": "bot/prefixes/prefix"
                 },
                 "prefixalias": {
-                  "description": "Add/remove a custom prefix alias. This is an alternative prefix you can use instead of the main one.",
+                  "description": "Add or remove a custom prefix alias. A prefix alias is an alternate prefix that can be used without overwriting the main prefix.",
                   "arguments": [
                     {
                       "name": "prefix",
@@ -8985,7 +8990,11 @@
         "moderation": {
           "commands": {
             "addnote": {
-              "description": "Add a note to a member. Notes are stored as a record.",
+              "description": [
+                "Add a note to a member.",
+                "Members cannot see their notes.",
+                "The note is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+              ],
               "arguments": [
                 {
                   "name": "member",
@@ -9284,7 +9293,7 @@
                   "arguments": [
                     {
                       "name": "Channel",
-                      "description": "The channel to use"
+                      "description": "Channel to use"
                     }
                   ],
                   "permissions": [
@@ -9305,7 +9314,7 @@
                   "arguments": [
                     {
                       "name": "Prefix",
-                      "description": "The prefix to ignore/unignore"
+                      "description": "Prefix to ignore/unignore"
                     }
                   ],
                   "permissions": [
@@ -9328,7 +9337,7 @@
                   "arguments": [
                     {
                       "name": "Channel",
-                      "description": "The channel to use"
+                      "description": "Channel to use"
                     }
                   ],
                   "permissions": [
@@ -9349,12 +9358,12 @@
                   "arguments": [
                     {
                       "name": "channel-link",
-                      "description": "The link to the channel from the other server",
+                      "description": "Link to the channel from the other server",
                       "required": true
                     },
                     {
                       "name": "channel",
-                      "description": "The channel from the current server"
+                      "description": "Channel from the current server"
                     }
                   ],
                   "permissions": [
@@ -9373,7 +9382,7 @@
                   "arguments": [
                     {
                       "name": "channel",
-                      "description": "The channel"
+                      "description": "Channel"
                     }
                   ],
                   "permissions": [
@@ -9389,16 +9398,16 @@
                   "arguments": [
                     {
                       "name": "channel",
-                      "description": "The starboard channel",
+                      "description": "Starboard channel",
                       "required": true
                     },
                     {
                       "name": "count",
-                      "description": "The reaction count"
+                      "description": "Reaction count"
                     },
                     {
                       "name": "emoji",
-                      "description": "The reaction emoji"
+                      "description": "Reaction emoji"
                     }
                   ],
                   "permissions": [
@@ -9414,12 +9423,12 @@
                   "arguments": [
                     {
                       "name": "starboard-channel",
-                      "description": "The starboard channel",
+                      "description": "Starboard channel",
                       "required": true
                     },
                     {
                       "name": "blacklist-channel",
-                      "description": "The blacklist channel",
+                      "description": "Blacklist channel",
                       "required": true
                     }
                   ],
@@ -9444,7 +9453,7 @@
                   "arguments": [
                     {
                       "name": "question",
-                      "description": "The question to remove",
+                      "description": "Question to remove",
                       "required": true
                     }
                   ],
@@ -9458,7 +9467,7 @@
                   "arguments": [
                     {
                       "name": "question",
-                      "description": "The question to remove",
+                      "description": "Question to remove",
                       "required": true
                     }
                   ],
@@ -9466,6 +9475,127 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/removefaq"
+                }
+              }
+            },
+            "joinmessages": {
+              "commands": {
+                "removejoindm": {
+                  "description": "Remove the server's join DM.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/removejoindm"
+                },
+                "removejoinmessage": {
+                  "description": "Remove the server's join message.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/removejoinmessage"
+                },
+                "removeleavemessage": {
+                  "description": "Remove the server's leave message.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/removeleavemessage"
+                },
+                "setjoindm": {
+                  "description": "Set a message that is sent to members through DM when they join the server.",
+                  "arguments": [
+                    {
+                      "name": "Message",
+                      "description": "Message to send",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/setjoindm"
+                },
+                "setjoinimage": {
+                  "description": "Set the image that will be used with the join message.",
+                  "arguments": [
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/setjoinimage"
+                },
+                "setjoinmessage": {
+                  "description": [
+                    "Set a message that gets sent to a channel with an image when a member joins the server."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "Channel",
+                      "description": "Channel for the messages to be sent in",
+                      "required": true
+                    },
+                    {
+                      "name": "Message",
+                      "description": "Message to show"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/setjoinmessage"
+                },
+                "setleaveimage": {
+                  "description": "Set the image that will be used with the leave message.",
+                  "arguments": [
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/setleaveimage"
+                },
+                "setleavemessage": {
+                  "description": [
+                    "Set a message that gets sent to a channel with an image when a member leaves the server."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "Channel",
+                      "description": "Channel for the messages to be sent in",
+                      "required": true
+                    },
+                    {
+                      "name": "Message",
+                      "description": "Message to show"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/setleavemessage"
+                },
+                "view": {
+                  "description": "View what the join messages for the current server.",
+                  "cooldown": 5,
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/joinmessages/viewjoinmessages"
                 }
               }
             },
@@ -9539,7 +9669,7 @@
                   "arguments": [
                     {
                       "name": "rule",
-                      "description": "The rule number"
+                      "description": "Rule number"
                     }
                   ],
                   "permissions": [
@@ -9559,7 +9689,7 @@
                   "arguments": [
                     {
                       "name": "rule",
-                      "description": "The rule number"
+                      "description": "Rule number"
                     }
                   ],
                   "prefixCommand": "server/rules/removerule"
@@ -9573,12 +9703,12 @@
                   "arguments": [
                     {
                       "name": "name",
-                      "description": "The server name",
+                      "description": "Server name",
                       "required": true
                     },
                     {
                       "name": "invite",
-                      "description": "The invite link",
+                      "description": "Invite link",
                       "required": true
                     }
                   ],
@@ -9592,7 +9722,7 @@
                   "arguments": [
                     {
                       "name": "name",
-                      "description": "The server name"
+                      "description": "Server name"
                     }
                   ],
                   "permissions": [
@@ -9625,7 +9755,7 @@
                   "arguments": [
                     {
                       "name": "ticket-type",
-                      "description": "The ticket type",
+                      "description": "Ticket type",
                       "required": true
                     }
                   ],
@@ -9646,7 +9776,7 @@
                   "arguments": [
                     {
                       "name": "ticket-type",
-                      "description": "The ticket type",
+                      "description": "Ticket type",
                       "required": true
                     }
                   ],
@@ -9664,12 +9794,12 @@
                   "arguments": [
                     {
                       "name": "channel",
-                      "description": "The ticket channel",
+                      "description": "Ticket channel",
                       "required": true
                     },
                     {
                       "name": "role",
-                      "description": "The role for handling tickets",
+                      "description": "Role for handling tickets",
                       "required": true
                     }
                   ],
@@ -9704,12 +9834,12 @@
           },
           "commands": {
             "addautomod": {
-              "description": "Add one of Wynem's automod templates to the server's automod.",
+              "description": "Add one of Wynem's AutoMod templates to the server's AutoMod.",
               "cooldown": 20,
               "arguments": [
                 {
                   "name": "type",
-                  "description": "The automod type"
+                  "description": "AutoMod type"
                 }
               ],
               "permissions": [
@@ -9734,7 +9864,7 @@
               "arguments": [
                 {
                   "name": "url",
-                  "description": "The ban appeal link"
+                  "description": "Ban appeal link"
                 }
               ],
               "botPermissions": [
@@ -9747,7 +9877,7 @@
               "arguments": [
                 {
                   "name": "url",
-                  "description": "The GitHub repo URL to use for issue tracking"
+                  "description": "GitHub repo URL"
                 }
               ],
               "prefixCommand": "server/issuetracker/setissuetracker"
@@ -9804,7 +9934,7 @@
               "contextCommand": "user/user-information"
             },
             "joinposition": {
-              "description": "View the position that a member joined the server in.",
+              "description": "View the position that a member joined the server in. To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list.",
               "arguments": [
                 {
                   "name": "member",
@@ -10033,7 +10163,11 @@
       },
       "commands": {
         "ban": {
-          "description": "Ban a user from the server.",
+          "description": [
+            "Ban a member from the server.",
+            "The member is sent a message saying they were banned, along with the reason.",
+            "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command."
+          ],
           "arguments": [
             {
               "name": "Member",
@@ -10102,7 +10236,10 @@
           "prefixCommand": "server/faqs/faq"
         },
         "help": {
-          "description": "Get a list of the bots commands and information about each one.",
+          "description": [
+            "Get a list of the bot's commands and information about each one.",
+            "Argument types:\n\n[arg] - A text argument\n<arg> - A Discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
+          ],
           "arguments": [
             {
               "name": "category-command",
@@ -10112,7 +10249,10 @@
           "prefixCommand": "bot/commands/help"
         },
         "kick": {
-          "description": "Kick a member from the server.",
+          "description": [
+            "Kick a member from the server.",
+            "The member is sent a message saying they were kicked, along with the reason."
+          ],
           "arguments": [
             {
               "name": "Member",
@@ -10135,7 +10275,10 @@
           "contextCommand": "user/kick-member"
         },
         "modping": {
-          "description": "Ping the moderators of the current server.",
+          "description": [
+            "Ping the moderators of the current server.",
+            "The roles can be configured with the \"setmodpingroles\" command"
+          ],
           "permissions": [
             "Guild Only"
           ],
@@ -10146,7 +10289,12 @@
           "prefixCommand": "bot/ping"
         },
         "purge": {
-          "description": "Bulk delete messages from a channel. Defaults to 5, maximum 99.",
+          "description": [
+            "Bulk delete messages from a channel.",
+            "Defaults to 5, maximum 99.",
+            "Mention a user to delete only their messages.",
+            "This cannot delete messages that are over two weeks old."
+          ],
           "arguments": [
             {
               "name": "limit",
@@ -10180,7 +10328,12 @@
           "prefixCommand": "bot/reset"
         },
         "timeout": {
-          "description": "Give a member a time out so that they cannot type or speak.",
+          "description": [
+            "Give a member a time out so that they cannot type or speak.",
+            "Defaults to 10 minutes.",
+            "The member is sent a message saying they were timed out, along with the reason.",
+            "The time out is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+          ],
           "arguments": [
             {
               "name": "member",
@@ -10228,7 +10381,11 @@
           "prefixCommand": "moderation/bans/unban"
         },
         "warn": {
-          "description": "Give a member a warning.",
+          "description": [
+            "Give a member a warning.",
+            "The member is sent a message saying they were warned, along with the reason.",
+            "The warning is stored as a record and can be viewed at any time. There is a maximum of 50 records per member."
+          ],
           "arguments": [
             {
               "name": "member",
