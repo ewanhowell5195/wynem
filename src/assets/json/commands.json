@@ -329,10 +329,6 @@
               ],
               "slashCommand": "botconfig/embedcolour"
             },
-            "emit": {
-              "arguments": "<member> [join/leave]",
-              "description": "Emit a join or leave event"
-            },
             "ewan": {
               "aliases": [
                 "wan",
