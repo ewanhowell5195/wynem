@@ -120,45 +120,6 @@
             },
             "commands": {
               "categories": {
-                "blacklists": {
-                  "description": "Blacklisting is a system that stops commands being run by a certain member, or in a certain channel.",
-                  "commands": {
-                    "blacklist": {
-                      "aliases": [
-                        "block",
-                        "bl",
-                        "toggleblacklist",
-                        "removeblacklist",
-                        "toggleblock",
-                        "removeblock",
-                        "unblacklist"
-                      ],
-                      "arguments": "<member/channel/category>",
-                      "description": "[DEPRECATED] Toggle having a member, channel, or category blacklisted from running commands. Threads are not supported. Moderators can bypass channel blacklists, and Administrators can bypass member blacklists.",
-                      "permissions": [
-                        "Manage Channels"
-                      ]
-                    },
-                    "viewblacklist": {
-                      "aliases": [
-                        "showblacklist",
-                        "blacklistview",
-                        "blacklistshow",
-                        "viewblock",
-                        "showblock",
-                        "blockview",
-                        "blockshow",
-                        "blacklists",
-                        "viewbl",
-                        "showbl",
-                        "blview",
-                        "blshow",
-                        "bls"
-                      ],
-                      "description": "[DEPRECATED] View the currently blacklisted members, channels, and categories."
-                    }
-                  }
-                },
                 "customcommands": {
                   "description": [
                     "Custom commands are commands that you can configure to respond with whatever you want.",
@@ -215,75 +176,9 @@
                       "slashCommand": "botconfig/customcommands/remove"
                     }
                   }
-                },
-                "rolerequirements": {
-                  "description": "Role requirements are a system where users must have a certain role to be able to use commands.",
-                  "commands": {
-                    "addrolerequirement": {
-                      "aliases": [
-                        "addrolerequire",
-                        "arr",
-                        "addrr",
-                        "setrolerequirement",
-                        "setrolerequire",
-                        "srr",
-                        "setrr",
-                        "rolerequire"
-                      ],
-                      "arguments": "[command/category] <role>",
-                      "description": "[DEPRECATED] Limit a command to only be used by members with a certain role. You can set up to 5 roles per command. Members only need one of the roles to be able to use it.",
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Roles"
-                      ]
-                    },
-                    "removerolerequirements": {
-                      "aliases": [
-                        "removerolerequirement",
-                        "removerolerequire",
-                        "rrr",
-                        "removerr"
-                      ],
-                      "arguments": "[command/category] <role>",
-                      "description": "[DEPRECATED] Remove a role from being a requirement of a command.",
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Roles"
-                      ]
-                    },
-                    "viewrolerequirements": {
-                      "aliases": [
-                        "viewrolerequirement",
-                        "viewrolerequire",
-                        "vrr",
-                        "rolerequirements"
-                      ],
-                      "arguments": "[command/category]",
-                      "description": "[DEPRECATED] View the role requirements set up in the current server.",
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Roles"
-                      ]
-                    }
-                  }
                 }
               },
               "commands": {
-                "disable": {
-                  "aliases": [
-                    "enable",
-                    "undisable",
-                    "unenable",
-                    "toggledisable",
-                    "toggleenable"
-                  ],
-                  "arguments": "[category/command]",
-                  "description": "[DEPRECATED] Toggle a category/command being disabled in the current server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ]
-                },
                 "help": {
                   "aliases": [
                     "h",
@@ -325,42 +220,6 @@
                 "summary": {
                   "description": "Get a summary of the most popular commands of the day/week.",
                   "slashCommand": "bot/commands/summary"
-                },
-                "viewdisabled": {
-                  "aliases": [
-                    "showdisabled",
-                    "disabled"
-                  ],
-                  "description": "[DEPRECATED] View which categories/commands are disabled in the current server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ]
-                },
-                "viewwhitelist": {
-                  "aliases": [
-                    "showwhitelist",
-                    "viewwhitelisted",
-                    "showwhitelisted",
-                    "whitelisted"
-                  ],
-                  "description": "[DEPRECATED] View which categories/commands are whitelisted in the current server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ]
-                },
-                "whitelist": {
-                  "aliases": [
-                    "unwhitelist",
-                    "togglewhitelist"
-                  ],
-                  "arguments": "[category/command]",
-                  "description": "[DEPRECATED] Toggle a category/command being whitelisted in the current server. Whitelisting a category/command allows it to bypass being disabled by a parent category.",
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ]
                 }
               }
             },
@@ -991,10 +850,7 @@
                     "lostmyglasses"
                   ],
                   "arguments": "[amount] {image}",
-                  "description": [
-                    "Blur an image.",
-                    "The amount defaults to 10."
-                  ],
+                  "description": "Blur an image.",
                   "slashCommand": "imagefilter/blur"
                 },
                 "brightness": {
@@ -1119,6 +975,14 @@
                     "Modes:\n\n- inside\n- outside"
                   ],
                   "slashCommand": "imagefilter/mask"
+                },
+                "motionblur": {
+                  "aliases": [
+                    "lostmyglasseswhilerunning"
+                  ],
+                  "arguments": "[angle] [strength] {image}",
+                  "description": "Add motion blur an image.",
+                  "slashCommand": "imagefilter/motionblur"
                 },
                 "multiply": {
                   "aliases": [
@@ -6705,10 +6569,7 @@
         "imagefilter": {
           "commands": {
             "blur": {
-              "description": [
-                "Blur an image.",
-                "The amount defaults to 10."
-              ],
+              "description": "Blur an image.",
               "arguments": [
                 {
                   "name": "amount",
@@ -6951,6 +6812,28 @@
                 }
               ],
               "prefixCommand": "images/filters/mask"
+            },
+            "motionblur": {
+              "description": "Add motion blur an image.",
+              "arguments": [
+                {
+                  "name": "Angle",
+                  "description": "The angle to blur at"
+                },
+                {
+                  "name": "Strength",
+                  "description": "The strength of the blur"
+                },
+                {
+                  "name": "Image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "Image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/filters/motionblur"
             },
             "multiply": {
               "description": "Multiply an image by a colour.",
