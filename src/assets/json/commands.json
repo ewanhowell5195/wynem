@@ -62,8 +62,6 @@
                 "addautoresponse": {
                   "aliases": [
                     "newautoresponse",
-                    "autoresponseadd",
-                    "autoresponsenew",
                     "autoresponse"
                   ],
                   "description": "Run a builder that adds a new auto-response for the server.",
@@ -80,9 +78,7 @@
                 },
                 "removeautoresponse": {
                   "aliases": [
-                    "deleteautoresponse",
-                    "autoresponseremove",
-                    "autoresponsedelete"
+                    "deleteautoresponse"
                   ],
                   "arguments": "[command]",
                   "description": [
@@ -98,12 +94,8 @@
                 "viewautoresponse": {
                   "aliases": [
                     "showautoresponse",
-                    "autoresponseview",
-                    "autoresponseshow",
                     "viewautoresponses",
-                    "showautoresponses",
-                    "autoresponsesview",
-                    "autoresponsesshow"
+                    "showautoresponses"
                   ],
                   "arguments": "[command]",
                   "description": [
@@ -626,8 +618,7 @@
             "cowsay": {
               "aliases": [
                 "saycow",
-                "cow",
-                "say"
+                "cow"
               ],
               "arguments": "[character] [message]",
               "description": "Make a cow say something!",
@@ -978,7 +969,7 @@
                 },
                 "motionblur": {
                   "aliases": [
-                    "lostmyglasseswhilerunning"
+                    "directionalblur"
                   ],
                   "arguments": "[angle] [strength] {image}",
                   "description": "Add motion blur an image.",
@@ -1144,10 +1135,13 @@
                     },
                     "avatardecoration": {
                       "aliases": [
-                        "decoration",
                         "avatardecorate",
-                        "decorate",
                         "avatardecor",
+                        "avdecoration",
+                        "avdecorate",
+                        "avdecor",
+                        "decoration",
+                        "decorate",
                         "decor"
                       ],
                       "arguments": "[decoration] [zoomLevel] {image}",
@@ -1653,9 +1647,15 @@
                       "slashCommand": "imagetext/breakingnews"
                     },
                     "caption": {
+                      "aliases": [
+                        "bottomcaption"
+                      ],
                       "arguments": "[text] {image}",
                       "cooldown": 5,
-                      "description": "Add a caption to an image.",
+                      "description": [
+                        "Add a caption to an image.",
+                        "Use the \"bottomcaption\" alias to put the caption on the bottom."
+                      ],
                       "slashCommand": "imagetext/caption"
                     },
                     "certifiedmoment": {
@@ -1688,21 +1688,29 @@
                       "description": "Add a custom Discord notification to an image.",
                       "slashCommand": "imagetext/notification"
                     },
-                    "peter": {
+                    "say": {
                       "aliases": [
-                        "griffin",
-                        "petergriffin",
+                        "say2",
+                        "rdj",
+                        "rdj2",
+                        "stuff",
+                        "stuff2",
+                        "peter",
                         "peter2",
-                        "griffin2",
-                        "petergriffin2"
+                        "eminem",
+                        "eminem2",
+                        "willsmith",
+                        "willsmith2"
                       ],
-                      "arguments": "[text] {image}",
+                      "arguments": "[character] [text] {image}",
                       "cooldown": 5,
                       "description": [
-                        "Add Peter Griffin to an image.",
-                        "Use \"peter2\" to put him on the opposite side."
+                        "Make a character say something below an image.",
+                        "You can use a characters name instead of the command name to directly use that character.",
+                        "Put \"2\" at the end of the command name to put the character on the opposite side.",
+                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith"
                       ],
-                      "slashCommand": "imagetext/peter"
+                      "slashCommand": "imagetext/say"
                     },
                     "sneak": {
                       "aliases": [
@@ -1716,24 +1724,6 @@
                         "The text is customisable."
                       ],
                       "slashCommand": "imagetext/sneak"
-                    },
-                    "stuff": {
-                      "aliases": [
-                        "rdj",
-                        "stark",
-                        "ironman",
-                        "stuff2",
-                        "rdj2",
-                        "stark2",
-                        "ironman2"
-                      ],
-                      "arguments": "[text] {image}",
-                      "cooldown": 5,
-                      "description": [
-                        "Add Robert Downey Jr. to an image.",
-                        "Use \"stuff2\" to put him on the opposite side."
-                      ],
-                      "slashCommand": "imagetext/stuff"
                     },
                     "tombstone": {
                       "aliases": [
@@ -1766,7 +1756,7 @@
                       "description": [
                         "Add some text to the top, middle, or bottom of an image.",
                         "Defaults to the top of the image",
-                        "Use the middle or bottom aliases to put the text in the middle or on the bottom."
+                        "Use the \"middletext\" or \"bottomtext\" aliases to put the text in the middle or on the bottom."
                       ],
                       "slashCommand": "imagetext/addtext"
                     },
@@ -2179,8 +2169,11 @@
                   "slashCommand": "imagemanipulation/square"
                 },
                 "trim": {
-                  "arguments": "{image}",
-                  "description": "Remove the transparent pixels from the edge of an image.",
+                  "arguments": "[colour] {image}",
+                  "description": [
+                    "Remove the pixels from the edge of an image.",
+                    "The trimmed colour defaults to fully transparent."
+                  ],
                   "slashCommand": "imagemanipulation/trim"
                 }
               }
@@ -3770,9 +3763,6 @@
               "description": "Add your server's rules into Wynem so that you can easily list them all, individually quote rules, and create a stylised rules message for your rules channel.",
               "commands": {
                 "addrule": {
-                  "aliases": [
-                    "ruleadd"
-                  ],
                   "description": "Add a new rule to the server rules.",
                   "permissions": [
                     "Guild Only",
@@ -4871,8 +4861,8 @@
                   ],
                   "arguments": [
                     {
-                      "name": "auto-response",
-                      "description": "The auto-response to remove",
+                      "name": "Auto Response ID",
+                      "description": "The auto-response to view",
                       "required": true
                     }
                   ],
@@ -4888,9 +4878,8 @@
                   ],
                   "arguments": [
                     {
-                      "name": "auto-response",
-                      "description": "The auto-response to view",
-                      "required": true
+                      "name": "Auto Response ID",
+                      "description": "The auto-response to view"
                     }
                   ],
                   "permissions": [
@@ -7816,14 +7805,21 @@
               "prefixCommand": "images/manipulation/square"
             },
             "trim": {
-              "description": "Remove the transparent pixels from the edge of an image.",
+              "description": [
+                "Remove the pixels from the edge of an image.",
+                "The trimmed colour defaults to fully transparent."
+              ],
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "Colour",
+                  "description": "The colour to trim"
+                },
+                {
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7993,7 +7989,7 @@
               "description": [
                 "Add some text to the top, middle, or bottom of an image.",
                 "Defaults to the top of the image",
-                "Use the middle or bottom aliases to put the text in the middle or on the bottom."
+                "Use the \"middletext\" or \"bottomtext\" aliases to put the text in the middle or on the bottom."
               ],
               "cooldown": 5,
               "arguments": [
@@ -8038,13 +8034,20 @@
               "prefixCommand": "images/imagefun/texts/breakingnews"
             },
             "caption": {
-              "description": "Add a caption to an image.",
+              "description": [
+                "Add a caption to an image.",
+                "Use the \"bottomcaption\" alias to put the caption on the bottom."
+              ],
               "cooldown": 5,
               "arguments": [
                 {
                   "name": "text",
                   "description": "The caption text",
                   "required": true
+                },
+                {
+                  "name": "location",
+                  "description": "The location to add the caption"
                 },
                 {
                   "name": "image-file",
@@ -8098,21 +8101,28 @@
               ],
               "prefixCommand": "images/imagefun/texts/notification"
             },
-            "peter": {
+            "say": {
               "description": [
-                "Add Peter Griffin to an image.",
-                "Use \"peter2\" to put him on the opposite side."
+                "Make a character say something below an image.",
+                "You can use a characters name instead of the command name to directly use that character.",
+                "Put \"2\" at the end of the command name to put the character on the opposite side.",
+                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith"
               ],
               "cooldown": 5,
               "arguments": [
                 {
+                  "name": "character",
+                  "description": "The character to use",
+                  "required": true
+                },
+                {
                   "name": "text",
-                  "description": "The text for Peter to say",
+                  "description": "The text for the character to say",
                   "required": true
                 },
                 {
                   "name": "sideswap",
-                  "description": "Swap the side Peter is on"
+                  "description": "Swap the side the character is on"
                 },
                 {
                   "name": "image-file",
@@ -8123,7 +8133,7 @@
                   "description": "URL, Emoji, etc"
                 }
               ],
-              "prefixCommand": "images/imagefun/texts/peter"
+              "prefixCommand": "images/imagefun/texts/say"
             },
             "sneak": {
               "description": [
@@ -8151,33 +8161,6 @@
                 }
               ],
               "prefixCommand": "images/imagefun/texts/sneak"
-            },
-            "stuff": {
-              "description": [
-                "Add Robert Downey Jr. to an image.",
-                "Use \"stuff2\" to put him on the opposite side."
-              ],
-              "cooldown": 5,
-              "arguments": [
-                {
-                  "name": "text",
-                  "description": "The text for Robert to say",
-                  "required": true
-                },
-                {
-                  "name": "sideswap",
-                  "description": "Swap the side Robert is on"
-                },
-                {
-                  "name": "image-file",
-                  "description": "A file"
-                },
-                {
-                  "name": "image-string",
-                  "description": "URL, Emoji, etc"
-                }
-              ],
-              "prefixCommand": "images/imagefun/texts/stuff"
             },
             "tombstone": {
               "description": "Put some text on a tombstone.",
