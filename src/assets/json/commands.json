@@ -1706,7 +1706,11 @@
                         "yoda",
                         "yoda2",
                         "mario",
-                        "mario2"
+                        "mario2",
+                        "luigi",
+                        "luigi2",
+                        "lisa",
+                        "lisa2"
                       ],
                       "arguments": "[character] [text] {image}",
                       "cooldown": 5,
@@ -1714,7 +1718,7 @@
                         "Make a character say something below an image.",
                         "You can use a characters name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario"
+                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa"
                       ],
                       "slashCommand": "imagetext/say"
                     },
@@ -8112,7 +8116,7 @@
                 "Make a character say something below an image.",
                 "You can use a characters name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario"
+                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa"
               ],
               "cooldown": 5,
               "arguments": [
