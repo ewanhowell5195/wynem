@@ -1700,7 +1700,13 @@
                         "eminem",
                         "eminem2",
                         "willsmith",
-                        "willsmith2"
+                        "willsmith2",
+                        "sonic",
+                        "sonic2",
+                        "yoda",
+                        "yoda2",
+                        "mario",
+                        "mario2"
                       ],
                       "arguments": "[character] [text] {image}",
                       "cooldown": 5,
@@ -1708,7 +1714,7 @@
                         "Make a character say something below an image.",
                         "You can use a characters name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith"
+                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario"
                       ],
                       "slashCommand": "imagetext/say"
                     },
@@ -8106,7 +8112,7 @@
                 "Make a character say something below an image.",
                 "You can use a characters name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith"
+                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario"
               ],
               "cooldown": 5,
               "arguments": [
