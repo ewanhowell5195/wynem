@@ -4073,7 +4073,19 @@
                 "Guild Only",
                 "Manage Guild"
               ],
-              "slashCommand": "botconfig/togglequotes"
+              "slashCommand": "botconfig/toggle/quotes"
+            },
+            "toggletwitfix": {
+              "aliases": [
+                "toggletwitterfix",
+                "togglexfix"
+              ],
+              "description": "Toggles whether the bot will reply to Twitter links to give it a working embed.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "slashCommand": "botconfig/toggle/twitfix"
             }
           }
         },
@@ -4958,6 +4970,24 @@
                   "prefixCommand": "bot/prefixes/prefixalias"
                 }
               }
+            },
+            "toggle": {
+              "commands": {
+                "quotes": {
+                  "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/togglequotes"
+                },
+                "twitfix": {
+                  "description": "Toggles whether the bot will reply to Twitter links to give it a working embed.",
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/toggletwitfix"
+                }
+              }
             }
           },
           "commands": {
@@ -4977,13 +5007,6 @@
                 "Manage Guild"
               ],
               "prefixCommand": "bot/embedcolour"
-            },
-            "togglequotes": {
-              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
-              "permissions": [
-                "Manage Guild"
-              ],
-              "prefixCommand": "server/togglequotes"
             }
           }
         },
