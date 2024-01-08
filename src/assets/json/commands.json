@@ -4078,7 +4078,9 @@
             "toggletwitfix": {
               "aliases": [
                 "toggletwitterfix",
-                "togglexfix"
+                "togglexfix",
+                "twitfix",
+                "xfix"
               ],
               "description": "Toggles whether the bot will reply to Twitter links to give it a working embed.",
               "permissions": [
