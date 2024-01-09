@@ -4559,7 +4559,7 @@
               "description": "Show a users avatar, with links to get it in different resolutions.",
               "arguments": [
                 {
-                  "name": "Member",
+                  "name": "member",
                   "description": "The member to get the avatar of"
                 }
               ],
@@ -4907,7 +4907,7 @@
                   ],
                   "arguments": [
                     {
-                      "name": "Auto Response ID",
+                      "name": "auto-response-id",
                       "description": "The auto-response to view",
                       "required": true
                     }
@@ -4924,7 +4924,7 @@
                   ],
                   "arguments": [
                     {
-                      "name": "Auto Response ID",
+                      "name": "auto-response-id",
                       "description": "The auto-response to view"
                     }
                   ],
@@ -5086,7 +5086,7 @@
               "description": "Add an emoji to the server.",
               "arguments": [
                 {
-                  "name": "Name",
+                  "name": "name",
                   "description": "The emoji name",
                   "required": true
                 },
@@ -5111,7 +5111,7 @@
               "description": "Remove an emoji from the server.",
               "arguments": [
                 {
-                  "name": "Emoji",
+                  "name": "emoji",
                   "description": "The emoji to remove",
                   "required": true
                 }
@@ -6621,15 +6621,15 @@
                   "cooldown": 5,
                   "arguments": [
                     {
-                      "name": "Strength",
+                      "name": "strength",
                       "description": "The strength of the blur"
                     },
                     {
-                      "name": "X",
+                      "name": "x",
                       "description": "X coordinate"
                     },
                     {
-                      "name": "Y",
+                      "name": "y",
                       "description": "Y coordinate"
                     },
                     {
@@ -6665,11 +6665,11 @@
                   "description": "Add motion blur to an image.",
                   "arguments": [
                     {
-                      "name": "Angle",
+                      "name": "angle",
                       "description": "The angle to blur at"
                     },
                     {
-                      "name": "Strength",
+                      "name": "strength",
                       "description": "The strength of the blur"
                     },
                     {
@@ -6688,15 +6688,15 @@
                   "cooldown": 5,
                   "arguments": [
                     {
-                      "name": "Strength",
+                      "name": "strength",
                       "description": "The strength of the blur"
                     },
                     {
-                      "name": "X",
+                      "name": "x",
                       "description": "X coordinate"
                     },
                     {
-                      "name": "Y",
+                      "name": "y",
                       "description": "Y coordinate"
                     },
                     {
@@ -7123,19 +7123,19 @@
                   "description": "Apply a twist effect to an image over a certain area.",
                   "arguments": [
                     {
-                      "name": "Degrees",
+                      "name": "degrees",
                       "description": "Degrees to twist"
                     },
                     {
-                      "name": "X",
+                      "name": "x",
                       "description": "X coordinate to twist from"
                     },
                     {
-                      "name": "Y",
+                      "name": "y",
                       "description": "Y coordinate to twist from"
                     },
                     {
-                      "name": "Radius",
+                      "name": "radius",
                       "description": "How large the twist radius should be"
                     },
                     {
@@ -7171,23 +7171,23 @@
                   "description": "Apply an occilating twist effect to an image.",
                   "arguments": [
                     {
-                      "name": "Amplitude",
+                      "name": "amplitude",
                       "description": "Maximum intensity of the twist"
                     },
                     {
-                      "name": "Period",
+                      "name": "period",
                       "description": "The length of one cycle"
                     },
                     {
-                      "name": "X",
+                      "name": "x",
                       "description": "X coordinate to twist from"
                     },
                     {
-                      "name": "Y",
+                      "name": "y",
                       "description": "Y coordinate to twist from"
                     },
                     {
-                      "name": "Phase Shift",
+                      "name": "phase-shift",
                       "description": "Sine wave offset"
                     },
                     {
@@ -7205,15 +7205,15 @@
                   "description": "Apply a twist effect to an image.",
                   "arguments": [
                     {
-                      "name": "Degrees",
+                      "name": "degrees",
                       "description": "Degrees to twist"
                     },
                     {
-                      "name": "X",
+                      "name": "x",
                       "description": "X coordinate to twist from"
                     },
                     {
-                      "name": "Y",
+                      "name": "y",
                       "description": "Y coordinate to twist from"
                     },
                     {
@@ -7829,16 +7829,16 @@
               ],
               "arguments": [
                 {
-                  "name": "Width",
+                  "name": "width",
                   "description": "The new width",
                   "required": true
                 },
                 {
-                  "name": "Height",
+                  "name": "height",
                   "description": "The new height"
                 },
                 {
-                  "name": "Interpolation",
+                  "name": "interpolation",
                   "description": "The resize interpolation method (static images only)"
                 },
                 {
@@ -7928,7 +7928,7 @@
               ],
               "arguments": [
                 {
-                  "name": "Colour",
+                  "name": "colour",
                   "description": "The colour to trim"
                 },
                 {
@@ -8294,7 +8294,7 @@
               "description": "Generate a minecraft valentines image for that special someone in your life.",
               "arguments": [
                 {
-                  "name": "user",
+                  "name": "member",
                   "description": "Your valentine",
                   "required": true
                 }
@@ -9307,7 +9307,7 @@
                   "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
                   "arguments": [
                     {
-                      "name": "Channel",
+                      "name": "channel",
                       "description": "Channel to use"
                     }
                   ],
@@ -9328,7 +9328,7 @@
                   ],
                   "arguments": [
                     {
-                      "name": "Prefix",
+                      "name": "prefix",
                       "description": "Prefix to ignore/unignore"
                     }
                   ],
@@ -9351,7 +9351,7 @@
                   ],
                   "arguments": [
                     {
-                      "name": "Channel",
+                      "name": "channel",
                       "description": "Channel to use"
                     }
                   ],
@@ -9520,7 +9520,7 @@
                   "description": "Set a message that is sent to members through DM when they join the server.",
                   "arguments": [
                     {
-                      "name": "Message",
+                      "name": "message",
                       "description": "Message to send",
                       "required": true
                     }
@@ -9551,12 +9551,12 @@
                   "description": "Set a message that gets sent to a channel with an image when a member joins the server.",
                   "arguments": [
                     {
-                      "name": "Channel",
+                      "name": "channel",
                       "description": "Channel for the messages to be sent in",
                       "required": true
                     },
                     {
-                      "name": "Message",
+                      "name": "message",
                       "description": "Message to show"
                     }
                   ],
@@ -9586,12 +9586,12 @@
                   "description": "Set a message that gets sent to a channel with an image when a member leaves the server.",
                   "arguments": [
                     {
-                      "name": "Channel",
+                      "name": "channel",
                       "description": "Channel for the messages to be sent in",
                       "required": true
                     },
                     {
-                      "name": "Message",
+                      "name": "message",
                       "description": "Message to show"
                     }
                   ],
@@ -9640,15 +9640,15 @@
                   ],
                   "arguments": [
                     {
-                      "name": "Role",
+                      "name": "role",
                       "description": "The first role"
                     },
                     {
-                      "name": "Role 2",
+                      "name": "role-2",
                       "description": "The second role"
                     },
                     {
-                      "name": "Role 3",
+                      "name": "role-3",
                       "description": "The third role"
                     }
                   ],
@@ -9937,7 +9937,7 @@
               "description": "Get info about a specified user.",
               "arguments": [
                 {
-                  "name": "Member",
+                  "name": "member",
                   "description": "The member to get the information of"
                 }
               ],
@@ -10181,12 +10181,12 @@
           ],
           "arguments": [
             {
-              "name": "Member",
+              "name": "member",
               "description": "The member to ban",
               "required": true
             },
             {
-              "name": "Reason",
+              "name": "reason",
               "description": "The reason for the ban"
             }
           ],
@@ -10266,12 +10266,12 @@
           ],
           "arguments": [
             {
-              "name": "Member",
+              "name": "member",
               "description": "The member to kick",
               "required": true
             },
             {
-              "name": "Reason",
+              "name": "reason",
               "description": "The reason for the kick"
             }
           ],
