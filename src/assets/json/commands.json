@@ -831,19 +831,45 @@
               }
             },
             "filters": {
+              "categories": {
+                "blurs": {
+                  "commands": {
+                    "angularblur": {
+                      "arguments": "[strength] [x] [y] [radius] {image}",
+                      "cooldown": 5,
+                      "description": "Add angular blur to an image.",
+                      "slashCommand": "imagefilter/blurs/angular"
+                    },
+                    "blur": {
+                      "aliases": [
+                        "blurry",
+                        "blurrify",
+                        "unsharpen",
+                        "unfocus",
+                        "lostmyglasses"
+                      ],
+                      "arguments": "[amount] {image}",
+                      "description": "Blur an image.",
+                      "slashCommand": "imagefilter/blurs/blur"
+                    },
+                    "motionblur": {
+                      "aliases": [
+                        "directionalblur"
+                      ],
+                      "arguments": "[angle] [strength] {image}",
+                      "description": "Add motion blur an image.",
+                      "slashCommand": "imagefilter/blurs/motion"
+                    },
+                    "radialblur": {
+                      "arguments": "[strength] [x] [y] [radius] {image}",
+                      "cooldown": 5,
+                      "description": "Add radial blur to an image.",
+                      "slashCommand": "imagefilter/blurs/radial"
+                    }
+                  }
+                }
+              },
               "commands": {
-                "blur": {
-                  "aliases": [
-                    "blurry",
-                    "blurrify",
-                    "unsharpen",
-                    "unfocus",
-                    "lostmyglasses"
-                  ],
-                  "arguments": "[amount] {image}",
-                  "description": "Blur an image.",
-                  "slashCommand": "imagefilter/blur"
-                },
                 "brightness": {
                   "aliases": [
                     "brighten",
@@ -966,14 +992,6 @@
                     "Modes:\n\n- inside\n- outside"
                   ],
                   "slashCommand": "imagefilter/mask"
-                },
-                "motionblur": {
-                  "aliases": [
-                    "directionalblur"
-                  ],
-                  "arguments": "[angle] [strength] {image}",
-                  "description": "Add motion blur an image.",
-                  "slashCommand": "imagefilter/motionblur"
                 },
                 "multiply": {
                   "aliases": [
@@ -1712,7 +1730,9 @@
                         "lisa",
                         "lisa2",
                         "cap",
-                        "cap2"
+                        "cap2",
+                        "walter",
+                        "walter2"
                       ],
                       "arguments": "[character] [text] {image}",
                       "cooldown": 5,
@@ -1720,7 +1740,7 @@
                         "Make a character say something below an image.",
                         "You can use a characters name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap"
+                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
                       ],
                       "slashCommand": "imagetext/say"
                     },
@@ -6593,25 +6613,107 @@
           }
         },
         "imagefilter": {
-          "commands": {
-            "blur": {
-              "description": "Blur an image.",
-              "arguments": [
-                {
-                  "name": "amount",
-                  "description": "The amount to blur the image"
+          "categories": {
+            "blurs": {
+              "commands": {
+                "angular": {
+                  "description": "Add angular blur to an image.",
+                  "cooldown": 5,
+                  "arguments": [
+                    {
+                      "name": "Strength",
+                      "description": "The strength of the blur"
+                    },
+                    {
+                      "name": "X",
+                      "description": "X coordinate"
+                    },
+                    {
+                      "name": "Y",
+                      "description": "Y coordinate"
+                    },
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/filters/blurs/angularblur"
                 },
-                {
-                  "name": "image-file",
-                  "description": "A file"
+                "blur": {
+                  "description": "Blur an image.",
+                  "arguments": [
+                    {
+                      "name": "amount",
+                      "description": "The amount to blur the image"
+                    },
+                    {
+                      "name": "image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/filters/blurs/blur"
                 },
-                {
-                  "name": "image-string",
-                  "description": "URL, Emoji, etc"
+                "motion": {
+                  "description": "Add motion blur an image.",
+                  "arguments": [
+                    {
+                      "name": "Angle",
+                      "description": "The angle to blur at"
+                    },
+                    {
+                      "name": "Strength",
+                      "description": "The strength of the blur"
+                    },
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/filters/blurs/motionblur"
+                },
+                "radial": {
+                  "description": "Add radial blur to an image.",
+                  "cooldown": 5,
+                  "arguments": [
+                    {
+                      "name": "Strength",
+                      "description": "The strength of the blur"
+                    },
+                    {
+                      "name": "X",
+                      "description": "X coordinate"
+                    },
+                    {
+                      "name": "Y",
+                      "description": "Y coordinate"
+                    },
+                    {
+                      "name": "Image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "Image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/filters/blurs/radialblur"
                 }
-              ],
-              "prefixCommand": "images/filters/blur"
-            },
+              }
+            }
+          },
+          "commands": {
             "brightness": {
               "description": [
                 "Change the brightness of an image.",
@@ -6838,28 +6940,6 @@
                 }
               ],
               "prefixCommand": "images/filters/mask"
-            },
-            "motionblur": {
-              "description": "Add motion blur an image.",
-              "arguments": [
-                {
-                  "name": "Angle",
-                  "description": "The angle to blur at"
-                },
-                {
-                  "name": "Strength",
-                  "description": "The strength of the blur"
-                },
-                {
-                  "name": "Image-file",
-                  "description": "A file"
-                },
-                {
-                  "name": "Image-string",
-                  "description": "URL, Emoji, etc"
-                }
-              ],
-              "prefixCommand": "images/filters/motionblur"
             },
             "multiply": {
               "description": "Multiply an image by a colour.",
@@ -8143,7 +8223,7 @@
                 "Make a character say something below an image.",
                 "You can use a characters name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap"
+                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
               ],
               "cooldown": 5,
               "arguments": [
