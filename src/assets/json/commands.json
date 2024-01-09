@@ -857,7 +857,7 @@
                         "directionalblur"
                       ],
                       "arguments": "[angle] [strength] {image}",
-                      "description": "Add motion blur an image.",
+                      "description": "Add motion blur to an image.",
                       "slashCommand": "imagefilter/blurs/motion"
                     },
                     "radialblur": {
@@ -6662,7 +6662,7 @@
                   "prefixCommand": "images/filters/blurs/blur"
                 },
                 "motion": {
-                  "description": "Add motion blur an image.",
+                  "description": "Add motion blur to an image.",
                   "arguments": [
                     {
                       "name": "Angle",
