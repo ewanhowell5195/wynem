@@ -231,14 +231,13 @@
                 },
                 "prefixalias": {
                   "aliases": [
-                    "prefixaliases",
-                    "aliasprefix",
-                    "aliasprefixes",
-                    "addprefix",
-                    "removeprefix"
+                    "prefixaliases"
                   ],
                   "arguments": "[prefix]",
-                  "description": "Add or remove a custom prefix alias. A prefix alias is an alternate prefix that can be used without overwriting the main prefix.",
+                  "description": [
+                    "Add or remove a custom prefix alias.",
+                    "A prefix alias is an alternate prefix that can be used without overwriting the main prefix."
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -279,13 +278,7 @@
             },
             "embedcolour": {
               "aliases": [
-                "customembedcolour",
-                "customcolour",
-                "customembedcolor",
-                "customcolor",
-                "embedcolor",
-                "embedcol",
-                "customcol"
+                "embedcol"
               ],
               "arguments": "[colour]",
               "description": [
@@ -1760,6 +1753,7 @@
                     "tombstone": {
                       "aliases": [
                         "gravestone",
+                        "tomb",
                         "grave",
                         "rip"
                       ],
@@ -4837,7 +4831,7 @@
               "arguments": [
                 {
                   "name": "type",
-                  "description": "The type of data to export (user/server)"
+                  "description": "The type of data to export"
                 }
               ],
               "prefixCommand": "bot/exportdata"
@@ -4979,7 +4973,10 @@
                   "prefixCommand": "bot/prefixes/prefix"
                 },
                 "prefixalias": {
-                  "description": "Add or remove a custom prefix alias. A prefix alias is an alternate prefix that can be used without overwriting the main prefix.",
+                  "description": [
+                    "Add or remove a custom prefix alias.",
+                    "A prefix alias is an alternate prefix that can be used without overwriting the main prefix."
+                  ],
                   "arguments": [
                     {
                       "name": "prefix",
