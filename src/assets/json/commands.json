@@ -634,6 +634,14 @@
               "description": "Discover how much you hate someone/something!",
               "slashCommand": "fun/hate"
             },
+            "inspire": {
+              "aliases": [
+                "inspireme",
+                "inspirobot"
+              ],
+              "description": "Generate an \"inspirational\" image quote.",
+              "slashCommand": "fun/inspire"
+            },
             "joke": {
               "description": [
                 "Get the bot to tell a joke.",
@@ -683,14 +691,6 @@
               "arguments": "<member>",
               "description": "Test how much of a monkey someone is!",
               "slashCommand": "fun/monketest"
-            },
-            "quote": {
-              "aliases": [
-                "inspireme",
-                "inspire"
-              ],
-              "description": "Generate an \"inspirational\" image quote.",
-              "slashCommand": "fun/quote"
             }
           }
         },
@@ -1699,6 +1699,14 @@
                       "description": "Add a custom Discord notification to an image.",
                       "slashCommand": "imagetext/notification"
                     },
+                    "quote": {
+                      "arguments": "[member] [message]",
+                      "description": [
+                        "Quote a member saying something.",
+                        "Reply to a message to quote that message."
+                      ],
+                      "slashCommand": "imagetext/quote"
+                    },
                     "say": {
                       "aliases": [
                         "say2",
@@ -2630,7 +2638,7 @@
                   "aliases": [
                     "repeat"
                   ],
-                  "arguments": "[width] [height] [randomRotationEnabled] {image}",
+                  "arguments": "[width] [height] [randomRotationEnabled] [randomMirroringEnabled] {image}",
                   "description": [
                     "Tile an image over a 5x5 area.",
                     "Provide a custom width and height to customise the size."
@@ -5350,6 +5358,10 @@
               ],
               "prefixCommand": "fun/hate"
             },
+            "inspire": {
+              "description": "Generate an \"inspirational\" image quote.",
+              "prefixCommand": "fun/inspire"
+            },
             "joke": {
               "description": [
                 "Get the bot to tell a joke.",
@@ -5422,10 +5434,6 @@
                 }
               ],
               "prefixCommand": "fun/monketest"
-            },
-            "quote": {
-              "description": "Generate an \"inspirational\" image quote.",
-              "prefixCommand": "fun/quote"
             }
           }
         },
@@ -8215,6 +8223,25 @@
               ],
               "prefixCommand": "images/imagefun/texts/notification"
             },
+            "quote": {
+              "description": [
+                "Quote a member saying something.",
+                "Reply to a message to quote that message."
+              ],
+              "arguments": [
+                {
+                  "name": "member",
+                  "description": "The member to quote",
+                  "required": true
+                },
+                {
+                  "name": "message",
+                  "description": "The message the member said",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/quote"
+            },
             "say": {
               "description": [
                 "Make a character say something below an image.",
@@ -8704,15 +8731,19 @@
                       "description": "The height to tile over (1-10)"
                     },
                     {
-                      "name": "random-rotation",
+                      "name": "random-rotation-enabled",
                       "description": "Enable randomly rotated tiles"
                     },
                     {
-                      "name": "image-file",
+                      "name": "random-mirroring-enabled",
+                      "description": "Enable randomly mirrored tiles"
+                    },
+                    {
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
