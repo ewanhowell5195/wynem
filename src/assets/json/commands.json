@@ -4164,7 +4164,6 @@
                   "aliases": [
                     "remind",
                     "remindme",
-                    "rm",
                     "addreminder"
                   ],
                   "arguments": "[duration] [reminder]",
@@ -4177,8 +4176,7 @@
                     "repeatingremindme",
                     "repeatreminder",
                     "repeatremind",
-                    "repeatremindme",
-                    "rrm"
+                    "repeatremindme"
                   ],
                   "arguments": "[duration] [reminder]",
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
@@ -4187,13 +4185,7 @@
                 "viewreminders": {
                   "aliases": [
                     "managereminders",
-                    "reminders",
-                    "viewremind",
-                    "manageremind",
-                    "viewremindme",
-                    "manageremindme",
-                    "vrm",
-                    "mrm"
+                    "reminders"
                   ],
                   "arguments": "<member/channel>",
                   "description": [
@@ -5690,7 +5682,7 @@
                       "required": true
                     },
                     {
-                      "name": "step-count",
+                      "name": "colour-count",
                       "description": "The amount of colours"
                     },
                     {
@@ -6384,20 +6376,20 @@
               "description": "Show that two images are the same picture.",
               "arguments": [
                 {
-                  "name": "left-image-file",
-                  "description": "A file"
+                  "name": "Left Image-file",
+                  "description": "The left image"
                 },
                 {
-                  "name": "left-image-string",
-                  "description": "URL, Emoji, etc"
+                  "name": "Left Image-string",
+                  "description": "The left image"
                 },
                 {
-                  "name": "right-image-file",
-                  "description": "A file"
+                  "name": "Right Image-file",
+                  "description": "The right image"
                 },
                 {
-                  "name": "right-image-string",
-                  "description": "URL, Emoji, etc"
+                  "name": "Right Image-string",
+                  "description": "The right image"
                 }
               ],
               "prefixCommand": "images/imagefun/compositing/samepicture"
@@ -8352,11 +8344,11 @@
               "description": "Get the average colour of an image.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8366,11 +8358,11 @@
               "description": "Get the most common colour in an image.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8387,20 +8379,20 @@
                   "description": "The amount the colours can differ"
                 },
                 {
-                  "name": "image1-file",
-                  "description": "First image"
+                  "name": "Image 1-file",
+                  "description": "The first image"
                 },
                 {
-                  "name": "image1-string",
-                  "description": "First image"
+                  "name": "Image 1-string",
+                  "description": "The first image"
                 },
                 {
-                  "name": "image2-file",
-                  "description": "Second image"
+                  "name": "Image 2-file",
+                  "description": "The second image"
                 },
                 {
-                  "name": "image2-string",
-                  "description": "Second image"
+                  "name": "Image 2-string",
+                  "description": "The second image"
                 }
               ],
               "prefixCommand": "images/imageutility/imagecompare"
@@ -8420,11 +8412,11 @@
               "description": "Show the palette of an image.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -10032,6 +10024,12 @@
                     "View and remove your existing reminders.",
                     "If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
                   ],
+                  "arguments": [
+                    {
+                      "name": "member-or-channel",
+                      "description": "The member or channel to view the reminders of"
+                    }
+                  ],
                   "prefixCommand": "utility/reminders/viewreminders"
                 }
               }
@@ -10064,11 +10062,11 @@
               "description": "View the exif data of a file.",
               "arguments": [
                 {
-                  "name": "file-file",
+                  "name": "File-file",
                   "description": "A file"
                 },
                 {
-                  "name": "file-string",
+                  "name": "File-string",
                   "description": "A file"
                 }
               ],
@@ -10078,7 +10076,7 @@
               "description": "View the file size of a file.",
               "arguments": [
                 {
-                  "name": "file-url",
+                  "name": "url",
                   "description": "The file URL to check the file size of",
                   "required": true
                 }
@@ -10163,8 +10161,7 @@
               "arguments": [
                 {
                   "name": "language",
-                  "description": "The language to use for TTS",
-                  "required": true
+                  "description": "The language to use for TTS"
                 }
               ],
               "prefixCommand": "voice/setttslanguage"
@@ -10281,7 +10278,7 @@
           ],
           "arguments": [
             {
-              "name": "category-command",
+              "name": "category-or-command",
               "description": "The category or command"
             }
           ],
