@@ -4134,7 +4134,10 @@
                 "join"
               ],
               "arguments": "<member>/[position]",
-              "description": "View the position that a member joined the server in. To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list.",
+              "description": [
+                "View the position that a member joined the server in.",
+                "To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list."
+              ],
               "permissions": [
                 "Guild Only"
               ],
@@ -5165,7 +5168,7 @@
                   "arguments": [
                     {
                       "name": "count",
-                      "description": "The number of dice"
+                      "description": "The number of dice to roll"
                     },
                     {
                       "name": "sides",
@@ -5207,7 +5210,7 @@
                   "description": "Play Knucklebones against someone.",
                   "arguments": [
                     {
-                      "name": "member",
+                      "name": "opponent",
                       "description": "The member to play against",
                       "required": true
                     },
@@ -9965,7 +9968,10 @@
               "contextCommand": "user/user-information"
             },
             "joinposition": {
-              "description": "View the position that a member joined the server in. To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list.",
+              "description": [
+                "View the position that a member joined the server in.",
+                "To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list."
+              ],
               "arguments": [
                 {
                   "name": "member",
