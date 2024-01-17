@@ -5467,11 +5467,11 @@
               "description": "Make a GIF play forwards, then backwards, in a loop.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5481,19 +5481,19 @@
               "description": "Combine two GIFs so that one plays after the other.",
               "arguments": [
                 {
-                  "name": "image1-file",
+                  "name": "gif-1-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image1-string",
+                  "name": "gif-1-string",
                   "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "image2-file",
+                  "name": "gif-2-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image2-string",
+                  "name": "gif-2-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5511,11 +5511,11 @@
                   "description": "The frame to get. Can be a number"
                 },
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5526,14 +5526,15 @@
               "arguments": [
                 {
                   "name": "frame-rate",
-                  "description": "The frame rate"
+                  "description": "The frame rate",
+                  "required": true
                 },
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5550,11 +5551,11 @@
                   "description": "The number of times to loop the gif"
                 },
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5564,11 +5565,11 @@
               "description": "Make a GIF play in reverse.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5578,11 +5579,11 @@
               "description": "Turn an animated GIF into a spritesheet of its frames.",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "gif-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "gif-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
