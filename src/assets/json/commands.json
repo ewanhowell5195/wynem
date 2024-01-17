@@ -568,10 +568,11 @@
                     "noughtsandcrosses",
                     "noughtscrosses"
                   ],
-                  "arguments": "[difficulty]/<member>",
+                  "arguments": "<member/difficulty]",
                   "description": [
-                    "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
-                    "Difficulties:\n\neasy\nmedium\nhard\nexpert"
+                    "Play Tic Tac Toe against the bot or another member!",
+                    "Mention a member to play against them.",
+                    "Difficulties:\n\n- Easy\n- Medium\n- Hard\n- Expert"
                   ],
                   "slashCommand": "fun/games/tictactoe"
                 }
@@ -1466,7 +1467,8 @@
                         "wibbly",
                         "wobbly",
                         "wibblywobbly",
-                        "wibblify"
+                        "wibblify",
+                        "wobblify"
                       ],
                       "arguments": "[amplitude] [period] [x] [y] [phaseShift] {image}",
                       "description": "Apply an occilating twist effect to an image.",
@@ -1573,6 +1575,11 @@
                 },
                 "overlays": {
                   "commands": {
+                    "easter": {
+                      "arguments": "{image}",
+                      "description": "Add an easter overlay to an image.",
+                      "slashCommand": "imageoverlays/easter"
+                    },
                     "gun": {
                       "arguments": "[expand] [double] {image}",
                       "description": [
@@ -4870,7 +4877,7 @@
                   "required": true
                 },
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 }
               ],
@@ -5137,17 +5144,17 @@
                   ],
                   "arguments": [
                     {
-                      "name": "member",
+                      "name": "opponent1",
                       "description": "The member to play against",
                       "required": true
                     },
                     {
-                      "name": "member2",
-                      "description": "3rd player"
+                      "name": "opponent2",
+                      "description": "The 3rd player"
                     },
                     {
-                      "name": "member3",
-                      "description": "4th player"
+                      "name": "opponent3",
+                      "description": "The 4th player"
                     },
                     {
                       "name": "board-width",
@@ -5184,16 +5191,16 @@
                   ],
                   "arguments": [
                     {
-                      "name": "member",
+                      "name": "opponent1",
                       "description": "The member to play against"
                     },
                     {
-                      "name": "member2",
-                      "description": "3rd player"
+                      "name": "opponent2",
+                      "description": "The 3rd player"
                     },
                     {
-                      "name": "member3",
-                      "description": "4th player"
+                      "name": "opponent3",
+                      "description": "The 4th player"
                     },
                     {
                       "name": "letter-count",
@@ -5225,7 +5232,7 @@
                   "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
                   "arguments": [
                     {
-                      "name": "member",
+                      "name": "opponent",
                       "description": "The member to play against"
                     }
                   ],
@@ -5238,17 +5245,17 @@
                   ],
                   "arguments": [
                     {
-                      "name": "member",
+                      "name": "opponent1",
                       "description": "The member to play against",
                       "required": true
                     },
                     {
-                      "name": "member2",
-                      "description": "3rd player"
+                      "name": "opponent2",
+                      "description": "The 3rd player"
                     },
                     {
-                      "name": "member3",
-                      "description": "4th player"
+                      "name": "opponent3",
+                      "description": "The 4th player"
                     },
                     {
                       "name": "board-size",
@@ -5259,8 +5266,9 @@
                 },
                 "tictactoe": {
                   "description": [
-                    "Play Tic Tac Toe against the bot or another member! Mention a member to play against them.",
-                    "Difficulties:\n\neasy\nmedium\nhard\nexpert"
+                    "Play Tic Tac Toe against the bot or another member!",
+                    "Mention a member to play against them.",
+                    "Difficulties:\n\n- Easy\n- Medium\n- Hard\n- Expert"
                   ],
                   "arguments": [
                     {
@@ -5299,7 +5307,7 @@
                 },
                 {
                   "name": "reason",
-                  "description": "The reason"
+                  "description": "The reason for the beaning"
                 }
               ],
               "prefixCommand": "fun/bean"
@@ -5308,7 +5316,7 @@
               "description": "Create some bubblewrap with a hidden message!",
               "arguments": [
                 {
-                  "name": "text",
+                  "name": "message",
                   "description": "The bubble contents"
                 }
               ],
@@ -7946,6 +7954,20 @@
         },
         "imageoverlays": {
           "commands": {
+            "easter": {
+              "description": "Add an easter overlay to an image.",
+              "arguments": [
+                {
+                  "name": "Image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "Image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/easter"
+            },
             "gun": {
               "description": [
                 "Make an image hold a gun.",
@@ -7976,11 +7998,11 @@
               "description": "Make an image jolly!",
               "arguments": [
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8167,11 +8189,11 @@
                   "description": "The location to add the caption"
                 },
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8261,11 +8283,11 @@
                   "description": "Swap the side the character is on"
                 },
                 {
-                  "name": "image-file",
+                  "name": "Image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "image-string",
+                  "name": "Image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
