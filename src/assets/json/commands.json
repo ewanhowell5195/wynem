@@ -682,6 +682,7 @@
               "aliases": [
                 "sarcasm"
               ],
+              "arguments": "[message]",
               "description": "Convert some text to CoNsTaNtLy sWiTcHiNg cAsEs.",
               "slashCommand": "fun/mock"
             },
@@ -5350,12 +5351,12 @@
               "description": "Discover how much you hate someone/something!",
               "arguments": [
                 {
-                  "name": "thing1",
+                  "name": "thing-1",
                   "description": "The first thing",
                   "required": true
                 },
                 {
-                  "name": "thing2",
+                  "name": "thing-2",
                   "description": "The second thing"
                 }
               ],
@@ -5379,9 +5380,8 @@
               ],
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The user to kill",
-                  "required": true
+                  "name": "member",
+                  "description": "The member to kill"
                 },
                 {
                   "name": "weapon",
@@ -5405,12 +5405,12 @@
               "description": "Discover how much you love someone/something!",
               "arguments": [
                 {
-                  "name": "thing1",
+                  "name": "thing-1",
                   "description": "The first thing",
                   "required": true
                 },
                 {
-                  "name": "thing2",
+                  "name": "thing-2",
                   "description": "The second thing"
                 }
               ],
@@ -5431,9 +5431,8 @@
               "description": "Test how much of a monkey someone is!",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The user to test",
-                  "required": true
+                  "name": "member",
+                  "description": "The member to test"
                 }
               ],
               "prefixCommand": "fun/monketest"
@@ -5599,37 +5598,37 @@
                   "description": "Generate a gradient from a list of colours.",
                   "arguments": [
                     {
-                      "name": "colour1",
+                      "name": "colour-1",
                       "description": "Colour 1",
                       "required": true
                     },
                     {
-                      "name": "colour2",
+                      "name": "colour-2",
                       "description": "Colour 2",
                       "required": true
                     },
                     {
-                      "name": "colour3",
+                      "name": "colour-3",
                       "description": "Colour 3"
                     },
                     {
-                      "name": "colour4",
+                      "name": "colour-4",
                       "description": "Colour 4"
                     },
                     {
-                      "name": "colour5",
+                      "name": "colour-5",
                       "description": "Colour 5"
                     },
                     {
-                      "name": "colour6",
+                      "name": "colour-6",
                       "description": "Colour 6"
                     },
                     {
-                      "name": "colour7",
+                      "name": "colour-7",
                       "description": "Colour 7"
                     },
                     {
-                      "name": "colour8",
+                      "name": "colour-8",
                       "description": "Colour 8"
                     }
                   ],
@@ -5658,27 +5657,27 @@
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
                   "arguments": [
                     {
-                      "name": "red-image-file",
+                      "name": "Red Image-file",
                       "description": "The image to use as the red colour channel"
                     },
                     {
-                      "name": "red-image-string",
+                      "name": "Red Image-string",
                       "description": "The image to use as the red colour channel"
                     },
                     {
-                      "name": "green-image-file",
+                      "name": "Green Image-file",
                       "description": "The image to use as the green colour channel"
                     },
                     {
-                      "name": "green-image-string",
+                      "name": "Green Image-string",
                       "description": "The image to use as the green colour channel"
                     },
                     {
-                      "name": "blue-image-file",
+                      "name": "Blue Image-file",
                       "description": "The image to use as the blue colour channel"
                     },
                     {
-                      "name": "blue-image-string",
+                      "name": "Blue Image-string",
                       "description": "The image to use as the blue colour channel"
                     }
                   ],
@@ -5735,11 +5734,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5767,11 +5766,11 @@
                       "description": "The amount the colours can differ"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5791,12 +5790,12 @@
                       "required": true
                     },
                     {
-                      "name": "x2",
+                      "name": "x-2",
                       "description": "End X coordinate",
                       "required": true
                     },
                     {
-                      "name": "y2",
+                      "name": "y-2",
                       "description": "End Y coordinate",
                       "required": true
                     },
@@ -5809,11 +5808,11 @@
                       "description": "The thickness"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5837,11 +5836,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5875,11 +5874,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5913,11 +5912,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5947,8 +5946,7 @@
                     },
                     {
                       "name": "size",
-                      "description": "Font Size",
-                      "required": true
+                      "description": "Font Size"
                     },
                     {
                       "name": "colour",
@@ -5963,11 +5961,11 @@
                       "description": "Alignment"
                     },
                     {
-                      "name": "image-file",
+                      "name": "Image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "image-string",
+                      "name": "Image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
