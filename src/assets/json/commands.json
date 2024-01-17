@@ -4878,7 +4878,7 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 }
               ],
@@ -5099,11 +5099,11 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5657,27 +5657,27 @@
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
                   "arguments": [
                     {
-                      "name": "Red Image-file",
+                      "name": "red-image-file",
                       "description": "The image to use as the red colour channel"
                     },
                     {
-                      "name": "Red Image-string",
+                      "name": "red-image-string",
                       "description": "The image to use as the red colour channel"
                     },
                     {
-                      "name": "Green Image-file",
+                      "name": "green-image-file",
                       "description": "The image to use as the green colour channel"
                     },
                     {
-                      "name": "Green Image-string",
+                      "name": "green-image-string",
                       "description": "The image to use as the green colour channel"
                     },
                     {
-                      "name": "Blue Image-file",
+                      "name": "blue-image-file",
                       "description": "The image to use as the blue colour channel"
                     },
                     {
-                      "name": "Blue Image-string",
+                      "name": "blue-image-string",
                       "description": "The image to use as the blue colour channel"
                     }
                   ],
@@ -5734,11 +5734,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5766,11 +5766,11 @@
                       "description": "The amount the colours can differ"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5808,11 +5808,11 @@
                       "description": "The thickness"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5836,11 +5836,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5874,11 +5874,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5912,11 +5912,11 @@
                       "description": "Colour"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -5961,11 +5961,11 @@
                       "description": "Alignment"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -6385,19 +6385,19 @@
               "description": "Show that two images are the same picture.",
               "arguments": [
                 {
-                  "name": "Left Image-file",
+                  "name": "left-image-file",
                   "description": "The left image"
                 },
                 {
-                  "name": "Left Image-string",
+                  "name": "left-image-string",
                   "description": "The left image"
                 },
                 {
-                  "name": "Right Image-file",
+                  "name": "right-image-file",
                   "description": "The right image"
                 },
                 {
-                  "name": "Right Image-string",
+                  "name": "right-image-string",
                   "description": "The right image"
                 }
               ],
@@ -6639,11 +6639,11 @@
                       "description": "Y coordinate"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -6657,11 +6657,11 @@
                       "description": "The amount to blur the image"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -6679,11 +6679,11 @@
                       "description": "The strength of the blur"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -6706,11 +6706,11 @@
                       "description": "Y coordinate"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -6731,11 +6731,11 @@
                   "description": "The amount to brighten the image by"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6750,11 +6750,11 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6772,11 +6772,11 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6789,19 +6789,19 @@
               ],
               "arguments": [
                 {
-                  "name": "Source-file",
+                  "name": "source-file",
                   "description": "The image to get the colours from"
                 },
                 {
-                  "name": "Source-string",
+                  "name": "source-string",
                   "description": "The image to get the colours from"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "The image to apply the colours to"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "The image to apply the colours to"
                 }
               ],
@@ -6811,11 +6811,11 @@
               "description": "Deepfry an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6841,11 +6841,11 @@
                   "description": "The colour"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6855,11 +6855,11 @@
               "description": "Turn an image greyscale.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6873,11 +6873,11 @@
                   "description": "The angle to hue shift the image"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6894,11 +6894,11 @@
                   "description": "The number of colours to limit the image to"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6908,11 +6908,11 @@
               "description": "Invert an image's colours.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6929,19 +6929,19 @@
                   "description": "The masking mode to use"
                 },
                 {
-                  "name": "Mask-file",
+                  "name": "mask-file",
                   "description": "The image to use as a mask"
                 },
                 {
-                  "name": "Mask-string",
+                  "name": "mask-string",
                   "description": "The image to use as a mask"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6956,11 +6956,11 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6971,11 +6971,11 @@
               "cooldown": 3,
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -6985,11 +6985,11 @@
               "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7004,11 +7004,11 @@
                   "required": true
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7025,11 +7025,11 @@
                   "description": "The percentage to saturate the image by"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7039,11 +7039,11 @@
               "description": "Apply a sepia filter to an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7061,11 +7061,11 @@
                   "description": "The cut off threshold"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7145,11 +7145,11 @@
                       "description": "How large the twist radius should be"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -7197,11 +7197,11 @@
                       "description": "Sine wave offset"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -7223,11 +7223,11 @@
                       "description": "Y coordinate to twist from"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -7848,11 +7848,11 @@
                   "description": "The resize interpolation method (static images only)"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7902,11 +7902,11 @@
               "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7938,11 +7938,11 @@
                   "description": "The colour to trim"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7956,11 +7956,11 @@
               "description": "Add an easter overlay to an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -7996,11 +7996,11 @@
               "description": "Make an image jolly!",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8187,11 +8187,11 @@
                   "description": "The location to add the caption"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8281,11 +8281,11 @@
                   "description": "Swap the side the character is on"
                 },
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8367,11 +8367,11 @@
               "description": "Get the average colour of an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8381,11 +8381,11 @@
               "description": "Get the most common colour in an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8402,19 +8402,19 @@
                   "description": "The amount the colours can differ"
                 },
                 {
-                  "name": "Image 1-file",
+                  "name": "image-1-file",
                   "description": "The first image"
                 },
                 {
-                  "name": "Image 1-string",
+                  "name": "image-1-string",
                   "description": "The first image"
                 },
                 {
-                  "name": "Image 2-file",
+                  "name": "image-2-file",
                   "description": "The second image"
                 },
                 {
-                  "name": "Image 2-string",
+                  "name": "image-2-string",
                   "description": "The second image"
                 }
               ],
@@ -8435,11 +8435,11 @@
               "description": "Show the palette of an image.",
               "arguments": [
                 {
-                  "name": "Image-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "Image-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8754,11 +8754,11 @@
                       "description": "Enable randomly mirrored tiles"
                     },
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -9577,11 +9577,11 @@
                   "description": "Set the image that will be used with the join message.",
                   "arguments": [
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -9612,11 +9612,11 @@
                   "description": "Set the image that will be used with the leave message.",
                   "arguments": [
                     {
-                      "name": "Image-file",
+                      "name": "image-file",
                       "description": "A file"
                     },
                     {
-                      "name": "Image-string",
+                      "name": "image-string",
                       "description": "URL, Emoji, etc"
                     }
                   ],
@@ -10088,11 +10088,11 @@
               "description": "View the exif data of a file.",
               "arguments": [
                 {
-                  "name": "File-file",
+                  "name": "file-file",
                   "description": "A file"
                 },
                 {
-                  "name": "File-string",
+                  "name": "file-string",
                   "description": "A file"
                 }
               ],
