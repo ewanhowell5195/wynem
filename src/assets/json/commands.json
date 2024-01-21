@@ -2296,7 +2296,7 @@
               "description": [
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+                "Available directions:\n\n- top\n- left\n- right\n- bottom"
               ],
               "slashCommand": "image/append"
             },
@@ -6124,7 +6124,7 @@
               "description": [
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n\n- Top\n- Left\n- Right\n- Bottom"
+                "Available directions:\n\n- top\n- left\n- right\n- bottom"
               ],
               "arguments": [
                 {
@@ -6180,8 +6180,8 @@
                   "required": true
                 },
                 {
-                  "name": "type",
-                  "description": "The emoji type"
+                  "name": "type-or-resolution",
+                  "description": "The emoji type or resolution"
                 }
               ],
               "prefixCommand": "images/emoji"
