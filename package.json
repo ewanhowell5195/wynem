@@ -21,6 +21,6 @@
     ]
   },
   "dependencies": {
-    "webbuilder": "github:EvenTorset/WebBuilder#56280536070bc7e59c3b53e2fdcac26a3b0513c6"
+    "webbuilder": "github:EvenTorset/WebBuilder"
   }
 }
