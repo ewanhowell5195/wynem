@@ -1287,7 +1287,7 @@
           "display_name": "Bogged [Outer]",
           "model": "stray_outer",
           "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        }.
+        },
         {
           "name": "breeze",
           "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
