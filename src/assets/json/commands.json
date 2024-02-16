@@ -4104,20 +4104,6 @@
                 "Manage Guild"
               ],
               "slashCommand": "botconfig/toggle/quotes"
-            },
-            "toggletwitfix": {
-              "aliases": [
-                "toggletwitterfix",
-                "togglexfix",
-                "twitfix",
-                "xfix"
-              ],
-              "description": "Toggles whether the bot will reply to Twitter links to give it a working embed.",
-              "permissions": [
-                "Guild Only",
-                "Manage Guild"
-              ],
-              "slashCommand": "botconfig/toggle/twitfix"
             }
           }
         },
@@ -5009,13 +4995,6 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/togglequotes"
-                },
-                "twitfix": {
-                  "description": "Toggles whether the bot will reply to Twitter links to give it a working embed.",
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "server/toggletwitfix"
                 }
               }
             }
