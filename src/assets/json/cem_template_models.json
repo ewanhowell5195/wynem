@@ -348,6 +348,7 @@
             "villager",
             "plains"
           ],
+          "single_template": true,
           "vanilla_textures": [
             "villager",
             "plains"
