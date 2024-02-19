@@ -48,6 +48,10 @@
         {
           "name": "chest_large",
           "display_name": "Chest [Large]",
+          "texture_name": [
+            "normal_left",
+            "normal_right"
+          ],
           "vanilla_textures": [
             "normal_left",
             "normal_right"
@@ -306,6 +310,10 @@
         {
           "name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
+          "texture_name": [
+            "trapped_left",
+            "trapped_right"
+          ],
           "vanilla_textures": [
             "trapped_left",
             "trapped_right"
@@ -336,6 +344,10 @@
         {
           "name": "villager",
           "model": "villager",
+          "texture_name": [
+            "villager",
+            "plains"
+          ],
           "vanilla_textures": [
             "villager",
             "plains"
@@ -389,6 +401,10 @@
         {
           "name": "zombie_villager",
           "model": "zombie_villager",
+          "texture_name": [
+            "zombie_villager",
+            "plains"
+          ],
           "vanilla_textures": [
             "zombie_villager",
             "plains"
@@ -458,6 +474,10 @@
           "name": "chest_large_unedited",
           "file_name": "chest_large",
           "display_name": "Chest [Large]",
+          "texture_name": [
+            "chest_left",
+            "chest_right"
+          ],
           "vanilla_textures": [
             "chest_left",
             "chest_right"
@@ -741,6 +761,10 @@
           "file_name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
           "model": "chest_large_unedited",
+          "texture_name": [
+            "trapped_chest_left",
+            "trapped_chest_right"
+          ],
           "vanilla_textures": [
             "trapped_chest_left",
             "trapped_chest_right"
@@ -756,7 +780,10 @@
           "name": "villager_unedited",
           "file_name": "villager",
           "display_name": "Villager",
-          "texture_name": "villager",
+          "texture_name": [
+            "villager",
+            "plains"
+          ],
           "vanilla_textures": [
             "villager",
             "plains"
@@ -964,6 +991,10 @@
           "name": "chest_large_single_bone",
           "file_name": "chest_large",
           "display_name": "Chest [Large]",
+          "texture_name": [
+            "chest_left",
+            "chest_right"
+          ],
           "vanilla_textures": [
             "chest_left",
             "chest_right"
@@ -1036,6 +1067,10 @@
           "name": "trapped_chest_large_single_bone",
           "file_name": "trapped_chest_large",
           "display_name": "Trapped Chest [Large]",
+          "texture_name": [
+            "trapped_left",
+            "trapped_right"
+          ],
           "vanilla_textures": [
             "trapped_left",
             "trapped_right"
@@ -1065,6 +1100,10 @@
           "name": "chest_large_19.2",
           "display_name": "Chest [Large] [1.19.2]",
           "file_name": "chest_large",
+          "texture_name": [
+            "normal_left",
+            "normal_right"
+          ],
           "vanilla_textures": [
             "normal_left",
             "normal_right"
@@ -1088,6 +1127,10 @@
           "name": "trapped_chest_large_19.2",
           "display_name": "Trapped Chest [Large] [1.19.2]",
           "file_name": "trapped_chest_large",
+          "texture_name": [
+            "trapped_left",
+            "trapped_right"
+          ],
           "vanilla_textures": [
             "trapped_left",
             "trapped_right"
