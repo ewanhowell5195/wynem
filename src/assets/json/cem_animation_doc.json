@@ -1,6 +1,6 @@
 {
-  "version": "1.3.2",
-  "optifineVersion": "1.19.3 HD U I2 pre3",
+  "version": "1.3.3",
+  "optifineVersion": "1.20.4 HD U I7 pre2",
   "tabs": [
     {
       "name": "Structure",
@@ -735,7 +735,7 @@
         },
         {
           "type": "image",
-          "url": "https://media.discordapp.net/attachments/698979190942466148/971471802834509934/unknown.png"
+          "url": "https://wynem.com/assets/images/minecraft/cem_animation_doc/referencing.webp"
         },
         {
           "type": "text",
@@ -759,7 +759,7 @@
         },
         {
           "type": "image",
-          "url": "https://media.discordapp.net/attachments/425702172219408385/971421794378584064/unknown.png"
+          "url": "https://wynem.com/assets/images/minecraft/cem_animation_doc/cancelling.webp"
         },
         {
           "type": "text",
