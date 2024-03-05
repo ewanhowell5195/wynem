@@ -1870,6 +1870,14 @@
                   "description": "Turn an image into a bunch of emojis!",
                   "slashCommand": "imagefun/emojify"
                 },
+                "explode": {
+                  "aliases": [
+                    "bomb"
+                  ],
+                  "arguments": "{image}",
+                  "description": "Explode an image.",
+                  "slashCommand": "imagefun/explode"
+                },
                 "hiddenimage": {
                   "aliases": [
                     "hideimage",
@@ -7310,6 +7318,20 @@
                 }
               ],
               "prefixCommand": "images/imagefun/emojify"
+            },
+            "explode": {
+              "description": "Explode an image.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/explode"
             },
             "hiddenimage": {
               "description": [
