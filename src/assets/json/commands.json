@@ -2606,6 +2606,13 @@
                   ],
                   "slashCommand": "minecraft/resourcepacks/mojangtext"
                 },
+                "optifinedoc": {
+                  "aliases": [
+                    "optidoc"
+                  ],
+                  "description": "View entries from the OptiFine documentation",
+                  "slashCommand": "minecraft/resourcepacks/optifinedoc"
+                },
                 "reloadpack": {
                   "arguments": "[version]",
                   "cooldown": 20,
@@ -2696,7 +2703,7 @@
                   ],
                   "arguments": "[username]",
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
-                  "slashCommand": "minecraft/skins/cape"
+                  "slashCommand": "minecraftskins/cape"
                 },
                 "head": {
                   "aliases": [
@@ -2705,7 +2712,7 @@
                   ],
                   "arguments": "[username]",
                   "description": "View the head of a Minecraft Java edition player.",
-                  "slashCommand": "minecraft/skins/head"
+                  "slashCommand": "minecraftskins/head"
                 },
                 "minecraftavatar": {
                   "aliases": [
@@ -2725,7 +2732,7 @@
                   ],
                   "arguments": "[username] {image}",
                   "description": "Create a minecraft avatar.",
-                  "slashCommand": "minecraft/skins/avatar"
+                  "slashCommand": "minecraftskins/avatar"
                 },
                 "minecraftkick": {
                   "aliases": [
@@ -2733,7 +2740,7 @@
                   ],
                   "arguments": "[username] [username]",
                   "description": "Make one minecraft player kick another minecraft player!",
-                  "slashCommand": "minecraft/skins/kick"
+                  "slashCommand": "minecraftskins/kick"
                 },
                 "previewskin": {
                   "aliases": [
@@ -2744,7 +2751,7 @@
                     "Make a 2D preview for a skin texture.",
                     "The format is either \"steve\" or \"alex\""
                   ],
-                  "slashCommand": "minecraft/skins/preview"
+                  "slashCommand": "minecraftskins/preview"
                 },
                 "renderskin": {
                   "aliases": [
@@ -2758,7 +2765,7 @@
                     "Render a minecraft skin in 3D.",
                     "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
                   ],
-                  "slashCommand": "minecraft/skins/render"
+                  "slashCommand": "minecraftskins/render"
                 },
                 "skin": {
                   "aliases": [
@@ -2767,7 +2774,7 @@
                   ],
                   "arguments": "[username]",
                   "description": "View the skin of a Minecraft Java edition player.",
-                  "slashCommand": "minecraft/skins/skin"
+                  "slashCommand": "minecraftskins/skin"
                 },
                 "skinconverter": {
                   "aliases": [
@@ -2776,7 +2783,7 @@
                   ],
                   "arguments": "{image}",
                   "description": "Convert between the new and old Minecraft skin formats.",
-                  "slashCommand": "minecraft/skins/converter"
+                  "slashCommand": "minecraftskins/converter"
                 },
                 "skinify": {
                   "aliases": [
@@ -2787,7 +2794,7 @@
                   ],
                   "arguments": "{image}",
                   "description": "Turn any image into a minecraft skin.",
-                  "slashCommand": "minecraft/skins/skinify"
+                  "slashCommand": "minecraftskins/skinify"
                 }
               }
             }
@@ -4506,19 +4513,18 @@
               "arguments": [
                 {
                   "name": "decoration",
-                  "description": "The avatar decoration",
-                  "required": true
+                  "description": "The avatar decoration"
                 },
                 {
                   "name": "zoom-level",
                   "description": "The output image zoom level"
                 },
                 {
-                  "name": "avatar-file",
+                  "name": "image-file",
                   "description": "A file"
                 },
                 {
-                  "name": "avatar-string",
+                  "name": "image-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -8668,6 +8674,21 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/mojangtext"
                 },
+                "optifinedoc": {
+                  "description": "View entries from the OptiFine documentation",
+                  "arguments": [
+                    {
+                      "name": "doc",
+                      "description": "The doc file to get",
+                      "required": true
+                    },
+                    {
+                      "name": "property",
+                      "description": "The property to view"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/optifinedoc"
+                },
                 "reloadpack": {
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "cooldown": 20,
@@ -8798,136 +8819,6 @@
                   "prefixCommand": "minecraft/resourcepacks/versiondifference"
                 }
               }
-            },
-            "skins": {
-              "commands": {
-                "avatar": {
-                  "description": "Create a minecraft avatar.",
-                  "arguments": [
-                    {
-                      "name": "username",
-                      "description": "The players username"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/minecraftavatar"
-                },
-                "cape": {
-                  "description": "View the cape and elytra of a Minecraft Java edition player.",
-                  "arguments": [
-                    {
-                      "name": "username",
-                      "description": "The players username"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/cape"
-                },
-                "converter": {
-                  "description": "Convert between the new and old Minecraft skin formats.",
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/skinconverter"
-                },
-                "head": {
-                  "description": "View the head of a Minecraft Java edition player.",
-                  "arguments": [
-                    {
-                      "name": "username",
-                      "description": "The players username"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/head"
-                },
-                "kick": {
-                  "description": "Make one minecraft player kick another minecraft player!",
-                  "arguments": [
-                    {
-                      "name": "username1",
-                      "description": "The 1st players username",
-                      "required": true
-                    },
-                    {
-                      "name": "username2",
-                      "description": "The 2nd players username"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/minecraftkick"
-                },
-                "preview": {
-                  "description": [
-                    "Make a 2D preview for a skin texture.",
-                    "The format is either \"steve\" or \"alex\""
-                  ],
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/previewskin"
-                },
-                "render": {
-                  "description": [
-                    "Render a minecraft skin in 3D.",
-                    "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
-                  ],
-                  "cooldown": 5,
-                  "arguments": [
-                    {
-                      "name": "format",
-                      "description": "The format to render"
-                    },
-                    {
-                      "name": "username",
-                      "description": "The players username"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/renderskin"
-                },
-                "skin": {
-                  "description": "View the skin of a Minecraft Java edition player.",
-                  "arguments": [
-                    {
-                      "name": "username",
-                      "description": "The players username"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/skin"
-                },
-                "skinify": {
-                  "description": "Turn any image into a minecraft skin.",
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/skins/skinify"
-                }
-              }
             }
           },
           "commands": {
@@ -9044,6 +8935,136 @@
                 }
               ],
               "prefixCommand": "minecraft/minecraftwiki"
+            }
+          }
+        },
+        "minecraftskins": {
+          "commands": {
+            "avatar": {
+              "description": "Create a minecraft avatar.",
+              "arguments": [
+                {
+                  "name": "username",
+                  "description": "The players username"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/minecraftavatar"
+            },
+            "cape": {
+              "description": "View the cape and elytra of a Minecraft Java edition player.",
+              "arguments": [
+                {
+                  "name": "username",
+                  "description": "The players username"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/cape"
+            },
+            "converter": {
+              "description": "Convert between the new and old Minecraft skin formats.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/skinconverter"
+            },
+            "head": {
+              "description": "View the head of a Minecraft Java edition player.",
+              "arguments": [
+                {
+                  "name": "username",
+                  "description": "The players username"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/head"
+            },
+            "kick": {
+              "description": "Make one minecraft player kick another minecraft player!",
+              "arguments": [
+                {
+                  "name": "username1",
+                  "description": "The 1st players username",
+                  "required": true
+                },
+                {
+                  "name": "username2",
+                  "description": "The 2nd players username"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/minecraftkick"
+            },
+            "preview": {
+              "description": [
+                "Make a 2D preview for a skin texture.",
+                "The format is either \"steve\" or \"alex\""
+              ],
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/previewskin"
+            },
+            "render": {
+              "description": [
+                "Render a minecraft skin in 3D.",
+                "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
+              ],
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "format",
+                  "description": "The format to render"
+                },
+                {
+                  "name": "username",
+                  "description": "The players username"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/renderskin"
+            },
+            "skin": {
+              "description": "View the skin of a Minecraft Java edition player.",
+              "arguments": [
+                {
+                  "name": "username",
+                  "description": "The players username"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/skin"
+            },
+            "skinify": {
+              "description": "Turn any image into a minecraft skin.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/skinify"
             }
           }
         },
