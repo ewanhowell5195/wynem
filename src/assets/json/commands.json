@@ -2642,7 +2642,7 @@
                       "fields": [
                         [
                           "Blocks",
-                          "`crop` `cube` `cube_sides` `cube_tiled`"
+                          "`crop` `cube` `cube_sides` `cube_tiled` `tree`"
                         ],
                         [
                           "Fun",
