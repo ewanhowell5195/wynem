@@ -1129,6 +1129,19 @@
                   "arguments": "{gif}",
                   "description": "Turn an animated GIF into a spritesheet of its frames.",
                   "slashCommand": "gif/spritesheet"
+                },
+                "transition": {
+                  "aliases": [
+                    "xfade",
+                    "crossfade",
+                    "fade"
+                  ],
+                  "arguments": "[type] {image} {image}",
+                  "description": [
+                    "Transition from one image into another image.",
+                    "Available types:\n\nfade, fadeblack, fadewhite, distance, wipeleft, wiperight, wipeup, wipedown, slideleft, slideright, slideup, slidedown, smoothleft, smoothright, smoothup, smoothdown, circlecrop, rectcrop, circleclose, circleopen, horzclose, horzopen, vertclose, vertopen, diagbl, diagbr, diagtl, diagtr, hlslice, hrslice, vuslice, vdslice, dissolve, pixelize, radial, hblur, wipetl, wipetr, wipebl, wipebr, fadegrays, squeezev, squeezeh, zoomin, hlwind, hrwind, vuwind, vdwind, coverleft, coverright, coverup, coverdown, revealleft, revealright, revealup, revealdown"
+                  ],
+                  "slashCommand": "gif/transition"
                 }
               }
             },
@@ -2246,17 +2259,11 @@
                   "slashCommand": "image/mirroring/flip"
                 },
                 "haah": {
-                  "aliases": [
-                    "fliptop"
-                  ],
                   "arguments": "{image}",
                   "description": "Flip the top half of an image to the bottom half.",
                   "slashCommand": "image/mirroring/haah"
                 },
                 "hooh": {
-                  "aliases": [
-                    "flipbottom"
-                  ],
                   "arguments": "{image}",
                   "description": "Flip the bottom half of an image to the top half.",
                   "slashCommand": "image/mirroring/hooh"
@@ -2277,17 +2284,11 @@
                   "slashCommand": "image/mirroring/toot"
                 },
                 "waaw": {
-                  "aliases": [
-                    "mirrorleft"
-                  ],
                   "arguments": "{image}",
                   "description": "Mirror the left half of an image to the right half.",
                   "slashCommand": "image/mirroring/waaw"
                 },
                 "woow": {
-                  "aliases": [
-                    "mirrorright"
-                  ],
                   "arguments": "{image}",
                   "description": "Mirror the right half of an image to the left half.",
                   "slashCommand": "image/mirroring/woow"
@@ -2650,7 +2651,7 @@
                         ],
                         [
                           "Player",
-                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_flop` `player_flop_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
+                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
                         ]
                       ]
                     }
@@ -2763,7 +2764,7 @@
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
-                    "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
+                    "Formats:\n\n- back\n- buff\n- dance\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
                   ],
                   "slashCommand": "minecraftskins/render"
                 },
@@ -5581,6 +5582,35 @@
                 }
               ],
               "prefixCommand": "images/gifs/spritesheet"
+            },
+            "transition": {
+              "description": [
+                "Transition from one image into another image.",
+                "Available types:\n\nfade, fadeblack, fadewhite, distance, wipeleft, wiperight, wipeup, wipedown, slideleft, slideright, slideup, slidedown, smoothleft, smoothright, smoothup, smoothdown, circlecrop, rectcrop, circleclose, circleopen, horzclose, horzopen, vertclose, vertopen, diagbl, diagbr, diagtl, diagtr, hlslice, hrslice, vuslice, vdslice, dissolve, pixelize, radial, hblur, wipetl, wipetr, wipebl, wipebr, fadegrays, squeezev, squeezeh, zoomin, hlwind, hrwind, vuwind, vdwind, coverleft, coverright, coverup, coverdown, revealleft, revealright, revealup, revealdown"
+              ],
+              "arguments": [
+                {
+                  "name": "type",
+                  "description": "The type of transition"
+                },
+                {
+                  "name": "image-file",
+                  "description": "First image"
+                },
+                {
+                  "name": "image-string",
+                  "description": "First image"
+                },
+                {
+                  "name": "image-2-file",
+                  "description": "Second image"
+                },
+                {
+                  "name": "image-2-string",
+                  "description": "Second image"
+                }
+              ],
+              "prefixCommand": "images/gifs/transition"
             }
           }
         },
@@ -9027,7 +9057,7 @@
             "render": {
               "description": [
                 "Render a minecraft skin in 3D.",
-                "Formats:\n\n- back\n- buff\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
+                "Formats:\n\n- back\n- buff\n- dance\n- flop\n- gigachad\n- head\n- player\n- round\n- spin\n- squish\n- wave"
               ],
               "cooldown": 5,
               "arguments": [
