@@ -4,6 +4,7 @@
   "tabs": [
     {
       "name": "Structure",
+      "icon": "account_tree",
       "elements": [
         {
           "type": "heading",
@@ -67,6 +68,7 @@
     },
     {
       "name": "Documentation",
+      "icon": "description",
       "elements": [
         {
           "type": "heading",
@@ -684,6 +686,7 @@
     },
     {
       "name": "Examples",
+      "icon": "edit",
       "elements": [
         {
           "type": "heading",
