@@ -8806,7 +8806,7 @@
                   "arguments": [
                     {
                       "name": "model",
-                      "description": "The model to render"
+                      "description": "Model to render"
                     },
                     {
                       "name": "image-file",
@@ -8817,19 +8817,19 @@
                       "description": "URL, Emoji, etc"
                     },
                     {
-                      "name": "image2-file",
+                      "name": "image-2-file",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image2-string",
+                      "name": "image-2-string",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image3-file",
+                      "name": "image-3-file",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image3-string",
+                      "name": "image-3-string",
                       "description": "Not used on all models"
                     }
                   ],
