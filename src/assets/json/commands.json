@@ -1447,7 +1447,8 @@
                         "gifcontentaware"
                       ],
                       "arguments": "{image}",
-                      "description": "Content aware scales an image. Outputs a GIF.",
+                      "cooldown": 5,
+                      "description": "Content aware scales an image where the intensity gets stronger over time.",
                       "slashCommand": "imagefun/distortions/gmagick"
                     },
                     "localtwist": {
@@ -1468,7 +1469,8 @@
                         "contentaware"
                       ],
                       "arguments": "[intensity] {image}",
-                      "description": "Content aware scales an image. Outputs a static image.",
+                      "cooldown": 5,
+                      "description": "Content aware scales an image.",
                       "slashCommand": "imagefun/distortions/magick"
                     },
                     "sinetwist": {
@@ -1602,6 +1604,11 @@
                         "\"expand\" puts the gun over the edge of the image"
                       ],
                       "slashCommand": "imageoverlays/gun"
+                    },
+                    "hair": {
+                      "arguments": "[hairCount] {image}",
+                      "description": "Place some hairs on top of an image.",
+                      "slashCommand": "imageoverlays/hair"
                     },
                     "jolly": {
                       "aliases": [
@@ -1948,6 +1955,11 @@
                     "\"switchAxis\" and \"reverse\" are both true/false."
                   ],
                   "slashCommand": "imagefun/scan"
+                },
+                "slide": {
+                  "arguments": "[direction] [speed] {image}",
+                  "description": "Slide an image.",
+                  "slashCommand": "imagefun/slide"
                 },
                 "spin": {
                   "arguments": "[speed] [expandEnabled] {image}",
@@ -2796,6 +2808,18 @@
                   "arguments": "{image}",
                   "description": "Turn any image into a minecraft skin.",
                   "slashCommand": "minecraftskins/skinify"
+                },
+                "slimconverter": {
+                  "aliases": [
+                    "slimconvert",
+                    "convertslim"
+                  ],
+                  "arguments": "[colNumber] {image}",
+                  "description": [
+                    "Convert skins between the wide and slim formats.",
+                    "The \"colNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
+                  ],
+                  "slashCommand": "minecraftskins/slimconverter"
                 }
               }
             }
@@ -7136,7 +7160,8 @@
                   "prefixCommand": "images/imagefun/distortions/bulge"
                 },
                 "gmagick": {
-                  "description": "Content aware scales an image. Outputs a GIF.",
+                  "description": "Content aware scales an image where the intensity gets stronger over time.",
+                  "cooldown": 5,
                   "arguments": [
                     {
                       "name": "image-file",
@@ -7180,11 +7205,12 @@
                   "prefixCommand": "images/imagefun/distortions/localtwist"
                 },
                 "magick": {
-                  "description": "Content aware scales an image. Outputs a static image.",
+                  "description": "Content aware scales an image.",
+                  "cooldown": 5,
                   "arguments": [
                     {
                       "name": "intensity",
-                      "description": "The magick intensity"
+                      "description": "Magick intensity"
                     },
                     {
                       "name": "image-file",
@@ -7501,6 +7527,28 @@
                 }
               ],
               "prefixCommand": "images/imagefun/scan"
+            },
+            "slide": {
+              "description": "Slide an image.",
+              "arguments": [
+                {
+                  "name": "direction",
+                  "description": "Slide direction"
+                },
+                {
+                  "name": "speed",
+                  "description": "Slide speed"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/slide"
             },
             "spin": {
               "description": "Make an image spin!",
@@ -8029,6 +8077,24 @@
                 }
               ],
               "prefixCommand": "images/imagefun/overlays/gun"
+            },
+            "hair": {
+              "description": "Place some hairs on top of an image.",
+              "arguments": [
+                {
+                  "name": "hair-count",
+                  "description": "The number of hairs to add to the image"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/hair"
             },
             "jolly": {
               "description": "Make an image jolly!",
@@ -9095,6 +9161,27 @@
                 }
               ],
               "prefixCommand": "minecraft/skins/skinify"
+            },
+            "slimconverter": {
+              "description": [
+                "Convert skins between the wide and slim formats.",
+                "The \"colNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
+              ],
+              "arguments": [
+                {
+                  "name": "col-number",
+                  "description": "The column of pixels on the arms to remove or duplicate"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/slimconverter"
             }
           }
         },
