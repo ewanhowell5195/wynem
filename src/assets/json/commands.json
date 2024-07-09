@@ -2623,6 +2623,7 @@
                   "aliases": [
                     "optidoc"
                   ],
+                  "arguments": "[doc] [properties]",
                   "description": "View entries from the OptiFine documentation",
                   "slashCommand": "minecraft/resourcepacks/optifinedoc"
                 },
@@ -2814,10 +2815,10 @@
                     "slimconvert",
                     "convertslim"
                   ],
-                  "arguments": "[colNumber] {image}",
+                  "arguments": "[columnNumber] {image}",
                   "description": [
                     "Convert skins between the wide and slim formats.",
-                    "The \"colNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
+                    "The \"columnNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
                   ],
                   "slashCommand": "minecraftskins/slimconverter"
                 }
@@ -8779,8 +8780,8 @@
                       "required": true
                     },
                     {
-                      "name": "property",
-                      "description": "The property to view"
+                      "name": "properties",
+                      "description": "The properties to view"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/optifinedoc"
@@ -9165,11 +9166,11 @@
             "slimconverter": {
               "description": [
                 "Convert skins between the wide and slim formats.",
-                "The \"colNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
+                "The \"columnNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
               ],
               "arguments": [
                 {
-                  "name": "col-number",
+                  "name": "column-number",
                   "description": "The column of pixels on the arms to remove or duplicate"
                 },
                 {
