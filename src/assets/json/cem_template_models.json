@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "categories": [
     {
       "name": "Supported",
@@ -1287,6 +1287,7 @@
       "description": "The models currently unsupported by OptiFine.",
       "icon": "do_not_disturb",
       "entities": [
+        "armadillo",
         {
           "name": "armor_layer_1",
           "display_name": "Armor [Layer 1]"
@@ -1294,6 +1295,17 @@
         {
           "name": "armor_layer_2",
           "display_name": "Armor [Layer 2]"
+        },
+        "bogged",
+        {
+          "name": "bogged_outer",
+          "display_name": "Bogged [Outer]",
+          "model": "stray_outer"
+        },
+        "breeze",
+        {
+          "name": "breeze_wind",
+          "display_name": "Breeze [Wind]"
         },
         "cape",
         {
@@ -1308,45 +1320,11 @@
           "name": "player_slim",
           "display_name": "Player [Slim]"
         },
-        "trident_riptide"
-      ]
-    },
-    {
-      "name": "Unreleased",
-      "description": "The models from unreleased game versions.",
-      "icon": "more_time",
-      "entities": [
-        {
-          "name": "armadillo",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "bogged",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "bogged_outer",
-          "display_name": "Bogged [Outer]",
-          "model": "stray_outer",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "breeze",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "breeze_wind",
-          "display_name": "Breeze [Wind]",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
-        {
-          "name": "wind_charge",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
-        },
+        "trident_riptide",
+        "wind_charge",
         {
           "name": "wolf_armor",
-          "display_name": "Wolf [Armor]",
-          "popup": "<h2>Before you start...</h2><p>This model is from the 1.21 experimental datapack. The model and UV may not be final, and may not be the same when it releases in the final 1.21 release. Please be prepared to edit your textures if you use this model as a texturing template.</p>"
+          "display_name": "Wolf [Armor]"
         }
       ]
     }
