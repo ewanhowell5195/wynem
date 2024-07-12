@@ -2664,7 +2664,7 @@
                         ],
                         [
                           "Player",
-                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
+                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_floss` `player_floss_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
                         ]
                       ]
                     }
@@ -2777,7 +2777,7 @@
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
-                    "Formats:\n\n- back\n- buff\n- dance\n- flop\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
+                    "Formats:\n\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
                   ],
                   "slashCommand": "minecraftskins/render"
                 },
@@ -9124,7 +9124,7 @@
             "render": {
               "description": [
                 "Render a minecraft skin in 3D.",
-                "Formats:\n\n- back\n- buff\n- dance\n- flop\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
+                "Formats:\n\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
               ],
               "cooldown": 5,
               "arguments": [
