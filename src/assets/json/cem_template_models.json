@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "categories": [
     {
       "name": "Supported",
@@ -1098,6 +1098,13 @@
           "texture_name": "bat"
         },
         {
+          "name": "trident_20.2",
+          "display_name": "Trident [1.20.2]",
+          "file_name": "trident",
+          "texture_name": "trident",
+          "model": "trident_20.2"
+        },
+        {
           "name": "chest_19.2",
           "display_name": "Chest [1.19.2]",
           "file_name": "chest",
@@ -1918,10 +1925,13 @@
       "model": "{\"textureSize\":[16,16],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-23,-1.5],\"boxes\":[{\"coordinates\":[-1.5,0,-1.5,3,2,3],\"textureOffset\":[0,0]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0,-1,-1.5],\"boxes\":[{\"coordinates\":[0,0,1.5,0,2,7],\"textureOffset\":[0,0]}]}]}"
     },
     "trident": {
-      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-1.5,25,-0.5,3,2,1],\"textureOffset\":[4,0]},{\"coordinates\":[-0.5,0,-0.5,1,25,1],\"textureOffset\":[0,6]},{\"coordinates\":[-0.5,27,-0.5,1,4,1],\"textureOffset\":[0,0]},{\"coordinates\":[1.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]},{\"coordinates\":[-2.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]}]}"
+      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-0.5,0,-0.5,1,25,1],\"textureOffset\":[0,6]}]},{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-1.5,25,-0.5,3,2,1],\"textureOffset\":[4,0]}]},{\"part\":\"left_spike\",\"id\":\"left_spike\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[1.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]},{\"part\":\"middle_spike\",\"id\":\"middle_spike\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-0.5,27,-0.5,1,4,1],\"textureOffset\":[0,0]}]},{\"part\":\"right_spike\",\"id\":\"right_spike\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-2.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]},{\"part\":\"root\"}]}"
     },
     "trident_14": {
-      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-1.5,25,-0.5,3,2,1],\"textureOffset\":[4,0]},{\"coordinates\":[-0.5,0,-0.5,1,31,1],\"textureOffset\":[0,0]},{\"coordinates\":[1.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]},{\"coordinates\":[-2.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]}]}"
+      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-1.5,25,-0.5,3,2,1],\"textureOffset\":[4,0]},{\"coordinates\":[-0.5,0,-0.5,1,31,1],\"textureOffset\":[0,0]},{\"coordinates\":[1.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}],\"submodels\":[{\"id\":\"mirror\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-2.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]}]}]}"
+    },
+    "trident_20.2": {
+      "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-27,0],\"boxes\":[{\"coordinates\":[-1.5,25,-0.5,3,2,1],\"textureOffset\":[4,0]},{\"coordinates\":[-0.5,0,-0.5,1,25,1],\"textureOffset\":[0,6]},{\"coordinates\":[-0.5,27,-0.5,1,4,1],\"textureOffset\":[0,0]},{\"coordinates\":[1.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}],\"submodels\":[{\"id\":\"mirror\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-2.5,26,-0.5,1,4,1],\"textureOffset\":[4,3]}]}]}]}"
     },
     "trident_riptide": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-15.5,0],\"boxes\":[{\"coordinates\":[-8,0,-8,16,31,16],\"textureOffset\":[0,0]}]}]}"
