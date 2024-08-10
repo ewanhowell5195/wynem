@@ -2756,6 +2756,14 @@
                   "description": "Make one minecraft player kick another minecraft player!",
                   "slashCommand": "minecraftskins/kick"
                 },
+                "outfit": {
+                  "arguments": "[outfit] [username]/{image}",
+                  "description": [
+                    "Apply an outfit to a Minecraft skin.",
+                    "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
+                  ],
+                  "slashCommand": "minecraftskins/outfit"
+                },
                 "previewskin": {
                   "aliases": [
                     "skinpreview"
@@ -9103,6 +9111,28 @@
                 }
               ],
               "prefixCommand": "minecraft/skins/minecraftkick"
+            },
+            "outfit": {
+              "description": [
+                "Apply an outfit to a Minecraft skin.",
+                "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
+              ],
+              "arguments": [
+                {
+                  "name": "outfit",
+                  "description": "Outfit to wear",
+                  "required": true
+                },
+                {
+                  "name": "username",
+                  "description": "Minecraft Username"
+                },
+                {
+                  "name": "skin-file",
+                  "description": "Skin file"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/outfit"
             },
             "preview": {
               "description": [
