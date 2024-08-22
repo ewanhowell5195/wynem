@@ -1234,6 +1234,14 @@
                       "description": "Get distracted by another member.",
                       "slashCommand": "avatar/distractedboyfriend"
                     },
+                    "draw25": {
+                      "aliases": [
+                        "refuse"
+                      ],
+                      "arguments": "<member> [text]",
+                      "description": "Make a member draw 25 cards because they won't do something.",
+                      "slashCommand": "avatar/draw25"
+                    },
                     "guyslook": {
                       "aliases": [
                         "look",
@@ -4593,6 +4601,20 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/distractedboyfriend"
+            },
+            "draw25": {
+              "description": "Make a member draw 25 cards because they won't do something.",
+              "arguments": [
+                {
+                  "name": "member",
+                  "description": "The member to draw the cards"
+                },
+                {
+                  "name": "text",
+                  "description": "The thing they won't do"
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/draw25"
             },
             "get": {
               "description": "Show a users avatar, with links to get it in different resolutions.",
