@@ -4457,7 +4457,7 @@
               "arguments": [
                 {
                   "name": "user",
-                  "description": "The user to appear",
+                  "description": "The member to appear",
                   "required": true
                 }
               ],
@@ -4536,8 +4536,8 @@
               "description": "Bonk a member.",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The user to bonk",
+                  "name": "member",
+                  "description": "The member to bonk",
                   "required": true
                 },
                 {
@@ -4577,7 +4577,7 @@
               "arguments": [
                 {
                   "name": "user",
-                  "description": "The user to disappear",
+                  "description": "The member to disappear",
                   "required": true
                 }
               ],
@@ -4758,7 +4758,7 @@
               "arguments": [
                 {
                   "name": "user",
-                  "description": "The user to silence",
+                  "description": "The member to silence",
                   "required": true
                 }
               ],
