@@ -1182,6 +1182,7 @@
                         "avpie"
                       ],
                       "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
+                      "cooldown": 5,
                       "description": "Merge a bunch of avatars into one image.",
                       "slashCommand": "avatar/pie"
                     },
@@ -1204,7 +1205,7 @@
                       "description": [
                         "Throw a birthday party for someone!",
                         "If members are not specified, random members from the server will be picked.",
-                        "The birthday member will always be Wynem on \"26/7\"."
+                        "The birthday boy will always be Wynem on \"26/7\"."
                       ],
                       "slashCommand": "avatar/birthday"
                     },
@@ -1299,11 +1300,6 @@
                       "arguments": "<member> <member>",
                       "description": "Snap a user out of existence.",
                       "slashCommand": "avatar/snap"
-                    },
-                    "unband": {
-                      "arguments": "<member> <member> <member> <member>",
-                      "description": "Remove members from a band.",
-                      "slashCommand": "avatar/unband"
                     },
                     "yeet": {
                       "arguments": "<member> <member>",
@@ -4456,9 +4452,8 @@
               "description": "Make a member appear!",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The member to appear",
-                  "required": true
+                  "name": "member",
+                  "description": "The member to appear"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/appear"
@@ -4482,20 +4477,20 @@
               "description": "Put members into a band.",
               "arguments": [
                 {
-                  "name": "user1",
+                  "name": "member-1",
                   "description": "Band member 1",
                   "required": true
                 },
                 {
-                  "name": "user2",
+                  "name": "member-2",
                   "description": "Band member 2"
                 },
                 {
-                  "name": "user3",
+                  "name": "member-3",
                   "description": "Band member 3"
                 },
                 {
-                  "name": "user4",
+                  "name": "member-4",
                   "description": "Band member 4"
                 }
               ],
@@ -4505,28 +4500,28 @@
               "description": [
                 "Throw a birthday party for someone!",
                 "If members are not specified, random members from the server will be picked.",
-                "The birthday member will always be Wynem on \"26/7\"."
+                "The birthday boy will always be Wynem on \"26/7\"."
               ],
               "cooldown": 3,
               "arguments": [
                 {
-                  "name": "birthday-user",
-                  "description": "Birthday user"
+                  "name": "birthday-boy",
+                  "description": "Birthday boy/girl"
                 },
                 {
-                  "name": "guest1",
+                  "name": "guest-1",
                   "description": "Guest 1"
                 },
                 {
-                  "name": "guest2",
+                  "name": "guest-2",
                   "description": "Guest 2"
                 },
                 {
-                  "name": "guest3",
+                  "name": "guest-3",
                   "description": "Guest 3"
                 },
                 {
-                  "name": "guest4",
+                  "name": "guest-4",
                   "description": "Guest 4"
                 }
               ],
@@ -4576,9 +4571,8 @@
               "description": "Make a member disappear!",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The member to disappear",
-                  "required": true
+                  "name": "member",
+                  "description": "The member to disappear"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/disappear"
@@ -4715,40 +4709,41 @@
             },
             "pie": {
               "description": "Merge a bunch of avatars into one image.",
+              "cooldown": 5,
               "arguments": [
                 {
-                  "name": "user1",
-                  "description": "User 1",
+                  "name": "member-1",
+                  "description": "Member 1",
                   "required": true
                 },
                 {
-                  "name": "user2",
-                  "description": "User 2",
+                  "name": "member-2",
+                  "description": "Member 2",
                   "required": true
                 },
                 {
-                  "name": "user3",
-                  "description": "User 3"
+                  "name": "member-3",
+                  "description": "Member 3"
                 },
                 {
-                  "name": "user4",
-                  "description": "User 4"
+                  "name": "member-4",
+                  "description": "Member 4"
                 },
                 {
-                  "name": "user5",
-                  "description": "User 5"
+                  "name": "member-5",
+                  "description": "Member 5"
                 },
                 {
-                  "name": "user6",
-                  "description": "User 6"
+                  "name": "member-6",
+                  "description": "Member 6"
                 },
                 {
-                  "name": "user7",
-                  "description": "User 7"
+                  "name": "member-7",
+                  "description": "Member 7"
                 },
                 {
-                  "name": "user8",
-                  "description": "User 8"
+                  "name": "member-8",
+                  "description": "Member 8"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/avatarpie"
@@ -4793,29 +4788,6 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/snap"
-            },
-            "unband": {
-              "description": "Remove members from a band.",
-              "arguments": [
-                {
-                  "name": "user1",
-                  "description": "Band member 1",
-                  "required": true
-                },
-                {
-                  "name": "user2",
-                  "description": "Band member 2"
-                },
-                {
-                  "name": "user3",
-                  "description": "Band member 3"
-                },
-                {
-                  "name": "user4",
-                  "description": "Band member 4"
-                }
-              ],
-              "prefixCommand": "images/imagefun/avatars/unband"
             },
             "yeet": {
               "description": "Throw a member really far.",
