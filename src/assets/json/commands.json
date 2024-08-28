@@ -708,7 +708,7 @@
               "fields": [
                 [
                   "These work on any command that accepts a member, or an image:",
-                  "```^  - Target the member from the previous message\n<  - Target yourself\nme - Target yourself\n<< - Target your user```"
+                  "```^   - Target the member from the previous message\n<   - Target yourself\nme  - Target yourself\n<<  - Target your user\nbot - Target the bot```"
                 ],
                 [
                   "These work on any command that accepts an image:",
@@ -4321,16 +4321,6 @@
                 "Reply to a message to use that message's content as the search term."
               ],
               "slashCommand": "utility/google"
-            },
-            "poll": {
-              "aliases": [
-                "vote"
-              ],
-              "description": "Run a builder that sets up a poll that members can vote on.",
-              "permissions": [
-                "Guild Only"
-              ],
-              "slashCommand": "utility/poll"
             },
             "tinyurl": {
               "arguments": "[url]",
@@ -10299,10 +10289,6 @@
                 }
               ],
               "prefixCommand": "utility/google"
-            },
-            "poll": {
-              "description": "Run a builder that sets up a poll that members can vote on.",
-              "prefixCommand": "utility/poll"
             },
             "tinyurl": {
               "description": "Shorten a link using tinyurl.",
