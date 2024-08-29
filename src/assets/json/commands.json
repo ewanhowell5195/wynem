@@ -1298,7 +1298,7 @@
                     },
                     "snap": {
                       "arguments": "<member> <member>",
-                      "description": "Snap a user out of existence.",
+                      "description": "Snap a member out of existence!",
                       "slashCommand": "avatar/snap"
                     },
                     "yeet": {
@@ -4615,8 +4615,8 @@
               "description": "Show some guys an image",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The user"
+                  "name": "member",
+                  "description": "The guy"
                 },
                 {
                   "name": "image-file",
@@ -4633,13 +4633,13 @@
               "description": "Kick a member in the face!",
               "arguments": [
                 {
-                  "name": "reciever",
-                  "description": "The kick reciever",
+                  "name": "kicked",
+                  "description": "The kicked",
                   "required": true
                 },
                 {
-                  "name": "giver",
-                  "description": "The kick giver"
+                  "name": "kicker",
+                  "description": "The kicker"
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/kickface"
@@ -4663,16 +4663,16 @@
               "description": "Turn some members into a group of monkeys!",
               "arguments": [
                 {
-                  "name": "monkey1",
+                  "name": "monkey-1",
                   "description": "Monkey 1",
                   "required": true
                 },
                 {
-                  "name": "monkey2",
+                  "name": "monkey-2",
                   "description": "Monkey 2"
                 },
                 {
-                  "name": "monkey3",
+                  "name": "monkey-3",
                   "description": "Monkey 3"
                 }
               ],
@@ -4682,16 +4682,16 @@
               "description": "Turn some members into a band of monkeys!",
               "arguments": [
                 {
-                  "name": "monkey1",
+                  "name": "monkey-1",
                   "description": "Monkey 1",
                   "required": true
                 },
                 {
-                  "name": "monkey2",
+                  "name": "monkey-2",
                   "description": "Monkey 2"
                 },
                 {
-                  "name": "monkey3",
+                  "name": "monkey-3",
                   "description": "Monkey 3"
                 }
               ],
@@ -4742,7 +4742,7 @@
               "description": "Silence a member.",
               "arguments": [
                 {
-                  "name": "user",
+                  "name": "member",
                   "description": "The member to silence",
                   "required": true
                 }
@@ -4765,7 +4765,7 @@
               "prefixCommand": "images/imagefun/avatars/slap"
             },
             "snap": {
-              "description": "Snap a user out of existence.",
+              "description": "Snap a member out of existence!",
               "arguments": [
                 {
                   "name": "peter",
