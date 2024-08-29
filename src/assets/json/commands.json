@@ -3966,24 +3966,6 @@
             },
             "serverlinking": {
               "commands": {
-                "linkserver": {
-                  "aliases": [
-                    "serverlink",
-                    "linkguild",
-                    "guildlink"
-                  ],
-                  "arguments": "[serverId]",
-                  "description": [
-                    "Link a server to the current server",
-                    "Bot settings, moderation logs, timeouts, kicks, and bans get shared between them.",
-                    "The current server will become the parent server, and any linked servers will become child servers."
-                  ],
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ],
-                  "slashCommand": "serverlinking/link"
-                },
                 "unlinkserver": {
                   "aliases": [
                     "serverunlink",
@@ -10095,24 +10077,6 @@
         },
         "serverlinking": {
           "commands": {
-            "link": {
-              "description": [
-                "Link a server to the current server",
-                "Bot settings, moderation logs, timeouts, kicks, and bans get shared between them.",
-                "The current server will become the parent server, and any linked servers will become child servers."
-              ],
-              "arguments": [
-                {
-                  "name": "server-id",
-                  "description": "The server ID",
-                  "required": true
-                }
-              ],
-              "permissions": [
-                "Administrator"
-              ],
-              "prefixCommand": "server/serverlinking/linkserver"
-            },
             "unlink": {
               "description": "Unlink a server from the current server.",
               "arguments": [
