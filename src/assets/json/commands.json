@@ -3290,26 +3290,6 @@
               "categories": {
                 "bridges": {
                   "commands": {
-                    "createbridge": {
-                      "aliases": [
-                        "linkchannel",
-                        "createtunnel"
-                      ],
-                      "arguments": "[channelLink] <channel>",
-                      "description": [
-                        "Create a bridge to a channel from another server.",
-                        "Any message sent in either channel will be automatically sent to the other one.",
-                        "The first argument is the link to a channel from another server, the second argument is the channel from the current server."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "botPermissions": [
-                        "Manage Webhooks"
-                      ],
-                      "slashCommand": "serverconfig/channel/createbridge"
-                    },
                     "removebridge": {
                       "aliases": [
                         "unlinkchannel",
@@ -9544,31 +9524,6 @@
             },
             "channel": {
               "commands": {
-                "createbridge": {
-                  "description": [
-                    "Create a bridge to a channel from another server.",
-                    "Any message sent in either channel will be automatically sent to the other one.",
-                    "The first argument is the link to a channel from another server, the second argument is the channel from the current server."
-                  ],
-                  "arguments": [
-                    {
-                      "name": "channel-link",
-                      "description": "Link to the channel from the other server",
-                      "required": true
-                    },
-                    {
-                      "name": "channel",
-                      "description": "Channel from the current server"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "botPermissions": [
-                    "Manage Webhooks"
-                  ],
-                  "prefixCommand": "server/channel/bridges/createbridge"
-                },
                 "removebridge": {
                   "description": [
                     "Remove an existing channel bridge.",
