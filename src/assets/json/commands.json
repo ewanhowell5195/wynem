@@ -1882,6 +1882,7 @@
                     "amogustwerk"
                   ],
                   "arguments": "{image}",
+                  "cooldown": 3,
                   "description": "Make an image into an Among Us Dumpy gif!",
                   "slashCommand": "imagefun/dumpy"
                 },
@@ -1952,7 +1953,7 @@
                   "slashCommand": "imagefun/rainbow"
                 },
                 "scan": {
-                  "arguments": "[switchAxis] [reverse] [beamColour] {image}",
+                  "arguments": "[switchAxis] [reverse] [lineColour] {image}",
                   "cooldown": 5,
                   "description": [
                     "Apply a time warp scan effect to a gif.",
@@ -1962,11 +1963,13 @@
                 },
                 "slide": {
                   "arguments": "[direction] [speed] {image}",
+                  "cooldown": 3,
                   "description": "Slide an image.",
                   "slashCommand": "imagefun/slide"
                 },
                 "spin": {
                   "arguments": "[speed] [expandEnabled] {image}",
+                  "cooldown": 3,
                   "description": "Make an image spin!",
                   "slashCommand": "imagefun/spin"
                 },
@@ -7309,6 +7312,7 @@
             },
             "dumpy": {
               "description": "Make an image into an Among Us Dumpy gif!",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "image-file",
@@ -7485,6 +7489,7 @@
             },
             "slide": {
               "description": "Slide an image.",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "direction",
@@ -7507,6 +7512,7 @@
             },
             "spin": {
               "description": "Make an image spin!",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "speed",
