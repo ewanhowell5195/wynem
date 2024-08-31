@@ -1553,7 +1553,7 @@
                       ],
                       "arguments": "{image}",
                       "description": "Place emojis on someones face!",
-                      "slashCommand": "imagefaces/emojiface"
+                      "slashCommand": "imagefaces/emoji"
                     },
                     "enlargeeyes": {
                       "aliases": [
@@ -6491,10 +6491,6 @@
                   "description": "The bulge strength"
                 },
                 {
-                  "name": "mode",
-                  "description": "Bulge or pinch"
-                },
-                {
                   "name": "image-file",
                   "description": "A file"
                 },
@@ -6533,7 +6529,7 @@
               ],
               "prefixCommand": "images/imagefun/faces/detectface"
             },
-            "emojiface": {
+            "emoji": {
               "description": "Place emojis on someones face!",
               "arguments": [
                 {
@@ -7101,10 +7097,6 @@
                     {
                       "name": "radius",
                       "description": "How large the bulge radius should be"
-                    },
-                    {
-                      "name": "mode",
-                      "description": "Bulge or pinch"
                     },
                     {
                       "name": "image-file",
