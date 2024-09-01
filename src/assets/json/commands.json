@@ -934,6 +934,11 @@
                   "description": "Add a drop shadow to a transparent image.",
                   "slashCommand": "imagefilter/dropshadow"
                 },
+                "gradientmap": {
+                  "arguments": "[col] [col] [col] [col] [col] [col] [col] [col] {image}",
+                  "description": "Apply a gradient map to an image",
+                  "slashCommand": "imagefilter/gradientmap"
+                },
                 "greyscale": {
                   "aliases": [
                     "grayscale",
@@ -6853,6 +6858,54 @@
                 }
               ],
               "prefixCommand": "images/filters/dropshadow"
+            },
+            "gradientmap": {
+              "description": "Apply a gradient map to an image",
+              "arguments": [
+                {
+                  "name": "colour-1",
+                  "description": "Colour 1",
+                  "required": true
+                },
+                {
+                  "name": "colour-2",
+                  "description": "Colour 2",
+                  "required": true
+                },
+                {
+                  "name": "colour-3",
+                  "description": "Colour 3"
+                },
+                {
+                  "name": "colour-4",
+                  "description": "Colour 4"
+                },
+                {
+                  "name": "colour-5",
+                  "description": "Colour 5"
+                },
+                {
+                  "name": "colour-6",
+                  "description": "Colour 6"
+                },
+                {
+                  "name": "colour-7",
+                  "description": "Colour 7"
+                },
+                {
+                  "name": "colour-8",
+                  "description": "Colour 8"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/filters/gradientmap"
             },
             "greyscale": {
               "description": "Turn an image greyscale.",
