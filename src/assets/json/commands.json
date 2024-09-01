@@ -1782,7 +1782,7 @@
                         "sneak100",
                         "100"
                       ],
-                      "arguments": "[text] [number] {image}",
+                      "arguments": "[text] [value] {image}",
                       "cooldown": 5,
                       "description": [
                         "Add the \"Sneak 100\" image to the bottom of an image.",
@@ -2062,6 +2062,7 @@
                 },
                 "imagesize": {
                   "aliases": [
+                    "imgsize",
                     "getsize",
                     "size"
                   ],
@@ -7697,7 +7698,8 @@
               "arguments": [
                 {
                   "name": "opacity",
-                  "description": "The new opacity"
+                  "description": "The new opacity",
+                  "required": true
                 },
                 {
                   "name": "image-file",
@@ -8213,7 +8215,7 @@
               "arguments": [
                 {
                   "name": "text",
-                  "description": "The text to put on the sign",
+                  "description": "The breaking news",
                   "required": true
                 },
                 {
@@ -8281,8 +8283,7 @@
               "arguments": [
                 {
                   "name": "text",
-                  "description": "The notification",
-                  "required": true
+                  "description": "The notification"
                 },
                 {
                   "name": "image-file",
@@ -8361,7 +8362,7 @@
                   "required": true
                 },
                 {
-                  "name": "number",
+                  "name": "value",
                   "description": "The sneak value"
                 },
                 {
@@ -8402,8 +8403,7 @@
               "arguments": [
                 {
                   "name": "text",
-                  "description": "The what text",
-                  "required": true
+                  "description": "The what text"
                 },
                 {
                   "name": "image-file",
