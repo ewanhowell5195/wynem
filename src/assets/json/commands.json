@@ -2856,6 +2856,16 @@
               "description": "View the minecraft account tied to someones Discord.",
               "slashCommand": "minecraft/account"
             },
+            "minecraftchangelog": {
+              "aliases": [
+                "mcchangelog",
+                "minecraftupdate",
+                "mcupdate"
+              ],
+              "arguments": "[version]",
+              "description": "Get a link to the changelog of the latest Minecraft version.",
+              "slashCommand": "minecraft/changelog"
+            },
             "minecraftdungeonstitlegenerator": {
               "aliases": [
                 "minecraftdungeonstitle",
@@ -8933,6 +8943,16 @@
                 }
               ],
               "prefixCommand": "minecraft/minecraftaccount"
+            },
+            "changelog": {
+              "description": "Get a link to the changelog of the latest Minecraft version.",
+              "arguments": [
+                {
+                  "name": "version",
+                  "description": "The Minecraft version"
+                }
+              ],
+              "prefixCommand": "minecraft/minecraftchangelog"
             },
             "dungeonstitlegenerator": {
               "description": [
