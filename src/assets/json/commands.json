@@ -392,12 +392,6 @@
               "description": "Make a suggestion for the bot.",
               "slashCommand": "bot/suggest"
             },
-            "support": {
-              "arguments": "[message]",
-              "cooldown": 10,
-              "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!",
-              "slashCommand": "bot/support"
-            },
             "terms": {
               "aliases": [
                 "termsofservice",
@@ -4866,22 +4860,6 @@
               "description": "Make a suggestion for the bot.",
               "cooldown": 3600,
               "prefixCommand": "bot/suggest"
-            },
-            "support": {
-              "description": "Get support for the bot. Just send your message in the command and we will get back to you as soon as possible!",
-              "cooldown": 10,
-              "arguments": [
-                {
-                  "name": "message",
-                  "description": "The support message",
-                  "required": true
-                },
-                {
-                  "name": "image-file",
-                  "description": "A file"
-                }
-              ],
-              "prefixCommand": "bot/support"
             },
             "terms": {
               "description": "View the terms of service for the bot.",
