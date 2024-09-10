@@ -8996,7 +8996,7 @@
               "arguments": [
                 {
                   "name": "username",
-                  "description": "Your Minecraft username"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/setminecraftaccount"
