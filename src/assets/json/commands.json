@@ -1198,6 +1198,11 @@
                       "description": "Put members into a band.",
                       "slashCommand": "avatar/band"
                     },
+                    "beloved": {
+                      "arguments": "<member>",
+                      "description": "Show a member is beloved!",
+                      "slashCommand": "avatar/beloved"
+                    },
                     "birthday": {
                       "arguments": "<member> <member> <member> <member> <member>",
                       "cooldown": 3,
@@ -1365,15 +1370,11 @@
                       "aliases": [
                         "heartlocket",
                         "locketheart",
-                        "heart",
-                        "beloved"
+                        "heart"
                       ],
                       "arguments": "[text]/{image} [text]/{image}",
                       "cooldown": 3,
-                      "description": [
-                        "Put images/text into a heart shaped locket.",
-                        "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
-                      ],
+                      "description": "Put images/text into a heart shaped locket.",
                       "slashCommand": "imagecompositing/locket"
                     },
                     "newyork": {
@@ -2120,18 +2121,19 @@
                   "slashCommand": "imageutility/slidecompare"
                 },
                 "watermark": {
+                  "arguments": "[text] {image}",
+                  "description": "Put a text watermark over an image.",
+                  "slashCommand": "imageutility/watermark"
+                },
+                "watermarkimage": {
                   "aliases": [
-                    "watermarkimage",
                     "imagewatermark",
                     "watermarkimg",
                     "imgwatermark"
                   ],
-                  "arguments": "[text] {image}",
-                  "description": [
-                    "Put a watermark over an image.",
-                    "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
-                  ],
-                  "slashCommand": "imageutility/watermark"
+                  "arguments": "{image} {image}",
+                  "description": "Put an image watermark over an image.",
+                  "slashCommand": "imageutility/watermarkimage"
                 }
               }
             },
@@ -2863,6 +2865,7 @@
             "minecraftdungeonstitlegenerator": {
               "aliases": [
                 "minecraftdungeonstitle",
+                "mcdungeonstitle",
                 "mcdtitlegenerator",
                 "mcdtitle",
                 "mcdtg",
@@ -3919,7 +3922,7 @@
                   "aliases": [
                     "addserver"
                   ],
-                  "arguments": "[name] [invite]",
+                  "arguments": "[invite] [name]",
                   "description": "Add a new server invite.",
                   "permissions": [
                     "Guild Only",
@@ -3953,7 +3956,7 @@
                   "permissions": [
                     "Guild Only"
                   ],
-                  "slashCommand": "server/serverinvites"
+                  "slashCommand": "server/invites"
                 }
               }
             },
@@ -4013,7 +4016,7 @@
                   "aliases": [
                     "tickettypeedit"
                   ],
-                  "arguments": "[ticketTypeId]",
+                  "arguments": "[ticketType]",
                   "description": [
                     "Edit a ticket type.",
                     "Leave fields blank to leave them unedited.",
@@ -4040,7 +4043,7 @@
                   "aliases": [
                     "tickettyperemove"
                   ],
-                  "arguments": "[ticketTypeId]",
+                  "arguments": "[ticketType]",
                   "description": "Remove a ticket type from the tickets system.",
                   "permissions": [
                     "Guild Only",
@@ -4074,7 +4077,7 @@
                     "viewtickettypes",
                     "tickettypesview"
                   ],
-                  "arguments": "[ticketTypeId]",
+                  "arguments": "[ticketType]",
                   "description": "View the servers tickets system and the ticket types.",
                   "permissions": [
                     "Guild Only"
@@ -4460,6 +4463,17 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/band"
+            },
+            "beloved": {
+              "description": "Show a member is beloved!",
+              "arguments": [
+                {
+                  "name": "member",
+                  "description": "The member that is beloved",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "images/imagefun/avatars/beloved"
             },
             "birthday": {
               "description": [
@@ -6320,34 +6334,23 @@
               "prefixCommand": "images/imagefun/compositing/linusscreen"
             },
             "locket": {
-              "description": [
-                "Put images/text into a heart shaped locket.",
-                "If the \"beloved\" alias is used, the formatting changes to:\ne!beloved {user}"
-              ],
+              "description": "Put images/text into a heart shaped locket.",
               "cooldown": 3,
               "arguments": [
                 {
-                  "name": "left-text",
+                  "name": "lefttext",
                   "description": "Text for the left side"
                 },
                 {
-                  "name": "left-image-file",
+                  "name": "leftimage",
                   "description": "Image for the left side"
                 },
                 {
-                  "name": "left-image-string",
-                  "description": "Image for the left side"
-                },
-                {
-                  "name": "right-text",
+                  "name": "righttext",
                   "description": "Text for the right side"
                 },
                 {
-                  "name": "right-image-file",
-                  "description": "Image for the right side"
-                },
-                {
-                  "name": "right-image-string",
+                  "name": "rightimage",
                   "description": "Image for the right side"
                 }
               ],
@@ -7872,11 +7875,11 @@
                   "description": "The image to paste"
                 },
                 {
-                  "name": "base-image-file",
+                  "name": "base-bmage-file",
                   "description": "The image to paste onto"
                 },
                 {
-                  "name": "base-image-string",
+                  "name": "base-bmage-string",
                   "description": "The image to paste onto"
                 }
               ],
@@ -7918,8 +7921,7 @@
               "arguments": [
                 {
                   "name": "width",
-                  "description": "The new width",
-                  "required": true
+                  "description": "The new width"
                 },
                 {
                   "name": "height",
@@ -8613,10 +8615,7 @@
               "prefixCommand": "images/imageutility/slidecompare"
             },
             "watermark": {
-              "description": [
-                "Put a watermark over an image.",
-                "Use the \"watermarkimage\" alias to use an image as a watermark instead of the text."
-              ],
+              "description": "Put a text watermark over an image.",
               "arguments": [
                 {
                   "name": "text",
@@ -8629,17 +8628,31 @@
                 {
                   "name": "image-string",
                   "description": "The image to draw the watermark over"
-                },
-                {
-                  "name": "watermark-image-file",
-                  "description": "The image use as a watermark instead of text"
-                },
-                {
-                  "name": "watermark-image-string",
-                  "description": "The image use as a watermark instead of text"
                 }
               ],
               "prefixCommand": "images/imageutility/watermark"
+            },
+            "watermarkimage": {
+              "description": "Put an image watermark over an image.",
+              "arguments": [
+                {
+                  "name": "watermark-image-file",
+                  "description": "The image to use as a watermark"
+                },
+                {
+                  "name": "watermark-image-string",
+                  "description": "The image to use as a watermark"
+                },
+                {
+                  "name": "image-file",
+                  "description": "The image to draw the watermark over"
+                },
+                {
+                  "name": "image-string",
+                  "description": "The image to draw the watermark over"
+                }
+              ],
+              "prefixCommand": "images/imageutility/watermarkimage"
             }
           }
         },
@@ -8916,8 +8929,8 @@
               "description": "View the minecraft account tied to someones Discord.",
               "arguments": [
                 {
-                  "name": "user",
-                  "description": "The user"
+                  "name": "member",
+                  "description": "The member"
                 }
               ],
               "prefixCommand": "minecraft/minecraftaccount"
@@ -9432,6 +9445,19 @@
               "description": "Get some infomation about the current server.",
               "prefixCommand": "server/serverinfo"
             },
+            "invites": {
+              "description": [
+                "Get a server invite link.",
+                "Provide no arguments to view a list of all available arguments."
+              ],
+              "arguments": [
+                {
+                  "name": "name",
+                  "description": "The server name"
+                }
+              ],
+              "prefixCommand": "server/serverinvites/serverinvite"
+            },
             "namesearch": {
               "description": "Search for users with certain text in their name.",
               "arguments": [
@@ -9467,19 +9493,6 @@
                 }
               ],
               "prefixCommand": "server/rules/rule"
-            },
-            "serverinvites": {
-              "description": [
-                "Get a server invite link.",
-                "Provide no arguments to view a list of all available arguments."
-              ],
-              "arguments": [
-                {
-                  "name": "name",
-                  "description": "The server name"
-                }
-              ],
-              "prefixCommand": "server/serverinvites/serverinvite"
             },
             "starboardinfo": {
               "description": "Get the information about the servers starboards.",
@@ -9897,13 +9910,13 @@
                   "description": "Add a new server invite.",
                   "arguments": [
                     {
-                      "name": "name",
-                      "description": "Server name",
+                      "name": "invite",
+                      "description": "Invite link",
                       "required": true
                     },
                     {
-                      "name": "invite",
-                      "description": "Invite link",
+                      "name": "name",
+                      "description": "Server name",
                       "required": true
                     }
                   ],
@@ -9917,7 +9930,7 @@
                   "arguments": [
                     {
                       "name": "name",
-                      "description": "Server name"
+                      "description": "The server name"
                     }
                   ],
                   "permissions": [
