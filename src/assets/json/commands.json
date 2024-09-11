@@ -702,7 +702,7 @@
               "fields": [
                 [
                   "These work on any command that accepts a member, or an image:",
-                  "```^   - Target the member from the previous message\n<   - Target yourself\nme  - Target yourself\n<<  - Target your user\nbot - Target the bot```"
+                  "```^    - Target the member from the previous message\nself - Target yourself\nme   - Target yourself\n<    - Target yourself\n<<   - Target your user\nbot  - Target the bot```"
                 ],
                 [
                   "These work on any command that accepts an image:",
@@ -2538,7 +2538,7 @@
                     "ctm",
                     "convertctm"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[type] {image}",
                   "description": "Convert compact CTM to full CTM or overlay CTM.",
                   "slashCommand": "minecraft/resourcepacks/ctmconverter"
                 },
@@ -2562,7 +2562,8 @@
                 },
                 "minecraftassets": {
                   "aliases": [
-                    "mcassets"
+                    "mcassets",
+                    "assets"
                   ],
                   "arguments": "[version]",
                   "description": "Get a link to download the Minecraft assets of a specific version.",
@@ -2766,7 +2767,7 @@
                   "slashCommand": "minecraftskins/kick"
                 },
                 "outfit": {
-                  "arguments": "[outfit] [username]/{image}",
+                  "arguments": "[outfit] [username]",
                   "description": [
                     "Apply an outfit to a Minecraft skin.",
                     "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
@@ -8706,6 +8707,10 @@
                   "description": "Convert compact CTM to full CTM or overlay CTM.",
                   "arguments": [
                     {
+                      "name": "type",
+                      "description": "The type of CTM to convert to"
+                    },
+                    {
                       "name": "image-file",
                       "description": "A file"
                     },
@@ -9058,7 +9063,7 @@
               "arguments": [
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "The Minecraft username"
                 },
                 {
                   "name": "image-file",
@@ -9076,7 +9081,7 @@
               "arguments": [
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/skins/cape"
@@ -9100,7 +9105,7 @@
               "arguments": [
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/skins/head"
@@ -9109,12 +9114,12 @@
               "description": "Make one minecraft player kick another minecraft player!",
               "arguments": [
                 {
-                  "name": "username1",
+                  "name": "username-1",
                   "description": "The 1st players username",
                   "required": true
                 },
                 {
-                  "name": "username2",
+                  "name": "username-2",
                   "description": "The 2nd players username"
                 }
               ],
@@ -9128,16 +9133,12 @@
               "arguments": [
                 {
                   "name": "outfit",
-                  "description": "Outfit to wear",
+                  "description": "The outfit to wear",
                   "required": true
                 },
                 {
                   "name": "username",
-                  "description": "Minecraft Username"
-                },
-                {
-                  "name": "skin-file",
-                  "description": "Skin file"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/skins/outfit"
@@ -9148,6 +9149,10 @@
                 "The format is either \"steve\" or \"alex\""
               ],
               "arguments": [
+                {
+                  "name": "format",
+                  "description": "The skin format"
+                },
                 {
                   "name": "image-file",
                   "description": "A file"
@@ -9172,7 +9177,7 @@
                 },
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/skins/renderskin"
@@ -9182,7 +9187,7 @@
               "arguments": [
                 {
                   "name": "username",
-                  "description": "The players username"
+                  "description": "The Minecraft username"
                 }
               ],
               "prefixCommand": "minecraft/skins/skin"
