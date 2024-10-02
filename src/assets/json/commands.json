@@ -4743,8 +4743,8 @@
               "description": "Slap a member!",
               "arguments": [
                 {
-                  "name": "reciever",
-                  "description": "The slap reciever",
+                  "name": "receiver",
+                  "description": "The slap receiver",
                   "required": true
                 },
                 {
