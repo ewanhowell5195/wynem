@@ -603,6 +603,15 @@
               "description": "Flip a coin.",
               "slashCommand": "fun/coinflip"
             },
+            "comic": {
+              "aliases": [
+                "webcomic",
+                "xkcd"
+              ],
+              "arguments": "[comic]",
+              "description": "Get an xkcd comic.",
+              "slashCommand": "fun/comic"
+            },
             "cowsay": {
               "aliases": [
                 "saycow",
@@ -5311,6 +5320,16 @@
             "coinflip": {
               "description": "Flip a coin.",
               "prefixCommand": "fun/coinflip"
+            },
+            "comic": {
+              "description": "Get an xkcd comic.",
+              "arguments": [
+                {
+                  "name": "comic",
+                  "description": "The comic name or number"
+                }
+              ],
+              "prefixCommand": "fun/comic"
             },
             "cowsay": {
               "description": "Make a cow say something!",
