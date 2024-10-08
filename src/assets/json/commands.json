@@ -3184,7 +3184,7 @@
                 "clean",
                 "delete"
               ],
-              "arguments": "[limit] <member>",
+              "arguments": "[count] <member>",
               "description": [
                 "Bulk delete messages from a channel.",
                 "Defaults to 5, maximum 99.",
@@ -3314,26 +3314,6 @@
             },
             "channel": {
               "categories": {
-                "bridges": {
-                  "commands": {
-                    "removebridge": {
-                      "aliases": [
-                        "unlinkchannel",
-                        "removetunnel"
-                      ],
-                      "arguments": "<channel>",
-                      "description": [
-                        "Remove an existing channel bridge.",
-                        "Provide no arguments to view a list of all channel bridges."
-                      ],
-                      "permissions": [
-                        "Guild Only",
-                        "Manage Guild"
-                      ],
-                      "slashCommand": "serverconfig/channel/removebridge"
-                    }
-                  }
-                },
                 "starboards": {
                   "description": [
                     "A starboard is a channel where messages are sent after they reach a certain number of a reaction, usually a star.",
@@ -3794,7 +3774,7 @@
                   "botPermissions": [
                     "Manage Roles"
                   ],
-                  "slashCommand": "role/addrole"
+                  "slashCommand": "role/add"
                 },
                 "buttonroles": {
                   "aliases": [
@@ -3856,7 +3836,7 @@
                   "botPermissions": [
                     "Manage Roles"
                   ],
-                  "slashCommand": "role/removerole"
+                  "slashCommand": "role/remove"
                 }
               }
             },
@@ -3967,35 +3947,6 @@
                     "Guild Only"
                   ],
                   "slashCommand": "server/invites"
-                }
-              }
-            },
-            "serverlinking": {
-              "commands": {
-                "unlinkserver": {
-                  "aliases": [
-                    "serverunlink",
-                    "unlinkguild",
-                    "guildunlink"
-                  ],
-                  "arguments": "[serverId]",
-                  "description": "Unlink a server from the current server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Administrator"
-                  ],
-                  "slashCommand": "serverlinking/unlink"
-                },
-                "viewserverlinks": {
-                  "aliases": [
-                    "viewlinks",
-                    "viewguildlinks"
-                  ],
-                  "description": "View the current server links for the current server.",
-                  "permissions": [
-                    "Guild Only"
-                  ],
-                  "slashCommand": "server/viewserverlinks"
                 }
               }
             },
@@ -9312,7 +9263,7 @@
         },
         "role": {
           "commands": {
-            "addrole": {
+            "add": {
               "description": "Add a role to a member.",
               "arguments": [
                 {
@@ -9367,7 +9318,7 @@
               ],
               "prefixCommand": "server/roles/joinrole"
             },
-            "removerole": {
+            "remove": {
               "description": "Remove a role from a member.",
               "arguments": [
                 {
@@ -9512,8 +9463,9 @@
               "description": "View the server rules.",
               "arguments": [
                 {
-                  "name": "rule",
-                  "description": "The rule number"
+                  "name": "integer",
+                  "description": "Rule number",
+                  "required": true
                 }
               ],
               "prefixCommand": "server/rules/rule"
@@ -9521,10 +9473,6 @@
             "starboardinfo": {
               "description": "Get the information about the servers starboards.",
               "prefixCommand": "server/channel/starboards/starboardinfo"
-            },
-            "viewserverlinks": {
-              "description": "View the current server links for the current server.",
-              "prefixCommand": "server/serverlinking/viewserverlinks"
             },
             "viewtickets": {
               "description": "View the servers tickets system and the ticket types.",
@@ -9610,22 +9558,6 @@
             },
             "channel": {
               "commands": {
-                "removebridge": {
-                  "description": [
-                    "Remove an existing channel bridge.",
-                    "Provide no arguments to view a list of all channel bridges."
-                  ],
-                  "arguments": [
-                    {
-                      "name": "channel",
-                      "description": "Channel"
-                    }
-                  ],
-                  "permissions": [
-                    "Manage Guild"
-                  ],
-                  "prefixCommand": "server/channel/bridges/removebridge"
-                },
                 "starboard": {
                   "description": [
                     "Manage the starboards for the server.",
@@ -9689,7 +9621,7 @@
                   "arguments": [
                     {
                       "name": "question",
-                      "description": "Question to remove",
+                      "description": "The frequently asked question",
                       "required": true
                     }
                   ],
@@ -9703,7 +9635,7 @@
                   "arguments": [
                     {
                       "name": "question",
-                      "description": "Question to remove",
+                      "description": "FAQ to remove",
                       "required": true
                     }
                   ],
@@ -9900,8 +9832,9 @@
                   "description": "Edit one of the server rules.",
                   "arguments": [
                     {
-                      "name": "rule",
-                      "description": "Rule number"
+                      "name": "integer",
+                      "description": "Rule number",
+                      "required": true
                     }
                   ],
                   "permissions": [
@@ -9920,8 +9853,9 @@
                   "description": "Remove a rule from the server rules.",
                   "arguments": [
                     {
-                      "name": "rule",
-                      "description": "Rule number"
+                      "name": "integer",
+                      "description": "Rule number",
+                      "required": true
                     }
                   ],
                   "prefixCommand": "server/rules/removerule"
@@ -10113,24 +10047,6 @@
                 }
               ],
               "prefixCommand": "server/issuetracker/setissuetracker"
-            }
-          }
-        },
-        "serverlinking": {
-          "commands": {
-            "unlink": {
-              "description": "Unlink a server from the current server.",
-              "arguments": [
-                {
-                  "name": "server-id",
-                  "description": "The server ID",
-                  "required": true
-                }
-              ],
-              "permissions": [
-                "Administrator"
-              ],
-              "prefixCommand": "server/serverlinking/unlinkserver"
             }
           }
         },
@@ -10515,7 +10431,7 @@
           ],
           "arguments": [
             {
-              "name": "limit",
+              "name": "count",
               "description": "The number of messages to purge"
             },
             {
