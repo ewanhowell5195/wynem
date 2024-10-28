@@ -715,7 +715,7 @@
                 ],
                 [
                   "These work on any command that accepts an image:",
-                  "```b:@ping\n  - get a users banner\nu:@ping\n  - get a user\nmc:username\n  - get the minecraft skin of a Minecraft username\nmc:@ping\n  - get the minecraft skin of a member\nskin:username\n  - get the minecraft skin of a Minecraft username\nskin:@ping\n  - get the minecraft skin of a member\ncape:username\n  - get the minecraft cape of a Minecraft username\ncape:@ping\n  - get the minecraft cape of a member\ntexture:filename:version\n  - get a minecraft texture```"
+                  "```b:@ping\n - get a users banner\nu:@ping\n - get a user\nimage:term, search:term\n - get an image from duckduckgo\nmc:username, skin:username\n - get the minecraft skin of a Minecraft username\nmc:@ping, skin:@ping\n - get the minecraft skin of a member\ncape:username\n - get the minecraft cape of a Minecraft username\ncape:@ping\n - get the minecraft cape of a member\ntexture:filename:version\n - get a minecraft texture```"
                 ]
               ]
             }
@@ -1853,11 +1853,12 @@
               },
               "commands": {
                 "blockify": {
-                  "arguments": "[type] [statsEnabled] {image}",
+                  "arguments": "[type] [ditheringEnabled] [statsEnabled] {image}",
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
-                    "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+                    "Dithering is always disabled on images smaller than 32x32",
+                    "Possible types:\n- all\n- allcreative\n- bottom\n- bottomcreative\n- side\n- sidecreative\n- top\n- topcreative\n- metal\n- planks\n- plants\n- stone\n- wood\n- wool"
                   ],
                   "slashCommand": "imagefun/blockify"
                 },
@@ -7256,13 +7257,18 @@
             "blockify": {
               "description": [
                 "Turn an image into Minecraft block art!",
-                "Possible modes:\n- all\n- metal\n- planks\n- plants\n- side\n- sidesurvival\n- solid\n- stone\n- top\n- topsurvival\n- wood\n- wool"
+                "Dithering is always disabled on images smaller than 32x32",
+                "Possible types:\n- all\n- allcreative\n- bottom\n- bottomcreative\n- side\n- sidecreative\n- top\n- topcreative\n- metal\n- planks\n- plants\n- stone\n- wood\n- wool"
               ],
               "cooldown": 3,
               "arguments": [
                 {
                   "name": "type",
                   "description": "The blockify type"
+                },
+                {
+                  "name": "dithering",
+                  "description": "Use dithering"
                 },
                 {
                   "name": "stats",
@@ -7892,7 +7898,8 @@
               "arguments": [
                 {
                   "name": "width",
-                  "description": "The new width"
+                  "description": "The new width",
+                  "required": true
                 },
                 {
                   "name": "height",
