@@ -3473,68 +3473,88 @@
               }
             },
             "faqs": {
-              "description": "The FAQ is a system to store frequently asked questions, so that you can quickly bring up the answers when they are asked.",
+              "description": [
+                "The FAQ is a system to store frequently asked questions, so that you can quickly bring up the answers when they are asked.",
+                "The FAQ command supports fuzzy matching making it easy to lookup your FAQs. The FAQ management commands require exact categories and IDs to ensure you select the right one."
+              ],
               "commands": {
                 "addfaq": {
                   "aliases": [
-                    "newfaq",
                     "faqadd",
-                    "faqnew"
+                    "setfaq",
+                    "faqset",
+                    "newfaq",
+                    "faqnew",
+                    "updatefaq",
+                    "faqupdate",
+                    "editfaq",
+                    "faqedit"
                   ],
-                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+                  "description": [
+                    "Run a builder to add or update an FAQ entry.",
+                    "There is a maximum of 100 FAQs per server, and a maximum of 25 FAQ categories per server"
+                  ],
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/faq/add"
                 },
-                "editfaq": {
-                  "aliases": [
-                    "updatefaq",
-                    "faqedit",
-                    "faqupdate"
-                  ],
-                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
-                  "permissions": [
-                    "Guild Only",
-                    "Manage Guild"
-                  ],
-                  "slashCommand": "serverconfig/faq/edit"
-                },
                 "faq": {
-                  "arguments": "[question]",
-                  "description": "Ask a frequently asked question!",
+                  "aliases": [
+                    "faqs"
+                  ],
+                  "arguments": "[category] [id]",
+                  "description": [
+                    "View an FAQ entry.",
+                    "Run with no arguments to list all FAQs."
+                  ],
                   "permissions": [
                     "Guild Only"
                   ],
                   "slashCommand": "faq"
                 },
-                "faqdetails": {
+                "rawfaq": {
                   "aliases": [
-                    "faqinfo",
-                    "detailsfaq",
-                    "infofaq"
+                    "faqraw",
+                    "faqdetails"
                   ],
-                  "arguments": "[question]",
-                  "description": "Get the full details about a certain faq.",
-                  "permissions": [
-                    "Guild Only"
+                  "arguments": "[category] [id]",
+                  "description": [
+                    "Get the raw text from an FAQ entry.",
+                    "Run with no arguments to list all FAQs"
                   ],
-                  "slashCommand": "server/faqdetails"
-                },
-                "removefaq": {
-                  "aliases": [
-                    "deletefaq",
-                    "faqremove",
-                    "faqdelete"
-                  ],
-                  "arguments": "[question]",
-                  "description": "Remove an FAQ from the server.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
                   ],
+                  "slashCommand": "serverconfig/faq/raw"
+                },
+                "removefaq": {
+                  "aliases": [
+                    "faqremove",
+                    "deletefaq",
+                    "faqdelete"
+                  ],
+                  "arguments": "[category] [id]",
+                  "description": "Remove an FAQ entry.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Messages"
+                  ],
                   "slashCommand": "serverconfig/faq/remove"
+                },
+                "renamefaq": {
+                  "aliases": [
+                    "faqrename"
+                  ],
+                  "arguments": "[oldCategory] [oldId] [newCategory] [newId]",
+                  "description": "Rename an FAQ entry.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Messages"
+                  ],
+                  "slashCommand": "serverconfig/faq/rename"
                 }
               }
             },
@@ -9412,17 +9432,6 @@
               "description": "Get the ban appeal link for the current server.",
               "prefixCommand": "moderation/bans/banappeal"
             },
-            "faqdetails": {
-              "description": "Get the full details about a certain faq.",
-              "arguments": [
-                {
-                  "name": "question",
-                  "description": "The frequently asked question",
-                  "required": true
-                }
-              ],
-              "prefixCommand": "server/faqs/faqdetails"
-            },
             "info": {
               "description": "Get some infomation about the current server.",
               "prefixCommand": "server/serverinfo"
@@ -9617,39 +9626,84 @@
             "faq": {
               "commands": {
                 "add": {
-                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+                  "description": [
+                    "Run a builder to add or update an FAQ entry.",
+                    "There is a maximum of 100 FAQs per server, and a maximum of 25 FAQ categories per server"
+                  ],
                   "permissions": [
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/addfaq"
                 },
-                "edit": {
-                  "description": "Run a builder that adds a new FAQ for the server. There is a maximum of 25 FAQs per server.",
+                "raw": {
+                  "description": [
+                    "Get the raw text from an FAQ entry.",
+                    "Run with no arguments to list all FAQs"
+                  ],
                   "arguments": [
                     {
-                      "name": "question",
-                      "description": "The frequently asked question",
+                      "name": "category",
+                      "description": "The FAQ category",
+                      "required": true
+                    },
+                    {
+                      "name": "id",
+                      "description": "The FAQ ID",
                       "required": true
                     }
                   ],
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/faqs/editfaq"
+                  "prefixCommand": "server/faqs/rawfaq"
                 },
                 "remove": {
-                  "description": "Remove an FAQ from the server.",
+                  "description": "Remove an FAQ entry.",
                   "arguments": [
                     {
-                      "name": "question",
-                      "description": "FAQ to remove",
+                      "name": "category",
+                      "description": "The FAQ category",
+                      "required": true
+                    },
+                    {
+                      "name": "id",
+                      "description": "The FAQ ID",
                       "required": true
                     }
                   ],
                   "permissions": [
-                    "Manage Guild"
+                    "Manage Messages"
                   ],
                   "prefixCommand": "server/faqs/removefaq"
+                },
+                "rename": {
+                  "description": "Rename an FAQ entry.",
+                  "arguments": [
+                    {
+                      "name": "old-category",
+                      "description": "The old FAQ category",
+                      "required": true
+                    },
+                    {
+                      "name": "old-id",
+                      "description": "The old FAQ ID",
+                      "required": true
+                    },
+                    {
+                      "name": "new-category",
+                      "description": "The new FAQ category",
+                      "required": true
+                    },
+                    {
+                      "name": "new-id",
+                      "description": "The new FAQ ID",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Messages"
+                  ],
+                  "prefixCommand": "server/faqs/renamefaq"
                 }
               }
             },
@@ -10363,12 +10417,18 @@
           ]
         },
         "faq": {
-          "description": "Ask a frequently asked question!",
+          "description": [
+            "View an FAQ entry.",
+            "Run with no arguments to list all FAQs."
+          ],
           "arguments": [
             {
-              "name": "question",
-              "description": "The frequently asked question",
-              "required": true
+              "name": "category",
+              "description": "The FAQ category"
+            },
+            {
+              "name": "id",
+              "description": "The FAQ ID"
             }
           ],
           "permissions": [
