@@ -26,7 +26,24 @@ export default class extends Page {
           ),
         ).appendTo(entityContainer)
       )
-      for (let entity of category.entities) {
+      const entityList = []
+      for (const entity of category.entities) {
+        entityList.push(entity)
+        if (entity.variants) {
+          for (let variant of entity.variants) {
+            if (typeof variant === "string") {
+              variant = { name: variant }
+            }
+            variant.model ??= entity.model ?? entity.name ?? entity
+            entityList.push(variant)
+          }
+        }
+      }
+      for (let entity of entityList) {
+        if (entity.type === "heading") {
+          entities.append(E("div").addClass("entity-heading").text(entity.text))
+          continue
+        }
         if (typeof entity === "string") entity = { name: entity }
         if (!entity.display_name) entity.display_name = entity.name.replace(/_/g, " ").toTitleCase()
         if (!entity.model) entity.model = entity.name
