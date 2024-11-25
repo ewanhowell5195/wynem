@@ -4138,6 +4138,7 @@
             },
             "joinposition": {
               "aliases": [
+                "joinpos",
                 "join"
               ],
               "arguments": "<member>/[position]",
