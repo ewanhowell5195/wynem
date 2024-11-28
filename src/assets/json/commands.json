@@ -775,9 +775,6 @@
             "drawing": {
               "commands": {
                 "ellipse": {
-                  "aliases": [
-                    "circle"
-                  ],
                   "arguments": "[x] [y] [width] [height] [colour] {image}",
                   "description": "Draw a ellipse on an image.",
                   "slashCommand": "image/drawing/ellipse"
@@ -2058,6 +2055,14 @@
                   "arguments": "{image}",
                   "description": "Get the average colour of an image.",
                   "slashCommand": "imageutility/averagecolour"
+                },
+                "circle": {
+                  "aliases": [
+                    "pixelcircle"
+                  ],
+                  "arguments": "[width] [height] [mode]",
+                  "description": "Generate a pixel art circle. Edges can be thin or thick.",
+                  "slashCommand": "imageutility/circle"
                 },
                 "commoncolour": {
                   "aliases": [
@@ -8510,6 +8515,25 @@
                 }
               ],
               "prefixCommand": "images/imageutility/averagecolour"
+            },
+            "circle": {
+              "description": "Generate a pixel art circle. Edges can be thin or thick.",
+              "arguments": [
+                {
+                  "name": "width",
+                  "description": "The width of the circle",
+                  "required": true
+                },
+                {
+                  "name": "height",
+                  "description": "The height of the circle"
+                },
+                {
+                  "name": "mode",
+                  "description": "The mode to use for the edges"
+                }
+              ],
+              "prefixCommand": "images/imageutility/circle"
             },
             "commoncolour": {
               "description": "Get the most common colour in an image.",
