@@ -2669,6 +2669,18 @@
                   "description": "View entries from the OptiFine documentation",
                   "slashCommand": "minecraft/resourcepacks/optifinedoc"
                 },
+                "packpng": {
+                  "aliases": [
+                    "pack"
+                  ],
+                  "arguments": "{image} {image} {image}",
+                  "description": [
+                    "Render a resource packs \"pack.png\"",
+                    "The images are in the order: top, left, right",
+                    "Only one image is required"
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/packpng"
+                },
                 "reloadpack": {
                   "arguments": "[version]",
                   "cooldown": 20,
@@ -8853,6 +8865,40 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/optifinedoc"
+                },
+                "packpng": {
+                  "description": [
+                    "Render a resource packs \"pack.png\"",
+                    "The images are in the order: top, left, right",
+                    "Only one image is required"
+                  ],
+                  "arguments": [
+                    {
+                      "name": "image-1-file",
+                      "description": "The top texture"
+                    },
+                    {
+                      "name": "image-1-string",
+                      "description": "The top texture"
+                    },
+                    {
+                      "name": "image-2-file",
+                      "description": "The left texture"
+                    },
+                    {
+                      "name": "image-2-string",
+                      "description": "The left texture"
+                    },
+                    {
+                      "name": "image-3-file",
+                      "description": "The right texture"
+                    },
+                    {
+                      "name": "image-3-string",
+                      "description": "The right texture"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/packpng"
                 },
                 "reloadpack": {
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
