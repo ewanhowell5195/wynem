@@ -2271,8 +2271,7 @@
                 "scale": {
                   "aliases": [
                     "magnify",
-                    "enlarge",
-                    "upscale"
+                    "enlarge"
                   ],
                   "arguments": "{image}",
                   "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
@@ -2291,6 +2290,14 @@
                     "The trimmed colour defaults to fully transparent."
                   ],
                   "slashCommand": "imagemanipulation/trim"
+                },
+                "upscale": {
+                  "aliases": [
+                    "xBRZ"
+                  ],
+                  "arguments": "[multiplier] {image}",
+                  "description": "Upscale an image.",
+                  "slashCommand": "imagemanipulation/upscale"
                 }
               }
             },
@@ -8082,6 +8089,20 @@
                 }
               ],
               "prefixCommand": "images/manipulation/trim"
+            },
+            "upscale": {
+              "description": "Upscale an image.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/manipulation/upscale"
             }
           }
         },
