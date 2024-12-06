@@ -2292,9 +2292,12 @@
                   "slashCommand": "imagemanipulation/trim"
                 },
                 "upscale": {
-                  "arguments": "[multiplier] {image}",
+                  "arguments": "[multiplier] [algorithm] {image}",
                   "cooldown": 5,
-                  "description": "Upscale an image.",
+                  "description": [
+                    "Upscale an image.",
+                    "Algorithms:\n- xbrz\n- xbrznaa\n- cleanedge"
+                  ],
                   "slashCommand": "imagemanipulation/upscale"
                 }
               }
@@ -8089,7 +8092,10 @@
               "prefixCommand": "images/manipulation/trim"
             },
             "upscale": {
-              "description": "Upscale an image.",
+              "description": [
+                "Upscale an image.",
+                "Algorithms:\n- xbrz\n- xbrznaa\n- cleanedge"
+              ],
               "cooldown": 5,
               "arguments": [
                 {
