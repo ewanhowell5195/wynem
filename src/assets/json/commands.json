@@ -2292,10 +2292,8 @@
                   "slashCommand": "imagemanipulation/trim"
                 },
                 "upscale": {
-                  "aliases": [
-                    "xBRZ"
-                  ],
                   "arguments": "[multiplier] {image}",
+                  "cooldown": 5,
                   "description": "Upscale an image.",
                   "slashCommand": "imagemanipulation/upscale"
                 }
@@ -8092,7 +8090,16 @@
             },
             "upscale": {
               "description": "Upscale an image.",
+              "cooldown": 5,
               "arguments": [
+                {
+                  "name": "multiplier",
+                  "description": "The multiplier to upscale by"
+                },
+                {
+                  "name": "algorithm",
+                  "description": "Upscaling algorithm"
+                },
                 {
                   "name": "image-file",
                   "description": "A file"
