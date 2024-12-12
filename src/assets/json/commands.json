@@ -865,6 +865,12 @@
                 }
               },
               "commands": {
+                "bloom": {
+                  "arguments": "[intensity] [radius] [threshold] {image}",
+                  "cooldown": 5,
+                  "description": "Apply bloom to an image",
+                  "slashCommand": "imagefilter/bloom"
+                },
                 "brightness": {
                   "aliases": [
                     "brighten",
@@ -2295,8 +2301,8 @@
                   "arguments": "[multiplier] [algorithm] {image}",
                   "cooldown": 5,
                   "description": [
-                    "Upscale an image.",
-                    "Algorithms:\n- xbrz\n- xbrznaa\n- cleanedge"
+                    "Upscale some pixel art.",
+                    "Algorithms:\n- xbrz\n- xbrznaa\n- xbrzt\n- xbrztnaa\n- cleanedge"
                   ],
                   "slashCommand": "imagemanipulation/upscale"
                 }
@@ -6754,6 +6760,33 @@
             }
           },
           "commands": {
+            "bloom": {
+              "description": "Apply bloom to an image",
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "intensity",
+                  "description": "Intensity to use"
+                },
+                {
+                  "name": "radius",
+                  "description": "Size of the bloom as percentage of image width"
+                },
+                {
+                  "name": "threshold",
+                  "description": "Bloom threshold"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/filters/bloom"
+            },
             "brightness": {
               "description": [
                 "Change the brightness of an image.",
@@ -8093,8 +8126,8 @@
             },
             "upscale": {
               "description": [
-                "Upscale an image.",
-                "Algorithms:\n- xbrz\n- xbrznaa\n- cleanedge"
+                "Upscale some pixel art.",
+                "Algorithms:\n- xbrz\n- xbrznaa\n- xbrzt\n- xbrztnaa\n- cleanedge"
               ],
               "cooldown": 5,
               "arguments": [
