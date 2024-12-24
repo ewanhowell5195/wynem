@@ -3026,7 +3026,8 @@
                   "description": [
                     "Ban a member from the server.",
                     "The member is sent a message saying they were banned, along with the reason.",
-                    "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command."
+                    "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
+                    "The \"Compromised account\" button will instead ban the user deleting their last six hours of message history, send a message informing them their account is compromised, then unban them, turning it into a kick."
                   ],
                   "permissions": [
                     "Guild Only",
@@ -10594,7 +10595,8 @@
           "description": [
             "Ban a member from the server.",
             "The member is sent a message saying they were banned, along with the reason.",
-            "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command."
+            "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
+            "The \"Compromised account\" button will instead ban the user deleting their last six hours of message history, send a message informing them their account is compromised, then unban them, turning it into a kick."
           ],
           "arguments": [
             {
