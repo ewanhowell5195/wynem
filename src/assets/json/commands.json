@@ -955,6 +955,7 @@
                     "whiteandblack"
                   ],
                   "arguments": "{image}",
+                  "cooldown": 3,
                   "description": "Turn an image greyscale.",
                   "slashCommand": "imagefilter/greyscale"
                 },
@@ -988,6 +989,7 @@
                     "flipcolor"
                   ],
                   "arguments": "{image}",
+                  "cooldown": 3,
                   "description": "Invert an image's colours.",
                   "slashCommand": "imagefilter/invert"
                 },
@@ -1854,6 +1856,12 @@
                         "Use the \"middletext\" or \"bottomtext\" aliases to put the text in the middle or on the bottom."
                       ],
                       "slashCommand": "imagetext/addtext"
+                    },
+                    "uncaption": {
+                      "arguments": "[buffer] [threshold] {image}",
+                      "cooldown": 5,
+                      "description": "Remove a caption from an image.",
+                      "slashCommand": "imagetext/uncaption"
                     },
                     "valentines": {
                       "aliases": [
@@ -2902,6 +2910,12 @@
             }
           },
           "commands": {
+            "blockpalette": {
+              "arguments": "[colour] [count] [type]",
+              "cooldown": 3,
+              "description": "Get a palette of block textures based on a colour.",
+              "slashCommand": "minecraft/blockpalette"
+            },
             "minecraftaccount": {
               "aliases": [
                 "account",
@@ -6968,6 +6982,7 @@
             },
             "greyscale": {
               "description": "Turn an image greyscale.",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "image-file",
@@ -7021,6 +7036,7 @@
             },
             "invert": {
               "description": "Invert an image's colours.",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "image-file",
@@ -8548,6 +8564,29 @@
               ],
               "prefixCommand": "images/imagefun/texts/tombstone"
             },
+            "uncaption": {
+              "description": "Remove a caption from an image.",
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "buffer",
+                  "description": "How many extra pixels to remove"
+                },
+                {
+                  "name": "threshold",
+                  "description": "The threshold for white pixels"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/texts/uncaption"
+            },
             "valentines": {
               "description": "Generate a minecraft valentines image for that special someone in your life.",
               "arguments": [
@@ -9109,6 +9148,26 @@
                 }
               ],
               "prefixCommand": "minecraft/minecraftaccount"
+            },
+            "blockpalette": {
+              "description": "Get a palette of block textures based on a colour.",
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "colour",
+                  "description": "The colour",
+                  "required": true
+                },
+                {
+                  "name": "count",
+                  "description": "The amount of textures to include in the palette"
+                },
+                {
+                  "name": "type",
+                  "description": "The blockify type"
+                }
+              ],
+              "prefixCommand": "minecraft/blockpalette"
             },
             "changelog": {
               "description": "Get a link to the changelog of the latest Minecraft version.",
