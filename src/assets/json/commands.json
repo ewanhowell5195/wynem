@@ -3033,7 +3033,8 @@
                     "Ban Members"
                   ],
                   "botPermissions": [
-                    "Ban Members"
+                    "Ban Members",
+                    "Kick Members"
                   ],
                   "slashCommand": "ban",
                   "contextCommand": "user/ban-member"
@@ -10611,7 +10612,8 @@
             "Ban Members"
           ],
           "botPermissions": [
-            "Ban Members"
+            "Ban Members",
+            "Kick Members"
           ],
           "prefixCommand": "moderation/bans/ban",
           "contextCommand": "user/ban-member"
@@ -10855,7 +10857,8 @@
                 "Ban Members"
               ],
               "botPermissions": [
-                "Ban Members"
+                "Ban Members",
+                "Kick Members"
               ],
               "arguments": [
                 {
