@@ -715,9 +715,10 @@
                 ],
                 [
                   "These work on any command that accepts an image:",
-                  "```b:@ping\n - get a users banner\nu:@ping\n - get a user\nimage:term, search:term\n - get an image from duckduckgo\nmc:username, skin:username\n - get the minecraft skin of a Minecraft username\nmc:@ping, skin:@ping\n - get the minecraft skin of a member\ncape:username\n - get the minecraft cape of a Minecraft username\ncape:@ping\n - get the minecraft cape of a member\ntexture:filename:version\n - get a minecraft texture```"
+                  "```Format: prefix:argument:optional_argument\n\nb:@ping\n - get a users banner\nu:@ping\n - get a user\ncolour:colour:size, color:colour:size\n - get a solid colour\nmc:username, skin:username\n - get the minecraft skin of a Minecraft username\nmc:@ping, skin:@ping\n - get the minecraft skin of a member\ncape:username\n - get the minecraft cape of a Minecraft username\ncape:@ping\n - get the minecraft cape of a member\ntexture:filename:version\n - get a minecraft texture```"
                 ]
-              ]
+              ],
+              "temp": "image:term, search:term\n - get an image from duckduckgo"
             }
           ],
           "categories": {
