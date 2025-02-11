@@ -982,7 +982,7 @@
             {
               "name": "strider_baby_saddle",
               "display_name": "Baby Strider Saddle",
-              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
             }
           ]
         },
