@@ -1,5 +1,5 @@
 {
-  "version": "3.3.0",
+  "version": "3.4.0",
   "categories": [
     {
       "name": "Supported",
@@ -973,7 +973,17 @@
         {
           "name": "strider",
           "variants": [
-            "strider_saddle"
+            "strider_saddle",
+            {
+              "name": "strider_baby",
+              "display_name": "Baby Strider",
+              "popup": "This model only applies to the baby Strider. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "strider_baby_saddle",
+              "display_name": "Baby Strider Saddle",
+              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model.",
+            }
           ]
         },
         "tadpole",
@@ -1069,6 +1079,20 @@
           "vanilla_textures": [
             "villager",
             "plains"
+          ],
+          "variants": [
+            {
+              "name": "villager_baby",
+              "display_name": "Baby Villager",
+              "texture_name": [
+                "villager"
+              ],
+              "vanilla_textures": [
+                "villager",
+                "plains"
+              ],
+              "popup": "This model only applies to the baby Villager. This model is optional, and by default will be the same as the regular model."
+            }
           ]
         },
         {
@@ -2258,6 +2282,20 @@
               "display_name": "Strider [Saddle]",
               "file_name": "strider_saddle",
               "texture_name": "strider_saddle"
+            },
+            {
+              "name": "strider_baby_unedited",
+              "display_name": "Baby Strider",
+              "file_name": "strider_baby",
+              "texture_name": "strider",
+              "popup": "This model only applies to the baby Strider. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "strider_baby_saddle_unedited",
+              "display_name": "Baby Strider Saddle",
+              "file_name": "strider_baby_saddle",
+              "texture_name": "strider_saddle",
+              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
             }
           ]
         },
@@ -2340,6 +2378,21 @@
           "vanilla_textures": [
             "villager",
             "plains"
+          ],
+          "variants": [
+            {
+              "name": "villager_baby_unedited",
+              "display_name": "Baby Villager",
+              "file_name": "villager_baby",
+              "texture_name": [
+                "villager"
+              ],
+              "vanilla_textures": [
+                "villager",
+                "plains"
+              ],
+              "popup": "This model only applies to the baby Villager. This model is optional, and by default will be the same as the regular model."
+            }
           ]
         },
         {
@@ -2530,6 +2583,16 @@
       "description": "CEM models from older versions. The version number indicates the last version the model was used.",
       "icon": "history",
       "entities": [
+        {
+          "type": "heading",
+          "text": "1.21.3"
+        },
+        {
+          "name": "banner_21.3",
+          "display_name": "Banner",
+          "file_name": "banner",
+          "texture_name": "banner"
+        },
         {
           "type": "heading",
           "text": "1.21.1"
@@ -2954,6 +3017,9 @@
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-6,5],\"boxes\":[{\"coordinates\":[-4,4,-10,8,5,5],\"textureOffset\":[0,1]}]},{\"part\":\"top_gills\",\"id\":\"top_gills\",\"invertAxis\":\"xy\",\"translate\":[0,-9,6],\"boxes\":[{\"coordinates\":[-4,9,-6,8,3,0],\"textureOffset\":[3,37]}]},{\"part\":\"left_gills\",\"id\":\"left_gills\",\"invertAxis\":\"xy\",\"translate\":[-4,-6,6],\"boxes\":[{\"coordinates\":[4,4,-6,3,7,0],\"textureOffset\":[0,40]}]},{\"part\":\"right_gills\",\"id\":\"right_gills\",\"invertAxis\":\"xy\",\"translate\":[4,-6,6],\"boxes\":[{\"coordinates\":[-7,4,-6,3,7,0],\"textureOffset\":[11,40]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-6,-4],\"boxes\":[{\"coordinates\":[-4,4,-5,8,4,10],\"textureOffset\":[0,11]},{\"coordinates\":[0,4,-4,0,5,9],\"textureOffset\":[2,17]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3.5,-5,4],\"boxes\":[{\"coordinates\":[-5.5,0,-4,3,5,0],\"textureOffset\":[2,13]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3.5,-5,-3],\"boxes\":[{\"coordinates\":[-5.5,0,3,3,5,0],\"textureOffset\":[2,13]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3.5,-5,4],\"boxes\":[{\"coordinates\":[2.5,0,-4,3,5,0],\"textureOffset\":[2,13]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3.5,-5,-3],\"boxes\":[{\"coordinates\":[2.5,0,3,3,5,0],\"textureOffset\":[2,13]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0,-6,-5],\"boxes\":[{\"coordinates\":[0,4,5,0,5,12],\"textureOffset\":[2,19]}]}]}"
     },
     "banner": {
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"top\",\"id\":\"top\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-10,42,-1,20,2,2],\"textureOffset\":[0,42]}]},{\"part\":\"slate\",\"id\":\"slate\",\"invertAxis\":\"xy\",\"translate\":[0,-44,0],\"boxes\":[{\"coordinates\":[-10,4,-2,20,40,1],\"textureOffset\":[0,0]}]},{\"part\":\"stand\",\"id\":\"stand\",\"invertAxis\":\"xy\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-1,0,-1,2,42,2],\"textureOffset\":[44,0]}]}]}"
+    },
+    "banner_21.3": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"top\",\"id\":\"top\",\"invertAxis\":\"xy\",\"translate\":[0,-12,0],\"boxes\":[{\"coordinates\":[-10,42,-1,20,2,2],\"textureOffset\":[0,42]}]},{\"part\":\"slate\",\"id\":\"slate\",\"invertAxis\":\"xy\",\"translate\":[0,-44,0],\"boxes\":[{\"coordinates\":[-10,4,-2,20,40,1],\"textureOffset\":[0,0]}]},{\"part\":\"stand\",\"id\":\"stand\",\"invertAxis\":\"xy\",\"translate\":[0,-12,0],\"boxes\":[{\"coordinates\":[-1,0,-1,2,42,2],\"textureOffset\":[44,0]}]}]}"
     },
     "bat": {
@@ -2982,7 +3048,7 @@
       "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-12,0],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-3,11,-3,6,7,6],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[-8,0,-8],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-4,-6,12,8,2,8],\"textureOffset\":[0,13]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "bell_21.1": {
-      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAQxJREFUWIXtlTFqAkEYhT9lwUJrFQwmgUAaD7C9Ke0srTyAlbmGx7DwDjmAVwgICcGFXetsIQha/ZAZ5x+XXWFTzNftm52ZB/NmXgOF6fz97NLny4Xz/8nosaGt5SPyDQ56feM7yVIA4pcHQ9/u9mX2BqBZeuadCAa8GZAzt6ly5lcGxunKmfZ1njgnnDZrpz77+HWv89bx3o4IIO51DXGbHQBoDV4N/Zh8AtB+Hhp6/vUDwFO/bejfae7bG/5DBoKB2g1E/AmdjYTORkJnUyR0NjcLRCslQSsn4VZJeR8iwS4lQSsnociDVXsGgoFgoNAt0GpZqFLPah0LWi0LWj0LWk0LtR9BIBAI1M4FcHxLiGJU1nYAAAAASUVORK5CYII=",
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAF1JREFUKM9jYGBgUFJSKi8vZ0AAFRenio52ygRQDRUUFFy1atXMmTONjY3BAmJpiWvOnJq9e6dpaDDVBDBsgToE5JJyJKeC3IrkWJoIoFgrCHEZyGkgtxljCgxWAAClGFaqHOTdVgAAAABJRU5ErkJggg==",
       "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-12,0],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-3,11,-3,6,7,6],\"textureOffset\":[0,0]},{\"coordinates\":[-4,18,-4,8,2,8],\"textureOffset\":[0,13]}],\"animations\":[{\"this.rx\":0}]}]}"
     },
     "bell_unedited": {
@@ -3580,7 +3646,7 @@
       "model": "{\"textureSize\":[128,128],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-34,1],\"boxes\":[{\"coordinates\":[-8,34,-6,16,16,10],\"textureOffset\":[0,32]}]},{\"part\":\"left_tendril\",\"id\":\"left_tendril\",\"invertAxis\":\"xy\",\"translate\":[8,-46,0],\"boxes\":[{\"coordinates\":[-24,43,0,16,16,0],\"textureOffset\":[58,0]}]},{\"part\":\"right_tendril\",\"id\":\"right_tendril\",\"invertAxis\":\"xy\",\"translate\":[-8,-46,0],\"boxes\":[{\"coordinates\":[8,43,0,16,16,0],\"textureOffset\":[52,32]}]},{\"part\":\"torso\",\"id\":\"torso\",\"invertAxis\":\"xy\",\"translate\":[0,-21,1],\"boxes\":[{\"coordinates\":[-9,13,-5,18,21,11],\"textureOffset\":[0,0]}]},{\"part\":\"left_ribcage\",\"id\":\"left_ribcage\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[7,-23,5],\"boxes\":[{\"coordinates\":[-9,13,-5.1,9,21,0],\"textureOffset\":[90,11]}]},{\"part\":\"right_ribcage\",\"id\":\"right_ribcage\",\"invertAxis\":\"xy\",\"translate\":[-7,-23,5],\"boxes\":[{\"coordinates\":[0,13,-5.1,9,21,0],\"textureOffset\":[90,11]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[13,-34,0],\"boxes\":[{\"coordinates\":[-17,6,-4,8,28,8],\"textureOffset\":[0,58]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-13,-34,0],\"boxes\":[{\"coordinates\":[9,6,-4,8,28,8],\"textureOffset\":[44,50]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[6,-13,1],\"boxes\":[{\"coordinates\":[-9.1,0,-4,6,13,6],\"textureOffset\":[76,76]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-6,-13,1],\"boxes\":[{\"coordinates\":[3.1,0,-4,6,13,6],\"textureOffset\":[76,48]}]}]}"
     },
     "wind_charge": {
-      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAD1BMVEUAAABbvPR71P+01OHs+P0AOtSBAAAAAXRSTlMAQObYZgAAADBJREFUeF5jMCYAGFwIAIIKCFshSAAwKBEABBUQtoIQoENA0S2oR4N6eEQWYQUUAwByzqoB2qbvywAAAABJRU5ErkJggg==",
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAD1BMVEUAAABbvPR71P+01OHs+P0AOtSBAAAAAXRSTlMAQObYZgAAAC9JREFUOMtjMWbAD1gECSlgIKTgPSEF9waBGwgqoENAMYwG9dAJ6sEQWZRbQcgEAM0YC4HI3l+2AAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"charge\",\"id\":\"charge\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"rotate\":[-180,0,0],\"boxes\":[{\"coordinates\":[-2,0,-2,4,4,4],\"textureOffset\":[0,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"wind\",\"id\":\"wind\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-3,0,-3,6,4,6],\"textureOffset\":[0,9]},{\"coordinates\":[-4,1,-4,8,2,8],\"textureOffset\":[15,20]}]}]}"
     },
     "witch": {
