@@ -2594,6 +2594,12 @@
           "texture_name": "banner"
         },
         {
+          "name": "magma_cube_21.3",
+          "display_name": "Magma Cube",
+          "file_name": "magma_cube",
+          "texture_name": "magma_cube"
+        },
+        {
           "type": "heading",
           "text": "1.21.1"
         },
@@ -3419,6 +3425,10 @@
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-6,0],\"boxes\":[{\"coordinates\":[-2,4,-4,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[2,4,0,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[-2,6,0,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[-2,4,0,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[-2,4,2,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[-4,4,0,2,2,2],\"textureOffset\":[0,0]},{\"coordinates\":[-2,0,0,2,2,2],\"textureOffset\":[0,0]}]}]}"
     },
     "magma_cube": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAHhJREFUeF5jAIFyIFACAiAHK5+hoqOjXcXFxQmdP2QUEPamIBAYA8FMIFgFBGJpaYmmoaHBs3fv3rnmzJlTowEF5aMHDHUDajSgRgMKPSsyDD4Acj1eBRXtKk4EFVBihaAgKIDwBI5Yomnw7J1rThFUQLYVo2AUAACnogaietLvJwAAAABJRU5ErkJggg==",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"segment1\",\"id\":\"segment1\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,7,-4,8,1,8],\"textureOffset\":[0,0]}]},{\"part\":\"segment2\",\"id\":\"segment2\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,6,-4,8,1,8],\"textureOffset\":[0,9]}]},{\"part\":\"segment3\",\"id\":\"segment3\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,5,-4,8,1,8],\"textureOffset\":[0,18]}]},{\"part\":\"segment4\",\"id\":\"segment4\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,4,-4,8,1,8],\"textureOffset\":[0,27]}]},{\"part\":\"segment5\",\"id\":\"segment5\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,3,-4,8,1,8],\"textureOffset\":[32,0]}]},{\"part\":\"segment6\",\"id\":\"segment6\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,2,-4,8,1,8],\"textureOffset\":[32,9]}]},{\"part\":\"segment7\",\"id\":\"segment7\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,1,-4,8,1,8],\"textureOffset\":[32,18]}]},{\"part\":\"segment8\",\"id\":\"segment8\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,1,8],\"textureOffset\":[32,27]}]},{\"part\":\"core\",\"id\":\"core\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-2,2,-2,4,4,4],\"textureOffset\":[24,40]}]}]}"
+    },
+    "magma_cube_21.3": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAINJREFUOMtjYACCciBQAgIGXKCio6NdxcXFaWgrwOtNQSAwBoKZQLAKCDAUiKWlJZqGhgbP3r1755ozZ05hNQWmAKd1yAowHIxuBQ0UoHsTS6CBXI03VCvaVZzwhipCAY5AQ7UCwwSQE0HOw+kGsUTT4Nk715wiXwFBK+ic/IhKXQMAANA3nP2pH5FkAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"segment1\",\"id\":\"segment1\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,7,-4,8,1,8],\"textureOffset\":[0,0]}]},{\"part\":\"segment2\",\"id\":\"segment2\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,6,-4,8,1,8],\"textureOffset\":[0,1]}]},{\"part\":\"segment3\",\"id\":\"segment3\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,5,-4,8,1,8],\"textureOffset\":[24,10]}]},{\"part\":\"segment4\",\"id\":\"segment4\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,4,-4,8,1,8],\"textureOffset\":[24,19]}]},{\"part\":\"segment5\",\"id\":\"segment5\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,3,-4,8,1,8],\"textureOffset\":[0,4]}]},{\"part\":\"segment6\",\"id\":\"segment6\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,2,-4,8,1,8],\"textureOffset\":[0,5]}]},{\"part\":\"segment7\",\"id\":\"segment7\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,1,-4,8,1,8],\"textureOffset\":[0,6]}]},{\"part\":\"segment8\",\"id\":\"segment8\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,0,-4,8,1,8],\"textureOffset\":[0,7]}]},{\"part\":\"core\",\"id\":\"core\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-2,2,-2,4,4,4],\"textureOffset\":[0,16]}]}]}"
     },
