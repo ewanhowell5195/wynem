@@ -4182,6 +4182,17 @@
                 "Manage Guild"
               ],
               "slashCommand": "botconfig/toggle/quotes"
+            },
+            "toggleuserleftnotices": {
+              "description": [
+                "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
+                "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "slashCommand": "serverconfig/toggle/userleftnotices"
             }
           }
         },
@@ -10290,6 +10301,17 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/togglemodping"
+                },
+                "userleftnotices": {
+                  "description": [
+                    "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
+                    "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
+                  ],
+                  "arguments": [],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/toggleuserleftnotices"
                 }
               }
             }
