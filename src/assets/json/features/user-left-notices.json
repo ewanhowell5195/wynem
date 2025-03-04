@@ -1,0 +1,101 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "toggleuserleftnotices"]
+    ],
+    "slash": [
+      ["serverconfig", "toggle", "userleftnotices"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are user left notices?"
+    },
+    "User left notices are messages that will get sent when you reply to someone who is not in the server. When a server member tries to reply to a message from a user who has left the server, Wynem will automatically inform them that the user is no longer present in the server.",
+    {
+      "type": "message",
+      "data": {
+        "name": "TheAnnoying",
+        "colour": "#E67E22",
+        "image": "/assets/images/avatars/theannoying.webp",
+        "message": "What's the best texture pack to use?"
+      }
+    },
+    {
+      "type": "message",
+      "data": {
+        "reply": {
+          "name": "TheAnnoying",
+          "colour": "#E67E22",
+          "image": "/assets/images/avatars/theannoying.webp",
+          "message": "What's the best texture pack to use?"
+        },
+        "name": "Ewan",
+        "colour": "#D14949",
+        "image": "/assets/images/logo/ewan.webp",
+        "message": "I personally prefer F8thful, but there are many good options!"
+      }
+    },
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "I personally prefer F8thful, but there are many good options!"
+        },
+        "author": ["User left", "/assets/images/icons/door_red.webp"],
+        "description": "The user you replied to (<@TheAnnoying>) has left the server",
+        "colour": "#DD2E44"
+      }
+    },
+    "These notices are only sent under specific conditions:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Recent messages only", "The message being replied to must be within the last 50 messages in the channel"],
+        ["No duplicate notices", "Wynem will not send another notice if it has already sent one in the last 10 messages"],
+        ["Server membership", "The user being replied to must have actually left the server (not just appearing offline)"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use user left notices"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Enabling User Left Notices",
+          "content": [
+            "User left notices are enabled by default in all servers. To enable them if they have been disabled, use the <span class=\"command prefix\"><code>e!toggleuserleftnotices</code></span><span class=\"command slash\"><code>/serverconfig toggle userleftnotices</code></span> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "User left notices enabled",
+                "description": "I will now notify members when they reply to a member that has left the server"
+              }
+            },
+            "When enabled, users will receive notices whenever they reply to messages from users who are no longer in the server, as long as the message is within the last 50 messages and Wynem hasn't already sent a notice in the last 10 messages."
+          ]
+        },
+        {
+          "name": "Disabling User Left Notices",
+          "content": [
+            "If user left notices are currently enabled, you can disable them by using the <span class=\"command prefix\"><code>e!toggleuserleftnotices</code></span><span class=\"command slash\"><code>/serverconfig toggle userleftnotices</code></span> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "User left notices disabled",
+                "description": "I will no longer notify members when they reply to a member that has left the server"
+              }
+            },
+            "When disabled, users will not receive notices when replying to messages from users who have left the server."
+          ]
+        }
+      ]
+    }
+  ]
+}

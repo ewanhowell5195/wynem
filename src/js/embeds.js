@@ -134,8 +134,9 @@ export function makeEmbed($, parent, data, args = {}) {
 }
 
 export function makeMessage($, parent, data, args = {}) {
-  let message
+  let reply
   const container = E("div").addClass("embed-container message-container").append(
+    reply = E("div").addClass("reply-container").css("display", "none"),
     E("div").append(
       E("div").addClass("pfp-container").append(
         E("img").addClass(args.outline ? "outline" : undefined).attr("src", data.image)
@@ -144,10 +145,17 @@ export function makeMessage($, parent, data, args = {}) {
         E("div").addClass("name-row").append(
           E("div").addClass("name").text(data.name).css("color", data.colour)
         ),
-        message = E("div").addClass("message").text(data.message)
+        E("div").addClass("message").text(data.message)
       )
     )
   )
+  if (data.reply) {
+    reply.css("display", "flex").append(
+      E("img").attr("src", data.reply.image),
+      E("div").css("color", data.reply.colour).text(data.reply.name),
+      E("div").html(parseString(data.reply.message))
+    )
+  }
   parent.append(container)
 }
 
