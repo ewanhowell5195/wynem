@@ -17,7 +17,7 @@
       "type": "message",
       "data": {
         "name": "TheAnnoying",
-        "colour": "#E67E22",
+        "colour": "#FFF",
         "image": "/assets/images/avatars/theannoying.webp",
         "message": "What's the best texture pack to use?"
       }
@@ -27,7 +27,7 @@
       "data": {
         "reply": {
           "name": "TheAnnoying",
-          "colour": "#E67E22",
+          "colour": "#FFF",
           "image": "/assets/images/avatars/theannoying.webp",
           "message": "What's the best texture pack to use?"
         },
