@@ -78,7 +78,7 @@
                 "description": "I will now notify members when they reply to a member that has left the server"
               }
             },
-            "When enabled, users will receive notices whenever they reply to messages from users who are no longer in the server, as long as the message is within the last 50 messages and Wynem hasn't already sent a notice in the last 10 messages."
+            "When enabled, Wynem will notify members who reply to users that have left the server. These notices only appear for recent messages (within the last 50) and won't be repeated if a notice was already sent within the last 10 messages."
           ]
         },
         {
