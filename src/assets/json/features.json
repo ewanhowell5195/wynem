@@ -43,5 +43,9 @@
   {
     "id": "user-left-notices",
     "description": "Get notified when you reply to someone who has left the server"
+  },
+  {
+    "id": "ghost-ping-notices",
+    "description": "Get notified when someone mentions you and then deletes their message"
   }
 ]

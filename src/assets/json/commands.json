@@ -4036,6 +4036,44 @@
                 }
               }
             },
+            "serversettings": {
+              "commands": {
+                "toggleghostpingnotices": {
+                  "aliases": [
+                    "toggleghostping"
+                  ],
+                  "description": [
+                    "Toggles whether the bot will notifiy you when someone ghost pings you.",
+                    "Ghost ping notices are not sent when moderators delete messages (requires the bot to have audit log permissions).",
+                    "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/toggle/ghostpingnotices"
+                },
+                "togglequotes": {
+                  "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "botconfig/toggle/quotes"
+                },
+                "toggleuserleftnotices": {
+                  "description": [
+                    "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
+                    "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "serverconfig/toggle/userleftnotices"
+                }
+              }
+            },
             "tickets": {
               "description": [
                 "Tickets is a system that allows users to create private tickets in a server that can be managed by users with a special role for handling tickets.",
@@ -4174,25 +4212,6 @@
                 "Guild Only"
               ],
               "slashCommand": "server/info"
-            },
-            "togglequotes": {
-              "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
-              "permissions": [
-                "Guild Only",
-                "Manage Guild"
-              ],
-              "slashCommand": "botconfig/toggle/quotes"
-            },
-            "toggleuserleftnotices": {
-              "description": [
-                "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
-                "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
-              ],
-              "permissions": [
-                "Guild Only",
-                "Manage Guild"
-              ],
-              "slashCommand": "serverconfig/toggle/userleftnotices"
             }
           }
         },
@@ -5058,7 +5077,7 @@
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/togglequotes"
+                  "prefixCommand": "server/serversettings/togglequotes"
                 }
               }
             }
@@ -10295,6 +10314,17 @@
                   ],
                   "prefixCommand": "server/issuetracker/toggleautoissues"
                 },
+                "ghostpingnotices": {
+                  "description": [
+                    "Toggles whether the bot will notifiy you when someone ghost pings you.",
+                    "Ghost ping notices are not sent when moderators delete messages (requires the bot to have audit log permissions).",
+                    "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "server/serversettings/toggleghostpingnotices"
+                },
                 "modping": {
                   "description": "Toggles the ability for users to trigger a moderator ping.",
                   "permissions": [
@@ -10311,7 +10341,7 @@
                   "permissions": [
                     "Manage Guild"
                   ],
-                  "prefixCommand": "server/toggleuserleftnotices"
+                  "prefixCommand": "server/serversettings/toggleuserleftnotices"
                 }
               }
             }

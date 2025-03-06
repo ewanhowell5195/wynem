@@ -1,0 +1,79 @@
+{
+  "commands": {
+    "prefix": [
+      ["server", "serversettings", "toggleghostpingnotices"]
+    ],
+    "slash": [
+      ["serverconfig", "toggle", "ghostpingnotices"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are ghost ping notices?"
+    },
+    "Ghost ping notices are a feature that notify members when someone mentions them in a message and then quickly deletes that message (commonly known as a \"ghost ping\"). This helps maintain transparency in your server by alerting users when someone has tried to mention them but removed the message.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Ghost ping!", "/assets/images/icons/warning_red.webp"],
+        "description": "A wild ghost ping appeared! <@Ewan> was pinged by <@TheAnnoying>",
+        "colour": "#DD2E44"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use ghost ping notices"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Enabling ghost ping notices",
+          "content": [
+            "Ghost ping notices are enabled by default. If they have been disabled, you can re-enable them by using the <code class=\"command prefix\">e!toggleghostpingnotices</code><code class=\"command slash\">/serverconfig toggle ghostpingnotices</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ghost ping notices enabled",
+                "description": "I will now notify members when they get ghost pinged"
+              }
+            },
+            "Once enabled, Wynem will automatically detect when a user is mentioned in a message that is subsequently deleted, and will send a notice in the same channel informing the mentioned user about the ghost ping."
+          ]
+        },
+        {
+          "name": "Disabling ghost ping notices",
+          "content": [
+            "If you wish to disable ghost ping notices in your server, use the <code class=\"command prefix\">e!toggleghostpingnotices</code><code class=\"command slash\">/serverconfig toggle ghostpingnotices</code> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ghost ping notices disabled",
+                "description": "I will no longer notify members when they get ghost pinged"
+              }
+            },
+            "After disabling this feature, Wynem will stop sending notices when users are ghost pinged in your server."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Important notes"
+    },
+    "There are a few important things to know about how ghost ping notices work:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Moderator Actions", "Ghost ping notices are not sent when moderators delete messages (requires the bot to have audit log permissions)."],
+        ["Moderator Messages", "Messages sent by moderators are not tracked for ghost pings."],
+        ["Time Limit", "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."],
+        ["Multiple Mentions", "If a message mentions multiple users before being deleted, all mentioned users will be notified about the ghost ping."],
+        ["Re-pings", "If a user is re-pinged after a ghost ping notice is sent, the original ghost ping message will be deleted."],
+        ["Combined Notices", "If the same person ghost pings two separate people in two separate messages, and the last notice is within the last 5 messages in the channel, that notice will be edited instead of sending a new one."],
+        ["Duplicate Prevention", "If an existing ghost ping message for a user is present in the last 5 messages, another will not be sent."]
+      ]
+    }
+  ]
+}
