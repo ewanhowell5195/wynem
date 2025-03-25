@@ -787,6 +787,13 @@
         },
         {
           "name": "sheep",
+          "texture_name": [
+            "sheep"
+          ],
+          "vanilla_textures": [
+            "sheep",
+            "sheep_wool_undercoat"
+          ],
           "variants": [
             {
               "name": "sheep_wool",
@@ -795,6 +802,13 @@
             {
               "name": "sheep_baby",
               "display_name": "Baby Sheep",
+              "texture_name": [
+                "sheep_baby"
+              ],
+              "vanilla_textures": [
+                "sheep_baby",
+                "sheep_baby_wool_undercoat"
+              ],
               "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model."
             },
             {
@@ -1093,11 +1107,11 @@
               "name": "villager_baby",
               "display_name": "Baby Villager",
               "texture_name": [
-                "villager"
+                "villager_baby"
               ],
               "vanilla_textures": [
-                "villager",
-                "plains"
+                "villager_baby",
+                "plains_baby"
               ],
               "popup": "This model only applies to the Baby Villager. This model is optional, and by default will be the same as the regular model."
             }
@@ -1219,11 +1233,11 @@
               "name": "zombie_villager_baby",
               "display_name": "Baby Zombie Villager",
               "texture_name": [
-                "zombie_villager"
+                "zombie_villager_baby"
               ],
               "vanilla_textures": [
-                "zombie_villager",
-                "plains"
+                "zombie_villager_baby",
+                "plains_baby"
               ],
               "popup": "This model only applies to the Baby Zombie Villager. This model is optional, and by default will be the same as the regular model."
             }
