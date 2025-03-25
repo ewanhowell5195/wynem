@@ -1,5 +1,5 @@
 {
-  "version": "3.4.0",
+  "version": "3.5.0",
   "categories": [
     {
       "name": "Supported",
@@ -13,7 +13,7 @@
             {
               "name": "armadillo_baby",
               "display_name": "Baby Armadillo",
-              "popup": "This model only applies to the baby Armadillo. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Armadillo. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -40,7 +40,7 @@
             {
               "name": "axolotl_baby",
               "display_name": "Baby Axolotl",
-              "popup": "This model only applies to the baby Axolotl. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Axolotl. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -53,7 +53,7 @@
             {
               "name": "bee_baby",
               "display_name": "Baby Bee",
-              "popup": "This model only applies to the baby Bee. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Bee. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -292,7 +292,7 @@
             {
               "name": "camel_baby",
               "display_name": "Baby Camel",
-              "popup": "This model only applies to the baby Camel. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -303,12 +303,12 @@
             {
               "name": "cat_baby",
               "display_name": "Baby Cat",
-              "popup": "This model only applies to the baby Cat. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Cat. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "cat_baby_collar",
               "display_name": "Baby Cat Collar",
-              "popup": "This model only applies to the baby Cat Collar. This model is optional, and by default will be the same as the collar model."
+              "popup": "This model only applies to the Baby Cat Collar. This model is optional, and by default will be the same as the collar model."
             }
           ]
         },
@@ -336,11 +336,13 @@
         },
         {
           "name": "chicken",
+          "texture_name": "temperate_chicken",
           "variants": [
             {
               "name": "chicken_baby",
               "display_name": "Baby Chicken",
-              "popup": "This model only applies to the baby Chicken. This model is optional, and by default will be the same as the regular model."
+              "texture_name": "temperate_chicken_baby",
+              "popup": "This model only applies to the Baby Chicken. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -362,11 +364,13 @@
         },
         {
           "name": "cow",
+          "texture_name": "temperate_cow",
           "variants": [
             {
               "name": "cow_baby",
               "display_name": "Baby Cow",
-              "popup": "This model only applies to the baby Cow. This model is optional, and by default will be the same as the regular model."
+              "texture_name": "temperate_cow_baby",
+              "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -402,7 +406,7 @@
             {
               "name": "dolphin_baby",
               "display_name": "Baby Dolphin",
-              "popup": "This model only applies to the baby Dolphin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Dolphin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -412,7 +416,7 @@
             {
               "name": "donkey_baby",
               "display_name": "Baby Donkey",
-              "popup": "This model only applies to the baby Donkey. This model is optional, and by default will be the same as the regular model.",
+              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model.",
               "model": "donkey_baby"
             }
           ]
@@ -428,12 +432,12 @@
             {
               "name": "drowned_baby",
               "display_name": "Baby Drowned",
-              "popup": "This model only applies to the baby Drowned. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Drowned. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "drowned_baby_outer",
               "display_name": "Baby Drowned [Outer]",
-              "popup": "This model only applies to the baby Drowned [Outer]. This model is optional, and by default will be the same as the outer model."
+              "popup": "This model only applies to the Baby Drowned [Outer]. This model is optional, and by default will be the same as the outer model."
             }
           ]
         },
@@ -468,7 +472,7 @@
             {
               "name": "fox_baby",
               "display_name": "Baby Fox",
-              "popup": "This model only applies to the baby Fox. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Fox. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -485,7 +489,7 @@
             {
               "name": "glow_squid_baby",
               "display_name": "Baby Glow Squid",
-              "popup": "This model only applies to the baby Glow Squid. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Glow Squid. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -495,7 +499,7 @@
             {
               "name": "goat_baby",
               "display_name": "Baby Goat",
-              "popup": "This model only applies to the baby Goat. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Goat. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -524,7 +528,7 @@
             {
               "name": "hoglin_baby",
               "display_name": "Baby Hoglin",
-              "popup": "This model only applies to the baby Hoglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Hoglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -538,13 +542,13 @@
             {
               "name": "horse_baby",
               "display_name": "Baby Horse",
-              "popup": "This model only applies to the baby Horse. This model is optional, and by default will be the same as the regular model.",
+              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model.",
               "model": "horse_baby"
             },
             {
               "name": "horse_baby_armor",
               "display_name": "Baby Horse Armor",
-              "popup": "This model only applies to the baby Horse Armor. This model is optional, and by default will be the same as the armor model.",
+              "popup": "This model only applies to the Baby Horse Armor. This model is optional, and by default will be the same as the armor model.",
               "model": "horse_baby_armor"
             }
           ]
@@ -556,7 +560,7 @@
             {
               "name": "husk_baby",
               "display_name": "Baby Husk",
-              "popup": "This model only applies to the baby Husk. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Husk. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -573,12 +577,12 @@
             {
               "name": "llama_baby",
               "display_name": "Baby Llama",
-              "popup": "This model only applies to the baby Llama. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Llama. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "llama_baby_decor",
               "display_name": "Baby Llama Decor",
-              "popup": "This model only applies to the baby Llama Decor. This model is optional, and by default will be the same as the decor model."
+              "popup": "This model only applies to the Baby Llama Decor. This model is optional, and by default will be the same as the decor model."
             }
           ]
         },
@@ -628,7 +632,7 @@
             {
               "name": "mooshroom_baby",
               "display_name": "Baby Mooshroom",
-              "popup": "This model only applies to the baby Mooshroom. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Mooshroom. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -639,7 +643,7 @@
             {
               "name": "mule_baby",
               "display_name": "Baby Mule",
-              "popup": "This model only applies to the baby Mule. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -650,7 +654,7 @@
             {
               "name": "ocelot_baby",
               "display_name": "Baby Ocelot",
-              "popup": "This model only applies to the baby Ocelot. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Ocelot. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -660,7 +664,7 @@
             {
               "name": "panda_baby",
               "display_name": "Baby Panda",
-              "popup": "This model only applies to the baby Panda. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Panda. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -677,20 +681,24 @@
         "phantom",
         {
           "name": "pig",
+          "texture_name": "temperate_pig",
           "variants": [
             {
               "name": "pig_saddle",
+              "texture_name": "temperate_pig_saddle",
               "model": "pig_saddle"
             },
             {
               "name": "pig_baby",
               "display_name": "Baby Pig",
-              "popup": "This model only applies to the baby Pig. This model is optional, and by default will be the same as the regular model."
+              "texture_name": "temperate_pig_baby",
+              "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "pig_baby_saddle",
               "display_name": "Baby Pig Saddle",
-              "popup": "This model only applies to the baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "texture_name": "temperate_pig_baby_saddle",
+              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
               "model": "pig_saddle"
             }
           ]
@@ -701,7 +709,7 @@
             {
               "name": "piglin_baby",
               "display_name": "Baby Piglin",
-              "popup": "This model only applies to the baby Piglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Piglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -724,7 +732,7 @@
             {
               "name": "polar_bear_baby",
               "display_name": "Baby Polar Bear",
-              "popup": "This model only applies to the baby Polar Bear. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Polar Bear. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -753,7 +761,7 @@
             {
               "name": "rabbit_baby",
               "display_name": "Baby Rabbit",
-              "popup": "This model only applies to the baby Rabbit. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Rabbit. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -787,12 +795,12 @@
             {
               "name": "sheep_baby",
               "display_name": "Baby Sheep",
-              "popup": "This model only applies to the baby Sheep. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "sheep_baby_wool",
               "display_name": "Baby Sheep Wool",
-              "popup": "This model only applies to the baby Sheep Wool. This model is optional, and by default will be the same as the wool model.",
+              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the wool model.",
               "model": "sheep_wool"
             }
           ]
@@ -922,7 +930,7 @@
             {
               "name": "skeleton_horse_baby",
               "display_name": "Baby Skeleton Horse",
-              "popup": "This model only applies to the baby Skeleton Horse. This model is optional, and by default will be the same as the regular model.",
+              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model.",
               "model": "horse_baby"
             }
           ]
@@ -943,7 +951,7 @@
             {
               "name": "sniffer_baby",
               "display_name": "Baby Sniffer",
-              "popup": "This model only applies to the baby Sniffer. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Sniffer. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -955,7 +963,7 @@
             {
               "name": "squid_baby",
               "display_name": "Baby Squid",
-              "popup": "This model only applies to the baby Squid. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Squid. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -977,12 +985,12 @@
             {
               "name": "strider_baby",
               "display_name": "Baby Strider",
-              "popup": "This model only applies to the baby Strider. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Strider. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "strider_baby_saddle",
               "display_name": "Baby Strider Saddle",
-              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
+              "popup": "This model only applies to the Baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
             }
           ]
         },
@@ -999,12 +1007,12 @@
             {
               "name": "trader_llama_baby",
               "display_name": "Baby Trader Llama",
-              "popup": "This model only applies to the baby Trader Llama. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Trader Llama. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "trader_llama_baby_decor",
               "display_name": "Baby Trader Llama Decor",
-              "popup": "This model only applies to the baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model.",
+              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model.",
               "model": "llama_decor"
             }
           ]
@@ -1065,7 +1073,7 @@
             {
               "name": "turtle_baby",
               "display_name": "Baby Turtle",
-              "popup": "This model only applies to the baby Turtle. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Turtle. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1091,7 +1099,7 @@
                 "villager",
                 "plains"
               ],
-              "popup": "This model only applies to the baby Villager. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Villager. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1144,17 +1152,17 @@
             {
               "name": "wolf_baby",
               "display_name": "Baby Wolf",
-              "popup": "This model only applies to the baby Wolf. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Wolf. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "wolf_baby_collar",
               "display_name": "Baby Wolf Collar",
-              "popup": "This model only applies to the baby Wolf Collar. This model is optional, and by default will be the same as the collar model."
+              "popup": "This model only applies to the Baby Wolf Collar. This model is optional, and by default will be the same as the collar model."
             },
             {
               "name": "wolf_baby_armor",
               "display_name": "Baby Wolf Armor",
-              "popup": "This model only applies to the baby Wolf Armor. This model is optional, and by default will be the same as the armor model.",
+              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the armor model.",
               "model": "wolf_armor"
             }
           ]
@@ -1166,7 +1174,7 @@
             {
               "name": "zoglin_baby",
               "display_name": "Baby Zoglin",
-              "popup": "This model only applies to the baby Zoglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zoglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1176,7 +1184,7 @@
             {
               "name": "zombie_baby",
               "display_name": "Baby Zombie",
-              "popup": "This model only applies to the baby Zombie. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zombie. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1192,7 +1200,7 @@
             {
               "name": "zombie_horse_baby",
               "display_name": "Baby Zombie Horse",
-              "popup": "This model only applies to the baby Zombie Horse. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1217,7 +1225,7 @@
                 "zombie_villager",
                 "plains"
               ],
-              "popup": "This model only applies to the baby Zombie Villager. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zombie Villager. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1228,7 +1236,7 @@
             {
               "name": "zombified_piglin_baby",
               "display_name": "Baby Zombified Piglin",
-              "popup": "This model only applies to the baby Zombified Piglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zombified Piglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         }
@@ -1250,7 +1258,7 @@
               "display_name": "Baby Armadillo",
               "file_name": "armadillo_baby",
               "texture_name": "armadillo",
-              "popup": "This model only applies to the baby Armadillo. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Armadillo. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1626,7 +1634,7 @@
               "display_name": "Baby Camel",
               "file_name": "camel_baby",
               "texture_name": "camel",
-              "popup": "This model only applies to the baby Camel. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1647,14 +1655,14 @@
               "display_name": "Baby Cat",
               "file_name": "cat_baby",
               "texture_name": "cat",
-              "popup": "This model only applies to the baby Cat. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Cat. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "cat_baby_collar_unedited",
               "display_name": "Baby Cat Collar",
               "file_name": "cat_baby_collar",
               "texture_name": "cat",
-              "popup": "This model only applies to the baby Cat Collar. This model is optional, and by default will be the same as the collar model."
+              "popup": "This model only applies to the Baby Cat Collar. This model is optional, and by default will be the same as the collar model."
             }
           ]
         },
@@ -1691,7 +1699,7 @@
               "display_name": "Baby Chicken",
               "file_name": "chicken_baby",
               "texture_name": "chicken",
-              "popup": "This model only applies to the baby Chicken. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Chicken. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1706,7 +1714,7 @@
               "display_name": "Baby Cow",
               "file_name": "cow_baby",
               "texture_name": "cow",
-              "popup": "This model only applies to the baby Cow. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1734,7 +1742,7 @@
               "display_name": "Baby Donkey",
               "file_name": "donkey_baby",
               "texture_name": "donkey",
-              "popup": "This model only applies to the baby Donkey. This model is optional, and by default will be the same as the regular model.",
+              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model.",
               "model": "donkey_baby_unedited"
             }
           ]
@@ -1789,7 +1797,7 @@
               "display_name": "Baby Fox",
               "file_name": "fox_baby",
               "texture_name": "fox",
-              "popup": "This model only applies to the baby Fox. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Fox. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1805,7 +1813,7 @@
               "display_name": "Baby Glow Squid",
               "file_name": "glow_squid_baby",
               "texture_name": "glow_squid",
-              "popup": "This model only applies to the baby Glow Squid. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Glow Squid. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1820,7 +1828,7 @@
               "display_name": "Baby Goat",
               "file_name": "goat_baby",
               "texture_name": "goat",
-              "popup": "This model only applies to the baby Goat. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Goat. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1922,7 +1930,7 @@
               "display_name": "Baby Hoglin",
               "file_name": "hoglin_baby",
               "texture_name": "hoglin",
-              "popup": "This model only applies to the baby Hoglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Hoglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1950,14 +1958,14 @@
               "display_name": "Baby Llama",
               "file_name": "llama_baby",
               "texture_name": "llama",
-              "popup": "This model only applies to the baby Llama. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Llama. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "llama_baby_decor_unedited",
               "display_name": "Baby Llama Decor",
               "file_name": "llama_baby_decor",
               "texture_name": "llama_decor",
-              "popup": "This model only applies to the baby Llama Decor. This model is optional, and by default will be the same as the decor model.",
+              "popup": "This model only applies to the Baby Llama Decor. This model is optional, and by default will be the same as the decor model.",
               "model": "llama_decor_unedited"
             }
           ]
@@ -2025,7 +2033,7 @@
               "display_name": "Baby Mooshroom",
               "file_name": "mooshroom_baby",
               "texture_name": "mooshroom",
-              "popup": "This model only applies to the baby Mooshroom. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Mooshroom. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2041,7 +2049,7 @@
               "display_name": "Baby Mule",
               "file_name": "mule_baby",
               "texture_name": "mule",
-              "popup": "This model only applies to the baby Mule. This model is optional, and by default will be the same as the regular model.",
+              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model.",
               "model": "donkey_baby_unedited"
             }
           ]
@@ -2058,7 +2066,7 @@
               "display_name": "Baby Ocelot",
               "file_name": "ocelot_baby",
               "texture_name": "ocelot",
-              "popup": "This model only applies to the baby Ocelot. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Ocelot. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2073,7 +2081,7 @@
               "display_name": "Baby Panda",
               "file_name": "panda_baby",
               "texture_name": "panda",
-              "popup": "This model only applies to the baby Panda. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Panda. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2110,14 +2118,14 @@
               "display_name": "Baby Pig",
               "file_name": "pig_baby",
               "texture_name": "pig",
-              "popup": "This model only applies to the baby Pig. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "pig_baby_saddle_unedited",
               "display_name": "Baby Pig Saddle",
               "file_name": "pig_baby_saddle",
               "texture_name": "pig_saddle",
-              "popup": "This model only applies to the baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
               "model": "pig_saddle_unedited"
             }
           ]
@@ -2133,7 +2141,7 @@
               "display_name": "Baby Piglin",
               "file_name": "piglin_baby",
               "texture_name": "piglin",
-              "popup": "This model only applies to the baby Piglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Piglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2161,7 +2169,7 @@
               "display_name": "Baby Polar Bear",
               "file_name": "polar_bear_baby",
               "texture_name": "polar_bear",
-              "popup": "This model only applies to the baby Polar Bear. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Polar Bear. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2237,14 +2245,14 @@
               "display_name": "Baby Sheep",
               "file_name": "sheep_baby",
               "texture_name": "sheep",
-              "popup": "This model only applies to the baby Sheep. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "sheep_baby_wool_unedited",
               "display_name": "Baby Sheep Wool",
               "file_name": "sheep_wool_baby",
               "texture_name": "sheep_wool",
-              "popup": "This model only applies to the baby Sheep Wool. This model is optional, and by default will be the same as the wool model.",
+              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the wool model.",
               "model": "sheep_wool_unedited"
             }
           ]
@@ -2267,7 +2275,7 @@
               "display_name": "Baby Squid",
               "file_name": "squid_baby",
               "texture_name": "squid",
-              "popup": "This model only applies to the baby Squid. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Squid. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2288,14 +2296,14 @@
               "display_name": "Baby Strider",
               "file_name": "strider_baby",
               "texture_name": "strider",
-              "popup": "This model only applies to the baby Strider. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Strider. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "strider_baby_saddle_unedited",
               "display_name": "Baby Strider Saddle",
               "file_name": "strider_baby_saddle",
               "texture_name": "strider_saddle",
-              "popup": "This model only applies to the baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
+              "popup": "This model only applies to the Baby Strider Saddle. This model is optional, and by default will be the same as the saddle model."
             }
           ]
         },
@@ -2318,14 +2326,14 @@
               "display_name": "Baby Trader Llama",
               "file_name": "trader_llama_baby",
               "texture_name": "trader_llama",
-              "popup": "This model only applies to the baby Trader Llama. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Trader Llama. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "trader_llama_baby_decor_unedited",
               "display_name": "Baby Trader Llama Decor",
               "file_name": "trader_llama_baby_decor",
               "texture_name": "trader_llama_decor",
-              "popup": "This model only applies to the baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model.",
+              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model.",
               "model": "llama_decor_unedited"
             }
           ]
@@ -2364,7 +2372,7 @@
               "display_name": "Baby Turtle",
               "file_name": "turtle_baby",
               "texture_name": "turtle",
-              "popup": "This model only applies to the baby Turtle. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Turtle. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2391,7 +2399,7 @@
                 "villager",
                 "plains"
               ],
-              "popup": "This model only applies to the baby Villager. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Villager. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2439,21 +2447,21 @@
               "display_name": "Baby Wolf",
               "file_name": "wolf_baby",
               "texture_name": "wolf",
-              "popup": "This model only applies to the baby Wolf. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Wolf. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "wolf_baby_collar_unedited",
               "display_name": "Baby Wolf Collar",
               "file_name": "wolf_baby_collar",
               "texture_name": "wolf_collar",
-              "popup": "This model only applies to the baby Wolf Collar. This model is optional, and by default will be the same as the collar model."
+              "popup": "This model only applies to the Baby Wolf Collar. This model is optional, and by default will be the same as the collar model."
             },
             {
               "name": "wolf_baby_armor_unedited",
               "display_name": "Baby Wolf Armor",
               "file_name": "wolf_baby_armor",
               "texture_name": "armadillo_scute",
-              "popup": "This model only applies to the baby Wolf Armor. This model is optional, and by default will be the same as the armor model.",
+              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the armor model.",
               "model": "wolf_armor_unedited"
             }
           ]
@@ -2470,7 +2478,7 @@
               "display_name": "Baby Zoglin",
               "file_name": "zoglin_baby",
               "texture_name": "zoglin",
-              "popup": "This model only applies to the baby Zoglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zoglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -2486,7 +2494,7 @@
               "display_name": "Baby Zombified Piglin",
               "file_name": "zombified_piglin_baby",
               "texture_name": "zombified_piglin",
-              "popup": "This model only applies to the baby Zombified Piglin. This model is optional, and by default will be the same as the regular model."
+              "popup": "This model only applies to the Baby Zombified Piglin. This model is optional, and by default will be the same as the regular model."
             }
           ]
         }
@@ -2550,7 +2558,7 @@
               "texture_name": "mooshroom",
               "popup": {
                 "title": "Before you start...",
-                "message": "This model only applies to the baby Baby Mooshroom. This model is optional, and by default will be the same as the regular model.<br><br><p>This model requires some extra textures in your resource pack to function correctly:</p><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/red_mushroom.png</code></div><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/brown_mushroom.png</code></div><p>These textures need to be created manually, and should be 1x1 transparent images.</p><p>They are custom ones added by optifine that overwrite the vanilla mooshroom mushrooms.</p><p>Please note, if you were going to use this model to edit the textures independently of the block, you can just use these two textures instead of this model.</p>",
+                "message": "This model only applies to the Baby Baby Mooshroom. This model is optional, and by default will be the same as the regular model.<br><br><p>This model requires some extra textures in your resource pack to function correctly:</p><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/red_mushroom.png</code></div><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/brown_mushroom.png</code></div><p>These textures need to be created manually, and should be 1x1 transparent images.</p><p>They are custom ones added by optifine that overwrite the vanilla mooshroom mushrooms.</p><p>Please note, if you were going to use this model to edit the textures independently of the block, you can just use these two textures instead of this model.</p>",
                 "width": 600
               }
             }
@@ -2583,6 +2591,56 @@
       "description": "CEM models from older versions. The version number indicates the last version the model was used.",
       "icon": "history",
       "entities": [
+        {
+          "type": "heading",
+          "text": "1.21.4"
+        },
+        {
+          "name": "cow_21.4",
+          "display_name": "Cow",
+          "file_name": "cow",
+          "texture_name": "cow",
+          "variants": [
+            {
+              "name": "cow_baby_21.4",
+              "display_name": "Baby Cow",
+              "file_name": "cow_baby",
+              "texture_name": "cow_baby",
+              "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "mooshroom_21.4",
+          "display_name": "Cow",
+          "file_name": "cow",
+          "texture_name": "cow",
+          "model": "cow_21.1",
+          "variants": [
+            {
+              "name": "mooshroom_baby_21.4",
+              "display_name": "Baby Mooshroom",
+              "file_name": "mooshroom_baby",
+              "texture_name": "mooshroom_baby",
+              "popup": "This model only applies to the Baby Mooshroom. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "pig_21.4",
+          "display_name": "Pig",
+          "file_name": "pig",
+          "texture_name": "pig",
+          "variants": [
+            {
+              "name": "pig_baby_21.4",
+              "display_name": "Baby Pig",
+              "file_name": "pig_baby",
+              "texture_name": "pig_baby",
+              "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
         {
           "type": "heading",
           "text": "1.21.3"
@@ -2970,6 +3028,46 @@
         "bee_stinger",
         "cape",
         {
+          "name": "cold_chicken",
+          "variants": [
+            {
+              "name": "cold_chicken_baby",
+              "display_name": "Cold Baby Chicken",
+              "popup": "This model only applies to the Cold Baby Chicken. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "cold_cow",
+          "variants": [
+            {
+              "name": "cold_cow_baby",
+              "display_name": "Cold Baby Cow",
+              "popup": "This model only applies to the Cold Baby Cow. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "cold_pig",
+          "variants": [
+            {
+              "name": "cold_pig_saddle",
+              "model": "cold_pig_saddle"
+            },
+            {
+              "name": "cold_pig_baby",
+              "display_name": "Cold Baby Pig",
+              "popup": "This model only applies to the Cold Baby Pig. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "cold_pig_baby_saddle",
+              "display_name": "Cold Baby Pig Saddle",
+              "popup": "This model only applies to the Cold Baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "model": "cold_pig_saddle"
+            }
+          ]
+        },
+        {
           "name": "elder_guardian_ghost",
           "display_name": "Elder Guardian [Ghost]",
           "description": "The ghostly Elder Guardian that appears when you get mining fatigue",
@@ -2986,7 +3084,49 @@
             }
           ]
         },
-        "trident_riptide"
+        "trident_riptide",
+        {
+          "name": "warm_chicken",
+          "model": "chicken",
+          "variants": [
+            {
+              "name": "warm_chicken_baby",
+              "display_name": "Warm Baby Chicken",
+              "popup": "This model only applies to the Warm Baby Chicken. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "warm_cow",
+          "variants": [
+            {
+              "name": "warm_cow_baby",
+              "display_name": "Warm Baby Cow",
+              "popup": "This model only applies to the Warm Baby Cow. This model is optional, and by default will be the same as the regular model."
+            }
+          ]
+        },
+        {
+          "name": "warm_pig",
+          "model": "pig",
+          "variants": [
+            {
+              "name": "warm_pig_saddle",
+              "model": "pig_saddle"
+            },
+            {
+              "name": "warm_pig_baby",
+              "display_name": "Warm Baby Pig",
+              "popup": "This model only applies to the Warm Baby Pig. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "warm_pig_baby_saddle",
+              "display_name": "Warm Baby Pig Saddle",
+              "popup": "This model only applies to the Warm Baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "model": "pig_saddle"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -3184,6 +3324,22 @@
     "cod": {
       "model": "{\"textureSize\":[32,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-1,0,0,2,4,7],\"textureOffset\":[0,0]}],\"submodels\":[{\"id\":\"right_fin\",\"invertAxis\":\"xy\",\"translate\":[1,1,0],\"rotate\":[0,0,-45],\"boxes\":[{\"coordinates\":[0,0,-1,2,0,2],\"textureOffset\":[24,1]}]},{\"id\":\"left_fin\",\"invertAxis\":\"xy\",\"translate\":[-1,1,0],\"rotate\":[0,0,45],\"boxes\":[{\"coordinates\":[-2,0,-1,2,0,2],\"textureOffset\":[24,4]}]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-1,0,-3,2,4,3],\"textureOffset\":[11,0]}]},{\"part\":\"nose\",\"id\":\"nose\",\"invertAxis\":\"xy\",\"translate\":[0,-2,3],\"boxes\":[{\"coordinates\":[-1,1,-4,2,3,1],\"textureOffset\":[0,0]}]},{\"part\":\"fin_left\"},{\"part\":\"fin_right\"},{\"part\":\"fin_back\",\"id\":\"fin_back\",\"invertAxis\":\"xy\",\"translate\":[0,-4,0],\"boxes\":[{\"coordinates\":[0,4,-1,0,1,6],\"textureOffset\":[20,-6]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0,-2,-7],\"boxes\":[{\"coordinates\":[0,0,7,0,4,4],\"textureOffset\":[22,3]}]}]}"
     },
+    "cold_chicken": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAAAk1JREFUaIHtmLFrU1EUh7/IgwrN1JYm0KIWG1z8A7J31E2hQycnd9vFIOLUyTjo5KAlQ+jkIGTUvTi/JaDUioG0dLRgQHgOetLz7rv36kuaF4P3m/Leu+/+zjn3nvPOTQlFJz5K9PVe84W+5M3e0xIG476jx9vG/glT32WHSyMyB9TXVwE4+PgVgJVKFYDecT+vbV7q66spjXHmF5sF03bBppEJgLzsewlgo99MAPbjxdT9Vm3h18SbpwC0Hz1IAC5ff5aKvNa56ODmIRJH8DjDb4fEGYBbOYVcOlqj/el8fjNgPsxFE/4msBFAvbLMwfEJANeq8wB87p8BML92hbPDLwDMrdwAYNDr8r66XQLoxHcTVM6VJccaaaGNfjMxdVwag17XabAOJJZFE3RgsezIVABmjXplGSCzaIIOLJBZQGHQ644eALMGSMRlG+fZwnkRxwVx2EQcF2w7q9AdoA3XRmtDfdsfGKbeOdvWcW3zRsM6jJLOqWp8P/Xw5Yfnw9+SQ8IkV7hInE5svftmbTBerT22jp/VgHhTwFVcbMVkVrk0bQOmTQjAtIQ78VFy596Otc4UibcGuL6vReS82fEBvH09yIwrNxpjFd/IJgTw/eET6ws/akvW+65j6e2bV0c2UDo+VA8h3R2WRmcUhmcBjYi5jpPaCG2I61g6KmbHxwU5rflnzwLZjg/KE9D5778CE98BrhqzHy/Sqi3Q2t3NPI82TwvrLAtJAVeNwVNPiiKkAI5qi+cvJdcquaq+a37fXIFAIBAIBAKBCfMTteQYb1A3GZ8AAAAASUVORK5CYII=",
+      "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-9,4],\"boxes\":[{\"coordinates\":[-2,9,-6,4,6,3],\"textureOffset\":[0,0]},{\"coordinates\":[-3,13,-6.015,6,3,4],\"textureOffset\":[44,0]}]},{\"part\":\"bill\",\"id\":\"bill\",\"invertAxis\":\"xy\",\"translate\":[0,-9,4],\"boxes\":[{\"coordinates\":[-2,11,-8,4,2,2],\"textureOffset\":[14,0]}]},{\"part\":\"chin\",\"id\":\"chin\",\"invertAxis\":\"xy\",\"translate\":[0,-9,4],\"boxes\":[{\"coordinates\":[-1,9,-7,2,2,2],\"textureOffset\":[14,4]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-3,4,-3,6,8,6],\"textureOffset\":[0,9]},{\"coordinates\":[0,2,-1,0,3,5],\"textureOffset\":[38,9]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"left_wing\",\"id\":\"left_wing\",\"invertAxis\":\"xy\",\"translate\":[4,-11,0],\"boxes\":[{\"coordinates\":[-4,7,-3,1,4,6],\"textureOffset\":[24,13]}]},{\"part\":\"right_wing\",\"id\":\"right_wing\",\"invertAxis\":\"xy\",\"translate\":[-4,-11,0],\"boxes\":[{\"coordinates\":[3,7,-3,1,4,6],\"textureOffset\":[24,13]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[1,-5,-1],\"boxes\":[{\"coordinates\":[-3,0,-2,3,5,3],\"textureOffset\":[26,0]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-5,-1],\"boxes\":[{\"coordinates\":[0,0,-2,3,5,3],\"textureOffset\":[26,0]}]}]}"
+    },
+    "cold_cow": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAvNJREFUeJztmr9v00AUx7+uLBUpDKggYslV24hGXfoHZM/YiJWhQwf+AKR2alQhprIQFmZUdbCYspUNJEb+gCxIoAJqhYsYGwkkJDM0F52f72xfiPPi+D5T47tcX967e34/zoGGs8G3SDcGACe9V2nD6J+8cFInFMjuu+uY7K8bT2Pjtx68HMvmpi3U2lxVPv/4+QIA4Nc95fjlVWgi71Rph73o9+Gz2LO/zXv48HB3/Pls8CTqbK87ALA0exFng1/3EgZqba4mjLqwCshL6hEoAno+s6DnN4sdQ3lSFSDOuo5Jz/qGV8s172s4BAAs+1u55v+5/GQsi9sOe0qLvBncTf3iaXNFveCjXwCA4Ghfue7jc2MZJ0JlHJVBXQBo1e/HJ179BFIsJSxTa6zFng/PvwMpFpvEQqa89w4Sr98+AHS7yvmVd4JWAdwCcGMVwC0ANy4kr08R3l6H8PqULG+fta7pev/D1DI2XTxBuXP4w2hdXbxBkZOdPIhkaKqhMI0nKGKn6bJIighmaLxBETtRl70m5JACooQCaB2A5v2ceX4RKJ0gTRtVqeWiYN8Cqoc0aeCs8BRNIhukWSD1wsGXeJYn19fKyBJG3lv24BteLZYJ1hprMU+87G/lztHnncr7AKsAbgG4sQrgFoAbqwBuAbixCuAWgBtlRYhWbGjlR1eh0VWWKKa5ha7ylPj/GZ0sFeM4XvTsRC+u6Bi/6B5hXvlzV4R0FyZ0FyXyFE7moUfoXh8fRwCwF9xcKth57gPSD+5srzvtsBfpeoWnzZVxP1AmONqPypApGtUEqcVkX0GtM4s+4DQwUkBaObssP5iSSwE3HdcD5VgAAOrGaymofBxQeQW4t7tdB9J7+e1wFAeMOieLzswvScnMQ4/QEVVh0bMTVWDRa+sY7oSy9QgL2QFl6hFW3glaBXALwE3lFeDSi4V98YfmYuGiUfkdYBXALQA3VgHcAnBjFcAtADdWAdwCcFN5BRRSDyhjj9BisVSTfwr/Cg+5CRqjAAAAAElFTkSuQmCC",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[-3,16,-15,6,3,1],\"textureOffset\":[9,33]}]},{\"part\":\"left_horn\",\"id\":\"left_horn\",\"invertAxis\":\"xy\",\"translate\":[5.5,-22.5,13],\"rotate\":[-90,0,0],\"scale\":1,\"boxes\":[{\"coordinates\":[-6,19.5,-13.5,2,6,2],\"textureOffset\":[0,32]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"right_horn\",\"id\":\"right_horn\",\"invertAxis\":\"xy\",\"translate\":[-4.5,-22.5,11.5],\"rotate\":[-90,0,0],\"scale\":1,\"boxes\":[{\"coordinates\":[4,21,-12,2,6,2],\"textureOffset\":[0,40]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[20,32],\"sizeAdd\":0.5},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
+    },
+    "cold_pig": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAjJJREFUeJztmb1KA0EUhU9kIUIaUdCFSEhQ8RXs09ta+BZJpYhPYGysJVgEKztLBUsfII2g+INiFEtTWMXGlc3kzs5EE0/WvV+XzOzM4TJz58zcHByctu97Se3NxkHi9yfNvZxrDiaBT6e15UXx/8vrRwBAcSEU259eOr/R9idMsQWw0QCwBbDRALAFsPE6BaJsbyMN2d5GUO00Es/54/Zc4gBHK7OJ7a2bWuL400v7fT5h8+w9sX/EYWXXp9vA+CYBAKwtzIuNly+vAIByWBDb7zpdAEChUhLbu7cPAIB8cVVs/3i6Ev+3zWfOaxvXNX6czOcADQBbABsNAFsAmwCxbG8jyro2omxvwycbDzPfT8eVGDgjzfu/ed+X7vfDfOPyHTNbz17CXf7jYn3TaxzRCUb3f/O+Lzm+aqfRM83S0cosgo2379+tnVovbkhcvsP2vhAR6XD5D9s7xvd814+jywHlsDBgYPLFVadZYSOuANP7+3h9ad+OYo+Om4G7gLSc45jefjqs54B6fx8A2B692HEwha89Gd+X5nIuVEp9+y0NS9uXzPsADQBbABvRCZoZ3XR6acjuvgTnYd1wdkJGj5OS7O5L5reABoAtgE3mA+BVFxg1rvcH3zqD6x3CVc+A9B7AhlIXmDS0LvCHaADYAthoANgC2EzkKUCtC4ybVNQFxs2/rAukFQ0AWwAbDQBbABsNAFsAGw0AWwAbDQBbABsNAFsAm8zXBRRFURRFyS6fRzjQ9NH4InsAAAAASUVORK5CYII=",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8]},{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,32],\"sizeAdd\":0.5}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16]}]}]}"
+    },
+    "cold_pig_saddle": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAjJJREFUeJztmb1KA0EUhU9kIUIaUdCFSEhQ8RXs09ta+BZJpYhPYGysJVgEKztLBUsfII2g+INiFEtTWMXGlc3kzs5EE0/WvV+XzOzM4TJz58zcHByctu97Se3NxkHi9yfNvZxrDiaBT6e15UXx/8vrRwBAcSEU259eOr/R9idMsQWw0QCwBbDRALAFsPE6BaJsbyMN2d5GUO00Es/54/Zc4gBHK7OJ7a2bWuL400v7fT5h8+w9sX/EYWXXp9vA+CYBAKwtzIuNly+vAIByWBDb7zpdAEChUhLbu7cPAIB8cVVs/3i6Ev+3zWfOaxvXNX6czOcADQBbABsNAFsAmwCxbG8jyro2omxvwycbDzPfT8eVGDgjzfu/ed+X7vfDfOPyHTNbz17CXf7jYn3TaxzRCUb3f/O+Lzm+aqfRM83S0cosgo2379+tnVovbkhcvsP2vhAR6XD5D9s7xvd814+jywHlsDBgYPLFVadZYSOuANP7+3h9ad+OYo+Om4G7gLSc45jefjqs54B6fx8A2B692HEwha89Gd+X5nIuVEp9+y0NS9uXzPsADQBbABvRCZoZ3XR6acjuvgTnYd1wdkJGj5OS7O5L5reABoAtgE3mA+BVFxg1rvcH3zqD6x3CVc+A9B7AhlIXmDS0LvCHaADYAthoANgC2EzkKUCtC4ybVNQFxs2/rAukFQ0AWwAbDQBbABsNAFsAGw0AWwAbDQBbABsNAFsAm8zXBRRFURRFyS6fRzjQ9NH4InsAAAAASUVORK5CYII=",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8],\"sizeAdd\":0.5},{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,32],\"sizeAdd\":1}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":0.5},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16],\"sizeAdd\":0.5}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]}]}"
+    },
     "conduit": {
       "texture_data": [
         "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///9bvPR71P9U2V2rAAAAAXRSTlMAQObYZgAAABdJREFUeF5jCA1lYGDIWomPCA1lIBoAANnQB8f100sbAAAAAElFTkSuQmCC",
@@ -3194,11 +3350,15 @@
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"eye\",\"id\":\"eye\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-4,4,0,8,8,0],\"uvNorth\":[0,0,32,16],\"uvEast\":[0,0,0,8],\"uvSouth\":[0,0,32,16],\"uvWest\":[8,0,8,8],\"uvUp\":[8,0,0,0],\"uvDown\":[16,0,8,0]}]},{\"part\":\"cage\",\"id\":\"cage\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-4,4,-4,8,8,8],\"uvNorth\":[32,32,16,16],\"uvEast\":[16,32,0,16],\"uvSouth\":[64,32,48,16],\"uvWest\":[48,32,32,16],\"uvUp\":[32,16,16,0],\"uvDown\":[48,16,32,0]}]},{\"part\":\"base\",\"id\":\"base\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-3,5,-3,6,6,6],\"uvNorth\":[24,24,12,12],\"uvEast\":[12,24,0,12],\"uvSouth\":[48,24,36,12],\"uvWest\":[36,24,24,12],\"uvUp\":[24,12,12,0],\"uvDown\":[36,12,24,0]}]},{\"part\":\"wind\",\"id\":\"wind\",\"invertAxis\":\"xy\",\"translate\":[0,-8,0],\"boxes\":[{\"coordinates\":[-8,0,-8,16,16,16],\"uvNorth\":[16,16,32,32],\"uvEast\":[0,16,16,32],\"uvSouth\":[48,16,64,32],\"uvWest\":[32,16,48,32],\"uvUp\":[32,16,16,0],\"uvDown\":[48,0,32,16]}]}]}"
     },
     "cow": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAoBJREFUeJztmj9vE0EQxd9FloLkBiUIn+QoxCJWGj6Ae5cgWoqUFJRISRULIT5AjoJUFMhKYaVy5xIkSkR9DRJREoTFGVESCSSko0jO3M7t3h/HviX2+3XeXe+OZ27H+2bPgYGBfxaa+gCg6x2kdaPf3XcG/lnY9Q7Q7+47qYOnzPbbn4rtbxrPlf4bd1+O7amkTdTaXNO2f/j8FQBQr7na/uEoQDvwwiN/FYfNFfSOd8L4orOkHXjhr70XStuf5i28f7g9/jzwn4YP7t1xAGCpDKNsUK+5iQC1NtcSQZ1bB+QldQtchXfurgPsogcAnX/tcn9mIfdvFvcLjc5wQLTXTQxHQcHlLthwq7nGnQbnAIDl+lau8b+HnwrbUmkHnjYiR/5q6hcPmyv6CR/9AAD0nu1o5318UtjGidAFRxfQCgC0arfVgaPvQEqkoshUG+tK+/nJFyAlYpNEqCgXW0+lDwCdjnb8widBOsC2AbahA2wbYJsKYllfEmV7E1HWl2Rl+6x5i853FaYmUEznCcnNvW+F5jWdNyRxsZOHSAxN9SgszxOS6EkzqUhJdJiR5w1J9CSa1GvCjtiBKOEAWQeQur9sbT9rtElQykadtJwX+C+ga5SiYVLVdx1IqEGpAmUW7h2rKq+sUtesWMJl9o5n8A23qijBamNdycTL9a3cGv1/Z+FzAB1g2wDb0AG2DbANHWDbANvQAbYNsI22IiQrNrLyY6rQmCpLkqLawlR5SqyfcZNFNIyFjOmFCNOLEPNSGHFwWc9z/SfaAa8/vhrf90muuxKErAfIu8B4LpDqr4x7vjJQHJBWrp6XH0wIIYQQQgghhBBCCCGEEELIgvIXFXnLjhlvb0MAAAAASUVORK5CYII=",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[-5,22,-13,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[4,22,-13,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[-3,16,-15,6,3,1],\"textureOffset\":[1,33]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
+    },
+    "cow_21.4": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAL9JREFUeF5jAIJyIFACAnYFBmTAbGy1agGYVdHR0a7i4uIkPIsBGQgpaZaX41XgolnRTpoCINMYDFaBAVQBkiOBTNNQIAhecwYITkEVCAoKgjTNnDkTpAtZAdSRYmmJQNHg2bt3AoVPIStgAIEhoQDdm8gBxYAGBEFACQxmgkA5GCApEEtLS0tUcQECp9m7d+/eWdEBBOCgBoUzXgUV7SpOBBVQYgXIlyAv4lQglmgaPHvnmlOUKBhVgBzUuBIMABNSbL5UI7KXAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[-5,22,-12,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[4,22,-12,1,3,1],\"textureOffset\":[22,0]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
     },
     "cow_unedited": {
-      "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[-5,22,-12,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[4,22,-12,1,3,1],\"textureOffset\":[22,0]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[-5,22,-13,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[4,22,-13,1,3,1],\"textureOffset\":[22,0]},{\"coordinates\":[-3,16,-15,6,3,1],\"textureOffset\":[1,33]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
     },
     "creaking": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[-4,-30,0],\"boxes\":[{\"coordinates\":[1,30,-3,6,10,6],\"textureOffset\":[0,0]},{\"coordinates\":[1,40,-3,6,3,6],\"textureOffset\":[28,31]},{\"coordinates\":[-8,29,0,9,14,0],\"textureOffset\":[12,40]},{\"coordinates\":[7,30,0,9,14,0],\"textureOffset\":[34,12]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[-1,-26,-1],\"boxes\":[{\"coordinates\":[-5,16,-2,6,13,5],\"textureOffset\":[0,16]},{\"coordinates\":[1,23,-2,6,7,5],\"textureOffset\":[24,0]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-28,-0.5],\"boxes\":[{\"coordinates\":[-8,13,-1,3,16,3],\"textureOffset\":[30,40]},{\"coordinates\":[-8,29,-1,3,4,3],\"textureOffset\":[52,12]},{\"coordinates\":[-8,9,-1,3,4,3],\"textureOffset\":[52,19]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-8,-28.5,-1.5],\"boxes\":[{\"coordinates\":[7,9,0,3,21,3],\"textureOffset\":[22,13]},{\"coordinates\":[7,5,0,3,4,3],\"textureOffset\":[46,0]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[1.5,-16,-0.5],\"boxes\":[{\"coordinates\":[-3,0,-1,3,16,3],\"textureOffset\":[42,40]},{\"coordinates\":[-5,0.3,-4,5,0,9],\"textureOffset\":[45,55]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-1,-17.5,-0.5],\"boxes\":[{\"coordinates\":[1,0,-1,3,19,3],\"textureOffset\":[0,34]},{\"coordinates\":[1,0.3,-4,5,0,9],\"textureOffset\":[45,46]},{\"coordinates\":[1,19,-1,3,3,3],\"textureOffset\":[12,34]}]}]}"
@@ -3440,8 +3600,8 @@
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"front\",\"id\":\"front\",\"invertAxis\":\"xy\",\"translate\":[0,-2,10],\"boxes\":[{\"coordinates\":[-8,3,-11,16,8,2],\"textureOffset\":[0,0]}]},{\"part\":\"left\",\"id\":\"left\",\"invertAxis\":\"xy\",\"translate\":[0,-2,5],\"boxes\":[{\"coordinates\":[-8,3,-6,16,8,2],\"textureOffset\":[0,0]}]},{\"part\":\"right\",\"id\":\"right\",\"invertAxis\":\"xy\",\"translate\":[0,-2,0],\"boxes\":[{\"coordinates\":[-8,3,-1,16,8,2],\"textureOffset\":[0,0]}]},{\"part\":\"back\",\"id\":\"back\",\"invertAxis\":\"xy\",\"translate\":[0,-2,-10],\"boxes\":[{\"coordinates\":[-8,3,9,16,8,2],\"textureOffset\":[0,0]}]},{\"part\":\"bottom\",\"id\":\"bottom\",\"invertAxis\":\"xy\",\"translate\":[0,-7,-5],\"boxes\":[{\"coordinates\":[-10,-1,4,20,16,2],\"textureOffset\":[0,10]}]}]}"
     },
     "mooshroom_mushrooms": {
-      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAKlBMVEUAAAD///9D6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkgU/CCAAAAAnRSTlMAAHaTzTgAAADWSURBVHhe7dMxCoMwFIDhDB26eoW04FoQF+fg0lFyg9ADuOQKyQ3iFVKH7uIFJDeQ3qXvhVBCqUpxaus3hh/MeyoBCmRgfyKxHTt3twQD3TQm57w6XknskBVKzQa80OazAFrmdV4IoktCUF6A6O9gDAGllAFrbQfiIFwylTWcitYNcDzGAUFfEbyOGS8qBE8UZZ5FyouCVEpZ5xxUrXNu0A0wGOCeZwNt8moxWPMInBJHnAzSuhTt0I9rgi2IVz35wbCAvJfg34jEDwRbsPy6k3n/FWzBAwO59//D7c9oAAAAAElFTkSuQmCC",
-      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[4,22,-12,1,3,1],\"uvNorth\":[23,1,24,4],\"uvEast\":[22,1,23,4],\"uvSouth\":[25,1,26,4],\"uvWest\":[24,1,25,4],\"uvUp\":[24,1,23,0],\"uvDown\":[25,0,24,1]},{\"coordinates\":[-4,16,-14,8,8,6],\"uvNorth\":[6,6,14,14],\"uvEast\":[0,6,6,14],\"uvSouth\":[20,6,28,14],\"uvWest\":[14,6,20,14],\"uvUp\":[14,6,6,0],\"uvDown\":[22,0,14,6]},{\"coordinates\":[-5,22,-12,1,3,1],\"uvNorth\":[23,1,24,4],\"uvEast\":[22,1,23,4],\"uvSouth\":[25,1,26,4],\"uvWest\":[24,1,25,4],\"uvUp\":[24,1,23,0],\"uvDown\":[25,0,24,1]}],\"submodels\":[{\"id\":\"mushroom1\",\"invertAxis\":\"xy\",\"translate\":[0,24,-11.2],\"rotate\":[0,33,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,32,16,48]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,32,16,48]}]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"uvNorth\":[28,14,40,32],\"uvEast\":[18,14,28,32],\"uvSouth\":[50,14,62,32],\"uvWest\":[40,14,50,32],\"uvUp\":[40,14,28,4],\"uvDown\":[52,4,40,14]},{\"coordinates\":[-2,11,-6,4,6,1],\"uvNorth\":[53,1,57,7],\"uvEast\":[52,1,53,7],\"uvSouth\":[58,1,62,7],\"uvWest\":[57,1,58,7],\"uvUp\":[57,1,53,0],\"uvDown\":[61,0,57,1]}],\"submodels\":[{\"id\":\"mushrooms\",\"invertAxis\":\"xy\",\"translate\":[0,24,5],\"rotate\":[90,0,0],\"submodels\":[{\"id\":\"mushroom2\",\"invertAxis\":\"xy\",\"translate\":[2.025,0,2.8],\"rotate\":[0,-39,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,32,16,48]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,32,16,48]}]},{\"id\":\"mushroom3\",\"invertAxis\":\"xy\",\"translate\":[-3.2,0,11],\"rotate\":[0,3,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,32,16,48]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,32,16,48]}]}]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]}]}"
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE2mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4xLWMwMDIgNzkuNzhiNzYzOCwgMjAyNS8wMi8xMS0xOToxMDowOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI2LjUgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyNC0xMS0xM1QyMTo1NDo1OVoiIHhtcDpNb2RpZnlEYXRlPSIyMDI1LTAzLTI1VDExOjE1OjAxWiIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNS0wMy0yNVQxMToxNTowMVoiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQzOWUyNWVjLTlmNDctMTI0ZC1iMTI1LWU1ZWY5M2VmODk4NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MzllMjVlYy05ZjQ3LTEyNGQtYjEyNS1lNWVmOTNlZjg5ODUiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MzllMjVlYy05ZjQ3LTEyNGQtYjEyNS1lNWVmOTNlZjg5ODUiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjQzOWUyNWVjLTlmNDctMTI0ZC1iMTI1LWU1ZWY5M2VmODk4NSIgc3RFdnQ6d2hlbj0iMjAyNC0xMS0xM1QyMTo1NDo1OVoiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNi41IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4iZJmeAAAC70lEQVR4nO2av2uTQRjHv1cCKcRBWjGBlNDYhg7+A9nTreDq0NHBUWinBhF3+2awk4OGDqGL2eqm4FicXwfBUlsMvhFHCwrCOYQ3zT3v3fsjSd+nyXufrfdeL998770n9zx3AgaO3XNpegYAbecg7DG67X1x7J7LtnOAbntfhHaeMtvvfyvaX1efKc8X11pCykGXXNhA9fUVbfvJ1+8AgHKxpH3e63toeI48cpdxWFtC53RHLq61UjGh4Tnyz95zpe1f7Q4+Ptge/n3sPpEABAAspCGKg3KxFJig+vpKYFLn1oC4hC6BSfhQ2hXALjoA0Lxqp+szCrp+o9hK1DvCAH+tm+j1vYQfN2C1VIjV75t3CQDIlzdi9f/b+5JYS67hOdoZOXKXQ//xsLakH/DhLwBA5+mOdtxHZ4n0jY1ucnQTmgOAevGu2rH/E4B5pvyZKVQrSvvl2QUA84yNM0NJGSw9lS4ANJtKm/8zmPkgaA3gFsCNNYBbADc54CrqU/xob8KP+pSoaB81btLxJmFqCYppP0G5vfcj0bim/QZlNNmJw9b9igCmvBWm+wmK/6aZskiKv5mh+w2K/yaasteAjpENUcAAWgegeX/auf11ow2CNG3UpZbzgv0V0DXSpGHcrG8WCGSDNAukUbhzqmZ5aZW6rosFYBC9RyP4aqmgZIKFakWJxPnyRuwc/aaT+RhgDeAWwI01gFsAN9YAbgHcWAO4BXCjrQjRig2t/JgqNKbKEiVpbmGqPAU+P+IkS8fwnHxchJjNVCBwP+Dd5wutE6aLEG/fvJjNb04QUkps9luy5D7Wdnj16eXwvI+Sv+eIuXkDgOBZ4GgsoNlfGud8aaAYEFaunpcvTBFJLyxQOpu3ZnINKEsg7oUFStIDjptI5jdC1gBuAdxYA7gFcGMN4BbAjTWAWwA3E1+QmLSewE3m3wBrALcAbnLAfGR14zJxUXTWyfwSsAZwC+DGGsAtgBtrALcAbqwB3AK4ybwB/wG8Ee/a50wwIgAAAABJRU5ErkJggg==",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[4,22,-13,1,3,1],\"uvNorth\":[23,1,24,4],\"uvEast\":[22,1,23,4],\"uvSouth\":[25,1,26,4],\"uvWest\":[24,1,25,4],\"uvUp\":[24,1,23,0],\"uvDown\":[25,0,24,1]},{\"coordinates\":[-4,16,-14,8,8,6],\"uvNorth\":[6,6,14,14],\"uvEast\":[0,6,6,14],\"uvSouth\":[20,6,28,14],\"uvWest\":[14,6,20,14],\"uvUp\":[14,6,6,0],\"uvDown\":[22,0,14,6]},{\"coordinates\":[-5,22,-13,1,3,1],\"uvNorth\":[23,1,24,4],\"uvEast\":[22,1,23,4],\"uvSouth\":[25,1,26,4],\"uvWest\":[24,1,25,4],\"uvUp\":[24,1,23,0],\"uvDown\":[25,0,24,1]},{\"coordinates\":[-3,16,-15,6,3,1],\"textureOffset\":[1,33]}],\"submodels\":[{\"id\":\"mushroom1\",\"invertAxis\":\"xy\",\"translate\":[0,24,-11.2],\"rotate\":[0,33,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,37,16,53]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,37,16,53]}]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"uvNorth\":[28,14,40,32],\"uvEast\":[18,14,28,32],\"uvSouth\":[50,14,62,32],\"uvWest\":[40,14,50,32],\"uvUp\":[40,14,28,4],\"uvDown\":[52,4,40,14]},{\"coordinates\":[-2,11,-6,4,6,1],\"uvNorth\":[53,1,57,7],\"uvEast\":[52,1,53,7],\"uvSouth\":[58,1,62,7],\"uvWest\":[57,1,58,7],\"uvUp\":[57,1,53,0],\"uvDown\":[61,0,57,1]}],\"submodels\":[{\"id\":\"mushrooms\",\"invertAxis\":\"xy\",\"translate\":[0,24,5],\"rotate\":[90,0,0],\"submodels\":[{\"id\":\"mushroom2\",\"invertAxis\":\"xy\",\"translate\":[2.025,0,2.8],\"rotate\":[0,-39,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,37,16,53]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,37,16,53]}]},{\"id\":\"mushroom3\",\"invertAxis\":\"xy\",\"translate\":[-3.2,0,11],\"rotate\":[0,3,0],\"boxes\":[{\"coordinates\":[-8,0,0,16,13,0],\"uvNorth\":[0,37,16,53]},{\"coordinates\":[0,0,-8,0,13,16],\"uvEast\":[0,37,16,53]}]}]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"uvNorth\":[4,20,8,32],\"uvEast\":[0,20,4,32],\"uvSouth\":[12,20,16,32],\"uvWest\":[8,20,12,32],\"uvUp\":[8,20,4,16],\"uvDown\":[12,16,8,20]}]}]}"
     },
     "panda": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAANlJREFUeF7t08EJgzAYhuGUAp6j4FlCNwhdQNxAMkAvWSHdQDeQ6MVzcIGSDSRDNX+a0FMaaCmlrc9NePkMEVGEEIIQguLOfXdo6g8E0UNmwiFOhRDGmFIqpVRK3YLegk1gg5Kfjqyd9GUx628E6XvAVkEdaY3KQQHMcV4wCza1Hg1Y3SjMPR3s4K1whDka2Ge5GPO2IH0GdJe4qGBPAxXMGdxEFQLmtYvxZrtr9x4FrB3NmgxeeQVyvj1IfYsQYCcngXQGEaCSg7zx6kmDofe6Pwy2YAuSP84VP03pZ4Jsh6cAAAAASUVORK5CYII=",
@@ -3461,18 +3621,26 @@
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0.5,-5,0],\"boxes\":[{\"coordinates\":[-2.5,4,-8,5,3,9],\"textureOffset\":[0,8]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0.5,-3.75,8],\"boxes\":[{\"coordinates\":[-3.5,2.75,-13,7,3,5],\"textureOffset\":[0,0]}]},{\"part\":\"left_wing\",\"id\":\"left_wing\",\"invertAxis\":\"xy\",\"translate\":[2.5,-7,8],\"boxes\":[{\"coordinates\":[-8.5,5,-8,6,2,9],\"textureOffset\":[23,12]}]},{\"part\":\"left_wing_tip\",\"id\":\"left_wing_tip\",\"invertAxis\":\"xy\",\"translate\":[8.5,-7,8],\"boxes\":[{\"coordinates\":[-21.5,6,-8,13,1,9],\"textureOffset\":[16,24]}]},{\"part\":\"right_wing\",\"id\":\"right_wing\",\"invertAxis\":\"xy\",\"translate\":[-2.5,-7,8],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[2.5,5,-8,6,2,9],\"textureOffset\":[23,12]}]},{\"part\":\"right_wing_tip\",\"id\":\"right_wing_tip\",\"invertAxis\":\"xy\",\"translate\":[-8.5,-7,8],\"mirrorTexture\":\"u\",\"boxes\":[{\"coordinates\":[8.5,6,-8,13,1,9],\"textureOffset\":[16,24]}]},{\"part\":\"tail\",\"id\":\"tail\",\"invertAxis\":\"xy\",\"translate\":[0.5,-7,-1],\"boxes\":[{\"coordinates\":[-1.5,5,1,3,2,6],\"textureOffset\":[3,20]}]},{\"part\":\"tail2\",\"id\":\"tail2\",\"invertAxis\":\"xy\",\"translate\":[0.5,-6.5,-7],\"boxes\":[{\"coordinates\":[-0.5,5.5,7,1,1,6],\"textureOffset\":[4,29]}]}]}"
     },
     "pig": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAABNppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5Ljc4Yjc2MzgsIDIwMjUvMDIvMTEtMTk6MTA6MDggICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMTEtMTNUMjE6NTQ6NThaIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNS0wMy0yNVQxMzowNzoyN1oiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDMtMjVUMTM6MDc6MjdaIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmMDNhNzM5NS1iZDc1LTgzNDgtYTg2Zi1mNzg4MTAzZTBkM2EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZjAzYTczOTUtYmQ3NS04MzQ4LWE4NmYtZjc4ODEwM2UwZDNhIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZjAzYTczOTUtYmQ3NS04MzQ4LWE4NmYtZjc4ODEwM2UwZDNhIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmMDNhNzM5NS1iZDc1LTgzNDgtYTg2Zi1mNzg4MTAzZTBkM2EiIHN0RXZ0OndoZW49IjIwMjQtMTEtMTNUMjE6NTQ6NThaIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjYuNSAoV2luZG93cykiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7AMo2QAAAM9JREFUWIXtldsOgjAMhr/OIe//svMC3bzYITsY3dSEm37JaKHlp3QlCIk92SNZzxy2eAJAwCzdn9J/QAXqXQjJTvc/ItKVcs2BZB1wKel78VypYAPgKPvf21rdV1734K9RAbDD99vb1h+mRCDu7pGj1YnUSeRgq2NTRsDEq3IHdgEc3YzU05E1w4seGJMPM8QKQl2Vb2v8JCDAnfh2ArgHcJu9HQzbFgvOa5HzB+lPk+irtSoQgMXGN5zfg/MF7Nvo+K/PXhhyFUVRFEVREk+QRzQmOZOPMQAAAABJRU5ErkJggg==",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16]}]}]}"
+    },
+    "pig_21.4": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAKpJREFUeF7VkbEJwzAQRa9LHQKug/EGwoVbow2EBnDjAdIoG0grBG9gtIDxBsJD5f9ASKNEZdCrJHjS3f0T4kAL5Bv3EHyn9VitUB7zDBR4gBWIKLISIc08T721Ztn3LR5HEsHNGhxxrkMoj0kYksjJ3drrS28JfUcYtO8Q8kUNeMKCCF2PrIgNBP8R7BBTXmCJHz+wRbYnJCc0U2+WLaY/CuUm39QjZNb9BL/dGA+0NR6rAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16]}]}]}"
     },
     "pig_saddle": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAABNppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5Ljc4Yjc2MzgsIDIwMjUvMDIvMTEtMTk6MTA6MDggICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMTEtMTRUMTE6MzM6MDBaIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyNS0wMy0yNVQxMzowNzoxM1oiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDMtMjVUMTM6MDc6MTNaIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NDU2ZDFiMC0xZWQwLTJlNDQtODM0Mi0wZDAyMGQ4NWFkOGYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ1NmQxYjAtMWVkMC0yZTQ0LTgzNDItMGQwMjBkODVhZDhmIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDQ1NmQxYjAtMWVkMC0yZTQ0LTgzNDItMGQwMjBkODVhZDhmIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NDU2ZDFiMC0xZWQwLTJlNDQtODM0Mi0wZDAyMGQ4NWFkOGYiIHN0RXZ0OndoZW49IjIwMjQtMTEtMTRUMTE6MzM6MDBaIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjYuNSAoV2luZG93cykiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+dXzV8AAAAM9JREFUWIXtldsOgjAMhr/OIe//svMC3bzYITsY3dSEm37JaKHlp3QlCIk92SNZzxy2eAJAwCzdn9J/QAXqXQjJTvc/ItKVcs2BZB1wKel78VypYAPgKPvf21rdV1734K9RAbDD99vb1h+mRCDu7pGj1YnUSeRgq2NTRsDEq3IHdgEc3YzU05E1w4seGJMPM8QKQl2Vb2v8JCDAnfh2ArgHcJu9HQzbFgvOa5HzB+lPk+irtSoQgMXGN5zfg/MF7Nvo+K/PXhhyFUVRFEVREk+QRzQmOZOPMQAAAABJRU5ErkJggg==",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8],\"sizeAdd\":0.5}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":0.5},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16],\"sizeAdd\":0.5}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]}]}"
+    },
+    "pig_saddle_21.4": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAAKpJREFUeF7VkbEJwzAQRa9LHQKug/EGwoVbow2EBnDjAdIoG0grBG9gtIDxBsJD5f9ASKNEZdCrJHjS3f0T4kAL5Bv3EHyn9VitUB7zDBR4gBWIKLISIc08T721Ztn3LR5HEsHNGhxxrkMoj0kYksjJ3drrS28JfUcYtO8Q8kUNeMKCCF2PrIgNBP8R7BBTXmCJHz+wRbYnJCc0U2+WLaY/CuUm39QjZNb9BL/dGA+0NR6rAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8],\"sizeAdd\":0.5}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":0.5},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16],\"sizeAdd\":0.5}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]}]}"
     },
     "pig_saddle_unedited": {
-      "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8],\"sizeAdd\":0.5}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":0.5},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16],\"sizeAdd\":0.5}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8],\"sizeAdd\":0.5}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0],\"sizeAdd\":0.5},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16],\"sizeAdd\":0.5}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16],\"sizeAdd\":0.5}]}]}"
     },
     "pig_unedited": {
-      "model": "{\"textureSize\":[64,32],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16]}]}]}"
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-13,-2],\"boxes\":[{\"coordinates\":[-5,7,-5,10,16,8],\"textureOffset\":[28,8]}]},{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-12,6],\"boxes\":[{\"coordinates\":[-4,8,-14,8,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,9,-15,4,3,1],\"textureOffset\":[16,16]}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,-7],\"boxes\":[{\"coordinates\":[1,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[3,-6,-7],\"boxes\":[{\"coordinates\":[-5,0,5,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-3,-6,5],\"boxes\":[{\"coordinates\":[1,0,-7,4,6,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[3,-6,5],\"boxes\":[{\"coordinates\":[-5,0,-7,4,6,4],\"textureOffset\":[0,16]}]}]}"
     },
     "piglin": {
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-5,24,-4,10,8,8],\"textureOffset\":[0,0]},{\"coordinates\":[-2,24,-5,4,4,1],\"textureOffset\":[31,1]},{\"coordinates\":[-3,24,-5,1,2,1],\"textureOffset\":[2,4]},{\"coordinates\":[2,24,-5,1,2,1],\"textureOffset\":[2,0]}]},{\"part\":\"left_ear\",\"id\":\"left_ear\",\"invertAxis\":\"xy\",\"translate\":[4.5,-30,0],\"rotate\":[0,0,-35],\"boxes\":[{\"coordinates\":[-5.5,25,-2,1,5,4],\"textureOffset\":[51,6]}],\"animations\":[{\"this.rz\":0}]},{\"part\":\"right_ear\",\"id\":\"right_ear\",\"invertAxis\":\"xy\",\"translate\":[-4.5,-30,0],\"rotate\":[0,0,35],\"boxes\":[{\"coordinates\":[4.5,25,-2,1,5,4],\"textureOffset\":[39,6]}],\"animations\":[{\"this.rz\":0}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-2,8,12,4],\"textureOffset\":[16,16]}]},{\"part\":\"jacket\",\"id\":\"jacket\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-2,8,12,4],\"textureOffset\":[16,32],\"sizeAdd\":0.25}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[32,48]}]},{\"part\":\"left_sleeve\",\"id\":\"left_sleeve\",\"invertAxis\":\"xy\",\"translate\":[5,-22,0],\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[48,48],\"sizeAdd\":0.25}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,16]}]},{\"part\":\"right_sleeve\",\"id\":\"right_sleeve\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[40,32],\"sizeAdd\":0.25}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[2,-12,0],\"boxes\":[{\"coordinates\":[-4,0,-2,4,12,4],\"textureOffset\":[16,48]}]},{\"part\":\"left_pants\",\"id\":\"left_pants\",\"invertAxis\":\"xy\",\"translate\":[2,-12,0],\"boxes\":[{\"coordinates\":[-4,0,-2,4,12,4],\"textureOffset\":[0,48],\"sizeAdd\":0.25}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[0,0,-2,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"right_pants\",\"id\":\"right_pants\",\"invertAxis\":\"xy\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[0,0,-2,4,12,4],\"textureOffset\":[0,32],\"sizeAdd\":0.25}]}]}"
@@ -3654,6 +3822,10 @@
     },
     "warden": {
       "model": "{\"textureSize\":[128,128],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-34,1],\"boxes\":[{\"coordinates\":[-8,34,-6,16,16,10],\"textureOffset\":[0,32]}]},{\"part\":\"left_tendril\",\"id\":\"left_tendril\",\"invertAxis\":\"xy\",\"translate\":[8,-46,0],\"boxes\":[{\"coordinates\":[-24,43,0,16,16,0],\"textureOffset\":[58,0]}]},{\"part\":\"right_tendril\",\"id\":\"right_tendril\",\"invertAxis\":\"xy\",\"translate\":[-8,-46,0],\"boxes\":[{\"coordinates\":[8,43,0,16,16,0],\"textureOffset\":[52,32]}]},{\"part\":\"torso\",\"id\":\"torso\",\"invertAxis\":\"xy\",\"translate\":[0,-21,1],\"boxes\":[{\"coordinates\":[-9,13,-5,18,21,11],\"textureOffset\":[0,0]}]},{\"part\":\"left_ribcage\",\"id\":\"left_ribcage\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[7,-23,5],\"boxes\":[{\"coordinates\":[-9,13,-5.1,9,21,0],\"textureOffset\":[90,11]}]},{\"part\":\"right_ribcage\",\"id\":\"right_ribcage\",\"invertAxis\":\"xy\",\"translate\":[-7,-23,5],\"boxes\":[{\"coordinates\":[0,13,-5.1,9,21,0],\"textureOffset\":[90,11]}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"translate\":[13,-34,0],\"boxes\":[{\"coordinates\":[-17,6,-4,8,28,8],\"textureOffset\":[0,58]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-13,-34,0],\"boxes\":[{\"coordinates\":[9,6,-4,8,28,8],\"textureOffset\":[44,50]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[6,-13,1],\"boxes\":[{\"coordinates\":[-9.1,0,-4,6,13,6],\"textureOffset\":[76,76]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"translate\":[-6,-13,1],\"boxes\":[{\"coordinates\":[3.1,0,-4,6,13,6],\"textureOffset\":[76,48]}]}]}"
+    },
+    "warm_cow": {
+      "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAo1JREFUeJztmrFrFEEUxr8NCxG2CRq8hQ0xhwlprOV6y4itRUqLdAmYKiGIf4CxiJWFBIvDKl1KA5ZifU1AORVDLmJpIIJwKXJzzLydmduNuRs39/2qu5m3796+N/Nu3tuN4GC/9a3rmgOA3e1Xvmns7b6IiuqWuuS1Sl7J+XQDwPL734b+N/VnxvyNuy/718c+RY35Gev4x88/AABZLbXOH510fGqHyoPOdvds47kx9ndhGh8eLfe/77fWug/v3YkwyAHDMA4A3rVuGeNvF24CAOLHvwAAza2nXQBYSjLo8kqu+eViXo+kRAVHD4YKqAogAExc0b1VlpGugIN0PZL7EwBW7q9efGib46nav2oP1835s95K0FkqaZPXAfpSsXHZvT6XJoXkvnZOAQCT2WIh+T9Hh6VtidW+lMh9KlH7MadQ7GPJk7Zt9OqxBccW0BgAGrXbpuDJT8ATKRWZpD5rjJ+2vwOeiF0mQmU5SNdziXEPADY3rfJjnwTpgNAGhIYOCG1AaGJoWV+isr0LlfUlg7L9IL1l9f0L3qqqDK7zhGRq47iUXtd5Q6IXO0UYSjEkzxMStdJcVaREHWbkeUOiVqKres3ZoR2Icg4oW6tXHWsSbMzPGN7MamnhqFUN/gvYBmXRELLDM2xy1aCrW6Noihrc15WpAhPoZW89g8+liVEJJvVZIxNPZouFa/T/nbHPAXRAaANCQweENiA0dEBoA0JDB4Q2IDTWjpDs2MjOj6tD4+osScrWFq7OU+73BzzJIhb6hYzrhQjXixDXpTESodfPS1srVoHXn3b6z/skVa8EIfsB8lmgngtk9TeK53yjwHCAr119XW6YEEIIIYQQQgghhBBCCCGEkDHlHORw4jJjYg19AAAAAElFTkSuQmCC",
+      "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-20,8],\"boxes\":[{\"coordinates\":[-4,16,-14,8,8,6],\"textureOffset\":[0,0]},{\"coordinates\":[4,21,-14,4,2,2],\"textureOffset\":[27,0]},{\"coordinates\":[6,23,-14,2,2,2],\"textureOffset\":[39,0]},{\"coordinates\":[-3,16,-15,6,3,1],\"textureOffset\":[1,33]}],\"submodels\":[{\"id\":\"mirrored\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[0,0,0],\"boxes\":[{\"coordinates\":[-8,21,-14,4,2,2],\"textureOffset\":[27,0]},{\"coordinates\":[-8,23,-14,2,2,2],\"textureOffset\":[39,0]}]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-19,-2],\"rotate\":[-90,0,0],\"boxes\":[{\"coordinates\":[-6,11,-5,12,18,10],\"textureOffset\":[18,4]},{\"coordinates\":[-2,11,-6,4,6,1],\"textureOffset\":[52,0]}],\"animations\":[{\"this.rx\":0}]},{\"part\":\"leg1\",\"id\":\"leg1\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,-7],\"boxes\":[{\"coordinates\":[2,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg2\",\"id\":\"leg2\",\"invertAxis\":\"xy\",\"translate\":[4,-12,-7],\"boxes\":[{\"coordinates\":[-6,0,5,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg3\",\"id\":\"leg3\",\"invertAxis\":\"xy\",\"translate\":[-4,-12,6],\"boxes\":[{\"coordinates\":[2,0,-7,4,12,4],\"textureOffset\":[0,16]}]},{\"part\":\"leg4\",\"id\":\"leg4\",\"invertAxis\":\"xy\",\"translate\":[4,-12,6],\"boxes\":[{\"coordinates\":[-6,0,-7,4,12,4],\"textureOffset\":[0,16]}]}]}"
     },
     "wind_charge": {
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgBAMAAABQs2O3AAAAD1BMVEUAAABbvPR71P+01OHs+P0AOtSBAAAAAXRSTlMAQObYZgAAAC9JREFUOMtjMWbAD1gECSlgIKTgPSEF9waBGwgqoENAMYwG9dAJ6sEQWZRbQcgEAM0YC4HI3l+2AAAAAElFTkSuQmCC",
