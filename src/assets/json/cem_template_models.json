@@ -2633,11 +2633,25 @@
           "texture_name": "pig",
           "variants": [
             {
+              "name": "pig_saddle_21.4",
+              "display_name": "Pig Saddle",
+              "file_name": "pig_saddle",
+              "texture_name": "pig_saddle_21.4"
+            },
+            {
               "name": "pig_baby_21.4",
               "display_name": "Baby Pig",
               "file_name": "pig_baby",
               "texture_name": "pig_baby",
               "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "pig_baby_saddle_21.4",
+              "display_name": "Baby Pig Saddle",
+              "file_name": "pig_baby_saddle",
+              "texture_name": "pig_baby_saddle",
+              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the saddle model.",
+              "model": "pig_saddle_21.4"
             }
           ]
         },
