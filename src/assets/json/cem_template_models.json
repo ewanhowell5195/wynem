@@ -1,5 +1,5 @@
 {
-  "version": "3.5.0",
+  "version": "3.5.1",
   "categories": [
     {
       "name": "Supported",
@@ -1368,10 +1368,10 @@
         },
         {
           "name": "mooshroom_21.4",
-          "display_name": "Cow",
-          "file_name": "cow",
-          "texture_name": "cow",
-          "model": "cow_21.1",
+          "display_name": "Mooshroom",
+          "file_name": "mooshroom",
+          "texture_name": "mooshroom",
+          "model": "cow_21.4",
           "variants": [
             {
               "name": "mooshroom_baby_21.4",
