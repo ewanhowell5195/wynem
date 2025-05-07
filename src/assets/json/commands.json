@@ -477,7 +477,7 @@
                   "arguments": "<member> <member2> <member3> [boardSize]",
                   "description": [
                     "Play Snakes and Ladders.",
-                    "The maximum board size is `16x16`"
+                    "The maximum board size is \"16x16\""
                   ],
                   "extra": [
                     {
@@ -621,15 +621,6 @@
               "description": "Make a cow say something!",
               "slashCommand": "fun/cowsay"
             },
-            "flow": {
-              "aliases": [
-                "flowinspireme",
-                "flowinspire"
-              ],
-              "cooldown": 15,
-              "description": "Generate an \"inspirational\" flow of images and quotes.",
-              "slashCommand": "fun/flow"
-            },
             "hate": {
               "aliases": [
                 "h8"
@@ -717,8 +708,7 @@
                   "These work on any command that accepts an image:",
                   "```Format: prefix:argument:optional_argument\n\nb:@ping\n - get a users banner\nu:@ping\n - get a user\ncolour:colour:size, color:colour:size\n - get a solid colour\nmc:username, skin:username\n - get the minecraft skin of a Minecraft username\nmc:@ping, skin:@ping\n - get the minecraft skin of a member\ncape:username\n - get the minecraft cape of a Minecraft username\ncape:@ping\n - get the minecraft cape of a member\ntexture:filename:version\n - get a minecraft texture```"
                 ]
-              ],
-              "temp": "image:term, search:term\n - get an image from duckduckgo"
+              ]
             }
           ],
           "categories": {
@@ -1451,7 +1441,7 @@
                       ],
                       "arguments": "[strength] [x] [y] [radius] {image}",
                       "description": "Apply a bulge or a pinch effect to an image.",
-                      "slashCommand": "imagefun/distortions/bulge"
+                      "slashCommand": "imagedistortions/bulge"
                     },
                     "gmagick": {
                       "aliases": [
@@ -1468,7 +1458,7 @@
                       "arguments": "{image}",
                       "cooldown": 5,
                       "description": "Content aware scales an image where the intensity gets stronger over time.",
-                      "slashCommand": "imagefun/distortions/gmagick"
+                      "slashCommand": "imagedistortions/gmagick"
                     },
                     "localtwist": {
                       "aliases": [
@@ -1478,7 +1468,7 @@
                       ],
                       "arguments": "[degrees] [x] [y] [radius] {image}",
                       "description": "Apply a twist effect to an image over a certain area.",
-                      "slashCommand": "imagefun/distortions/localtwist"
+                      "slashCommand": "imagedistortions/localtwist"
                     },
                     "magick": {
                       "aliases": [
@@ -1490,7 +1480,7 @@
                       "arguments": "[intensity] {image}",
                       "cooldown": 5,
                       "description": "Content aware scales an image.",
-                      "slashCommand": "imagefun/distortions/magick"
+                      "slashCommand": "imagedistortions/magick"
                     },
                     "sinetwist": {
                       "aliases": [
@@ -1507,7 +1497,7 @@
                       ],
                       "arguments": "[amplitude] [period] [x] [y] [phaseShift] {image}",
                       "description": "Apply an occilating twist effect to an image.",
-                      "slashCommand": "imagefun/distortions/sinetwist"
+                      "slashCommand": "imagedistortions/sinetwist"
                     },
                     "twist": {
                       "aliases": [
@@ -1515,7 +1505,7 @@
                       ],
                       "arguments": "[degrees] [x] [y] {image}",
                       "description": "Apply a twist effect to an image.",
-                      "slashCommand": "imagefun/distortions/twist"
+                      "slashCommand": "imagedistortions/twist"
                     }
                   }
                 },
@@ -1610,6 +1600,18 @@
                 },
                 "memes": {
                   "commands": {
+                    "arrowpoint": {
+                      "aliases": [
+                        "arrow",
+                        "arrowpointup",
+                        "arrowup",
+                        "arrowpointdown",
+                        "arrowdown"
+                      ],
+                      "arguments": "{image}",
+                      "description": "Make the image point to the message above",
+                      "slashCommand": "imagefun/memes/arrowpoint"
+                    },
                     "neuronactivation": {
                       "aliases": [
                         "neuron",
@@ -2289,7 +2291,7 @@
                     "enlarge"
                   ],
                   "arguments": "{image}",
-                  "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
+                  "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 566x350.",
                   "slashCommand": "imagemanipulation/scale",
                   "contextCommand": "message/scale-image"
                 },
@@ -2989,6 +2991,15 @@
               "cooldown": 5,
               "description": "Search for something on the Minecraft Wiki.",
               "slashCommand": "minecraft/wiki"
+            },
+            "mojira": {
+              "aliases": [
+                "minecraftissue",
+                "mcissue"
+              ],
+              "arguments": "[issue]",
+              "description": "View a bug on the Minecraft issue tracker.",
+              "slashCommand": "minecraft/mojira"
             },
             "optifine": {
               "aliases": [
@@ -4309,6 +4320,7 @@
                 "calc",
                 "math"
               ],
+              "arguments": "[expression]",
               "description": "Summon a calculator.",
               "slashCommand": "utility/calculator"
             },
@@ -4389,6 +4401,12 @@
               "description": [
                 "Translate a message to another language",
                 "The [languages] are optional. Each language must be inside [] for them to register. Run the command without any text to see the available languages."
+              ],
+              "extra": [
+                {
+                  "title": "Available Translation Languages",
+                  "description": "```yml\nDetect language: auto\nAfrikaans: af\nAlbanian: sq\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAymara: ay\nAzerbaijani: az\nBambara: bm\nBasque: eu\nBelarusian: be\nBengali: bn\nBhojpuri: bho\nBosnian: bs\nBulgarian: bg\nCatalan: ca\nCebuano: ceb\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nCorsican: co\nCroatian: hr\nCzech: cs\nDanish: da\nDhivehi: dv\nDogri: doi\nDutch: nl\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFilipino: tl\nFinnish: fi\nFrench: fr\nFrisian: fy\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHausa: ha\nHawaiian: haw\nHebrew: iw\nHebrew: he\nHindi: hi\nHmong: hmn\nHungarian: hu\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nIrish: ga\nItalian: it\nJapanese: ja\nJavanese: jw\nKannada: kn\nKazakh: kk\nKhmer: km\nKinyarwanda: rw\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatin: la\nLatvian: lv\nLingala: ln\nLithuanian: lt\nLuganda: lg\nLuxembourgish: lb\nMacedonian: mk\nMaithili: mai\nMalagasy: mg\nMalay: ms\nMalayalam: ml\nMaltese: mt\nMaori: mi\nMarathi: mr\nMeiteilon (Manipuri): mni-Mtei\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNepali: ne\nNorwegian: no\nOdia (Oriya): or\nOromo: om\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese: pt\nPunjabi: pa\nQuechua: qu\nRomanian: ro\nRussian: ru\nSamoan: sm\nSanskrit: sa\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nShona: sn\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSwahili: sw\nSwedish: sv\nTajik: tg\nTamil: ta\nTatar: tt\nTelugu: te\nThai: th\nTigrinya: ti\nTsonga: ts\nTurkish: tr\nTurkmen: tk\nTwi: ak\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVietnamese: vi\nWelsh: cy\nXhosa: xh\nYiddish: yi\nYoruba: yo\nZulu: zu```"
+                }
               ],
               "slashCommand": "utility/translate",
               "contextCommand": "message/translate-message"
@@ -4476,6 +4494,12 @@
                 "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
                 "The [language] is optional. The language must be inside [] for it to register. Run the command without any text to see the available languages.",
                 "Add \"[file]\" at the start of the message to send it as an mp3 while you are in a voice channel."
+              ],
+              "extra": [
+                {
+                  "title": "Available TTS Languages",
+                  "description": "```yml\nAfrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi```"
+                }
               ],
               "slashCommand": "voice/tts"
             },
@@ -5304,7 +5328,7 @@
                 "snakesandladders": {
                   "description": [
                     "Play Snakes and Ladders.",
-                    "The maximum board size is `16x16`"
+                    "The maximum board size is \"16x16\""
                   ],
                   "arguments": [
                     {
@@ -5413,11 +5437,6 @@
                 }
               ],
               "prefixCommand": "fun/cowsay"
-            },
-            "flow": {
-              "description": "Generate an \"inspirational\" flow of images and quotes.",
-              "cooldown": 15,
-              "prefixCommand": "fun/flow"
             },
             "hate": {
               "description": "Discover how much you hate someone/something!",
@@ -6552,6 +6571,164 @@
             }
           }
         },
+        "imagedistortions": {
+          "commands": {
+            "bulge": {
+              "description": "Apply a bulge or a pinch effect to an image.",
+              "arguments": [
+                {
+                  "name": "strength",
+                  "description": "The bulge strength"
+                },
+                {
+                  "name": "x",
+                  "description": "The X coordinate to bulge from"
+                },
+                {
+                  "name": "y",
+                  "description": "The Y coordinate to bulge from"
+                },
+                {
+                  "name": "radius",
+                  "description": "How large the bulge radius should be"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/bulge"
+            },
+            "gmagick": {
+              "description": "Content aware scales an image where the intensity gets stronger over time.",
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/gmagick"
+            },
+            "localtwist": {
+              "description": "Apply a twist effect to an image over a certain area.",
+              "arguments": [
+                {
+                  "name": "degrees",
+                  "description": "Degrees to twist"
+                },
+                {
+                  "name": "x",
+                  "description": "X coordinate to twist from"
+                },
+                {
+                  "name": "y",
+                  "description": "Y coordinate to twist from"
+                },
+                {
+                  "name": "radius",
+                  "description": "How large the twist radius should be"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/localtwist"
+            },
+            "magick": {
+              "description": "Content aware scales an image.",
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "intensity",
+                  "description": "Magick intensity"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/magick"
+            },
+            "sinetwist": {
+              "description": "Apply an occilating twist effect to an image.",
+              "arguments": [
+                {
+                  "name": "amplitude",
+                  "description": "Maximum intensity of the twist"
+                },
+                {
+                  "name": "period",
+                  "description": "The length of one cycle"
+                },
+                {
+                  "name": "x",
+                  "description": "X coordinate to twist from"
+                },
+                {
+                  "name": "y",
+                  "description": "Y coordinate to twist from"
+                },
+                {
+                  "name": "phase-shift",
+                  "description": "Sine wave offset"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/sinetwist"
+            },
+            "twist": {
+              "description": "Apply a twist effect to an image.",
+              "arguments": [
+                {
+                  "name": "degrees",
+                  "description": "Degrees to twist"
+                },
+                {
+                  "name": "x",
+                  "description": "X coordinate to twist from"
+                },
+                {
+                  "name": "y",
+                  "description": "Y coordinate to twist from"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/distortions/twist"
+            }
+          }
+        },
         "imagefaces": {
           "commands": {
             "animeeyes": {
@@ -7239,166 +7416,30 @@
         },
         "imagefun": {
           "categories": {
-            "distortions": {
-              "commands": {
-                "bulge": {
-                  "description": "Apply a bulge or a pinch effect to an image.",
-                  "arguments": [
-                    {
-                      "name": "strength",
-                      "description": "The bulge strength"
-                    },
-                    {
-                      "name": "x",
-                      "description": "The X coordinate to bulge from"
-                    },
-                    {
-                      "name": "y",
-                      "description": "The Y coordinate to bulge from"
-                    },
-                    {
-                      "name": "radius",
-                      "description": "How large the bulge radius should be"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/bulge"
-                },
-                "gmagick": {
-                  "description": "Content aware scales an image where the intensity gets stronger over time.",
-                  "cooldown": 5,
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/gmagick"
-                },
-                "localtwist": {
-                  "description": "Apply a twist effect to an image over a certain area.",
-                  "arguments": [
-                    {
-                      "name": "degrees",
-                      "description": "Degrees to twist"
-                    },
-                    {
-                      "name": "x",
-                      "description": "X coordinate to twist from"
-                    },
-                    {
-                      "name": "y",
-                      "description": "Y coordinate to twist from"
-                    },
-                    {
-                      "name": "radius",
-                      "description": "How large the twist radius should be"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/localtwist"
-                },
-                "magick": {
-                  "description": "Content aware scales an image.",
-                  "cooldown": 5,
-                  "arguments": [
-                    {
-                      "name": "intensity",
-                      "description": "Magick intensity"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/magick"
-                },
-                "sinetwist": {
-                  "description": "Apply an occilating twist effect to an image.",
-                  "arguments": [
-                    {
-                      "name": "amplitude",
-                      "description": "Maximum intensity of the twist"
-                    },
-                    {
-                      "name": "period",
-                      "description": "The length of one cycle"
-                    },
-                    {
-                      "name": "x",
-                      "description": "X coordinate to twist from"
-                    },
-                    {
-                      "name": "y",
-                      "description": "Y coordinate to twist from"
-                    },
-                    {
-                      "name": "phase-shift",
-                      "description": "Sine wave offset"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/sinetwist"
-                },
-                "twist": {
-                  "description": "Apply a twist effect to an image.",
-                  "arguments": [
-                    {
-                      "name": "degrees",
-                      "description": "Degrees to twist"
-                    },
-                    {
-                      "name": "x",
-                      "description": "X coordinate to twist from"
-                    },
-                    {
-                      "name": "y",
-                      "description": "Y coordinate to twist from"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/imagefun/distortions/twist"
-                }
-              }
-            },
             "memes": {
               "commands": {
+                "arrowpoint": {
+                  "description": "Make the image point to the message above",
+                  "arguments": [
+                    {
+                      "name": "direction",
+                      "description": "The direction of the arrow"
+                    },
+                    {
+                      "name": "colour",
+                      "description": "The colour of the arrow"
+                    },
+                    {
+                      "name": "image-file",
+                      "description": "A file"
+                    },
+                    {
+                      "name": "image-string",
+                      "description": "URL, Emoji, etc"
+                    }
+                  ],
+                  "prefixCommand": "images/imagefun/memes/arrowpoint"
+                },
                 "neuronactivation": {
                   "description": "Activate a neuron by looking at an image.",
                   "arguments": [
@@ -8124,7 +8165,7 @@
               "prefixCommand": "images/manipulation/round"
             },
             "scale": {
-              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 566x350.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -9243,6 +9284,17 @@
                 }
               ],
               "prefixCommand": "minecraft/minecraftdungeonstitlegenerator"
+            },
+            "mojira": {
+              "description": "View a bug on the Minecraft issue tracker.",
+              "arguments": [
+                {
+                  "name": "issue",
+                  "description": "The issue ID",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "minecraft/mojira"
             },
             "optifine": {
               "description": "Get a link to download the latest OptiFine version.",
@@ -10488,6 +10540,12 @@
           "commands": {
             "calculator": {
               "description": "Summon a calculator.",
+              "arguments": [
+                {
+                  "name": "equation",
+                  "description": "The equation to calculate"
+                }
+              ],
               "prefixCommand": "utility/calculator"
             },
             "colour": {
@@ -10988,7 +11046,7 @@
               "slashCommand": "imagemanipulation/resize"
             },
             "scale-image": {
-              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 400x300.",
+              "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 566x350.",
               "type": "message",
               "prefixCommand": "images/manipulation/scale",
               "slashCommand": "imagemanipulation/scale"
