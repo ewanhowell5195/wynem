@@ -457,9 +457,6 @@
                   ],
                   "arguments": "<member> [diceSides]",
                   "description": "Play Knucklebones against someone.",
-                  "permissions": [
-                    "Guild Only"
-                  ],
                   "slashCommand": "fun/games/knucklebones"
                 },
                 "rockpaperscissors": {
@@ -549,9 +546,6 @@
                         ]
                       ]
                     }
-                  ],
-                  "permissions": [
-                    "Guild Only"
                   ],
                   "slashCommand": "fun/games/snakesandladders"
                 },
