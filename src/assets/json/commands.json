@@ -180,10 +180,7 @@
                     "commandlist"
                   ],
                   "arguments": "[category/command]",
-                  "description": [
-                    "Get a list of the bot's commands and information about each one.",
-                    "Argument types:\n\n[arg] - A text argument\n<arg> - A Discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
-                  ],
+                  "description": "Get a list of the bot's commands and information about each one.",
                   "slashCommand": "help"
                 },
                 "prefixlessmode": {
@@ -4399,7 +4396,7 @@
               "extra": [
                 {
                   "title": "Available Translation Languages",
-                  "description": "```yml\nDetect language: auto\nAfrikaans: af\nAlbanian: sq\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAymara: ay\nAzerbaijani: az\nBambara: bm\nBasque: eu\nBelarusian: be\nBengali: bn\nBhojpuri: bho\nBosnian: bs\nBulgarian: bg\nCatalan: ca\nCebuano: ceb\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nCorsican: co\nCroatian: hr\nCzech: cs\nDanish: da\nDhivehi: dv\nDogri: doi\nDutch: nl\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFilipino: tl\nFinnish: fi\nFrench: fr\nFrisian: fy\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHausa: ha\nHawaiian: haw\nHebrew: iw\nHebrew: he\nHindi: hi\nHmong: hmn\nHungarian: hu\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nIrish: ga\nItalian: it\nJapanese: ja\nJavanese: jw\nKannada: kn\nKazakh: kk\nKhmer: km\nKinyarwanda: rw\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatin: la\nLatvian: lv\nLingala: ln\nLithuanian: lt\nLuganda: lg\nLuxembourgish: lb\nMacedonian: mk\nMaithili: mai\nMalagasy: mg\nMalay: ms\nMalayalam: ml\nMaltese: mt\nMaori: mi\nMarathi: mr\nMeiteilon (Manipuri): mni-Mtei\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNepali: ne\nNorwegian: no\nOdia (Oriya): or\nOromo: om\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese: pt\nPunjabi: pa\nQuechua: qu\nRomanian: ro\nRussian: ru\nSamoan: sm\nSanskrit: sa\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nShona: sn\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSwahili: sw\nSwedish: sv\nTajik: tg\nTamil: ta\nTatar: tt\nTelugu: te\nThai: th\nTigrinya: ti\nTsonga: ts\nTurkish: tr\nTurkmen: tk\nTwi: ak\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVietnamese: vi\nWelsh: cy\nXhosa: xh\nYiddish: yi\nYoruba: yo\nZulu: zu```"
+                  "description": "```yml\nDetect language: auto\nAfrikaans: af\nAlbanian: sq\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAymara: ay\nAzerbaijani: az\nBambara: bm\nBasque: eu\nBelarusian: be\nBengali: bn\nBhojpuri: bho\nBosnian: bs\nBulgarian: bg\nCatalan: ca\nCebuano: ceb\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nCorsican: co\nCroatian: hr\nCzech: cs\nDanish: da\nDhivehi: dv\nDogri: doi\nDutch: nl\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFilipino: tl\nFinnish: fi\nFrench: fr\nFrisian: fy\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHausa: ha\nHawaiian: haw\nHebrew: iw\nHebrew: he\nHindi: hi\nHmong: hmn\nHungarian: hu\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nIrish: ga\nItalian: it\nJapanese: ja\nJavanese: jw\nKannada: kn\nKazakh: kk\nKhmer: km\nKinyarwanda: rw\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatin: la\nLatvian: lv\nLingala: ln\nLithuanian: lt\nLuganda: lg\nLuxembourgish: lb\nMacedonian: mk\nMaithili: mai\nMalagasy: mg\nMalay: ms\nMalayalam: ml\nMaltese: mt\nMaori: mi\nMarathi: mr\nMeiteilon (Manipuri): mni-Mtei\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNepali: ne\nNorwegian: no\nOdia (Oriya): or\nOromo: om\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese: pt\nPunjabi: pa\nQuechua: qu\nRomanian: ro\nRussian: ru\nSamoan: sm\nSanskrit: sa\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nShona: sn\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSwahili: sw\nSwedish: sv\nTajik: tg\nTamil: ta\nTatar: tt\nTelugu: te\nThai: th\nTigrinya: ti\nTsonga: ts\nTurkish: tr\nTurkmen: tk\nTwi: ak\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVietnamese: vi\nWelsh: cy\nXhosa: xh\nYiddish: yi\nYoruba: yo\nZulu: zu\n```"
                 }
               ],
               "slashCommand": "utility/translate",
@@ -4492,7 +4489,7 @@
               "extra": [
                 {
                   "title": "Available TTS Languages",
-                  "description": "```yml\nAfrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi```"
+                  "description": "```yml\nAfrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi\n```"
                 }
               ],
               "slashCommand": "voice/tts"
@@ -6439,19 +6436,19 @@
               "cooldown": 3,
               "arguments": [
                 {
-                  "name": "lefttext",
+                  "name": "left-text",
                   "description": "Text for the left side"
                 },
                 {
-                  "name": "leftimage",
+                  "name": "left-image",
                   "description": "Image for the left side"
                 },
                 {
-                  "name": "righttext",
+                  "name": "right-text",
                   "description": "Text for the right side"
                 },
                 {
-                  "name": "rightimage",
+                  "name": "right-image",
                   "description": "Image for the right side"
                 }
               ],
@@ -10778,10 +10775,7 @@
           "prefixCommand": "server/faqs/faq"
         },
         "help": {
-          "description": [
-            "Get a list of the bot's commands and information about each one.",
-            "Argument types:\n\n[arg] - A text argument\n<arg> - A Discord feature (mentions, emojis, etc...)\n{arg} - A file argument"
-          ],
+          "description": "Get a list of the bot's commands and information about each one.",
           "arguments": [
             {
               "name": "category-or-command",
