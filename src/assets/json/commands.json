@@ -80,7 +80,7 @@
                   "aliases": [
                     "deleteautoresponse"
                   ],
-                  "arguments": "[command]",
+                  "arguments": "[auto-response-id]",
                   "description": [
                     "Remove an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
@@ -97,7 +97,7 @@
                     "viewautoresponses",
                     "showautoresponses"
                   ],
-                  "arguments": "[command]",
+                  "arguments": "[auto-response-id]",
                   "description": [
                     "View an auto-response from the server.",
                     "Provide no arguments to view a list of active auto-responses."
@@ -179,7 +179,7 @@
                     "commandslist",
                     "commandlist"
                   ],
-                  "arguments": "[category/command]",
+                  "arguments": "[category-or-command]",
                   "description": "Get a list of the bot's commands and information about each one.",
                   "slashCommand": "help"
                 },
@@ -415,7 +415,7 @@
                   "aliases": [
                     "c4"
                   ],
-                  "arguments": "<member> <member2> <member3> [boardWidth] [boardHeight]",
+                  "arguments": "[opponent1] [member-or-board-size] [member-or-board-size] [board-width] [board-height]",
                   "description": [
                     "Play Connect 4.",
                     "The maximum board size is `21x15`."
@@ -441,7 +441,7 @@
                   "aliases": [
                     "hm"
                   ],
-                  "arguments": "<member> <member2> <member3> [letterCount/mode]",
+                  "arguments": "[member-or-letter-count] [member-or-letter-count-or-mode] [member-or-letter-count-or-mode] [letter-count-or-mode]",
                   "description": [
                     "Play Hangman.",
                     "Set the mode to \"custom\" to select your own word."
@@ -452,7 +452,7 @@
                   "aliases": [
                     "kb"
                   ],
-                  "arguments": "<member> [diceSides]",
+                  "arguments": "[opponent] [dice-sides]",
                   "description": "Play Knucklebones against someone.",
                   "slashCommand": "fun/games/knucklebones"
                 },
@@ -460,7 +460,7 @@
                   "aliases": [
                     "rps"
                   ],
-                  "arguments": "<member>",
+                  "arguments": "[opponent]",
                   "description": "Play Rock Paper Scissors against the bot or another member! Mention a member to play against them.",
                   "slashCommand": "fun/games/rockpaperscissors"
                 },
@@ -468,7 +468,7 @@
                   "aliases": [
                     "sal"
                   ],
-                  "arguments": "<member> <member2> <member3> [boardSize]",
+                  "arguments": "[opponent1] [member-or-board-size] [member-or-board-size] [board-size]",
                   "description": [
                     "Play Snakes and Ladders.",
                     "The maximum board size is \"16x16\""
@@ -553,7 +553,7 @@
                     "noughtsandcrosses",
                     "noughtscrosses"
                   ],
-                  "arguments": "<member/difficulty]",
+                  "arguments": "[member-or-difficulty]",
                   "description": [
                     "Play Tic Tac Toe against the bot or another member!",
                     "Mention a member to play against them.",
@@ -576,7 +576,7 @@
               "slashCommand": "fun/8ball"
             },
             "bean": {
-              "arguments": "<member> [reason]",
+              "arguments": "[member] [reason]",
               "description": "Bean a user.",
               "slashCommand": "fun/bean"
             },
@@ -640,7 +640,7 @@
                 "deathmessage",
                 "killmessage"
               ],
-              "arguments": "<member> [weapon]",
+              "arguments": "[member] [weapon]",
               "description": [
                 "Kill a user with a Minecraft death message.",
                 "\"<member>\" and \"[weapon]\" are optional."
@@ -675,7 +675,7 @@
               "aliases": [
                 "monkeytest"
               ],
-              "arguments": "<member>",
+              "arguments": "[member]",
               "description": "Test how much of a monkey someone is!",
               "slashCommand": "fun/monketest"
             }
@@ -715,12 +715,12 @@
                     "gradientgen",
                     "gengradient"
                   ],
-                  "arguments": "[colour] [colourCount] [angle]",
+                  "arguments": "[colour] [colour-count] [angle]",
                   "description": "Generate a gradient palette from a colour, with hue shifting.",
                   "slashCommand": "image/creation/palette"
                 },
                 "gradient": {
-                  "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
+                  "arguments": "[colour1] [colour2] [colour3] [colour4] [colour5] [colour6] [colour7] [colour8]",
                   "description": "Generate a gradient from a list of colours.",
                   "slashCommand": "image/creation/gradient"
                 },
@@ -748,7 +748,7 @@
                     "mergecolorchannel",
                     "mergecolchannel"
                   ],
-                  "arguments": "{redimage} {greenimage} {blueimage}",
+                  "arguments": "[red-image] [green-image] [blue-image]",
                   "description": "Merge three images into a single image, using each image as the individual colour channels.",
                   "slashCommand": "image/creation/mergechannels"
                 }
@@ -757,7 +757,7 @@
             "drawing": {
               "commands": {
                 "ellipse": {
-                  "arguments": "[x] [y] [width] [height] [colour] {image}",
+                  "arguments": "[x] [y] [width] [height] [colour] [image]",
                   "description": "Draw a ellipse on an image.",
                   "slashCommand": "image/drawing/ellipse"
                 },
@@ -766,17 +766,17 @@
                     "paintbucket",
                     "fill"
                   ],
-                  "arguments": "[x] [y] [colour] [tolerance] {image}",
+                  "arguments": "[x] [y] [colour] [tolerance] [image]",
                   "description": "Floodfill an area on an image.",
                   "slashCommand": "image/drawing/floodfill"
                 },
                 "line": {
-                  "arguments": "[x] [y] [x2] [y2] [colour] [thickness] {image}",
+                  "arguments": "[x] [y] [x2] [y2] [colour] [thickness] [image]",
                   "description": "Draw a line on an image.",
                   "slashCommand": "image/drawing/line"
                 },
                 "pixel": {
-                  "arguments": "[x] [y] [colour] {image}",
+                  "arguments": "[x] [y] [colour] [image]",
                   "description": "Add a single pixel to an image.",
                   "slashCommand": "image/drawing/pixel"
                 },
@@ -784,7 +784,7 @@
                   "aliases": [
                     "shape"
                   ],
-                  "arguments": "[x] [y] [diameter] [sides] [colour] {image}",
+                  "arguments": "[x] [y] [diameter] [sides] [colour] [image]",
                   "description": "Draw a regular polygon on an image.",
                   "slashCommand": "image/drawing/polygon"
                 },
@@ -792,12 +792,12 @@
                   "aliases": [
                     "rect"
                   ],
-                  "arguments": "[x] [y] [width] [height] [colour] {image}",
+                  "arguments": "[x] [y] [width] [height] [colour] [image]",
                   "description": "Draw a rectangle on an image.",
                   "slashCommand": "image/drawing/rectangle"
                 },
                 "text": {
-                  "arguments": "[text] [x] [y] [size] [colour] [font] [align] {image}",
+                  "arguments": "[text] [x] [y] [size] [colour] [font] [align] [image]",
                   "description": [
                     "Write some text over an image.",
                     "Put an argument inside quotation marks to use spaces",
@@ -812,7 +812,7 @@
                 "blurs": {
                   "commands": {
                     "angularblur": {
-                      "arguments": "[strength] [x] [y] [radius] {image}",
+                      "arguments": "[strength] [x] [y] [image]",
                       "cooldown": 5,
                       "description": "Add angular blur to an image.",
                       "slashCommand": "imagefilter/blurs/angular"
@@ -825,7 +825,7 @@
                         "unfocus",
                         "lostmyglasses"
                       ],
-                      "arguments": "[amount] {image}",
+                      "arguments": "[amount] [image]",
                       "description": "Blur an image.",
                       "slashCommand": "imagefilter/blurs/blur"
                     },
@@ -833,12 +833,12 @@
                       "aliases": [
                         "directionalblur"
                       ],
-                      "arguments": "[angle] [strength] {image}",
+                      "arguments": "[angle] [strength] [image]",
                       "description": "Add motion blur to an image.",
                       "slashCommand": "imagefilter/blurs/motion"
                     },
                     "radialblur": {
-                      "arguments": "[strength] [x] [y] [radius] {image}",
+                      "arguments": "[strength] [x] [y] [image]",
                       "cooldown": 5,
                       "description": "Add radial blur to an image.",
                       "slashCommand": "imagefilter/blurs/radial"
@@ -848,7 +848,7 @@
               },
               "commands": {
                 "bloom": {
-                  "arguments": "[intensity] [radius] [threshold] {image}",
+                  "arguments": "[intensity] [radius] [threshold] [image]",
                   "cooldown": 5,
                   "description": "Apply bloom to an image",
                   "slashCommand": "imagefilter/bloom"
@@ -860,7 +860,7 @@
                     "lightness",
                     "lighten"
                   ],
-                  "arguments": "[amount] {image}",
+                  "arguments": "[amount] [image]",
                   "description": [
                     "Change the brightness of an image.",
                     "The amount is a range from -100 to 100."
@@ -873,7 +873,7 @@
                     "colourize",
                     "colorise"
                   ],
-                  "arguments": "[colour] {image}",
+                  "arguments": "[colour] [image]",
                   "description": "Colourise an image.",
                   "slashCommand": "imagefilter/colourise"
                 },
@@ -884,7 +884,7 @@
                     "colourspace",
                     "colorspace"
                   ],
-                  "arguments": "[mode] {image}",
+                  "arguments": "[mode] [image]",
                   "description": [
                     "Convert an image to a different colour mode.",
                     "Available modes:\n\n1 - 1 bit colour\nL - Greyscale\nLA - Greyscale with alpha\nRGB - Colour\nRGBA - Colour with alpha"
@@ -899,7 +899,7 @@
                     "replacepalette",
                     "palettereplace"
                   ],
-                  "arguments": "{image} {image}",
+                  "arguments": "[source] [image]",
                   "description": [
                     "Copy the palette of one image to another image.",
                     "Max number of colours is 256.\n\nThe colours are copied from the first image to the second image."
@@ -910,7 +910,7 @@
                   "aliases": [
                     "nuke"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Deepfry an image.",
                   "slashCommand": "imagefilter/deepfry"
                 },
@@ -918,12 +918,12 @@
                   "aliases": [
                     "shadow"
                   ],
-                  "arguments": "[xOffset] [yOffset] [blur] [colour] {image}",
+                  "arguments": "[x-offset] [y-offset] [blur] [colour] [image]",
                   "description": "Add a drop shadow to a transparent image.",
                   "slashCommand": "imagefilter/dropshadow"
                 },
                 "gradientmap": {
-                  "arguments": "[col] [col] [col] [col] [col] [col] [col] [col] {image}",
+                  "arguments": "[colour1] [colour2] [colour3] [colour4] [colour5] [colour6] [colour7] [colour8] [image]",
                   "description": "Apply a gradient map to an image",
                   "slashCommand": "imagefilter/gradientmap"
                 },
@@ -936,7 +936,7 @@
                     "blackandwhite",
                     "whiteandblack"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 3,
                   "description": "Turn an image greyscale.",
                   "slashCommand": "imagefilter/greyscale"
@@ -945,7 +945,7 @@
                   "aliases": [
                     "hue"
                   ],
-                  "arguments": "[angle] {image}",
+                  "arguments": "[angle] [image]",
                   "description": "Change the hue of an image. Defaults to 180°",
                   "slashCommand": "imagefilter/hueshift"
                 },
@@ -957,7 +957,7 @@
                     "palettelimit",
                     "lowpalette"
                   ],
-                  "arguments": "[colourCount] {image}",
+                  "arguments": "[colour-count] [image]",
                   "description": [
                     "Limit an image's colour palette to a provided amount.",
                     "Defaults to 10 colours."
@@ -970,13 +970,13 @@
                     "flipcolour",
                     "flipcolor"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 3,
                   "description": "Invert an image's colours.",
                   "slashCommand": "imagefilter/invert"
                 },
                 "mask": {
-                  "arguments": "[mode] {image} {image}",
+                  "arguments": "[mode] [mask] [image]",
                   "description": [
                     "Use the transparency of one image as a mask for another image.",
                     "Modes:\n\n- inside\n- outside"
@@ -987,7 +987,7 @@
                   "aliases": [
                     "tint"
                   ],
-                  "arguments": "[colour] {image}",
+                  "arguments": "[colour] [image]",
                   "description": "Multiply an image by a colour.",
                   "slashCommand": "imagefilter/multiply"
                 },
@@ -999,7 +999,7 @@
                     "edge",
                     "sobel"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 3,
                   "description": "Apply a sobel edge detection filter to an image.",
                   "slashCommand": "imagefilter/neon"
@@ -1008,7 +1008,7 @@
                   "aliases": [
                     "normalize"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Enhance output image contrast by stretching its luminance to cover the full dynamic range.",
                   "slashCommand": "imagefilter/normalise"
                 },
@@ -1017,7 +1017,7 @@
                     "recolor",
                     "recol"
                   ],
-                  "arguments": "[colour] {image}",
+                  "arguments": "[colour] [image]",
                   "description": "Recolour an image to a specific colour, keeping the opacity.",
                   "slashCommand": "imagefilter/recolour"
                 },
@@ -1025,7 +1025,7 @@
                   "aliases": [
                     "saturation"
                   ],
-                  "arguments": "[percentage] {image}",
+                  "arguments": "[percentage] [image]",
                   "description": [
                     "Change the saturation of an image.",
                     "The percentage is a range from 0 to 200."
@@ -1033,12 +1033,12 @@
                   "slashCommand": "imagefilter/saturate"
                 },
                 "sepia": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Apply a sepia filter to an image.",
                   "slashCommand": "imagefilter/sepia"
                 },
                 "threshold": {
-                  "arguments": "[amount] {image}",
+                  "arguments": "[threshold] [image]",
                   "description": [
                     "Convert an image to black and white, based on a threshold.",
                     "The threshold is a range of 0 to 255.",
@@ -1051,7 +1051,7 @@
             "gifs": {
               "commands": {
                 "animate": {
-                  "arguments": "[delay] [frameHeight] {image}",
+                  "arguments": "[delay] [frame-height] [image]",
                   "description": "Animate a spritesheet texture.",
                   "slashCommand": "gif/animate"
                 },
@@ -1059,7 +1059,7 @@
                   "aliases": [
                     "pingpong"
                   ],
-                  "arguments": "{gif}",
+                  "arguments": "[gif]",
                   "description": "Make a GIF play forwards, then backwards, in a loop.",
                   "slashCommand": "gif/boomerang"
                 },
@@ -1075,7 +1075,7 @@
                     "mergegif",
                     "gifmerge"
                   ],
-                  "arguments": "{gif} {gif}",
+                  "arguments": "[gif1] [gif2]",
                   "description": "Combine two GIFs so that one plays after the other.",
                   "slashCommand": "gif/combine"
                 },
@@ -1083,7 +1083,7 @@
                   "aliases": [
                     "frames"
                   ],
-                  "arguments": "[frame] {gif}",
+                  "arguments": "[frame] [gif]",
                   "description": [
                     "Get a specific frame of a GIF.",
                     "Leave frame blank to show how many frames a GIF has.",
@@ -1097,7 +1097,7 @@
                     "fps",
                     "setfps"
                   ],
-                  "arguments": "[frameRate] {gif}",
+                  "arguments": "[frame-rate] [gif]",
                   "description": "Change the frame rate of a GIF.",
                   "slashCommand": "gif/framerate"
                 },
@@ -1105,7 +1105,7 @@
                   "aliases": [
                     "loop"
                   ],
-                  "arguments": "[loopCount] {gif}",
+                  "arguments": "[loop-count] [gif]",
                   "description": [
                     "Set the number of times a GIF should loop.",
                     "-1      - Infinite loops\n0-65535 - Exact loop amount"
@@ -1116,12 +1116,12 @@
                   "aliases": [
                     "backwards"
                   ],
-                  "arguments": "{gif}",
+                  "arguments": "[gif]",
                   "description": "Make a GIF play in reverse.",
                   "slashCommand": "gif/reverse"
                 },
                 "spritesheet": {
-                  "arguments": "{gif}",
+                  "arguments": "[gif]",
                   "description": "Turn an animated GIF into a spritesheet of its frames.",
                   "slashCommand": "gif/spritesheet"
                 },
@@ -1131,7 +1131,7 @@
                     "crossfade",
                     "fade"
                   ],
-                  "arguments": "[type] {image} {image}",
+                  "arguments": "[type] [image] [image2]",
                   "description": [
                     "Transition from one image into another image.",
                     "Available types:\n\nfade, fadeblack, fadewhite, distance, wipeleft, wiperight, wipeup, wipedown, slideleft, slideright, slideup, slidedown, smoothleft, smoothright, smoothup, smoothdown, circlecrop, rectcrop, circleclose, circleopen, horzclose, horzopen, vertclose, vertopen, diagbl, diagbr, diagtl, diagtr, hlslice, hrslice, vuslice, vdslice, dissolve, pixelize, radial, hblur, wipetl, wipetr, wipebl, wipebr, fadegrays, squeezev, squeezeh, zoomin, hlwind, hrwind, vuwind, vdwind, coverleft, coverright, coverup, coverdown, revealleft, revealright, revealup, revealdown"
@@ -1150,7 +1150,7 @@
                         "fadein",
                         "sup"
                       ],
-                      "arguments": "<member>",
+                      "arguments": "[member]",
                       "description": "Make a member appear!",
                       "slashCommand": "avatar/appear"
                     },
@@ -1165,7 +1165,7 @@
                         "decorate",
                         "decor"
                       ],
-                      "arguments": "[decoration] [zoomLevel] {image}",
+                      "arguments": "[decoration] [zoom-level] [image]",
                       "description": [
                         "Add an avatar decoration to your avatar.",
                         "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
@@ -1176,7 +1176,7 @@
                       "aliases": [
                         "avpie"
                       ],
-                      "arguments": "<member> <member> <member> <member> <member> <member> <member> <member>",
+                      "arguments": "[member1] [member2] [member3] [member4] [member5] [member6] [member7] [member8]",
                       "cooldown": 5,
                       "description": "Merge a bunch of avatars into one image.",
                       "slashCommand": "avatar/pie"
@@ -1185,22 +1185,22 @@
                       "aliases": [
                         "obama"
                       ],
-                      "arguments": "<member> <member>",
+                      "arguments": "[awardee] [awarder]",
                       "description": "Give another member an award!",
                       "slashCommand": "avatar/award"
                     },
                     "band": {
-                      "arguments": "<member> <member> <member> <member>",
+                      "arguments": "[member1] [member2] [member3] [member4]",
                       "description": "Put members into a band.",
                       "slashCommand": "avatar/band"
                     },
                     "beloved": {
-                      "arguments": "<member>",
+                      "arguments": "[member]",
                       "description": "Show a member is beloved!",
                       "slashCommand": "avatar/beloved"
                     },
                     "birthday": {
-                      "arguments": "<member> <member> <member> <member> <member>",
+                      "arguments": "[birthday-boy] [guest1] [guest2] [guest3] [guest4]",
                       "cooldown": 3,
                       "description": [
                         "Throw a birthday party for someone!",
@@ -1210,7 +1210,7 @@
                       "slashCommand": "avatar/birthday"
                     },
                     "bonk": {
-                      "arguments": "<member> [text]",
+                      "arguments": "[member] [text]",
                       "description": "Bonk a member.",
                       "slashCommand": "avatar/bonk"
                     },
@@ -1221,7 +1221,7 @@
                         "peaceout",
                         "peace"
                       ],
-                      "arguments": "<member>",
+                      "arguments": "[member]",
                       "description": "Make a member disappear!",
                       "slashCommand": "avatar/disappear"
                     },
@@ -1231,7 +1231,7 @@
                         "boyfriend",
                         "distract"
                       ],
-                      "arguments": "<member> <member> <member>",
+                      "arguments": "[distraction] [girlfriend] [boyfriend]",
                       "description": "Get distracted by another member.",
                       "slashCommand": "avatar/distractedboyfriend"
                     },
@@ -1239,7 +1239,7 @@
                       "aliases": [
                         "refuse"
                       ],
-                      "arguments": "<member> [text]",
+                      "arguments": "[member] [text]",
                       "description": "Make a member draw 25 cards because they won't do something.",
                       "slashCommand": "avatar/draw25"
                     },
@@ -1249,7 +1249,7 @@
                         "lookguys",
                         "point"
                       ],
-                      "arguments": "<member> {image}",
+                      "arguments": "[member] [image]",
                       "description": "Show some guys an image",
                       "slashCommand": "avatar/guyslook"
                     },
@@ -1257,12 +1257,12 @@
                       "aliases": [
                         "facekick"
                       ],
-                      "arguments": "<member> <member>",
+                      "arguments": "[kicked] [kicker]",
                       "description": "Kick a member in the face!",
                       "slashCommand": "avatar/kickface"
                     },
                     "marry": {
-                      "arguments": "<member> <member>",
+                      "arguments": "[bride] [groom]",
                       "description": "Marry two members.",
                       "slashCommand": "avatar/marry"
                     },
@@ -1271,7 +1271,7 @@
                         "monkeys",
                         "monke"
                       ],
-                      "arguments": "<member> <member> <member>",
+                      "arguments": "[monkey1] [monkey2] [monkey3]",
                       "description": "Turn some members into a group of monkeys!",
                       "slashCommand": "avatar/monkey"
                     },
@@ -1279,12 +1279,12 @@
                       "aliases": [
                         "monkeband"
                       ],
-                      "arguments": "<member> <member> <member>",
+                      "arguments": "[monkey1] [monkey2] [monkey3]",
                       "description": "Turn some members into a band of monkeys!",
                       "slashCommand": "avatar/monkeyband"
                     },
                     "silence": {
-                      "arguments": "<member>",
+                      "arguments": "[member]",
                       "description": "Silence a member.",
                       "slashCommand": "avatar/silence"
                     },
@@ -1292,17 +1292,17 @@
                       "aliases": [
                         "smack"
                       ],
-                      "arguments": "<member> <member>",
+                      "arguments": "[receiver] [giver]",
                       "description": "Slap a member!",
                       "slashCommand": "avatar/slap"
                     },
                     "snap": {
-                      "arguments": "<member> <member>",
+                      "arguments": "[peter] [thanos]",
                       "description": "Snap a member out of existence!",
                       "slashCommand": "avatar/snap"
                     },
                     "yeet": {
-                      "arguments": "<member> <member>",
+                      "arguments": "[reciever] [yeeter]",
                       "cooldown": 3,
                       "description": "Throw a member really far.",
                       "slashCommand": "avatar/yeet"
@@ -1312,13 +1312,13 @@
                 "compositing": {
                   "commands": {
                     "billboard": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "cooldown": 3,
                       "description": "Put an image onto a billboard.",
                       "slashCommand": "imagecompositing/billboard"
                     },
                     "flag": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "cooldown": 3,
                       "description": "Put an image onto a flag.",
                       "slashCommand": "imagecompositing/flag"
@@ -1327,7 +1327,7 @@
                       "aliases": [
                         "fortune"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "cooldown": 3,
                       "description": "Put an image into a fortune cookie.",
                       "slashCommand": "imagecompositing/fortunecookie"
@@ -1336,7 +1336,7 @@
                       "aliases": [
                         "artgallery"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image into an art gallery.",
                       "slashCommand": "imagecompositing/gallery"
                     },
@@ -1346,7 +1346,7 @@
                         "linustechtips",
                         "ltt"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image into Linus Sebastian's hands",
                       "slashCommand": "imagecompositing/linus"
                     },
@@ -1358,7 +1358,7 @@
                         "ltts",
                         "lttscreen"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image into an art gallery.",
                       "slashCommand": "imagecompositing/linusscreen"
                     },
@@ -1368,18 +1368,18 @@
                         "locketheart",
                         "heart"
                       ],
-                      "arguments": "[text]/{image} [text]/{image}",
+                      "arguments": "[text]",
                       "cooldown": 3,
                       "description": "Put images/text into a heart shaped locket.",
                       "slashCommand": "imagecompositing/locket"
                     },
                     "newyork": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image onto a billboard in New York.",
                       "slashCommand": "imagecompositing/newyork"
                     },
                     "salute": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image onto a flag that is being saluted.",
                       "slashCommand": "imagecompositing/salute"
                     },
@@ -1389,7 +1389,7 @@
                         "sameimage",
                         "sameimg"
                       ],
-                      "arguments": "{image} {image}",
+                      "arguments": "[left-image] [right-image]",
                       "description": "Show that two images are the same picture.",
                       "slashCommand": "imagecompositing/samepicture"
                     },
@@ -1399,12 +1399,12 @@
                         "woz",
                         "tv"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image onto Scott Wozniak's TV.",
                       "slashCommand": "imagecompositing/scottthewoz"
                     },
                     "spongebob": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image into Spongebob's hands.",
                       "slashCommand": "imagecompositing/spongebob"
                     },
@@ -1413,12 +1413,12 @@
                         "donaldtrump",
                         "donald"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Put an image into Donald Trump's hands.",
                       "slashCommand": "imagecompositing/trump"
                     },
                     "worthless": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Make an image worthless.",
                       "slashCommand": "imagecompositing/worthless"
                     }
@@ -1430,7 +1430,7 @@
                       "aliases": [
                         "pinch"
                       ],
-                      "arguments": "[strength] [x] [y] [radius] {image}",
+                      "arguments": "[strength] [x] [y] [radius] [image]",
                       "description": "Apply a bulge or a pinch effect to an image.",
                       "slashCommand": "imagedistortions/bulge"
                     },
@@ -1446,7 +1446,7 @@
                         "gifcontentawarescale",
                         "gifcontentaware"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "cooldown": 5,
                       "description": "Content aware scales an image where the intensity gets stronger over time.",
                       "slashCommand": "imagedistortions/gmagick"
@@ -1457,7 +1457,7 @@
                         "areatwist",
                         "areatwirl"
                       ],
-                      "arguments": "[degrees] [x] [y] [radius] {image}",
+                      "arguments": "[degrees] [x] [y] [radius] [image]",
                       "description": "Apply a twist effect to an image over a certain area.",
                       "slashCommand": "imagedistortions/localtwist"
                     },
@@ -1468,7 +1468,7 @@
                         "contentawarescale",
                         "contentaware"
                       ],
-                      "arguments": "[intensity] {image}",
+                      "arguments": "[intensity] [image]",
                       "cooldown": 5,
                       "description": "Content aware scales an image.",
                       "slashCommand": "imagedistortions/magick"
@@ -1486,7 +1486,7 @@
                         "wibblify",
                         "wobblify"
                       ],
-                      "arguments": "[amplitude] [period] [x] [y] [phaseShift] {image}",
+                      "arguments": "[amplitude] [period] [x] [y] [phase-shift] [image]",
                       "description": "Apply an occilating twist effect to an image.",
                       "slashCommand": "imagedistortions/sinetwist"
                     },
@@ -1494,7 +1494,7 @@
                       "aliases": [
                         "twirl"
                       ],
-                      "arguments": "[degrees] [x] [y] {image}",
+                      "arguments": "[degrees] [x] [y] [image]",
                       "description": "Apply a twist effect to an image.",
                       "slashCommand": "imagedistortions/twist"
                     }
@@ -1507,7 +1507,7 @@
                         "animeyes",
                         "anime"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Place anime eyes over someones face!",
                       "slashCommand": "imagefaces/animeeyes"
                     },
@@ -1517,7 +1517,7 @@
                         "pinchface",
                         "facepinch"
                       ],
-                      "arguments": "[strength] {image}",
+                      "arguments": "[strength] [image]",
                       "description": "Apply a bulge or a pinch effect to a face.",
                       "slashCommand": "imagefaces/bulge"
                     },
@@ -1525,7 +1525,7 @@
                       "aliases": [
                         "thuglife"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Place MLG glasses over someones face!",
                       "slashCommand": "imagefaces/dealwithit"
                     },
@@ -1539,7 +1539,7 @@
                         "viewface",
                         "faceview"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Detect a face in an image",
                       "slashCommand": "imagefaces/detect"
                     },
@@ -1547,7 +1547,7 @@
                       "aliases": [
                         "faceemoji"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Place emojis on someones face!",
                       "slashCommand": "imagefaces/emoji"
                     },
@@ -1557,12 +1557,12 @@
                         "largeeyes",
                         "bulgeeyes"
                       ],
-                      "arguments": "[strength] {image}",
+                      "arguments": "[strength] [image]",
                       "description": "Make someones eyes larger.",
                       "slashCommand": "imagefaces/enlargeeyes"
                     },
                     "makeup": {
-                      "arguments": "[lipsCol] [outerEyeCol] [innerEyeCol] {image}",
+                      "arguments": "[lips-colour] [outer-eye-colour] [inner-eye-colour] [image]",
                       "description": [
                         "Apply makeup to someone's face!",
                         "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
@@ -1578,12 +1578,12 @@
                         "alexify",
                         "facealex"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Place Steve or Alex's face over someones face!",
                       "slashCommand": "imagefaces/steve"
                     },
                     "trollface": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Place a trollface over someones face!",
                       "slashCommand": "imagefaces/trollface"
                     }
@@ -1599,7 +1599,7 @@
                         "arrowpointdown",
                         "arrowdown"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[direction] [colour] [image]",
                       "description": "Make the image point to the message above",
                       "slashCommand": "imagefun/memes/arrowpoint"
                     },
@@ -1612,7 +1612,7 @@
                         "monkeysee",
                         "monkesee"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Activate a neuron by looking at an image.",
                       "slashCommand": "imagefun/memes/neuronactivation"
                     }
@@ -1621,12 +1621,12 @@
                 "overlays": {
                   "commands": {
                     "easter": {
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Add an easter overlay to an image.",
                       "slashCommand": "imageoverlays/easter"
                     },
                     "gun": {
-                      "arguments": "[expand] [double] {image}",
+                      "arguments": "[expand] [double] [image]",
                       "description": [
                         "Make an image hold a gun.",
                         "\"expand\" and \"double\" are true/false.",
@@ -1635,7 +1635,7 @@
                       "slashCommand": "imageoverlays/gun"
                     },
                     "hair": {
-                      "arguments": "[hairCount] {image}",
+                      "arguments": "[hair-count] [image]",
                       "description": "Place some hairs on top of an image.",
                       "slashCommand": "imageoverlays/hair"
                     },
@@ -1643,7 +1643,7 @@
                       "aliases": [
                         "christmas"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Make an image jolly!",
                       "slashCommand": "imageoverlays/jolly"
                     },
@@ -1651,13 +1651,13 @@
                       "aliases": [
                         "pet"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "cooldown": 3,
                       "description": "Pet an image!",
                       "slashCommand": "imageoverlays/petpet"
                     },
                     "shoot": {
-                      "arguments": "[expand] [double] {image}",
+                      "arguments": "[expand] [double] [image]",
                       "description": [
                         "Shoot an image.",
                         "\"expand\" and \"double\" are true/false.",
@@ -1670,7 +1670,7 @@
                         "speech",
                         "bubble"
                       ],
-                      "arguments": "[x] [y] {image}",
+                      "arguments": "[x] [y] [image]",
                       "cooldown": 5,
                       "description": [
                         "Add a speech bubble to an image.",
@@ -1683,7 +1683,7 @@
                       "aliases": [
                         "think"
                       ],
-                      "arguments": "[expand] [double] [colour] {image}",
+                      "arguments": "[expand] [double] [colour] [image]",
                       "description": [
                         "Add a thinking hand to an image.",
                         "\"expand\" and \"double\" are true/false.",
@@ -1695,7 +1695,7 @@
                       "aliases": [
                         "trigger"
                       ],
-                      "arguments": "{image}",
+                      "arguments": "[image]",
                       "description": "Make an image triggered.",
                       "slashCommand": "imageoverlays/triggered"
                     }
@@ -1709,7 +1709,7 @@
                         "breaking",
                         "news"
                       ],
-                      "arguments": "[text] {image}",
+                      "arguments": "[text] [image]",
                       "cooldown": 5,
                       "description": "Add a breaking news bar to an image.",
                       "slashCommand": "imagetext/breakingnews"
@@ -1718,7 +1718,7 @@
                       "aliases": [
                         "bottomcaption"
                       ],
-                      "arguments": "[text] {image}",
+                      "arguments": "[text] [image]",
                       "cooldown": 5,
                       "description": [
                         "Add a caption to an image.",
@@ -1752,7 +1752,7 @@
                         "pinggen",
                         "pingicon"
                       ],
-                      "arguments": "[text] {image}",
+                      "arguments": "[text] [image]",
                       "description": "Add a custom Discord notification to an image.",
                       "slashCommand": "imagetext/notification"
                     },
@@ -1792,7 +1792,7 @@
                         "walter",
                         "walter2"
                       ],
-                      "arguments": "[character] [text] {image}",
+                      "arguments": "[text] [image]",
                       "cooldown": 5,
                       "description": [
                         "Make a character say something below an image.",
@@ -1807,7 +1807,7 @@
                         "sneak100",
                         "100"
                       ],
-                      "arguments": "[text] [value] {image}",
+                      "arguments": "[text] [image]",
                       "cooldown": 5,
                       "description": [
                         "Add the \"Sneak 100\" image to the bottom of an image.",
@@ -1842,7 +1842,7 @@
                         "textbottom",
                         "textlower"
                       ],
-                      "arguments": "[text] {image}",
+                      "arguments": "[text] [image]",
                       "cooldown": 5,
                       "description": [
                         "Add some text to the top, middle, or bottom of an image.",
@@ -1852,7 +1852,7 @@
                       "slashCommand": "imagetext/addtext"
                     },
                     "uncaption": {
-                      "arguments": "[buffer] [threshold] {image}",
+                      "arguments": "[buffer] [threshold] [image]",
                       "cooldown": 5,
                       "description": "Remove a caption from an image.",
                       "slashCommand": "imagetext/uncaption"
@@ -1861,12 +1861,12 @@
                       "aliases": [
                         "valentine"
                       ],
-                      "arguments": "<member>",
+                      "arguments": "[member]",
                       "description": "Generate a minecraft valentines image for that special someone in your life.",
                       "slashCommand": "imagetext/valentines"
                     },
                     "what": {
-                      "arguments": "[text] {image}",
+                      "arguments": "[text] [image]",
                       "description": "What.",
                       "slashCommand": "imagetext/what"
                     }
@@ -1875,7 +1875,7 @@
               },
               "commands": {
                 "blockify": {
-                  "arguments": "[type] [ditheringEnabled] [statsEnabled] {image}",
+                  "arguments": "[type] [dithering] [stats] [image]",
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
@@ -1890,7 +1890,7 @@
                     "blurpify",
                     "blurple"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Turn an image blurple!",
                   "slashCommand": "imagefun/blurplify"
                 },
@@ -1900,7 +1900,7 @@
                     "lightmodedarkmode",
                     "lightdark"
                   ],
-                  "arguments": "{image} {image}",
+                  "arguments": "[dark-image] [light-image]",
                   "description": [
                     "Merge two images into one, where a different one shows if you are using dark or light mode.",
                     "The first image will be visible while in dark mode, the second while in light mode."
@@ -1913,7 +1913,7 @@
                     "amongustwerk",
                     "amogustwerk"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 3,
                   "description": "Make an image into an Among Us Dumpy gif!",
                   "slashCommand": "imagefun/dumpy"
@@ -1922,7 +1922,7 @@
                   "aliases": [
                     "mojify"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 3,
                   "description": "Turn an image into a bunch of emojis!",
                   "slashCommand": "imagefun/emojify"
@@ -1931,7 +1931,7 @@
                   "aliases": [
                     "bomb"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Explode an image.",
                   "slashCommand": "imagefun/explode"
                 },
@@ -1940,7 +1940,7 @@
                     "hideimage",
                     "secretimage"
                   ],
-                  "arguments": "[mode] {image}",
+                  "arguments": "[mode] [image]",
                   "description": [
                     "Hide an image in plain sight.",
                     "Colour modes:\n- dark\n- light"
@@ -1956,7 +1956,7 @@
                     "mpostor",
                     "mposter"
                   ],
-                  "arguments": "[col] [col] [col] [col] [col] [col] [col] [col]",
+                  "arguments": "[outline] [hair] [head] [visor] [body] [backpack] [left-leg] [right-leg]",
                   "description": [
                     "Create a custom Among Us character!",
                     "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
@@ -1970,7 +1970,7 @@
                     "jpg",
                     "crusty"
                   ],
-                  "arguments": "[quality] {image}",
+                  "arguments": "[quality] [image]",
                   "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100",
                   "slashCommand": "imagefun/jpegify"
                 },
@@ -1979,13 +1979,13 @@
                     "colourcycle",
                     "colorcycle"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "cooldown": 5,
                   "description": "Make an image cycle through the rainbow!",
                   "slashCommand": "imagefun/rainbow"
                 },
                 "scan": {
-                  "arguments": "[switchAxis] [reverse] [lineColour] {image}",
+                  "arguments": "[switch-axis] [reverse] [line-colour] [image]",
                   "cooldown": 5,
                   "description": [
                     "Apply a time warp scan effect to a gif.",
@@ -1994,13 +1994,13 @@
                   "slashCommand": "imagefun/scan"
                 },
                 "slide": {
-                  "arguments": "[direction] [speed] {image}",
+                  "arguments": "[direction] [speed] [image]",
                   "cooldown": 3,
                   "description": "Slide an image.",
                   "slashCommand": "imagefun/slide"
                 },
                 "spin": {
-                  "arguments": "[speed] [expandEnabled] {image}",
+                  "arguments": "[speed] [expand-enabled] [image]",
                   "cooldown": 3,
                   "description": "Make an image spin!",
                   "slashCommand": "imagefun/spin"
@@ -2009,7 +2009,7 @@
                   "aliases": [
                     "squareify"
                   ],
-                  "arguments": "[squareSize] [gapSize] {image}",
+                  "arguments": "[square-size] [gap-size] [image]",
                   "description": [
                     "Squarifies an image.",
                     "The first number is the square size, the second is the size of the gap between each square."
@@ -2020,7 +2020,7 @@
                   "aliases": [
                     "asciiart"
                   ],
-                  "arguments": "[mode] {image}",
+                  "arguments": "[mode] [image]",
                   "description": [
                     "Turn an image into ascii art using the braille characters.",
                     "Available modes are \"edge\" and \"average\"."
@@ -2028,7 +2028,7 @@
                   "slashCommand": "imagefun/textify"
                 },
                 "warp": {
-                  "arguments": "[switchAxis] [reverse] {image}",
+                  "arguments": "[switch-axis] [reverse] [image]",
                   "cooldown": 5,
                   "description": [
                     "Apply a delay warp effect to a gif.",
@@ -2037,7 +2037,7 @@
                   "slashCommand": "imagefun/warp"
                 },
                 "wynem": {
-                  "arguments": "[vCol] [hCol] [bgCol] [sCol] {image}",
+                  "arguments": "[vertical-bars] [horizontal-bars] [background] [shadow] [image]",
                   "description": [
                     "Create a custom Wynem logo!",
                     "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
@@ -2060,7 +2060,7 @@
                     "average",
                     "avg"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Get the average colour of an image.",
                   "slashCommand": "imageutility/averagecolour"
                 },
@@ -2077,7 +2077,7 @@
                     "commoncolor",
                     "commoncol"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Get the most common colour in an image.",
                   "slashCommand": "imageutility/commoncolour"
                 },
@@ -2093,7 +2093,7 @@
                     "compare",
                     "comp"
                   ],
-                  "arguments": "{tolerance} {image} {image}",
+                  "arguments": "[tolerance] [image1] [image2]",
                   "description": [
                     "Compare two images, to see the differences between them.",
                     "Red: Removed pixels\nGreen: New pixels\nBlue: Edited pixels"
@@ -2106,7 +2106,7 @@
                     "getsize",
                     "size"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "View the dimentions of an image.",
                   "slashCommand": "imageutility/size"
                 },
@@ -2127,7 +2127,7 @@
                   "slashCommand": "imageutility/makeqrcode"
                 },
                 "palette": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Show the palette of an image.",
                   "slashCommand": "imageutility/palette"
                 },
@@ -2142,12 +2142,12 @@
                     "qrdecode",
                     "unqr"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Read a QR code in an image.",
                   "slashCommand": "imageutility/readqrcode"
                 },
                 "save": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
                   "slashCommand": "imageutility/save"
                 },
@@ -2155,13 +2155,13 @@
                   "aliases": [
                     "compareslide"
                   ],
-                  "arguments": "[sliderColour] {image} {image}",
+                  "arguments": "[line-colour] [left-image] [right-image]",
                   "cooldown": 5,
                   "description": "Compare two images by having it slide between them both.",
                   "slashCommand": "imageutility/slidecompare"
                 },
                 "watermark": {
-                  "arguments": "[text] {image}",
+                  "arguments": "[text] [image]",
                   "description": "Put a text watermark over an image.",
                   "slashCommand": "imageutility/watermark"
                 },
@@ -2171,7 +2171,7 @@
                     "watermarkimg",
                     "imgwatermark"
                   ],
-                  "arguments": "{image} {image}",
+                  "arguments": "[watermark-image] [image]",
                   "description": "Put an image watermark over an image.",
                   "slashCommand": "imageutility/watermarkimage"
                 }
@@ -2183,7 +2183,7 @@
                   "aliases": [
                     "bg"
                   ],
-                  "arguments": "[colour] {image}",
+                  "arguments": "[colour] [image]",
                   "cooldown": 5,
                   "description": "Set the background colour for an image with transparency.",
                   "slashCommand": "imagemanipulation/background"
@@ -2193,12 +2193,12 @@
                     "cutout",
                     "cut"
                   ],
-                  "arguments": "[x] [y] [width] [height] {image}",
+                  "arguments": "[x] [y] [width] [height] [image]",
                   "description": "Crop out a region of an image.",
                   "slashCommand": "imagemanipulation/crop"
                 },
                 "opacity": {
-                  "arguments": "[opacity] {image}",
+                  "arguments": "[opacity] [image]",
                   "description": "Change the opacity of an image.",
                   "slashCommand": "imagemanipulation/opacity"
                 },
@@ -2206,13 +2206,13 @@
                   "aliases": [
                     "stroke"
                   ],
-                  "arguments": "[width] [colour] {image}",
+                  "arguments": "[width] [colour] [image]",
                   "cooldown": 5,
                   "description": "Add an outline to an image.",
                   "slashCommand": "imagemanipulation/outline"
                 },
                 "overlay": {
-                  "arguments": "[location] [stretch] [blend] {overlayImg} {baseImg}",
+                  "arguments": "[location] [stretch] [blend-method] [overlay-image] [base-image]",
                   "description": [
                     "Overlay an image on top of another image, filling the entire selected location.",
                     "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
@@ -2226,7 +2226,7 @@
                     "margin",
                     "border"
                   ],
-                  "arguments": "[size] [direction] [colour] {image}",
+                  "arguments": "[size] [direction] [colour] [image]",
                   "description": [
                     "Add padding to the sides of an image.",
                     "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
@@ -2234,7 +2234,7 @@
                   "slashCommand": "imagemanipulation/pad"
                 },
                 "paste": {
-                  "arguments": "[x] [y] [w] [h] {image} {image}",
+                  "arguments": "[x] [y] [width] [height] [paste-image] [base-bmage]",
                   "description": "Paste an image onto another image.",
                   "slashCommand": "imagemanipulation/paste"
                 },
@@ -2246,12 +2246,12 @@
                     "replacecol",
                     "colreplace"
                   ],
-                  "arguments": "[originalColour] [replacementColour] [tolerance] {image}",
+                  "arguments": "[original-colour] [replacement-colour] [tolerance] [image]",
                   "description": "Replace a colour in an image.",
                   "slashCommand": "imagemanipulation/replacecolour"
                 },
                 "resize": {
-                  "arguments": "[width] [height] [interpolation] {image}",
+                  "arguments": "[width] [height] [interpolation] [image]",
                   "description": [
                     "Resize an image to a desired size.",
                     "Interpolation modes only work on static images.",
@@ -2264,12 +2264,12 @@
                   "aliases": [
                     "turn"
                   ],
-                  "arguments": "[degrees] {image}",
+                  "arguments": "[degrees] [image]",
                   "description": "Rotate an image. Defaults to 90°.",
                   "slashCommand": "imagemanipulation/rotate"
                 },
                 "round": {
-                  "arguments": "[size] {image}",
+                  "arguments": "[size] [image]",
                   "description": [
                     "Make an image round by cutting off the corners.",
                     "The size can either be a number of pixels, or a percentage of the width and height of the image."
@@ -2281,18 +2281,18 @@
                     "magnify",
                     "enlarge"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 566x350.",
                   "slashCommand": "imagemanipulation/scale",
                   "contextCommand": "message/scale-image"
                 },
                 "square": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Add transparent padding to an image to make it a square.",
                   "slashCommand": "imagemanipulation/square"
                 },
                 "trim": {
-                  "arguments": "[colour] {image}",
+                  "arguments": "[colour] [image]",
                   "description": [
                     "Remove the pixels from the edge of an image.",
                     "The trimmed colour defaults to fully transparent."
@@ -2300,7 +2300,7 @@
                   "slashCommand": "imagemanipulation/trim"
                 },
                 "upscale": {
-                  "arguments": "[multiplier] [algorithm] {image}",
+                  "arguments": "[multiplier] [algorithm] [image]",
                   "cooldown": 5,
                   "description": [
                     "Upscale some pixel art.",
@@ -2313,52 +2313,52 @@
             "mirroring": {
               "commands": {
                 "daad": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the top left half of an image to the bottom right half.",
                   "slashCommand": "image/mirroring/daad"
                 },
                 "dood": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the bottom right half of an image to the top left half.",
                   "slashCommand": "image/mirroring/dood"
                 },
                 "flip": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Flip an image vertically.",
                   "slashCommand": "image/mirroring/flip"
                 },
                 "haah": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Flip the top half of an image to the bottom half.",
                   "slashCommand": "image/mirroring/haah"
                 },
                 "hooh": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Flip the bottom half of an image to the top half.",
                   "slashCommand": "image/mirroring/hooh"
                 },
                 "mirror": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror an image horizontally.",
                   "slashCommand": "image/mirroring/mirror"
                 },
                 "taat": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the bottom left half of an image to the top right half.",
                   "slashCommand": "image/mirroring/taat"
                 },
                 "toot": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the top right half of an image to the bottom left half.",
                   "slashCommand": "image/mirroring/toot"
                 },
                 "waaw": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the left half of an image to the right half.",
                   "slashCommand": "image/mirroring/waaw"
                 },
                 "woow": {
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Mirror the right half of an image to the left half.",
                   "slashCommand": "image/mirroring/woow"
                 }
@@ -2370,7 +2370,7 @@
               "aliases": [
                 "prepend"
               ],
-              "arguments": "[direction] [scalingEnabled] {image} {image}",
+              "arguments": "[direction] [scaling-enabled] [appended-image] [original-image]",
               "description": [
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
@@ -2382,7 +2382,7 @@
               "aliases": [
                 "decode"
               ],
-              "arguments": "{image}",
+              "arguments": "[image]",
               "description": "Decode an image which has a message encoded in the pixel values.",
               "slashCommand": "image/decodemessage"
             },
@@ -2393,7 +2393,7 @@
                 "moji",
                 "mote"
               ],
-              "arguments": "<emoji> [resolution/type] [version]",
+              "arguments": "[emoji] [type-or-resolution]",
               "description": [
                 "Get the image of an emoji.",
                 "The type, resolution, and version are optional. Not every type has every emoji."
@@ -2533,7 +2533,7 @@
                 "colorchannel",
                 "colchannel"
               ],
-              "arguments": "{image}",
+              "arguments": "[image]",
               "description": "Extract the colour channels from an image.",
               "slashCommand": "image/extractchannels"
             },
@@ -2543,7 +2543,7 @@
                 "imageget",
                 "imgget"
               ],
-              "arguments": "{image}",
+              "arguments": "[image]",
               "description": [
                 "Get an image.",
                 "This can be used to show what image would be used in an image command.",
@@ -2576,7 +2576,7 @@
                     "chest",
                     "chests"
                   ],
-                  "arguments": "{image} {image}",
+                  "arguments": "[normal-or-left] [right]",
                   "description": "Convert chests between the 1.14 and 1.15 format.",
                   "slashCommand": "minecraft/resourcepacks/chestconverter"
                 },
@@ -2586,7 +2586,7 @@
                     "ctm",
                     "convertctm"
                   ],
-                  "arguments": "[type] {image}",
+                  "arguments": "[type] [image]",
                   "description": "Convert compact CTM to full CTM or overlay CTM.",
                   "slashCommand": "minecraft/resourcepacks/ctmconverter"
                 },
@@ -2595,7 +2595,7 @@
                     "ctmpreview",
                     "previewctm"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Generate a preview image for full CTM.",
                   "slashCommand": "minecraft/resourcepacks/ctmpreviewer"
                 },
@@ -2604,7 +2604,7 @@
                     "ctmsplit",
                     "splitctm"
                   ],
-                  "arguments": "[tileResolution] {image}",
+                  "arguments": "[tile-resolution] [image]",
                   "description": "Split a CTM template image up into its individual images for use with OptiFine CTM.",
                   "slashCommand": "minecraft/resourcepacks/ctmsplitter"
                 },
@@ -2650,7 +2650,7 @@
                     "mcconverter",
                     "mcconvert"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Convert an image into a Minecraft title texture for use in a resource pack.",
                   "slashCommand": "minecraft/resourcepacks/titleconverter"
                 },
@@ -2659,7 +2659,7 @@
                     "convertmojang",
                     "mojang"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
                   "slashCommand": "minecraft/resourcepacks/mojangconverter"
                 },
@@ -2689,7 +2689,7 @@
                   "aliases": [
                     "pack"
                   ],
-                  "arguments": "{image} {image} {image}",
+                  "arguments": "[image1] [image2] [image3]",
                   "description": [
                     "Render a resource packs \"pack.png\"",
                     "The images are in the order: top, left, right",
@@ -2698,7 +2698,7 @@
                   "slashCommand": "minecraft/resourcepacks/packpng"
                 },
                 "reloadpack": {
-                  "arguments": "[version]",
+                  "arguments": "[pack]",
                   "cooldown": 20,
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "slashCommand": "minecraft/resourcepacks/reloadpack"
@@ -2713,7 +2713,7 @@
                     "mobrender",
                     "modelrender"
                   ],
-                  "arguments": "[model] {images}",
+                  "arguments": "[model] [image] [image2] [image3]",
                   "cooldown": 5,
                   "description": [
                     "Render an image/images onto a 3D model.",
@@ -2745,7 +2745,7 @@
                   "aliases": [
                     "repeat"
                   ],
-                  "arguments": "[width] [height] [randomRotationEnabled] [randomMirroringEnabled] {image}",
+                  "arguments": "[width] [height] [random-rotation-enabled] [random-mirroring-enabled] [image]",
                   "description": [
                     "Tile an image over a 5x5 area.",
                     "Provide a custom width and height to customise the size."
@@ -2766,7 +2766,7 @@
                     "mccompare",
                     "mccomp"
                   ],
-                  "arguments": "[version] [version]",
+                  "arguments": "[old-version] [new-version]",
                   "description": [
                     "Compare the assets of two Minecraft versions against eachother.",
                     "Saying \"latest\" will automatically compare the newest 2 versions."
@@ -2785,7 +2785,7 @@
                     "mcelytra",
                     "elytra"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraftaccount]",
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/cape"
                 },
@@ -2794,7 +2794,7 @@
                     "minecrafthead",
                     "mchead"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraftaccount]",
                   "description": "View the head of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/head"
                 },
@@ -2814,7 +2814,7 @@
                     "mcpic",
                     "mcpicture"
                   ],
-                  "arguments": "[username] {image}",
+                  "arguments": "[minecraftaccount] [image]",
                   "description": "Create a minecraft avatar.",
                   "slashCommand": "minecraftskins/avatar"
                 },
@@ -2822,12 +2822,12 @@
                   "aliases": [
                     "mckick"
                   ],
-                  "arguments": "[username] [username]",
+                  "arguments": "[username1] [username2]",
                   "description": "Make one minecraft player kick another minecraft player!",
                   "slashCommand": "minecraftskins/kick"
                 },
                 "outfit": {
-                  "arguments": "[outfit] [username]",
+                  "arguments": "[outfit] [minecraftaccount]",
                   "description": [
                     "Apply an outfit to a Minecraft skin.",
                     "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
@@ -2838,7 +2838,7 @@
                   "aliases": [
                     "skinpreview"
                   ],
-                  "arguments": "[format] {image}",
+                  "arguments": "[format] [image]",
                   "description": [
                     "Make a 2D preview for a skin texture.",
                     "The format is either \"steve\" or \"alex\""
@@ -2851,7 +2851,7 @@
                     "renderplayer",
                     "playerrender"
                   ],
-                  "arguments": "[format] [username]",
+                  "arguments": "[format] [minecraftaccount]",
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
@@ -2864,7 +2864,7 @@
                     "minecraftskin",
                     "mcskin"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraftaccount]",
                   "description": "View the skin of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/skin"
                 },
@@ -2873,7 +2873,7 @@
                     "skinconvert",
                     "convertskin"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Convert between the new and old Minecraft skin formats.",
                   "slashCommand": "minecraftskins/converter"
                 },
@@ -2884,7 +2884,7 @@
                     "image2skin",
                     "img2skin"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Turn any image into a minecraft skin.",
                   "slashCommand": "minecraftskins/skinify"
                 },
@@ -2893,7 +2893,7 @@
                     "slimconvert",
                     "convertslim"
                   ],
-                  "arguments": "[columnNumber] {image}",
+                  "arguments": "[column-number] [image]",
                   "description": [
                     "Convert skins between the wide and slim formats.",
                     "The \"columnNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
@@ -2915,7 +2915,7 @@
                 "account",
                 "mcaccount"
               ],
-              "arguments": "<member>",
+              "arguments": "[member]",
               "description": "View the minecraft account tied to someones Discord.",
               "slashCommand": "minecraft/account"
             },
@@ -2944,7 +2944,7 @@
                 "dtg",
                 "dt"
               ],
-              "arguments": "[toptext] [toptexture] [bottomtext] [bottomtexture] [disableTerminators]",
+              "arguments": "[top-text] [top-texture] [bottom-text] [bottom-texture] [disable-terminators]",
               "cooldown": 5,
               "description": [
                 "Generate a Minecraft Dungeons-styled title logo.",
@@ -2962,7 +2962,7 @@
                 "mctg",
                 "mct"
               ],
-              "arguments": "[toptext] [toptexture] [bottomtext] [bottomtexture] [smalltext] [smalltexture]",
+              "arguments": "[top-text] [top-texture] [bottom-text] [bottom-texture] [small-text] [small-texture]",
               "cooldown": 5,
               "description": [
                 "Generate a Minecraft-styled title logo.",
@@ -2978,7 +2978,7 @@
                 "mcwiki",
                 "wikimc"
               ],
-              "arguments": "[searchTerm]",
+              "arguments": "[search-term]",
               "cooldown": 5,
               "description": "Search for something on the Minecraft Wiki.",
               "slashCommand": "minecraft/wiki"
@@ -2996,6 +2996,7 @@
               "aliases": [
                 "of"
               ],
+              "arguments": "[version]",
               "cooldown": 5,
               "description": "Get a link to download the latest OptiFine version.",
               "slashCommand": "minecraft/optifine"
@@ -3011,7 +3012,7 @@
                 "rmmcaccount",
                 "rmminecraftaccount"
               ],
-              "arguments": "[username]",
+              "arguments": "[minecraftaccount]",
               "description": [
                 "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
                 "Leave blank to remove your account."
@@ -3025,7 +3026,7 @@
             "bans": {
               "commands": {
                 "ban": {
-                  "arguments": "<member> [reason]",
+                  "arguments": "[member] [reason]",
                   "description": [
                     "Ban a member from the server.",
                     "The member is sent a message saying they were banned, along with the reason.",
@@ -3072,7 +3073,7 @@
                   "slashCommand": "serverconfig/setbanappeal"
                 },
                 "unban": {
-                  "arguments": "<user> [reason]",
+                  "arguments": "[user] [reason]",
                   "description": "Unban a user from the server.",
                   "permissions": [
                     "Guild Only",
@@ -3110,7 +3111,7 @@
                   "aliases": [
                     "setmoderatorpingroles"
                   ],
-                  "arguments": "<role> <role> <role>",
+                  "arguments": "[role] [role2] [role3]",
                   "description": [
                     "Set up to three custom roles to be used with moderator pings.",
                     "The order of the roles is the order of priority. Running this will overwrite any previously set roles. Provide no roles to remove the current ones."
@@ -3201,7 +3202,7 @@
               "aliases": [
                 "note"
               ],
-              "arguments": "{member} [reason]",
+              "arguments": "[member] [note]",
               "description": [
                 "Add a note to a member.",
                 "Members cannot see their notes.",
@@ -3219,7 +3220,7 @@
                 "endmute",
                 "unmute"
               ],
-              "arguments": "{member} [reason]",
+              "arguments": "[member] [reason]",
               "description": "End the time out of a member who is timed out.",
               "permissions": [
                 "Guild Only",
@@ -3231,7 +3232,7 @@
               "slashCommand": "moderation/endtimeout"
             },
             "kick": {
-              "arguments": "<member> [reason]",
+              "arguments": "[member] [reason]",
               "description": [
                 "Kick a member from the server.",
                 "The member is sent a message saying they were kicked, along with the reason."
@@ -3252,7 +3253,7 @@
                 "clean",
                 "delete"
               ],
-              "arguments": "[count] <member>",
+              "arguments": "[count] [member]",
               "description": [
                 "Bulk delete messages from a channel.",
                 "Defaults to 5, maximum 99.",
@@ -3283,7 +3284,7 @@
                 "listmutes",
                 "listtimeouts"
               ],
-              "arguments": "<member>",
+              "arguments": "[member]",
               "description": "View the moderation records for a member.",
               "permissions": [
                 "Guild Only",
@@ -3295,7 +3296,7 @@
               "aliases": [
                 "mute"
               ],
-              "arguments": "{member} [duration] [reason]",
+              "arguments": "[member] [duration] [reason]",
               "description": [
                 "Give a member a time out so that they cannot type or speak.",
                 "Defaults to 10 minutes.",
@@ -3315,7 +3316,7 @@
               "aliases": [
                 "warning"
               ],
-              "arguments": "{member} [reason]",
+              "arguments": "[member] [reason]",
               "description": [
                 "Give a member a warning.",
                 "The member is sent a message saying they were warned, along with the reason.",
@@ -3363,7 +3364,7 @@
                     "setarchive",
                     "addarchive"
                   ],
-                  "arguments": "<channel>",
+                  "arguments": "[channel]",
                   "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
                   "permissions": [
                     "Guild Only",
@@ -3392,7 +3393,7 @@
                       "aliases": [
                         "sb"
                       ],
-                      "arguments": "<channel> [count] [emoji]",
+                      "arguments": "[channel] [count] [emoji]",
                       "description": [
                         "Manage the starboards for the server.",
                         "Provide a channel to create a new starboard. Provide the same channel again to remove it."
@@ -3409,7 +3410,7 @@
                         "starboardbl",
                         "sbbl"
                       ],
-                      "arguments": "<starboardChannel> <blacklistChannel>",
+                      "arguments": "[starboard-channel] [blacklist-channel]",
                       "description": [
                         "Blacklist a category or channel from having its messages sent to a starboard.",
                         "Provide a channel to blacklist it. Provide the same channel again to unblacklist it."
@@ -3475,7 +3476,7 @@
                   "aliases": [
                     "pin"
                   ],
-                  "arguments": "[messageId/messageURL]",
+                  "arguments": "[message]",
                   "description": "Re-pin a message to move it to the top of the channel pins.",
                   "permissions": [
                     "Manage Messages"
@@ -3510,7 +3511,7 @@
                     "newemoji",
                     "emojinew"
                   ],
-                  "arguments": "[name] {image}",
+                  "arguments": "[name] [image]",
                   "description": "Add an emoji to the server.",
                   "permissions": [
                     "Guild Only",
@@ -3526,7 +3527,7 @@
                     "emojiremove",
                     "deleteemoji"
                   ],
-                  "arguments": "<emoji>",
+                  "arguments": "[emoji]",
                   "description": "Remove an emoji from the server.",
                   "permissions": [
                     "Guild Only",
@@ -3571,7 +3572,7 @@
                   "aliases": [
                     "faqs"
                   ],
-                  "arguments": "[category] [id]",
+                  "arguments": "[id]",
                   "description": [
                     "View an FAQ entry.",
                     "Run with no arguments to list all FAQs."
@@ -3615,7 +3616,7 @@
                   "aliases": [
                     "faqrename"
                   ],
-                  "arguments": "[oldCategory] [oldId] [newCategory] [newId]",
+                  "arguments": "[old-category] [old-id] [new-category] [new-id]",
                   "description": "Rename an FAQ entry.",
                   "permissions": [
                     "Guild Only",
@@ -3628,7 +3629,7 @@
             "issuetracker": {
               "commands": {
                 "issue": {
-                  "arguments": "[issueNumber]",
+                  "arguments": "[issue-number]",
                   "description": "View an issue from the issue tracker configured for the server.",
                   "permissions": [
                     "Guild Only"
@@ -3740,7 +3741,7 @@
                     "addjoinimage",
                     "joinimage"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Set the image that will be used with the join message.",
                   "permissions": [
                     "Guild Only",
@@ -3753,7 +3754,7 @@
                     "addjoinmessage",
                     "joinmessage"
                   ],
-                  "arguments": "<channel> [message]",
+                  "arguments": "[channel] [message]",
                   "description": "Set a message that gets sent to a channel with an image when a member joins the server.",
                   "extra": [
                     {
@@ -3771,7 +3772,7 @@
                     "addleaveimage",
                     "leaveimage"
                   ],
-                  "arguments": "{image}",
+                  "arguments": "[image]",
                   "description": "Set the image that will be used with the leave message.",
                   "permissions": [
                     "Guild Only",
@@ -3784,7 +3785,7 @@
                     "addleavemessage",
                     "leavemessage"
                   ],
-                  "arguments": "<channel> [message]",
+                  "arguments": "[channel] [message]",
                   "description": "Set a message that gets sent to a channel with an image when a member leaves the server.",
                   "extra": [
                     {
@@ -3853,7 +3854,7 @@
                   "aliases": [
                     "roleadd"
                   ],
-                  "arguments": "<member> <role>",
+                  "arguments": "[member] [role]",
                   "description": "Add a role to a member.",
                   "permissions": [
                     "Guild Only",
@@ -3897,7 +3898,7 @@
                   "aliases": [
                     "joinroles"
                   ],
-                  "arguments": "<role>",
+                  "arguments": "[role]",
                   "description": [
                     "Add or remove a role that users will gain when joining the server.",
                     "Provide no arguments to view the current join roles."
@@ -3915,7 +3916,7 @@
                   "aliases": [
                     "roleremove"
                   ],
-                  "arguments": "<member> <role>",
+                  "arguments": "[member] [role]",
                   "description": "Remove a role from a member.",
                   "permissions": [
                     "Guild Only",
@@ -3943,7 +3944,7 @@
                   "aliases": [
                     "ruleedit"
                   ],
-                  "arguments": "[rule]",
+                  "arguments": "[integer]",
                   "description": "Edit one of the server rules.",
                   "permissions": [
                     "Guild Only",
@@ -3973,7 +3974,7 @@
                   "aliases": [
                     "ruleremove"
                   ],
-                  "arguments": "[rule]",
+                  "arguments": "[integer]",
                   "description": "Remove a rule from the server rules.",
                   "permissions": [
                     "Guild Only"
@@ -3984,7 +3985,7 @@
                   "aliases": [
                     "rules"
                   ],
-                  "arguments": "[rule]",
+                  "arguments": "[integer]",
                   "description": "View the server rules.",
                   "permissions": [
                     "Guild Only"
@@ -4064,6 +4065,7 @@
                   "slashCommand": "botconfig/toggle/quotes"
                 },
                 "toggleuserleftnotices": {
+                  "arguments": "[mode]",
                   "description": [
                     "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
                     "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
@@ -4103,7 +4105,7 @@
                   "aliases": [
                     "tickettypeedit"
                   ],
-                  "arguments": "[ticketType]",
+                  "arguments": "[ticket-type]",
                   "description": [
                     "Edit a ticket type.",
                     "Leave fields blank to leave them unedited.",
@@ -4130,7 +4132,7 @@
                   "aliases": [
                     "tickettyperemove"
                   ],
-                  "arguments": "[ticketType]",
+                  "arguments": "[ticket-type]",
                   "description": "Remove a ticket type from the tickets system.",
                   "permissions": [
                     "Guild Only",
@@ -4142,7 +4144,7 @@
                   "aliases": [
                     "ticketsset"
                   ],
-                  "arguments": "<channel> <role>",
+                  "arguments": "[channel] [role]",
                   "description": [
                     "Set a channel and role to be used for the tickets system.",
                     "The channel is where users will be able to create tickets. The channel should be an empty channel. The permissions will be changed so users cannot send messages there.",
@@ -4164,7 +4166,7 @@
                     "viewtickettypes",
                     "tickettypesview"
                   ],
-                  "arguments": "[ticketType]",
+                  "arguments": "[ticket-type]",
                   "description": "View the servers tickets system and the ticket types.",
                   "permissions": [
                     "Guild Only"
@@ -4190,7 +4192,7 @@
               "aliases": [
                 "messagequote"
               ],
-              "arguments": "[messageURL]",
+              "arguments": "[message-url]",
               "description": [
                 "Quote someone elses message.",
                 "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
@@ -4228,7 +4230,7 @@
                 "pic",
                 "picture"
               ],
-              "arguments": "<member>",
+              "arguments": "[member]",
               "description": "Show a users avatar, with links to get it in different resolutions.",
               "slashCommand": "avatar/get",
               "contextCommand": "user/get-avatar"
@@ -4238,7 +4240,7 @@
                 "joinpos",
                 "join"
               ],
-              "arguments": "<member>/[position]",
+              "arguments": "[member-or-position]",
               "description": [
                 "View the position that a member joined the server in.",
                 "To search by placement instead of a member, enter a number. When a member who joined before you leaves, you will move up the list."
@@ -4257,7 +4259,7 @@
                 "memberinfo",
                 "userinformation"
               ],
-              "arguments": "<user>",
+              "arguments": "[member]",
               "description": "Get info about a specified user.",
               "slashCommand": "user/info",
               "contextCommand": "user/user-information"
@@ -4295,7 +4297,7 @@
                     "managereminders",
                     "reminders"
                   ],
-                  "arguments": "<member/channel>",
+                  "arguments": "[member-or-channel]",
                   "description": [
                     "View and remove your existing reminders.",
                     "If you have the \"Moderate Members\" permission, you can view and remove other users reminders, or the reminders in a certain channel."
@@ -4311,7 +4313,7 @@
                 "calc",
                 "math"
               ],
-              "arguments": "[expression]",
+              "arguments": "[equation]",
               "description": "Summon a calculator.",
               "slashCommand": "utility/calculator"
             },
@@ -4351,7 +4353,7 @@
               "aliases": [
                 "xif"
               ],
-              "arguments": "{file}",
+              "arguments": "[file]",
               "description": "View the exif data of a file.",
               "slashCommand": "utility/exif"
             },
@@ -4365,7 +4367,7 @@
                 "getraw",
                 "rawmessage"
               ],
-              "arguments": "[messageURL]",
+              "arguments": "[message-url]",
               "description": "Get the raw text content of a Discord message.",
               "slashCommand": "utility/getrawmessage",
               "contextCommand": "message/get-raw-message"
@@ -4374,7 +4376,7 @@
               "aliases": [
                 "search"
               ],
-              "arguments": "[searchTerm]",
+              "arguments": "[search-term]",
               "description": [
                 "Make a Google Search link for when people ask questions they could have easily searched themselves.",
                 "Reply to a message to use that message's content as the search term."
@@ -4387,7 +4389,7 @@
               "slashCommand": "utility/tinyurl"
             },
             "translate": {
-              "arguments": "[toLanguage] [fromLanguage] [message]",
+              "arguments": "[message]",
               "cooldown": 5,
               "description": [
                 "Translate a message to another language",
@@ -4450,7 +4452,7 @@
               "aliases": [
                 "autotts"
               ],
-              "arguments": "<channel>",
+              "arguments": "[channel]",
               "description": [
                 "Set a channel where messages to be automatically read out loud in a voice channel.",
                 "Messages will not be read for users who are not in the voice channel, or if the message starts with a URL."
@@ -4479,7 +4481,7 @@
                 "read",
                 "speak"
               ],
-              "arguments": "[language] [text]",
+              "arguments": "[text]",
               "cooldown": 3,
               "description": [
                 "Read some text out loud. If in a voice channel, the bot will join the channel and speak it out loud.",
