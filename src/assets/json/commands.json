@@ -557,7 +557,7 @@
                   "description": [
                     "Play Tic Tac Toe against the bot or another member!",
                     "Mention a member to play against them.",
-                    "Difficulties:\n\n- Easy\n- Medium\n- Hard\n- Expert"
+                    "Difficulties:\n- Easy\n- Medium\n- Hard\n- Expert"
                   ],
                   "slashCommand": "fun/games/tictactoe"
                 }
@@ -684,7 +684,7 @@
         "images": {
           "description": [
             "Commands that modify and manipulate images.",
-            "These commands take many types of image inputs.\nValid image types:\n\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
+            "These commands take many types of image inputs:\n- Attachment\n- URL\n- Member\n- Emoji\n- Sticker",
             "Leave the image argument blank to target an image from a previous message in the channel. You can also reply to a message or provide a message link to target an image in that message."
           ],
           "extra": [
@@ -979,7 +979,7 @@
                   "arguments": "[mode] [mask] [image]",
                   "description": [
                     "Use the transparency of one image as a mask for another image.",
-                    "Modes:\n\n- inside\n- outside"
+                    "Modes:\n- inside\n- outside"
                   ],
                   "slashCommand": "imagefilter/mask"
                 },
@@ -1168,7 +1168,7 @@
                       "arguments": "[decoration] [zoom-level] [image]",
                       "description": [
                         "Add an avatar decoration to your avatar.",
-                        "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
+                        "Zoom levels control how zoomed the image is:\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
                       ],
                       "slashCommand": "avatar/decoration"
                     },
@@ -1880,7 +1880,7 @@
                   "description": [
                     "Turn an image into Minecraft block art!",
                     "Dithering is always disabled on images smaller than 32x32",
-                    "Possible types:\n- all\n- allcreative\n- bottom\n- bottomcreative\n- side\n- sidecreative\n- top\n- topcreative\n- metal\n- planks\n- plants\n- stone\n- wood\n- wool"
+                    "Available types: `all`, `allcreative`, `bottom`, `bottomcreative`, `side`, `sidecreative`, `top`, `topcreative`, `metal`, `planks`, `plants`, `stone`, `wood`, `wool`"
                   ],
                   "slashCommand": "imagefun/blockify"
                 },
@@ -2229,7 +2229,7 @@
                   "arguments": "[size] [direction] [colour] [image]",
                   "description": [
                     "Add padding to the sides of an image.",
-                    "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+                    "Available directions:\n- All\n- Top\n- Left\n- Right\n- Bottom"
                   ],
                   "slashCommand": "imagemanipulation/pad"
                 },
@@ -2374,7 +2374,7 @@
               "description": [
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n\n- top\n- left\n- right\n- bottom"
+                "Available directions:\n- top\n- left\n- right\n- bottom"
               ],
               "slashCommand": "image/append"
             },
@@ -2785,7 +2785,7 @@
                     "mcelytra",
                     "elytra"
                   ],
-                  "arguments": "[minecraftaccount]",
+                  "arguments": "[username]",
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/cape"
                 },
@@ -2794,7 +2794,7 @@
                     "minecrafthead",
                     "mchead"
                   ],
-                  "arguments": "[minecraftaccount]",
+                  "arguments": "[username]",
                   "description": "View the head of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/head"
                 },
@@ -2814,7 +2814,7 @@
                     "mcpic",
                     "mcpicture"
                   ],
-                  "arguments": "[minecraftaccount] [image]",
+                  "arguments": "[username] [image]",
                   "description": "Create a minecraft avatar.",
                   "slashCommand": "minecraftskins/avatar"
                 },
@@ -2827,10 +2827,10 @@
                   "slashCommand": "minecraftskins/kick"
                 },
                 "outfit": {
-                  "arguments": "[outfit] [minecraftaccount]",
+                  "arguments": "[outfit] [username]",
                   "description": [
                     "Apply an outfit to a Minecraft skin.",
-                    "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
+                    "Outfits: `alex`, `grass`, `maid`, `santa_hat`, `steve`"
                   ],
                   "slashCommand": "minecraftskins/outfit"
                 },
@@ -2851,11 +2851,11 @@
                     "renderplayer",
                     "playerrender"
                   ],
-                  "arguments": "[format] [minecraftaccount]",
+                  "arguments": "[format] [username]",
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
-                    "Formats:\n\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
+                    "Formats:\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
                   ],
                   "slashCommand": "minecraftskins/render"
                 },
@@ -2864,7 +2864,7 @@
                     "minecraftskin",
                     "mcskin"
                   ],
-                  "arguments": "[minecraftaccount]",
+                  "arguments": "[username]",
                   "description": "View the skin of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/skin"
                 },
@@ -3012,7 +3012,7 @@
                 "rmmcaccount",
                 "rmminecraftaccount"
               ],
-              "arguments": "[minecraftaccount]",
+              "arguments": "[username]",
               "description": [
                 "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
                 "Leave blank to remove your account."
@@ -4619,7 +4619,7 @@
             "decoration": {
               "description": [
                 "Add an avatar decoration to your avatar.",
-                "Zoom levels control how zoomed the image is:\n\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
+                "Zoom levels control how zoomed the image is:\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
               ],
               "arguments": [
                 {
@@ -5348,7 +5348,7 @@
                   "description": [
                     "Play Tic Tac Toe against the bot or another member!",
                     "Mention a member to play against them.",
-                    "Difficulties:\n\n- Easy\n- Medium\n- Hard\n- Expert"
+                    "Difficulties:\n- Easy\n- Medium\n- Hard\n- Expert"
                   ],
                   "arguments": [
                     {
@@ -6237,7 +6237,7 @@
               "description": [
                 "Append one image onto another image.",
                 "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n\n- top\n- left\n- right\n- bottom"
+                "Available directions:\n- top\n- left\n- right\n- bottom"
               ],
               "arguments": [
                 {
@@ -7255,7 +7255,7 @@
             "mask": {
               "description": [
                 "Use the transparency of one image as a mask for another image.",
-                "Modes:\n\n- inside\n- outside"
+                "Modes:\n- inside\n- outside"
               ],
               "arguments": [
                 {
@@ -7455,7 +7455,7 @@
               "description": [
                 "Turn an image into Minecraft block art!",
                 "Dithering is always disabled on images smaller than 32x32",
-                "Possible types:\n- all\n- allcreative\n- bottom\n- bottomcreative\n- side\n- sidecreative\n- top\n- topcreative\n- metal\n- planks\n- plants\n- stone\n- wood\n- wool"
+                "Available types: `all`, `allcreative`, `bottom`, `bottomcreative`, `side`, `sidecreative`, `top`, `topcreative`, `metal`, `planks`, `plants`, `stone`, `wood`, `wool`"
               ],
               "cooldown": 3,
               "arguments": [
@@ -7994,7 +7994,7 @@
             "pad": {
               "description": [
                 "Add padding to the sides of an image.",
-                "Available directions:\n\n- All\n- Top\n- Left\n- Right\n- Bottom"
+                "Available directions:\n- All\n- Top\n- Left\n- Right\n- Bottom"
               ],
               "arguments": [
                 {
@@ -9435,7 +9435,7 @@
             "outfit": {
               "description": [
                 "Apply an outfit to a Minecraft skin.",
-                "Outfits:\n\n- alex\n- grass\n- maid\n- santa_hat\n- steve"
+                "Outfits: `alex`, `grass`, `maid`, `santa_hat`, `steve`"
               ],
               "arguments": [
                 {
@@ -9474,7 +9474,7 @@
             "render": {
               "description": [
                 "Render a minecraft skin in 3D.",
-                "Formats:\n\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
+                "Formats:\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
               ],
               "cooldown": 5,
               "arguments": [
