@@ -281,7 +281,7 @@
               "description": [
                 "Change the bots embed colour on the current server.",
                 "The embed colour is the coloured bar down the side of each message.",
-                "Set the colour to \"default\" to return it to the default colour."
+                "Set the colour to `default` to return it to the default colour."
               ],
               "permissions": [
                 "Guild Only",
@@ -800,8 +800,7 @@
                   "arguments": "[text] [x] [y] [size] [colour] [font] [align] [image]",
                   "description": [
                     "Write some text over an image.",
-                    "Put an argument inside quotation marks to use spaces",
-                    "The \"align\" options are \"center\", \"left\", and \"right\""
+                    "Put an argument inside quotation marks to use spaces"
                   ],
                   "slashCommand": "image/drawing/text"
                 }
@@ -1684,11 +1683,7 @@
                         "think"
                       ],
                       "arguments": "[expand] [double] [colour] [image]",
-                      "description": [
-                        "Add a thinking hand to an image.",
-                        "\"expand\" and \"double\" are true/false.",
-                        "\"expand\" puts the hand over the edge of the image."
-                      ],
+                      "description": "Add a thinking hand to an image.",
                       "slashCommand": "imageoverlays/thinking"
                     },
                     "triggered": {
@@ -1957,10 +1952,7 @@
                     "mposter"
                   ],
                   "arguments": "[outline] [hair] [head] [visor] [body] [backpack] [left-leg] [right-leg]",
-                  "description": [
-                    "Create a custom Among Us character!",
-                    "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
-                  ],
+                  "description": "Create a custom Among Us character!",
                   "slashCommand": "imagefun/impostor"
                 },
                 "jpegify": {
@@ -2223,10 +2215,7 @@
                     "border"
                   ],
                   "arguments": "[size] [direction] [colour] [image]",
-                  "description": [
-                    "Add padding to the sides of an image.",
-                    "Available directions:\n- All\n- Top\n- Left\n- Right\n- Bottom"
-                  ],
+                  "description": "Add padding to the sides of an image.",
                   "slashCommand": "imagemanipulation/pad"
                 },
                 "paste": {
@@ -5090,7 +5079,7 @@
               "description": [
                 "Change the bots embed colour on the current server.",
                 "The embed colour is the coloured bar down the side of each message.",
-                "Set the colour to \"default\" to return it to the default colour."
+                "Set the colour to `default` to return it to the default colour."
               ],
               "arguments": [
                 {
@@ -6025,8 +6014,7 @@
                 "text": {
                   "description": [
                     "Write some text over an image.",
-                    "Put an argument inside quotation marks to use spaces",
-                    "The \"align\" options are \"center\", \"left\", and \"right\""
+                    "Put an argument inside quotation marks to use spaces"
                   ],
                   "arguments": [
                     {
@@ -7573,10 +7561,7 @@
               "prefixCommand": "images/imagefun/hiddenimage"
             },
             "impostor": {
-              "description": [
-                "Create a custom Among Us character!",
-                "The colours in order are:\n\noutline, hair, head, visor, body, backpack, leftLeg, rightLeg"
-              ],
+              "description": "Create a custom Among Us character!",
               "arguments": [
                 {
                   "name": "outline",
@@ -7974,10 +7959,7 @@
               "prefixCommand": "images/manipulation/overlay"
             },
             "pad": {
-              "description": [
-                "Add padding to the sides of an image.",
-                "Available directions:\n- All\n- Top\n- Left\n- Right\n- Bottom"
-              ],
+              "description": "Add padding to the sides of an image.",
               "arguments": [
                 {
                   "name": "size",
@@ -8356,11 +8338,7 @@
               "prefixCommand": "images/imagefun/overlays/speechbubble"
             },
             "thinking": {
-              "description": [
-                "Add a thinking hand to an image.",
-                "\"expand\" and \"double\" are true/false.",
-                "\"expand\" puts the hand over the edge of the image."
-              ],
+              "description": "Add a thinking hand to an image.",
               "arguments": [
                 {
                   "name": "expand",
