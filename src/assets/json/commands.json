@@ -2777,7 +2777,7 @@
                     "mcelytra",
                     "elytra"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraft-username]",
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/cape"
                 },
@@ -2786,7 +2786,7 @@
                     "minecrafthead",
                     "mchead"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraft-username]",
                   "description": "View the head of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/head"
                 },
@@ -2806,7 +2806,7 @@
                     "mcpic",
                     "mcpicture"
                   ],
-                  "arguments": "[username] [image]",
+                  "arguments": "[minecraft-username] [image]",
                   "description": "Create a minecraft avatar.",
                   "slashCommand": "minecraftskins/avatar"
                 },
@@ -2819,7 +2819,7 @@
                   "slashCommand": "minecraftskins/kick"
                 },
                 "outfit": {
-                  "arguments": "[outfit] [username]",
+                  "arguments": "[outfit] [minecraft-username]",
                   "description": [
                     "Apply an outfit to a Minecraft skin.",
                     "Outfits: `alex`, `grass`, `maid`, `santa_hat`, `steve`"
@@ -2840,7 +2840,7 @@
                     "renderplayer",
                     "playerrender"
                   ],
-                  "arguments": "[format] [username]",
+                  "arguments": "[format] [minecraft-username]",
                   "cooldown": 5,
                   "description": [
                     "Render a minecraft skin in 3D.",
@@ -2853,7 +2853,7 @@
                     "minecraftskin",
                     "mcskin"
                   ],
-                  "arguments": "[username]",
+                  "arguments": "[minecraft-username]",
                   "description": "View the skin of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/skin"
                 },
@@ -2998,7 +2998,7 @@
                 "rmmcaccount",
                 "rmminecraftaccount"
               ],
-              "arguments": "[username]",
+              "arguments": "[minecraft-username]",
               "description": [
                 "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
                 "Leave blank to remove your account."
@@ -9285,7 +9285,7 @@
               ],
               "arguments": [
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
@@ -9347,7 +9347,7 @@
               "description": "Create a minecraft avatar.",
               "arguments": [
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 },
                 {
@@ -9365,7 +9365,7 @@
               "description": "View the cape and elytra of a Minecraft Java edition player.",
               "arguments": [
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
@@ -9389,7 +9389,7 @@
               "description": "View the head of a Minecraft Java edition player.",
               "arguments": [
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
@@ -9422,7 +9422,7 @@
                   "required": true
                 },
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
@@ -9458,7 +9458,7 @@
                   "description": "The format to render"
                 },
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
@@ -9468,7 +9468,7 @@
               "description": "View the skin of a Minecraft Java edition player.",
               "arguments": [
                 {
-                  "name": "username",
+                  "name": "minecraft-username",
                   "description": "The Minecraft username"
                 }
               ],
