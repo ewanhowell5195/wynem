@@ -47,5 +47,10 @@
   {
     "id": "ghost-ping-notices",
     "description": "Get notified when someone mentions you and then deletes their message"
+  },
+  {
+    "id": "durations",
+    "name": "Duration Formatting",
+    "description": "Learn how to specify time periods across various commands in Wynem"
   }
 ]

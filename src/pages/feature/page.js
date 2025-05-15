@@ -108,7 +108,7 @@ function addBlocks($, element, blocks, feature, args) {
       const table = E("table").addClass("tablelist").appendTo(section)
       for (const row of block.rows) {
         const tr = E("tr").appendTo(table)
-        for (const [i, cell] of row.entries()) tr.append(E("td").html(cell))
+        for (const [i, cell] of row.entries()) tr.append(E("td").html(parseString(cell)))
       }
     } else if (block.type === "image") {
       E("img").attr("src", `/assets/images/features/${feature}/${block.name}.webp`).css("max-height", `${block.height ?? 256}px`).appendTo(section)

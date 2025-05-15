@@ -202,7 +202,7 @@
                   "description": [
                     "View the number of times a command has been used.",
                     "Don't provide a command to view the top 10 most used commands.",
-                    "Use the \"mystats\" or \"userstats\" alias to view your personal stats."
+                    "Use the `mystats` or `userstats` aliases to view your personal stats."
                   ],
                   "slashCommand": "bot/commands/stats"
                 },
@@ -2038,10 +2038,7 @@
                 },
                 "wynem": {
                   "arguments": "[vertical-bars] [horizontal-bars] [background] [shadow] [image]",
-                  "description": [
-                    "Create a custom Wynem logo!",
-                    "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
-                  ],
+                  "description": "Create a custom Wynem logo!",
                   "slashCommand": "imagefun/wynem"
                 }
               }
@@ -2215,8 +2212,7 @@
                   "arguments": "[location] [stretch] [blend-method] [overlay-image] [base-image]",
                   "description": [
                     "Overlay an image on top of another image, filling the entire selected location.",
-                    "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
-                    "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
+                    "`stretch` controls whether the overlayed image will be stretched to fill the location."
                   ],
                   "slashCommand": "imagemanipulation/overlay"
                 },
@@ -2252,11 +2248,7 @@
                 },
                 "resize": {
                   "arguments": "[width] [height] [interpolation] [image]",
-                  "description": [
-                    "Resize an image to a desired size.",
-                    "Interpolation modes only work on static images.",
-                    "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
-                  ],
+                  "description": "Resize an image to a desired size.",
                   "slashCommand": "imagemanipulation/resize",
                   "contextCommand": "message/resize-image"
                 },
@@ -2839,10 +2831,7 @@
                     "skinpreview"
                   ],
                   "arguments": "[format] [image]",
-                  "description": [
-                    "Make a 2D preview for a skin texture.",
-                    "The format is either \"steve\" or \"alex\""
-                  ],
+                  "description": "Make a 2D preview for a skin texture.",
                   "slashCommand": "minecraftskins/preview"
                 },
                 "renderskin": {
@@ -2894,10 +2883,7 @@
                     "convertslim"
                   ],
                   "arguments": "[column-number] [image]",
-                  "description": [
-                    "Convert skins between the wide and slim formats.",
-                    "The \"columnNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
-                  ],
+                  "description": "Convert skins between the wide and slim formats.",
                   "slashCommand": "minecraftskins/slimconverter"
                 }
               }
@@ -4327,7 +4313,7 @@
               "arguments": "[colour]",
               "description": [
                 "Preview a colour. This also converts it to a variety of different colour formats.",
-                "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+                "Available input formats:\n- white\n- #FFF\n- #FFF8\n- #FFFFFF\n- #FFFFFF80\n- rgb(255,255,255)\n- rgba(255,255,255,0.5)\n- hsl(0,0%,100%)\n- hsla(0,0%,100%,0.5)"
               ],
               "slashCommand": "utility/colour"
             },
@@ -4540,20 +4526,20 @@
               "description": "Put members into a band.",
               "arguments": [
                 {
-                  "name": "member-1",
+                  "name": "member1",
                   "description": "Band member 1",
                   "required": true
                 },
                 {
-                  "name": "member-2",
+                  "name": "member2",
                   "description": "Band member 2"
                 },
                 {
-                  "name": "member-3",
+                  "name": "member3",
                   "description": "Band member 3"
                 },
                 {
-                  "name": "member-4",
+                  "name": "member4",
                   "description": "Band member 4"
                 }
               ],
@@ -4583,19 +4569,19 @@
                   "description": "Birthday boy/girl"
                 },
                 {
-                  "name": "guest-1",
+                  "name": "guest1",
                   "description": "Guest 1"
                 },
                 {
-                  "name": "guest-2",
+                  "name": "guest2",
                   "description": "Guest 2"
                 },
                 {
-                  "name": "guest-3",
+                  "name": "guest3",
                   "description": "Guest 3"
                 },
                 {
-                  "name": "guest-4",
+                  "name": "guest4",
                   "description": "Guest 4"
                 }
               ],
@@ -4747,16 +4733,16 @@
               "description": "Turn some members into a group of monkeys!",
               "arguments": [
                 {
-                  "name": "monkey-1",
+                  "name": "monkey1",
                   "description": "Monkey 1",
                   "required": true
                 },
                 {
-                  "name": "monkey-2",
+                  "name": "monkey2",
                   "description": "Monkey 2"
                 },
                 {
-                  "name": "monkey-3",
+                  "name": "monkey3",
                   "description": "Monkey 3"
                 }
               ],
@@ -4766,16 +4752,16 @@
               "description": "Turn some members into a band of monkeys!",
               "arguments": [
                 {
-                  "name": "monkey-1",
+                  "name": "monkey1",
                   "description": "Monkey 1",
                   "required": true
                 },
                 {
-                  "name": "monkey-2",
+                  "name": "monkey2",
                   "description": "Monkey 2"
                 },
                 {
-                  "name": "monkey-3",
+                  "name": "monkey3",
                   "description": "Monkey 3"
                 }
               ],
@@ -4786,37 +4772,37 @@
               "cooldown": 5,
               "arguments": [
                 {
-                  "name": "member-1",
+                  "name": "member1",
                   "description": "Member 1",
                   "required": true
                 },
                 {
-                  "name": "member-2",
+                  "name": "member2",
                   "description": "Member 2",
                   "required": true
                 },
                 {
-                  "name": "member-3",
+                  "name": "member3",
                   "description": "Member 3"
                 },
                 {
-                  "name": "member-4",
+                  "name": "member4",
                   "description": "Member 4"
                 },
                 {
-                  "name": "member-5",
+                  "name": "member5",
                   "description": "Member 5"
                 },
                 {
-                  "name": "member-6",
+                  "name": "member6",
                   "description": "Member 6"
                 },
                 {
-                  "name": "member-7",
+                  "name": "member7",
                   "description": "Member 7"
                 },
                 {
-                  "name": "member-8",
+                  "name": "member8",
                   "description": "Member 8"
                 }
               ],
@@ -4889,7 +4875,7 @@
                   "description": [
                     "View the number of times a command has been used.",
                     "Don't provide a command to view the top 10 most used commands.",
-                    "Use the \"mystats\" or \"userstats\" alias to view your personal stats."
+                    "Use the `mystats` or `userstats` aliases to view your personal stats."
                   ],
                   "arguments": [
                     {
@@ -5435,12 +5421,12 @@
               "description": "Discover how much you hate someone/something!",
               "arguments": [
                 {
-                  "name": "thing-1",
+                  "name": "thing1",
                   "description": "The first thing",
                   "required": true
                 },
                 {
-                  "name": "thing-2",
+                  "name": "thing2",
                   "description": "The second thing"
                 }
               ],
@@ -5489,12 +5475,12 @@
               "description": "Discover how much you love someone/something!",
               "arguments": [
                 {
-                  "name": "thing-1",
+                  "name": "thing1",
                   "description": "The first thing",
                   "required": true
                 },
                 {
-                  "name": "thing-2",
+                  "name": "thing2",
                   "description": "The second thing"
                 }
               ],
@@ -5565,19 +5551,19 @@
               "description": "Combine two GIFs so that one plays after the other.",
               "arguments": [
                 {
-                  "name": "gif-1-file",
+                  "name": "gif1-file",
                   "description": "A file"
                 },
                 {
-                  "name": "gif-1-string",
+                  "name": "gif1-string",
                   "description": "URL, Emoji, etc"
                 },
                 {
-                  "name": "gif-2-file",
+                  "name": "gif2-file",
                   "description": "A file"
                 },
                 {
-                  "name": "gif-2-string",
+                  "name": "gif2-string",
                   "description": "URL, Emoji, etc"
                 }
               ],
@@ -5692,11 +5678,11 @@
                   "description": "First image"
                 },
                 {
-                  "name": "image-2-file",
+                  "name": "image2-file",
                   "description": "Second image"
                 },
                 {
-                  "name": "image-2-string",
+                  "name": "image2-string",
                   "description": "Second image"
                 }
               ],
@@ -5712,37 +5698,37 @@
                   "description": "Generate a gradient from a list of colours.",
                   "arguments": [
                     {
-                      "name": "colour-1",
+                      "name": "colour1",
                       "description": "Colour 1",
                       "required": true
                     },
                     {
-                      "name": "colour-2",
+                      "name": "colour2",
                       "description": "Colour 2",
                       "required": true
                     },
                     {
-                      "name": "colour-3",
+                      "name": "colour3",
                       "description": "Colour 3"
                     },
                     {
-                      "name": "colour-4",
+                      "name": "colour4",
                       "description": "Colour 4"
                     },
                     {
-                      "name": "colour-5",
+                      "name": "colour5",
                       "description": "Colour 5"
                     },
                     {
-                      "name": "colour-6",
+                      "name": "colour6",
                       "description": "Colour 6"
                     },
                     {
-                      "name": "colour-7",
+                      "name": "colour7",
                       "description": "Colour 7"
                     },
                     {
-                      "name": "colour-8",
+                      "name": "colour8",
                       "description": "Colour 8"
                     }
                   ],
@@ -5904,12 +5890,12 @@
                       "required": true
                     },
                     {
-                      "name": "x-2",
+                      "name": "x2",
                       "description": "End X coordinate",
                       "required": true
                     },
                     {
-                      "name": "y-2",
+                      "name": "y2",
                       "description": "End Y coordinate",
                       "required": true
                     },
@@ -7139,37 +7125,37 @@
               "description": "Apply a gradient map to an image",
               "arguments": [
                 {
-                  "name": "colour-1",
+                  "name": "colour1",
                   "description": "Colour 1",
                   "required": true
                 },
                 {
-                  "name": "colour-2",
+                  "name": "colour2",
                   "description": "Colour 2",
                   "required": true
                 },
                 {
-                  "name": "colour-3",
+                  "name": "colour3",
                   "description": "Colour 3"
                 },
                 {
-                  "name": "colour-4",
+                  "name": "colour4",
                   "description": "Colour 4"
                 },
                 {
-                  "name": "colour-5",
+                  "name": "colour5",
                   "description": "Colour 5"
                 },
                 {
-                  "name": "colour-6",
+                  "name": "colour6",
                   "description": "Colour 6"
                 },
                 {
-                  "name": "colour-7",
+                  "name": "colour7",
                   "description": "Colour 7"
                 },
                 {
-                  "name": "colour-8",
+                  "name": "colour8",
                   "description": "Colour 8"
                 },
                 {
@@ -7817,10 +7803,7 @@
               "prefixCommand": "images/imagefun/warp"
             },
             "wynem": {
-              "description": [
-                "Create a custom Wynem logo!",
-                "vCol  - Vertical bar colour\nhCol  - Horizontal bar colour\nbgCol - Background colour\nsCol  - Shadow colour"
-              ],
+              "description": "Create a custom Wynem logo!",
               "arguments": [
                 {
                   "name": "vertical-bars",
@@ -7956,8 +7939,7 @@
             "overlay": {
               "description": [
                 "Overlay an image on top of another image, filling the entire selected location.",
-                "\"stretch\" is a true/false that controls whether the overlayed image will be stretched to fill the location.",
-                "Locations:\n- full\n- top\n- bottom\n- left\n- right\n- topleft\n- topright\n- bottomleft\n- bottomright"
+                "`stretch` controls whether the overlayed image will be stretched to fill the location."
               ],
               "arguments": [
                 {
@@ -8087,11 +8069,7 @@
               "prefixCommand": "images/manipulation/replacecolour"
             },
             "resize": {
-              "description": [
-                "Resize an image to a desired size.",
-                "Interpolation modes only work on static images.",
-                "Interpolation modes:\n\nnearest\ncubic\nmitchell\nlanczos2\nlanczos3"
-              ],
+              "description": "Resize an image to a desired size.",
               "arguments": [
                 {
                   "name": "width",
@@ -8745,19 +8723,19 @@
                   "description": "The amount the colours can differ"
                 },
                 {
-                  "name": "image-1-file",
+                  "name": "image1-file",
                   "description": "The first image"
                 },
                 {
-                  "name": "image-1-string",
+                  "name": "image1-string",
                   "description": "The first image"
                 },
                 {
-                  "name": "image-2-file",
+                  "name": "image2-file",
                   "description": "The second image"
                 },
                 {
-                  "name": "image-2-string",
+                  "name": "image2-string",
                   "description": "The second image"
                 }
               ],
@@ -9047,27 +9025,27 @@
                   ],
                   "arguments": [
                     {
-                      "name": "image-1-file",
+                      "name": "image1-file",
                       "description": "The top texture"
                     },
                     {
-                      "name": "image-1-string",
+                      "name": "image1-string",
                       "description": "The top texture"
                     },
                     {
-                      "name": "image-2-file",
+                      "name": "image2-file",
                       "description": "The left texture"
                     },
                     {
-                      "name": "image-2-string",
+                      "name": "image2-string",
                       "description": "The left texture"
                     },
                     {
-                      "name": "image-3-file",
+                      "name": "image3-file",
                       "description": "The right texture"
                     },
                     {
-                      "name": "image-3-string",
+                      "name": "image3-string",
                       "description": "The right texture"
                     }
                   ],
@@ -9105,19 +9083,19 @@
                       "description": "URL, Emoji, etc"
                     },
                     {
-                      "name": "image-2-file",
+                      "name": "image2-file",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image-2-string",
+                      "name": "image2-string",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image-3-file",
+                      "name": "image3-file",
                       "description": "Not used on all models"
                     },
                     {
-                      "name": "image-3-string",
+                      "name": "image3-string",
                       "description": "Not used on all models"
                     }
                   ],
@@ -9421,12 +9399,12 @@
               "description": "Make one minecraft player kick another minecraft player!",
               "arguments": [
                 {
-                  "name": "username-1",
+                  "name": "username1",
                   "description": "The 1st players username",
                   "required": true
                 },
                 {
-                  "name": "username-2",
+                  "name": "username2",
                   "description": "The 2nd players username"
                 }
               ],
@@ -9451,10 +9429,7 @@
               "prefixCommand": "minecraft/skins/outfit"
             },
             "preview": {
-              "description": [
-                "Make a 2D preview for a skin texture.",
-                "The format is either \"steve\" or \"alex\""
-              ],
+              "description": "Make a 2D preview for a skin texture.",
               "arguments": [
                 {
                   "name": "format",
@@ -9514,10 +9489,7 @@
               "prefixCommand": "minecraft/skins/skinify"
             },
             "slimconverter": {
-              "description": [
-                "Convert skins between the wide and slim formats.",
-                "The \"columnNumber\" decides what column of pixels on the arms to either remove or duplicate, depending on the conversion direction."
-              ],
+              "description": "Convert skins between the wide and slim formats.",
               "arguments": [
                 {
                   "name": "column-number",
@@ -10168,11 +10140,11 @@
                       "description": "The first role"
                     },
                     {
-                      "name": "role-2",
+                      "name": "role2",
                       "description": "The second role"
                     },
                     {
-                      "name": "role-3",
+                      "name": "role3",
                       "description": "The third role"
                     }
                   ],
@@ -10544,7 +10516,7 @@
             "colour": {
               "description": [
                 "Preview a colour. This also converts it to a variety of different colour formats.",
-                "Available input types:\n\nwhite\n#FFF\n#FFF8\n#FFFFFF\n#FFFFFF80\nrgb(255,255,255)\nrgba(255,255,255,0.5)\nhsl(0,0%,100%)\nhsla(0,0%,100%,0.5)"
+                "Available input formats:\n- white\n- #FFF\n- #FFF8\n- #FFFFFF\n- #FFFFFF80\n- rgb(255,255,255)\n- rgba(255,255,255,0.5)\n- hsl(0,0%,100%)\n- hsla(0,0%,100%,0.5)"
               ],
               "arguments": [
                 {

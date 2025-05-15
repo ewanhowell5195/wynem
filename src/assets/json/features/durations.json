@@ -1,0 +1,155 @@
+{
+  "commands": {
+    "prefix": [
+      ["utility", "reminders", "reminder"]
+    ],
+    "slash": [
+      ["utility", "reminders", "set"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are durations?"
+    },
+    "Durations in Wynem allow you to specify time periods in a flexible format across various commands. Durations are primarily used in the reminder command, timeout command, and slowmode setting command. Understanding duration formatting will help you use these time-based features more effectively.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "e!reminder 3d Check on the server event preparations"
+        },
+        "title": "Reminder set",
+        "fields": [
+          ["Length", "3 days"],
+          ["End date", "<t:18 May 2025 12:56>"],
+          ["Reminder", "Check on the server event preparations"]
+        ],
+        "footer": ["You now have 1 reminder set"]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Duration formatting"
+    },
+    "Wynem uses a simple and flexible format for specifying durations that's easy to learn and use.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Basic Format", "`[number][unit]` - For example: `5m` for 5 minutes"],
+        ["Multiple Units", "Combine multiple units without spaces - For example: `1d12h30m` for 1 day, 12 hours, and 30 minutes"],
+        ["Dates", "You can also specify exact dates in various formats"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Available time units"
+    },
+    "When specifying durations, you can use the following time units:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["s", "Seconds"],
+        ["m", "Minutes"],
+        ["h", "Hours"],
+        ["d", "Days"],
+        ["w", "Weeks"],
+        ["mo", "Months"],
+        ["y", "Years"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Examples of durations"
+    },
+    "Here are some examples of valid duration formats:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["30s", "30 seconds"],
+        ["5m", "5 minutes"],
+        ["2h", "2 hours"],
+        ["1d", "1 day"],
+        ["1w", "1 week"],
+        ["6mo", "6 months"],
+        ["1y", "1 year"],
+        ["1d12h", "1 day and 12 hours"],
+        ["3d6h30m", "3 days, 6 hours, and 30 minutes"],
+        ["2w3d", "2 weeks and 3 days"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Using dates instead of durations"
+    },
+    "In addition to relative durations, you can also specify exact dates and times for even more precision:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["2025/05/20", "May 20, 2025 GMT"],
+        ["05/20/2025", "May 20, 2025 GMT"],
+        ["2025-05-20T18:30:00", "May 20, 2025 at 6:30 PM GMT"],
+        ["2025-05-20T18:30:00+08:00", "May 20, 2025 at 6:30 PM in GMT+8 timezone"]
+      ]
+    },
+    "Tip: When using dates, the time will default to midnight GMT if not specified. All dates are processed in GMT, unless you specify the timezone.",
+    {
+      "type": "heading",
+      "text": "How to use durations"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Using with Reminders",
+          "content": [
+            "To set a reminder, you can use the <code class=\"command prefix\">e!reminder [duration] [reminder]</code><code class=\"command slash\">/utility reminders set duration:[duration] reminder:[reminder]</code> command.",
+            "For example: <code class=\"command prefix\">e!reminder 3d Check if the new members have joined</code><code class=\"command slash\">/utility reminders set duration:3d reminder:Check if the new members have joined</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Reminder set",
+                "fields": [
+                  ["Length", "3 days"],
+                  ["End date", "18 May 2025 12:56"],
+                  ["Reminder", "Check if the new members have joined"]
+                ],
+                "footer": ["You now have 2 reminders set"]
+              }
+            },
+            "You can set reminders for virtually any duration - from seconds to years:",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Short-term reminder", "30m - 30 minutes"],
+                ["Multiple units", "1d6h - 1 day and 6 hours"],
+                ["Long-term reminder", "1y - 1 year"],
+                ["Specific date", "2025/12/25 - December 25, 2025"]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Other Commands Using Durations",
+          "content": [
+            "The same duration format is used consistently across all Wynem commands that involve time periods. Here are some other commands that use durations:",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Timeout", "Temporarily restrict a user's ability to interact in the server"],
+                ["Slowmode", "Limit how frequently users can send messages in a channel"],
+                ["Temporary Roles", "Assign roles to users for a limited time"],
+                ["Polls", "Set how long a poll should remain open"],
+                ["Giveaways", "Determine when a giveaway should end"]
+              ]
+            },
+            "For all these commands, the duration formatting works exactly the same way. For example, if you want to set a 30-minute slowmode in a channel or timeout a user for 2 days, you would use `30m` or `2d` respectively."
+          ]
+        }
+      ]
+    }
+  ]
+}
