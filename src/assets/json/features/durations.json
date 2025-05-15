@@ -140,10 +140,7 @@
               "type": "tablelist",
               "rows": [
                 ["Timeout", "Temporarily restrict a user's ability to interact in the server"],
-                ["Slowmode", "Limit how frequently users can send messages in a channel"],
-                ["Temporary Roles", "Assign roles to users for a limited time"],
-                ["Polls", "Set how long a poll should remain open"],
-                ["Giveaways", "Determine when a giveaway should end"]
+                ["Slowmode", "Limit how frequently users can send messages in a channel"]
               ]
             },
             "For all these commands, the duration formatting works exactly the same way. For example, if you want to set a 30-minute slowmode in a channel or timeout a user for 2 days, you would use `30m` or `2d` respectively."
