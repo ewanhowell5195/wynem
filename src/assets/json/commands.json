@@ -1133,7 +1133,7 @@
                   "arguments": "[type] [image] [image2]",
                   "description": [
                     "Transition from one image into another image.",
-                    "Available types:\n\nfade, fadeblack, fadewhite, distance, wipeleft, wiperight, wipeup, wipedown, slideleft, slideright, slideup, slidedown, smoothleft, smoothright, smoothup, smoothdown, circlecrop, rectcrop, circleclose, circleopen, horzclose, horzopen, vertclose, vertopen, diagbl, diagbr, diagtl, diagtr, hlslice, hrslice, vuslice, vdslice, dissolve, pixelize, radial, hblur, wipetl, wipetr, wipebl, wipebr, fadegrays, squeezev, squeezeh, zoomin, hlwind, hrwind, vuwind, vdwind, coverleft, coverright, coverup, coverdown, revealleft, revealright, revealup, revealdown"
+                    "Available types: `fade`, `fadeblack`, `fadewhite`, `distance`, `wipeleft`, `wiperight`, `wipeup`, `wipedown`, `slideleft`, `slideright`, `slideup`, `slidedown`, `smoothleft`, `smoothright`, `smoothup`, `smoothdown`, `circlecrop`, `rectcrop`, `circleclose`, `circleopen`, `horzclose`, `horzopen`, `vertclose`, `vertopen`, `diagbl`, `diagbr`, `diagtl`, `diagtr`, `hlslice`, `hrslice`, `vuslice`, `vdslice`, `dissolve`, `pixelize`, `radial`, `hblur`, `wipetl`, `wipetr`, `wipebl`, `wipebr`, `fadegrays`, `squeezev`, `squeezeh`, `zoomin`, `hlwind`, `hrwind`, `vuwind`, `vdwind`, `coverleft`, `coverright`, `coverup`, `coverdown`, `revealleft`, `revealright`, `revealup`, `revealdown`"
                   ],
                   "slashCommand": "gif/transition"
                 }
@@ -3852,8 +3852,8 @@
                   ],
                   "description": [
                     "Run a builder that sets up a message that members can use to to add roles to themselves.",
-                    "For the role text, provide \"none\" to leave it blank.",
-                    "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                    "For the role text, provide `none` to leave it blank.",
+                    "Role types:\n- **Normal** - The user can add and remove this role as they wish\n- **Binding** - Once the role is applied, it cannot be removed\n- **Unique** - You can only have one unique role at a time"
                   ],
                   "extra": [
                     {
@@ -4357,6 +4357,15 @@
                 "Reply to a message to use that message's content as the search term."
               ],
               "slashCommand": "utility/google"
+            },
+            "rollout": {
+              "arguments": "[experiment] [id]",
+              "description": [
+                "Check if an ID is rolled out in a Discord experiment",
+                "If no ID is provided, it will default to the current server's ID",
+                "If you are not in a server, it will default to your User ID"
+              ],
+              "slashCommand": "utility/rollout"
             },
             "tinyurl": {
               "arguments": "[url]",
@@ -5651,7 +5660,7 @@
             "transition": {
               "description": [
                 "Transition from one image into another image.",
-                "Available types:\n\nfade, fadeblack, fadewhite, distance, wipeleft, wiperight, wipeup, wipedown, slideleft, slideright, slideup, slidedown, smoothleft, smoothright, smoothup, smoothdown, circlecrop, rectcrop, circleclose, circleopen, horzclose, horzopen, vertclose, vertopen, diagbl, diagbr, diagtl, diagtr, hlslice, hrslice, vuslice, vdslice, dissolve, pixelize, radial, hblur, wipetl, wipetr, wipebl, wipebr, fadegrays, squeezev, squeezeh, zoomin, hlwind, hrwind, vuwind, vdwind, coverleft, coverright, coverup, coverdown, revealleft, revealright, revealup, revealdown"
+                "Available types: `fade`, `fadeblack`, `fadewhite`, `distance`, `wipeleft`, `wiperight`, `wipeup`, `wipedown`, `slideleft`, `slideright`, `slideup`, `slidedown`, `smoothleft`, `smoothright`, `smoothup`, `smoothdown`, `circlecrop`, `rectcrop`, `circleclose`, `circleopen`, `horzclose`, `horzopen`, `vertclose`, `vertopen`, `diagbl`, `diagbr`, `diagtl`, `diagtr`, `hlslice`, `hrslice`, `vuslice`, `vdslice`, `dissolve`, `pixelize`, `radial`, `hblur`, `wipetl`, `wipetr`, `wipebl`, `wipebr`, `fadegrays`, `squeezev`, `squeezeh`, `zoomin`, `hlwind`, `hrwind`, `vuwind`, `vdwind`, `coverleft`, `coverright`, `coverup`, `coverdown`, `revealleft`, `revealright`, `revealup`, `revealdown`"
               ],
               "arguments": [
                 {
@@ -9575,8 +9584,8 @@
             "buttonroles": {
               "description": [
                 "Run a builder that sets up a message that members can use to to add roles to themselves.",
-                "For the role text, provide \"none\" to leave it blank.",
-                "Role types:\n\nNormal  - The user can add and remove this role as they wish\nBinding - Once the role is applied, it cannot be removed\nUnique  - You can only have one unique role at a time"
+                "For the role text, provide `none` to leave it blank.",
+                "Role types:\n- **Normal** - The user can add and remove this role as they wish\n- **Binding** - Once the role is applied, it cannot be removed\n- **Unique** - You can only have one unique role at a time"
               ],
               "permissions": [
                 "Manage Roles"
@@ -10559,6 +10568,25 @@
                 }
               ],
               "prefixCommand": "utility/google"
+            },
+            "rollout": {
+              "description": [
+                "Check if an ID is rolled out in a Discord experiment",
+                "If no ID is provided, it will default to the current server's ID",
+                "If you are not in a server, it will default to your User ID"
+              ],
+              "arguments": [
+                {
+                  "name": "experiment",
+                  "description": "The experiment to check",
+                  "required": true
+                },
+                {
+                  "name": "id",
+                  "description": "The ID to check"
+                }
+              ],
+              "prefixCommand": "utility/rollout"
             },
             "tinyurl": {
               "description": "Shorten a link using tinyurl.",
