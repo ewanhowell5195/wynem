@@ -4324,6 +4324,11 @@
               ],
               "slashCommand": "utility/createembed"
             },
+            "eval": {
+              "arguments": "[code]",
+              "description": "Evaluate some JavaScript code and view the output.",
+              "slashCommand": "utility/eval"
+            },
             "exif": {
               "aliases": [
                 "xif"
@@ -10517,6 +10522,17 @@
             "createembed": {
               "description": "Run a builder to create and send a custom embed.",
               "prefixCommand": "utility/createembed"
+            },
+            "eval": {
+              "description": "Evaluate some JavaScript code and view the output.",
+              "arguments": [
+                {
+                  "name": "code",
+                  "description": "The code to evaluate",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/eval"
             },
             "exif": {
               "description": "View the exif data of a file.",
