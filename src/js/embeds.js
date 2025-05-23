@@ -193,8 +193,9 @@ export function makeModal($, parent, data) {
 
 export function parseString(str) {
   return str.replace(/<command:(.+?)\|(.+?)>/g, '<code class="command prefix">e!$1</code><code class="command slash">/$2</code>')
-            .replace(/```((?:.|\n)+?)```/g, '<div class="codeblock">$1</div>')
+            .replace(/```((?:.|\n)+?)```/g, (_, code) => `<div class="codeblock">${code.replace(/`/g, "´")}</div>`)
             .replace(/`((?:.|\n)+?)`/g, "<code>$1</code>")
+            .replace(/´/g, "`")
             .replace(/<@&(.+?)>/g, '<span class="ping role">@$1</span>')
             .replace(/<([@#].+?)>/g, '<span class="ping">$1</span>')
             .replace(/<:(\/.+?)>/g, (s, m) => `<a is="f-a" class="ping" href="/commands/slash${m.replace(/\s/g, "/")}">${m}</a>`)
@@ -203,6 +204,7 @@ export function parseString(str) {
             .replace(/\*\*((?:.|\n)+?)\*\*/g, "<strong>$1</strong>")
             .replace(/^>\s/gm, '<span class="listbar"></span>')
             .replace(/^##\s(.*)$/gm, '<div class="heading2">$1</div>')
+            .replace(/^-#\s(.*)$/gm, '<div class="small">$1</div>')
             .replace(/\[([^\[\]]+?)\]\((.+?)\)/g, (m, s, l) => {
               if (l.startsWith("/")) return `<a is="f-a" href="${l}">${s}</a>`
               return `<a href="${l}" target="_blank">${s}</a>`

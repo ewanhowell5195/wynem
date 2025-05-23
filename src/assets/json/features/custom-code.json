@@ -1,0 +1,164 @@
+{
+  "commands": {
+    "prefix": [
+      ["utility", "eval"],
+      ["bot", "commands", "customcommands", "addcustomcommand"],
+      ["bot", "autoresponses", "addautoresponse"]
+    ],
+    "slash": [
+      ["eval"],
+      ["botconfig", "customcommands", "add"],
+      ["botconfig", "autoresponses", "add"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is custom code?"
+    },
+    "Custom code is a powerful feature in Wynem that allows advanced users to write and execute custom JavaScript code directly in Discord. This gives you complete control over what happens when certain triggers occur, such as running a custom command or when an auto-response is triggered.",
+    {
+      "type": "heading",
+      "text": "Where can custom code be used?"
+    },
+    "Custom code can be used in several places throughout Wynem:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Eval command", "Run JavaScript code directly in Discord for any purpose"],
+        ["Custom Commands", "Write code that executes when users run your custom command"],
+        ["Auto-responses", "Write code that executes when messages trigger your auto-response"]
+      ]
+    },
+    "For more information about these features, see the <a href=\"/features/custom-commands\" is=\"f-a\">Custom Commands</a> and <a href=\"/features/auto-responses\" is=\"f-a\">Auto-responses</a> feature pages.",
+    {
+      "type": "heading",
+      "text": "The eval command"
+    },
+    "The <command:eval|eval> command allows you to run JavaScript code directly in Discord. This command uses the exact same environment as custom commands and auto-responses, giving you access to all the same functions and variables.",
+    "You can use eval for whatever you want, but it's particularly good for testing code before using it in custom commands or auto-responses.",
+    "To see what functions and variables are available in the environment, run `Object.keys(globalThis)` in the eval command.",
+    {
+      "type": "heading",
+      "text": "Available variables and objects"
+    },
+    "Your custom code has access to several important variables and objects:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["`message`", "The Discord message object that triggered the code"],
+        ["`user`", "The Discord user object who triggered the code"],
+        ["`member`", "The Discord guild member object who triggered the code (null in DMs)"],
+        ["`guild`", "The Discord server/guild object where the code is running (null in DMs)"],
+        ["`channel`", "The Discord channel object where the code is running"],
+        ["`interaction`", "Alias for the message object"],
+        ["`args`", "Array of arguments provided by the user (custom commands only)"],
+        ["`client`", "Bot client information including prefix, stats, emotes, and colors"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Return values and output"
+    },
+    "There are multiple ways to return or output values from your code:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Return statement", "Use a return statement to explicitly return a value"],
+        ["Console logging", "Use console.log() to output debugging information"],
+        ["Automatic return", "If the last line is an expression, it will automatically be returned"]
+      ]
+    },
+    "```// This will display \"Hello world!\"\n\"Hello world!\"\n\n// This will add to the output\nconsole.log(\"Debug info\")\n\n// This will both log and return the final result\nconsole.log(\"Processing...\")\n\"Final result\"\n\n// This explicitly returns a value\nreturn \"Explicit return value\"```",
+    {
+      "type": "heading",
+      "text": "API actions"
+    },
+    "Your custom code can interact with Discord through various API actions:",
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Sending Messages",
+          "content": [
+            "The `sendMessage()` function is the primary way to send messages from your custom code.",
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "name": "Text Messages",
+                  "content": [
+                    "Send simple text messages:",
+                    "```sendMessage(\"Hello world!\")```",
+                    "```sendMessage(`Hello ${user.username}!`)```",
+                    "**Note:** For simple text output, you can also just return or console.log the text - this will automatically create a simple embed with your text as the description:",
+                    "```\"Hello world!\" // This creates a simple embed automatically```",
+                    "```console.log(\"Debug message\") // This also creates a simple embed```"
+                  ]
+                },
+                {
+                  "name": "Basic Embeds",
+                  "content": [
+                    "Send embeds with basic properties:",
+                    "```sendMessage({\n  title: \"My Embed\",\n  description: \"This is an embed\",\n  color: \"#ff0000\"\n})```",
+                    "```sendMessage({\n  title: \"User Info\",\n  description: `Information about ${user.username}`,\n  thumbnail: user.displayAvatarURL,\n  color: \"blue\"\n})```"
+                  ]
+                },
+                {
+                  "name": "Advanced Embeds",
+                  "content": [
+                    "Create complex embeds with fields, author, and footer:",
+                    "```sendMessage({\n  title: \"Advanced Embed\",\n  url: \"https://example.com\",\n  description: \"This embed has many features\",\n  author: [\"Bot Name\", \"https://example.com/icon.png\", \"https://example.com\"],\n  footer: [\"Footer text\", \"https://example.com/footer.png\"],\n  fields: [\n    [\"Field 1\", \"Value 1\", true],\n    [\"Field 2\", \"Value 2\", true],\n    [\"Field 3\", \"This field spans the full width\", false]\n  ],\n  thumbnail: \"https://example.com/thumb.png\",\n  image: \"https://example.com/image.png\",\n  color: \"#00ff00\",\n  timestamp: new Date()\n})```",
+                    "Author, footer, and fields also support object format:",
+                    "```sendMessage({\n  title: \"Object Format Example\",\n  author: { name: \"Bot Name\", iconURL: \"https://example.com/icon.png\" },\n  footer: { text: \"Footer text\", iconURL: \"https://example.com/footer.png\" },\n  fields: [\n    { name: \"Field 1\", value: \"Value 1\", inline: true },\n    { name: \"Field 2\", value: \"Value 2\", inline: false }\n  ]\n})```"
+                  ]
+                }
+              ]
+            },
+            "**Multiple messages:** You can call `sendMessage()` multiple times, but it will edit the existing message with the updated content rather than sending separate messages.",
+            "**Important for eval command:** The eval command always returns the output. If you're using `sendMessage()` in eval, make sure to return `undefined` to prevent the message from being edited with the return value:",
+            "```sendMessage(\"Hello!\")\nreturn undefined // Prevents eval from editing the message```",
+            "Custom commands and auto-responses don't have this issue - they ignore the return value if you send a message."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Limitations"
+    },
+    "Custom code has certain limitations for security and performance:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Memory", "8MB memory limit"],
+        ["Execution time", "5 second timeout"],
+        ["API requests", "Limited to 5 API calls (like sendMessage) per execution"],
+        ["File system", "No file system access"],
+        ["Network access", "No direct network/internet access"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Example code snippets"
+    },
+    "**Basic greeting with user mention:**````Hello ${user.username}! Welcome to ${guild.name}`​```",
+    "**Random response:**```const responses = [\"Yes!\", \"No!\", \"Maybe...\", \"Ask again later\"]\nconst random = responses[Math.floor(Math.random() * responses.length)]\nreturn random```",
+    "**Using arguments (custom commands):**```const name = args[0] ?? \"World\"\nsendMessage(`Hello ${name}!`)```",
+    "**Complex embed with user info:**```sendMessage({\n  title: \"User Information\",\n  description: `Information about ${user.username}`,\n  fields: [\n    [\"User ID\", user.id, true],\n    [\"Joined Discord\", new Date(user.createdTimestamp).toLocaleDateString(), true],\n    [\"In Server Since\", member ? new Date(member.joinedTimestamp).toLocaleDateString() : \"N/A\", true]\n  ],\n  thumbnail: user.displayAvatarURL,\n  color: \"#00ff00\"\n})```",
+    {
+      "type": "heading",
+      "text": "Tips for writing custom code"
+    },
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Start simple", "Test your code thoroughly before implementing complex logic"],
+        ["Use console.log()", "When testing, output debugging information - it will be shown in the response"],
+        ["Use dynamic variables", "Leverage available variables like `message.content`, `user.username`, `args[0]` etc."],
+        ["Modern syntax", "You can use both JavaScript and TypeScript syntax"],
+        ["Handle errors", "Always handle errors gracefully - if your code throws an error, it will be displayed to the user"]
+      ]
+    }
+  ]
+}

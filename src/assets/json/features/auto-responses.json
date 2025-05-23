@@ -63,7 +63,8 @@
         ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
         ["Custom Embed", "Reply with your own custom embed that can look however you want"],
         ["URL Buttons", "Will send a message containing some clickable URL buttons"],
-        ["Emoji Reactions", "Will react to the message with some emoji reactions"]
+        ["Emoji Reactions", "Will react to the message with some emoji reactions"],
+        ["Custom Code", "Write your own code to decide what the autoresponse does!"]
       ]
     },
     {
@@ -135,7 +136,8 @@
                   ["Image/Gif/Video", "Will send an image/gif/video in chat"],
                   ["Custom Embed", "Will send a custom embed"],
                   ["URL Buttons", "Will send a message containing some URL buttons"],
-                  ["Emoji Reactions", "Will react to the message with some emoji reactions"]
+                  ["Emoji Reactions", "Will react to the message with some emoji reactions"],
+                  ["Custom Code", "Write your own code to decide what the autoresponse does!"]
                 ],
                 "buttons": [
                   {
@@ -152,6 +154,9 @@
                   },
                   {
                     "label": "Emoji Reactions"
+                  },
+                  {
+                    "label": "Custom Code"
                   }
                 ] 
               }
@@ -300,6 +305,33 @@
                         ]
                       }
                     }
+                  ]
+                },
+                {
+                  "name": "Custom Code",
+                  "content": [
+                    "You will be presented with a button to add the auto-response's custom code. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the auto-response's custom code",
+                        "buttons": [{
+                          "label": "Add custom code",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter your JavaScript code. This code will be executed when the auto-response is triggered, allowing you to create completely custom behaviors.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Auto-response Builder",
+                        "rows": [
+                          ["custom code", "console.log(\"JavaScript\")", true, 4000]
+                        ]
+                      }
+                    },
+                    "The custom code feature allows advanced users to write JavaScript that will be executed when the auto-response triggers. This gives you complete control over what happens when someone triggers your auto-response.\n\nYou can access the message content that triggered the auto-response by using `message.content` in your code.\n\nFor more information about the custom code system, check out the <a href=\"/features/custom-code\" is=\"f-a\">Custom Code</a> feature."
                   ]
                 }
               ]

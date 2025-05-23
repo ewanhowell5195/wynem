@@ -49,7 +49,9 @@
         ["Message", "Wynem will reply with a regular Discord message"],
         ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
         ["Custom Embed", "Reply with your own custom embed that can look however you want"],
-        ["URL Buttons", "Will send a message containing some clickable URL buttons"]
+        ["URL Buttons", "Will send a message containing some clickable URL buttons"],
+        ["Image Command", "Create a custom image command where users can paste images into a background image"],
+        ["Custom Code", "Write your own code to decide what the command does!"]
       ]
     },
     {
@@ -94,7 +96,9 @@
                   ["Message", "Will send a regular Discord message"],
                   ["Image/Gif/Video", "Will send an image/gif/video in chat"],
                   ["Custom Embed", "Will send a custom embed"],
-                  ["URL Buttons", "Will send a message containing some URL buttons"]
+                  ["URL Buttons", "Will send a message containing some URL buttons"],
+                  ["Image Command", "Create a custom image command where users can paste images into a background image"],
+                  ["Custom Code", "Write your own code to decide what the command does!"]
                 ],
                 "buttons": [
                   {
@@ -108,6 +112,12 @@
                   },
                   {
                     "label": "URL Buttons"
+                  },
+                  {
+                    "label": "Image Command"
+                  },
+                  {
+                    "label": "Custom Code"
                   }
                 ] 
               }
@@ -127,6 +137,21 @@
                           "label": "Add Message",
                           "emoji": "pencil"
                         }] 
+                      }
+                    },
+                    "For additional image inputs (2 and 3), you will first be asked if you want to add another input:",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Would you like to add image input #2?",
+                        "buttons": [
+                          {
+                            "label": "Yes"
+                          },
+                          {
+                            "label": "No"
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter the message. Enter in your message and then submit it.",
@@ -226,6 +251,226 @@
                         ] 
                       }
                     }
+                  ]
+                },
+                {
+                  "name": "Image Command",
+                  "content": [
+                    "You will be presented with a button to add the custom command's background image. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the command's background image",
+                        "buttons": [{
+                          "label": "Add background image",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter the background image URL. This will be the base image that users paste their images onto.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Custom Command Builder",
+                        "rows": [
+                          ["background image url", "https://example.com/image.png", true]
+                        ]
+                      }
+                    },
+                    "You will then be able to add up to 3 image input areas where users can paste their images. For each image input, you can choose from three paste types:",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "What image paste type would you like for image input #1?",
+                        "fields": [
+                          ["Simple", "Paste an image in the most basic way. Location, width, and height are customisable"],
+                          ["Rotated", "Paste an image with a custom rotation. Location, width, height, and rotation are customisable"],
+                          ["Perspective Distort", "Paste an image in the most complex way. You define the coordinates for each corner of the image individually"]
+                        ],
+                        "buttons": [
+                          {
+                            "label": "Simple"
+                          },
+                          {
+                            "label": "Rotated"
+                          },
+                          {
+                            "label": "Perspective Distort"
+                          }
+                        ]
+                      }
+                    },
+                    "After choosing a paste type, you will be presented with a button to configure that image input:",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add image input #1",
+                        "buttons": [{
+                          "label": "Add image input #1",
+                          "emoji": "pencil"
+                        }]
+                      }
+                    },
+                    {
+                      "type": "tabs",
+                      "tabs": [
+                        {
+                          "name": "Simple",
+                          "content": [
+                            "The Simple paste type is the most straightforward way to add user images to your background. It places the user's image as a rectangle at the exact position and size you specify.",
+                            {
+                              "type": "modal",
+                              "data": {
+                                "title": "Custom Command Builder",
+                                "rows": [
+                                  ["image x coordinate", "0", true],
+                                  ["image y coordinate", "0", true],
+                                  ["image width", "128", true],
+                                  ["image height", "128", true],
+                                  ["location", "Location against background (infront, behind)"]
+                                ]
+                              }
+                            },
+                            "The x and y coordinates determine where the top-left corner of the pasted image will be positioned. Width and height control the size of the pasted image. Location determines whether the pasted image appears in front of or behind the background image."
+                          ]
+                        },
+                        {
+                          "name": "Rotated",
+                          "content": [
+                            "The Rotated paste type builds on the Simple type by adding rotation capabilities. In addition to controlling position and size, you can specify an angle in degrees to rotate the user's image around its center point.",
+                            {
+                              "type": "modal",
+                              "data": {
+                                "title": "Custom Command Builder",
+                                "rows": [
+                                  ["image x and y coordinates", "0, 0", true],
+                                  ["image width and height", "128, 128", true],
+                                  ["image rotation", "45"],
+                                  ["location", "Location against background (infront, behind)"]
+                                ]
+                              }
+                            },
+                            "The coordinates determine the center point of the pasted image. Width and height control the size, and rotation is specified in degrees. Location determines whether the pasted image appears in front of or behind the background image."
+                          ]
+                        },
+                        {
+                          "name": "Perspective Distort",
+                          "content": [
+                            "The Perspective Distort paste type provides the most advanced image transformation options. Instead of using simple width/height dimensions, you define the exact pixel coordinates where each of the four corners of the user's image should be positioned. This allows for complex effects like perspective, skewing, and non-rectangular shapes.",
+                            {
+                              "type": "modal",
+                              "data": {
+                                "title": "Custom Command Builder",
+                                "rows": [
+                                  ["top left x and y coordinates", "0, 0", true],
+                                  ["top right x and y coordinates", "128, 0", true],
+                                  ["bottom left x and y coordinates", "0, 128", true],
+                                  ["bottom right x and y coordinates", "128, 128", true],
+                                  ["location", "Location against background (infront, behind)"]
+                                ]
+                              }
+                            },
+                            "Location determines whether the pasted image appears in front of or behind the background image."
+                          ]
+                        }
+                      ]
+                    },
+                    "Image commands allow users to create custom image compositions by pasting their images into predefined areas on your background image."
+                  ]
+                },
+                {
+                  "name": "Custom Code",
+                  "content": [
+                    "You will first be asked whether the custom command should accept user-provided arguments.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Should this custom command accept user-provided arguments?",
+                        "buttons": [
+                          {
+                            "label": "Yes"
+                          },
+                          {
+                            "label": "No"
+                          }
+                        ]
+                      }
+                    },
+                    "If you choose yes, you can add up to 3 arguments that users can provide when running the command. For the 2nd and 3rd arguments, you will be asked if you want to add them:",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Would you like to add a 2nd argument?",
+                        "buttons": [
+                          {
+                            "label": "Yes"
+                          },
+                          {
+                            "label": "No"
+                          }
+                        ]
+                      }
+                    },
+                    "Then you'll be presented with a button to configure the argument:",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add argument 1 of 3\n\n**Argument types**: `text`, `member`, `number`, `integer`, `boolean`, `colour`, `percentage`\n\n-# Required arguments cannot come after optional arguments",
+                        "buttons": [{
+                          "label": "Add argument #1",
+                          "emoji": "pencil"
+                        }]
+                      }
+                    },
+                    "A modal will appear where you can configure the argument details:",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Custom Command Builder",
+                        "rows": [
+                          ["argument name", "Argument Name", true],
+                          ["argument description", "Argument Description", true],
+                          ["argument type", "text, member, number, integer, boolean, colour, percentage"],
+                          ["is this argument required?", "Yes or No"]
+                        ]
+                      }
+                    },
+                    "The available argument types are:",
+                    {
+                      "type": "tablelist",
+                      "rows": [
+                        ["text", "Accepts any text input"],
+                        ["member", "Accepts a Discord server member"],
+                        ["number", "Accepts any number (including decimals)"],
+                        ["integer", "Accepts whole numbers only"],
+                        ["boolean", "Accepts true/false or yes/no"],
+                        ["colour", "Accepts color values (hex codes, color names)"],
+                        ["percentage", "Accepts either a number or a percentage (e.g., 50 or 50%)"]
+                      ]
+                    },
+                    "When users run your command with arguments, the arguments are automatically grouped. If a user provides multiple words for the last argument, they are combined together. Users can also group arguments themselves by using quotes. For example, with a command that has two arguments:\n\n`e!mycommand apple this is a long description` would be parsed as:\n- Argument 1: `apple`\n- Argument 2: `this is a long description`\n\nOr using quotes to group the first argument:\n`e!mycommand \"red apple\" this is still the second argument` would be parsed as:\n- Argument 1: `red apple`\n- Argument 2: `this is still the second argument`\n\nWith three arguments:\n`e!mycommand red 25 this text goes in the last argument` would be parsed as:\n- Argument 1: `red`\n- Argument 2: `25`\n- Argument 3: `this text goes in the last argument`",
+                    "You will then be presented with a button to add the custom command's code. Press it to continue.",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Press the button to add the custom command's code",
+                        "buttons": [{
+                          "label": "Add custom code",
+                          "emoji": "pencil"
+                        }] 
+                      }
+                    },
+                    "A modal will appear where you can enter your JavaScript code. This code will be executed when the custom command is run.",
+                    {
+                      "type": "modal",
+                      "data": {
+                        "title": "Custom Command Builder",
+                        "rows": [
+                          ["custom code", "console.log(\"JavaScript\")", true, 4000]
+                        ]
+                      }
+                    },
+                    "In your custom code, you can access the user-provided arguments using the `args` array. For example, `args[0]` is the first argument, `args[1]` is the second, and so on.\n\nThe custom code feature allows advanced users to write JavaScript that will be executed when the command is run. This gives you complete control over what happens when someone uses your custom command.\n\nFor more information about the custom code system, check out the <a href=\"/features/custom-code\" is=\"f-a\">Custom Code</a> feature."
                   ]
                 }
               ]

@@ -52,5 +52,9 @@
     "id": "durations",
     "name": "Duration Formatting",
     "description": "Learn how to specify time periods across various commands in Wynem"
+  },
+  {
+    "id": "custom-code",
+    "description": "Write and execute custom JavaScript code directly in Discord"
   }
 ]
