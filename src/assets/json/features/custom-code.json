@@ -94,7 +94,7 @@
                     {
                       "type": "embed",
                       "data": {
-                        "description": "Hello world!"
+                        "content": "Hello world!"
                       }
                     },
                     "**Note:** For simple text output, you can also just return or console.log the text - this will automatically create a simple embed with your text as the description:",
@@ -228,9 +228,37 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Bans",
+          "content": [
+            "Your custom code can manage server bans using the `banUser()` and `unbanUser()` functions. These functions include automatic permission validation and error handling.",
+            {
+              "type": "heading",
+              "text": "Ban a user"
+            },
+            "Provide the user's Discord ID as a string:",
+            "```banUser(\"123456789012345678\")```",
+            "```banUser(user.id)```",
+            "**Ban with reason and message deletion:**",
+            "```banUser(\"123456789012345678\", {\n  reason: \"Spamming\",\n  delete: 86400 // Delete messages from last 24 hours (in seconds)\n})```",
+            {
+              "type": "heading",
+              "text": "Unban a user"
+            },
+            "Provide the user's Discord ID as a string:",
+            "```unbanUser(\"123456789012345678\")```",
+            "```unbanUser(\"123456789012345678\", \"Appeal accepted\")```"
+          ]
         }
       ]
     },
+    {
+      "type": "heading",
+      "text": "Permissions"
+    },
+    "For API actions to work, both the bot and the user executing the code must have the required permissions for that action.",
+    "When code is triggered automatically (such as through auto-responses), permissions are checked against the person who originally configured the feature instead of the user who triggered it.",
     {
       "type": "heading",
       "text": "Limitations"

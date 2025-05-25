@@ -52,7 +52,7 @@ function populateEmbed(embed, text, thumbnail, data) {
 }
 
 export function makeEmbed($, parent, data, args = {}) {
-  let reply, embed, selectContainer, buttons, text, thumbnail
+  let reply, nameRow, embed, selectContainer, buttons, text, thumbnail
   const container = E("div").addClass("embed-container").append(
     reply = E("div").addClass("reply-container").css("display", "none"),
     E("div").append(
@@ -60,7 +60,7 @@ export function makeEmbed($, parent, data, args = {}) {
         E("img").addClass(args.outline ? "outline" : undefined).attr("src", "/assets/images/logo/logo.webp")
       ),
       E("div").addClass("embed-content").append(
-        E("div").addClass("name-row").append(
+        nameRow = E("div").addClass("name-row").append(
           E("div").addClass("name").text("Wynem"),
           E("div").addClass("tag").append(
             $("#check-icon").contents().clone(),
@@ -80,15 +80,17 @@ export function makeEmbed($, parent, data, args = {}) {
   )
   if (data.userless) container.addClass("userless")
   populateEmbed(embed, text, thumbnail, data)
-  if (data.embeds) for (const data2 of data.embeds) {
-    let text2, thumbnail2
-    const embed2 = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
-      E("div").append(
-        text2 = E("div"),
-        thumbnail2 = E("div")
-      )
-    ).insertAfter(embed)
-    populateEmbed(embed2, text2, thumbnail2, data2)
+  if (data.embeds) {
+    for (const data2 of data.embeds) {
+      let text2, thumbnail2
+      const embed2 = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
+        E("div").append(
+          text2 = E("div"),
+          thumbnail2 = E("div")
+        )
+      ).insertAfter(embed)
+      populateEmbed(embed2, text2, thumbnail2, data2)
+    }
   }
   if (data.reply) {
     reply.css("display", "flex").append(
@@ -98,7 +100,7 @@ export function makeEmbed($, parent, data, args = {}) {
     )
   }
   if (data.content) {
-    E("div").addClass("text-content").html(parseString(data.content)).insertBefore(embed)
+    E("div").addClass("text-content").html(parseString(data.content)).insertAfter(nameRow)
   }
   if (data.select) {
     selectContainer.css("display", "initial")
