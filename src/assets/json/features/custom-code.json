@@ -53,7 +53,7 @@
         ["`channel`", "The Discord channel object where the code is running"],
         ["`interaction`", "Alias for the message object"],
         ["`args`", "Array of arguments provided by the user (custom commands only)"],
-        ["`client`", "Bot client information including prefix, stats, emotes, and colors"]
+        ["`client`", "Bot client information including prefix, stats, emotes, and colours"]
       ]
     },
     {
@@ -79,7 +79,7 @@
       "type": "tabs",
       "tabs": [
         {
-          "name": "Sending Messages",
+          "name": "Messages",
           "content": [
             "The `sendMessage()` function is the primary way to send messages from your custom code.",
             {
@@ -91,6 +91,12 @@
                     "Send simple text messages:",
                     "```sendMessage(\"Hello world!\")```",
                     "```sendMessage(`Hello ${user.username}!`)```",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "description": "Hello world!"
+                      }
+                    },
                     "**Note:** For simple text output, you can also just return or console.log the text - this will automatically create a simple embed with your text as the description:",
                     "```\"Hello world!\" // This creates a simple embed automatically```",
                     "```console.log(\"Debug message\") // This also creates a simple embed```"
@@ -101,16 +107,65 @@
                   "content": [
                     "Send embeds with basic properties:",
                     "```sendMessage({\n  title: \"My Embed\",\n  description: \"This is an embed\",\n  color: \"#ff0000\"\n})```",
-                    "```sendMessage({\n  title: \"User Info\",\n  description: `Information about ${user.username}`,\n  thumbnail: user.displayAvatarURL,\n  color: \"blue\"\n})```"
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "My Embed",
+                        "description": "This is an embed",
+                        "colour": "#ff0000"
+                      }
+                    },
+                    "```sendMessage({\n  title: \"User Info\",\n  description: `Information about ${user.username}`,\n  thumbnail: user.displayAvatarURL,\n  color: \"blue\"\n})```",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "User Info",
+                        "description": "Information about Ewan",
+                        "thumbnail": "/assets/images/logo/ewan.webp",
+                        "colour": "blue"
+                      }
+                    }
                   ]
                 },
                 {
                   "name": "Advanced Embeds",
                   "content": [
                     "Create complex embeds with fields, author, and footer:",
-                    "```sendMessage({\n  title: \"Advanced Embed\",\n  url: \"https://example.com\",\n  description: \"This embed has many features\",\n  author: [\"Bot Name\", \"https://example.com/icon.png\", \"https://example.com\"],\n  footer: [\"Footer text\", \"https://example.com/footer.png\"],\n  fields: [\n    [\"Field 1\", \"Value 1\", true],\n    [\"Field 2\", \"Value 2\", true],\n    [\"Field 3\", \"This field spans the full width\", false]\n  ],\n  thumbnail: \"https://example.com/thumb.png\",\n  image: \"https://example.com/image.png\",\n  color: \"#00ff00\",\n  timestamp: new Date()\n})```",
+                    "```sendMessage({\n  title: \"Advanced Embed\",\n  url: \"https://example.com\",\n  description: \"This embed has many features\",\n  author: [\"Bot Name\", \"https://wynem.com/assets/images/logo/logo.webp\", \"https://example.com\"],\n  footer: [\"Footer text\", \"https://wynem.com/assets/images/logo/logo.webp\"],\n  fields: [\n    [\"Field 1\", \"Value 1\", true],\n    [\"Field 2\", \"Value 2\", true],\n    [\"Field 3\", \"This field spans the full width\", false]\n  ],\n  thumbnail: \"https://wynem.com/assets/images/logo/logo.webp\",\n  image: \"https://wynem.com/assets/images/logo/logo.webp\",\n  color: \"#00ff00\",\n  timestamp: new Date()\n})```",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Advanced Embed",
+                        "url": "https://example.com",
+                        "description": "This embed has many features",
+                        "author": ["Bot Name", "/assets/images/logo/logo.webp", "https://example.com"],
+                        "footer": ["Footer text", "/assets/images/logo/logo.webp"],
+                        "fields": [
+                          ["Field 1", "Value 1", true],
+                          ["Field 2", "Value 2", true],
+                          ["Field 3", "This field spans the full width", false]
+                        ],
+                        "thumbnail": "/assets/images/logo/logo.webp",
+                        "image": "/assets/images/logo/logo.webp",
+                        "colour": "#00ff00",
+                        "timestamp": "Today at 17:31"
+                      }
+                    },
                     "Author, footer, and fields also support object format:",
-                    "```sendMessage({\n  title: \"Object Format Example\",\n  author: { name: \"Bot Name\", iconURL: \"https://example.com/icon.png\" },\n  footer: { text: \"Footer text\", iconURL: \"https://example.com/footer.png\" },\n  fields: [\n    { name: \"Field 1\", value: \"Value 1\", inline: true },\n    { name: \"Field 2\", value: \"Value 2\", inline: false }\n  ]\n})```"
+                    "```sendMessage({\n  title: \"Object Format Example\",\n  author: { name: \"Bot Name\", iconURL: \"https://wynem.com/assets/images/logo/logo.webp\" },\n  footer: { text: \"Footer text\", iconURL: \"https://wynem.com/assets/images/logo/logo.webp\" },\n  fields: [\n    { name: \"Field 1\", value: \"Value 1\", inline: true },\n    { name: \"Field 2\", value: \"Value 2\", inline: true },\n    { name: \"Field 3\", value: \"Value 3\", inline: false }\n  ]\n})```",
+                    {
+                      "type": "embed",
+                      "data": {
+                        "title": "Object Format Example",
+                        "author": ["Bot Name", "/assets/images/logo/logo.webp"],
+                        "footer": ["Footer text", "/assets/images/logo/logo.webp"],
+                        "fields": [
+                          ["Field 1", "Value 1", true],
+                          ["Field 1", "Value 2", true],
+                          ["Field 2", "Value 3", false]
+                        ]
+                      }
+                    }
                   ]
                 }
               ]
@@ -119,6 +174,59 @@
             "**Important for eval command:** The eval command always returns the output. If you're using `sendMessage()` in eval, make sure to return `undefined` to prevent the message from being edited with the return value:",
             "```sendMessage(\"Hello!\")\nreturn undefined // Prevents eval from editing the message```",
             "Custom commands and auto-responses don't have this issue - they ignore the return value if you send a message."
+          ]
+        },
+        {
+          "name": "Errors",
+          "content": [
+            "The `sendError()` function is specifically designed for error messages. It automatically sets the author to \"Error\" with an error icon and uses a red color scheme.",
+            "**Simple error message:**",
+            "```sendError(\"Something went wrong!\")```",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/emojis/error.webp"],
+                "description": "Something went wrong!",
+                "colour": "#DD2E44"
+              }
+            },
+            "**Error with title:**",
+            "```sendError({\n  title: \"Invalid Input\",\n  description: \"Please provide a valid username\"\n})```",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/emojis/error.webp"],
+                "title": "Invalid Input",
+                "description": "Please provide a valid username",
+                "colour": "#DD2E44"
+              }
+            },
+            "**Error with additional fields:**",
+            "```sendError({\n  title: \"Command Failed\",\n  description: \"The command could not be executed\",\n  fields: [\n    [\"Error Code\", \"404\", true],\n    [\"Reason\", \"User not found\", true]\n  ]\n})```",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/emojis/error.webp"],
+                "title": "Command Failed",
+                "description": "The command could not be executed",
+                "fields": [
+                  ["Error Code", "404", true],
+                  ["Reason", "User not found", true]
+                ],
+                "colour": "#DD2E44"
+              }
+            },
+            "**Important notes about sendError():**",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Author", "Automatically set to \"Error\" with the <:error:> icon"],
+                ["Color", "Automatically set to `#DD2E44` (red) - cannot be overridden"],
+                ["String input", "If you pass a string, it becomes the embed description"],
+                ["Content property", "If you set a `content` property in an object, it will be moved to the description"],
+                ["Plain text", "Plain text content (without embeds) is not supported - everything becomes an embed"]
+              ]
+            }
           ]
         }
       ]
@@ -145,7 +253,7 @@
     "**Basic greeting with user mention:**````Hello ${user.username}! Welcome to ${guild.name}`​```",
     "**Random response:**```const responses = [\"Yes!\", \"No!\", \"Maybe...\", \"Ask again later\"]\nconst random = responses[Math.floor(Math.random() * responses.length)]\nreturn random```",
     "**Using arguments (custom commands):**```const name = args[0] ?? \"World\"\nsendMessage(`Hello ${name}!`)```",
-    "**Complex embed with user info:**```sendMessage({\n  title: \"User Information\",\n  description: `Information about ${user.username}`,\n  fields: [\n    [\"User ID\", user.id, true],\n    [\"Joined Discord\", new Date(user.createdTimestamp).toLocaleDateString(), true],\n    [\"In Server Since\", member ? new Date(member.joinedTimestamp).toLocaleDateString() : \"N/A\", true]\n  ],\n  thumbnail: user.displayAvatarURL,\n  color: \"#00ff00\"\n})```",
+    "**Complex embed with user info:**```sendMessage({\n  title: \"User Information\",\n  description: `Information about ${user.username}`,\n  fields: [\n    [\"User ID\", user.id, true],\n    [\"Joined Discord\", new Date(user.createdTimestamp).toLocaleDateString(), true],\n    [\"In Server Since\", member ? new Date(member.joinedTimestamp).toLocaleDateString() : \"N/A\", true]\n  ],\n  thumbnail: user.displayAvatarURL,\n  colour: \"#00ff00\"\n})```",
     {
       "type": "heading",
       "text": "Tips for writing custom code"

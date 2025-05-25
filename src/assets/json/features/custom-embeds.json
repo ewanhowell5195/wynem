@@ -31,7 +31,8 @@
         "buttons": [{
           "label": "This is a button",
           "url": "/"
-        }]
+        }],
+        "timestamp": "Today at 17:31"
       }
     },
     {

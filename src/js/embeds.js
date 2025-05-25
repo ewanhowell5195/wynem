@@ -3,7 +3,7 @@ function populateEmbed(embed, text, thumbnail, data) {
   if (data.author) {
     E("div").addClass("embed-author").append(
       data.author[1] ? E("img").attr("src", data.author[1]) : undefined,
-      E("div").text(data.author[0])
+      data.author[2] ? E("a").attr("href", data.author[2]).text(data.author[0]) : E("div").text(data.author[0])
     ).appendTo(text)
   } else if (data.warning) {
     E("div").addClass("embed-author").append(
@@ -34,6 +34,13 @@ function populateEmbed(embed, text, thumbnail, data) {
     E("img").addClass("embed-thumbnail popupable").attr("src", data.thumbnail).appendTo(thumbnail)
   } else {
     thumbnail.remove()
+  }
+  if (data.timestamp) {
+    if (data.footer) {
+      data.footer[0] += " • " + data.timestamp
+    } else {
+      data.footer = [data.timestamp]
+    }
   }
   if (data.footer) {
     E("div").addClass("embed-footer").append(

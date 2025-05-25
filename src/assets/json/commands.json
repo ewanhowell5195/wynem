@@ -4325,6 +4325,9 @@
               "slashCommand": "utility/createembed"
             },
             "eval": {
+              "aliases": [
+                "usereval"
+              ],
               "arguments": "[code]",
               "description": "Evaluate some JavaScript code and view the output.",
               "slashCommand": "eval"
