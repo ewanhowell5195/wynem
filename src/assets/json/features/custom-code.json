@@ -238,17 +238,56 @@
               "text": "Ban a user"
             },
             "Provide the user's Discord ID as a string:",
-            "```banUser(\"123456789012345678\")```",
+            "```banUser(\"737080713181921361\")```",
             "```banUser(user.id)```",
             "**Ban with reason and message deletion:**",
-            "```banUser(\"123456789012345678\", {\n  reason: \"Spamming\",\n  delete: 86400 // Delete messages from last 24 hours (in seconds)\n})```",
+            "```banUser(\"737080713181921361\", {\n  reason: \"Spamming\",\n  delete: 86400 // Delete messages from last 24 hours (in seconds)\n})```",
             {
               "type": "heading",
               "text": "Unban a user"
             },
             "Provide the user's Discord ID as a string:",
-            "```unbanUser(\"123456789012345678\")```",
-            "```unbanUser(\"123456789012345678\", \"Appeal accepted\")```"
+            "```unbanUser(\"737080713181921361\")```",
+            "```unbanUser(\"737080713181921361\", \"Appeal accepted\")```"
+          ]
+        },
+        {
+          "name": "Members",
+          "content": [
+            "Your custom code can retrieve member and user information using the `getMember()` and `getUser()` functions.",
+            {
+              "type": "heading",
+              "text": "Get Member"
+            },
+            "The `getMember()` function retrieves server member information and accepts user IDs, member names, nicknames, and special shortcuts:",
+            "```const member = await getMember(\"737080713181921361\")\nconst member2 = await getMember(\"Username\")\nconst member3 = await getMember(\"Display Name\")```",
+            "**Shortcuts for getMember():**",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["`^`", "Target the member from the previous message"],
+                ["`self`", "Target yourself"],
+                ["`me`", "Target yourself"],
+                ["`<`", "Target yourself"],
+                ["`<<`", "Target your user (will not include server-specific data like nickname and server avatar)"],
+                ["`bot`", "Target the bot"]
+              ]
+            },
+            "```const previousMember = await getMember(\"^\")\nconst myself = await getMember(\"self\")\nconst botMember = await getMember(\"bot\")```",
+            {
+              "type": "heading",
+              "text": "Get User"
+            },
+            "The `getUser()` function retrieves basic Discord user information using only user IDs:",
+            "```const user = await getUser(\"737080713181921361\")\nconst user2 = await getUser(member.id)```",
+            {
+              "type": "heading",
+              "text": "Usage examples"
+            },
+            "```const member = await getMember(user.id)\nif (member) {\n  sendMessage(`${member.displayName} joined on ${member.joinedAt}`)\n} else {\n  sendError(\"Member not found\")\n}```",
+            "```const user = await getUser(\"737080713181921361\")\nif (user) {\n  sendMessage(`${user.username} created their account on ${user.createdAt}`)\n} else {\n  sendError(\"User not found\")\n}```",
+            "**Key differences:**",
+            "`getMember()` returns the complete member object, which includes roles, permissions, server profile data, and also contains the user object. `getUser()` only returns basic Discord user data. Use `getUser()` when you only need basic user information or when the user might not be in the current server."
           ]
         }
       ]
