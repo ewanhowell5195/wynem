@@ -230,28 +230,6 @@
           ]
         },
         {
-          "name": "Bans",
-          "content": [
-            "Your custom code can manage server bans using the `banUser()` and `unbanUser()` functions. These functions include automatic permission validation and error handling.",
-            {
-              "type": "heading",
-              "text": "Ban a user"
-            },
-            "Provide the user's Discord ID as a string:",
-            "```banUser(\"737080713181921361\")```",
-            "```banUser(user.id)```",
-            "**Ban with reason and message deletion:**",
-            "```banUser(\"737080713181921361\", {\n  reason: \"Spamming\",\n  delete: 86400 // Delete messages from last 24 hours (in seconds)\n})```",
-            {
-              "type": "heading",
-              "text": "Unban a user"
-            },
-            "Provide the user's Discord ID as a string:",
-            "```unbanUser(\"737080713181921361\")```",
-            "```unbanUser(\"737080713181921361\", \"Appeal accepted\")```"
-          ]
-        },
-        {
           "name": "Members",
           "content": [
             "Your custom code can retrieve member and user information using the `getMember()` and `getUser()` functions.",
@@ -288,6 +266,68 @@
             "```const user = await getUser(\"737080713181921361\")\nif (user) {\n  sendMessage(`${user.username} created their account on ${user.createdAt}`)\n} else {\n  sendError(\"User not found\")\n}```",
             "**Key differences:**",
             "`getMember()` returns the complete member object, which includes roles, permissions, server profile data, and also contains the user object. `getUser()` only returns basic Discord user data. Use `getUser()` when you only need basic user information or when the user might not be in the current server."
+          ]
+        },
+        {
+          "name": "Bans",
+          "content": [
+            "Your custom code can manage server bans using the `banUser()` and `unbanUser()` functions. These functions include automatic permission validation and error handling.",
+            {
+              "type": "heading",
+              "text": "Ban a user"
+            },
+            "Provide the user's Discord ID as a string:",
+            "```banUser(\"737080713181921361\")```",
+            "```banUser(user.id)```",
+            "**Ban with reason and message deletion:**",
+            "```banUser(\"737080713181921361\", {\n  reason: \"Spamming\",\n  delete: 86400 // Delete messages from last 24 hours (in seconds)\n})```",
+            {
+              "type": "heading",
+              "text": "Unban a user"
+            },
+            "Provide the user's Discord ID as a string:",
+            "```unbanUser(\"737080713181921361\")```",
+            "```unbanUser(\"737080713181921361\", \"Appeal accepted\")```"
+          ]
+        },
+        {
+          "name": "Kicks",
+          "content": [
+            "Your custom code can kick members from the server using the `kickMember()` function. This function includes automatic permission validation and error handling.",
+            {
+              "type": "heading",
+              "text": "Kick a member"
+            },
+            "Provide the user's Discord ID as a string:",
+            "```kickMember(\"737080713181921361\")```",
+            "```kickMember(user.id)```",
+            "**Kick with reason:**",
+            "```kickMember(\"737080713181921361\", \"Spamming in chat\")```"
+          ]
+        },
+        {
+          "name": "Timeouts",
+          "content": [
+            "Your custom code can timeout members using the `timeoutMember()` function. This function includes automatic permission validation and error handling.",
+            {
+              "type": "heading",
+              "text": "Timeout a member"
+            },
+            "Provide the user's Discord ID and timeout duration in milliseconds:",
+            "```timeoutMember(\"737080713181921361\", 300000) // 5 minutes```",
+            "```timeoutMember(user.id, 3600000) // 1 hour```",
+            "**Timeout with reason:**",
+            "```timeoutMember(\"737080713181921361\", 600000, \"Breaking server rules\") // 10 minutes```",
+            "**Remove timeout:**",
+            "```timeoutMember(\"737080713181921361\", 0) // Removes timeout```",
+            "**Timeout durations:**",
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Minimum", "`0` (removes timeout)"],
+                ["Maximum", "`2,419,200,000` milliseconds (28 days)"]
+              ]
+            }
           ]
         }
       ]
