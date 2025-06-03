@@ -115,8 +115,9 @@
                 "customcommands": {
                   "description": [
                     "Custom commands are commands that you can configure to respond with whatever you want.",
-                    "You can use \"e!help custom\" to view all the custom commands.",
-                    "Custom command types:\n\nMessage: Will send a regular Discord message\nImage/Gif/Video: Will send an image/gif/video in chat\nCustom Embed: Will send a custom embed\nURL Buttons: Will send a message containing some URL buttons"
+                    "You can use `e!help custom` to view all the custom commands, or `e!help custom:[serverId]` to view another server's custom commands.",
+                    "When running custom commands, the `owner` field can be used to run commands belonging to other users or servers. You can enter user IDs or usernames, and for servers you can enter a server ID or use `server` to refer to the current server.",
+                    "Custom command types:\n- **Message**: Will send a regular Discord message\n- **Image/Gif/Video**: Will send an image/gif/video in chat\n- **Custom Embed**: Will send a custom embed\n- **URL Buttons**: Will send a message containing some URL buttons\n- **Image Command**: Create a custom image command where users can paste images into a background image\n- **Custom Code**: Write your own code to decide what the command does!"
                   ],
                   "commands": {
                     "addcustomcommand": {
@@ -166,6 +167,53 @@
                         "Manage Guild"
                       ],
                       "slashCommand": "botconfig/customcommands/remove"
+                    }
+                  }
+                },
+                "personalcommands": {
+                  "description": [
+                    "Personal commands are commands that you can configure to respond with whatever you want.",
+                    "They are similar to custom commands, but instead of belonging to a server, they belong to you, meaning you can use them anywhere!",
+                    "Personal commands can only by run via the `/personalcommand run` slash command",
+                    "You can use `e!help personal` to view all your personal commands, or `e!help personal:[username/id]` to view someone elses personal commands.",
+                    "When running personal commands, the `owner` field can be used to run commands belonging to other users or servers. You can enter user IDs or usernames, and for servers you can enter a server ID or use `server` to refer to the current server.",
+                    "Personal command types:\n- **Message**: Will send a regular Discord message\n- **Image/Gif/Video**: Will send an image/gif/video in chat\n- **Custom Embed**: Will send a custom embed\n- **URL Buttons**: Will send a message containing some URL buttons\n- **Image Command**: Create a custom image command where users can paste images into a background image\n- **Custom Code**: Write your own code to decide what the command does!"
+                  ],
+                  "commands": {
+                    "addpersonalcommand": {
+                      "aliases": [
+                        "newpersonalcommand",
+                        "personalcommandadd",
+                        "personalcommandnew",
+                        "addpc",
+                        "newpc",
+                        "pcadd",
+                        "pcnew"
+                      ],
+                      "description": "Run a builder that creates you a new personal command.",
+                      "extra": [
+                        {
+                          "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                        }
+                      ],
+                      "slashCommand": "personalcommand/add"
+                    },
+                    "removepersonalcommand": {
+                      "aliases": [
+                        "deletepersonalcommand",
+                        "personalcommandremove",
+                        "personalcommanddelete",
+                        "removepc",
+                        "deletepc",
+                        "pcremove",
+                        "pcdelete"
+                      ],
+                      "arguments": "[command]",
+                      "description": "Remove one of your personal commands.",
+                      "permissions": [
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "personalcommand/remove"
                     }
                   }
                 }
@@ -4365,6 +4413,14 @@
                 "Reply to a message to use that message's content as the search term."
               ],
               "slashCommand": "utility/google"
+            },
+            "inspectinvite": {
+              "aliases": [
+                "inviteinspect",
+                "inspect"
+              ],
+              "arguments": "[invite]",
+              "description": "View the details about a server invite link"
             },
             "rollout": {
               "arguments": "[experiment] [id]",
@@ -9565,6 +9621,54 @@
             }
           }
         },
+        "personalcommand": {
+          "commands": {
+            "add": {
+              "description": "Run a builder that creates you a new personal command.",
+              "prefixCommand": "bot/commands/personalcommands/addpersonalcommand"
+            },
+            "remove": {
+              "description": "Remove one of your personal commands.",
+              "arguments": [
+                {
+                  "name": "command",
+                  "description": "The personal command to remove",
+                  "required": true
+                }
+              ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "bot/commands/personalcommands/removepersonalcommand"
+            },
+            "run": {
+              "description": "Run a personal command.",
+              "arguments": [
+                {
+                  "name": "command",
+                  "description": "The personal command to run",
+                  "required": true
+                },
+                {
+                  "name": "arg1",
+                  "description": "Argument 1"
+                },
+                {
+                  "name": "arg2",
+                  "description": "Argument 2"
+                },
+                {
+                  "name": "arg3",
+                  "description": "Argument 3"
+                },
+                {
+                  "name": "owner",
+                  "description": "The command owner (change the command list to use)"
+                }
+              ]
+            }
+          }
+        },
         "role": {
           "commands": {
             "add": {
@@ -10736,6 +10840,10 @@
             {
               "name": "arg3",
               "description": "Argument 3"
+            },
+            {
+              "name": "owner",
+              "description": "The command owner (change the command list to use)"
             }
           ],
           "permissions": [
