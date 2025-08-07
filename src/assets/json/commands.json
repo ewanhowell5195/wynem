@@ -1918,7 +1918,7 @@
               },
               "commands": {
                 "blockify": {
-                  "arguments": "[type] [dithering] [stats] [image]",
+                  "arguments": "[type] [size-limit] [dithering] [stats] [image]",
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
@@ -2044,6 +2044,11 @@
                   "cooldown": 3,
                   "description": "Make an image spin!",
                   "slashCommand": "imagefun/spin"
+                },
+                "spoiler": {
+                  "arguments": "[blur-strength] [image]",
+                  "description": "Make a fake Discord spoiler image.",
+                  "slashCommand": "imagefun/spoiler"
                 },
                 "squarify": {
                   "aliases": [
@@ -4413,14 +4418,6 @@
                 "Reply to a message to use that message's content as the search term."
               ],
               "slashCommand": "utility/google"
-            },
-            "inspectinvite": {
-              "aliases": [
-                "inviteinspect",
-                "inspect"
-              ],
-              "arguments": "[invite]",
-              "description": "View the details about a server invite link"
             },
             "rollout": {
               "arguments": "[experiment] [id]",
@@ -7511,6 +7508,10 @@
                   "description": "The blockify type"
                 },
                 {
+                  "name": "size-limit",
+                  "description": "The maximum output size"
+                },
+                {
                   "name": "dithering",
                   "description": "Use dithering"
                 },
@@ -7787,6 +7788,24 @@
                 }
               ],
               "prefixCommand": "images/imagefun/spin"
+            },
+            "spoiler": {
+              "description": "Make a fake Discord spoiler image.",
+              "arguments": [
+                {
+                  "name": "blur-strength",
+                  "description": "The strength of the blur"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/spoiler"
             },
             "squarify": {
               "description": [
