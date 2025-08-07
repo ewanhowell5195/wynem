@@ -7,7 +7,7 @@ include /../includes/embeds.pug
    |  everything
   p Wynem is a multipurpose Discord bot that has a vast array of features for all sorts of purposes. From Moderation, to Fun, to Image Editing!
   .button-bar
-    a.button(href = `https://invite.${self.domain}/`): span Invite
+    a.button(onclick = "inviteBot(event)", href = `https://invite.${self.domain}/`, target = "_blank"): span Invite
     #about-button.button.secondary: span Learn more
 .container
   #about
@@ -49,6 +49,6 @@ include /../includes/embeds.pug
       a.button(href = "/commands/prefix/minecraft", is = "f-a"): span View Minecraft commands
     .showcase#minecraft
   .button-bar
-    a.button(href = `https://invite.${self.domain}/`): span Invite now!
+    a.button(onclick = "inviteBot(event)", href = `https://invite.${self.domain}/`, target = "_blank"): span Invite now!
     a.button.secondary(href = "/features", is = "f-a")
       span View more features

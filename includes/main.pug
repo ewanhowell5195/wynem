@@ -56,7 +56,7 @@ html(lang = "en")
         a.page-button(href = "/features", is = "f-a"): span Features
         a.page-button(href = "/commands", is = "f-a"): span Commands
         .spacer
-        a.page-button(href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
+        a.page-button(onclick = "inviteBot(event)", href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
         a.page-button(href = `https://discord.${self.domain}/`, target = "_blank"): span Discord Server
       .sidebar-button.hamburger-container.outside
         .hamburger
@@ -67,7 +67,7 @@ html(lang = "en")
       a.page-button(href = "/features", is = "f-a"): span Features
       a.page-button(href = "/commands", is = "f-a"): span Commands
       .line
-      a.page-button(href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
+      a.page-button(onclick = "inviteBot(event)", href = `https://invite.${self.domain}/`, target = "_blank"): span Invite Wynem
       a.page-button(href = `https://discord.${self.domain}/`, target = "_blank"): span Discord Server
       .line
       a.page-button(href = "https://ewanhowell.com/", target = "_blank"): span Developer's Website
@@ -97,3 +97,12 @@ html(lang = "en")
         a.page-button(href = "mailto:contact@wynem.com", target = "_blank"): span Contact
         a.page-button(href = "/privacy", is = "f-a"): span Privacy
         a.page-button(href = "/terms", is = "f-a"): span Terms
+    script.
+      function inviteBot(evt) {
+        evt.preventDefault()
+        gtag("event", "click_invite", {
+          page_title: document.title,
+          page_path: location.pathname
+        })
+        window.open(evt.currentTarget.href, "_blank")
+      }
