@@ -54,6 +54,10 @@
                     [
                       "Emoji Reactions",
                       "Will react to the message with some emoji reactions"
+                    ],
+                    [
+                      "Custom Code",
+                      "Write your own code to decide what the autoresponse does!"
                     ]
                   ]
                 }
@@ -1667,10 +1671,30 @@
                 },
                 "overlays": {
                   "commands": {
+                    "confetti": {
+                      "aliases": [
+                        "yippee",
+                        "yipee"
+                      ],
+                      "arguments": "[image]",
+                      "cooldown": 3,
+                      "description": "Add confetti to an image!",
+                      "slashCommand": "imageoverlays/confetti"
+                    },
                     "easter": {
                       "arguments": "[image]",
+                      "cooldown": 3,
                       "description": "Add an easter overlay to an image.",
                       "slashCommand": "imageoverlays/easter"
+                    },
+                    "explode": {
+                      "aliases": [
+                        "bomb"
+                      ],
+                      "arguments": "[image]",
+                      "cooldown": 3,
+                      "description": "Explode an image.",
+                      "slashCommand": "imageoverlays/explode"
                     },
                     "gun": {
                       "arguments": "[expand] [double] [image]",
@@ -1691,6 +1715,7 @@
                         "christmas"
                       ],
                       "arguments": "[image]",
+                      "cooldown": 3,
                       "description": "Make an image jolly!",
                       "slashCommand": "imageoverlays/jolly"
                     },
@@ -1969,14 +1994,6 @@
                   "cooldown": 3,
                   "description": "Turn an image into a bunch of emojis!",
                   "slashCommand": "imagefun/emojify"
-                },
-                "explode": {
-                  "aliases": [
-                    "bomb"
-                  ],
-                  "arguments": "[image]",
-                  "description": "Explode an image.",
-                  "slashCommand": "imagefun/explode"
                 },
                 "hiddenimage": {
                   "aliases": [
@@ -2313,7 +2330,8 @@
                 "scale": {
                   "aliases": [
                     "magnify",
-                    "enlarge"
+                    "enlarge",
+                    "zoom"
                   ],
                   "arguments": "[image]",
                   "description": "Scale an image up to 1024x1024, making it easier to view small images. Gifs will scale to 566x350.",
@@ -2638,7 +2656,7 @@
                     "ctmsplit",
                     "splitctm"
                   ],
-                  "arguments": "[tile-resolution] [image]",
+                  "arguments": "[tile-resolution] [zip-name] [image]",
                   "description": "Split a CTM template image up into its individual images for use with OptiFine CTM.",
                   "slashCommand": "minecraft/resourcepacks/ctmsplitter"
                 },
@@ -3197,6 +3215,10 @@
                     [
                       "discordlinks",
                       "Block users hiding Discord links inside a markdown disguised link:\n`[message](https://discord.gg/pkRxtGw)`"
+                    ],
+                    [
+                      "disguisedservers",
+                      "Block users hiding server invite links inside markdown disguised links:\n`[Check this out!](https://discord.gg/example)`\n`[Cool server](https://discord.com/invite/abcd123)`"
                     ],
                     [
                       "markdownlinks",
@@ -4071,7 +4093,8 @@
               "commands": {
                 "toggleghostpingnotices": {
                   "aliases": [
-                    "toggleghostping"
+                    "toggleghostping",
+                    "toggleghostpings"
                   ],
                   "description": [
                     "Toggles whether the bot will notifiy you when someone ghost pings you.",
@@ -4418,6 +4441,16 @@
                 "Reply to a message to use that message's content as the search term."
               ],
               "slashCommand": "utility/google"
+            },
+            "inspectinvite": {
+              "aliases": [
+                "inviteinspect",
+                "inspect",
+                "scaninvite"
+              ],
+              "arguments": "[invite]",
+              "description": "View the details about a server invite link",
+              "slashCommand": "utility/inspectinvite"
             },
             "rollout": {
               "arguments": "[experiment] [id]",
@@ -7599,20 +7632,6 @@
               ],
               "prefixCommand": "images/imagefun/emojify"
             },
-            "explode": {
-              "description": "Explode an image.",
-              "arguments": [
-                {
-                  "name": "image-file",
-                  "description": "A file"
-                },
-                {
-                  "name": "image-string",
-                  "description": "URL, Emoji, etc"
-                }
-              ],
-              "prefixCommand": "images/imagefun/explode"
-            },
             "hiddenimage": {
               "description": [
                 "Hide an image in plain sight.",
@@ -8289,8 +8308,24 @@
         },
         "imageoverlays": {
           "commands": {
+            "confetti": {
+              "description": "Add confetti to an image!",
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/confetti"
+            },
             "easter": {
               "description": "Add an easter overlay to an image.",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "image-file",
@@ -8302,6 +8337,21 @@
                 }
               ],
               "prefixCommand": "images/imagefun/overlays/easter"
+            },
+            "explode": {
+              "description": "Explode an image.",
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/explode"
             },
             "gun": {
               "description": [
@@ -8349,6 +8399,7 @@
             },
             "jolly": {
               "description": "Make an image jolly!",
+              "cooldown": 3,
               "arguments": [
                 {
                   "name": "image-file",
@@ -9030,8 +9081,11 @@
                   "arguments": [
                     {
                       "name": "tile-resolution",
-                      "description": "The size of the individual textures",
-                      "required": true
+                      "description": "The size of the individual textures"
+                    },
+                    {
+                      "name": "zip-name",
+                      "description": "The name to use for the zip file"
                     },
                     {
                       "name": "image-file",
@@ -10699,6 +10753,17 @@
                 }
               ],
               "prefixCommand": "utility/google"
+            },
+            "inspectinvite": {
+              "description": "View the details about a server invite link",
+              "arguments": [
+                {
+                  "name": "invite",
+                  "description": "The invite link",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "utility/inspectinvite"
             },
             "rollout": {
               "description": [
