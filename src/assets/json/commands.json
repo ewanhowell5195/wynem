@@ -1159,7 +1159,8 @@
                   "arguments": "[loop-count] [gif]",
                   "description": [
                     "Set the number of times a GIF should loop.",
-                    "-1      - Infinite loops\n0-65535 - Exact loop amount"
+                    "`-1` - Infinite loops",
+                    "`0-65535` - Exact loop amount"
                   ],
                   "slashCommand": "gif/loops"
                 },
@@ -1614,10 +1615,7 @@
                     },
                     "makeup": {
                       "arguments": "[lips-colour] [outer-eye-colour] [inner-eye-colour] [image]",
-                      "description": [
-                        "Apply makeup to someone's face!",
-                        "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
-                      ],
+                      "description": "Apply makeup to someone's face!",
                       "slashCommand": "imagefaces/makeup"
                     },
                     "steveface": {
@@ -1698,11 +1696,7 @@
                     },
                     "gun": {
                       "arguments": "[expand] [double] [image]",
-                      "description": [
-                        "Make an image hold a gun.",
-                        "\"expand\" and \"double\" are true/false.",
-                        "\"expand\" puts the gun over the edge of the image"
-                      ],
+                      "description": "Make an image hold a gun.",
                       "slashCommand": "imageoverlays/gun"
                     },
                     "hair": {
@@ -1730,11 +1724,7 @@
                     },
                     "shoot": {
                       "arguments": "[expand] [double] [image]",
-                      "description": [
-                        "Shoot an image.",
-                        "\"expand\" and \"double\" are true/false.",
-                        "\"expand\" puts the gun over the edge of the image"
-                      ],
+                      "description": "Shoot an image.",
                       "slashCommand": "imageoverlays/shoot"
                     },
                     "speechbubble": {
@@ -1947,8 +1937,7 @@
                   "cooldown": 3,
                   "description": [
                     "Turn an image into Minecraft block art!",
-                    "Dithering is always disabled on images smaller than 32x32",
-                    "Available types: `all`, `allcreative`, `bottom`, `bottomcreative`, `side`, `sidecreative`, `top`, `topcreative`, `metal`, `planks`, `plants`, `stone`, `wood`, `wool`"
+                    "Dithering is always disabled on images smaller than 32x32"
                   ],
                   "slashCommand": "imagefun/blockify"
                 },
@@ -2001,10 +1990,7 @@
                     "secretimage"
                   ],
                   "arguments": "[mode] [image]",
-                  "description": [
-                    "Hide an image in plain sight.",
-                    "Colour modes:\n- dark\n- light"
-                  ],
+                  "description": "Hide an image in plain sight.",
                   "slashCommand": "imagefun/hiddenimage"
                 },
                 "impostor": {
@@ -2207,7 +2193,7 @@
                 },
                 "save": {
                   "arguments": "[image]",
-                  "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
+                  "description": "Turn an image into a GIF so that you can save it to your Discord favourites list.",
                   "slashCommand": "imageutility/save"
                 },
                 "slidecompare": {
@@ -2354,10 +2340,7 @@
                 "upscale": {
                   "arguments": "[multiplier] [algorithm] [image]",
                   "cooldown": 5,
-                  "description": [
-                    "Upscale some pixel art.",
-                    "Algorithms:\n- xbrz\n- xbrznaa\n- xbrzt\n- xbrztnaa\n- cleanedge"
-                  ],
+                  "description": "Upscale some pixel art.",
                   "slashCommand": "imagemanipulation/upscale"
                 }
               }
@@ -2423,11 +2406,7 @@
                 "prepend"
               ],
               "arguments": "[direction] [scaling-enabled] [appended-image] [original-image]",
-              "description": [
-                "Append one image onto another image.",
-                "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n- top\n- left\n- right\n- bottom"
-              ],
+              "description": "Append one image onto another image.",
               "slashCommand": "image/append"
             },
             "decodemessage": {
@@ -2744,8 +2723,7 @@
                   "arguments": "[image1] [image2] [image3]",
                   "description": [
                     "Render a resource packs \"pack.png\"",
-                    "The images are in the order: top, left, right",
-                    "Only one image is required"
+                    "The images are in the order: top, left, right"
                   ],
                   "slashCommand": "minecraft/resourcepacks/packpng"
                 },
@@ -2880,10 +2858,7 @@
                 },
                 "outfit": {
                   "arguments": "[outfit] [minecraft-username]",
-                  "description": [
-                    "Apply an outfit to a Minecraft skin.",
-                    "Outfits: `alex`, `grass`, `maid`, `santa_hat`, `steve`"
-                  ],
+                  "description": "Apply an outfit to a Minecraft skin.",
                   "slashCommand": "minecraftskins/outfit"
                 },
                 "previewskin": {
@@ -2902,10 +2877,7 @@
                   ],
                   "arguments": "[format] [minecraft-username]",
                   "cooldown": 5,
-                  "description": [
-                    "Render a minecraft skin in 3D.",
-                    "Formats:\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
-                  ],
+                  "description": "Render a minecraft skin in 3D.",
                   "slashCommand": "minecraftskins/render"
                 },
                 "skin": {
@@ -3107,9 +3079,7 @@
                     "banappeallinkset"
                   ],
                   "arguments": "[url]",
-                  "description": [
-                    "Set or remove a ban appeal link that gets sent to the user when they get banned."
-                  ],
+                  "description": "Set or remove a ban appeal link that gets sent to the user when they get banned.",
                   "permissions": [
                     "Guild Only"
                   ],
@@ -5705,7 +5675,8 @@
             "loops": {
               "description": [
                 "Set the number of times a GIF should loop.",
-                "-1      - Infinite loops\n0-65535 - Exact loop amount"
+                "`-1` - Infinite loops",
+                "`0-65535` - Exact loop amount"
               ],
               "arguments": [
                 {
@@ -6311,11 +6282,7 @@
           },
           "commands": {
             "append": {
-              "description": [
-                "Append one image onto another image.",
-                "Scaling is a true/false that will resize the appended image to be the same size.",
-                "Available directions:\n- top\n- left\n- right\n- bottom"
-              ],
+              "description": "Append one image onto another image.",
               "arguments": [
                 {
                   "name": "direction",
@@ -6894,10 +6861,7 @@
               "prefixCommand": "images/imagefun/faces/enlargeeyes"
             },
             "makeup": {
-              "description": [
-                "Apply makeup to someone's face!",
-                "Default colours:\n\nLips:             #960000\nInner Eye Shadow: #4b88de\nOuter Eye Shadow: #00ff84"
-              ],
+              "description": "Apply makeup to someone's face!",
               "arguments": [
                 {
                   "name": "lips-colour",
@@ -7531,8 +7495,7 @@
             "blockify": {
               "description": [
                 "Turn an image into Minecraft block art!",
-                "Dithering is always disabled on images smaller than 32x32",
-                "Available types: `all`, `allcreative`, `bottom`, `bottomcreative`, `side`, `sidecreative`, `top`, `topcreative`, `metal`, `planks`, `plants`, `stone`, `wood`, `wool`"
+                "Dithering is always disabled on images smaller than 32x32"
               ],
               "cooldown": 3,
               "arguments": [
@@ -7633,10 +7596,7 @@
               "prefixCommand": "images/imagefun/emojify"
             },
             "hiddenimage": {
-              "description": [
-                "Hide an image in plain sight.",
-                "Colour modes:\n- dark\n- light"
-              ],
+              "description": "Hide an image in plain sight.",
               "arguments": [
                 {
                   "name": "mode",
@@ -8279,10 +8239,7 @@
               "prefixCommand": "images/manipulation/trim"
             },
             "upscale": {
-              "description": [
-                "Upscale some pixel art.",
-                "Algorithms:\n- xbrz\n- xbrznaa\n- xbrzt\n- xbrztnaa\n- cleanedge"
-              ],
+              "description": "Upscale some pixel art.",
               "cooldown": 5,
               "arguments": [
                 {
@@ -8354,11 +8311,7 @@
               "prefixCommand": "images/imagefun/overlays/explode"
             },
             "gun": {
-              "description": [
-                "Make an image hold a gun.",
-                "\"expand\" and \"double\" are true/false.",
-                "\"expand\" puts the gun over the edge of the image"
-              ],
+              "description": "Make an image hold a gun.",
               "arguments": [
                 {
                   "name": "expand",
@@ -8428,11 +8381,7 @@
               "prefixCommand": "images/imagefun/overlays/petpet"
             },
             "shoot": {
-              "description": [
-                "Shoot an image.",
-                "\"expand\" and \"double\" are true/false.",
-                "\"expand\" puts the gun over the edge of the image"
-              ],
+              "description": "Shoot an image.",
               "arguments": [
                 {
                   "name": "expand",
@@ -8902,7 +8851,7 @@
               "prefixCommand": "images/imageutility/readqrcode"
             },
             "save": {
-              "description": "Turn an image into a gif so that you can save it to your Discord favourites list.",
+              "description": "Turn an image into a GIF so that you can save it to your Discord favourites list.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -9144,8 +9093,7 @@
                 "packpng": {
                   "description": [
                     "Render a resource packs \"pack.png\"",
-                    "The images are in the order: top, left, right",
-                    "Only one image is required"
+                    "The images are in the order: top, left, right"
                   ],
                   "arguments": [
                     {
@@ -9535,10 +9483,7 @@
               "prefixCommand": "minecraft/skins/minecraftkick"
             },
             "outfit": {
-              "description": [
-                "Apply an outfit to a Minecraft skin.",
-                "Outfits: `alex`, `grass`, `maid`, `santa_hat`, `steve`"
-              ],
+              "description": "Apply an outfit to a Minecraft skin.",
               "arguments": [
                 {
                   "name": "outfit",
@@ -9571,10 +9516,7 @@
               "prefixCommand": "minecraft/skins/previewskin"
             },
             "render": {
-              "description": [
-                "Render a minecraft skin in 3D.",
-                "Formats:\n- back\n- buff\n- dance\n- flop\n- floss\n- gigachad\n- head\n- maid\n- player\n- round\n- spin\n- squish\n- wave"
-              ],
+              "description": "Render a minecraft skin in 3D.",
               "cooldown": 5,
               "arguments": [
                 {
@@ -10561,9 +10503,7 @@
               "prefixCommand": "bot/resendjoininfo"
             },
             "setbanappeal": {
-              "description": [
-                "Set or remove a ban appeal link that gets sent to the user when they get banned."
-              ],
+              "description": "Set or remove a ban appeal link that gets sent to the user when they get banned.",
               "arguments": [
                 {
                   "name": "url",
