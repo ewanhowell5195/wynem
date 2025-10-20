@@ -2721,10 +2721,7 @@
                     "pack"
                   ],
                   "arguments": "[image1] [image2] [image3]",
-                  "description": [
-                    "Render a resource packs \"pack.png\"",
-                    "The images are in the order: top, left, right"
-                  ],
+                  "description": "Render a resource packs \"pack.png\"",
                   "slashCommand": "minecraft/resourcepacks/packpng"
                 },
                 "reloadpack": {
@@ -9091,10 +9088,7 @@
                   "prefixCommand": "minecraft/resourcepacks/optifinedoc"
                 },
                 "packpng": {
-                  "description": [
-                    "Render a resource packs \"pack.png\"",
-                    "The images are in the order: top, left, right"
-                  ],
+                  "description": "Render a resource packs \"pack.png\"",
                   "arguments": [
                     {
                       "name": "image1-file",
