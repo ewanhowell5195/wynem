@@ -3496,10 +3496,10 @@
                   "arguments": "[message]",
                   "description": "Re-pin a message to move it to the top of the channel pins.",
                   "permissions": [
-                    "Manage Messages"
+                    "Pin Messages"
                   ],
                   "botPermissions": [
-                    "Manage Messages"
+                    "Pin Messages"
                   ],
                   "slashCommand": "channel/repin"
                 },
@@ -4419,6 +4419,15 @@
               "description": "View the details about a server invite link",
               "slashCommand": "utility/inspectinvite"
             },
+            "randomwords": {
+              "aliases": [
+                "words",
+                "randwords"
+              ],
+              "arguments": "[count] [min-length] [max-length] [starts-with] [includes] [ends-with]",
+              "description": "Generate random words.",
+              "slashCommand": "utility/randomwords"
+            },
             "rollout": {
               "arguments": "[experiment] [id]",
               "description": [
@@ -5186,10 +5195,10 @@
                 }
               ],
               "permissions": [
-                "Manage Messages"
+                "Pin Messages"
               ],
               "botPermissions": [
-                "Manage Messages"
+                "Pin Messages"
               ],
               "prefixCommand": "server/channel/repin"
             },
@@ -10698,6 +10707,36 @@
                 }
               ],
               "prefixCommand": "utility/inspectinvite"
+            },
+            "randomwords": {
+              "description": "Generate random words.",
+              "arguments": [
+                {
+                  "name": "count",
+                  "description": "Number of words to return"
+                },
+                {
+                  "name": "min-length",
+                  "description": "The minimum character length of each word"
+                },
+                {
+                  "name": "max-length",
+                  "description": "The maximum character length of each word"
+                },
+                {
+                  "name": "starts-with",
+                  "description": "The words must start with the following text"
+                },
+                {
+                  "name": "includes",
+                  "description": "The words must include the following text"
+                },
+                {
+                  "name": "ends-with",
+                  "description": "The words must end with the following text"
+                }
+              ],
+              "prefixCommand": "utility/randomwords"
             },
             "rollout": {
               "description": [
