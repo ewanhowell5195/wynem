@@ -4556,6 +4556,14 @@
                 "Guild Only"
               ],
               "slashCommand": "voice/viewautotts"
+            },
+            "volume": {
+              "arguments": "[volume]",
+              "description": "Change the bots voice channel volume.",
+              "permissions": [
+                "Guild Only"
+              ],
+              "slashCommand": "voice/volume"
             }
           }
         }
@@ -10837,6 +10845,16 @@
             "viewautotts": {
               "description": "Show the servers AutoTTS channel.",
               "prefixCommand": "voice/viewautotts"
+            },
+            "volume": {
+              "description": "Change the bots voice channel volume.",
+              "arguments": [
+                {
+                  "name": "volume",
+                  "description": "The voice volume to use, as a percentage"
+                }
+              ],
+              "prefixCommand": "voice/volume"
             }
           }
         }
