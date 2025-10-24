@@ -4462,6 +4462,18 @@
         },
         "voice": {
           "commands": {
+            "defaultvolume": {
+              "aliases": [
+                "setdefaultvolume"
+              ],
+              "arguments": "[volume]",
+              "description": "Change the bots default voice channel volume.",
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "slashCommand": "botconfig/defaultvolume"
+            },
             "ignoreprefix": {
               "aliases": [
                 "ignoredprefix",
@@ -4481,18 +4493,26 @@
             },
             "leave": {
               "aliases": [
-                "l",
                 "die",
-                "disconnect",
-                "unconnect",
-                "unjoin",
-                "dc"
+                "disconnect"
               ],
               "description": "Make the bot leave the current voice channel.",
               "permissions": [
                 "Guild Only"
               ],
               "slashCommand": "voice/leave"
+            },
+            "play": {
+              "arguments": "[source]",
+              "cooldown": 3,
+              "description": [
+                "Play audio files in a voice channel.",
+                "Valid sources are attached files, URLs, or soundboard sound names."
+              ],
+              "permissions": [
+                "Guild Only"
+              ],
+              "slashCommand": "voice/play"
             },
             "removeautotts": {
               "description": "Remove the servers AutoTTS channel.",
@@ -4527,6 +4547,13 @@
               "description": "Set a default language for your TTS to be read in.",
               "slashCommand": "voice/setttslanguage"
             },
+            "stop": {
+              "description": "Make the bot stop playing audio in the current voice channel.",
+              "permissions": [
+                "Guild Only"
+              ],
+              "slashCommand": "voice/stop"
+            },
             "tts": {
               "aliases": [
                 "t",
@@ -4558,6 +4585,9 @@
               "slashCommand": "voice/viewautotts"
             },
             "volume": {
+              "aliases": [
+                "setvolume"
+              ],
               "arguments": "[volume]",
               "description": "Change the bots voice channel volume.",
               "permissions": [
@@ -5162,6 +5192,19 @@
             }
           },
           "commands": {
+            "defaultvolume": {
+              "description": "Change the bots default voice channel volume.",
+              "arguments": [
+                {
+                  "name": "volume",
+                  "description": "The default voice volume to use, as a percentage"
+                }
+              ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "voice/defaultvolume"
+            },
             "embedcolour": {
               "description": [
                 "Change the bots embed colour on the current server.",
@@ -10808,6 +10851,20 @@
               "description": "Make the bot leave the current voice channel.",
               "prefixCommand": "voice/leave"
             },
+            "play": {
+              "description": [
+                "Play audio files in a voice channel.",
+                "Valid sources are attached files, URLs, or soundboard sound names."
+              ],
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "source",
+                  "description": "The audio source to play"
+                }
+              ],
+              "prefixCommand": "voice/play"
+            },
             "setttslanguage": {
               "description": "Set a default language for your TTS to be read in.",
               "arguments": [
@@ -10817,6 +10874,10 @@
                 }
               ],
               "prefixCommand": "voice/setttslanguage"
+            },
+            "stop": {
+              "description": "Make the bot stop playing audio in the current voice channel.",
+              "prefixCommand": "voice/stop"
             },
             "tts": {
               "description": [
