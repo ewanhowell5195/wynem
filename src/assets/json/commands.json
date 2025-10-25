@@ -3046,7 +3046,7 @@
                     "Ban a member from the server.",
                     "The member is sent a message saying they were banned, along with the reason.",
                     "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
-                    "The \"Compromised Account\" button will ban the user, delete their last six hours of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
+                    "The \"Compromised Account\" button will ban the user, delete their last hour of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
                   ],
                   "permissions": [
                     "Guild Only",
@@ -3068,6 +3068,28 @@
                     "Guild Only"
                   ],
                   "slashCommand": "server/banappeal"
+                },
+                "setautoban": {
+                  "aliases": [
+                    "autoban"
+                  ],
+                  "description": [
+                    "Auto-ban is a system designed to automatically remove scam bots and compromised accounts.",
+                    "There are two types of auto-ban: channel and role.",
+                    "An auto-ban channel will instantly ban any member who sends a message in it.",
+                    "An auto-ban role will instantly ban any member who is given that role.",
+                    "These can be used to trick bots into banning themselves, while real users will understand to avoid them.",
+                    "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last hour of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
+                    "Members with moderator permissions, or anyone whose highest role is equal to or higher than the bot's, are excluded from being auto-banned."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Ban Members"
+                  ],
+                  "slashCommand": "serverconfig/setautoban"
                 },
                 "setbanappeal": {
                   "aliases": [
@@ -3170,7 +3192,7 @@
               ],
               "arguments": "[type]",
               "cooldown": 20,
-              "description": "Add one of Wynem's AutoMod templates to the server's AutoMod.",
+              "description": "Add one of the bot's AutoMod templates to the server's AutoMod.",
               "extra": [
                 {
                   "title": "Automod types",
@@ -10533,7 +10555,7 @@
           },
           "commands": {
             "addautomod": {
-              "description": "Add one of Wynem's AutoMod templates to the server's AutoMod.",
+              "description": "Add one of the bot's AutoMod templates to the server's AutoMod.",
               "cooldown": 20,
               "arguments": [
                 {
@@ -10555,6 +10577,24 @@
                 "Manage Guild"
               ],
               "prefixCommand": "bot/resendjoininfo"
+            },
+            "setautoban": {
+              "description": [
+                "Auto-ban is a system designed to automatically remove scam bots and compromised accounts.",
+                "There are two types of auto-ban: channel and role.",
+                "An auto-ban channel will instantly ban any member who sends a message in it.",
+                "An auto-ban role will instantly ban any member who is given that role.",
+                "These can be used to trick bots into banning themselves, while real users will understand to avoid them.",
+                "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last hour of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
+                "Members with moderator permissions, or anyone whose highest role is equal to or higher than the bot's, are excluded from being auto-banned."
+              ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "botPermissions": [
+                "Ban Members"
+              ],
+              "prefixCommand": "moderation/bans/setautoban"
             },
             "setbanappeal": {
               "description": "Set or remove a ban appeal link that gets sent to the user when they get banned.",
@@ -10926,7 +10966,7 @@
             "Ban a member from the server.",
             "The member is sent a message saying they were banned, along with the reason.",
             "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
-            "The \"Compromised Account\" button will ban the user, delete their last six hours of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
+            "The \"Compromised Account\" button will ban the user, delete their last hour of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
           ],
           "arguments": [
             {
