@@ -7775,11 +7775,11 @@
               "arguments": [
                 {
                   "name": "tile-count",
-                  "description": "The number of lego tiles to use across the width/height"
+                  "description": "The number of LEGO® tiles to use across the width/height"
                 },
                 {
                   "name": "restrict-palette",
-                  "description": "Restrict the colours to the official lego colours"
+                  "description": "Restrict the colours to the official LEGO® colours"
                 },
                 {
                   "name": "image-file",
