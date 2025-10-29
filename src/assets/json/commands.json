@@ -2017,6 +2017,14 @@
                   "description": "Turn an image into a crusty JPEG. The quality is a number in the range 0 - 100",
                   "slashCommand": "imagefun/jpegify"
                 },
+                "lego": {
+                  "aliases": [
+                    "legoify"
+                  ],
+                  "arguments": "[tile-count] [image]",
+                  "description": "Make an image out of lego!",
+                  "slashCommand": "imagefun/lego"
+                },
                 "rainbow": {
                   "aliases": [
                     "colourcycle",
@@ -7755,6 +7763,24 @@
                 }
               ],
               "prefixCommand": "images/imagefun/jpegify"
+            },
+            "lego": {
+              "description": "Make an image out of lego!",
+              "arguments": [
+                {
+                  "name": "tile-count",
+                  "description": "The number of lego tiles to use across the width/height"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/lego"
             },
             "rainbow": {
               "description": "Make an image cycle through the rainbow!",
