@@ -2021,7 +2021,7 @@
                   "aliases": [
                     "legoify"
                   ],
-                  "arguments": "[tile-count] [image]",
+                  "arguments": "[tile-count] [restrict-palette] [image]",
                   "description": "Make an image out of lego!",
                   "slashCommand": "imagefun/lego"
                 },
@@ -7770,6 +7770,10 @@
                 {
                   "name": "tile-count",
                   "description": "The number of lego tiles to use across the width/height"
+                },
+                {
+                  "name": "restrict-palette",
+                  "description": "Restrict the colours to the official lego colours"
                 },
                 {
                   "name": "image-file",
