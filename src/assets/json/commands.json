@@ -2022,7 +2022,10 @@
                     "legoify"
                   ],
                   "arguments": "[tile-count] [restrict-palette] [image]",
-                  "description": "Make an image out of lego!",
+                  "description": [
+                    "Create a custom LEGO® mosaic from any image!",
+                    "LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this bot."
+                  ],
                   "slashCommand": "imagefun/lego"
                 },
                 "rainbow": {
@@ -7765,7 +7768,10 @@
               "prefixCommand": "images/imagefun/jpegify"
             },
             "lego": {
-              "description": "Make an image out of lego!",
+              "description": [
+                "Create a custom LEGO® mosaic from any image!",
+                "LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this bot."
+              ],
               "arguments": [
                 {
                   "name": "tile-count",
