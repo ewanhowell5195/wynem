@@ -2772,7 +2772,7 @@
                         ],
                         [
                           "Player",
-                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_floss` `player_floss_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
+                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_floss` `player_floss_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_rotate` `player_rotate_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
                         ]
                       ]
                     }
