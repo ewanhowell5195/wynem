@@ -5274,8 +5274,7 @@
               "arguments": [
                 {
                   "name": "message",
-                  "description": "The message ID or URL to re-pin",
-                  "required": true
+                  "description": "The message ID or URL to re-pin"
                 }
               ],
               "permissions": [
