@@ -267,6 +267,9 @@
             "prefixes": {
               "commands": {
                 "prefix": {
+                  "aliases": [
+                    "setprefix"
+                  ],
                   "arguments": "[prefix]",
                   "description": [
                     "Change the prefix for the bot in the current server.",
@@ -280,7 +283,8 @@
                 },
                 "prefixalias": {
                   "aliases": [
-                    "prefixaliases"
+                    "prefixaliases",
+                    "addprefix"
                   ],
                   "arguments": "[prefix]",
                   "description": [
@@ -8597,8 +8601,7 @@
               "arguments": [
                 {
                   "name": "text",
-                  "description": "The caption text",
-                  "required": true
+                  "description": "The caption text"
                 },
                 {
                   "name": "location",
