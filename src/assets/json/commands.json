@@ -2831,6 +2831,14 @@
                   "description": "View the cape and elytra of a Minecraft Java edition player.",
                   "slashCommand": "minecraftskins/cape"
                 },
+                "flattenskin": {
+                  "aliases": [
+                    "flatten"
+                  ],
+                  "arguments": "[image]",
+                  "description": "Flatten the second skin layer into the base layer.",
+                  "slashCommand": "minecraftskins/flattenskin"
+                },
                 "head": {
                   "aliases": [
                     "minecrafthead",
@@ -9570,6 +9578,20 @@
                 }
               ],
               "prefixCommand": "minecraft/skins/skinconverter"
+            },
+            "flattenskin": {
+              "description": "Flatten the second skin layer into the base layer.",
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "minecraft/skins/flattenskin"
             },
             "head": {
               "description": "View the head of a Minecraft Java edition player.",
