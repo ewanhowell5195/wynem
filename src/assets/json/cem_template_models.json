@@ -645,8 +645,8 @@
               "name": "pig_baby_saddle",
               "display_name": "Baby Pig Saddle",
               "texture_name": "temperate_pig_baby_saddle",
-              "popup": "This model only applies to the Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "pig_saddle"
+              "model": "pig_saddle",
+              "popup": "This model only applies to the Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -761,8 +761,8 @@
             {
               "name": "sheep_baby_wool",
               "display_name": "Baby Sheep Wool",
-              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the wool model.",
-              "model": "sheep_wool"
+              "model": "sheep_wool",
+              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the wool model."
             }
           ]
         },
@@ -961,8 +961,8 @@
             {
               "name": "trader_llama_baby_decor",
               "display_name": "Baby Trader Llama Decor",
-              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model.",
-              "model": "llama_decor"
+              "model": "llama_decor",
+              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the decor model."
             }
           ]
         },
@@ -1110,8 +1110,8 @@
             {
               "name": "wolf_baby_armor",
               "display_name": "Baby Wolf Armor",
-              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the armor model.",
-              "model": "wolf_armor"
+              "model": "wolf_armor",
+              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the armor model."
             }
           ]
         },
@@ -1314,8 +1314,8 @@
               "display_name": "Baby Donkey",
               "file_name": "donkey_baby",
               "texture_name": "donkey_baby",
-              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model.",
-              "model": "donkey_baby_21.4"
+              "model": "donkey_baby_21.4",
+              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1337,16 +1337,16 @@
               "display_name": "Baby Horse",
               "file_name": "horse_baby",
               "texture_name": "horse_baby",
-              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby_21.4"
+              "model": "horse_baby_21.4",
+              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "horse_baby_armor_21.4",
               "display_name": "Baby Horse Armor",
               "file_name": "horse_baby_armor",
               "texture_name": "horse_baby_armor",
-              "popup": "This model only applies to the Baby Horse Armor. This model is optional, and by default will be the same as the armor model.",
-              "model": "horse_baby_armor_21.4"
+              "model": "horse_baby_armor_21.4",
+              "popup": "This model only applies to the Baby Horse Armor. This model is optional, and by default will be the same as the armor model."
             }
           ]
         },
@@ -1378,8 +1378,8 @@
               "display_name": "Baby Mule",
               "file_name": "mule_baby",
               "texture_name": "mule_baby",
-              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model.",
-              "model": "donkey_baby_21.4"
+              "model": "donkey_baby_21.4",
+              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1407,8 +1407,8 @@
               "display_name": "Baby Pig Saddle",
               "file_name": "pig_baby_saddle",
               "texture_name": "pig_baby_saddle",
-              "popup": "This model only applies to the Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "pig_saddle_21.4"
+              "model": "pig_saddle_21.4",
+              "popup": "This model only applies to the Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -1424,8 +1424,8 @@
               "display_name": "Baby Skeleton Horse",
               "file_name": "skeleton_horse_baby",
               "texture_name": "skeleton_horse_baby",
-              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby_21.4"
+              "model": "horse_baby_21.4",
+              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1441,8 +1441,8 @@
               "display_name": "Baby Zombie Horse",
               "file_name": "zombie_horse_baby",
               "texture_name": "zombie_horse_baby",
-              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby_21.4"
+              "model": "horse_baby_21.4",
+              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model."
             }
           ]
         },
@@ -1844,8 +1844,8 @@
             {
               "name": "camel_baby_saddle",
               "display_name": "Baby Camel Saddle",
-              "popup": "This model only applies to the Baby Camel's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "camel_saddle"
+              "model": "camel_saddle",
+              "popup": "This model only applies to the Baby Camel's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -1885,8 +1885,8 @@
             {
               "name": "cold_pig_baby_saddle",
               "display_name": "Cold Baby Pig Saddle",
-              "popup": "This model only applies to the Cold Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "cold_pig_saddle"
+              "model": "cold_pig_saddle",
+              "popup": "This model only applies to the Cold Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -1901,14 +1901,14 @@
             {
               "name": "donkey_baby",
               "display_name": "Baby Donkey",
-              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model.",
-              "model": "donkey_baby"
+              "model": "donkey_baby",
+              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "donkey_baby_saddle",
               "display_name": "Baby Donkey Saddle",
-              "popup": "This model only applies to the Baby Donkey's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "horse_saddle"
+              "model": "horse_saddle",
+              "popup": "This model only applies to the Baby Donkey's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -1962,20 +1962,20 @@
             {
               "name": "horse_baby",
               "display_name": "Baby Horse",
-              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby"
+              "model": "horse_baby",
+              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "horse_baby_saddle",
               "display_name": "Baby Horse Saddle",
-              "popup": "This model only applies to the Baby Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "horse_saddle"
+              "model": "horse_saddle",
+              "popup": "This model only applies to the Baby Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             },
             {
               "name": "horse_baby_armor",
               "display_name": "Baby Horse Armor",
-              "popup": "This model only applies to the Baby Horse's Armor. This model is optional, and by default will be the same as the regular armor model.",
-              "model": "horse_baby_armor"
+              "model": "horse_baby_armor",
+              "popup": "This model only applies to the Baby Horse's Armor. This model is optional, and by default will be the same as the regular armor model."
             }
           ]
         },
@@ -1990,14 +1990,14 @@
             {
               "name": "mule_baby",
               "display_name": "Baby Mule",
-              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model.",
-              "model": "donkey_baby"
+              "model": "donkey_baby",
+              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "mule_baby_saddle",
               "display_name": "Baby Mule Saddle",
-              "popup": "This model only applies to the Baby Mule's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "horse_saddle"
+              "model": "horse_saddle",
+              "popup": "This model only applies to the Baby Mule's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -2022,14 +2022,14 @@
             {
               "name": "skeleton_horse_baby",
               "display_name": "Baby Skeleton Horse",
-              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby"
+              "model": "horse_baby",
+              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "skeleton_horse_baby_saddle",
               "display_name": "Baby Skeleton Horse Saddle",
-              "popup": "This model only applies to the Baby Skeleton Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "horse_saddle"
+              "model": "horse_saddle",
+              "popup": "This model only applies to the Baby Skeleton Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -2071,8 +2071,8 @@
             {
               "name": "warm_pig_baby_saddle",
               "display_name": "Warm Baby Pig Saddle",
-              "popup": "This model only applies to the Warm Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "pig_saddle"
+              "model": "pig_saddle",
+              "popup": "This model only applies to the Warm Baby Pig's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         },
@@ -2087,14 +2087,14 @@
             {
               "name": "zombie_horse_baby",
               "display_name": "Baby Zombie Horse",
-              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model.",
-              "model": "horse_baby"
+              "model": "horse_baby",
+              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model."
             },
             {
               "name": "zombie_horse_baby_saddle",
               "display_name": "Baby Zombie Horse Saddle",
-              "popup": "This model only applies to the Baby Zombie Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model.",
-              "model": "horse_saddle"
+              "model": "horse_saddle",
+              "popup": "This model only applies to the Baby Zombie Horse's Saddle. This model is optional, and by default will be the same as the regular saddle model."
             }
           ]
         }
