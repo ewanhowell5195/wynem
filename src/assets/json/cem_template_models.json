@@ -950,7 +950,6 @@
           "variants": [
             {
               "name": "trader_llama_decor",
-              "display_name": "Trader Llama Decor",
               "model": "llama_decor"
             },
             {
@@ -1089,9 +1088,7 @@
         {
           "name": "wolf",
           "variants": [
-            {
-              "name": "wolf_collar"
-            },
+            "wolf_collar",
             {
               "name": "wolf_armor",
               "texture_name": "armadillo_scute",
