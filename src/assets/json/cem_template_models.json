@@ -1,5 +1,5 @@
 {
-  "version": "3.6.0",
+  "version": "3.6.1",
   "categories": [
     {
       "name": "Supported",
@@ -1029,7 +1029,6 @@
         "vex",
         {
           "name": "villager",
-          "model": "villager",
           "texture_name": [
             "villager"
           ],
@@ -1144,7 +1143,6 @@
         },
         {
           "name": "zombie_villager",
-          "model": "zombie_villager",
           "texture_name": [
             "zombie_villager"
           ],
@@ -1601,8 +1599,7 @@
           "name": "trident_20.2",
           "display_name": "Trident",
           "file_name": "trident",
-          "texture_name": "trident",
-          "model": "trident_20.2"
+          "texture_name": "trident"
         },
         {
           "type": "heading",
@@ -1764,8 +1761,7 @@
           "name": "trident_14",
           "display_name": "Trident",
           "file_name": "trident",
-          "texture_name": "trident",
-          "model": "trident_14"
+          "texture_name": "trident"
         },
         {
           "type": "heading",
