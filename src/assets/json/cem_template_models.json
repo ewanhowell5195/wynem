@@ -1374,7 +1374,7 @@
           "model": "donkey_21.4",
           "variants": [
             {
-              "name": "mule_baby",
+              "name": "mule_baby_21.4",
               "display_name": "Baby Mule",
               "file_name": "mule_baby",
               "texture_name": "mule_baby",
