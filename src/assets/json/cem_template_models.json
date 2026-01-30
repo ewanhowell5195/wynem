@@ -289,6 +289,26 @@
           ]
         },
         {
+          "name": "camel",
+          "variants": [
+            {
+              "name": "camel_saddle",
+              "model": "camel_saddle"
+            },
+            {
+              "name": "camel_baby",
+              "display_name": "Baby Camel",
+              "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
+            },
+            {
+              "name": "camel_baby_saddle",
+              "display_name": "Baby Camel Saddle",
+              "model": "camel_saddle",
+              "popup": "This model only applies to the Baby Camel Saddle. This model is optional, and by default will be the same as the regular Camel Saddle model."
+            }
+          ]
+        },
+        {
           "name": "cat",
           "variants": [
             "cat_collar",
@@ -1954,26 +1974,6 @@
           ]
         },
         "bee_stinger",
-        {
-          "name": "camel",
-          "variants": [
-            {
-              "name": "camel_saddle",
-              "model": "camel_saddle"
-            },
-            {
-              "name": "camel_baby",
-              "display_name": "Baby Camel",
-              "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
-            },
-            {
-              "name": "camel_baby_saddle",
-              "display_name": "Baby Camel Saddle",
-              "model": "camel_saddle",
-              "popup": "This model only applies to the Baby Camel Saddle. This model is optional, and by default will be the same as the regular Camel Saddle model."
-            }
-          ]
-        },
         "cape",
         {
           "name": "cold_chicken",
