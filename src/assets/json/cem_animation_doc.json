@@ -1,6 +1,6 @@
 {
-  "version": "1.3.3",
-  "optifineVersion": "1.20.4 HD U I7 pre2",
+  "version": "1.4.0",
+  "optifineVersion": "1.21.11 HD U J9 pre4",
   "tabs": [
     {
       "name": "Structure",
@@ -246,7 +246,15 @@
             ],
             [
               "time",
-              "The current world time in ticks."
+              "The total game time in ticks. Counts from 0 to 27719, then resets to 0."
+            ],
+            [
+              "day_time",
+              "The current time of day in ticks. 0 to 24000."
+            ],
+            [
+              "day_count",
+              "How many days have passed in the world."
             ],
             [
               "rule_index",
@@ -307,6 +315,10 @@
               "The time in seconds since the last frame."
             ],
             [
+              "frame_counter",
+              "The index of the current frame. Counts from 0 to 27719, then resets to 0."
+            ],
+            [
               "dimension",
               "The current dimension. Overworld: 0, Nether: -1, End: 1."
             ]
@@ -334,7 +346,11 @@
             ],
             [
               "anger_time",
-              "The time the entity is angry. 0 while neutral, 720 while agressive, and then counts down to 0 when the target is lost."
+              "The remaining entity angry time in ticks. Starts with 400-780 while agressive, and then counts down to 0 when the target is lost."
+            ],
+            [
+              "anger_time_start",
+              "The value that <code>anger_time</code> started at."
             ],
             [
               "max_health",
@@ -648,7 +664,11 @@
             ],
             [
               "if(c, v, [c2, v2, …,] v_else)",
-              "Select a value based on one or more conditions. Explained in more detail in the <span class=\"cem-doc-tab-link\">Examples</span> tab"
+              "Select a value based on one or more conditions. Explained in more detail in the <span class=\"cem-doc-tab-link\">Examples</span> tab."
+            ],
+            [
+              "ifb(c, v, [c2, v2, …,] v_else)",
+              "Select a boolean value based on one or more conditions."
             ],
             [
               "print(id, n, x)",
