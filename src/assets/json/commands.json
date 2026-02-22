@@ -2207,7 +2207,7 @@
                   "slashCommand": "imageutility/readqrcode"
                 },
                 "save": {
-                  "arguments": "[image]",
+                  "arguments": "[file-name] [image]",
                   "description": "Turn an image into a GIF so that you can save it to your Discord favourites list.",
                   "slashCommand": "imageutility/save"
                 },
@@ -8978,6 +8978,10 @@
             "save": {
               "description": "Turn an image into a GIF so that you can save it to your Discord favourites list.",
               "arguments": [
+                {
+                  "name": "file-name",
+                  "description": "The name to give the saved gif"
+                },
                 {
                   "name": "image-file",
                   "description": "A file"
