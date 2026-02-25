@@ -1,5 +1,5 @@
 {
-  "version": "3.11.0",
+  "version": "3.11.1",
   "categories": [
     {
       "name": "Supported",
@@ -255,6 +255,7 @@
             {
               "name": "bogged_outer",
               "display_name": "Bogged [Outer]",
+              "texture_name": "bogged_overlay",
               "model": "stray_outer"
             }
           ]
@@ -314,6 +315,7 @@
         },
         {
           "name": "camel_husk",
+          "model": "camel",
           "variants": [
             {
               "name": "camel_husk_saddle",
@@ -529,6 +531,7 @@
             {
               "name": "drowned_outer",
               "display_name": "Drowned [Outer]",
+              "texture_name": "drowned_outer_layer",
               "model": "drowned_outer"
             },
             {
@@ -539,6 +542,7 @@
             {
               "name": "drowned_baby_outer",
               "display_name": "Baby Drowned [Outer]",
+              "texture_name": "drowned_outer_layer",
               "popup": "This model only applies to the Baby Drowned [Outer]. This model is optional, and by default will be the same as the regular Drowned [Outer] model."
             }
           ]
@@ -714,7 +718,10 @@
           ]
         },
         "llama_spit",
-        "magma_cube",
+        {
+          "name": "magma_cube",
+          "texture_name": "magmacube"
+        },
         {
           "name": "minecart",
           "popup": "This model applies to all Minecart types. Use a specific Minecart variant, such as the Minecart with Chest, if you want to modify a specific Minecart type.",
@@ -1175,6 +1182,7 @@
             {
               "name": "stray_outer",
               "display_name": "Stray [Outer]",
+              "texture_name": "stray_overlay",
               "model": "stray_outer"
             }
           ]
