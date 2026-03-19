@@ -1703,6 +1703,11 @@
                       "description": "Make an image hold a gun.",
                       "slashCommand": "imageoverlays/gun"
                     },
+                    "gunpoint": {
+                      "arguments": "[expand] [shooter] [shootee]",
+                      "description": "Hold someone at gunpoint.",
+                      "slashCommand": "imageoverlays/gunpoint"
+                    },
                     "hair": {
                       "arguments": "[hair-count] [image]",
                       "description": "Place some hairs on top of an image.",
@@ -1728,7 +1733,7 @@
                     },
                     "shoot": {
                       "arguments": "[expand] [double] [image]",
-                      "description": "Shoot an image.",
+                      "description": "Point a gun at an image.",
                       "slashCommand": "imageoverlays/shoot"
                     },
                     "speechbubble": {
@@ -2143,15 +2148,17 @@
                 },
                 "imagecompare": {
                   "aliases": [
-                    "imagecomp",
-                    "imgcompare",
-                    "imgcomp",
-                    "imgdifference",
-                    "imgdiff",
-                    "difference",
-                    "diff",
+                    "comp",
                     "compare",
-                    "comp"
+                    "diff",
+                    "difference",
+                    "imagecomp",
+                    "imagediff",
+                    "imagedifference",
+                    "imgcomp",
+                    "imgcompare",
+                    "imgdiff",
+                    "imgdifference"
                   ],
                   "arguments": "[tolerance] [image1] [image2]",
                   "description": [
@@ -8458,6 +8465,32 @@
               ],
               "prefixCommand": "images/imagefun/overlays/gun"
             },
+            "gunpoint": {
+              "description": "Hold someone at gunpoint.",
+              "arguments": [
+                {
+                  "name": "expand",
+                  "description": "Put the guns over the edge of the images"
+                },
+                {
+                  "name": "shooter-file",
+                  "description": "The person holding the gun"
+                },
+                {
+                  "name": "shooter-string",
+                  "description": "The person holding the gun"
+                },
+                {
+                  "name": "shootee-file",
+                  "description": "The person getting shot"
+                },
+                {
+                  "name": "shootee-string",
+                  "description": "The person getting shot"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/gunpoint"
+            },
             "hair": {
               "description": "Place some hairs on top of an image.",
               "arguments": [
@@ -8507,7 +8540,7 @@
               "prefixCommand": "images/imagefun/overlays/petpet"
             },
             "shoot": {
-              "description": "Shoot an image.",
+              "description": "Point a gun at an image.",
               "arguments": [
                 {
                   "name": "expand",
