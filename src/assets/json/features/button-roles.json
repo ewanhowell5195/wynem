@@ -107,7 +107,7 @@
               "rows": [
                 ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
                 ["Custom Embed", "Create your own custom embed that can look however you want"],
-                ["No Embed", "Send no embed, the message be just the buttons on their own"]
+                ["No Embed", "Send no embed, the message will be just the buttons on their own"]
               ]
             },
             {
@@ -127,7 +127,7 @@
                 ]
               }
             },
-            "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.\n\nYou are finished! Your button roles have been created. Just click a button to recieve/remove the designated role!"
+            "For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature.\n\nYou are finished! Your button roles have been created. Just click a button to receive/remove the designated role!"
           ]
         },
         {

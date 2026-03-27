@@ -21,7 +21,7 @@
       "type": "heading",
       "text": "What are auto-responses?"
     },
-    "Auto-responses are way to make Wynem respond to triggers in regular messages. A member will send a message in the server, and if the message meets the criteria of one of the auto-responses, Wynem will reply to that message with a customisable response.",
+    "Auto-responses are a way to make Wynem respond to triggers in regular messages. A member will send a message in the server, and if the message meets the criteria of one of the auto-responses, Wynem will reply to that message with a customisable response.",
     {
       "type": "embed",
       "data": {
@@ -280,7 +280,7 @@
                 {
                   "name": "Emoji Reactions",
                   "content": [
-                    "You will be presented with a button to add the auto-response's resaction emojis. Press it to continue.",
+                    "You will be presented with a button to add the auto-response's reaction emojis. Press it to continue.",
                     {
                       "type": "embed",
                       "data": {

@@ -672,7 +672,7 @@
             ],
             [
               "print(id, n, x)",
-              "Prints the value \"x\" every N-th frame. In Blockbench, the console can be accessed <span class=\"cem-doc-display-desktop\">from <strong>Help > Developer > Open Dev Tools</strong>, or with the keyboard shortcut <strong>ctrl + shift + i</strong></span><span class=\"cem-doc-display-web\">by pressing <strong>F12</strong></span>. In Minecraft the prints are sent to the output log, which can be enabled in the launcher settigns. The function returns the value that you give it."
+              "Prints the value \"x\" every N-th frame. In Blockbench, the console can be accessed <span class=\"cem-doc-display-desktop\">from <strong>Help > Developer > Open Dev Tools</strong>, or with the keyboard shortcut <strong>ctrl + shift + i</strong></span><span class=\"cem-doc-display-web\">by pressing <strong>F12</strong></span>. In Minecraft the prints are sent to the output log, which can be enabled in the launcher settings. The function returns the value that you give it."
             ],
             [
               "printb(id, n, x)",
@@ -714,7 +714,7 @@
         },
         {
           "type": "text",
-          "text": "This is an animation that creates a leg swinging animation for an entity. In this example, <code>x</code> is a multipler to control how fast the leg swings back and forth, and <code>y</code> is a multiplier to control how far it swings back and forth."
+          "text": "This is an animation that creates a leg swinging animation for an entity. In this example, <code>x</code> is a multiplier to control how fast the leg swings back and forth, and <code>y</code> is a multiplier to control how far it swings back and forth."
         },
         {
           "type": "code",
@@ -798,7 +798,7 @@
         },
         {
           "type": "text",
-          "text": "You can give some entities custom attack animations, for when they try to melee attack you. In this example, the entity would headbutt you when it attacks you. <code>x</code> is a multipler for how much it rotates."
+          "text": "You can give some entities custom attack animations, for when they try to melee attack you. In this example, the entity would headbutt you when it attacks you. <code>x</code> is a multiplier for how much it rotates."
         },
         {
           "type": "code",
@@ -810,7 +810,7 @@
         },
         {
           "type": "text",
-          "text": "You can give some entities custom hurt animations, for when they take damage. In this example, the entity's head would swing back when it takes damage. <code>x</code> is a multipler for how much it rotates."
+          "text": "You can give some entities custom hurt animations, for when they take damage. In this example, the entity's head would swing back when it takes damage. <code>x</code> is a multiplier for how much it rotates."
         },
         {
           "type": "code",

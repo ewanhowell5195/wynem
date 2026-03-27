@@ -369,7 +369,7 @@
                     {
                       "type": "embed",
                       "data": {
-                        "description": "Press the button set the reason the ticket could not be created",
+                        "description": "Press the button to set the reason the ticket could not be created",
                         "buttons": [{
                           "label": "Set denial message",
                           "emoji": "pencil"
@@ -554,7 +554,7 @@
                     {
                       "type": "embed",
                       "data": {
-                        "description": "Press the button edit the reason the ticket could not be created",
+                        "description": "Press the button to edit the reason the ticket could not be created",
                         "buttons": [
                           {
                             "label": "Set denial message",

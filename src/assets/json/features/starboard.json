@@ -16,7 +16,7 @@
       "type": "heading",
       "text": "What are starboards?"
     },
-    "A starboard is a channel where messages are sent after they reach a certain number of a reactions, usually a star.\n\nAfter a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change.",
+    "A starboard is a channel where messages are sent after they reach a certain number of reactions, usually a star.\n\nAfter a message is sent, it has 1 week to hit the required reaction count and appear in the starboard. After that, the message expires and is locked into its current starboard state and can no longer change.",
     {
       "type": "embed",
       "data": {
@@ -91,7 +91,7 @@
           "content": [
             "To remove a starboard, use the <code class=\"command prefix\">e!starboard [channel]</code><code class=\"command slash\">/serverconfig channel starboard channel:[channel]</code> command, providing only the channel argument.",
             "For example: <code class=\"command prefix\">e!starboard #starboard</code><code class=\"command slash\">/serverconfig channel starboard channel:#starboard</code>",
-            "You will prompted to confirm you want to remove the starboard",
+            "You will be prompted to confirm you want to remove the starboard",
             {
               "type": "embed",
               "data": {
@@ -152,7 +152,7 @@
                 "description": "The channel <#general> has been removed from the <#starboard> starboard blacklist"
               }
             },
-            "The channel will be removed from the blacklist and its messages allowed to be sent to the blacklist."
+            "The channel will be removed from the blacklist and its messages allowed to be sent to the starboard."
           ]
         }
       ]
