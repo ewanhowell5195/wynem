@@ -1358,7 +1358,7 @@
                       "slashCommand": "avatar/snap"
                     },
                     "yeet": {
-                      "arguments": "[reciever] [yeeter]",
+                      "arguments": "[receiver] [yeeter]",
                       "cooldown": 3,
                       "description": "Throw a member really far.",
                       "slashCommand": "avatar/yeet"
@@ -1865,7 +1865,7 @@
                         "Make a character say something below an image.",
                         "You can use a characters name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                        "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
+                        "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
                       ],
                       "slashCommand": "imagetext/say"
                     },
@@ -2174,7 +2174,7 @@
                     "size"
                   ],
                   "arguments": "[image]",
-                  "description": "View the dimentions of an image.",
+                  "description": "View the dimensions of an image.",
                   "slashCommand": "imageutility/size"
                 },
                 "makeqrcode": {
@@ -3945,7 +3945,7 @@
                     "rr"
                   ],
                   "description": [
-                    "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                    "Run a builder that sets up a message that members can use to add roles to themselves.",
                     "For the role text, provide `none` to leave it blank.",
                     "Role types:\n- **Normal** - The user can add and remove this role as they wish\n- **Binding** - Once the role is applied, it cannot be removed\n- **Unique** - You can only have one unique role at a time"
                   ],
@@ -4281,7 +4281,7 @@
                 "guildinformation",
                 "aboutguild"
               ],
-              "description": "Get some infomation about the current server.",
+              "description": "Get some information about the current server.",
               "permissions": [
                 "Guild Only"
               ],
@@ -5012,8 +5012,8 @@
               "cooldown": 3,
               "arguments": [
                 {
-                  "name": "reciever",
-                  "description": "The yeet reciever",
+                  "name": "receiver",
+                  "description": "The yeet receiver",
                   "required": true
                 },
                 {
@@ -6441,8 +6441,7 @@
               "arguments": [
                 {
                   "name": "emoji",
-                  "description": "The emoji to get",
-                  "required": true
+                  "description": "The emoji to get"
                 },
                 {
                   "name": "type-or-resolution",
@@ -8770,7 +8769,7 @@
                 "Make a character say something below an image.",
                 "You can use a characters name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                "Available characters:\n\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
+                "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
               ],
               "cooldown": 5,
               "arguments": [
@@ -9027,7 +9026,7 @@
               "prefixCommand": "images/imageutility/save"
             },
             "size": {
-              "description": "View the dimentions of an image.",
+              "description": "View the dimensions of an image.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -9883,7 +9882,7 @@
             },
             "buttonroles": {
               "description": [
-                "Run a builder that sets up a message that members can use to to add roles to themselves.",
+                "Run a builder that sets up a message that members can use to add roles to themselves.",
                 "For the role text, provide `none` to leave it blank.",
                 "Role types:\n- **Normal** - The user can add and remove this role as they wish\n- **Binding** - Once the role is applied, it cannot be removed\n- **Unique** - You can only have one unique role at a time"
               ],
@@ -10002,7 +10001,7 @@
               "prefixCommand": "moderation/bans/banappeal"
             },
             "info": {
-              "description": "Get some infomation about the current server.",
+              "description": "Get some information about the current server.",
               "prefixCommand": "server/serverinfo"
             },
             "invites": {
