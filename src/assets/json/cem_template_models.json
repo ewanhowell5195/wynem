@@ -95,8 +95,8 @@
             },
             {
               "id": "boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_all",
                 "boat",
@@ -107,8 +107,8 @@
             },
             {
               "id": "oak_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -116,8 +116,8 @@
             },
             {
               "id": "spruce_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -125,8 +125,8 @@
             },
             {
               "id": "birch_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -134,8 +134,8 @@
             },
             {
               "id": "jungle_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -143,8 +143,8 @@
             },
             {
               "id": "acacia_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -152,8 +152,8 @@
             },
             {
               "id": "dark_oak_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -161,8 +161,8 @@
             },
             {
               "id": "mangrove_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -170,8 +170,8 @@
             },
             {
               "id": "cherry_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -179,8 +179,8 @@
             },
             {
               "id": "pale_oak_boat_patch",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "boat"
@@ -238,8 +238,8 @@
             {
               "id": "chest_boat_patch",
               "name": "Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_all",
                 "chest boat",
@@ -251,8 +251,8 @@
             {
               "id": "oak_chest_boat_patch",
               "name": "Oak Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -261,8 +261,8 @@
             {
               "id": "spruce_chest_boat_patch",
               "name": "Spruce Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -271,8 +271,8 @@
             {
               "id": "birch_chest_boat_patch",
               "name": "Birch Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -281,8 +281,8 @@
             {
               "id": "jungle_chest_boat_patch",
               "name": "Jungle Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -291,8 +291,8 @@
             {
               "id": "acacia_chest_boat_patch",
               "name": "Acacia Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -301,8 +301,8 @@
             {
               "id": "dark_oak_chest_boat_patch",
               "name": "Dark Oak Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -311,8 +311,8 @@
             {
               "id": "mangrove_chest_boat_patch",
               "name": "Mangrove Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -321,8 +321,8 @@
             {
               "id": "cherry_chest_boat_patch",
               "name": "Cherry Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -331,8 +331,8 @@
             {
               "id": "pale_oak_chest_boat_patch",
               "name": "Pale Oak Boat with Chest [Patch]",
-              "model": "boat_patch",
               "textureless": true,
+              "model": "boat_patch",
               "popup": [
                 "prevents_water_single",
                 "chest boat"
@@ -422,14 +422,14 @@
             {
               "id": "chest_left",
               "name": "Double Chest [Left]",
-              "model": "chest_left",
-              "texture": "normal_left"
+              "texture": "normal_left",
+              "model": "chest_left"
             },
             {
               "id": "chest_right",
               "name": "Double Chest [Right]",
-              "model": "chest_right",
-              "texture": "normal_right"
+              "texture": "normal_right",
+              "model": "chest_right"
             }
           ]
         },
@@ -563,8 +563,8 @@
         },
         {
           "id": "ender_chest",
-          "model": "chest",
-          "texture": "ender"
+          "texture": "ender",
+          "model": "chest"
         },
         {
           "id": "end_crystal"
@@ -794,8 +794,8 @@
           "variants": [
             {
               "id": "pig_saddle",
-              "model": "pig_saddle",
-              "texture": "temperate_pig_saddle"
+              "texture": "temperate_pig_saddle",
+              "model": "pig_saddle"
             },
             {
               "id": "warm_pig"
@@ -835,14 +835,14 @@
             {
               "id": "puffer_fish_small",
               "name": "Pufferfish [Small]",
-              "model": "puffer_fish_small",
-              "texture": "pufferfish"
+              "texture": "pufferfish",
+              "model": "puffer_fish_small"
             },
             {
               "id": "puffer_fish_medium",
               "name": "Pufferfish [Medium]",
-              "model": "puffer_fish_medium",
-              "texture": "pufferfish"
+              "texture": "pufferfish",
+              "model": "puffer_fish_medium"
             }
           ]
         },
@@ -1139,20 +1139,20 @@
         },
         {
           "id": "trapped_chest",
-          "model": "chest",
           "texture": "trapped",
+          "model": "chest",
           "variants": [
             {
               "id": "trapped_chest_left",
               "name": "Double Trapped Chest [Left]",
-              "model": "chest_left",
-              "texture": "trapped_left"
+              "texture": "trapped_left",
+              "model": "chest_left"
             },
             {
               "id": "trapped_chest_right",
               "name": "Double Trapped Chest [Right]",
-              "model": "chest_right",
-              "texture": "trapped_right"
+              "texture": "trapped_right",
+              "model": "chest_right"
             }
           ]
         },
@@ -1252,8 +1252,8 @@
             },
             {
               "id": "wolf_armor",
-              "model": "wolf_armor",
-              "texture": "armadillo_scute"
+              "texture": "armadillo_scute",
+              "model": "wolf_armor"
             }
           ]
         },
@@ -1326,8 +1326,8 @@
               "id": "chest_large_old_uv",
               "name": "Chest [Double] [Old UV]",
               "file": "chest_left",
-              "model": "chest_large_old_uv",
               "texture": "normal_double",
+              "model": "chest_large_old_uv",
               "popup": {
                 "message": "This model requires another model in your pack to function correctly.<br><br>Create <code>chest_right.jem</code> using a text editor and put the following contents inside it:<br><br><code>{\"models\":[{\"part\":\"base\"},{\"part\":\"lid\"},{\"part\":\"knob\"}]}</code>",
                 "width": 582
@@ -1362,15 +1362,15 @@
           "id": "trapped_chest_old_uv",
           "name": "Trapped Chest [Old UV]",
           "file": "trapped_chest",
-          "model": "chest_old_uv",
           "texture": "trapped",
+          "model": "chest_old_uv",
           "variants": [
             {
               "id": "trapped_chest_large_old_uv",
               "name": "Trapped Chest [Double] [Old UV]",
               "file": "trapped_chest_left",
-              "model": "chest_large_old_uv",
               "texture": "trapped_double",
+              "model": "chest_large_old_uv",
               "popup": {
                 "message": "This model requires another model in your pack to function correctly.<br><br>Create <code>trapped_chest_right.jem</code> using a text editor and put the following contents inside it:<br><br><code>{\"models\":[{\"part\":\"base\"},{\"part\":\"lid\"},{\"part\":\"knob\"}]}</code>",
                 "width": 582
@@ -1393,29 +1393,29 @@
           "id": "armadillo_baby_21.11",
           "name": "Baby Armadillo",
           "file": "armadillo_baby",
-          "popup": "only_applies_regular",
-          "model": "armadillo"
+          "model": "armadillo",
+          "popup": "only_applies_regular"
         },
         {
           "id": "axolotl_baby_21.11",
           "name": "Baby Axolotl",
           "file": "axolotl_baby",
-          "popup": "only_applies_regular",
-          "model": "axolotl"
+          "model": "axolotl",
+          "popup": "only_applies_regular"
         },
         {
           "id": "bee_baby_21.11",
           "name": "Baby Bee",
           "file": "bee_baby",
-          "popup": "only_applies_regular",
-          "model": "bee"
+          "model": "bee",
+          "popup": "only_applies_regular"
         },
         {
           "id": "camel_baby_21.11",
           "name": "Baby Camel",
           "file": "camel_baby",
-          "popup": "only_applies_regular",
           "model": "camel",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "camel_baby_saddle_21.11",
@@ -1433,8 +1433,8 @@
           "id": "camel_husk_baby_21.11",
           "name": "Baby Camel Husk",
           "file": "camel_husk_baby",
-          "popup": "only_applies_regular",
           "model": "camel",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "camel_husk_baby_saddle_21.11",
@@ -1452,18 +1452,18 @@
           "id": "cat_baby_21.11",
           "name": "Baby Cat",
           "file": "cat_baby",
-          "popup": "only_applies_regular",
           "model": "cat",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "cat_baby_collar_21.11",
               "name": "Baby Cat Collar",
               "file": "cat_baby_collar",
+              "model": "cat",
               "popup": [
                 "only_applies_same_as",
                 "Cat Collar"
-              ],
-              "model": "cat"
+              ]
             }
           ]
         },
@@ -1471,19 +1471,19 @@
           "id": "chicken_baby_21.11",
           "name": "Baby Chicken",
           "file": "chicken_baby",
-          "popup": "only_applies_regular",
           "texture": "temperate_chicken_baby_21.11",
           "model": "chicken",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "warm_chicken_baby_21.11",
               "name": "Warm Baby Chicken",
               "file": "warm_chicken_baby",
+              "model": "chicken",
               "popup": [
                 "only_applies_same_as",
                 "Warm Chicken"
-              ],
-              "model": "chicken"
+              ]
             },
             {
               "id": "cold_chicken_baby_21.11",
@@ -1501,9 +1501,9 @@
           "id": "cow_baby_21.11",
           "name": "Baby Cow",
           "file": "cow_baby",
-          "popup": "only_applies_regular",
           "texture": "temperate_cow_baby_21.11",
           "model": "cow",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "warm_cow_baby_21.11",
@@ -1531,8 +1531,8 @@
           "id": "dolphin_baby_21.11",
           "name": "Baby Dolphin",
           "file": "dolphin_baby",
-          "popup": "only_applies_regular",
-          "model": "dolphin"
+          "model": "dolphin",
+          "popup": "only_applies_regular"
         },
         {
           "id": "donkey_baby_21.11",
@@ -1552,19 +1552,19 @@
           "id": "drowned_baby_21.11",
           "name": "Baby Drowned",
           "file": "drowned_baby",
-          "popup": "only_applies_regular",
           "model": "drowned",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "drowned_baby_outer_21.11",
               "name": "Baby Drowned [Outer]",
               "file": "drowned_baby_outer",
+              "texture": "drowned_outer_layer",
+              "model": "drowned",
               "popup": [
                 "only_applies_same_as",
                 "Drowned [Outer]"
-              ],
-              "texture": "drowned_outer_layer",
-              "model": "drowned"
+              ]
             }
           ]
         },
@@ -1572,22 +1572,22 @@
           "id": "fox_baby_21.11",
           "name": "Baby Fox",
           "file": "fox_baby",
-          "popup": "only_applies_regular",
-          "model": "fox"
+          "model": "fox",
+          "popup": "only_applies_regular"
         },
         {
           "id": "glow_squid_baby_21.11",
           "name": "Baby Glow Squid",
           "file": "glow_squid_baby",
-          "popup": "only_applies_regular",
-          "model": "squid"
+          "model": "squid",
+          "popup": "only_applies_regular"
         },
         {
           "id": "goat_baby_21.11",
           "name": "Baby Goat",
           "file": "goat_baby",
-          "popup": "only_applies_regular",
-          "model": "goat"
+          "model": "goat",
+          "popup": "only_applies_regular"
         },
         {
           "id": "happy_ghast_baby_21.11",
@@ -1599,8 +1599,8 @@
           "id": "hoglin_baby_21.11",
           "name": "Baby Hoglin",
           "file": "hoglin_baby",
-          "popup": "only_applies_regular",
-          "model": "hoglin"
+          "model": "hoglin",
+          "popup": "only_applies_regular"
         },
         {
           "id": "horse_baby_21.11",
@@ -1626,25 +1626,25 @@
           "id": "husk_baby_21.11",
           "name": "Baby Husk",
           "file": "husk_baby",
-          "popup": "only_applies_regular",
-          "model": "zombie"
+          "model": "zombie",
+          "popup": "only_applies_regular"
         },
         {
           "id": "llama_baby_21.11",
           "name": "Baby Llama",
           "file": "llama_baby",
-          "popup": "only_applies_regular",
           "model": "llama",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "llama_baby_decor_21.11",
               "name": "Baby Llama Decor",
               "file": "llama_baby_decor",
+              "model": "llama",
               "popup": [
                 "only_applies_same_as",
                 "Llama Decor"
-              ],
-              "model": "llama"
+              ]
             }
           ]
         },
@@ -1652,8 +1652,8 @@
           "id": "mooshroom_baby_21.11",
           "name": "Baby Mooshroom",
           "file": "mooshroom_baby",
-          "popup": "only_applies_regular",
-          "model": "cow"
+          "model": "cow",
+          "popup": "only_applies_regular"
         },
         {
           "id": "mule_baby_21.11",
@@ -1679,44 +1679,44 @@
           "id": "ocelot_baby_21.11",
           "name": "Baby Ocelot",
           "file": "ocelot_baby",
-          "popup": "only_applies_regular",
-          "model": "cat"
+          "model": "cat",
+          "popup": "only_applies_regular"
         },
         {
           "id": "panda_baby_21.11",
           "name": "Baby Panda",
           "file": "panda_baby",
-          "popup": "only_applies_regular",
-          "model": "panda"
+          "model": "panda",
+          "popup": "only_applies_regular"
         },
         {
           "id": "pig_baby_21.11",
           "name": "Baby Pig",
           "file": "pig_baby",
-          "popup": "only_applies_regular",
           "texture": "temperate_pig_baby_21.11",
           "model": "pig",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "pig_baby_saddle_21.11",
               "name": "Baby Pig Saddle",
               "file": "pig_baby_saddle",
+              "texture": "temperate_pig_baby_saddle_21.11",
               "model": "pig_saddle",
               "popup": [
                 "only_applies_same_as",
                 "Pig Saddle"
-              ],
-              "texture": "temperate_pig_baby_saddle_21.11"
+              ]
             },
             {
               "id": "warm_pig_baby_21.11",
               "name": "Warm Baby Pig",
               "file": "warm_pig_baby",
+              "model": "pig",
               "popup": [
                 "only_applies_same_as",
                 "Warm Pig"
-              ],
-              "model": "pig"
+              ]
             },
             {
               "id": "cold_pig_baby_21.11",
@@ -1734,43 +1734,43 @@
           "id": "piglin_baby_21.11",
           "name": "Baby Piglin",
           "file": "piglin_baby",
-          "popup": "only_applies_regular",
-          "model": "piglin"
+          "model": "piglin",
+          "popup": "only_applies_regular"
         },
         {
           "id": "polar_bear_baby_21.11",
           "name": "Baby Polar Bear",
           "file": "polar_bear_baby",
-          "popup": "only_applies_regular",
-          "model": "polar_bear"
+          "model": "polar_bear",
+          "popup": "only_applies_regular"
         },
         {
           "id": "rabbit_baby_21.11",
           "name": "Baby Rabbit",
           "file": "rabbit_baby",
-          "popup": "only_applies_regular",
-          "model": "rabbit"
+          "model": "rabbit",
+          "popup": "only_applies_regular"
         },
         {
           "id": "sheep_baby_21.11",
           "name": "Baby Sheep",
           "file": "sheep_baby",
-          "popup": "only_applies_regular",
           "vanilla_textures": [
             "sheep_baby",
             "sheep_baby_wool_undercoat"
           ],
           "model": "sheep",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "sheep_baby_wool_undercoat_21.11",
               "name": "Baby Sheep Wool Undercoat",
               "file": "sheep_baby_wool_undercoat",
+              "model": "sheep",
               "popup": [
                 "only_applies_same_as",
                 "Sheep Wool Undercoat"
-              ],
-              "model": "sheep"
+              ]
             },
             {
               "id": "sheep_baby_wool_21.11",
@@ -1808,32 +1808,32 @@
           "id": "sniffer_baby_21.11",
           "name": "Baby Sniffer",
           "file": "sniffer_baby",
-          "popup": "only_applies_regular",
-          "model": "sniffer"
+          "model": "sniffer",
+          "popup": "only_applies_regular"
         },
         {
           "id": "squid_baby_21.11",
           "name": "Baby Squid",
           "file": "squid_baby",
-          "popup": "only_applies_regular",
-          "model": "squid"
+          "model": "squid",
+          "popup": "only_applies_regular"
         },
         {
           "id": "strider_baby_21.11",
           "name": "Baby Strider",
           "file": "strider_baby",
-          "popup": "only_applies_regular",
           "model": "strider",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "strider_baby_saddle_21.11",
               "name": "Baby Strider Saddle",
               "file": "strider_baby_saddle",
+              "model": "strider",
               "popup": [
                 "only_applies_same_as",
                 "Strider Saddle"
-              ],
-              "model": "strider"
+              ]
             }
           ]
         },
@@ -1841,8 +1841,8 @@
           "id": "trader_llama_baby_21.11",
           "name": "Baby Trader Llama",
           "file": "trader_llama_baby",
-          "popup": "only_applies_regular",
           "model": "llama",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "trader_llama_baby_decor_21.11",
@@ -1860,36 +1860,36 @@
           "id": "turtle_baby_21.11",
           "name": "Baby Turtle",
           "file": "turtle_baby",
-          "popup": "only_applies_regular",
-          "model": "turtle"
+          "model": "turtle",
+          "popup": "only_applies_regular"
         },
         {
           "id": "villager_baby_21.11",
           "name": "Baby Villager",
           "file": "villager_baby",
-          "popup": "only_applies_regular",
           "vanilla_textures": [
             "villager_baby",
             "plains_baby"
           ],
-          "model": "villager"
+          "model": "villager",
+          "popup": "only_applies_regular"
         },
         {
           "id": "wolf_baby_21.11",
           "name": "Baby Wolf",
           "file": "wolf_baby",
-          "popup": "only_applies_regular",
           "model": "wolf",
+          "popup": "only_applies_regular",
           "variants": [
             {
               "id": "wolf_baby_collar_21.11",
               "name": "Baby Wolf Collar",
               "file": "wolf_baby_collar",
+              "model": "wolf",
               "popup": [
                 "only_applies_same_as",
                 "Wolf Collar"
-              ],
-              "model": "wolf"
+              ]
             },
             {
               "id": "wolf_baby_armor_21.11",
@@ -1907,15 +1907,15 @@
           "id": "zoglin_baby_21.11",
           "name": "Baby Zoglin",
           "file": "zoglin_baby",
-          "popup": "only_applies_regular",
-          "model": "hoglin"
+          "model": "hoglin",
+          "popup": "only_applies_regular"
         },
         {
           "id": "zombie_baby_21.11",
           "name": "Baby Zombie",
           "file": "zombie_baby",
-          "popup": "only_applies_regular",
-          "model": "zombie"
+          "model": "zombie",
+          "popup": "only_applies_regular"
         },
         {
           "id": "zombie_horse_baby_21.11",
@@ -1941,19 +1941,19 @@
           "id": "zombie_villager_baby_21.11",
           "name": "Baby Zombie Villager",
           "file": "zombie_villager_baby",
-          "popup": "only_applies_regular",
           "vanilla_textures": [
             "zombie_villager_baby",
             "plains_baby"
           ],
-          "model": "zombie_villager"
+          "model": "zombie_villager",
+          "popup": "only_applies_regular"
         },
         {
           "id": "zombified_piglin_baby_21.11",
           "name": "Baby Zombified Piglin",
           "file": "zombified_piglin_baby",
-          "popup": "only_applies_regular",
-          "model": "piglin"
+          "model": "piglin",
+          "popup": "only_applies_regular"
         },
         {
           "type": "heading",
@@ -2195,11 +2195,11 @@
           "id": "trapped_chest_large_21.1",
           "name": "Trapped Double Chest",
           "file": "trapped_chest_large",
-          "model": "chest_large_21.1",
           "texture": [
             "trapped_left",
             "trapped_right"
-          ]
+          ],
+          "model": "chest_large_21.1"
         },
         {
           "id": "zombie_horse_21.1",
@@ -2230,11 +2230,11 @@
               "id": "chest_large_19.2",
               "name": "Double Chest",
               "file": "chest_large",
-              "model": "chest_large_19.2",
               "texture": [
                 "normal_left",
                 "normal_right"
-              ]
+              ],
+              "model": "chest_large_19.2"
             }
           ]
         },
@@ -2252,11 +2252,11 @@
               "id": "trapped_chest_large_19.2",
               "name": "Trapped Double Chest",
               "file": "trapped_chest_large",
-              "model": "chest_large_19.2",
               "texture": [
                 "trapped_left",
                 "trapped_right"
-              ]
+              ],
+              "model": "chest_large_19.2"
             }
           ]
         },
