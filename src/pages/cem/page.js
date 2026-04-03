@@ -18,6 +18,7 @@ export default class extends Page {
     const linkIcon = $("#link-icon").contents()
     const entityContainer = $("#entity-container")
     for (const category of cem_template_models.categories) {
+      if (category.type) continue
       const entities = E("div").addClass("entities").appendTo(
         E("div").addClass("category").append(
           E("div").addClass("category-heading").append(
@@ -27,38 +28,38 @@ export default class extends Page {
         ).appendTo(entityContainer)
       )
       const entityList = []
+      let heading
       for (const entity of category.entities) {
+        if (entity.type === "heading") { heading = entity.text; entityList.push(entity); continue }
+        entity.heading = heading
         entityList.push(entity)
         if (entity.variants) {
-          for (let variant of entity.variants) {
-            if (typeof variant === "string") {
-              variant = { name: variant }
-            }
-            variant.model ??= entity.model ?? entity.name ?? entity
+          for (const variant of entity.variants) {
+            variant.model ??= entity.model ?? entity.id
+            variant.heading = heading
             entityList.push(variant)
           }
         }
       }
-      for (let entity of entityList) {
+      for (const entity of entityList) {
         if (entity.type === "heading") {
           entities.append(E("div").addClass("entity-heading").text(entity.text))
           continue
         }
-        if (typeof entity === "string") entity = { name: entity }
-        if (!entity.display_name) entity.display_name = entity.name.replace(/_/g, " ").toTitleCase()
-        if (!entity.model) entity.model = entity.name
-        if (!entity.file_name) entity.file_name = entity.name
-        if (!entity.texture_name) entity.texture_name = entity.name
+        const displayName = entity.name ?? (entity.file ?? entity.id).replace(/_/g, " ").toTitleCase()
+        const popupName = entity.heading ? `${displayName} [${entity.heading}]` : displayName
+        const modelId = entity.model ?? entity.id
+        const fileName = entity.file ?? entity.id
         entities.append(
-          E("div").addClass("entity").attr("data-id", entity.name).append(
-            E("img").attr("src", `/assets/images/minecraft/renders/${entity.name}.webp`),
-            E("div").text(entity.display_name)
+          E("div").addClass("entity").attr("data-id", entity.id).append(
+            E("img").attr("src", `/assets/images/minecraft/renders/${entity.id}.webp`),
+            E("div").text(displayName)
           ).on("click", e => {
             const params = getURLParams() ?? {}
-            params.entity = entity.name
-            const model = JSON.parse(cem_template_models.models[entity.model].model)
+            params.entity = entity.id
+            const model = JSON.parse(cem_template_models.models[modelId].model)
             if ("download" in params) {
-              saveAs(new Blob([compileJSON(model)]), `${entity.file_name}.jem`)
+              saveAs(new Blob([compileJSON(model)]), `${fileName}.jem`)
               delete params.download
             }
             history.replaceState({}, null, `/cem/${toURLParams(params)}`)
@@ -67,7 +68,7 @@ export default class extends Page {
               E("div").addClass("popup-container").append(
                 E("div").addClass("popup-contents").append(
                   E("div").addClass("entity-info").append(
-                    E("div").addClass("entity-name").text(entity.display_name),
+                    E("div").addClass("entity-name").text(popupName),
                     E("div").addClass("entity-parts").append(
                       E("table").append(
                         E("tr").append(
@@ -82,16 +83,16 @@ export default class extends Page {
                     )
                   ),
                   E("div").addClass("entity-extras").append(
-                    E("div").addClass("entity-texture").append(
-                      E("img").attr("src", `/assets/images/minecraft/entities/${entity.name}.png`)
+                    entity.textureless ? null : E("div").addClass("entity-texture").append(
+                      E("img").attr("src", `/assets/images/minecraft/entities/${entity.id}.png`)
                     ),
                     E("div").addClass("button").append(
                       downloadIcon.clone(),
                       E("span").text("Download Model")
-                    ).on("click", e => saveAs(new Blob([compileJSON(model)]), `${entity.file_name}.jem`)),
+                    ).on("click", e => saveAs(new Blob([compileJSON(model)]), `${fileName}.jem`)),
                     E("a").addClass("button").attr({
                       title: "Requires the CEM Template Loader plugin to be installed in the web app",
-                      href: `https://web.blockbench.net/?plugins=cem_template_loader&model=${entity.name}&texture`,
+                      href: `https://web.blockbench.net/?plugins=cem_template_loader&model=${entity.id}&texture`,
                       target: "_blank"
                     }).append(
                       linkIcon.clone(),
