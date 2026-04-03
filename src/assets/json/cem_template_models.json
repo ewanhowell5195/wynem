@@ -1147,15 +1147,17 @@
           "file_name": "camel_baby",
           "texture_name": "camel_baby",
           "model": "camel",
-          "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "camel_baby_saddle_21.11",
-          "display_name": "Baby Camel Saddle",
-          "file_name": "camel_baby_saddle",
-          "texture_name": "camel_baby_saddle",
-          "model": "camel_saddle",
-          "popup": "This model only applies to the Baby Camel Saddle. This model is optional, and by default will be the same as the regular Camel Saddle model."
+          "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "camel_baby_saddle_21.11",
+              "display_name": "Baby Camel Saddle",
+              "file_name": "camel_baby_saddle",
+              "texture_name": "camel_baby_saddle",
+              "model": "camel_saddle",
+              "popup": "This model only applies to the Baby Camel Saddle. This model is optional, and by default will be the same as the regular Camel Saddle model."
+            }
+          ]
         },
         {
           "name": "camel_husk_baby_21.11",
@@ -1163,15 +1165,17 @@
           "file_name": "camel_husk_baby",
           "texture_name": "camel_husk_baby",
           "model": "camel",
-          "popup": "This model only applies to the Baby Camel Husk. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "camel_husk_baby_saddle_21.11",
-          "display_name": "Baby Camel Husk Saddle",
-          "file_name": "camel_husk_baby_saddle",
-          "texture_name": "camel_husk_baby_saddle",
-          "model": "camel_saddle",
-          "popup": "This model only applies to the Baby Camel Husk Saddle. This model is optional, and by default will be the same as the regular Camel Husk Saddle model."
+          "popup": "This model only applies to the Baby Camel Husk. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "camel_husk_baby_saddle_21.11",
+              "display_name": "Baby Camel Husk Saddle",
+              "file_name": "camel_husk_baby_saddle",
+              "texture_name": "camel_husk_baby_saddle",
+              "model": "camel_saddle",
+              "popup": "This model only applies to the Baby Camel Husk Saddle. This model is optional, and by default will be the same as the regular Camel Husk Saddle model."
+            }
+          ]
         },
         {
           "name": "cat_baby_21.11",
@@ -1179,15 +1183,17 @@
           "file_name": "cat_baby",
           "texture_name": "cat_baby",
           "model": "cat",
-          "popup": "This model only applies to the Baby Cat. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "cat_baby_collar_21.11",
-          "display_name": "Baby Cat Collar",
-          "file_name": "cat_baby_collar",
-          "texture_name": "cat_baby_collar",
-          "model": "cat",
-          "popup": "This model only applies to the Baby Cat Collar. This model is optional, and by default will be the same as the regular Cat Collar model."
+          "popup": "This model only applies to the Baby Cat. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "cat_baby_collar_21.11",
+              "display_name": "Baby Cat Collar",
+              "file_name": "cat_baby_collar",
+              "texture_name": "cat_baby_collar",
+              "model": "cat",
+              "popup": "This model only applies to the Baby Cat Collar. This model is optional, and by default will be the same as the regular Cat Collar model."
+            }
+          ]
         },
         {
           "name": "chicken_baby_21.11",
@@ -1195,23 +1201,25 @@
           "file_name": "chicken_baby",
           "texture_name": "temperate_chicken_baby_21.11",
           "model": "chicken",
-          "popup": "This model only applies to the Baby Chicken. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "warm_chicken_baby_21.11",
-          "display_name": "Warm Baby Chicken",
-          "file_name": "warm_chicken_baby",
-          "texture_name": "warm_chicken_baby",
-          "model": "chicken",
-          "popup": "This model only applies to the Warm Baby Chicken. This model is optional, and by default will be the same as the regular Warm Chicken model."
-        },
-        {
-          "name": "cold_chicken_baby_21.11",
-          "display_name": "Cold Baby Chicken",
-          "file_name": "cold_chicken_baby",
-          "texture_name": "cold_chicken_baby",
-          "model": "cold_chicken",
-          "popup": "This model only applies to the Cold Baby Chicken. This model is optional, and by default will be the same as the regular Cold Chicken model."
+          "popup": "This model only applies to the Baby Chicken. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "warm_chicken_baby_21.11",
+              "display_name": "Warm Baby Chicken",
+              "file_name": "warm_chicken_baby",
+              "texture_name": "warm_chicken_baby",
+              "model": "chicken",
+              "popup": "This model only applies to the Warm Baby Chicken. This model is optional, and by default will be the same as the regular Warm Chicken model."
+            },
+            {
+              "name": "cold_chicken_baby_21.11",
+              "display_name": "Cold Baby Chicken",
+              "file_name": "cold_chicken_baby",
+              "texture_name": "cold_chicken_baby",
+              "model": "cold_chicken",
+              "popup": "This model only applies to the Cold Baby Chicken. This model is optional, and by default will be the same as the regular Cold Chicken model."
+            }
+          ]
         },
         {
           "name": "cow_baby_21.11",
@@ -1219,23 +1227,25 @@
           "file_name": "cow_baby",
           "texture_name": "temperate_cow_baby_21.11",
           "model": "cow",
-          "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "warm_cow_baby_21.11",
-          "display_name": "Warm Baby Cow",
-          "file_name": "warm_cow_baby",
-          "texture_name": "warm_cow_baby",
-          "model": "warm_cow",
-          "popup": "This model only applies to the Warm Baby Cow. This model is optional, and by default will be the same as the regular Warm Cow model."
-        },
-        {
-          "name": "cold_cow_baby_21.11",
-          "display_name": "Cold Baby Cow",
-          "file_name": "cold_cow_baby",
-          "texture_name": "cold_cow_baby",
-          "model": "cold_cow",
-          "popup": "This model only applies to the Cold Baby Cow. This model is optional, and by default will be the same as the regular Cold Cow model."
+          "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "warm_cow_baby_21.11",
+              "display_name": "Warm Baby Cow",
+              "file_name": "warm_cow_baby",
+              "texture_name": "warm_cow_baby",
+              "model": "warm_cow",
+              "popup": "This model only applies to the Warm Baby Cow. This model is optional, and by default will be the same as the regular Warm Cow model."
+            },
+            {
+              "name": "cold_cow_baby_21.11",
+              "display_name": "Cold Baby Cow",
+              "file_name": "cold_cow_baby",
+              "texture_name": "cold_cow_baby",
+              "model": "cold_cow",
+              "popup": "This model only applies to the Cold Baby Cow. This model is optional, and by default will be the same as the regular Cold Cow model."
+            }
+          ]
         },
         {
           "name": "dolphin_baby_21.11",
@@ -1250,14 +1260,16 @@
           "display_name": "Baby Donkey",
           "file_name": "donkey_baby",
           "texture_name": "donkey_baby",
-          "model": "donkey_baby"
-        },
-        {
-          "name": "donkey_baby_saddle_21.11",
-          "display_name": "Baby Donkey Saddle",
-          "file_name": "donkey_baby_saddle",
-          "texture_name": "donkey_baby_saddle",
-          "model": "donkey_baby_saddle"
+          "model": "donkey_baby",
+          "variants": [
+            {
+              "name": "donkey_baby_saddle_21.11",
+              "display_name": "Baby Donkey Saddle",
+              "file_name": "donkey_baby_saddle",
+              "texture_name": "donkey_baby_saddle",
+              "model": "donkey_baby_saddle"
+            }
+          ]
         },
         {
           "name": "drowned_baby_21.11",
@@ -1265,15 +1277,17 @@
           "file_name": "drowned_baby",
           "texture_name": "drowned_baby",
           "model": "drowned",
-          "popup": "This model only applies to the Baby Drowned. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "drowned_baby_outer_21.11",
-          "display_name": "Baby Drowned [Outer]",
-          "file_name": "drowned_baby_outer",
-          "texture_name": "drowned_outer_layer",
-          "model": "drowned",
-          "popup": "This model only applies to the Baby Drowned [Outer]. This model is optional, and by default will be the same as the regular Drowned [Outer] model."
+          "popup": "This model only applies to the Baby Drowned. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "drowned_baby_outer_21.11",
+              "display_name": "Baby Drowned [Outer]",
+              "file_name": "drowned_baby_outer",
+              "texture_name": "drowned_outer_layer",
+              "model": "drowned",
+              "popup": "This model only applies to the Baby Drowned [Outer]. This model is optional, and by default will be the same as the regular Drowned [Outer] model."
+            }
+          ]
         },
         {
           "name": "fox_baby_21.11",
@@ -1319,21 +1333,23 @@
           "display_name": "Baby Horse",
           "file_name": "horse_baby",
           "texture_name": "horse_baby",
-          "model": "horse_baby"
-        },
-        {
-          "name": "horse_baby_saddle_21.11",
-          "display_name": "Baby Horse Saddle",
-          "file_name": "horse_baby_saddle",
-          "texture_name": "horse_baby_saddle",
-          "model": "horse_baby_saddle"
-        },
-        {
-          "name": "horse_baby_armor_21.11",
-          "display_name": "Baby Horse Armor",
-          "file_name": "horse_baby_armor",
-          "texture_name": "horse_baby_armor",
-          "model": "horse_baby_armor"
+          "model": "horse_baby",
+          "variants": [
+            {
+              "name": "horse_baby_saddle_21.11",
+              "display_name": "Baby Horse Saddle",
+              "file_name": "horse_baby_saddle",
+              "texture_name": "horse_baby_saddle",
+              "model": "horse_baby_saddle"
+            },
+            {
+              "name": "horse_baby_armor_21.11",
+              "display_name": "Baby Horse Armor",
+              "file_name": "horse_baby_armor",
+              "texture_name": "horse_baby_armor",
+              "model": "horse_baby_armor"
+            }
+          ]
         },
         {
           "name": "husk_baby_21.11",
@@ -1349,15 +1365,17 @@
           "file_name": "llama_baby",
           "texture_name": "llama_baby",
           "model": "llama",
-          "popup": "This model only applies to the Baby Llama. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "llama_baby_decor_21.11",
-          "display_name": "Baby Llama Decor",
-          "file_name": "llama_baby_decor",
-          "texture_name": "llama_baby_decor",
-          "model": "llama",
-          "popup": "This model only applies to the Baby Llama Decor. This model is optional, and by default will be the same as the regular Llama Decor model."
+          "popup": "This model only applies to the Baby Llama. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "llama_baby_decor_21.11",
+              "display_name": "Baby Llama Decor",
+              "file_name": "llama_baby_decor",
+              "texture_name": "llama_baby_decor",
+              "model": "llama",
+              "popup": "This model only applies to the Baby Llama Decor. This model is optional, and by default will be the same as the regular Llama Decor model."
+            }
+          ]
         },
         {
           "name": "mooshroom_baby_21.11",
@@ -1372,14 +1390,16 @@
           "display_name": "Baby Mule",
           "file_name": "mule_baby",
           "texture_name": "mule_baby",
-          "model": "donkey_baby"
-        },
-        {
-          "name": "mule_baby_saddle_21.11",
-          "display_name": "Baby Mule Saddle",
-          "file_name": "mule_baby_saddle",
-          "texture_name": "mule_baby_saddle",
-          "model": "donkey_baby_saddle"
+          "model": "donkey_baby",
+          "variants": [
+            {
+              "name": "mule_baby_saddle_21.11",
+              "display_name": "Baby Mule Saddle",
+              "file_name": "mule_baby_saddle",
+              "texture_name": "mule_baby_saddle",
+              "model": "donkey_baby_saddle"
+            }
+          ]
         },
         {
           "name": "nautilus_baby_21.11",
@@ -1410,31 +1430,33 @@
           "file_name": "pig_baby",
           "texture_name": "temperate_pig_baby_21.11",
           "model": "pig",
-          "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "pig_baby_saddle_21.11",
-          "display_name": "Baby Pig Saddle",
-          "file_name": "pig_baby_saddle",
-          "texture_name": "temperate_pig_baby_saddle_21.11",
-          "model": "pig_saddle",
-          "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the regular Pig Saddle model."
-        },
-        {
-          "name": "warm_pig_baby_21.11",
-          "display_name": "Warm Baby Pig",
-          "file_name": "warm_pig_baby",
-          "texture_name": "warm_pig_baby",
-          "model": "pig",
-          "popup": "This model only applies to the Warm Baby Pig. This model is optional, and by default will be the same as the regular Warm Pig model."
-        },
-        {
-          "name": "cold_pig_baby_21.11",
-          "display_name": "Cold Baby Pig",
-          "file_name": "cold_pig_baby",
-          "texture_name": "cold_pig_baby",
-          "model": "cold_pig",
-          "popup": "This model only applies to the Cold Baby Pig. This model is optional, and by default will be the same as the regular Cold Pig model."
+          "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "pig_baby_saddle_21.11",
+              "display_name": "Baby Pig Saddle",
+              "file_name": "pig_baby_saddle",
+              "texture_name": "temperate_pig_baby_saddle_21.11",
+              "model": "pig_saddle",
+              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the regular Pig Saddle model."
+            },
+            {
+              "name": "warm_pig_baby_21.11",
+              "display_name": "Warm Baby Pig",
+              "file_name": "warm_pig_baby",
+              "texture_name": "warm_pig_baby",
+              "model": "pig",
+              "popup": "This model only applies to the Warm Baby Pig. This model is optional, and by default will be the same as the regular Warm Pig model."
+            },
+            {
+              "name": "cold_pig_baby_21.11",
+              "display_name": "Cold Baby Pig",
+              "file_name": "cold_pig_baby",
+              "texture_name": "cold_pig_baby",
+              "model": "cold_pig",
+              "popup": "This model only applies to the Cold Baby Pig. This model is optional, and by default will be the same as the regular Cold Pig model."
+            }
+          ]
         },
         {
           "name": "piglin_baby_21.11",
@@ -1472,44 +1494,48 @@
             "sheep_baby_wool_undercoat"
           ],
           "model": "sheep",
-          "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "sheep_baby_wool_undercoat_21.11",
-          "display_name": "Baby Sheep Wool Undercoat",
-          "file_name": "sheep_baby_wool_undercoat",
-          "texture_name": "sheep_baby_wool_undercoat",
-          "model": "sheep",
-          "popup": "This model only applies to the Baby Sheep Wool Undercoat. This model is optional, and by default will be the same as the regular Sheep Wool Undercoat model."
-        },
-        {
-          "name": "sheep_baby_wool_21.11",
-          "display_name": "Baby Sheep Wool",
-          "file_name": "sheep_baby_wool",
-          "texture_name": "sheep_baby_wool",
-          "model": "sheep_wool",
-          "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the regular Sheep Wool model."
+          "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "sheep_baby_wool_undercoat_21.11",
+              "display_name": "Baby Sheep Wool Undercoat",
+              "file_name": "sheep_baby_wool_undercoat",
+              "texture_name": "sheep_baby_wool_undercoat",
+              "model": "sheep",
+              "popup": "This model only applies to the Baby Sheep Wool Undercoat. This model is optional, and by default will be the same as the regular Sheep Wool Undercoat model."
+            },
+            {
+              "name": "sheep_baby_wool_21.11",
+              "display_name": "Baby Sheep Wool",
+              "file_name": "sheep_baby_wool",
+              "texture_name": "sheep_baby_wool",
+              "model": "sheep_wool",
+              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the regular Sheep Wool model."
+            }
+          ]
         },
         {
           "name": "skeleton_horse_baby_21.11",
           "display_name": "Baby Skeleton Horse",
           "file_name": "skeleton_horse_baby",
           "texture_name": "skeleton_horse_baby",
-          "model": "horse_baby"
-        },
-        {
-          "name": "skeleton_horse_baby_saddle_21.11",
-          "display_name": "Baby Skeleton Horse Saddle",
-          "file_name": "skeleton_horse_baby_saddle",
-          "texture_name": "skeleton_horse_baby_saddle",
-          "model": "horse_baby_saddle"
-        },
-        {
-          "name": "skeleton_horse_baby_armor_21.11",
-          "display_name": "Baby Skeleton Horse Armor",
-          "file_name": "skeleton_horse_baby_armor",
-          "texture_name": "skeleton_horse_baby_armor",
-          "model": "horse_baby_armor"
+          "model": "horse_baby",
+          "variants": [
+            {
+              "name": "skeleton_horse_baby_saddle_21.11",
+              "display_name": "Baby Skeleton Horse Saddle",
+              "file_name": "skeleton_horse_baby_saddle",
+              "texture_name": "skeleton_horse_baby_saddle",
+              "model": "horse_baby_saddle"
+            },
+            {
+              "name": "skeleton_horse_baby_armor_21.11",
+              "display_name": "Baby Skeleton Horse Armor",
+              "file_name": "skeleton_horse_baby_armor",
+              "texture_name": "skeleton_horse_baby_armor",
+              "model": "horse_baby_armor"
+            }
+          ]
         },
         {
           "name": "sniffer_baby_21.11",
@@ -1533,15 +1559,17 @@
           "file_name": "strider_baby",
           "texture_name": "strider_baby",
           "model": "strider",
-          "popup": "This model only applies to the Baby Strider. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "strider_baby_saddle_21.11",
-          "display_name": "Baby Strider Saddle",
-          "file_name": "strider_baby_saddle",
-          "texture_name": "strider_baby_saddle",
-          "model": "strider",
-          "popup": "This model only applies to the Baby Strider Saddle. This model is optional, and by default will be the same as the regular Strider Saddle model."
+          "popup": "This model only applies to the Baby Strider. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "strider_baby_saddle_21.11",
+              "display_name": "Baby Strider Saddle",
+              "file_name": "strider_baby_saddle",
+              "texture_name": "strider_baby_saddle",
+              "model": "strider",
+              "popup": "This model only applies to the Baby Strider Saddle. This model is optional, and by default will be the same as the regular Strider Saddle model."
+            }
+          ]
         },
         {
           "name": "trader_llama_baby_21.11",
@@ -1549,15 +1577,17 @@
           "file_name": "trader_llama_baby",
           "texture_name": "trader_llama_baby",
           "model": "llama",
-          "popup": "This model only applies to the Baby Trader Llama. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "trader_llama_baby_decor_21.11",
-          "display_name": "Baby Trader Llama Decor",
-          "file_name": "trader_llama_baby_decor",
-          "texture_name": "trader_llama_baby_decor",
-          "model": "llama_decor",
-          "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the regular Trader Llama Decor model."
+          "popup": "This model only applies to the Baby Trader Llama. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "trader_llama_baby_decor_21.11",
+              "display_name": "Baby Trader Llama Decor",
+              "file_name": "trader_llama_baby_decor",
+              "texture_name": "trader_llama_baby_decor",
+              "model": "llama_decor",
+              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the regular Trader Llama Decor model."
+            }
+          ]
         },
         {
           "name": "turtle_baby_21.11",
@@ -1587,23 +1617,25 @@
           "file_name": "wolf_baby",
           "texture_name": "wolf_baby",
           "model": "wolf",
-          "popup": "This model only applies to the Baby Wolf. This model is optional, and by default will be the same as the regular model."
-        },
-        {
-          "name": "wolf_baby_collar_21.11",
-          "display_name": "Baby Wolf Collar",
-          "file_name": "wolf_baby_collar",
-          "texture_name": "wolf_baby_collar",
-          "model": "wolf",
-          "popup": "This model only applies to the Baby Wolf Collar. This model is optional, and by default will be the same as the regular Wolf Collar model."
-        },
-        {
-          "name": "wolf_baby_armor_21.11",
-          "display_name": "Baby Wolf Armor",
-          "file_name": "wolf_baby_armor",
-          "texture_name": "wolf_baby_armor",
-          "model": "wolf_armor",
-          "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the regular Wolf Armor model."
+          "popup": "This model only applies to the Baby Wolf. This model is optional, and by default will be the same as the regular model.",
+          "variants": [
+            {
+              "name": "wolf_baby_collar_21.11",
+              "display_name": "Baby Wolf Collar",
+              "file_name": "wolf_baby_collar",
+              "texture_name": "wolf_baby_collar",
+              "model": "wolf",
+              "popup": "This model only applies to the Baby Wolf Collar. This model is optional, and by default will be the same as the regular Wolf Collar model."
+            },
+            {
+              "name": "wolf_baby_armor_21.11",
+              "display_name": "Baby Wolf Armor",
+              "file_name": "wolf_baby_armor",
+              "texture_name": "wolf_baby_armor",
+              "model": "wolf_armor",
+              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the regular Wolf Armor model."
+            }
+          ]
         },
         {
           "name": "zoglin_baby_21.11",
@@ -1626,21 +1658,23 @@
           "display_name": "Baby Zombie Horse",
           "file_name": "zombie_horse_baby",
           "texture_name": "zombie_horse_baby",
-          "model": "horse_baby"
-        },
-        {
-          "name": "zombie_horse_baby_saddle_21.11",
-          "display_name": "Baby Zombie Horse Saddle",
-          "file_name": "zombie_horse_baby_saddle",
-          "texture_name": "zombie_horse_baby_saddle",
-          "model": "horse_baby_armor"
-        },
-        {
-          "name": "zombie_horse_baby_saddle_21.11",
-          "display_name": "Baby Zombie Horse Armor",
-          "file_name": "zombie_horse_baby_saddle",
-          "texture_name": "zombie_horse_baby_saddle",
-          "model": "horse_baby_armor"
+          "model": "horse_baby",
+          "variants": [
+            {
+              "name": "zombie_horse_baby_saddle_21.11",
+              "display_name": "Baby Zombie Horse Saddle",
+              "file_name": "zombie_horse_baby_saddle",
+              "texture_name": "zombie_horse_baby_saddle",
+              "model": "horse_baby_saddle"
+            },
+            {
+              "name": "zombie_horse_baby_armor_21.11",
+              "display_name": "Baby Zombie Horse Armor",
+              "file_name": "zombie_horse_baby_armor",
+              "texture_name": "zombie_horse_baby_armor",
+              "model": "horse_baby_armor"
+            }
+          ]
         },
         {
           "name": "zombie_villager_baby_21.11",
