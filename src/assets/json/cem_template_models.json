@@ -1,1026 +1,1315 @@
 {
-  "version": "3.12.0",
+  "version": "4.0.0",
   "categories": [
     {
-      "name": "Supported",
+      "type": "heading",
+      "text": "Supported"
+    },
+    {
+      "name": "Regular",
       "description": "The standard CEM models supported by OptiFine.",
       "icon": "icon-format_optifine",
       "entities": [
-        "allay",
-        "armadillo",
         {
-          "name": "armor_stand",
+          "id": "allay"
+        },
+        {
+          "id": "armadillo"
+        },
+        {
+          "id": "armor_stand",
           "variants": [
             {
-              "name": "armor_stand_small",
-              "display_name": "Small Armor Stand",
-              "popup": "This model only applies to the Small Armor Stand. This model is optional, and by default will be the same as the regular model."
+              "id": "armor_stand_small",
+              "name": "Small Armor Stand",
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "arrow",
+          "id": "arrow",
           "variants": [
             {
-              "name": "spectral_arrow",
-              "popup": "This model only applies to the Spectral Arrow. This model is optional, and by default will be the same as the regular model."
-            }
-          ]
-        },
-        "axolotl",
-        "banner",
-        "bat",
-        "bed",
-        "bee",
-        "bell",
-        "blaze",
-        {
-          "name": "boat",
-          "popup": "This model applies to all regular Boat types. Use a specific Boat variant, such as the Oak Boat, if you want to modify a specific wood type.",
-          "variants": [
-            "oak_boat",
-            "spruce_boat",
-            "birch_boat",
-            "jungle_boat",
-            "acacia_boat",
-            "dark_oak_boat",
-            "mangrove_boat",
-            "cherry_boat",
-            "pale_oak_boat",
-            {
-              "name": "boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there.<br><br>This model applies to all regular Boat [Patch] types. Use a specific Boat [Patch] variant, such as the Oak Boat [Patch], if you want to modify a specific wood type."
-            },
-            {
-              "name": "oak_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "spruce_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "birch_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "jungle_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "acacia_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "dark_oak_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "mangrove_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "cherry_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
-            },
-            {
-              "name": "pale_oak_boat_patch",
-              "textureless": true,
-              "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the boat's interior. Align these invisible elements so they fill the interior of the boat to block water from showing there."
+              "id": "spectral_arrow",
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "chest_boat",
-          "display_name": "Boat with Chest",
-          "popup": "This model applies to all Boat with Chest types. Use a specific Boat with Chest variant, such as the Oak Boat with Chest, if you want to modify a specific wood type.",
+          "id": "axolotl"
+        },
+        {
+          "id": "banner"
+        },
+        {
+          "id": "bat"
+        },
+        {
+          "id": "bed"
+        },
+        {
+          "id": "bee"
+        },
+        {
+          "id": "bell"
+        },
+        {
+          "id": "blaze"
+        },
+        {
+          "id": "boat",
+          "popup": [
+            "applies_all",
+            "regular Boat",
+            "Boat",
+            "Oak Boat",
+            "wood"
+          ],
           "variants": [
             {
-              "name": "oak_chest_boat",
-              "display_name": "Oak Boat with Chest"
+              "id": "oak_boat"
             },
             {
-              "name": "spruce_chest_boat",
-              "display_name": "Spruce Boat with Chest"
+              "id": "spruce_boat"
             },
             {
-              "name": "birch_chest_boat",
-              "display_name": "Birch Boat with Chest"
+              "id": "birch_boat"
             },
             {
-              "name": "jungle_chest_boat",
-              "display_name": "Jungle Boat with Chest"
+              "id": "jungle_boat"
             },
             {
-              "name": "acacia_chest_boat",
-              "display_name": "Acacia Boat with Chest"
+              "id": "acacia_boat"
             },
             {
-              "name": "dark_oak_chest_boat",
-              "display_name": "Dark Oak Boat with Chest"
+              "id": "dark_oak_boat"
             },
             {
-              "name": "mangrove_chest_boat",
-              "display_name": "Mangrove Boat with Chest"
+              "id": "mangrove_boat"
             },
             {
-              "name": "cherry_chest_boat",
-              "display_name": "Cherry Boat with Chest"
+              "id": "cherry_boat"
             },
             {
-              "name": "pale_oak_chest_boat",
-              "display_name": "Pale Oak Boat with Chest"
+              "id": "pale_oak_boat"
             },
             {
-              "name": "chest_boat_patch",
-              "display_name": "Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there.<br><br>This model applies to all Boat with Chest [Patch] types. Use a specific Boat with Chest [Patch] variant, such as the Oak Boat with Chest [Patch], if you want to modify a specific wood type."
+              "textureless": true,
+              "popup": [
+                "prevents_water_all",
+                "boat",
+                "regular Boat [Patch]",
+                "Boat [Patch]",
+                "Oak Boat [Patch]"
+              ]
             },
             {
-              "name": "oak_chest_boat_patch",
-              "display_name": "Oak Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "oak_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "spruce_chest_boat_patch",
-              "display_name": "Spruce Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "spruce_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "birch_chest_boat_patch",
-              "display_name": "Birch Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "birch_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "jungle_chest_boat_patch",
-              "display_name": "Jungle Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "jungle_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "acacia_chest_boat_patch",
-              "display_name": "Acacia Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "acacia_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "dark_oak_chest_boat_patch",
-              "display_name": "Dark Oak Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "dark_oak_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "mangrove_chest_boat_patch",
-              "display_name": "Mangrove Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "mangrove_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "cherry_chest_boat_patch",
-              "display_name": "Cherry Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "cherry_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             },
             {
-              "name": "pale_oak_chest_boat_patch",
-              "display_name": "Pale Oak Boat with Chest [Patch]",
-              "textureless": true,
+              "id": "pale_oak_boat_patch",
               "model": "boat_patch",
-              "popup": "This model prevents water from rendering inside the chest boat's interior. Align these invisible elements so they fill the interior of the chest boat to block water from showing there."
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "boat"
+              ]
             }
           ]
         },
         {
-          "name": "bogged",
+          "id": "chest_boat",
+          "name": "Boat with Chest",
+          "popup": [
+            "applies_all",
+            "Boat with Chest",
+            "Boat with Chest",
+            "Oak Boat with Chest",
+            "wood"
+          ],
           "variants": [
             {
-              "name": "bogged_outer",
-              "display_name": "Bogged [Outer]",
-              "texture_name": "bogged_overlay",
+              "id": "oak_chest_boat",
+              "name": "Oak Boat with Chest"
+            },
+            {
+              "id": "spruce_chest_boat",
+              "name": "Spruce Boat with Chest"
+            },
+            {
+              "id": "birch_chest_boat",
+              "name": "Birch Boat with Chest"
+            },
+            {
+              "id": "jungle_chest_boat",
+              "name": "Jungle Boat with Chest"
+            },
+            {
+              "id": "acacia_chest_boat",
+              "name": "Acacia Boat with Chest"
+            },
+            {
+              "id": "dark_oak_chest_boat",
+              "name": "Dark Oak Boat with Chest"
+            },
+            {
+              "id": "mangrove_chest_boat",
+              "name": "Mangrove Boat with Chest"
+            },
+            {
+              "id": "cherry_chest_boat",
+              "name": "Cherry Boat with Chest"
+            },
+            {
+              "id": "pale_oak_chest_boat",
+              "name": "Pale Oak Boat with Chest"
+            },
+            {
+              "id": "chest_boat_patch",
+              "name": "Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_all",
+                "chest boat",
+                "Boat with Chest [Patch]",
+                "Boat with Chest [Patch]",
+                "Oak Boat with Chest [Patch]"
+              ]
+            },
+            {
+              "id": "oak_chest_boat_patch",
+              "name": "Oak Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "spruce_chest_boat_patch",
+              "name": "Spruce Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "birch_chest_boat_patch",
+              "name": "Birch Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "jungle_chest_boat_patch",
+              "name": "Jungle Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "acacia_chest_boat_patch",
+              "name": "Acacia Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "dark_oak_chest_boat_patch",
+              "name": "Dark Oak Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "mangrove_chest_boat_patch",
+              "name": "Mangrove Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "cherry_chest_boat_patch",
+              "name": "Cherry Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            },
+            {
+              "id": "pale_oak_chest_boat_patch",
+              "name": "Pale Oak Boat with Chest [Patch]",
+              "model": "boat_patch",
+              "textureless": true,
+              "popup": [
+                "prevents_water_single",
+                "chest boat"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bogged",
+          "variants": [
+            {
+              "id": "bogged_outer",
+              "name": "Bogged [Outer]",
+              "texture": "bogged_overlay",
               "model": "stray_outer"
             }
           ]
         },
         {
-          "name": "book",
+          "id": "book",
           "popup": "This model applies to both the Enchanting and Lectern Book. Use their specific models to modify a specific one.",
           "variants": [
             {
-              "name": "enchanting_book",
-              "texture_name": "book"
+              "id": "enchanting_book",
+              "texture": "book"
             },
             {
-              "name": "enchanting_screen_book",
-              "display_name": "Enchanting Book [Screen]",
-              "texture_name": "book",
+              "id": "enchanting_screen_book",
+              "name": "Enchanting Book [Screen]",
+              "texture": "book",
               "popup": "This model only applies to the Enchanting Book within the Enchanting Table GUI. This model is optional, and by default will be the same as the regular Enchanting Book model."
             },
             {
-              "name": "lectern_book",
-              "texture_name": "book"
+              "id": "lectern_book",
+              "texture": "book"
             }
           ]
         },
         {
-          "name": "breeze",
+          "id": "breeze",
           "variants": [
             {
-              "name": "breeze_eyes",
+              "id": "breeze_eyes",
               "model": "breeze_eyes"
             },
             {
-              "name": "breeze_wind",
+              "id": "breeze_wind",
               "model": "breeze_wind"
             }
           ]
         },
         {
-          "name": "camel",
+          "id": "camel",
           "variants": [
             {
-              "name": "camel_saddle",
+              "id": "camel_saddle",
               "model": "camel_saddle"
             }
           ]
         },
         {
-          "name": "camel_husk",
+          "id": "camel_husk",
           "model": "camel",
           "variants": [
             {
-              "name": "camel_husk_saddle",
+              "id": "camel_husk_saddle",
               "model": "camel_saddle"
             }
           ]
         },
         {
-          "name": "cat",
-          "variants": [
-            "cat_collar"
-          ]
-        },
-        {
-          "name": "cave_spider",
-          "model": "spider"
-        },
-        {
-          "name": "chest",
-          "texture_name": "normal",
+          "id": "cat",
           "variants": [
             {
-              "name": "chest_left",
-              "display_name": "Double Chest [Left]",
-              "texture_name": "normal_left",
-              "model": "chest_left"
-            },
-            {
-              "name": "chest_right",
-              "display_name": "Double Chest [Right]",
-              "texture_name": "normal_right",
-              "model": "chest_right"
+              "id": "cat_collar"
             }
           ]
         },
         {
-          "name": "chicken",
-          "texture_name": "temperate_chicken",
+          "id": "cave_spider",
+          "model": "spider"
+        },
+        {
+          "id": "chest",
+          "texture": "normal",
           "variants": [
-            "warm_chicken",
             {
-              "name": "cold_chicken",
+              "id": "chest_left",
+              "name": "Double Chest [Left]",
+              "model": "chest_left",
+              "texture": "normal_left"
+            },
+            {
+              "id": "chest_right",
+              "name": "Double Chest [Right]",
+              "model": "chest_right",
+              "texture": "normal_right"
+            }
+          ]
+        },
+        {
+          "id": "chicken",
+          "texture": "temperate_chicken",
+          "variants": [
+            {
+              "id": "warm_chicken"
+            },
+            {
+              "id": "cold_chicken",
               "model": "cold_chicken"
             }
           ]
         },
-        "cod",
         {
-          "name": "conduit",
-          "texture_name": [
-            "eye",
-            "base",
-            "cage",
-            "wind"
-          ],
-          "vanilla_textures": [
+          "id": "cod"
+        },
+        {
+          "id": "conduit",
+          "texture": [
             "eye",
             "base",
             "cage",
             "wind"
           ]
         },
-        "copper_golem",
         {
-          "name": "copper_golem_statue",
+          "id": "copper_golem"
+        },
+        {
+          "id": "copper_golem_statue",
           "model": "copper_golem",
           "variants": [
             {
-              "name": "copper_golem_statue_sitting",
-              "display_name": "Sitting Copper Golem Statue",
+              "id": "copper_golem_statue_sitting",
+              "name": "Sitting Copper Golem Statue",
               "model": "copper_golem_statue_sitting"
             },
             {
-              "name": "copper_golem_statue_running",
-              "display_name": "Running Copper Golem Statue",
+              "id": "copper_golem_statue_running",
+              "name": "Running Copper Golem Statue",
               "model": "copper_golem_statue_running"
             },
             {
-              "name": "copper_golem_statue_star",
-              "display_name": "Star Copper Golem Statue",
+              "id": "copper_golem_statue_star",
+              "name": "Star Copper Golem Statue",
               "model": "copper_golem_statue_star"
             }
           ]
         },
         {
-          "name": "cow",
-          "texture_name": "temperate_cow",
+          "id": "cow",
+          "texture": "temperate_cow",
           "variants": [
             {
-              "name": "warm_cow",
+              "id": "warm_cow",
               "model": "warm_cow"
             },
             {
-              "name": "cold_cow",
+              "id": "cold_cow",
               "model": "cold_cow"
             }
           ]
         },
-        "creaking",
         {
-          "name": "creeper",
+          "id": "creaking"
+        },
+        {
+          "id": "creeper",
           "variants": [
             {
-              "name": "creeper_charge",
+              "id": "creeper_charge",
               "model": "creeper_charge"
             }
           ]
         },
         {
-          "name": "head_creeper",
-          "display_name": "Creeper Head",
+          "id": "head_creeper",
+          "name": "Creeper Head",
           "model": "head"
         },
         {
-          "name": "decorated_pot",
-          "texture_name": [
-            "decorated_pot_base",
-            "decorated_pot_side"
-          ],
-          "vanilla_textures": [
+          "id": "decorated_pot",
+          "texture": [
             "decorated_pot_base",
             "decorated_pot_side"
           ]
         },
-        "dolphin",
         {
-          "name": "donkey",
+          "id": "dolphin"
+        },
+        {
+          "id": "donkey",
           "variants": [
             {
-              "name": "donkey_saddle",
+              "id": "donkey_saddle",
               "model": "donkey_saddle"
             }
           ]
         },
         {
-          "name": "drowned",
+          "id": "drowned",
           "variants": [
             {
-              "name": "drowned_outer",
-              "display_name": "Drowned [Outer]",
-              "texture_name": "drowned_outer_layer",
+              "id": "drowned_outer",
+              "name": "Drowned [Outer]",
+              "texture": "drowned_outer_layer",
               "model": "drowned_outer"
             }
           ]
         },
         {
-          "name": "dragon",
-          "display_name": "Ender Dragon"
+          "id": "dragon",
+          "name": "Ender Dragon"
         },
         {
-          "name": "head_dragon",
-          "display_name": "Ender Dragon Head"
+          "id": "head_dragon",
+          "name": "Ender Dragon Head"
         },
         {
-          "name": "elder_guardian",
+          "id": "elder_guardian",
           "model": "guardian"
         },
-        "enderman",
-        "endermite",
         {
-          "name": "ender_chest",
-          "texture_name": "ender",
-          "model": "chest"
+          "id": "enderman"
         },
-        "end_crystal",
         {
-          "name": "evoker",
+          "id": "endermite"
+        },
+        {
+          "id": "ender_chest",
+          "model": "chest",
+          "texture": "ender"
+        },
+        {
+          "id": "end_crystal"
+        },
+        {
+          "id": "evoker",
           "model": "illager"
         },
-        "evoker_fangs",
-        "fox",
-        "frog",
-        "ghast",
         {
-          "name": "giant",
+          "id": "evoker_fangs"
+        },
+        {
+          "id": "fox"
+        },
+        {
+          "id": "frog"
+        },
+        {
+          "id": "ghast"
+        },
+        {
+          "id": "giant",
           "model": "zombie"
         },
         {
-          "name": "glow_squid",
+          "id": "glow_squid",
           "model": "squid"
         },
-        "goat",
-        "guardian",
         {
-          "name": "happy_ghast",
+          "id": "goat"
+        },
+        {
+          "id": "guardian"
+        },
+        {
+          "id": "happy_ghast",
           "variants": [
             {
-              "name": "happy_ghast_harness",
+              "id": "happy_ghast_harness",
               "model": "happy_ghast_harness"
             },
             {
-              "name": "happy_ghast_ropes",
+              "id": "happy_ghast_ropes",
               "model": "happy_ghast_ropes"
             }
           ]
         },
         {
-          "name": "hanging_sign",
-          "popup": "This model applies to all Hanging Sign types. Use a specific Hanging Sign variant, such as the Oak Hanging Sign, if you want to modify a specific wood type.",
-          "variants": [
-            "oak_hanging_sign",
-            "spruce_hanging_sign",
-            "birch_hanging_sign",
-            "jungle_hanging_sign",
-            "acacia_hanging_sign",
-            "dark_oak_hanging_sign",
-            "mangrove_hanging_sign",
-            "cherry_hanging_sign",
-            "pale_oak_hanging_sign",
-            "bamboo_hanging_sign",
-            "crimson_hanging_sign",
-            "warped_hanging_sign"
-          ]
-        },
-        "hoglin",
-        {
-          "name": "horse",
+          "id": "hanging_sign",
+          "popup": [
+            "applies_all",
+            "Hanging Sign",
+            "Hanging Sign",
+            "Oak Hanging Sign",
+            "wood"
+          ],
           "variants": [
             {
-              "name": "horse_saddle",
+              "id": "oak_hanging_sign"
+            },
+            {
+              "id": "spruce_hanging_sign"
+            },
+            {
+              "id": "birch_hanging_sign"
+            },
+            {
+              "id": "jungle_hanging_sign"
+            },
+            {
+              "id": "acacia_hanging_sign"
+            },
+            {
+              "id": "dark_oak_hanging_sign"
+            },
+            {
+              "id": "mangrove_hanging_sign"
+            },
+            {
+              "id": "cherry_hanging_sign"
+            },
+            {
+              "id": "pale_oak_hanging_sign"
+            },
+            {
+              "id": "bamboo_hanging_sign"
+            },
+            {
+              "id": "crimson_hanging_sign"
+            },
+            {
+              "id": "warped_hanging_sign"
+            }
+          ]
+        },
+        {
+          "id": "hoglin"
+        },
+        {
+          "id": "horse",
+          "variants": [
+            {
+              "id": "horse_saddle",
               "model": "horse_saddle"
             },
             {
-              "name": "horse_armor",
+              "id": "horse_armor",
               "model": "horse_armor"
             }
           ]
         },
         {
-          "name": "husk",
+          "id": "husk",
           "model": "zombie"
         },
-        "illusioner",
-        "iron_golem",
-        "lead_knot",
         {
-          "name": "llama",
+          "id": "illusioner"
+        },
+        {
+          "id": "iron_golem"
+        },
+        {
+          "id": "lead_knot"
+        },
+        {
+          "id": "llama",
           "variants": [
             {
-              "name": "llama_decor",
+              "id": "llama_decor",
               "model": "llama_decor"
             }
           ]
         },
-        "llama_spit",
         {
-          "name": "magma_cube",
-          "texture_name": "magmacube"
+          "id": "llama_spit"
         },
         {
-          "name": "minecart",
-          "popup": "This model applies to all Minecart types. Use a specific Minecart variant, such as the Minecart with Chest, if you want to modify a specific Minecart type.",
+          "id": "magma_cube",
+          "texture": "magmacube"
+        },
+        {
+          "id": "minecart",
+          "popup": [
+            "applies_all",
+            "Minecart",
+            "Minecart",
+            "Minecart with Chest",
+            "Minecart"
+          ],
           "variants": [
             {
-              "name": "hopper_minecart",
-              "display_name": "Minecart with Hopper",
-              "texture_name": "minecart"
+              "id": "hopper_minecart",
+              "name": "Minecart with Hopper",
+              "texture": "minecart"
             },
             {
-              "name": "chest_minecart",
-              "display_name": "Minecart with Chest",
-              "texture_name": "minecart"
+              "id": "chest_minecart",
+              "name": "Minecart with Chest",
+              "texture": "minecart"
             },
             {
-              "name": "furnace_minecart",
-              "display_name": "Minecart with Furnace",
-              "texture_name": "minecart"
+              "id": "furnace_minecart",
+              "name": "Minecart with Furnace",
+              "texture": "minecart"
             },
             {
-              "name": "tnt_minecart",
-              "display_name": "Minecart with TNT",
-              "texture_name": "minecart"
+              "id": "tnt_minecart",
+              "name": "Minecart with TNT",
+              "texture": "minecart"
             },
             {
-              "name": "command_block_minecart",
-              "display_name": "Minecart with Command Block",
-              "texture_name": "minecart"
+              "id": "command_block_minecart",
+              "name": "Minecart with Command Block",
+              "texture": "minecart"
             },
             {
-              "name": "spawner_minecart",
-              "display_name": "Minecart with Spawner",
-              "texture_name": "minecart"
+              "id": "spawner_minecart",
+              "name": "Minecart with Spawner",
+              "texture": "minecart"
             }
           ]
         },
         {
-          "name": "mooshroom",
+          "id": "mooshroom",
           "model": "cow",
           "popup": "In Minecraft, the Mooshroom uses block models for the mushrooms on its back. If you wish to edit the model of these mushrooms, please use the \"Mooshroom [Mushrooms]\" custom model."
         },
         {
-          "name": "mule",
+          "id": "mule",
           "model": "donkey",
           "variants": [
             {
-              "name": "mule_saddle",
+              "id": "mule_saddle",
               "model": "donkey_saddle"
             }
           ]
         },
-        "nautilus",
         {
-          "name": "ocelot",
+          "id": "nautilus"
+        },
+        {
+          "id": "ocelot",
           "model": "cat"
         },
-        "panda",
-        "parched",
         {
-          "name": "parrot",
+          "id": "panda"
+        },
+        {
+          "id": "parched"
+        },
+        {
+          "id": "parrot",
           "variants": [
             {
-              "name": "parrot_shoulder",
-              "display_name": "Parrot [Shoulder]",
+              "id": "parrot_shoulder",
+              "name": "Parrot [Shoulder]",
               "popup": "This model only applies to the Parrot while it is on your shoulder. This model is optional, and by default will be the same as the regular Parrot model."
             }
           ]
         },
-        "phantom",
         {
-          "name": "pig",
-          "texture_name": "temperate_pig",
+          "id": "phantom"
+        },
+        {
+          "id": "pig",
+          "texture": "temperate_pig",
           "variants": [
             {
-              "name": "pig_saddle",
-              "texture_name": "temperate_pig_saddle",
-              "model": "pig_saddle"
+              "id": "pig_saddle",
+              "model": "pig_saddle",
+              "texture": "temperate_pig_saddle"
             },
-            "warm_pig",
             {
-              "name": "cold_pig",
+              "id": "warm_pig"
+            },
+            {
+              "id": "cold_pig",
               "model": "cold_pig"
             }
           ]
         },
-        "piglin",
         {
-          "name": "piglin_brute",
+          "id": "piglin"
+        },
+        {
+          "id": "piglin_brute",
           "model": "piglin"
         },
         {
-          "name": "head_piglin",
-          "display_name": "Piglin Head"
+          "id": "head_piglin",
+          "name": "Piglin Head"
         },
-        "pillager",
         {
-          "name": "head_player",
-          "display_name": "Player Head"
+          "id": "pillager"
         },
-        "polar_bear",
         {
-          "name": "puffer_fish_big",
-          "display_name": "Pufferfish",
-          "texture_name": "pufferfish",
+          "id": "head_player",
+          "name": "Player Head"
+        },
+        {
+          "id": "polar_bear"
+        },
+        {
+          "id": "puffer_fish_big",
+          "name": "Pufferfish",
+          "texture": "pufferfish",
           "variants": [
             {
-              "name": "puffer_fish_small",
-              "display_name": "Pufferfish [Small]",
-              "texture_name": "pufferfish",
-              "model": "puffer_fish_small"
+              "id": "puffer_fish_small",
+              "name": "Pufferfish [Small]",
+              "model": "puffer_fish_small",
+              "texture": "pufferfish"
             },
             {
-              "name": "puffer_fish_medium",
-              "display_name": "Pufferfish [Medium]",
-              "texture_name": "pufferfish",
-              "model": "puffer_fish_medium"
-            }
-          ]
-        },
-        "rabbit",
-        "raft",
-        {
-          "name": "chest_raft",
-          "display_name": "Raft with Chest"
-        },
-        "ravager",
-        {
-          "name": "salmon",
-          "variants": [
-            {
-              "name": "salmon_small",
-              "display_name": "Small Salmon",
-              "popup": "This model only applies to the Small Salmon. This model is optional, and by default will be the same as the regular model."
-            },
-            {
-              "name": "salmon_large",
-              "display_name": "Large Salmon",
-              "popup": "This model only applies to the Large Salmon. This model is optional, and by default will be the same as the regular model."
+              "id": "puffer_fish_medium",
+              "name": "Pufferfish [Medium]",
+              "model": "puffer_fish_medium",
+              "texture": "pufferfish"
             }
           ]
         },
         {
-          "name": "sheep",
-          "texture_name": [
-            "sheep"
-          ],
+          "id": "rabbit"
+        },
+        {
+          "id": "raft"
+        },
+        {
+          "id": "chest_raft",
+          "name": "Raft with Chest"
+        },
+        {
+          "id": "ravager"
+        },
+        {
+          "id": "salmon",
+          "variants": [
+            {
+              "id": "salmon_small",
+              "name": "Small Salmon",
+              "popup": "only_applies_regular"
+            },
+            {
+              "id": "salmon_large",
+              "name": "Large Salmon",
+              "popup": "only_applies_regular"
+            }
+          ]
+        },
+        {
+          "id": "sheep",
           "vanilla_textures": [
             "sheep",
             "sheep_wool_undercoat"
           ],
           "variants": [
-            "sheep_wool_undercoat",
             {
-              "name": "sheep_wool",
+              "id": "sheep_wool_undercoat"
+            },
+            {
+              "id": "sheep_wool",
               "model": "sheep_wool"
             }
           ]
         },
-        "shield",
-        "shulker",
-        "shulker_box",
-        "shulker_bullet",
         {
-          "name": "sign",
-          "popup": "This model applies to all Sign and Wall Sign types. Use a specific Sign and Wall Sign variant, such as the Oak Sign, if you want to modify a specific wood type.",
+          "id": "shield"
+        },
+        {
+          "id": "shulker"
+        },
+        {
+          "id": "shulker_box"
+        },
+        {
+          "id": "shulker_bullet"
+        },
+        {
+          "id": "sign",
+          "popup": [
+            "applies_all",
+            "Sign and Wall Sign",
+            "Sign and Wall Sign",
+            "Oak Sign",
+            "wood"
+          ],
           "variants": [
             {
-              "name": "oak_sign",
-              "popup": "This model applies to both the Oak Sign and Oak Wall Sign. Use the Oak Wall Sign if you want to modify that specific model."
+              "id": "oak_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Oak"
+              ]
             },
             {
-              "name": "spruce_sign",
-              "popup": "This model applies to both the Spruce Sign and Spruce Wall Sign. Use the Spruce Wall Sign if you want to modify that specific model."
+              "id": "spruce_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Spruce"
+              ]
             },
             {
-              "name": "birch_sign",
-              "popup": "This model applies to both the Birch Sign and Birch Wall Sign. Use the Birch Wall Sign if you want to modify that specific model."
+              "id": "birch_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Birch"
+              ]
             },
             {
-              "name": "jungle_sign",
-              "popup": "This model applies to both the Jungle Sign and Jungle Wall Sign. Use the Jungle Wall Sign if you want to modify that specific model."
+              "id": "jungle_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Jungle"
+              ]
             },
             {
-              "name": "acacia_sign",
-              "popup": "This model applies to both the Acacia Sign and Acacia Wall Sign. Use the Acacia Wall Sign if you want to modify that specific model."
+              "id": "acacia_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Acacia"
+              ]
             },
             {
-              "name": "dark_oak_sign",
-              "popup": "This model applies to both the Dark Oak Sign and Dark Oak Wall Sign. Use the Dark Oak Wall Sign if you want to modify that specific model."
+              "id": "dark_oak_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Dark Oak"
+              ]
             },
             {
-              "name": "mangrove_sign",
-              "popup": "This model applies to both the Mangrove Sign and Mangrove Wall Sign. Use the Mangrove Wall Sign if you want to modify that specific model."
+              "id": "mangrove_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Mangrove"
+              ]
             },
             {
-              "name": "cherry_sign",
-              "popup": "This model applies to both the Cherry Sign and Cherry Wall Sign. Use the Cherry Wall Sign if you want to modify that specific model."
+              "id": "cherry_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Cherry"
+              ]
             },
             {
-              "name": "pale_oak_sign",
-              "popup": "This model applies to both the Pale Oak Sign and Pale Oak Wall Sign. Use the Pale Oak Wall Sign if you want to modify that specific model."
+              "id": "pale_oak_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Pale Oak"
+              ]
             },
             {
-              "name": "bamboo_sign",
-              "popup": "This model applies to both the Bamboo Sign and Bamboo Wall Sign. Use the Bamboo Wall Sign if you want to modify that specific model."
+              "id": "bamboo_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Bamboo"
+              ]
             },
             {
-              "name": "crimson_sign",
-              "popup": "This model applies to both the Crimson Sign and Crimson Wall Sign. Use the Crimson Wall Sign if you want to modify that specific model."
+              "id": "crimson_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Crimson"
+              ]
             },
             {
-              "name": "warped_sign",
-              "popup": "This model applies to both the Warped Sign and Warped Wall Sign. Use the Warped Wall Sign if you want to modify that specific model."
+              "id": "warped_sign",
+              "popup": [
+                "applies_sign_and_wall_sign",
+                "Warped"
+              ]
             },
             {
-              "name": "wall_sign",
+              "id": "wall_sign",
               "model": "wall_sign",
-              "popup": "This model applies to all Wall Sign types. Use a specific Wall Sign variant, such as the Oak Wall Sign, if you want to modify a specific wood type."
+              "popup": [
+                "applies_all",
+                "Wall Sign",
+                "Wall Sign",
+                "Oak Wall Sign",
+                "wood"
+              ]
             },
             {
-              "name": "oak_wall_sign",
+              "id": "oak_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "spruce_wall_sign",
+              "id": "spruce_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "birch_wall_sign",
+              "id": "birch_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "jungle_wall_sign",
+              "id": "jungle_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "acacia_wall_sign",
+              "id": "acacia_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "dark_oak_wall_sign",
+              "id": "dark_oak_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "mangrove_wall_sign",
+              "id": "mangrove_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "cherry_wall_sign",
+              "id": "cherry_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "pale_oak_wall_sign",
+              "id": "pale_oak_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "bamboo_wall_sign",
+              "id": "bamboo_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "crimson_wall_sign",
+              "id": "crimson_wall_sign",
               "model": "wall_sign"
             },
             {
-              "name": "warped_wall_sign",
+              "id": "warped_wall_sign",
               "model": "wall_sign"
             }
           ]
         },
-        "silverfish",
-        "skeleton",
         {
-          "name": "skeleton_horse",
+          "id": "silverfish"
+        },
+        {
+          "id": "skeleton"
+        },
+        {
+          "id": "skeleton_horse",
           "model": "horse",
           "variants": [
             {
-              "name": "skeleton_horse_saddle",
+              "id": "skeleton_horse_saddle",
               "model": "horse_saddle"
             },
             {
-              "name": "skeleton_horse_armor",
+              "id": "skeleton_horse_armor",
               "model": "horse_armor"
             }
           ]
         },
         {
-          "name": "head_skeleton",
-          "display_name": "Skeleton Skull",
+          "id": "head_skeleton",
+          "name": "Skeleton Skull",
           "model": "head"
         },
         {
-          "name": "slime",
+          "id": "slime",
           "variants": [
             {
-              "name": "slime_outer",
-              "display_name": "Slime [Outer]",
+              "id": "slime_outer",
+              "name": "Slime [Outer]",
               "model": "slime_outer"
             }
           ]
         },
-        "sniffer",
-        "snow_golem",
-        "spider",
-        "squid",
         {
-          "name": "stray",
+          "id": "sniffer"
+        },
+        {
+          "id": "snow_golem"
+        },
+        {
+          "id": "spider"
+        },
+        {
+          "id": "squid"
+        },
+        {
+          "id": "stray",
           "model": "skeleton",
           "variants": [
             {
-              "name": "stray_outer",
-              "display_name": "Stray [Outer]",
-              "texture_name": "stray_overlay",
+              "id": "stray_outer",
+              "name": "Stray [Outer]",
+              "texture": "stray_overlay",
               "model": "stray_outer"
             }
           ]
         },
         {
-          "name": "strider",
+          "id": "strider",
           "variants": [
-            "strider_saddle"
+            {
+              "id": "strider_saddle"
+            }
           ]
         },
-        "tadpole",
         {
-          "name": "trader_llama",
+          "id": "tadpole"
+        },
+        {
+          "id": "trader_llama",
           "model": "llama",
           "variants": [
             {
-              "name": "trader_llama_decor",
+              "id": "trader_llama_decor",
               "model": "llama_decor"
             }
           ]
         },
         {
-          "name": "trapped_chest",
-          "texture_name": "trapped",
+          "id": "trapped_chest",
           "model": "chest",
+          "texture": "trapped",
           "variants": [
             {
-              "name": "trapped_chest_left",
-              "display_name": "Double Trapped Chest [Left]",
-              "texture_name": "trapped_left",
-              "model": "chest_left"
+              "id": "trapped_chest_left",
+              "name": "Double Trapped Chest [Left]",
+              "model": "chest_left",
+              "texture": "trapped_left"
             },
             {
-              "name": "trapped_chest_right",
-              "display_name": "Double Trapped Chest [Right]",
-              "texture_name": "trapped_right",
-              "model": "chest_right"
+              "id": "trapped_chest_right",
+              "name": "Double Trapped Chest [Right]",
+              "model": "chest_right",
+              "texture": "trapped_right"
             }
           ]
         },
         {
-          "name": "trident",
+          "id": "trident",
           "variants": [
             {
-              "name": "trident_hand",
-              "display_name": "Held Trident",
+              "id": "trident_hand",
+              "name": "Held Trident",
               "popup": "This model only applies to the Trident in your hand. This model is optional, and by default will be the same as the regular Trident model."
             }
           ]
         },
         {
-          "name": "tropical_fish_a",
-          "display_name": "Tropical Fish",
+          "id": "tropical_fish_a",
+          "name": "Tropical Fish",
           "variants": [
             {
-              "name": "tropical_fish_b",
-              "display_name": "Tropical Fish [Large]",
+              "id": "tropical_fish_b",
+              "name": "Tropical Fish [Large]",
               "model": "tropical_fish_b"
             },
             {
-              "name": "tropical_fish_pattern_a",
-              "display_name": "Tropical Fish [Pattern]",
+              "id": "tropical_fish_pattern_a",
+              "name": "Tropical Fish [Pattern]",
               "model": "tropical_fish_a"
             },
             {
-              "name": "tropical_fish_pattern_b",
-              "display_name": "Tropical Fish [Pattern] [Large]",
+              "id": "tropical_fish_pattern_b",
+              "name": "Tropical Fish [Pattern] [Large]",
               "model": "tropical_fish_b"
             }
           ]
         },
-        "turtle",
-        "vex",
         {
-          "name": "villager",
-          "texture_name": [
-            "villager"
-          ],
+          "id": "turtle"
+        },
+        {
+          "id": "vex"
+        },
+        {
+          "id": "villager",
           "vanilla_textures": [
             "villager",
             "plains"
           ]
         },
         {
-          "name": "vindicator",
+          "id": "vindicator",
           "model": "illager"
         },
         {
-          "name": "wandering_trader",
+          "id": "wandering_trader",
           "model": "villager"
         },
-        "warden",
         {
-          "name": "wind_charge",
+          "id": "warden"
+        },
+        {
+          "id": "wind_charge",
           "variants": [
             {
-              "name": "breeze_wind_charge",
-              "popup": "This model only applies to the Breeze Wind Charge. This model is optional, and by default will be the same as the regular model."
+              "id": "breeze_wind_charge",
+              "popup": "only_applies_regular"
             }
           ]
         },
-        "witch",
         {
-          "name": "wither",
+          "id": "witch"
+        },
+        {
+          "id": "wither",
           "variants": [
             {
-              "name": "wither_armor",
+              "id": "wither_armor",
               "model": "wither_armor"
             }
           ]
         },
         {
-          "name": "wither_skeleton",
+          "id": "wither_skeleton",
           "model": "skeleton"
         },
         {
-          "name": "head_wither_skeleton",
-          "display_name": "Wither Skeleton Skull",
+          "id": "head_wither_skeleton",
+          "name": "Wither Skeleton Skull",
           "model": "head"
         },
-        "wither_skull",
         {
-          "name": "wolf",
+          "id": "wither_skull"
+        },
+        {
+          "id": "wolf",
           "variants": [
-            "wolf_collar",
             {
-              "name": "wolf_armor",
-              "texture_name": "armadillo_scute",
-              "model": "wolf_armor"
+              "id": "wolf_collar"
+            },
+            {
+              "id": "wolf_armor",
+              "model": "wolf_armor",
+              "texture": "armadillo_scute"
             }
           ]
         },
         {
-          "name": "zoglin",
+          "id": "zoglin",
           "model": "hoglin"
         },
-        "zombie",
         {
-          "name": "head_zombie",
-          "display_name": "Zombie Head",
+          "id": "zombie"
+        },
+        {
+          "id": "head_zombie",
+          "name": "Zombie Head",
           "model": "head_large"
         },
         {
-          "name": "zombie_horse",
+          "id": "zombie_horse",
           "model": "horse",
           "variants": [
             {
-              "name": "zombie_horse_saddle",
+              "id": "zombie_horse_saddle",
               "model": "horse_saddle"
             },
             {
-              "name": "zombie_horse_armor",
+              "id": "zombie_horse_armor",
               "model": "horse_armor"
             }
           ]
         },
         {
-          "name": "zombie_nautilus",
+          "id": "zombie_nautilus",
           "model": "nautilus",
           "variants": [
             {
-              "name": "zombie_nautilus_coral",
-              "display_name": "Coral Zombie Nautilus",
+              "id": "zombie_nautilus_coral",
+              "name": "Coral Zombie Nautilus",
               "model": "zombie_nautilus_coral"
             }
           ]
         },
         {
-          "name": "zombie_villager",
-          "texture_name": [
-            "zombie_villager"
-          ],
+          "id": "zombie_villager",
           "vanilla_textures": [
             "zombie_villager",
             "plains"
           ]
         },
         {
-          "name": "zombified_piglin",
+          "id": "zombified_piglin",
           "model": "piglin"
         }
       ]
+    },
+    {
+      "type": "heading",
+      "text": "Other"
     },
     {
       "name": "Custom",
@@ -1028,17 +1317,17 @@
       "icon": "build",
       "entities": [
         {
-          "name": "chest_old_uv",
-          "display_name": "Chest [Old UV]",
-          "file_name": "chest",
-          "texture_name": "normal",
+          "id": "chest_old_uv",
+          "name": "Chest [Old UV]",
+          "file": "chest",
+          "texture": "normal",
           "variants": [
             {
-              "name": "chest_large_old_uv",
-              "display_name": "Chest [Double] [Old UV]",
-              "file_name": "chest_left",
-              "texture_name": "normal_double",
+              "id": "chest_large_old_uv",
+              "name": "Chest [Double] [Old UV]",
+              "file": "chest_left",
               "model": "chest_large_old_uv",
+              "texture": "normal_double",
               "popup": {
                 "message": "This model requires another model in your pack to function correctly.<br><br>Create <code>chest_right.jem</code> using a text editor and put the following contents inside it:<br><br><code>{\"models\":[{\"part\":\"base\"},{\"part\":\"lid\"},{\"part\":\"knob\"}]}</code>",
                 "width": 582
@@ -1047,25 +1336,22 @@
           ]
         },
         {
-          "name": "ender_chest_old_uv",
-          "display_name": "Ender Chest [Old UV]",
-          "file_name": "ender_chest",
-          "texture_name": "ender_chest",
+          "id": "ender_chest_old_uv",
+          "name": "Ender Chest [Old UV]",
+          "file": "ender_chest",
           "model": "chest_old_uv"
         },
         {
-          "name": "iron_golem_destroy_stages",
-          "display_name": "Iron Golem [Destroy stages]",
+          "id": "iron_golem_destroy_stages",
+          "name": "Iron Golem [Destroy stages]",
           "description": "A custom version of the Iron Golem which allows you to model each stage of it cracking independently from one another",
-          "file_name": "iron_golem",
-          "texture_name": "iron_golem"
+          "file": "iron_golem"
         },
         {
-          "name": "mooshroom_mushrooms",
-          "display_name": "Mooshroom [Mushrooms]",
+          "id": "mooshroom_mushrooms",
+          "name": "Mooshroom [Mushrooms]",
           "description": "A custom version of the Mooshroom with the mushrooms modelled on top",
-          "file_name": "mooshroom",
-          "texture_name": "mooshroom",
+          "file": "mooshroom",
           "popup": {
             "title": "Before you start...",
             "message": "<p>This model requires some extra textures in your resource pack to function correctly:</p><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/red_mushroom.png</code></div><div style=\"background-color:rgba(0,0,0,0.25)\"><code>assets/minecraft/textures/entity/cow/brown_mushroom.png</code></div><p>These textures need to be created manually, and should be 1x1 transparent images.</p><p>They are custom ones added by optifine that overwrite the vanilla mooshroom mushrooms.</p><p>Please note, if you were going to use this model to edit the textures independently of the block, you can just use these two textures instead of this model.</p>",
@@ -1073,18 +1359,18 @@
           }
         },
         {
-          "name": "trapped_chest_old_uv",
-          "display_name": "Trapped Chest [Old UV]",
-          "file_name": "trapped_chest",
-          "texture_name": "trapped",
+          "id": "trapped_chest_old_uv",
+          "name": "Trapped Chest [Old UV]",
+          "file": "trapped_chest",
           "model": "chest_old_uv",
+          "texture": "trapped",
           "variants": [
             {
-              "name": "trapped_chest_large_old_uv",
-              "display_name": "Trapped Chest [Double] [Old UV]",
-              "file_name": "trapped_chest_left",
-              "texture_name": "trapped_double",
+              "id": "trapped_chest_large_old_uv",
+              "name": "Trapped Chest [Double] [Old UV]",
+              "file": "trapped_chest_left",
               "model": "chest_large_old_uv",
+              "texture": "trapped_double",
               "popup": {
                 "message": "This model requires another model in your pack to function correctly.<br><br>Create <code>trapped_chest_right.jem</code> using a text editor and put the following contents inside it:<br><br><code>{\"models\":[{\"part\":\"base\"},{\"part\":\"lid\"},{\"part\":\"knob\"}]}</code>",
                 "width": 582
@@ -1104,760 +1390,718 @@
           "text": "1.21.11"
         },
         {
-          "name": "armadillo_baby_21.11",
-          "display_name": "Baby Armadillo",
-          "file_name": "armadillo_baby",
-          "texture_name": "armadillo_baby",
-          "model": "armadillo",
-          "popup": "This model only applies to the Baby Armadillo. This model is optional, and by default will be the same as the regular model."
+          "id": "armadillo_baby_21.11",
+          "name": "Baby Armadillo",
+          "file": "armadillo_baby",
+          "popup": "only_applies_regular",
+          "model": "armadillo"
         },
         {
-          "name": "axolotl_baby_21.11",
-          "display_name": "Baby Axolotl",
-          "file_name": "axolotl_baby",
-          "texture_name": "axolotl_baby",
-          "model": "axolotl",
-          "popup": "This model only applies to the Baby Axolotl. This model is optional, and by default will be the same as the regular model."
+          "id": "axolotl_baby_21.11",
+          "name": "Baby Axolotl",
+          "file": "axolotl_baby",
+          "popup": "only_applies_regular",
+          "model": "axolotl"
         },
         {
-          "name": "bee_baby_21.11",
-          "display_name": "Baby Bee",
-          "file_name": "bee_baby",
-          "texture_name": "bee_baby",
-          "model": "bee",
-          "popup": "This model only applies to the Baby Bee. This model is optional, and by default will be the same as the regular model."
+          "id": "bee_baby_21.11",
+          "name": "Baby Bee",
+          "file": "bee_baby",
+          "popup": "only_applies_regular",
+          "model": "bee"
         },
         {
-          "name": "camel_baby_21.11",
-          "display_name": "Baby Camel",
-          "file_name": "camel_baby",
-          "texture_name": "camel_baby",
+          "id": "camel_baby_21.11",
+          "name": "Baby Camel",
+          "file": "camel_baby",
+          "popup": "only_applies_regular",
           "model": "camel",
-          "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "camel_baby_saddle_21.11",
-              "display_name": "Baby Camel Saddle",
-              "file_name": "camel_baby_saddle",
-              "texture_name": "camel_baby_saddle",
+              "id": "camel_baby_saddle_21.11",
+              "name": "Baby Camel Saddle",
+              "file": "camel_baby_saddle",
               "model": "camel_saddle",
-              "popup": "This model only applies to the Baby Camel Saddle. This model is optional, and by default will be the same as the regular Camel Saddle model."
+              "popup": [
+                "only_applies_same_as",
+                "Camel Saddle"
+              ]
             }
           ]
         },
         {
-          "name": "camel_husk_baby_21.11",
-          "display_name": "Baby Camel Husk",
-          "file_name": "camel_husk_baby",
-          "texture_name": "camel_husk_baby",
+          "id": "camel_husk_baby_21.11",
+          "name": "Baby Camel Husk",
+          "file": "camel_husk_baby",
+          "popup": "only_applies_regular",
           "model": "camel",
-          "popup": "This model only applies to the Baby Camel Husk. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "camel_husk_baby_saddle_21.11",
-              "display_name": "Baby Camel Husk Saddle",
-              "file_name": "camel_husk_baby_saddle",
-              "texture_name": "camel_husk_baby_saddle",
+              "id": "camel_husk_baby_saddle_21.11",
+              "name": "Baby Camel Husk Saddle",
+              "file": "camel_husk_baby_saddle",
               "model": "camel_saddle",
-              "popup": "This model only applies to the Baby Camel Husk Saddle. This model is optional, and by default will be the same as the regular Camel Husk Saddle model."
+              "popup": [
+                "only_applies_same_as",
+                "Camel Husk Saddle"
+              ]
             }
           ]
         },
         {
-          "name": "cat_baby_21.11",
-          "display_name": "Baby Cat",
-          "file_name": "cat_baby",
-          "texture_name": "cat_baby",
+          "id": "cat_baby_21.11",
+          "name": "Baby Cat",
+          "file": "cat_baby",
+          "popup": "only_applies_regular",
           "model": "cat",
-          "popup": "This model only applies to the Baby Cat. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "cat_baby_collar_21.11",
-              "display_name": "Baby Cat Collar",
-              "file_name": "cat_baby_collar",
-              "texture_name": "cat_baby_collar",
-              "model": "cat",
-              "popup": "This model only applies to the Baby Cat Collar. This model is optional, and by default will be the same as the regular Cat Collar model."
+              "id": "cat_baby_collar_21.11",
+              "name": "Baby Cat Collar",
+              "file": "cat_baby_collar",
+              "popup": [
+                "only_applies_same_as",
+                "Cat Collar"
+              ],
+              "model": "cat"
             }
           ]
         },
         {
-          "name": "chicken_baby_21.11",
-          "display_name": "Baby Chicken",
-          "file_name": "chicken_baby",
-          "texture_name": "temperate_chicken_baby_21.11",
+          "id": "chicken_baby_21.11",
+          "name": "Baby Chicken",
+          "file": "chicken_baby",
+          "popup": "only_applies_regular",
+          "texture": "temperate_chicken_baby_21.11",
           "model": "chicken",
-          "popup": "This model only applies to the Baby Chicken. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "warm_chicken_baby_21.11",
-              "display_name": "Warm Baby Chicken",
-              "file_name": "warm_chicken_baby",
-              "texture_name": "warm_chicken_baby",
-              "model": "chicken",
-              "popup": "This model only applies to the Warm Baby Chicken. This model is optional, and by default will be the same as the regular Warm Chicken model."
+              "id": "warm_chicken_baby_21.11",
+              "name": "Warm Baby Chicken",
+              "file": "warm_chicken_baby",
+              "popup": [
+                "only_applies_same_as",
+                "Warm Chicken"
+              ],
+              "model": "chicken"
             },
             {
-              "name": "cold_chicken_baby_21.11",
-              "display_name": "Cold Baby Chicken",
-              "file_name": "cold_chicken_baby",
-              "texture_name": "cold_chicken_baby",
+              "id": "cold_chicken_baby_21.11",
+              "name": "Cold Baby Chicken",
+              "file": "cold_chicken_baby",
               "model": "cold_chicken",
-              "popup": "This model only applies to the Cold Baby Chicken. This model is optional, and by default will be the same as the regular Cold Chicken model."
+              "popup": [
+                "only_applies_same_as",
+                "Cold Chicken"
+              ]
             }
           ]
         },
         {
-          "name": "cow_baby_21.11",
-          "display_name": "Baby Cow",
-          "file_name": "cow_baby",
-          "texture_name": "temperate_cow_baby_21.11",
+          "id": "cow_baby_21.11",
+          "name": "Baby Cow",
+          "file": "cow_baby",
+          "popup": "only_applies_regular",
+          "texture": "temperate_cow_baby_21.11",
           "model": "cow",
-          "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "warm_cow_baby_21.11",
-              "display_name": "Warm Baby Cow",
-              "file_name": "warm_cow_baby",
-              "texture_name": "warm_cow_baby",
+              "id": "warm_cow_baby_21.11",
+              "name": "Warm Baby Cow",
+              "file": "warm_cow_baby",
               "model": "warm_cow",
-              "popup": "This model only applies to the Warm Baby Cow. This model is optional, and by default will be the same as the regular Warm Cow model."
+              "popup": [
+                "only_applies_same_as",
+                "Warm Cow"
+              ]
             },
             {
-              "name": "cold_cow_baby_21.11",
-              "display_name": "Cold Baby Cow",
-              "file_name": "cold_cow_baby",
-              "texture_name": "cold_cow_baby",
+              "id": "cold_cow_baby_21.11",
+              "name": "Cold Baby Cow",
+              "file": "cold_cow_baby",
               "model": "cold_cow",
-              "popup": "This model only applies to the Cold Baby Cow. This model is optional, and by default will be the same as the regular Cold Cow model."
+              "popup": [
+                "only_applies_same_as",
+                "Cold Cow"
+              ]
             }
           ]
         },
         {
-          "name": "dolphin_baby_21.11",
-          "display_name": "Baby Dolphin",
-          "file_name": "dolphin_baby",
-          "texture_name": "dolphin_baby",
-          "model": "dolphin",
-          "popup": "This model only applies to the Baby Dolphin. This model is optional, and by default will be the same as the regular model."
+          "id": "dolphin_baby_21.11",
+          "name": "Baby Dolphin",
+          "file": "dolphin_baby",
+          "popup": "only_applies_regular",
+          "model": "dolphin"
         },
         {
-          "name": "donkey_baby_21.11",
-          "display_name": "Baby Donkey",
-          "file_name": "donkey_baby",
-          "texture_name": "donkey_baby",
+          "id": "donkey_baby_21.11",
+          "name": "Baby Donkey",
+          "file": "donkey_baby",
           "model": "donkey_baby",
           "variants": [
             {
-              "name": "donkey_baby_saddle_21.11",
-              "display_name": "Baby Donkey Saddle",
-              "file_name": "donkey_baby_saddle",
-              "texture_name": "donkey_baby_saddle",
+              "id": "donkey_baby_saddle_21.11",
+              "name": "Baby Donkey Saddle",
+              "file": "donkey_baby_saddle",
               "model": "donkey_baby_saddle"
             }
           ]
         },
         {
-          "name": "drowned_baby_21.11",
-          "display_name": "Baby Drowned",
-          "file_name": "drowned_baby",
-          "texture_name": "drowned_baby",
+          "id": "drowned_baby_21.11",
+          "name": "Baby Drowned",
+          "file": "drowned_baby",
+          "popup": "only_applies_regular",
           "model": "drowned",
-          "popup": "This model only applies to the Baby Drowned. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "drowned_baby_outer_21.11",
-              "display_name": "Baby Drowned [Outer]",
-              "file_name": "drowned_baby_outer",
-              "texture_name": "drowned_outer_layer",
-              "model": "drowned",
-              "popup": "This model only applies to the Baby Drowned [Outer]. This model is optional, and by default will be the same as the regular Drowned [Outer] model."
+              "id": "drowned_baby_outer_21.11",
+              "name": "Baby Drowned [Outer]",
+              "file": "drowned_baby_outer",
+              "popup": [
+                "only_applies_same_as",
+                "Drowned [Outer]"
+              ],
+              "texture": "drowned_outer_layer",
+              "model": "drowned"
             }
           ]
         },
         {
-          "name": "fox_baby_21.11",
-          "display_name": "Baby Fox",
-          "file_name": "fox_baby",
-          "texture_name": "fox_baby",
-          "model": "fox",
-          "popup": "This model only applies to the Baby Fox. This model is optional, and by default will be the same as the regular model."
+          "id": "fox_baby_21.11",
+          "name": "Baby Fox",
+          "file": "fox_baby",
+          "popup": "only_applies_regular",
+          "model": "fox"
         },
         {
-          "name": "glow_squid_baby_21.11",
-          "display_name": "Baby Glow Squid",
-          "file_name": "glow_squid_baby",
-          "texture_name": "glow_squid_baby",
-          "model": "squid",
-          "popup": "This model only applies to the Baby Glow Squid. This model is optional, and by default will be the same as the regular model."
+          "id": "glow_squid_baby_21.11",
+          "name": "Baby Glow Squid",
+          "file": "glow_squid_baby",
+          "popup": "only_applies_regular",
+          "model": "squid"
         },
         {
-          "name": "goat_baby_21.11",
-          "display_name": "Baby Goat",
-          "file_name": "goat_baby",
-          "texture_name": "goat_baby",
-          "model": "goat",
-          "popup": "This model only applies to the Baby Goat. This model is optional, and by default will be the same as the regular model."
+          "id": "goat_baby_21.11",
+          "name": "Baby Goat",
+          "file": "goat_baby",
+          "popup": "only_applies_regular",
+          "model": "goat"
         },
         {
-          "name": "happy_ghast_baby_21.11",
-          "display_name": "Ghastling",
-          "file_name": "happy_ghast_baby",
-          "texture_name": "happy_ghast_baby",
+          "id": "happy_ghast_baby_21.11",
+          "name": "Ghastling",
+          "file": "happy_ghast_baby",
           "model": "happy_ghast_baby"
         },
         {
-          "name": "hoglin_baby_21.11",
-          "display_name": "Baby Hoglin",
-          "file_name": "hoglin_baby",
-          "texture_name": "hoglin_baby",
-          "model": "hoglin",
-          "popup": "This model only applies to the Baby Hoglin. This model is optional, and by default will be the same as the regular model."
+          "id": "hoglin_baby_21.11",
+          "name": "Baby Hoglin",
+          "file": "hoglin_baby",
+          "popup": "only_applies_regular",
+          "model": "hoglin"
         },
         {
-          "name": "horse_baby_21.11",
-          "display_name": "Baby Horse",
-          "file_name": "horse_baby",
-          "texture_name": "horse_baby",
+          "id": "horse_baby_21.11",
+          "name": "Baby Horse",
+          "file": "horse_baby",
           "model": "horse_baby",
           "variants": [
             {
-              "name": "horse_baby_saddle_21.11",
-              "display_name": "Baby Horse Saddle",
-              "file_name": "horse_baby_saddle",
-              "texture_name": "horse_baby_saddle",
+              "id": "horse_baby_saddle_21.11",
+              "name": "Baby Horse Saddle",
+              "file": "horse_baby_saddle",
               "model": "horse_baby_saddle"
             },
             {
-              "name": "horse_baby_armor_21.11",
-              "display_name": "Baby Horse Armor",
-              "file_name": "horse_baby_armor",
-              "texture_name": "horse_baby_armor",
+              "id": "horse_baby_armor_21.11",
+              "name": "Baby Horse Armor",
+              "file": "horse_baby_armor",
               "model": "horse_baby_armor"
             }
           ]
         },
         {
-          "name": "husk_baby_21.11",
-          "display_name": "Baby Husk",
-          "file_name": "husk_baby",
-          "texture_name": "husk_baby",
-          "model": "zombie",
-          "popup": "This model only applies to the Baby Husk. This model is optional, and by default will be the same as the regular model."
+          "id": "husk_baby_21.11",
+          "name": "Baby Husk",
+          "file": "husk_baby",
+          "popup": "only_applies_regular",
+          "model": "zombie"
         },
         {
-          "name": "llama_baby_21.11",
-          "display_name": "Baby Llama",
-          "file_name": "llama_baby",
-          "texture_name": "llama_baby",
+          "id": "llama_baby_21.11",
+          "name": "Baby Llama",
+          "file": "llama_baby",
+          "popup": "only_applies_regular",
           "model": "llama",
-          "popup": "This model only applies to the Baby Llama. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "llama_baby_decor_21.11",
-              "display_name": "Baby Llama Decor",
-              "file_name": "llama_baby_decor",
-              "texture_name": "llama_baby_decor",
-              "model": "llama",
-              "popup": "This model only applies to the Baby Llama Decor. This model is optional, and by default will be the same as the regular Llama Decor model."
+              "id": "llama_baby_decor_21.11",
+              "name": "Baby Llama Decor",
+              "file": "llama_baby_decor",
+              "popup": [
+                "only_applies_same_as",
+                "Llama Decor"
+              ],
+              "model": "llama"
             }
           ]
         },
         {
-          "name": "mooshroom_baby_21.11",
-          "display_name": "Baby Mooshroom",
-          "file_name": "mooshroom_baby",
-          "texture_name": "mooshroom_baby",
-          "model": "cow",
-          "popup": "This model only applies to the Baby Mooshroom. This model is optional, and by default will be the same as the regular model."
+          "id": "mooshroom_baby_21.11",
+          "name": "Baby Mooshroom",
+          "file": "mooshroom_baby",
+          "popup": "only_applies_regular",
+          "model": "cow"
         },
         {
-          "name": "mule_baby_21.11",
-          "display_name": "Baby Mule",
-          "file_name": "mule_baby",
-          "texture_name": "mule_baby",
+          "id": "mule_baby_21.11",
+          "name": "Baby Mule",
+          "file": "mule_baby",
           "model": "donkey_baby",
           "variants": [
             {
-              "name": "mule_baby_saddle_21.11",
-              "display_name": "Baby Mule Saddle",
-              "file_name": "mule_baby_saddle",
-              "texture_name": "mule_baby_saddle",
+              "id": "mule_baby_saddle_21.11",
+              "name": "Baby Mule Saddle",
+              "file": "mule_baby_saddle",
               "model": "donkey_baby_saddle"
             }
           ]
         },
         {
-          "name": "nautilus_baby_21.11",
-          "display_name": "Baby Nautilus",
-          "file_name": "nautilus_baby",
-          "texture_name": "nautilus_baby",
+          "id": "nautilus_baby_21.11",
+          "name": "Baby Nautilus",
+          "file": "nautilus_baby",
           "model": "nautilus_baby"
         },
         {
-          "name": "ocelot_baby_21.11",
-          "display_name": "Baby Ocelot",
-          "file_name": "ocelot_baby",
-          "texture_name": "ocelot_baby",
-          "model": "cat",
-          "popup": "This model only applies to the Baby Ocelot. This model is optional, and by default will be the same as the regular model."
+          "id": "ocelot_baby_21.11",
+          "name": "Baby Ocelot",
+          "file": "ocelot_baby",
+          "popup": "only_applies_regular",
+          "model": "cat"
         },
         {
-          "name": "panda_baby_21.11",
-          "display_name": "Baby Panda",
-          "file_name": "panda_baby",
-          "texture_name": "panda_baby",
-          "model": "panda",
-          "popup": "This model only applies to the Baby Panda. This model is optional, and by default will be the same as the regular model."
+          "id": "panda_baby_21.11",
+          "name": "Baby Panda",
+          "file": "panda_baby",
+          "popup": "only_applies_regular",
+          "model": "panda"
         },
         {
-          "name": "pig_baby_21.11",
-          "display_name": "Baby Pig",
-          "file_name": "pig_baby",
-          "texture_name": "temperate_pig_baby_21.11",
+          "id": "pig_baby_21.11",
+          "name": "Baby Pig",
+          "file": "pig_baby",
+          "popup": "only_applies_regular",
+          "texture": "temperate_pig_baby_21.11",
           "model": "pig",
-          "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "pig_baby_saddle_21.11",
-              "display_name": "Baby Pig Saddle",
-              "file_name": "pig_baby_saddle",
-              "texture_name": "temperate_pig_baby_saddle_21.11",
+              "id": "pig_baby_saddle_21.11",
+              "name": "Baby Pig Saddle",
+              "file": "pig_baby_saddle",
               "model": "pig_saddle",
-              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the regular Pig Saddle model."
+              "popup": [
+                "only_applies_same_as",
+                "Pig Saddle"
+              ],
+              "texture": "temperate_pig_baby_saddle_21.11"
             },
             {
-              "name": "warm_pig_baby_21.11",
-              "display_name": "Warm Baby Pig",
-              "file_name": "warm_pig_baby",
-              "texture_name": "warm_pig_baby",
-              "model": "pig",
-              "popup": "This model only applies to the Warm Baby Pig. This model is optional, and by default will be the same as the regular Warm Pig model."
+              "id": "warm_pig_baby_21.11",
+              "name": "Warm Baby Pig",
+              "file": "warm_pig_baby",
+              "popup": [
+                "only_applies_same_as",
+                "Warm Pig"
+              ],
+              "model": "pig"
             },
             {
-              "name": "cold_pig_baby_21.11",
-              "display_name": "Cold Baby Pig",
-              "file_name": "cold_pig_baby",
-              "texture_name": "cold_pig_baby",
+              "id": "cold_pig_baby_21.11",
+              "name": "Cold Baby Pig",
+              "file": "cold_pig_baby",
               "model": "cold_pig",
-              "popup": "This model only applies to the Cold Baby Pig. This model is optional, and by default will be the same as the regular Cold Pig model."
+              "popup": [
+                "only_applies_same_as",
+                "Cold Pig"
+              ]
             }
           ]
         },
         {
-          "name": "piglin_baby_21.11",
-          "display_name": "Baby Piglin",
-          "file_name": "piglin_baby",
-          "texture_name": "piglin_baby",
-          "model": "piglin",
-          "popup": "This model only applies to the Baby Piglin. This model is optional, and by default will be the same as the regular model."
+          "id": "piglin_baby_21.11",
+          "name": "Baby Piglin",
+          "file": "piglin_baby",
+          "popup": "only_applies_regular",
+          "model": "piglin"
         },
         {
-          "name": "polar_bear_baby_21.11",
-          "display_name": "Baby Polar Bear",
-          "file_name": "polar_bear_baby",
-          "texture_name": "polar_bear_baby",
-          "model": "polar_bear",
-          "popup": "This model only applies to the Baby Polar Bear. This model is optional, and by default will be the same as the regular model."
+          "id": "polar_bear_baby_21.11",
+          "name": "Baby Polar Bear",
+          "file": "polar_bear_baby",
+          "popup": "only_applies_regular",
+          "model": "polar_bear"
         },
         {
-          "name": "rabbit_baby_21.11",
-          "display_name": "Baby Rabbit",
-          "file_name": "rabbit_baby",
-          "texture_name": "rabbit_baby",
-          "model": "rabbit",
-          "popup": "This model only applies to the Baby Rabbit. This model is optional, and by default will be the same as the regular model."
+          "id": "rabbit_baby_21.11",
+          "name": "Baby Rabbit",
+          "file": "rabbit_baby",
+          "popup": "only_applies_regular",
+          "model": "rabbit"
         },
         {
-          "name": "sheep_baby_21.11",
-          "display_name": "Baby Sheep",
-          "file_name": "sheep_baby",
-          "texture_name": [
-            "sheep_baby"
-          ],
+          "id": "sheep_baby_21.11",
+          "name": "Baby Sheep",
+          "file": "sheep_baby",
+          "popup": "only_applies_regular",
           "vanilla_textures": [
             "sheep_baby",
             "sheep_baby_wool_undercoat"
           ],
           "model": "sheep",
-          "popup": "This model only applies to the Baby Sheep. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "sheep_baby_wool_undercoat_21.11",
-              "display_name": "Baby Sheep Wool Undercoat",
-              "file_name": "sheep_baby_wool_undercoat",
-              "texture_name": "sheep_baby_wool_undercoat",
-              "model": "sheep",
-              "popup": "This model only applies to the Baby Sheep Wool Undercoat. This model is optional, and by default will be the same as the regular Sheep Wool Undercoat model."
+              "id": "sheep_baby_wool_undercoat_21.11",
+              "name": "Baby Sheep Wool Undercoat",
+              "file": "sheep_baby_wool_undercoat",
+              "popup": [
+                "only_applies_same_as",
+                "Sheep Wool Undercoat"
+              ],
+              "model": "sheep"
             },
             {
-              "name": "sheep_baby_wool_21.11",
-              "display_name": "Baby Sheep Wool",
-              "file_name": "sheep_baby_wool",
-              "texture_name": "sheep_baby_wool",
+              "id": "sheep_baby_wool_21.11",
+              "name": "Baby Sheep Wool",
+              "file": "sheep_baby_wool",
               "model": "sheep_wool",
-              "popup": "This model only applies to the Baby Sheep Wool. This model is optional, and by default will be the same as the regular Sheep Wool model."
+              "popup": [
+                "only_applies_same_as",
+                "Sheep Wool"
+              ]
             }
           ]
         },
         {
-          "name": "skeleton_horse_baby_21.11",
-          "display_name": "Baby Skeleton Horse",
-          "file_name": "skeleton_horse_baby",
-          "texture_name": "skeleton_horse_baby",
+          "id": "skeleton_horse_baby_21.11",
+          "name": "Baby Skeleton Horse",
+          "file": "skeleton_horse_baby",
           "model": "horse_baby",
           "variants": [
             {
-              "name": "skeleton_horse_baby_saddle_21.11",
-              "display_name": "Baby Skeleton Horse Saddle",
-              "file_name": "skeleton_horse_baby_saddle",
-              "texture_name": "skeleton_horse_baby_saddle",
+              "id": "skeleton_horse_baby_saddle_21.11",
+              "name": "Baby Skeleton Horse Saddle",
+              "file": "skeleton_horse_baby_saddle",
               "model": "horse_baby_saddle"
             },
             {
-              "name": "skeleton_horse_baby_armor_21.11",
-              "display_name": "Baby Skeleton Horse Armor",
-              "file_name": "skeleton_horse_baby_armor",
-              "texture_name": "skeleton_horse_baby_armor",
+              "id": "skeleton_horse_baby_armor_21.11",
+              "name": "Baby Skeleton Horse Armor",
+              "file": "skeleton_horse_baby_armor",
               "model": "horse_baby_armor"
             }
           ]
         },
         {
-          "name": "sniffer_baby_21.11",
-          "display_name": "Baby Sniffer",
-          "file_name": "sniffer_baby",
-          "texture_name": "sniffer_baby",
-          "model": "sniffer",
-          "popup": "This model only applies to the Baby Sniffer. This model is optional, and by default will be the same as the regular model."
+          "id": "sniffer_baby_21.11",
+          "name": "Baby Sniffer",
+          "file": "sniffer_baby",
+          "popup": "only_applies_regular",
+          "model": "sniffer"
         },
         {
-          "name": "squid_baby_21.11",
-          "display_name": "Baby Squid",
-          "file_name": "squid_baby",
-          "texture_name": "squid_baby",
-          "model": "squid",
-          "popup": "This model only applies to the Baby Squid. This model is optional, and by default will be the same as the regular model."
+          "id": "squid_baby_21.11",
+          "name": "Baby Squid",
+          "file": "squid_baby",
+          "popup": "only_applies_regular",
+          "model": "squid"
         },
         {
-          "name": "strider_baby_21.11",
-          "display_name": "Baby Strider",
-          "file_name": "strider_baby",
-          "texture_name": "strider_baby",
+          "id": "strider_baby_21.11",
+          "name": "Baby Strider",
+          "file": "strider_baby",
+          "popup": "only_applies_regular",
           "model": "strider",
-          "popup": "This model only applies to the Baby Strider. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "strider_baby_saddle_21.11",
-              "display_name": "Baby Strider Saddle",
-              "file_name": "strider_baby_saddle",
-              "texture_name": "strider_baby_saddle",
-              "model": "strider",
-              "popup": "This model only applies to the Baby Strider Saddle. This model is optional, and by default will be the same as the regular Strider Saddle model."
+              "id": "strider_baby_saddle_21.11",
+              "name": "Baby Strider Saddle",
+              "file": "strider_baby_saddle",
+              "popup": [
+                "only_applies_same_as",
+                "Strider Saddle"
+              ],
+              "model": "strider"
             }
           ]
         },
         {
-          "name": "trader_llama_baby_21.11",
-          "display_name": "Baby Trader Llama",
-          "file_name": "trader_llama_baby",
-          "texture_name": "trader_llama_baby",
+          "id": "trader_llama_baby_21.11",
+          "name": "Baby Trader Llama",
+          "file": "trader_llama_baby",
+          "popup": "only_applies_regular",
           "model": "llama",
-          "popup": "This model only applies to the Baby Trader Llama. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "trader_llama_baby_decor_21.11",
-              "display_name": "Baby Trader Llama Decor",
-              "file_name": "trader_llama_baby_decor",
-              "texture_name": "trader_llama_baby_decor",
+              "id": "trader_llama_baby_decor_21.11",
+              "name": "Baby Trader Llama Decor",
+              "file": "trader_llama_baby_decor",
               "model": "llama_decor",
-              "popup": "This model only applies to the Baby Trader Llama Decor. This model is optional, and by default will be the same as the regular Trader Llama Decor model."
+              "popup": [
+                "only_applies_same_as",
+                "Trader Llama Decor"
+              ]
             }
           ]
         },
         {
-          "name": "turtle_baby_21.11",
-          "display_name": "Baby Turtle",
-          "file_name": "turtle_baby",
-          "texture_name": "turtle_baby",
-          "model": "turtle",
-          "popup": "This model only applies to the Baby Turtle. This model is optional, and by default will be the same as the regular model."
+          "id": "turtle_baby_21.11",
+          "name": "Baby Turtle",
+          "file": "turtle_baby",
+          "popup": "only_applies_regular",
+          "model": "turtle"
         },
         {
-          "name": "villager_baby_21.11",
-          "display_name": "Baby Villager",
-          "file_name": "villager_baby",
-          "texture_name": [
-            "villager_baby"
-          ],
+          "id": "villager_baby_21.11",
+          "name": "Baby Villager",
+          "file": "villager_baby",
+          "popup": "only_applies_regular",
           "vanilla_textures": [
             "villager_baby",
             "plains_baby"
           ],
-          "model": "villager",
-          "popup": "This model only applies to the Baby Villager. This model is optional, and by default will be the same as the regular model."
+          "model": "villager"
         },
         {
-          "name": "wolf_baby_21.11",
-          "display_name": "Baby Wolf",
-          "file_name": "wolf_baby",
-          "texture_name": "wolf_baby",
+          "id": "wolf_baby_21.11",
+          "name": "Baby Wolf",
+          "file": "wolf_baby",
+          "popup": "only_applies_regular",
           "model": "wolf",
-          "popup": "This model only applies to the Baby Wolf. This model is optional, and by default will be the same as the regular model.",
           "variants": [
             {
-              "name": "wolf_baby_collar_21.11",
-              "display_name": "Baby Wolf Collar",
-              "file_name": "wolf_baby_collar",
-              "texture_name": "wolf_baby_collar",
-              "model": "wolf",
-              "popup": "This model only applies to the Baby Wolf Collar. This model is optional, and by default will be the same as the regular Wolf Collar model."
+              "id": "wolf_baby_collar_21.11",
+              "name": "Baby Wolf Collar",
+              "file": "wolf_baby_collar",
+              "popup": [
+                "only_applies_same_as",
+                "Wolf Collar"
+              ],
+              "model": "wolf"
             },
             {
-              "name": "wolf_baby_armor_21.11",
-              "display_name": "Baby Wolf Armor",
-              "file_name": "wolf_baby_armor",
-              "texture_name": "wolf_baby_armor",
+              "id": "wolf_baby_armor_21.11",
+              "name": "Baby Wolf Armor",
+              "file": "wolf_baby_armor",
               "model": "wolf_armor",
-              "popup": "This model only applies to the Baby Wolf Armor. This model is optional, and by default will be the same as the regular Wolf Armor model."
+              "popup": [
+                "only_applies_same_as",
+                "Wolf Armor"
+              ]
             }
           ]
         },
         {
-          "name": "zoglin_baby_21.11",
-          "display_name": "Baby Zoglin",
-          "file_name": "zoglin_baby",
-          "texture_name": "zoglin_baby",
-          "model": "hoglin",
-          "popup": "This model only applies to the Baby Zoglin. This model is optional, and by default will be the same as the regular model."
+          "id": "zoglin_baby_21.11",
+          "name": "Baby Zoglin",
+          "file": "zoglin_baby",
+          "popup": "only_applies_regular",
+          "model": "hoglin"
         },
         {
-          "name": "zombie_baby_21.11",
-          "display_name": "Baby Zombie",
-          "file_name": "zombie_baby",
-          "texture_name": "zombie_baby",
-          "model": "zombie",
-          "popup": "This model only applies to the Baby Zombie. This model is optional, and by default will be the same as the regular model."
+          "id": "zombie_baby_21.11",
+          "name": "Baby Zombie",
+          "file": "zombie_baby",
+          "popup": "only_applies_regular",
+          "model": "zombie"
         },
         {
-          "name": "zombie_horse_baby_21.11",
-          "display_name": "Baby Zombie Horse",
-          "file_name": "zombie_horse_baby",
-          "texture_name": "zombie_horse_baby",
+          "id": "zombie_horse_baby_21.11",
+          "name": "Baby Zombie Horse",
+          "file": "zombie_horse_baby",
           "model": "horse_baby",
           "variants": [
             {
-              "name": "zombie_horse_baby_saddle_21.11",
-              "display_name": "Baby Zombie Horse Saddle",
-              "file_name": "zombie_horse_baby_saddle",
-              "texture_name": "zombie_horse_baby_saddle",
+              "id": "zombie_horse_baby_saddle_21.11",
+              "name": "Baby Zombie Horse Saddle",
+              "file": "zombie_horse_baby_saddle",
               "model": "horse_baby_saddle"
             },
             {
-              "name": "zombie_horse_baby_armor_21.11",
-              "display_name": "Baby Zombie Horse Armor",
-              "file_name": "zombie_horse_baby_armor",
-              "texture_name": "zombie_horse_baby_armor",
+              "id": "zombie_horse_baby_armor_21.11",
+              "name": "Baby Zombie Horse Armor",
+              "file": "zombie_horse_baby_armor",
               "model": "horse_baby_armor"
             }
           ]
         },
         {
-          "name": "zombie_villager_baby_21.11",
-          "display_name": "Baby Zombie Villager",
-          "file_name": "zombie_villager_baby",
-          "texture_name": [
-            "zombie_villager_baby"
-          ],
+          "id": "zombie_villager_baby_21.11",
+          "name": "Baby Zombie Villager",
+          "file": "zombie_villager_baby",
+          "popup": "only_applies_regular",
           "vanilla_textures": [
             "zombie_villager_baby",
             "plains_baby"
           ],
-          "model": "zombie_villager",
-          "popup": "This model only applies to the Baby Zombie Villager. This model is optional, and by default will be the same as the regular model."
+          "model": "zombie_villager"
         },
         {
-          "name": "zombified_piglin_baby_21.11",
-          "display_name": "Baby Zombified Piglin",
-          "file_name": "zombified_piglin_baby",
-          "texture_name": "zombified_piglin_baby",
-          "model": "piglin",
-          "popup": "This model only applies to the Baby Zombified Piglin. This model is optional, and by default will be the same as the regular model."
+          "id": "zombified_piglin_baby_21.11",
+          "name": "Baby Zombified Piglin",
+          "file": "zombified_piglin_baby",
+          "popup": "only_applies_regular",
+          "model": "piglin"
         },
         {
           "type": "heading",
           "text": "1.21.4"
         },
         {
-          "name": "camel_21.4",
-          "display_name": "Camel",
-          "file_name": "camel",
-          "texture_name": "camel",
+          "id": "camel_21.4",
+          "file": "camel",
           "variants": [
             {
-              "name": "camel_baby_21.4",
-              "display_name": "Baby Camel",
-              "file_name": "camel_baby",
-              "texture_name": "camel_baby",
-              "popup": "This model only applies to the Baby Camel. This model is optional, and by default will be the same as the regular model."
+              "id": "camel_baby_21.4",
+              "name": "Baby Camel",
+              "file": "camel_baby",
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "cow_21.4",
-          "display_name": "Cow",
-          "file_name": "cow",
-          "texture_name": "cow",
+          "id": "cow_21.4",
+          "file": "cow",
           "variants": [
             {
-              "name": "cow_baby_21.4",
-              "display_name": "Baby Cow",
-              "file_name": "cow_baby",
-              "texture_name": "cow_baby",
-              "popup": "This model only applies to the Baby Cow. This model is optional, and by default will be the same as the regular model."
+              "id": "cow_baby_21.4",
+              "name": "Baby Cow",
+              "file": "cow_baby",
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "donkey_21.4",
-          "display_name": "Donkey",
-          "file_name": "donkey",
-          "texture_name": "donkey",
+          "id": "donkey_21.4",
+          "file": "donkey",
           "variants": [
             {
-              "name": "donkey_baby_21.4",
-              "display_name": "Baby Donkey",
-              "file_name": "donkey_baby",
-              "texture_name": "donkey_baby",
+              "id": "donkey_baby_21.4",
+              "name": "Baby Donkey",
+              "file": "donkey_baby",
               "model": "donkey_baby_21.4",
-              "popup": "This model only applies to the Baby Donkey. This model is optional, and by default will be the same as the regular model."
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "horse_21.4",
-          "display_name": "Horse",
-          "file_name": "horse",
-          "texture_name": "horse",
+          "id": "horse_21.4",
+          "file": "horse",
           "variants": [
             {
-              "name": "horse_armor_21.4",
-              "display_name": "Horse Armor",
-              "file_name": "horse_armor",
-              "texture_name": "horse_armor",
+              "id": "horse_armor_21.4",
+              "file": "horse_armor",
               "model": "horse_armor_21.4"
             },
             {
-              "name": "horse_baby_21.4",
-              "display_name": "Baby Horse",
-              "file_name": "horse_baby",
-              "texture_name": "horse_baby",
+              "id": "horse_baby_21.4",
+              "name": "Baby Horse",
+              "file": "horse_baby",
               "model": "horse_baby_21.4",
-              "popup": "This model only applies to the Baby Horse. This model is optional, and by default will be the same as the regular model."
+              "popup": "only_applies_regular"
             },
             {
-              "name": "horse_baby_armor_21.4",
-              "display_name": "Baby Horse Armor",
-              "file_name": "horse_baby_armor",
-              "texture_name": "horse_baby_armor",
+              "id": "horse_baby_armor_21.4",
+              "name": "Baby Horse Armor",
+              "file": "horse_baby_armor",
               "model": "horse_baby_armor_21.4",
-              "popup": "This model only applies to the Baby Horse Armor. This model is optional, and by default will be the same as the regular Horse Armor model."
+              "popup": [
+                "only_applies_same_as",
+                "Horse Armor"
+              ]
             }
           ]
         },
         {
-          "name": "mooshroom_21.4",
-          "display_name": "Mooshroom",
-          "file_name": "mooshroom",
-          "texture_name": "mooshroom",
+          "id": "mooshroom_21.4",
+          "file": "mooshroom",
           "model": "cow_21.4",
           "variants": [
             {
-              "name": "mooshroom_baby_21.4",
-              "display_name": "Baby Mooshroom",
-              "file_name": "mooshroom_baby",
-              "texture_name": "mooshroom_baby",
-              "popup": "This model only applies to the Baby Mooshroom. This model is optional, and by default will be the same as the regular model."
+              "id": "mooshroom_baby_21.4",
+              "name": "Baby Mooshroom",
+              "file": "mooshroom_baby",
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "mule_21.4",
-          "display_name": "Mule",
-          "file_name": "mule",
-          "texture_name": "mule",
+          "id": "mule_21.4",
+          "file": "mule",
           "model": "donkey_21.4",
           "variants": [
             {
-              "name": "mule_baby_21.4",
-              "display_name": "Baby Mule",
-              "file_name": "mule_baby",
-              "texture_name": "mule_baby",
+              "id": "mule_baby_21.4",
+              "name": "Baby Mule",
+              "file": "mule_baby",
               "model": "donkey_baby_21.4",
-              "popup": "This model only applies to the Baby Mule. This model is optional, and by default will be the same as the regular model."
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "pig_21.4",
-          "display_name": "Pig",
-          "file_name": "pig",
-          "texture_name": "pig",
+          "id": "pig_21.4",
+          "file": "pig",
           "variants": [
             {
-              "name": "pig_saddle_21.4",
-              "display_name": "Pig Saddle",
-              "file_name": "pig_saddle",
-              "texture_name": "pig_saddle"
+              "id": "pig_saddle_21.4",
+              "file": "pig_saddle"
             },
             {
-              "name": "pig_baby_21.4",
-              "display_name": "Baby Pig",
-              "file_name": "pig_baby",
-              "texture_name": "pig_baby",
-              "popup": "This model only applies to the Baby Pig. This model is optional, and by default will be the same as the regular model."
+              "id": "pig_baby_21.4",
+              "name": "Baby Pig",
+              "file": "pig_baby",
+              "popup": "only_applies_regular"
             },
             {
-              "name": "pig_baby_saddle_21.4",
-              "display_name": "Baby Pig Saddle",
-              "file_name": "pig_baby_saddle",
-              "texture_name": "pig_baby_saddle",
+              "id": "pig_baby_saddle_21.4",
+              "name": "Baby Pig Saddle",
+              "file": "pig_baby_saddle",
               "model": "pig_saddle_21.4",
-              "popup": "This model only applies to the Baby Pig Saddle. This model is optional, and by default will be the same as the regular Pig Saddle model."
+              "popup": [
+                "only_applies_same_as",
+                "Pig Saddle"
+              ]
             }
           ]
         },
         {
-          "name": "skeleton_horse_21.4",
-          "display_name": "Skeleton Horse",
-          "file_name": "skeleton_horse",
-          "texture_name": "skeleton_horse",
+          "id": "skeleton_horse_21.4",
+          "file": "skeleton_horse",
           "model": "horse_21.4",
           "variants": [
             {
-              "name": "skeleton_horse_baby_21.4",
-              "display_name": "Baby Skeleton Horse",
-              "file_name": "skeleton_horse_baby",
-              "texture_name": "skeleton_horse_baby",
+              "id": "skeleton_horse_baby_21.4",
+              "name": "Baby Skeleton Horse",
+              "file": "skeleton_horse_baby",
               "model": "horse_baby_21.4",
-              "popup": "This model only applies to the Baby Skeleton Horse. This model is optional, and by default will be the same as the regular model."
+              "popup": "only_applies_regular"
             }
           ]
         },
         {
-          "name": "zombie_horse_21.4",
-          "display_name": "Zombie Horse",
-          "file_name": "zombie_horse",
-          "texture_name": "zombie_horse",
+          "id": "zombie_horse_21.4",
+          "file": "zombie_horse",
           "model": "horse_21.4",
           "variants": [
             {
-              "name": "zombie_horse_baby_21.4",
-              "display_name": "Baby Zombie Horse",
-              "file_name": "zombie_horse_baby",
-              "texture_name": "zombie_horse_baby",
+              "id": "zombie_horse_baby_21.4",
+              "name": "Baby Zombie Horse",
+              "file": "zombie_horse_baby",
               "model": "horse_baby_21.4",
-              "popup": "This model only applies to the Baby Zombie Horse. This model is optional, and by default will be the same as the regular model."
+              "popup": "only_applies_regular"
             }
           ]
         },
@@ -1866,138 +2110,100 @@
           "text": "1.21.3"
         },
         {
-          "name": "banner_21.3",
-          "display_name": "Banner",
-          "file_name": "banner",
-          "texture_name": "banner"
+          "id": "banner_21.3",
+          "file": "banner"
         },
         {
-          "name": "magma_cube_21.3",
-          "display_name": "Magma Cube",
-          "file_name": "magma_cube",
-          "texture_name": "magma_cube"
+          "id": "magma_cube_21.3",
+          "file": "magma_cube"
         },
         {
           "type": "heading",
           "text": "1.21.1"
         },
         {
-          "name": "arrow_21.1",
-          "display_name": "Arrow",
-          "file_name": "arrow",
-          "texture_name": "arrow",
+          "id": "arrow_21.1",
+          "file": "arrow",
           "variants": [
             {
-              "name": "spectral_arrow_21.1",
-              "display_name": "Spectral Arrow",
-              "file_name": "spectral_arrow",
-              "texture_name": "spectral_arrow"
+              "id": "spectral_arrow_21.1",
+              "file": "spectral_arrow"
             }
           ]
         },
         {
-          "name": "bell_21.1",
-          "display_name": "Bell",
-          "file_name": "bell",
-          "texture_name": "bell"
+          "id": "bell_21.1",
+          "file": "bell"
         },
         {
-          "name": "boat_21.1",
-          "display_name": "Boat",
-          "file_name": "boat",
-          "texture_name": "boat"
+          "id": "boat_21.1",
+          "file": "boat"
         },
         {
-          "name": "chest_boat_21.1",
-          "display_name": "Boat with Chest",
-          "file_name": "chest_boat",
-          "texture_name": "chest_boat"
+          "id": "chest_boat_21.1",
+          "name": "Boat with Chest",
+          "file": "chest_boat"
         },
         {
-          "name": "donkey_21.1",
-          "display_name": "Donkey",
-          "file_name": "donkey",
-          "texture_name": "donkey"
+          "id": "donkey_21.1",
+          "file": "donkey"
         },
         {
-          "name": "chest_large_21.1",
-          "display_name": "Double Chest",
-          "file_name": "chest_large",
-          "texture_name": [
-            "normal_left",
-            "normal_right"
-          ],
-          "vanilla_textures": [
+          "id": "chest_large_21.1",
+          "name": "Double Chest",
+          "file": "chest_large",
+          "texture": [
             "normal_left",
             "normal_right"
           ]
         },
         {
-          "name": "dragon_21.1",
-          "display_name": "Ender Dragon",
-          "file_name": "dragon",
-          "texture_name": "dragon"
+          "id": "dragon_21.1",
+          "name": "Ender Dragon",
+          "file": "dragon"
         },
         {
-          "name": "end_crystal_21.1",
-          "display_name": "End Crystal",
-          "file_name": "end_crystal",
-          "texture_name": "end_crystal"
+          "id": "end_crystal_21.1",
+          "file": "end_crystal"
         },
         {
-          "name": "horse_21.1",
-          "display_name": "Horse",
-          "file_name": "horse",
-          "texture_name": "horse",
+          "id": "horse_21.1",
+          "file": "horse",
           "variants": [
             {
-              "name": "horse_armor_21.1",
-              "display_name": "Horse Armor",
-              "file_name": "horse_armor",
-              "texture_name": "horse_armor",
+              "id": "horse_armor_21.1",
+              "file": "horse_armor",
               "model": "horse_armor_21.1"
             }
           ]
         },
         {
-          "name": "mule_21.1",
-          "display_name": "Mule",
-          "file_name": "mule",
-          "texture_name": "mule",
+          "id": "mule_21.1",
+          "file": "mule",
           "model": "donkey_21.1"
         },
         {
-          "name": "skeleton_horse_21.1",
-          "display_name": "Skeleton Horse",
-          "file_name": "skeleton_horse",
-          "texture_name": "skeleton_horse",
+          "id": "skeleton_horse_21.1",
+          "file": "skeleton_horse",
           "model": "horse_21.1"
         },
         {
-          "name": "tadpole_21.1",
-          "display_name": "Tadpole",
-          "file_name": "tadpole",
-          "texture_name": "tadpole"
+          "id": "tadpole_21.1",
+          "file": "tadpole"
         },
         {
-          "name": "trapped_chest_large_21.1",
-          "display_name": "Trapped Double Chest",
-          "file_name": "trapped_chest_large",
-          "texture_name": [
+          "id": "trapped_chest_large_21.1",
+          "name": "Trapped Double Chest",
+          "file": "trapped_chest_large",
+          "model": "chest_large_21.1",
+          "texture": [
             "trapped_left",
             "trapped_right"
-          ],
-          "vanilla_textures": [
-            "trapped_left",
-            "trapped_right"
-          ],
-          "model": "chest_large_21.1"
+          ]
         },
         {
-          "name": "zombie_horse_21.1",
-          "display_name": "Zombie Horse",
-          "file_name": "zombie_horse",
-          "texture_name": "zombie_horse",
+          "id": "zombie_horse_21.1",
+          "file": "zombie_horse",
           "model": "horse_21.1"
         },
         {
@@ -2005,107 +2211,79 @@
           "text": "1.20.2"
         },
         {
-          "name": "bat_20.2",
-          "display_name": "Bat",
-          "file_name": "bat",
-          "texture_name": "bat"
+          "id": "bat_20.2",
+          "file": "bat"
         },
         {
-          "name": "trident_20.2",
-          "display_name": "Trident",
-          "file_name": "trident",
-          "texture_name": "trident"
+          "id": "trident_20.2",
+          "file": "trident"
         },
         {
           "type": "heading",
           "text": "1.19.2"
         },
         {
-          "name": "chest_19.2",
-          "display_name": "Chest",
-          "file_name": "chest",
-          "texture_name": "chest",
+          "id": "chest_19.2",
+          "file": "chest",
           "variants": [
             {
-              "name": "chest_large_19.2",
-              "display_name": "Double Chest",
-              "file_name": "chest_large",
-              "texture_name": [
+              "id": "chest_large_19.2",
+              "name": "Double Chest",
+              "file": "chest_large",
+              "model": "chest_large_19.2",
+              "texture": [
                 "normal_left",
                 "normal_right"
-              ],
-              "vanilla_textures": [
-                "normal_left",
-                "normal_right"
-              ],
-              "model": "chest_large_19.2"
+              ]
             }
           ]
         },
         {
-          "name": "ender_chest_19.2",
-          "display_name": "Ender Chest",
-          "file_name": "ender_chest",
-          "texture_name": "ender_chest",
+          "id": "ender_chest_19.2",
+          "file": "ender_chest",
           "model": "chest_19.2"
         },
         {
-          "name": "trapped_chest_19.2",
-          "display_name": "Trapped Chest",
-          "file_name": "trapped_chest",
-          "texture_name": "trapped_chest",
+          "id": "trapped_chest_19.2",
+          "file": "trapped_chest",
           "model": "chest_19.2",
           "variants": [
             {
-              "name": "trapped_chest_large_19.2",
-              "display_name": "Trapped Double Chest",
-              "file_name": "trapped_chest_large",
-              "texture_name": [
+              "id": "trapped_chest_large_19.2",
+              "name": "Trapped Double Chest",
+              "file": "trapped_chest_large",
+              "model": "chest_large_19.2",
+              "texture": [
                 "trapped_left",
                 "trapped_right"
-              ],
-              "vanilla_textures": [
-                "trapped_left",
-                "trapped_right"
-              ],
-              "model": "chest_large_19.2"
+              ]
             }
           ]
         },
         {
-          "name": "vex_19.2",
-          "display_name": "Vex",
-          "file_name": "vex",
-          "texture_name": "vex"
+          "id": "vex_19.2",
+          "file": "vex"
         },
         {
           "type": "heading",
           "text": "1.16.5"
         },
         {
-          "name": "iron_golem_16",
-          "display_name": "Iron Golem",
-          "file_name": "iron_golem",
-          "texture_name": "iron_golem"
+          "id": "iron_golem_16",
+          "file": "iron_golem"
         },
         {
-          "name": "piglin_16",
-          "display_name": "Piglin",
-          "file_name": "piglin",
-          "texture_name": "piglin"
+          "id": "piglin_16",
+          "file": "piglin"
         },
         {
-          "name": "piglin_brute_16",
-          "display_name": "Piglin Brute",
-          "file_name": "piglin_brute",
-          "texture_name": "piglin_brute",
+          "id": "piglin_brute_16",
+          "file": "piglin_brute",
           "model": "piglin_16"
         },
         {
-          "name": "zombified_piglin_16",
-          "display_name": "Zombified Piglin",
-          "file_name": "zombified_piglin",
-          "texture_name": "zombified_piglin",
+          "id": "zombified_piglin_16",
+          "file": "zombified_piglin",
           "model": "piglin_16"
         },
         {
@@ -2113,106 +2291,81 @@
           "text": "1.15.2"
         },
         {
-          "name": "zombie_pigman_15",
-          "display_name": "Zombie Pigman",
-          "file_name": "zombie_pigman",
-          "texture_name": "zombie_pigman"
+          "id": "zombie_pigman_15",
+          "file": "zombie_pigman"
         },
         {
           "type": "heading",
           "text": "1.14.4"
         },
         {
-          "name": "chest_14",
-          "display_name": "Chest",
-          "file_name": "chest",
-          "texture_name": "chest",
+          "id": "chest_14",
+          "file": "chest",
           "variants": [
             {
-              "name": "chest_large_14",
-              "display_name": "Double Chest",
-              "file_name": "chest_large",
-              "texture_name": "chest_large",
+              "id": "chest_large_14",
+              "name": "Double Chest",
+              "file": "chest_large",
               "model": "chest_large_14"
             }
           ]
         },
         {
-          "name": "dragon_14",
-          "display_name": "Ender Dragon",
-          "file_name": "dragon",
-          "texture_name": "dragon"
+          "id": "dragon_14",
+          "name": "Ender Dragon",
+          "file": "dragon"
         },
         {
-          "name": "ender_chest_14",
-          "display_name": "Ender Chest",
-          "file_name": "ender_chest",
-          "texture_name": "ender_chest",
+          "id": "ender_chest_14",
+          "file": "ender_chest",
           "model": "chest_14"
         },
         {
-          "name": "end_crystal_no_base_14",
-          "display_name": "End Crystal No Base",
-          "file_name": "end_crystal_no_base",
-          "texture_name": "end_crystal_no_base"
+          "id": "end_crystal_no_base_14",
+          "file": "end_crystal_no_base"
         },
         {
-          "name": "trapped_chest_14",
-          "display_name": "Trapped Chest",
-          "file_name": "trapped_chest",
-          "texture_name": "trapped_chest",
+          "id": "trapped_chest_14",
+          "file": "trapped_chest",
           "model": "chest_14",
           "variants": [
             {
-              "name": "trapped_chest_large_14",
-              "display_name": "Trapped Double Chest",
-              "file_name": "trapped_chest_large",
-              "texture_name": "trapped_chest_large",
+              "id": "trapped_chest_large_14",
+              "name": "Trapped Double Chest",
+              "file": "trapped_chest_large",
               "model": "chest_large_14"
             }
           ]
         },
         {
-          "name": "trident_14",
-          "display_name": "Trident",
-          "file_name": "trident",
-          "texture_name": "trident"
+          "id": "trident_14",
+          "file": "trident"
         },
         {
           "type": "heading",
           "text": "1.12.2"
         },
         {
-          "name": "donkey_12",
-          "display_name": "Donkey",
-          "file_name": "donkey",
-          "texture_name": "donkey"
+          "id": "donkey_12",
+          "file": "donkey"
         },
         {
-          "name": "horse_12",
-          "display_name": "Horse",
-          "file_name": "horse",
-          "texture_name": "horse"
+          "id": "horse_12",
+          "file": "horse"
         },
         {
-          "name": "mule_12",
-          "display_name": "Mule",
-          "file_name": "mule",
-          "texture_name": "mule",
+          "id": "mule_12",
+          "file": "mule",
           "model": "donkey_12"
         },
         {
-          "name": "skeleton_horse_12",
-          "display_name": "Skeleton Horse",
-          "file_name": "skeleton_horse",
-          "texture_name": "skeleton_horse",
+          "id": "skeleton_horse_12",
+          "file": "skeleton_horse",
           "model": "horse_12"
         },
         {
-          "name": "zombie_horse_12",
-          "display_name": "Zombie Horse",
-          "file_name": "zombie_horse",
-          "texture_name": "zombie_horse",
+          "id": "zombie_horse_12",
+          "file": "zombie_horse",
           "model": "horse_12"
         },
         {
@@ -2220,10 +2373,8 @@
           "text": "1.10.2"
         },
         {
-          "name": "horse_10",
-          "display_name": "Horse",
-          "file_name": "horse",
-          "texture_name": "horse"
+          "id": "horse_10",
+          "file": "horse"
         }
       ]
     },
@@ -2233,36 +2384,44 @@
       "icon": "do_not_disturb",
       "entities": [
         {
-          "name": "armor_layer_1",
-          "display_name": "Armor",
+          "id": "armor_layer_1",
+          "name": "Armor",
           "variants": [
             {
-              "name": "armor_layer_2",
-              "display_name": "Armor [Layer 2]",
+              "id": "armor_layer_2",
+              "name": "Armor [Layer 2]",
               "model": "armor_layer_2"
             }
           ]
         },
-        "bee_stinger",
-        "cape",
         {
-          "name": "elder_guardian_ghost",
-          "display_name": "Elder Guardian [Ghost]",
+          "id": "bee_stinger"
+        },
+        {
+          "id": "cape"
+        },
+        {
+          "id": "elder_guardian_ghost",
+          "name": "Elder Guardian [Ghost]",
           "description": "The ghostly Elder Guardian that appears when you get mining fatigue",
           "model": "guardian"
         },
-        "elytra",
         {
-          "name": "player",
+          "id": "elytra"
+        },
+        {
+          "id": "player",
           "variants": [
             {
-              "name": "player_slim",
-              "display_name": "Player [Slim]",
+              "id": "player_slim",
+              "name": "Player [Slim]",
               "model": "player_slim"
             }
           ]
         },
-        "trident_riptide"
+        {
+          "id": "trident_riptide"
+        }
       ]
     }
   ],
@@ -2914,5 +3073,13 @@
       "texture_data": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAJ1BMVEUAAABD6I1TYXRbvPRueIx71P97/6O01OHs+P30hob43XL/p6T/+JkI1XCUAAAAAXRSTlMAQObYZgAAANpJREFUeF7tkkEKgzAQRV13l026Fw9QCF5AvIF4ADe9gvUEeoXgsrvgBcQbiIfqxLEMGYW0IEipb/eHpyR/ElhKIASCMnTzm0fT1FGaJihQXglCaXO0sJ35tXgWgAI0YACeA3m/F3GeZ+0w9N00jTz/ieAvaldoRxy+ZYb9zBVoivM6SphAU59AP+OHpKmtxVZC/RhAa6WEmGuSRZy1fTfKpWEsuO3jTBbd+KFwCt6qv3xJRwn+Q7rX2xDcgnYQLgZ5KuTGhWuJVOHCSmiQKkpnkh8SToE9ufW6X2sonO85zeDXAAAAAElFTkSuQmCC",
       "model": "{\"textureSize\":[64,64],\"models\":[{\"part\":\"head\",\"id\":\"head\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,10,8],\"textureOffset\":[0,0]},{\"coordinates\":[-1,23,-6,2,4,2],\"textureOffset\":[24,0]}]},{\"part\":\"headwear\",\"id\":\"headwear\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,24,-4,8,10,8],\"textureOffset\":[32,0],\"sizeAdd\":0.5}],\"submodels\":[{\"id\":\"rotation\",\"invertAxis\":\"xy\",\"translate\":[0,24,0],\"rotate\":[90,0,0],\"boxes\":[{\"coordinates\":[-8,-8,-6,16,16,1],\"textureOffset\":[30,47]}]}]},{\"part\":\"body\",\"id\":\"body\",\"invertAxis\":\"xy\",\"translate\":[0,-24,0],\"boxes\":[{\"coordinates\":[-4,12,-3,8,12,6],\"textureOffset\":[16,20]},{\"coordinates\":[-4,4,-3,8,20,6],\"textureOffset\":[0,38],\"sizeAdd\":0.05}]},{\"part\":\"left_arm\",\"id\":\"left_arm\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[5,-22,0],\"boxes\":[{\"coordinates\":[-8,12,-2,4,12,4],\"textureOffset\":[44,22]}]},{\"part\":\"right_arm\",\"id\":\"right_arm\",\"invertAxis\":\"xy\",\"translate\":[-5,-22,0],\"boxes\":[{\"coordinates\":[4,12,-2,4,12,4],\"textureOffset\":[44,22]}]},{\"part\":\"left_leg\",\"id\":\"left_leg\",\"invertAxis\":\"xy\",\"translate\":[2,-12,0],\"boxes\":[{\"coordinates\":[-4,0,-2,4,12,4],\"textureOffset\":[0,22]}]},{\"part\":\"right_leg\",\"id\":\"right_leg\",\"invertAxis\":\"xy\",\"mirrorTexture\":\"u\",\"translate\":[-2,-12,0],\"boxes\":[{\"coordinates\":[0,0,-2,4,12,4],\"textureOffset\":[0,22]}]}]}"
     }
+  },
+  "popups": {
+    "only_applies_regular": "This model only applies to the {0}. This model is optional, and by default will be the same as the regular model.",
+    "only_applies_same_as": "This model only applies to the {0}. This model is optional, and by default will be the same as the regular {1} model.",
+    "applies_sign_and_wall_sign": "This model applies to both the {1} Sign and {1} Wall Sign. Use the {1} Wall Sign if you want to modify that specific model.",
+    "prevents_water_all": "This model prevents water from rendering inside the {1}'s interior. Align these invisible elements so they fill the interior of the {1} to block water from showing there.<br><br>This model applies to all {2} types. Use a specific {3} variant, such as the {4}, if you want to modify a specific wood type.",
+    "prevents_water_single": "This model prevents water from rendering inside the {1}'s interior. Align these invisible elements so they fill the interior of the {1} to block water from showing there.",
+    "applies_all": "This model applies to all {1} types. Use a specific {2} variant, such as the {3}, if you want to modify a specific {4} type."
   }
 }
