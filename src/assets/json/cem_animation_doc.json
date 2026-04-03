@@ -255,10 +255,6 @@
             [
               "day_count",
               "How many days have passed in the world."
-            ],
-            [
-              "rule_index",
-              "The active random model rule index from the properties file. Defaults to 0."
             ]
           ]
         },
@@ -321,6 +317,10 @@
             [
               "dimension",
               "The current dimension. Overworld: 0, Nether: -1, End: 1."
+            ],
+            [
+              "rule_index",
+              "The active random model rule index from the properties file. Defaults to 0."
             ]
           ]
         },
