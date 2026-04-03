@@ -13,6 +13,7 @@ export default class extends Page {
   async setData(params) {
     await this.ready
     const $ = this.$
+    const shadowRoot = this.shadowRoot
     await fetchJSON("cem_template_models")
     const downloadIcon = $("#download-icon").contents()
     const linkIcon = $("#link-icon").contents()
@@ -27,34 +28,53 @@ export default class extends Page {
           ),
         ).appendTo(entityContainer)
       )
-      const entityList = []
       let heading
       for (const entity of category.entities) {
-        if (entity.type === "heading") { heading = entity.text; entityList.push(entity); continue }
+        if (entity.type === "heading") {
+          heading = entity.text
+          entities.append(E("div").addClass("entity-heading").text(entity.text))
+          continue
+        }
         entity.heading = heading
-        entityList.push(entity)
         if (entity.variants) {
           for (const variant of entity.variants) {
             variant.model ??= entity.model ?? entity.id
             variant.heading = heading
-            entityList.push(variant)
           }
+          const variantCards = [entity, ...entity.variants].map(v => createEntityCard(v, true).css("display", "none"))
+          const displayName = entity.name ?? (entity.file ?? entity.id).replace(/_/g, " ").toTitleCase()
+          const addIcon = '<svg class="variant-toggle" viewBox="0 0 24 24" width="18" height="18"><path d="M13 5a1 1 0 1 0-2 0v6H5a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5Z"></path></svg>'
+          const removeIcon = '<svg class="variant-toggle" viewBox="0 0 24 24" width="18" height="18"><path d="M5 11a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z"></path></svg>'
+          function makeSVG(html) {
+            const div = document.createElement("div")
+            div.innerHTML = html
+            return div.firstChild
+          }
+          const toggle = E("div").addClass("entity has-variants").attr("data-id", entity.id).append(
+            E("img").attr("src", `/assets/images/minecraft/renders/${entity.id}.webp`),
+            makeSVG(addIcon),
+            E("div").text(displayName)
+          ).on("click", e => {
+            const isOpen = toggle.hasClass("expanded")
+            toggle.toggleClass("expanded")
+            toggle.find(".variant-toggle").replaceWith(makeSVG(isOpen ? addIcon : removeIcon))
+            variantCards.forEach(c => c.css("display", isOpen ? "none" : ""))
+          })
+          entities.append(toggle, ...variantCards)
+        } else {
+          entities.append(createEntityCard(entity, false))
         }
       }
-      for (const entity of entityList) {
-        if (entity.type === "heading") {
-          entities.append(E("div").addClass("entity-heading").text(entity.text))
-          continue
-        }
+
+      function createEntityCard(entity, isVariant) {
         const displayName = entity.name ?? (entity.file ?? entity.id).replace(/_/g, " ").toTitleCase()
         const popupName = entity.heading ? `${displayName} [${entity.heading}]` : displayName
         const modelId = entity.model ?? entity.id
         const fileName = entity.file ?? entity.id
-        entities.append(
-          E("div").addClass("entity").attr("data-id", entity.id).append(
-            E("img").attr("src", `/assets/images/minecraft/renders/${entity.id}.webp`),
-            E("div").text(displayName)
-          ).on("click", e => {
+        return E("div").addClass(`entity${isVariant ? " variant" : ""}`).attr("data-id", entity.id).append(
+          E("img").attr("src", `/assets/images/minecraft/renders/${entity.id}.webp`),
+          E("div").text(displayName)
+        ).on("click", e => {
             const params = getURLParams() ?? {}
             params.entity = entity.id
             const model = JSON.parse(cem_template_models.models[modelId].model)
@@ -108,10 +128,9 @@ export default class extends Page {
                 history.replaceState({}, null, `/cem/${toURLParams(params)}`)
                 popup.remove()
               }
-            }).appendTo(this.shadowRoot)
+            }).appendTo(shadowRoot)
             analytics()
           })
-        )
       }
     }
     let searchTimeout
@@ -125,12 +144,12 @@ export default class extends Page {
       history.replaceState({}, null, `/cem/${toURLParams(params)}`)
 
       const underscored = val.replace(/\s/g, "_")
-      $(".entities > div").each((i, e) => {
+      $(".entity").each((i, e) => {
         const name = $(e).children().last().text().toLowerCase()
-        if (name.includes(val) || name.includes(underscored) || e.dataset.id.includes(val) || e.dataset.id.includes(underscored)) $(e).css("display", "")
-        else $(e).css("display", "none")
+        const match = name.includes(val) || name.includes(underscored) || e.dataset.id?.includes(val) || e.dataset.id?.includes(underscored)
+        $(e).css("display", match ? "" : "none")
       })
-      $(".category-heading").each((i, e) => e.style.display = $(e).next().children().toArray().some(e => e.style.display === "") ? "" : "none")
+      $(".category-heading").each((i, e) => e.style.display = $(e).parent().find(".entity").toArray().some(e => e.style.display === "") ? "" : "none")
       $(".no-results").remove()
       if (!$(".category-heading").toArray().some(e => e.style.display === "")) entityContainer.append(
         E("h2").addClass("no-results").text("No results")

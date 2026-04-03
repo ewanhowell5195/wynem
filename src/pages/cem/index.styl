@@ -65,9 +65,10 @@ page-body
   align-items: center
   position: relative
   padding: 2px 2px 20px
-  background-color: var(--color-grey-light)
+  background-color: var(--color-grey-lighter)
   transition: background-color .15s
   cursor: pointer
+  user-select: none
   
   &:hover
     background-color: var(--color-blue)
@@ -83,6 +84,19 @@ page-body
     width: 116px
     height: 66px
     object-fit: contain
+
+.has-variants
+  .variant-toggle
+    position: absolute
+    top: 4px
+    right: 4px
+    fill: var(--color-text-white)
+
+.entity.variant
+  background-color: var(--color-grey-light)
+
+  &:hover
+    background-color: var(--color-blue)
 
 .entity-heading
   min-width: 100%
