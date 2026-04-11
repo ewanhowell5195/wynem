@@ -1305,7 +1305,7 @@
       ]
     },
     {
-      "name": "Babies",
+      "name": "Baby",
       "description": "The baby versions of the entities.",
       "icon": "fa-baby",
       "entities": [
