@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.0.1",
   "categories": [
     {
       "type": "heading",
@@ -7,7 +7,7 @@
     },
     {
       "name": "Regular",
-      "description": "The standard CEM models supported by OptiFine.",
+      "description": "The standard CEM models supported by OptiFine and EMF.",
       "icon": "icon-format_optifine",
       "entities": [
         {
@@ -1308,6 +1308,17 @@
       ]
     },
     {
+      "name": "Babies",
+      "description": "The baby versions of the entities.",
+      "icon": "fa-baby",
+      "entities": [
+        {
+          "id": "nautilus_baby",
+          "name": "Baby Nautilus"
+        }
+      ]
+    },
+    {
       "type": "heading",
       "text": "Other"
     },
@@ -1668,12 +1679,6 @@
               "model": "donkey_baby_saddle"
             }
           ]
-        },
-        {
-          "id": "nautilus_baby_21.11",
-          "name": "Baby Nautilus",
-          "file": "nautilus_baby",
-          "model": "nautilus_baby"
         },
         {
           "id": "ocelot_baby_21.11",
