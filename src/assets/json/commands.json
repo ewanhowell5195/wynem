@@ -2610,6 +2610,17 @@
           "categories": {
             "resourcepacks": {
               "commands": {
+                "bedconverter": {
+                  "aliases": [
+                    "bedconvert",
+                    "convertbed",
+                    "beds",
+                    "bed"
+                  ],
+                  "arguments": "[name] [bed]",
+                  "description": "Convert a bed entity texture to the 26.2 block format.",
+                  "slashCommand": "minecraft/resourcepacks/bedconverter"
+                },
                 "cem": {
                   "aliases": [
                     "cemparts",
@@ -9121,6 +9132,24 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecraftassets"
+                },
+                "bedconverter": {
+                  "description": "Convert a bed entity texture to the 26.2 block format.",
+                  "arguments": [
+                    {
+                      "name": "name",
+                      "description": "File name prefix"
+                    },
+                    {
+                      "name": "bed-file",
+                      "description": "Bed entity texture"
+                    },
+                    {
+                      "name": "bed-string",
+                      "description": "Bed entity texture"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/bedconverter"
                 },
                 "cem": {
                   "description": "Get a list of bone names for each entity supported by OptiFine CEM",
