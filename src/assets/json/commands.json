@@ -1713,6 +1713,16 @@
                       "description": "Place some hairs on top of an image.",
                       "slashCommand": "imageoverlays/hair"
                     },
+                    "imhere": {
+                      "aliases": [
+                        "imat",
+                        "tomscott"
+                      ],
+                      "arguments": "[image]",
+                      "cooldown": 3,
+                      "description": "Add a Tom Scott \"I'm here\" overlay to an image.",
+                      "slashCommand": "imageoverlays/imhere"
+                    },
                     "jolly": {
                       "aliases": [
                         "christmas"
@@ -1857,7 +1867,9 @@
                         "cap",
                         "cap2",
                         "walter",
-                        "walter2"
+                        "walter2",
+                        "tom",
+                        "tom2"
                       ],
                       "arguments": "[text] [image]",
                       "cooldown": 5,
@@ -1865,7 +1877,7 @@
                         "Make a character say something below an image.",
                         "You can use a characters name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                        "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
+                        "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter\n- tom"
                       ],
                       "slashCommand": "imagetext/say"
                     },
@@ -4515,7 +4527,7 @@
               "extra": [
                 {
                   "title": "Available Translation Languages",
-                  "description": "```yml\nDetect language: auto\nAfrikaans: af\nAlbanian: sq\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAymara: ay\nAzerbaijani: az\nBambara: bm\nBasque: eu\nBelarusian: be\nBengali: bn\nBhojpuri: bho\nBosnian: bs\nBulgarian: bg\nCatalan: ca\nCebuano: ceb\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nCorsican: co\nCroatian: hr\nCzech: cs\nDanish: da\nDhivehi: dv\nDogri: doi\nDutch: nl\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFilipino: tl\nFinnish: fi\nFrench: fr\nFrisian: fy\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHausa: ha\nHawaiian: haw\nHebrew: iw\nHebrew: he\nHindi: hi\nHmong: hmn\nHungarian: hu\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nIrish: ga\nItalian: it\nJapanese: ja\nJavanese: jw\nKannada: kn\nKazakh: kk\nKhmer: km\nKinyarwanda: rw\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatin: la\nLatvian: lv\nLingala: ln\nLithuanian: lt\nLuganda: lg\nLuxembourgish: lb\nMacedonian: mk\nMaithili: mai\nMalagasy: mg\nMalay: ms\nMalayalam: ml\nMaltese: mt\nMaori: mi\nMarathi: mr\nMeiteilon (Manipuri): mni-Mtei\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNepali: ne\nNorwegian: no\nOdia (Oriya): or\nOromo: om\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese: pt\nPunjabi: pa\nQuechua: qu\nRomanian: ro\nRussian: ru\nSamoan: sm\nSanskrit: sa\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nShona: sn\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSwahili: sw\nSwedish: sv\nTajik: tg\nTamil: ta\nTatar: tt\nTelugu: te\nThai: th\nTigrinya: ti\nTsonga: ts\nTurkish: tr\nTurkmen: tk\nTwi: ak\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVietnamese: vi\nWelsh: cy\nXhosa: xh\nYiddish: yi\nYoruba: yo\nZulu: zu\n```"
+                  "description": "```yml\nAutomatic: auto\nAbkhaz: ab\nAcehnese: ace\nAcholi: ach\nAfar: aa\nAfrikaans: af\nAlbanian: sq\nAlur: alz\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAvar: av\nAwadhi: awa\nAymara: ay\nAzerbaijani: az\nBalinese: ban\nBaluchi: bal\nBambara: bm\nBaoulé: bci\nBashkir: ba\nBasque: eu\nBatak Karo: btx\nBatak Simalungun: bts\nBatak Toba: bbc\nBelarusian: be\nBemba: bem\nBengali: bn\nBetawi: bew\nBhojpuri: bho\nBikol: bik\nBosnian: bs\nBreton: br\nBulgarian: bg\nBuryat: bua\nCantonese: yue\nCatalan: ca\nCebuano: ceb\nChamorro: ch\nChechen: ce\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nChuukese: chk\nChuvash: cv\nCorsican: co\nCrimean Tatar (Cyrillic): crh\nCrimean Tatar (Latin): crh-Latn\nCroatian: hr\nCzech: cs\nDanish: da\nDari: fa-AF\nDhivehi: dv\nDinka: din\nDogri: doi\nDombe: dov\nDutch: nl\nDyula: dyu\nDzongkha: dz\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFaroese: fo\nFijian: fj\nFilipino: tl\nFinnish: fi\nFon: fon\nFrench: fr\nFrench (Canada): fr-CA\nFrisian: fy\nFriulian: fur\nFulani: ff\nGa: gaa\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHakha Chin: cnh\nHausa: ha\nHawaiian: haw\nHebrew: he\nHebrew: iw\nHiligaynon: hil\nHindi: hi\nHmong: hmn\nHungarian: hu\nHunsrik: hrx\nIban: iba\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nInuktut (Latin): iu-Latn\nInuktut (Syllabics): iu\nIrish: ga\nItalian: it\nJamaican Patois: jam\nJapanese: ja\nJavanese: jw\nJingpo: kac\nKalaallisut: kl\nKannada: kn\nKanuri: kr\nKapampangan: pam\nKazakh: kk\nKhasi: kha\nKhmer: km\nKiga: cgg\nKikongo: kg\nKinyarwanda: rw\nKituba: ktu\nKokborok: trp\nKomi: kv\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatgalian: ltg\nLatin: la\nLatvian: lv\nLigurian: lij\nLimburgish: li\nLingala: ln\nLithuanian: lt\nLombard: lmo\nLuganda: lg\nLuo: luo\nLuxembourgish: lb\nMacedonian: mk\nMadurese: mad\nMaithili: mai\nMakassar: mak\nMalagasy: mg\nMalay: ms\nMalay (Jawi): ms-Arab\nMalayalam: ml\nMaltese: mt\nMam: mam\nManx: gv\nMaori: mi\nMarathi: mr\nMarshallese: mh\nMarwadi: mwr\nMauritian Creole: mfe\nMeadow Mari: chm\nMeiteilon (Manipuri): mni-Mtei\nMinang: min\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNahuatl (Eastern Huasteca): nhe\nNdau: ndc-ZW\nNdebele (South): nr\nNepalbhasa (Newari): new\nNepali: ne\nNKo: bm-Nkoo\nNorwegian: no\nNuer: nus\nOccitan: oc\nOdia (Oriya): or\nOromo: om\nOssetian: os\nPangasinan: pag\nPapiamento: pap\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese (Brazil): pt\nPortuguese (Portugal): pt-PT\nPunjabi (Gurmukhi): pa\nPunjabi (Shahmukhi): pa-Arab\nQuechua: qu\nQʼeqchiʼ: kek\nRomani: rom\nRomanian: ro\nRundi: rn\nRussian: ru\nSami (North): se\nSamoan: sm\nSango: sg\nSanskrit: sa\nSantali (Latin): sat-Latn\nSantali (Ol Chiki): sat\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nSeychellois Creole: crs\nShan: shn\nShona: sn\nSicilian: scn\nSilesian: szl\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSusu: sus\nSwahili: sw\nSwati: ss\nSwedish: sv\nTahitian: ty\nTajik: tg\nTamazight: ber-Latn\nTamazight (Tifinagh): ber\nTamil: ta\nTatar: tt\nTelugu: te\nTetum: tet\nThai: th\nTibetan: bo\nTigrinya: ti\nTiv: tiv\nTok Pisin: tpi\nTongan: to\nTshiluba: lua\nTsonga: ts\nTswana: tn\nTulu: tcy\nTumbuka: tum\nTurkish: tr\nTurkmen: tk\nTuvan: tyv\nTwi: ak\nUdmurt: udm\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVenda: ve\nVenetian: vec\nVietnamese: vi\nWaray: war\nWelsh: cy\nWolof: wo\nXhosa: xh\nYakut: sah\nYiddish: yi\nYoruba: yo\nYucatec Maya: yua\nZapotec: zap\nZulu: zu\n```"
                 }
               ],
               "slashCommand": "utility/translate",
@@ -8519,6 +8531,21 @@
               ],
               "prefixCommand": "images/imagefun/overlays/hair"
             },
+            "imhere": {
+              "description": "Add a Tom Scott \"I'm here\" overlay to an image.",
+              "cooldown": 3,
+              "arguments": [
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/imhere"
+            },
             "jolly": {
               "description": "Make an image jolly!",
               "cooldown": 3,
@@ -8780,7 +8807,7 @@
                 "Make a character say something below an image.",
                 "You can use a characters name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
-                "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter"
+                "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter\n- tom"
               ],
               "cooldown": 5,
               "arguments": [
