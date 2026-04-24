@@ -749,7 +749,7 @@
               "fields": [
                 [
                   "These work on any command that accepts a member, or an image:",
-                  "```^    - Target the member from the previous message\nself - Target yourself\nme   - Target yourself\n<    - Target yourself\n<<   - Target your user\nbot  - Target the bot```"
+                  "```^    - The member from a reply or the previous message\nself - Yourself\nme   - Yourself\n<    - Yourself\n<<   - Your user\nbot  - The bot```"
                 ],
                 [
                   "These work on any command that accepts an image:",
@@ -2690,8 +2690,56 @@
                     "assets"
                   ],
                   "arguments": "[version]",
-                  "description": "Get a link to download the Minecraft assets of a specific version.",
+                  "description": "Get a link to download the Minecraft assets for a version.",
                   "slashCommand": "minecraft/resourcepacks/assets"
+                },
+                "minecraftblock": {
+                  "aliases": [
+                    "mcblock",
+                    "block"
+                  ],
+                  "arguments": "[block] [version] [blockstate]",
+                  "description": "Render a block from a vanilla version or resource pack.",
+                  "extra": [
+                    {
+                      "title": "Supported versions",
+                      "fields": [
+                        [
+                          "Official Versions",
+                          "Any Java Edition version from the official Minecraft launcher"
+                        ],
+                        [
+                          "Resource Packs",
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                        ]
+                      ]
+                    }
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/block"
+                },
+                "minecraftitem": {
+                  "aliases": [
+                    "mcitem",
+                    "item"
+                  ],
+                  "arguments": "[item] [version] [components]",
+                  "description": "Render an item from a vanilla version or resource pack.",
+                  "extra": [
+                    {
+                      "title": "Supported versions",
+                      "fields": [
+                        [
+                          "Official Versions",
+                          "Any Java Edition version from the official Minecraft launcher"
+                        ],
+                        [
+                          "Resource Packs",
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                        ]
+                      ]
+                    }
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/item"
                 },
                 "minecrafttexture": {
                   "aliases": [
@@ -2699,7 +2747,7 @@
                     "texture"
                   ],
                   "arguments": "[texture] [version]",
-                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
+                  "description": "Get a texture from a vanilla version or resource pack.",
                   "extra": [
                     {
                       "title": "Supported versions",
@@ -2710,7 +2758,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
                         ]
                       ]
                     }
@@ -2753,14 +2801,6 @@
                   ],
                   "slashCommand": "minecraft/resourcepacks/mojangtext"
                 },
-                "optifinedoc": {
-                  "aliases": [
-                    "optidoc"
-                  ],
-                  "arguments": "[doc] [properties]",
-                  "description": "View entries from the OptiFine documentation",
-                  "slashCommand": "minecraft/resourcepacks/optifinedoc"
-                },
                 "packpng": {
                   "aliases": [
                     "pack"
@@ -2774,44 +2814,6 @@
                   "cooldown": 20,
                   "description": "Reload a resource pack that is used as a custom minecraft assets version.",
                   "slashCommand": "minecraft/resourcepacks/reloadpack"
-                },
-                "rendermodel": {
-                  "aliases": [
-                    "renderentity",
-                    "rendermob",
-                    "rendermodel",
-                    "render",
-                    "entityrender",
-                    "mobrender",
-                    "modelrender"
-                  ],
-                  "arguments": "[model] [image] [image2] [image3]",
-                  "cooldown": 5,
-                  "description": [
-                    "Render an image/images onto a 3D model.",
-                    "Run without any arguments to see the list of supported models."
-                  ],
-                  "extra": [
-                    {
-                      "title": "Supported models",
-                      "description": "\n\n**Entities**\n`allay` `armor_stand` `axolotl` `banner` `bat` `bed` `bee` `bell` `blaze` `boat` `cape` `cat` `cave_spider` `chest` `chest_boat` `chest_large` `chest_minecart` `chicken` `cod` `command_block_minecart` `conduit` `cow` `creeper` `creeper_head` `dolphin` `donkey` `dragon` `dragon_head` `drowned` `elder_guardian` `enchanting_book` `enderman` `endermite` `ender_chest` `ender_dragon` `end_crystal` `evoker` `evoker_fangs` `fox` `frog` `frog_tongue` `furnace_minecart` `ghast` `giant` `glow_squid` `goat` `guardian` `hoglin` `hopper_minecart` `horse` `husk` `illusioner` `iron_golem` `lead_knot` `lectern_book` `llama` `llama_spit` `magma_cube` `minecart` `mooshroom` `mule` `ocelot` `panda` `parrot` `phantom` `pig` `piglin` `piglin_brute` `salmon` `sheep` `shulker` `shulker_box` `shulker_bullet` `skeleton` `skeleton_head` `skeleton_horse` `slime` `spawner_minecart` `spider` `squid` `stray` `tadpole` `tnt_minecart` `trader_llama` `trapped_chest` `trapped_chest_large` `turtle` `villager` `vindicator` `wandering_trader` `warden` `witch` `wither` `wither_skeleton` `wither_skeleton_head` `wither_skull` `wolf` `zoglin` `zombie` `zombie_head` `zombie_horse` `zombified_piglin`",
-                      "fields": [
-                        [
-                          "Blocks",
-                          "`crop` `cube` `cube_sides` `cube_tiled` `tree`"
-                        ],
-                        [
-                          "Fun",
-                          "`cube_spin` `donut` `kick` `kick_normal_slim` `kick_slim` `kick_slim_normal` `prism_spin` `sphere`"
-                        ],
-                        [
-                          "Player",
-                          "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_floss` `player_floss_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_rotate` `player_rotate_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
-                        ]
-                      ]
-                    }
-                  ],
-                  "slashCommand": "minecraft/resourcepacks/rendermodel"
                 },
                 "tile": {
                   "aliases": [
@@ -2841,7 +2843,7 @@
                   "arguments": "[old-version] [new-version]",
                   "description": [
                     "Compare the assets of two Minecraft versions against eachother.",
-                    "Saying \"latest\" will automatically compare the newest 2 versions."
+                    "Running the command with no arguments will compare the newest 2 versions."
                   ],
                   "slashCommand": "minecraft/resourcepacks/versiondifference"
                 }
@@ -3069,6 +3071,44 @@
               "description": "Get a link to download the latest OptiFine version.",
               "slashCommand": "minecraft/optifine"
             },
+            "rendermodel": {
+              "aliases": [
+                "renderentity",
+                "rendermob",
+                "rendermodel",
+                "render",
+                "entityrender",
+                "mobrender",
+                "modelrender"
+              ],
+              "arguments": "[model] [image] [image2] [image3]",
+              "cooldown": 5,
+              "description": [
+                "Render images onto a 3D model.",
+                "Run without any arguments to see the list of supported models."
+              ],
+              "extra": [
+                {
+                  "title": "Supported models",
+                  "description": "\n\n**Entities**\n`allay` `armor_stand` `axolotl` `banner` `bat` `bed` `bee` `bell` `blaze` `boat` `cape` `cat` `cave_spider` `chest` `chest_boat` `chest_large` `chest_minecart` `chicken` `cod` `command_block_minecart` `conduit` `cow` `creeper` `creeper_head` `dolphin` `donkey` `dragon` `dragon_head` `drowned` `elder_guardian` `enchanting_book` `enderman` `endermite` `ender_chest` `ender_dragon` `end_crystal` `evoker` `evoker_fangs` `fox` `frog` `frog_tongue` `furnace_minecart` `ghast` `giant` `glow_squid` `goat` `guardian` `hoglin` `hopper_minecart` `horse` `husk` `illusioner` `iron_golem` `lead_knot` `lectern_book` `llama` `llama_spit` `magma_cube` `minecart` `mooshroom` `mule` `ocelot` `panda` `parrot` `phantom` `pig` `piglin` `piglin_brute` `salmon` `sheep` `shulker` `shulker_box` `shulker_bullet` `skeleton` `skeleton_head` `skeleton_horse` `slime` `spawner_minecart` `spider` `squid` `stray` `tadpole` `tnt_minecart` `trader_llama` `trapped_chest` `trapped_chest_large` `turtle` `villager` `vindicator` `wandering_trader` `warden` `witch` `wither` `wither_skeleton` `wither_skeleton_head` `wither_skull` `wolf` `zoglin` `zombie` `zombie_head` `zombie_horse` `zombified_piglin`",
+                  "fields": [
+                    [
+                      "Blocks",
+                      "`crop` `cube` `cube_sides` `cube_tiled` `tree`"
+                    ],
+                    [
+                      "Fun",
+                      "`cube_spin` `donut` `kick` `kick_normal_slim` `kick_slim` `kick_slim_normal` `prism_spin` `sphere`"
+                    ],
+                    [
+                      "Player",
+                      "`cape_elytra` `cape_elytra_slim` `player` `player_back` `player_back_slim` `player_buff` `player_buff_slim` `player_dance` `player_dance_slim` `player_flop` `player_flop_slim` `player_floss` `player_floss_slim` `player_gigachad` `player_gigachad_slim` `player_head` `player_maid` `player_maid_slim` `player_rotate` `player_rotate_slim` `player_round` `player_slim` `player_spin` `player_spin_slim` `player_squish` `player_squish_slim` `player_wave` `player_wave_slim`"
+                    ]
+                  ]
+                }
+              ],
+              "slashCommand": "minecraft/rendermodel"
+            },
             "setminecraftaccount": {
               "aliases": [
                 "setaccount",
@@ -3082,7 +3122,7 @@
               ],
               "arguments": "[minecraft-username]",
               "description": [
-                "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
+                "Link a Minecraft account to your Discord to run Minecraft commands without a username.",
                 "Leave blank to remove your account."
               ],
               "slashCommand": "minecraft/setaccount"
@@ -3374,7 +3414,10 @@
                 "timeouts",
                 "listwarns",
                 "listmutes",
-                "listtimeouts"
+                "listtimeouts",
+                "punishments",
+                "warnings",
+                "unwarn"
               ],
               "arguments": "[member]",
               "description": "View the moderation records for a member.",
@@ -9151,7 +9194,7 @@
             "resourcepacks": {
               "commands": {
                 "assets": {
-                  "description": "Get a link to download the Minecraft assets of a specific version.",
+                  "description": "Get a link to download the Minecraft assets for a version.",
                   "arguments": [
                     {
                       "name": "version",
@@ -9178,6 +9221,25 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/bedconverter"
                 },
+                "block": {
+                  "description": "Render a block from a vanilla version or resource pack.",
+                  "arguments": [
+                    {
+                      "name": "block",
+                      "description": "The block ID",
+                      "required": true
+                    },
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version"
+                    },
+                    {
+                      "name": "blockstate",
+                      "description": "A JSON object of blockstate property values"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecraftblock"
+                },
                 "cem": {
                   "description": "Get a list of bone names for each entity supported by OptiFine CEM",
                   "arguments": [
@@ -9193,19 +9255,19 @@
                   "arguments": [
                     {
                       "name": "normal-or-left-file",
-                      "description": "The normal, double, or left chest texture"
+                      "description": "Normal, double, or left chest"
                     },
                     {
                       "name": "normal-or-left-string",
-                      "description": "The normal, double, or left chest texture"
+                      "description": "Normal, double, or left chest"
                     },
                     {
                       "name": "right-file",
-                      "description": "The right chest texture"
+                      "description": "Right chest"
                     },
                     {
                       "name": "right-string",
-                      "description": "The right chest texture"
+                      "description": "Right chest"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/chestconverter"
@@ -9264,6 +9326,25 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/ctmsplitter"
                 },
+                "item": {
+                  "description": "Render an item from a vanilla version or resource pack.",
+                  "arguments": [
+                    {
+                      "name": "item",
+                      "description": "The item ID",
+                      "required": true
+                    },
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version"
+                    },
+                    {
+                      "name": "components",
+                      "description": "A JSON object of item components"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecraftitem"
+                },
                 "mojangconverter": {
                   "description": "Convert between the 1.15 and 1.16 Mojang logo formats.",
                   "arguments": [
@@ -9291,21 +9372,6 @@
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/mojangtext"
-                },
-                "optifinedoc": {
-                  "description": "View entries from the OptiFine documentation",
-                  "arguments": [
-                    {
-                      "name": "doc",
-                      "description": "The doc file to get",
-                      "required": true
-                    },
-                    {
-                      "name": "properties",
-                      "description": "The properties to view"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/optifinedoc"
                 },
                 "packpng": {
                   "description": "Render a resource packs \"pack.png\"",
@@ -9349,46 +9415,8 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/reloadpack"
                 },
-                "rendermodel": {
-                  "description": [
-                    "Render an image/images onto a 3D model.",
-                    "Run without any arguments to see the list of supported models."
-                  ],
-                  "cooldown": 5,
-                  "arguments": [
-                    {
-                      "name": "model",
-                      "description": "Model to render"
-                    },
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    },
-                    {
-                      "name": "image2-file",
-                      "description": "Not used on all models"
-                    },
-                    {
-                      "name": "image2-string",
-                      "description": "Not used on all models"
-                    },
-                    {
-                      "name": "image3-file",
-                      "description": "Not used on all models"
-                    },
-                    {
-                      "name": "image3-string",
-                      "description": "Not used on all models"
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/rendermodel"
-                },
                 "texture": {
-                  "description": "Get a minecraft texture from any vanilla version or a supported resource pack.",
+                  "description": "Get a texture from a vanilla version or resource pack.",
                   "arguments": [
                     {
                       "name": "texture",
@@ -9397,7 +9425,7 @@
                     },
                     {
                       "name": "version",
-                      "description": "The Minecraft version to check"
+                      "description": "The Minecraft version"
                     }
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecrafttexture"
@@ -9452,7 +9480,7 @@
                 "versiondifference": {
                   "description": [
                     "Compare the assets of two Minecraft versions against eachother.",
-                    "Saying \"latest\" will automatically compare the newest 2 versions."
+                    "Running the command with no arguments will compare the newest 2 versions."
                   ],
                   "arguments": [
                     {
@@ -9491,11 +9519,11 @@
                 },
                 {
                   "name": "count",
-                  "description": "The amount of textures to include in the palette"
+                  "description": "Number of textures in the palette"
                 },
                 {
                   "name": "type",
-                  "description": "The blockify type"
+                  "description": "Block type"
                 }
               ],
               "prefixCommand": "minecraft/blockpalette"
@@ -9564,9 +9592,47 @@
               ],
               "prefixCommand": "minecraft/optifine"
             },
+            "rendermodel": {
+              "description": [
+                "Render images onto a 3D model.",
+                "Run without any arguments to see the list of supported models."
+              ],
+              "cooldown": 5,
+              "arguments": [
+                {
+                  "name": "model",
+                  "description": "Model to render"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                },
+                {
+                  "name": "image2-file",
+                  "description": "Optional image"
+                },
+                {
+                  "name": "image2-string",
+                  "description": "Optional image"
+                },
+                {
+                  "name": "image3-file",
+                  "description": "Optional image"
+                },
+                {
+                  "name": "image3-string",
+                  "description": "Optional image"
+                }
+              ],
+              "prefixCommand": "minecraft/rendermodel"
+            },
             "setaccount": {
               "description": [
-                "Tie a Minecraft account to your Discord so you can run Minecraft commands without typing a username.",
+                "Link a Minecraft account to your Discord to run Minecraft commands without a username.",
                 "Leave blank to remove your account."
               ],
               "arguments": [
