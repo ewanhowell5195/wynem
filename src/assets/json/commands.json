@@ -539,7 +539,7 @@
                         ],
                         [
                           "transpose",
-                          "Swap places with the leading player. If you are leading it will be the second player"
+                          "Swap places with the leading player. If you are leading it will be the second player."
                         ],
                         [
                           "forwardOne",
@@ -583,7 +583,7 @@
                         ],
                         [
                           "setback",
-                          "Roll a dice. All other players will move backwards that amount"
+                          "Roll a dice. All other players will move backwards that amount."
                         ],
                         [
                           "silence",
@@ -1403,7 +1403,7 @@
                         "ltt"
                       ],
                       "arguments": "[image]",
-                      "description": "Put an image into Linus Sebastian's hands",
+                      "description": "Put an image into Linus Sebastian's hands.",
                       "slashCommand": "imagecompositing/linus"
                     },
                     "linusscreen": {
@@ -1415,7 +1415,7 @@
                         "lttscreen"
                       ],
                       "arguments": "[image]",
-                      "description": "Put an image into an art gallery.",
+                      "description": "Put an image onto Linus's screen.",
                       "slashCommand": "imagecompositing/linusscreen"
                     },
                     "locket": {
@@ -1426,7 +1426,7 @@
                       ],
                       "arguments": "[text]",
                       "cooldown": 3,
-                      "description": "Put images/text into a heart shaped locket.",
+                      "description": "Put images/text into a heart-shaped locket.",
                       "slashCommand": "imagecompositing/locket"
                     },
                     "newyork": {
@@ -1564,7 +1564,7 @@
                         "anime"
                       ],
                       "arguments": "[image]",
-                      "description": "Place anime eyes over someones face!",
+                      "description": "Place anime eyes over someone's face!",
                       "slashCommand": "imagefaces/animeeyes"
                     },
                     "bulgeface": {
@@ -1582,7 +1582,7 @@
                         "thuglife"
                       ],
                       "arguments": "[image]",
-                      "description": "Place MLG glasses over someones face!",
+                      "description": "Place MLG glasses over someone's face!",
                       "slashCommand": "imagefaces/dealwithit"
                     },
                     "detectface": {
@@ -1604,7 +1604,7 @@
                         "faceemoji"
                       ],
                       "arguments": "[image]",
-                      "description": "Place emojis on someones face!",
+                      "description": "Place emojis on someone's face!",
                       "slashCommand": "imagefaces/emoji"
                     },
                     "enlargeeyes": {
@@ -1614,7 +1614,7 @@
                         "bulgeeyes"
                       ],
                       "arguments": "[strength] [image]",
-                      "description": "Make someones eyes larger.",
+                      "description": "Make someone's eyes larger.",
                       "slashCommand": "imagefaces/enlargeeyes"
                     },
                     "makeup": {
@@ -1632,12 +1632,12 @@
                         "facealex"
                       ],
                       "arguments": "[image]",
-                      "description": "Place Steve or Alex's face over someones face!",
+                      "description": "Place Steve or Alex's face over someone's face!",
                       "slashCommand": "imagefaces/steve"
                     },
                     "trollface": {
                       "arguments": "[image]",
-                      "description": "Place a trollface over someones face!",
+                      "description": "Place a trollface over someone's face!",
                       "slashCommand": "imagefaces/trollface"
                     }
                   }
@@ -2710,7 +2710,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`mspainted`\n`optifine`"
                         ]
                       ]
                     }
@@ -2737,7 +2737,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`mspainted`\n`optifine`"
                         ]
                       ]
                     }
@@ -2761,7 +2761,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`mspainted`\n`optifine`"
                         ]
                       ]
                     }
@@ -2785,7 +2785,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                          "`4thful`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`mspainted`\n`optifine`"
                         ]
                       ]
                     }
@@ -2836,12 +2836,6 @@
                   "description": "Render a resource packs \"pack.png\"",
                   "slashCommand": "minecraft/resourcepacks/packpng"
                 },
-                "reloadpack": {
-                  "arguments": "[pack]",
-                  "cooldown": 20,
-                  "description": "Reload a resource pack that is used as a custom minecraft assets version.",
-                  "slashCommand": "minecraft/resourcepacks/reloadpack"
-                },
                 "tile": {
                   "aliases": [
                     "repeat"
@@ -2869,7 +2863,7 @@
                   ],
                   "arguments": "[old-version] [new-version]",
                   "description": [
-                    "Compare the assets of two Minecraft versions against eachother.",
+                    "Compare the assets of two Minecraft versions against each other.",
                     "Running the command with no arguments will compare the newest 2 versions."
                   ],
                   "slashCommand": "minecraft/resourcepacks/versiondifference"
@@ -2924,7 +2918,7 @@
                     "mcpicture"
                   ],
                   "arguments": "[minecraft-username] [image]",
-                  "description": "Create a minecraft avatar.",
+                  "description": "Create a Minecraft avatar.",
                   "slashCommand": "minecraftskins/avatar"
                 },
                 "minecraftkick": {
@@ -2932,7 +2926,7 @@
                     "mckick"
                   ],
                   "arguments": "[username1] [username2]",
-                  "description": "Make one minecraft player kick another minecraft player!",
+                  "description": "Make one Minecraft player kick another Minecraft player!",
                   "slashCommand": "minecraftskins/kick"
                 },
                 "outfit": {
@@ -2956,7 +2950,7 @@
                   ],
                   "arguments": "[format] [minecraft-username]",
                   "cooldown": 5,
-                  "description": "Render a minecraft skin in 3D.",
+                  "description": "Render a Minecraft skin in 3D.",
                   "slashCommand": "minecraftskins/render"
                 },
                 "skin": {
@@ -2985,7 +2979,7 @@
                     "img2skin"
                   ],
                   "arguments": "[image]",
-                  "description": "Turn any image into a minecraft skin.",
+                  "description": "Turn any image into a Minecraft skin.",
                   "slashCommand": "minecraftskins/skinify"
                 },
                 "slimconverter": {
@@ -3013,7 +3007,7 @@
                 "mcaccount"
               ],
               "arguments": "[member]",
-              "description": "View the minecraft account tied to someones Discord.",
+              "description": "View the Minecraft account tied to someone's Discord.",
               "slashCommand": "minecraft/account"
             },
             "minecraftchangelog": {
@@ -3495,7 +3489,7 @@
         "server": {
           "categories": {
             "artchives": {
-              "description": "The Artchive™ is a channel where users can submit images to be archived. These could be artworks, memes, or literally anything. Its up to each server to decide what to use it for.",
+              "description": "The Artchive™ is a channel where users can submit images to be archived. These could be artworks, memes, or literally anything. It's up to each server to decide what to use it for.",
               "commands": {
                 "artchive": {
                   "aliases": [
@@ -3527,7 +3521,7 @@
                     "addarchive"
                   ],
                   "arguments": "[channel]",
-                  "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
+                  "description": "Set the channel where submissions from the \"artchive\" command will be sent.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -3970,7 +3964,7 @@
                     "previewjoindm"
                   ],
                   "cooldown": 5,
-                  "description": "View what the join messages for the current server.",
+                  "description": "View the join messages for the current server.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -4209,7 +4203,7 @@
                     "toggleghostpings"
                   ],
                   "description": [
-                    "Toggles whether the bot will notifiy you when someone ghost pings you.",
+                    "Toggles whether the bot will notify you when someone ghost pings you.",
                     "Ghost ping notices are not sent when moderators delete messages (requires the bot to have audit log permissions).",
                     "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."
                   ],
@@ -4230,7 +4224,7 @@
                 "toggleuserleftnotices": {
                   "arguments": "[mode]",
                   "description": [
-                    "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
+                    "Toggles whether the bot will notify you when you reply to someone who has left the server.",
                     "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
                   ],
                   "permissions": [
@@ -4255,7 +4249,7 @@
                   "description": [
                     "Add a new ticket type.",
                     "The ticket types are the options that the user can select from when creating a ticket.",
-                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is denied from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
                     "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
                   ],
                   "permissions": [
@@ -6650,7 +6644,7 @@
               "prefixCommand": "images/imagefun/compositing/gallery"
             },
             "linus": {
-              "description": "Put an image into Linus Sebastian's hands",
+              "description": "Put an image into Linus Sebastian's hands.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -6664,7 +6658,7 @@
               "prefixCommand": "images/imagefun/compositing/linus"
             },
             "linusscreen": {
-              "description": "Put an image into an art gallery.",
+              "description": "Put an image onto Linus's screen.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -6678,7 +6672,7 @@
               "prefixCommand": "images/imagefun/compositing/linusscreen"
             },
             "locket": {
-              "description": "Put images/text into a heart shaped locket.",
+              "description": "Put images/text into a heart-shaped locket.",
               "cooldown": 3,
               "arguments": [
                 {
@@ -6969,7 +6963,7 @@
         "imagefaces": {
           "commands": {
             "animeeyes": {
-              "description": "Place anime eyes over someones face!",
+              "description": "Place anime eyes over someone's face!",
               "arguments": [
                 {
                   "name": "image-file",
@@ -7001,7 +6995,7 @@
               "prefixCommand": "images/imagefun/faces/bulgeface"
             },
             "dealwithit": {
-              "description": "Place MLG glasses over someones face!",
+              "description": "Place MLG glasses over someone's face!",
               "arguments": [
                 {
                   "name": "image-file",
@@ -7029,7 +7023,7 @@
               "prefixCommand": "images/imagefun/faces/detectface"
             },
             "emoji": {
-              "description": "Place emojis on someones face!",
+              "description": "Place emojis on someone's face!",
               "arguments": [
                 {
                   "name": "image-file",
@@ -7043,7 +7037,7 @@
               "prefixCommand": "images/imagefun/faces/emojiface"
             },
             "enlargeeyes": {
-              "description": "Make someones eyes larger.",
+              "description": "Make someone's eyes larger.",
               "arguments": [
                 {
                   "name": "strength",
@@ -7087,7 +7081,7 @@
               "prefixCommand": "images/imagefun/faces/makeup"
             },
             "steve": {
-              "description": "Place Steve or Alex's face over someones face!",
+              "description": "Place Steve or Alex's face over someone's face!",
               "arguments": [
                 {
                   "name": "image-file",
@@ -7101,7 +7095,7 @@
               "prefixCommand": "images/imagefun/faces/steveface"
             },
             "trollface": {
-              "description": "Place a trollface over someones face!",
+              "description": "Place a trollface over someone's face!",
               "arguments": [
                 {
                   "name": "image-file",
@@ -9445,18 +9439,6 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/packpng"
                 },
-                "reloadpack": {
-                  "description": "Reload a resource pack that is used as a custom minecraft assets version.",
-                  "cooldown": 20,
-                  "arguments": [
-                    {
-                      "name": "pack",
-                      "description": "The resource pack to reload",
-                      "required": true
-                    }
-                  ],
-                  "prefixCommand": "minecraft/resourcepacks/reloadpack"
-                },
                 "texture": {
                   "description": "Get a texture from a vanilla version or resource pack.",
                   "arguments": [
@@ -9521,7 +9503,7 @@
                 },
                 "versiondifference": {
                   "description": [
-                    "Compare the assets of two Minecraft versions against eachother.",
+                    "Compare the assets of two Minecraft versions against each other.",
                     "Running the command with no arguments will compare the newest 2 versions."
                   ],
                   "arguments": [
@@ -9541,7 +9523,7 @@
           },
           "commands": {
             "account": {
-              "description": "View the minecraft account tied to someones Discord.",
+              "description": "View the Minecraft account tied to someone's Discord.",
               "arguments": [
                 {
                   "name": "member",
@@ -9738,7 +9720,7 @@
         "minecraftskins": {
           "commands": {
             "avatar": {
-              "description": "Create a minecraft avatar.",
+              "description": "Create a Minecraft avatar.",
               "arguments": [
                 {
                   "name": "minecraft-username",
@@ -9804,7 +9786,7 @@
               "prefixCommand": "minecraft/skins/head"
             },
             "kick": {
-              "description": "Make one minecraft player kick another minecraft player!",
+              "description": "Make one Minecraft player kick another Minecraft player!",
               "arguments": [
                 {
                   "name": "username1",
@@ -9852,7 +9834,7 @@
               "prefixCommand": "minecraft/skins/previewskin"
             },
             "render": {
-              "description": "Render a minecraft skin in 3D.",
+              "description": "Render a Minecraft skin in 3D.",
               "cooldown": 5,
               "arguments": [
                 {
@@ -9877,7 +9859,7 @@
               "prefixCommand": "minecraft/skins/skin"
             },
             "skinify": {
-              "description": "Turn any image into a minecraft skin.",
+              "description": "Turn any image into a Minecraft skin.",
               "arguments": [
                 {
                   "name": "image-file",
@@ -10246,7 +10228,7 @@
                   "prefixCommand": "server/artchives/removeartchive"
                 },
                 "set": {
-                  "description": "Set the channel were submissions from the \"artchive\" command will be sent.",
+                  "description": "Set the channel where submissions from the \"artchive\" command will be sent.",
                   "arguments": [
                     {
                       "name": "channel",
@@ -10547,7 +10529,7 @@
                   "prefixCommand": "server/joinmessages/setleavemessage"
                 },
                 "view": {
-                  "description": "View what the join messages for the current server.",
+                  "description": "View the join messages for the current server.",
                   "cooldown": 5,
                   "permissions": [
                     "Manage Guild"
@@ -10697,7 +10679,7 @@
                   "description": [
                     "Add a new ticket type.",
                     "The ticket types are the options that the user can select from when creating a ticket.",
-                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is deined from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
+                    "There are two types of ticket type:\n\nCreate: When creating the ticket, the user is shown a form that they need to fill in before the ticket is created.\n\nDeny: The user is denied from creating a ticket and a custom message is shown to them. Useful for stopping people making tickets for things they shouldn't be making tickets about.",
                     "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
                   ],
                   "permissions": [
@@ -10783,7 +10765,7 @@
                 },
                 "ghostpingnotices": {
                   "description": [
-                    "Toggles whether the bot will notifiy you when someone ghost pings you.",
+                    "Toggles whether the bot will notify you when someone ghost pings you.",
                     "Ghost ping notices are not sent when moderators delete messages (requires the bot to have audit log permissions).",
                     "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."
                   ],
@@ -10801,7 +10783,7 @@
                 },
                 "userleftnotices": {
                   "description": [
-                    "Toggles whether the bot will notifiy you when you reply to someone who has left the server.",
+                    "Toggles whether the bot will notify you when you reply to someone who has left the server.",
                     "Notices are only sent if the message you reply to is within the last 50 messages in a channel, and the bot has not already sent a notice in the last 10 messages."
                   ],
                   "arguments": [],

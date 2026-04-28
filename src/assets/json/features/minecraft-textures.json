@@ -1,12 +1,10 @@
 {
   "commands": {
     "prefix": [
-      ["minecraft", "resourcepacks", "minecrafttexture"],
-      ["minecraft", "resourcepacks", "reloadpack"]
+      ["minecraft", "resourcepacks", "minecrafttexture"]
     ],
     "slash": [
-      ["minecraft", "resourcepacks", "texture"],
-      ["minecraft", "resourcepacks", "reloadpack"]
+      ["minecraft", "resourcepacks", "texture"]
     ]
   },
   "description": [
@@ -145,9 +143,9 @@
             "Anyone can submit a resource pack so that it can be available within Wynem, as long as it meets certain criteria.\n\nTo submit packs, please go to the <a href=\"https://github.com/ewanhowell5195/WynemResourcePacks\" target=\"_blank\">WynemResourcePacks GitHub repository</a>.",
             {
               "type": "heading",
-              "text": "Reloading resource packs"
+              "text": "Updating resource packs"
             },
-            "Resource packs may get updated and need to be reloaded. If this is the case, the Discord users that are listed as the author inside the GitHub repository will be able to trigger a reload of the resource pack. This can be done by using the <code class=\"command prefix\">e!reloadpack [pack]</code><code class=\"command slash\">/minecraft resourcepacks reloadpack pack:[pack]</code> command. For example: <code class=\"command prefix\">e!reloadpack f8thful</code><code class=\"command slash\">/minecraft resourcepacks reloadpack pack:f8thful</code>"
+            "Pack updates are detected automatically. Once an hour, the bot checks each pack's source for changes (the latest commit on GitHub, or the latest version on Modrinth). If something has changed, the pack is re-downloaded the next time it is used. No manual reload is required."
           ]
         }
       ]
