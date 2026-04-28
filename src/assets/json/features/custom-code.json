@@ -161,8 +161,8 @@
                         "footer": ["Footer text", "/assets/images/logo/logo.webp"],
                         "fields": [
                           ["Field 1", "Value 1", true],
-                          ["Field 1", "Value 2", true],
-                          ["Field 2", "Value 3", false]
+                          ["Field 2", "Value 2", true],
+                          ["Field 3", "Value 3", false]
                         ]
                       }
                     }

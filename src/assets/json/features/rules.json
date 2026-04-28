@@ -90,8 +90,8 @@
               "data": {
                 "title": "Rule Creator",
                 "rows": [
-                  ["rule", "No breaking the rules!", true],
-                  ["rule description", "Do not break the rules or you will be banned", false, 256]
+                  ["Rule", "No breaking the rules!", true],
+                  ["Rule Description", "Do not break the rules or you will be banned", false, 256]
                 ]
               }
             },
@@ -129,10 +129,10 @@
             {
               "type": "modal",
               "data": {
-                "title": "Rule Creator",
+                "title": "Rule Editor",
                 "rows": [
-                  ["rule", "Follow the Discord Terms of Service", true],
-                  ["rule description", "Please follow the Discord Terms of Service in all regards withi…", false, 256]
+                  ["Rule", "Follow the Discord Terms of Service", true],
+                  ["Rule Description", "Please follow the Discord Terms of Service in all regards withi…", false, 512]
                 ]
               }
             },

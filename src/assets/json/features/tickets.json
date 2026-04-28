@@ -30,12 +30,12 @@
         "description": "Click below to create a new <#tickets> ticket!",
         "buttons": [
           {
-            "label": "Create Ticket",
+            "label": "Create ticket",
             "emoji": "plus",
             "style": "green"
           },
           {
-            "label": "Close Ticket",
+            "label": "Close ticket",
             "emoji": "door",
             "style": "red"
           }
@@ -71,12 +71,12 @@
                 "description": "Click below to create a new <#tickets> ticket!",
                 "buttons": [
                   {
-                    "label": "Create Ticket",
+                    "label": "Create ticket",
                     "emoji": "plus",
                     "style": "green"
                   },
                   {
-                    "label": "Close Ticket",
+                    "label": "Close ticket",
                     "emoji": "door",
                     "style": "red"
                   }
@@ -142,19 +142,19 @@
                 "description": "Click below to create a new <#tickets> ticket!",
                 "buttons": [
                   {
-                    "label": "Create Ticket",
+                    "label": "Create ticket",
                     "emoji": "plus",
                     "style": "green"
                   },
                   {
-                    "label": "Close Ticket",
+                    "label": "Close ticket",
                     "emoji": "door",
                     "style": "red"
                   }
                 ]
               }
             },
-            "Press the `Create Ticket` button to start creating a new ticket.",
+            "Press the `Create ticket` button to start creating a new ticket.",
             "You will be shown a select menu where you can select the ticket type you'd like to use for your ticket.",
             {
               "type": "embed",
@@ -200,7 +200,7 @@
         {
           "name": "Closing Tickets",
           "content": [
-            "To close a ticket, use the `Close Ticket` button in the tickets channel.",
+            "To close a ticket, use the `Close ticket` button in the tickets channel.",
             {
               "type": "embed",
               "data": {
@@ -208,12 +208,12 @@
                 "description": "Click below to create a new <#tickets> ticket!",
                 "buttons": [
                   {
-                    "label": "Create Ticket",
+                    "label": "Create ticket",
                     "emoji": "plus",
                     "style": "green"
                   },
                   {
-                    "label": "Close Ticket",
+                    "label": "Close ticket",
                     "emoji": "door",
                     "style": "red"
                   }

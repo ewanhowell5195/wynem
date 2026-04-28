@@ -72,7 +72,7 @@
               "type": "embed",
               "data": {
                 "author": ["minecrafttexture", "/assets/images/icons/help.webp"],
-                "description": "```Get a minecraft texture from any vanilla version or a supported resource pack.``````Press the \"More information\" to see extra information.```",
+                "description": "```Get a texture from a vanilla version or resource pack.``````Press the \"More information\" to see extra information.```",
                 "fields": [
                   ["Formatting", "`e!minecrafttexture [texture] [version]`"],
                   ["Aliases", "`mctexture` `texture`"],

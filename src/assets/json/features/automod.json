@@ -49,8 +49,8 @@
                   "image": "/assets/images/logo/ewan.webp",
                   "message": "<span class=\"command prefix\">e!addautomod invites</span><span class=\"command slash\">used <span class=\"link\">/serverconfig addautomod</span></span>"
                 },
-                "title": "Automod rule added",
-                "description": "The automod rule `invites` has been added to the server\n\nYou can customise it further from the server's automod settings page"
+                "title": "AutoMod rule added",
+                "description": "The AutoMod rule `invites` has been added to the server\n\nYou can customise it further from the server's AutoMod settings page"
               }
             }
           ]

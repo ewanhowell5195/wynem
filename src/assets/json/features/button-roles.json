@@ -59,7 +59,7 @@
         {
           "name": "Creating Button Roles",
           "content": [
-            "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/serverconfig roles buttonroles</code> command, and then click the button to start.",
+            "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/role buttonroles</code> command, and then click the button to start.",
             {
               "type": "embed",
               "data": {
@@ -76,11 +76,11 @@
               "data": {
                 "title": "Button Role Builder",
                 "rows": [
-                  ["1st role", "The name or ID of the 1st role", true],
-                  ["1st role text", "The text that shows on the 1st role's button"],
-                  ["1st role emoji", "The emoji that shows on the 1st role's button"],
-                  ["1st colour", "The colour of the 1st role's button (red, green, blue, grey)"],
-                  ["1st role type", "normal, binding, unique"]
+                  ["1st Role", "The name or ID of the 1st role", true],
+                  ["1st Role Text", "The text that shows on the 1st role's button"],
+                  ["1st Role Emoji", "The emoji that shows on the 1st role's button"],
+                  ["1st Role Colour", "The colour of the 1st role's button (red, green, blue, grey)"],
+                  ["1st Role Type", "normal, binding, unique"]
                 ]
               }
             },

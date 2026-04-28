@@ -96,7 +96,7 @@
               "type": "embed",
               "data": {
                 "warning": true,
-                "description": "Are you sure you want to remove the starboard in <#starboard>",
+                "description": "Are you sure you want to remove the starboard in <#starboard>?",
                 "buttons": [
                   {
                     "label": "Confirm",

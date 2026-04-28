@@ -28,7 +28,7 @@
           "image": "/assets/images/logo/ewan.webp",
           "message": "e!issue #123"
         },
-        "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+        "author": ["Wynem Issue tracker", "/assets/images/icons/github.webp"],
         "fields": [
           ["Issue #123", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">The issue tracker doesn't reply to issue numbers correctly</a>"],
           ["Created", "<t:20 April 2023>"],
@@ -60,7 +60,7 @@
           "image": "/assets/images/avatars/theannoying.webp",
           "message": "Hey does anyone know if #456 has been fixed yet?"
         },
-        "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+        "author": ["Wynem Issue tracker", "/assets/images/icons/github.webp"],
         "fields": [
           ["Issue #456", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">Wynem fails to get some emoji images in image commands</a>"],
           ["Created", "<t:22 April 2023>"],
@@ -130,7 +130,7 @@
             {
               "type": "embed",
               "data": {
-                "author": ["Wynem Issue Tracker", "/assets/images/icons/github.webp"],
+                "author": ["Wynem Issue tracker", "/assets/images/icons/github.webp"],
                 "fields": [
                   ["Issue #123", "<a href=\"https://youtu.be/dQw4w9WgXcQ\">The issue tracker doesn't reply to issue numbers correctly</a>"],
                   ["Created", "<t:20 April 2023>"],
