@@ -22,7 +22,8 @@
       "type": "tablelist",
       "rows": [
         ["all", "This type will add all the types to the server in one go\n\n"],
-        ["discordlinks", "Block users hiding Discord links inside a markdown disguised link:\n\n<code>[message](https://discord.gg/pkRxtGw)</code>\n\n"],
+        ["discordlinks", "Block users hiding any Discord link inside a markdown disguised link:\n\n<code>[click here](https://discord.com/channels/@me)</code>\n\n"],
+        ["disguisedservers", "Block users hiding server invite links inside a markdown disguised link:\n\n<code>[check this out](https://discord.gg/pkRxtGw)</code>\n\n"],
         ["markdownlinks", "Block users from using any markdown disguised links:\n\n<code>[message](https://wynem.com/)</code>\n\n"],
         ["invites", "Block users sending Discord invite links:\n\n<code>https://discord.gg/pkRxtGw</code>\n\n"],
         ["markdowntitles", "Block users sending large text using markdown:\n\n<code># THIS TEXT IS LARGE</code>\n\nThis will only work if the title is in the first line of the message\n\n"],
