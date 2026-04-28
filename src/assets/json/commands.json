@@ -57,7 +57,7 @@
                     ],
                     [
                       "Custom Code",
-                      "Write your own code to decide what the autoresponse does!"
+                      "Write your own code to decide what the auto-response does!"
                     ]
                   ]
                 }
@@ -178,8 +178,8 @@
                   "description": [
                     "Personal commands are commands that you can configure to respond with whatever you want.",
                     "They are similar to custom commands, but instead of belonging to a server, they belong to you, meaning you can use them anywhere!",
-                    "Personal commands can only by run via the `/personalcommand run` slash command",
-                    "You can use `e!help personal` to view all your personal commands, or `e!help personal:[username/id]` to view someone elses personal commands.",
+                    "Personal commands can only be run via the `/personalcommand run` slash command",
+                    "You can use `e!help personal` to view all your personal commands, or `e!help personal:[username/id]` to view someone else's personal commands.",
                     "When running personal commands, the `owner` field can be used to run commands belonging to other users or servers. You can enter user IDs or usernames, and for servers you can enter a server ID or use `server` to refer to the current server.",
                     "Personal command types:\n- **Message**: Will send a regular Discord message\n- **Image/Gif/Video**: Will send an image/gif/video in chat\n- **Custom Embed**: Will send a custom embed\n- **URL Buttons**: Will send a message containing some URL buttons\n- **Image Command**: Create a custom image command where users can paste images into a background image\n- **Custom Code**: Write your own code to decide what the command does!"
                   ],
@@ -322,7 +322,7 @@
               "aliases": [
                 "botserver"
               ],
-              "description": "Get the invite link for the bot creators Discord server.",
+              "description": "Get the invite link for the bot creator's Discord server.",
               "slashCommand": "bot/discord"
             },
             "donate": {
@@ -335,7 +335,7 @@
               ],
               "arguments": "[colour]",
               "description": [
-                "Change the bots embed colour on the current server.",
+                "Change the bot's embed colour on the current server.",
                 "The embed colour is the coloured bar down the side of each message.",
                 "Set the colour to `default` to return it to the default colour."
               ],
@@ -351,7 +351,7 @@
                 "owner",
                 "creator"
               ],
-              "description": "Get a link to the bot creators website.",
+              "description": "Get a link to the bot creator's website.",
               "slashCommand": "bot/ewan"
             },
             "exportdata": {
@@ -413,7 +413,7 @@
                 "resendjoinmessage",
                 "resendserverjoinmessage"
               ],
-              "description": "Resend the message the bot sends when it joins the message in the current channel.",
+              "description": "Resend the message the bot sends when it joins a server, in the current channel.",
               "permissions": [
                 "Manage Guild"
               ],
@@ -458,7 +458,7 @@
                 "web",
                 "site"
               ],
-              "description": "Get a link to the bots website.",
+              "description": "Get a link to the bot's website.",
               "slashCommand": "bot/website"
             }
           }
@@ -814,7 +814,7 @@
               "commands": {
                 "ellipse": {
                   "arguments": "[x] [y] [width] [height] [colour] [image]",
-                  "description": "Draw a ellipse on an image.",
+                  "description": "Draw an ellipse on an image.",
                   "slashCommand": "image/drawing/ellipse"
                 },
                 "floodfill": {
@@ -1875,7 +1875,7 @@
                       "cooldown": 5,
                       "description": [
                         "Make a character say something below an image.",
-                        "You can use a characters name instead of the command name to directly use that character.",
+                        "You can use a character's name instead of the command name to directly use that character.",
                         "Put \"2\" at the end of the command name to put the character on the opposite side.",
                         "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter\n- tom"
                       ],
@@ -2717,6 +2717,33 @@
                   ],
                   "slashCommand": "minecraft/resourcepacks/block"
                 },
+                "minecraftblockstates": {
+                  "aliases": [
+                    "mcblockstates",
+                    "blockstates",
+                    "minecraftblockstate",
+                    "mcblockstate",
+                    "blockstate"
+                  ],
+                  "arguments": "[block] [version]",
+                  "description": "List all blockstate properties and their values for a block in a specific Minecraft version.",
+                  "extra": [
+                    {
+                      "title": "Supported versions",
+                      "fields": [
+                        [
+                          "Official Versions",
+                          "Any Java Edition version from the official Minecraft launcher"
+                        ],
+                        [
+                          "Resource Packs",
+                          "`4thful`\n`barebones`\n`barely_default`\n`better_bows`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_programmer_art`\n`classic_faithful_64x`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless_16x`\n`mspainted`\n`oledcraft`\n`optifine`\n`scrolling_textures`\n`sheepified_remastered`\n`umbrella_villagers`"
+                        ]
+                      ]
+                    }
+                  ],
+                  "slashCommand": "minecraft/resourcepacks/blockstates"
+                },
                 "minecraftitem": {
                   "aliases": [
                     "mcitem",
@@ -3486,7 +3513,7 @@
                   "aliases": [
                     "removearchive"
                   ],
-                  "description": "Remove the servers Artchive channel.",
+                  "description": "Remove the server's Artchive channel.",
                   "permissions": [
                     "Guild Only",
                     "Manage Channels"
@@ -3508,7 +3535,7 @@
                   "slashCommand": "serverconfig/artchive/set"
                 },
                 "viewartchive": {
-                  "description": "Show the servers Artchive channel.",
+                  "description": "Show the server's Artchive channel.",
                   "permissions": [
                     "Guild Only"
                   ],
@@ -3565,7 +3592,7 @@
                         "showsb",
                         "sbinfo"
                       ],
-                      "description": "Get the information about the servers starboards.",
+                      "description": "Get the information about the server's starboards.",
                       "slashCommand": "server/starboardinfo"
                     }
                   }
@@ -4303,7 +4330,7 @@
                     "tickettypesview"
                   ],
                   "arguments": "[ticket-type]",
-                  "description": "View the servers tickets system and the ticket types.",
+                  "description": "View the server's tickets system and the ticket types.",
                   "permissions": [
                     "Guild Only"
                   ],
@@ -4367,7 +4394,7 @@
                 "picture"
               ],
               "arguments": "[member]",
-              "description": "Show a users avatar, with links to get it in different resolutions.",
+              "description": "Show a user's avatar, with links to get it in different resolutions.",
               "slashCommand": "avatar/get",
               "contextCommand": "user/get-avatar"
             },
@@ -4585,7 +4612,7 @@
                 "setdefaultvolume"
               ],
               "arguments": "[volume]",
-              "description": "Change the bots default voice channel volume.",
+              "description": "Change the bot's default voice channel volume.",
               "permissions": [
                 "Guild Only",
                 "Manage Guild"
@@ -4633,7 +4660,7 @@
               "slashCommand": "voice/play"
             },
             "removeautotts": {
-              "description": "Remove the servers AutoTTS channel.",
+              "description": "Remove the server's AutoTTS channel.",
               "permissions": [
                 "Guild Only",
                 "Manage Guild"
@@ -4696,7 +4723,7 @@
               "slashCommand": "voice/tts"
             },
             "viewautotts": {
-              "description": "Show the servers AutoTTS channel.",
+              "description": "Show the server's AutoTTS channel.",
               "permissions": [
                 "Guild Only"
               ],
@@ -4707,7 +4734,7 @@
                 "setvolume"
               ],
               "arguments": "[volume]",
-              "description": "Change the bots voice channel volume.",
+              "description": "Change the bot's voice channel volume.",
               "permissions": [
                 "Guild Only"
               ],
@@ -4895,7 +4922,7 @@
               "prefixCommand": "images/imagefun/avatars/draw25"
             },
             "get": {
-              "description": "Show a users avatar, with links to get it in different resolutions.",
+              "description": "Show a user's avatar, with links to get it in different resolutions.",
               "arguments": [
                 {
                   "name": "member",
@@ -5135,7 +5162,7 @@
               "prefixCommand": "bot/credits"
             },
             "discord": {
-              "description": "Get the invite link for the bot creators Discord server.",
+              "description": "Get the invite link for the bot creator's Discord server.",
               "prefixCommand": "bot/discord"
             },
             "donate": {
@@ -5143,7 +5170,7 @@
               "prefixCommand": "bot/donate"
             },
             "ewan": {
-              "description": "Get a link to the bot creators website.",
+              "description": "Get a link to the bot creator's website.",
               "prefixCommand": "bot/ewan"
             },
             "exportdata": {
@@ -5185,7 +5212,7 @@
               "prefixCommand": "bot/terms"
             },
             "website": {
-              "description": "Get a link to the bots website.",
+              "description": "Get a link to the bot's website.",
               "prefixCommand": "bot/website"
             }
           }
@@ -5311,7 +5338,7 @@
           },
           "commands": {
             "defaultvolume": {
-              "description": "Change the bots default voice channel volume.",
+              "description": "Change the bot's default voice channel volume.",
               "arguments": [
                 {
                   "name": "volume",
@@ -5325,7 +5352,7 @@
             },
             "embedcolour": {
               "description": [
-                "Change the bots embed colour on the current server.",
+                "Change the bot's embed colour on the current server.",
                 "The embed colour is the coloured bar down the side of each message.",
                 "Set the colour to `default` to return it to the default colour."
               ],
@@ -6030,7 +6057,7 @@
                     },
                     {
                       "name": "colour-count",
-                      "description": "The amount of colours"
+                      "description": "The number of colours"
                     },
                     {
                       "name": "angle",
@@ -6044,7 +6071,7 @@
             "drawing": {
               "commands": {
                 "ellipse": {
-                  "description": "Draw a ellipse on an image.",
+                  "description": "Draw an ellipse on an image.",
                   "arguments": [
                     {
                       "name": "x",
@@ -8848,7 +8875,7 @@
             "say": {
               "description": [
                 "Make a character say something below an image.",
-                "You can use a characters name instead of the command name to directly use that character.",
+                "You can use a character's name instead of the command name to directly use that character.",
                 "Put \"2\" at the end of the command name to put the character on the opposite side.",
                 "Available characters:\n- rdj\n- stuff\n- peter\n- eminem\n- willsmith\n- sonic\n- yoda\n- mario\n- luigi\n- lisa\n- cap\n- walter\n- tom"
               ],
@@ -9240,6 +9267,21 @@
                   ],
                   "prefixCommand": "minecraft/resourcepacks/minecraftblock"
                 },
+                "blockstates": {
+                  "description": "List all blockstate properties and their values for a block in a specific Minecraft version.",
+                  "arguments": [
+                    {
+                      "name": "block",
+                      "description": "The block ID",
+                      "required": true
+                    },
+                    {
+                      "name": "version",
+                      "description": "The Minecraft version"
+                    }
+                  ],
+                  "prefixCommand": "minecraft/resourcepacks/minecraftblockstates"
+                },
                 "cem": {
                   "description": "Get a list of bone names for each entity supported by OptiFine CEM",
                   "arguments": [
@@ -9438,11 +9480,11 @@
                   "arguments": [
                     {
                       "name": "width",
-                      "description": "The width to tile over (1-10)"
+                      "description": "The width to tile over"
                     },
                     {
                       "name": "height",
-                      "description": "The height to tile over (1-10)"
+                      "description": "The height to tile over"
                     },
                     {
                       "name": "random-rotation-enabled",
@@ -10092,7 +10134,7 @@
                   "prefixCommand": "server/artchives/artchive"
                 },
                 "view": {
-                  "description": "Show the servers Artchive channel.",
+                  "description": "Show the server's Artchive channel.",
                   "prefixCommand": "server/artchives/viewartchive"
                 }
               }
@@ -10177,11 +10219,11 @@
               "prefixCommand": "server/rules/rule"
             },
             "starboardinfo": {
-              "description": "Get the information about the servers starboards.",
+              "description": "Get the information about the server's starboards.",
               "prefixCommand": "server/channel/starboards/starboardinfo"
             },
             "viewtickets": {
-              "description": "View the servers tickets system and the ticket types.",
+              "description": "View the server's tickets system and the ticket types.",
               "arguments": [
                 {
                   "name": "ticket-type",
@@ -10197,7 +10239,7 @@
             "artchive": {
               "commands": {
                 "remove": {
-                  "description": "Remove the servers Artchive channel.",
+                  "description": "Remove the server's Artchive channel.",
                   "permissions": [
                     "Manage Channels"
                   ],
@@ -10238,7 +10280,7 @@
                   "prefixCommand": "voice/ignoreprefix"
                 },
                 "remove": {
-                  "description": "Remove the servers AutoTTS channel.",
+                  "description": "Remove the server's AutoTTS channel.",
                   "permissions": [
                     "Manage Guild"
                   ],
@@ -10790,7 +10832,7 @@
               "prefixCommand": "moderation/addautomod"
             },
             "resendjoininfo": {
-              "description": "Resend the message the bot sends when it joins the message in the current channel.",
+              "description": "Resend the message the bot sends when it joins a server, in the current channel.",
               "permissions": [
                 "Manage Guild"
               ],
@@ -11162,11 +11204,11 @@
               "prefixCommand": "voice/tts"
             },
             "viewautotts": {
-              "description": "Show the servers AutoTTS channel.",
+              "description": "Show the server's AutoTTS channel.",
               "prefixCommand": "voice/viewautotts"
             },
             "volume": {
-              "description": "Change the bots voice channel volume.",
+              "description": "Change the bot's voice channel volume.",
               "arguments": [
                 {
                   "name": "volume",
@@ -11447,7 +11489,7 @@
         "user": {
           "commands": {
             "get-avatar": {
-              "description": "Show a users avatar, with links to get it in different resolutions.",
+              "description": "Show a user's avatar, with links to get it in different resolutions.",
               "type": "user",
               "prefixCommand": "user/avatar",
               "slashCommand": "avatar/get"
