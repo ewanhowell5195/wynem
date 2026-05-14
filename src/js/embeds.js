@@ -28,10 +28,10 @@ function populateEmbed(embed, text, thumbnail, data) {
     }
   }
   if (data.image) {
-    E("img").addClass("embed-image popupable").attr("src", data.image).appendTo(embed)
+    E("img").addClass("embed-image").attr({ src: data.image, "data-popupable": "" }).appendTo(embed)
   }
   if (data.thumbnail) {
-    E("img").addClass("embed-thumbnail popupable").attr("src", data.thumbnail).appendTo(thumbnail)
+    E("img").addClass("embed-thumbnail").attr({ src: data.thumbnail, "data-popupable": "" }).appendTo(thumbnail)
   } else {
     thumbnail.remove()
   }

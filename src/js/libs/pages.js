@@ -1,5 +1,3 @@
-import { popupImage } from "/js/popupImage.js"
-
 function setInnerHTML(elm, html) {
   elm.innerHTML = html
   for (const oldScript of elm.querySelectorAll("script")) {
@@ -46,7 +44,6 @@ class Page extends HTMLElement {
       this.shadowRoot.append(this.shadowBody[0])
       setInnerHTML(this.shadowBody[0], content)
       this.$ = (...args) => $(...args, this.shadowRoot)
-      this.$(this.shadowBody).on("click", "img.popupable", e => popupImage(e.currentTarget.getAttribute("src"), e.currentTarget.getAttribute("scale")))
       await onReady(this.$)
       this.hasLoaded = true
       this.classList.remove("loading")
@@ -76,7 +73,7 @@ class Page extends HTMLElement {
             animation-duration: 0s !important;
             transition: all 0s !important;
           }
-          img.popupable {
+          [data-popupable], [data-popupable] * {
             cursor: pointer;
           }
           ::-webkit-scrollbar {
