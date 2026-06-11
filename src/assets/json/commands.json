@@ -1732,6 +1732,19 @@
                       "description": "Make an image jolly!",
                       "slashCommand": "imageoverlays/jolly"
                     },
+                    "overlaypreset": {
+                      "aliases": [
+                        "presetoverlay"
+                      ],
+                      "arguments": "[preset] [distort-overlay] [image]",
+                      "description": [
+                        "Overlay a preset image over your image.",
+                        "By default your image is distorted to fit the overlay's aspect ratio. Enable `distortOverlay` to instead distort the overlay to match your image's aspect ratio.",
+                        "The output always uses the overlay's resolution, so lower resolution images are upscaled to it.",
+                        "Available presets: `sulfurcube`, `tinytakeover`"
+                      ],
+                      "slashCommand": "imageoverlays/preset"
+                    },
                     "petpet": {
                       "aliases": [
                         "pet"
@@ -8639,6 +8652,34 @@
                 }
               ],
               "prefixCommand": "images/imagefun/overlays/petpet"
+            },
+            "preset": {
+              "description": [
+                "Overlay a preset image over your image.",
+                "By default your image is distorted to fit the overlay's aspect ratio. Enable `distortOverlay` to instead distort the overlay to match your image's aspect ratio.",
+                "The output always uses the overlay's resolution, so lower resolution images are upscaled to it.",
+                "Available presets: `sulfurcube`, `tinytakeover`"
+              ],
+              "arguments": [
+                {
+                  "name": "preset",
+                  "description": "The overlay preset to use",
+                  "required": true
+                },
+                {
+                  "name": "distort-overlay",
+                  "description": "Distort the overlay to match your image instead"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "prefixCommand": "images/imagefun/overlays/overlaypreset"
             },
             "shoot": {
               "description": "Point a gun at an image.",
