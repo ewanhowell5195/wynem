@@ -847,7 +847,8 @@
           ]
         },
         {
-          "id": "rabbit"
+          "id": "rabbit",
+          "popup": "This model is not supported by OptiFine yet and only works with EMF. The rabbit is currently broken in EMF and its front legs do not work properly"
         },
         {
           "id": "raft"
@@ -1126,10 +1127,12 @@
         },
         {
           "id": "sulfur_cube",
+          "popup": "emf_only",
           "variants": [
             {
               "id": "sulfur_cube_inner",
-              "name": "Sulfur Cube [Inner]"
+              "name": "Sulfur Cube [Inner]",
+              "popup": "emf_only"
             }
           ]
         },
@@ -1339,10 +1342,12 @@
         {
           "id": "sulfur_cube_small",
           "name": "Small Sulfur Cube",
+          "popup": "emf_only",
           "variants": [
             {
               "id": "sulfur_cube_inner",
-              "name": "Small Sulfur Cube [Inner]"
+              "name": "Small Sulfur Cube [Inner]",
+              "popup": "emf_only"
             }
           ]
         }
