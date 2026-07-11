@@ -1,5 +1,5 @@
 {
-  "version": "4.1.1",
+  "version": "4.1.2",
   "categories": [
     {
       "type": "heading",
@@ -1315,6 +1315,12 @@
           "popup": "emf_only"
         },
         {
+          "id": "happy_ghast_baby_21.11",
+          "name": "Ghastling",
+          "file": "happy_ghast_baby",
+          "model": "happy_ghast_baby"
+        },
+        {
           "id": "nautilus_baby",
           "name": "Baby Nautilus"
         }
@@ -1601,12 +1607,6 @@
           "file": "goat_baby",
           "model": "goat",
           "popup": "only_applies_regular"
-        },
-        {
-          "id": "happy_ghast_baby_21.11",
-          "name": "Ghastling",
-          "file": "happy_ghast_baby",
-          "model": "happy_ghast_baby"
         },
         {
           "id": "hoglin_baby_21.11",
