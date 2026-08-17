@@ -68,7 +68,10 @@
                     "newautoresponse",
                     "autoresponse"
                   ],
-                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "description": [
+                    "Run a builder that adds a new auto-response for the server.",
+                    "The builder can limit which channels the auto-response responds in, either only responding in the selected channels, or responding everywhere except them."
+                  ],
                   "extra": [
                     {
                       "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
@@ -79,6 +82,26 @@
                     "Manage Guild"
                   ],
                   "slashCommand": "botconfig/autoresponses/add"
+                },
+                "editautoresponse": {
+                  "aliases": [
+                    "autoresponseedit"
+                  ],
+                  "arguments": "[auto-response-id]",
+                  "description": [
+                    "Edit one of the server's auto-responses.",
+                    "The response type cannot be changed. To change the response type, remove the auto-response and recreate it."
+                  ],
+                  "extra": [
+                    {
+                      "description": "This command uses handlebars. Place these in the text to have them replaced in the command output.\n\n```{{user}}      - Ping the user\n{{username}}  - The user's username\n{{name}}      - The user's display name\n{{server}}    - The server name\n{{owner}}     - Ping the server owner\n{{bot}}       - Ping the bot\n{{time}}      - The current time\n{{date}}      - The current date\n{{banappeal}} - The server's ban appeal link\n{{prefix}}    - The bot's prefix in the server\n{{channel}}   - Mention the current channel```"
+                    }
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "botconfig/autoresponses/edit"
                 },
                 "removeautoresponse": {
                   "aliases": [
@@ -150,6 +173,22 @@
                       ],
                       "slashCommand": "botconfig/customcommands/add"
                     },
+                    "editcustomcommand": {
+                      "aliases": [
+                        "customcommandedit",
+                        "editcommand",
+                        "commandedit",
+                        "editcc",
+                        "ccedit"
+                      ],
+                      "arguments": "[command]",
+                      "description": "Edit one of the server's custom commands.",
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "botconfig/customcommands/edit"
+                    },
                     "removecustomcommand": {
                       "aliases": [
                         "deletecustomcommand",
@@ -171,6 +210,43 @@
                         "Manage Guild"
                       ],
                       "slashCommand": "botconfig/customcommands/remove"
+                    },
+                    "stealcustomcommand": {
+                      "aliases": [
+                        "customcommandsteal",
+                        "clonecustomcommand",
+                        "customcommandclone",
+                        "stealcommand",
+                        "clonecommand",
+                        "commandsteal",
+                        "commandclone",
+                        "stealcc",
+                        "ccsteal",
+                        "clonecc",
+                        "ccclone"
+                      ],
+                      "arguments": "[owner] [command]",
+                      "description": "Steal a command from a user or server, and add it to this server's custom commands.",
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "botconfig/customcommands/steal"
+                    },
+                    "viewcustomcommand": {
+                      "aliases": [
+                        "customcommandview",
+                        "viewcommand",
+                        "commandview",
+                        "viewcc",
+                        "ccview"
+                      ],
+                      "arguments": "[command] [owner]",
+                      "description": "View the contents of a custom command.",
+                      "permissions": [
+                        "Guild Only"
+                      ],
+                      "slashCommand": "botconfig/customcommands/view"
                     }
                   }
                 },
@@ -202,6 +278,16 @@
                       ],
                       "slashCommand": "personalcommand/add"
                     },
+                    "editpersonalcommand": {
+                      "aliases": [
+                        "personalcommandedit",
+                        "editpc",
+                        "pcedit"
+                      ],
+                      "arguments": "[command]",
+                      "description": "Edit one of your personal commands.",
+                      "slashCommand": "personalcommand/edit"
+                    },
                     "removepersonalcommand": {
                       "aliases": [
                         "deletepersonalcommand",
@@ -214,10 +300,31 @@
                       ],
                       "arguments": "[command]",
                       "description": "Remove one of your personal commands.",
-                      "permissions": [
-                        "Manage Guild"
-                      ],
                       "slashCommand": "personalcommand/remove"
+                    },
+                    "stealpersonalcommand": {
+                      "aliases": [
+                        "personalcommandsteal",
+                        "clonepersonalcommand",
+                        "personalcommandclone",
+                        "stealpc",
+                        "pcsteal",
+                        "clonepc",
+                        "pcclone"
+                      ],
+                      "arguments": "[owner] [command]",
+                      "description": "Steal a command from a user or server, and save it as one of your personal commands.",
+                      "slashCommand": "personalcommand/steal"
+                    },
+                    "viewpersonalcommand": {
+                      "aliases": [
+                        "personalcommandview",
+                        "viewpc",
+                        "pcview"
+                      ],
+                      "arguments": "[command] [owner]",
+                      "description": "View the contents of a personal command.",
+                      "slashCommand": "personalcommand/view"
                     }
                   }
                 }
@@ -331,7 +438,8 @@
             },
             "embedcolour": {
               "aliases": [
-                "embedcol"
+                "embedcol",
+                "embedcolor"
               ],
               "arguments": "[colour]",
               "description": [
@@ -460,6 +568,27 @@
               ],
               "description": "Get a link to the bot's website.",
               "slashCommand": "bot/website"
+            },
+            "wynemavatar": {
+              "aliases": [
+                "customavatar",
+                "setwynemavatar",
+                "wynemavatarset",
+                "wynemav",
+                "customav"
+              ],
+              "arguments": "[vertical-bars] [horizontal-bars] [background] [shadow] [image]",
+              "cooldown": 30,
+              "description": [
+                "Customise Wynem's avatar in the current server.",
+                "The avatar is generated the same way as the `wynem` command, so provide at least the first colour, or an image.",
+                "Run with no options to reset the avatar back to the default."
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
+              ],
+              "slashCommand": "botconfig/avatar"
             }
           }
         },
@@ -1010,12 +1139,15 @@
                     "palettify",
                     "limitpalette",
                     "palettelimit",
-                    "lowpalette"
+                    "lowpalette",
+                    "quantize",
+                    "quantise"
                   ],
-                  "arguments": "[colour-count] [image]",
+                  "arguments": "[colour-count] [per-frame-palette] [image]",
                   "description": [
                     "Limit an image's colour palette to a provided amount.",
-                    "Defaults to 10 colours."
+                    "Defaults to 10 colours.",
+                    "For gifs, one palette is shared across all frames unless per-frame palettes are enabled."
                   ],
                   "slashCommand": "imagefilter/index"
                 },
@@ -2131,7 +2263,11 @@
                 },
                 "wynem": {
                   "arguments": "[vertical-bars] [horizontal-bars] [background] [shadow] [image]",
-                  "description": "Create a custom Wynem logo!",
+                  "description": [
+                    "Create a custom Wynem logo!",
+                    "Provide at least the first colour, or an image.",
+                    "Missing colours are generated from the image, or from the colours you provide."
+                  ],
                   "slashCommand": "imagefun/wynem"
                 }
               }
@@ -2214,8 +2350,11 @@
                     "qrcode",
                     "qr"
                   ],
-                  "arguments": "[text]",
-                  "description": "Create a QR code.",
+                  "arguments": "[text] [image]",
+                  "description": [
+                    "Create a QR code.",
+                    "Provide an image attachment along with the text to blend the QR code into the image. Less reliable to scan but looks cool!"
+                  ],
                   "slashCommand": "imageutility/makeqrcode"
                 },
                 "palette": {
@@ -2404,11 +2543,6 @@
                   "description": "Mirror the bottom right half of an image to the top left half.",
                   "slashCommand": "image/mirroring/dood"
                 },
-                "flip": {
-                  "arguments": "[image]",
-                  "description": "Flip an image vertically.",
-                  "slashCommand": "image/mirroring/flip"
-                },
                 "haah": {
                   "arguments": "[image]",
                   "description": "Flip the top half of an image to the bottom half.",
@@ -2420,8 +2554,15 @@
                   "slashCommand": "image/mirroring/hooh"
                 },
                 "mirror": {
-                  "arguments": "[image]",
-                  "description": "Mirror an image horizontally.",
+                  "aliases": [
+                    "flip",
+                    "mirrorh",
+                    "mirrorv",
+                    "fliph",
+                    "flipv"
+                  ],
+                  "arguments": "[direction] [image]",
+                  "description": "Mirror an image horizontally or vertically.",
                   "slashCommand": "image/mirroring/mirror"
                 },
                 "taat": {
@@ -2452,8 +2593,11 @@
               "aliases": [
                 "prepend"
               ],
-              "arguments": "[direction] [scaling-enabled] [appended-image] [original-image]",
-              "description": "Append one image onto another image.",
+              "arguments": "[direction] [scaling] [image1] [image2] [image3] [image4] [image5] [image6]",
+              "description": [
+                "Append images onto another image.",
+                "Up to 6 images can be appended at once."
+              ],
               "slashCommand": "image/append"
             },
             "decodemessage": {
@@ -2855,7 +2999,7 @@
                   ],
                   "arguments": "[width] [height] [random-rotation-enabled] [random-mirroring-enabled] [image]",
                   "description": [
-                    "Tile an image over a 5x5 area.",
+                    "Tile an image over a 3x3 area.",
                     "Provide a custom width and height to customise the size."
                   ],
                   "slashCommand": "minecraft/resourcepacks/tile"
@@ -3245,6 +3389,80 @@
                     "Ban Members"
                   ],
                   "slashCommand": "unban"
+                }
+              }
+            },
+            "blockedemojis": {
+              "description": [
+                "Blocked emojis are emojis that cannot be used as reactions. When someone reacts with a blocked emoji, the reaction is removed.",
+                "Presets can block a group of commonly abused emojis at once.",
+                "The bot can additionally time out or kick the member that reacted. Members with moderation permissions are exempt from these punishments.",
+                "If a member uses another blocked emoji within 5 minutes of one being removed, the log action escalates to a timeout.",
+                "Custom emojis are not supported, as endless alternatives exist. If you do not want custom emojis, disable the `Use External Emojis` permission for the server or for specific roles."
+              ],
+              "commands": {
+                "blockedemojis": {
+                  "aliases": [
+                    "viewblockedemojis",
+                    "blockedreactions"
+                  ],
+                  "description": [
+                    "View the blocked emojis for the server, and the action taken when someone reacts with one.",
+                    "Blocked reactions are removed and logged with the `moderation-blocked-reaction` log type, and the member can additionally be timed out or kicked.",
+                    "Members with moderation permissions are exempt from the punishments."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "moderation/blockedemojis/view"
+                },
+                "blockemoji": {
+                  "aliases": [
+                    "blockreaction",
+                    "addblockedemoji"
+                  ],
+                  "arguments": "[emoji] [action] [timeout-length]",
+                  "description": [
+                    "Block an emoji from being used in reactions.",
+                    "When someone reacts with a blocked emoji, the reaction is removed and the action is taken against the member. Provide an already blocked emoji to change its action.",
+                    "A preset can be provided instead of an emoji to block all of the preset's emojis at once.",
+                    "If a member uses another blocked emoji within 5 minutes of one being removed, the log action escalates to a timeout.",
+                    "Members with moderation permissions are exempt from the punishments.",
+                    "Custom emojis are not supported, as endless alternatives exist. If you do not want custom emojis, disable the `Use External Emojis` permission for the server or for specific roles."
+                  ],
+                  "extra": [
+                    {
+                      "title": "Presets",
+                      "fields": [
+                        [
+                          "toxicity",
+                          "Emojis commonly used for toxicity and hate\n🤡 🤓 💀 🤮 🤢 💩 🖕 🥱 🤏"
+                        ]
+                      ]
+                    }
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Messages"
+                  ],
+                  "slashCommand": "moderation/blockedemojis/block"
+                },
+                "unblockemoji": {
+                  "aliases": [
+                    "unblockreaction",
+                    "removeblockedemoji"
+                  ],
+                  "arguments": "[emoji]",
+                  "description": "Unblock an emoji so that it can be used in reactions again.",
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "slashCommand": "moderation/blockedemojis/unblock"
                 }
               }
             },
@@ -3991,6 +4209,7 @@
                 "managelogs": {
                   "aliases": [
                     "setlogs",
+                    "setlog",
                     "removelogs"
                   ],
                   "description": "Manage the bot logs for the server.",
@@ -4450,6 +4669,19 @@
                   "description": "Set a reminder for yourself.",
                   "slashCommand": "utility/reminders/set"
                 },
+                "removereminder": {
+                  "aliases": [
+                    "deletereminder",
+                    "delreminder",
+                    "cancelreminder"
+                  ],
+                  "arguments": "[reminder-id]",
+                  "description": [
+                    "Remove one of your reminders by its ID.",
+                    "You can find reminder IDs with the `viewreminders` command. If you have the \"Moderate Members\" permission, you can remove other users reminders."
+                  ],
+                  "slashCommand": "utility/reminders/remove"
+                },
                 "repeatingreminder": {
                   "aliases": [
                     "repeatingremind",
@@ -4529,7 +4761,9 @@
             },
             "exif": {
               "aliases": [
-                "xif"
+                "exiftool",
+                "xif",
+                "xiftool"
               ],
               "arguments": "[file]",
               "description": "View the exif data of a file.",
@@ -5229,11 +5463,31 @@
             "autoresponses": {
               "commands": {
                 "add": {
-                  "description": "Run a builder that adds a new auto-response for the server.",
+                  "description": [
+                    "Run a builder that adds a new auto-response for the server.",
+                    "The builder can limit which channels the auto-response responds in, either only responding in the selected channels, or responding everywhere except them."
+                  ],
                   "permissions": [
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/addautoresponse"
+                },
+                "edit": {
+                  "description": [
+                    "Edit one of the server's auto-responses.",
+                    "The response type cannot be changed. To change the response type, remove the auto-response and recreate it."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "auto-response-id",
+                      "description": "The auto-response to edit",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/autoresponses/editautoresponse"
                 },
                 "remove": {
                   "description": [
@@ -5279,6 +5533,20 @@
                   ],
                   "prefixCommand": "bot/commands/customcommands/addcustomcommand"
                 },
+                "edit": {
+                  "description": "Edit one of the server's custom commands.",
+                  "arguments": [
+                    {
+                      "name": "command",
+                      "description": "The custom command to edit",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/editcustomcommand"
+                },
                 "remove": {
                   "description": "Remove a custom command from the server.",
                   "arguments": [
@@ -5292,6 +5560,40 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/customcommands/removecustomcommand"
+                },
+                "steal": {
+                  "description": "Steal a command from a user or server, and add it to this server's custom commands.",
+                  "arguments": [
+                    {
+                      "name": "owner",
+                      "description": "The user or server to steal the command from (username, user ID, server ID, or `server`)",
+                      "required": true
+                    },
+                    {
+                      "name": "command",
+                      "description": "The command to steal",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/stealcustomcommand"
+                },
+                "view": {
+                  "description": "View the contents of a custom command.",
+                  "arguments": [
+                    {
+                      "name": "command",
+                      "description": "The custom command to view",
+                      "required": true
+                    },
+                    {
+                      "name": "owner",
+                      "description": "The user or server the command belongs to (username, user ID, server ID, or `server`)"
+                    }
+                  ],
+                  "prefixCommand": "bot/commands/customcommands/viewcustomcommand"
                 }
               }
             },
@@ -5344,6 +5646,44 @@
             }
           },
           "commands": {
+            "avatar": {
+              "description": [
+                "Customise Wynem's avatar in the current server.",
+                "The avatar is generated the same way as the `wynem` command, so provide at least the first colour, or an image.",
+                "Run with no options to reset the avatar back to the default."
+              ],
+              "cooldown": 30,
+              "arguments": [
+                {
+                  "name": "vertical-bars",
+                  "description": "The vertical bar colour"
+                },
+                {
+                  "name": "horizontal-bars",
+                  "description": "The horizontal bar colour"
+                },
+                {
+                  "name": "background",
+                  "description": "The background colour"
+                },
+                {
+                  "name": "shadow",
+                  "description": "The shadow colour"
+                },
+                {
+                  "name": "image-file",
+                  "description": "A file"
+                },
+                {
+                  "name": "image-string",
+                  "description": "URL, Emoji, etc"
+                }
+              ],
+              "permissions": [
+                "Manage Guild"
+              ],
+              "prefixCommand": "bot/wynemavatar"
+            },
             "defaultvolume": {
               "description": "Change the bot's default voice channel volume.",
               "arguments": [
@@ -6029,27 +6369,27 @@
                   "arguments": [
                     {
                       "name": "red-image-file",
-                      "description": "The image to use as the red colour channel"
+                      "description": "Red channel image"
                     },
                     {
                       "name": "red-image-string",
-                      "description": "The image to use as the red colour channel"
+                      "description": "Red channel image"
                     },
                     {
                       "name": "green-image-file",
-                      "description": "The image to use as the green colour channel"
+                      "description": "Green channel image"
                     },
                     {
                       "name": "green-image-string",
-                      "description": "The image to use as the green colour channel"
+                      "description": "Green channel image"
                     },
                     {
                       "name": "blue-image-file",
-                      "description": "The image to use as the blue colour channel"
+                      "description": "Blue channel image"
                     },
                     {
                       "name": "blue-image-string",
-                      "description": "The image to use as the blue colour channel"
+                      "description": "Blue channel image"
                     }
                   ],
                   "prefixCommand": "images/creation/mergechannels"
@@ -6373,20 +6713,6 @@
                   ],
                   "prefixCommand": "images/mirroring/dood"
                 },
-                "flip": {
-                  "description": "Flip an image vertically.",
-                  "arguments": [
-                    {
-                      "name": "image-file",
-                      "description": "A file"
-                    },
-                    {
-                      "name": "image-string",
-                      "description": "URL, Emoji, etc"
-                    }
-                  ],
-                  "prefixCommand": "images/mirroring/flip"
-                },
                 "haah": {
                   "description": "Flip the top half of an image to the bottom half.",
                   "arguments": [
@@ -6416,8 +6742,12 @@
                   "prefixCommand": "images/mirroring/hooh"
                 },
                 "mirror": {
-                  "description": "Mirror an image horizontally.",
+                  "description": "Mirror an image horizontally or vertically.",
                   "arguments": [
+                    {
+                      "name": "direction",
+                      "description": "The direction to mirror the image"
+                    },
                     {
                       "name": "image-file",
                       "description": "A file"
@@ -6490,31 +6820,66 @@
           },
           "commands": {
             "append": {
-              "description": "Append one image onto another image.",
+              "description": [
+                "Append images onto another image.",
+                "Up to 6 images can be appended at once."
+              ],
               "arguments": [
                 {
                   "name": "direction",
                   "description": "The direction to append onto"
                 },
                 {
-                  "name": "scaling-enabled",
-                  "description": "The appended image should scale to match the original image"
+                  "name": "scaling",
+                  "description": "Scale images to match the original"
                 },
                 {
-                  "name": "appended-image-file",
+                  "name": "image1-file",
                   "description": "Appended image"
                 },
                 {
-                  "name": "appended-image-string",
+                  "name": "image1-string",
                   "description": "Appended image"
                 },
                 {
-                  "name": "original-image-file",
+                  "name": "image2-file",
                   "description": "Original image"
                 },
                 {
-                  "name": "original-image-string",
+                  "name": "image2-string",
                   "description": "Original image"
+                },
+                {
+                  "name": "image3-file",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image3-string",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image4-file",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image4-string",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image5-file",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image5-string",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image6-file",
+                  "description": "Extra image"
+                },
+                {
+                  "name": "image6-string",
+                  "description": "Extra image"
                 }
               ],
               "prefixCommand": "images/append"
@@ -7467,12 +7832,17 @@
             "index": {
               "description": [
                 "Limit an image's colour palette to a provided amount.",
-                "Defaults to 10 colours."
+                "Defaults to 10 colours.",
+                "For gifs, one palette is shared across all frames unless per-frame palettes are enabled."
               ],
               "arguments": [
                 {
                   "name": "colour-count",
                   "description": "The number of colours to limit the image to"
+                },
+                {
+                  "name": "per-frame-palette",
+                  "description": "Generate a new palette for each gif frame"
                 },
                 {
                   "name": "image-file",
@@ -8091,27 +8461,27 @@
               "prefixCommand": "images/imagefun/warp"
             },
             "wynem": {
-              "description": "Create a custom Wynem logo!",
+              "description": [
+                "Create a custom Wynem logo!",
+                "Provide at least the first colour, or an image.",
+                "Missing colours are generated from the image, or from the colours you provide."
+              ],
               "arguments": [
                 {
                   "name": "vertical-bars",
-                  "description": "The vertical bar colour",
-                  "required": true
+                  "description": "The vertical bar colour"
                 },
                 {
                   "name": "horizontal-bars",
-                  "description": "The horizontal bar colour",
-                  "required": true
+                  "description": "The horizontal bar colour"
                 },
                 {
                   "name": "background",
-                  "description": "The background colour",
-                  "required": true
+                  "description": "The background colour"
                 },
                 {
                   "name": "shadow",
-                  "description": "The shadow colour",
-                  "required": true
+                  "description": "The shadow colour"
                 },
                 {
                   "name": "image-file",
@@ -9112,7 +9482,10 @@
               "prefixCommand": "images/imageutility/imagecompare"
             },
             "makeqrcode": {
-              "description": "Create a QR code.",
+              "description": [
+                "Create a QR code.",
+                "Provide an image attachment along with the text to blend the QR code into the image. Less reliable to scan but looks cool!"
+              ],
               "arguments": [
                 {
                   "name": "text",
@@ -9497,7 +9870,7 @@
                 },
                 "tile": {
                   "description": [
-                    "Tile an image over a 5x5 area.",
+                    "Tile an image over a 3x3 area.",
                     "Provide a custom width and height to customise the size."
                   ],
                   "arguments": [
@@ -9934,6 +10307,69 @@
           }
         },
         "moderation": {
+          "categories": {
+            "blockedemojis": {
+              "commands": {
+                "block": {
+                  "description": [
+                    "Block an emoji from being used in reactions.",
+                    "When someone reacts with a blocked emoji, the reaction is removed and the action is taken against the member. Provide an already blocked emoji to change its action.",
+                    "A preset can be provided instead of an emoji to block all of the preset's emojis at once.",
+                    "If a member uses another blocked emoji within 5 minutes of one being removed, the log action escalates to a timeout.",
+                    "Members with moderation permissions are exempt from the punishments.",
+                    "Custom emojis are not supported, as endless alternatives exist. If you do not want custom emojis, disable the `Use External Emojis` permission for the server or for specific roles."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "emoji",
+                      "description": "The emoji or preset to block",
+                      "required": true
+                    },
+                    {
+                      "name": "action",
+                      "description": "The action taken when the emoji is used"
+                    },
+                    {
+                      "name": "timeout-length",
+                      "description": "How long the timeout action times the member out for"
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Messages"
+                  ],
+                  "prefixCommand": "moderation/blockedemojis/blockemoji"
+                },
+                "unblock": {
+                  "description": "Unblock an emoji so that it can be used in reactions again.",
+                  "arguments": [
+                    {
+                      "name": "emoji",
+                      "description": "The emoji to unblock",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "moderation/blockedemojis/unblockemoji"
+                },
+                "view": {
+                  "description": [
+                    "View the blocked emojis for the server, and the action taken when someone reacts with one.",
+                    "Blocked reactions are removed and logged with the `moderation-blocked-reaction` log type, and the member can additionally be timed out or kicked.",
+                    "Members with moderation permissions are exempt from the punishments."
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "moderation/blockedemojis/blockedemojis"
+                }
+              }
+            }
+          },
           "commands": {
             "addnote": {
               "description": [
@@ -10001,6 +10437,17 @@
               "description": "Run a builder that creates you a new personal command.",
               "prefixCommand": "bot/commands/personalcommands/addpersonalcommand"
             },
+            "edit": {
+              "description": "Edit one of your personal commands.",
+              "arguments": [
+                {
+                  "name": "command",
+                  "description": "The personal command to edit",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "bot/commands/personalcommands/editpersonalcommand"
+            },
             "remove": {
               "description": "Remove one of your personal commands.",
               "arguments": [
@@ -10009,9 +10456,6 @@
                   "description": "The personal command to remove",
                   "required": true
                 }
-              ],
-              "permissions": [
-                "Manage Guild"
               ],
               "prefixCommand": "bot/commands/personalcommands/removepersonalcommand"
             },
@@ -10040,6 +10484,37 @@
                   "description": "The command owner (change the command list to use)"
                 }
               ]
+            },
+            "steal": {
+              "description": "Steal a command from a user or server, and save it as one of your personal commands.",
+              "arguments": [
+                {
+                  "name": "owner",
+                  "description": "The user or server to steal the command from (username, user ID, server ID, or `server`)",
+                  "required": true
+                },
+                {
+                  "name": "command",
+                  "description": "The command to steal",
+                  "required": true
+                }
+              ],
+              "prefixCommand": "bot/commands/personalcommands/stealpersonalcommand"
+            },
+            "view": {
+              "description": "View the contents of a personal command.",
+              "arguments": [
+                {
+                  "name": "command",
+                  "description": "The personal command to view",
+                  "required": true
+                },
+                {
+                  "name": "owner",
+                  "description": "The user or server the command belongs to (username, user ID, server ID, or `server`)"
+                }
+              ],
+              "prefixCommand": "bot/commands/personalcommands/viewpersonalcommand"
             }
           }
         },
@@ -10943,6 +11418,20 @@
           "categories": {
             "reminders": {
               "commands": {
+                "remove": {
+                  "description": [
+                    "Remove one of your reminders by its ID.",
+                    "You can find reminder IDs with the `viewreminders` command. If you have the \"Moderate Members\" permission, you can remove other users reminders."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "reminder-id",
+                      "description": "The ID of the reminder to remove",
+                      "required": true
+                    }
+                  ],
+                  "prefixCommand": "utility/reminders/removereminder"
+                },
                 "set": {
                   "description": "Set a reminder for yourself.",
                   "arguments": [
