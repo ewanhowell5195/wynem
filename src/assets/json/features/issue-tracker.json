@@ -1,10 +1,10 @@
 {
   "commands": {
     "prefix": [
-      ["server", "issuetracker", "issue"],
-      ["server", "issuetracker", "showissuetracker"],
-      ["server", "issuetracker", "setissuetracker"],
-      ["server", "issuetracker", "toggleautoissues"]
+      "issue",
+      "showissuetracker",
+      "setissuetracker",
+      "toggleautoissues"
     ],
     "slash": [
       ["server", "issuetracker", "issue"],

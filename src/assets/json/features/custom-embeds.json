@@ -1,7 +1,7 @@
 {
   "commands": {
     "prefix": [
-      ["utility", "createembed"]
+      "createembed"
     ],
     "slash": [
       ["utility", "createembed"]

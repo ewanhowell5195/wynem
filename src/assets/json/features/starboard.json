@@ -1,9 +1,9 @@
 {
   "commands": {
     "prefix": [
-      ["server", "channel", "starboards", "starboard"],
-      ["server", "channel", "starboards", "starboardinfo"],
-      ["server", "channel", "starboards", "starboardblacklist"]
+      "starboard",
+      "starboardinfo",
+      "starboardblacklist"
     ],
     "slash": [
       ["serverconfig", "channel", "starboard"],

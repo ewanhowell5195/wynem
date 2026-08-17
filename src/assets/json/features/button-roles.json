@@ -1,7 +1,7 @@
 {
   "commands": {
     "prefix": [
-      ["server", "roles", "buttonroles"]
+      "buttonroles"
     ],
     "slash": [
       ["role", "buttonroles"]

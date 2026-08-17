@@ -1,7 +1,7 @@
 {
   "commands": {
     "prefix": [
-      ["server", "serversettings", "toggleghostpingnotices"]
+      "toggleghostpingnotices"
     ],
     "slash": [
       ["serverconfig", "toggle", "ghostpingnotices"]

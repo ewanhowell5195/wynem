@@ -1,9 +1,9 @@
 {
   "commands": {
     "prefix": [
-      ["utility", "eval"],
-      ["bot", "commands", "customcommands", "addcustomcommand"],
-      ["bot", "autoresponses", "addautoresponse"]
+      "eval",
+      "addcustomcommand",
+      "addautoresponse"
     ],
     "slash": [
       ["eval"],

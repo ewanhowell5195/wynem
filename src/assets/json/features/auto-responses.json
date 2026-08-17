@@ -4,12 +4,12 @@
       {
         "type": "category",
         "text": "Auto-responses",
-        "path": ["bot", "autoresponses"]
+        "name": "autoresponses"
       },
-      ["bot", "autoresponses", "addautoresponse"],
-      ["bot", "autoresponses", "editautoresponse"],
-      ["bot", "autoresponses", "viewautoresponse"],
-      ["bot", "autoresponses", "removeautoresponse"]
+      "addautoresponse",
+      "editautoresponse",
+      "viewautoresponse",
+      "removeautoresponse"
     ],
     "slash": [
       ["botconfig", "autoresponses", "add"],

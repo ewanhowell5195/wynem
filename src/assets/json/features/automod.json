@@ -1,7 +1,7 @@
 {
   "commands": {
     "prefix": [
-      ["moderation", "addautomod"]
+      "addautomod"
     ],
     "slash": [
       ["serverconfig", "addautomod"]

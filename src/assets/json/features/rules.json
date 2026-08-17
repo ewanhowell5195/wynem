@@ -1,11 +1,11 @@
 {
   "commands": {
     "prefix": [
-      ["server", "rules", "rule"],
-      ["server", "rules", "addrule"],
-      ["server", "rules", "editrule"],
-      ["server", "rules", "removerule"],
-      ["server", "rules", "embedrules"]
+      "rule",
+      "addrule",
+      "editrule",
+      "removerule",
+      "embedrules"
     ],
     "slash": [
       ["server", "rules"],

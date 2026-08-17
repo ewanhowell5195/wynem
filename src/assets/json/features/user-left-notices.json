@@ -1,7 +1,7 @@
 {
   "commands": {
     "prefix": [
-      ["server", "serversettings", "toggleuserleftnotices"]
+      "toggleuserleftnotices"
     ],
     "slash": [
       ["serverconfig", "toggle", "userleftnotices"]

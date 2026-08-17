@@ -4,15 +4,15 @@
       {
         "type": "category",
         "text": "Custom Commands",
-        "path": ["bot", "commands", "customcommands"]
+        "name": "customcommands"
       },
-      ["bot", "commands", "customcommands", "addcustomcommand"],
-      ["bot", "commands", "customcommands", "editcustomcommand"],
-      ["bot", "commands", "customcommands", "viewcustomcommand"],
-      ["bot", "commands", "customcommands", "stealcustomcommand"],
-      ["bot", "commands", "customcommands", "removecustomcommand"],
+      "addcustomcommand",
+      "editcustomcommand",
+      "viewcustomcommand",
+      "stealcustomcommand",
+      "removecustomcommand",
       {
-        "path": ["bot", "commands", "help"],
+        "name": "help",
         "description": "View all the available custom commands by using the <code>e!help custom</code> command."
       }
     ],

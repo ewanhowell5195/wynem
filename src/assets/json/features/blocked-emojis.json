@@ -4,11 +4,11 @@
       {
         "type": "category",
         "text": "Blocked Emojis",
-        "path": ["moderation", "blockedemojis"]
+        "name": "blockedemojis"
       },
-      ["moderation", "blockedemojis", "blockemoji"],
-      ["moderation", "blockedemojis", "blockedemojis"],
-      ["moderation", "blockedemojis", "unblockemoji"]
+      "blockemoji",
+      "blockedemojis",
+      "unblockemoji"
     ],
     "slash": [
       ["moderation", "blockedemojis", "block"],

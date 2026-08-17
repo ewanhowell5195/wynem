@@ -1,12 +1,12 @@
 {
   "commands": {
     "prefix": [
-      ["server", "tickets", "settickets"],
-      ["server", "tickets", "viewtickets"],
-      ["server", "tickets", "removetickets"],
-      ["server", "tickets", "addtickettype"],
-      ["server", "tickets", "edittickettype"],
-      ["server", "tickets", "removetickettype"]
+      "settickets",
+      "viewtickets",
+      "removetickets",
+      "addtickettype",
+      "edittickettype",
+      "removetickettype"
     ],
     "slash": [
       ["serverconfig", "tickets", "set"],

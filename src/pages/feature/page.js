@@ -34,7 +34,12 @@ export default class extends Page {
         const commandList = E("div").attr("id", `command-list-${type}`).addClass("command-list").appendTo(commandLists)
         for (const commandData of related) {
           let commandPath = commandData
-          if (!Array.isArray(commandPath)) commandPath = commandPath.path
+          if (typeof commandPath === "string") commandPath = findCommand(commands.categories[type], commandPath)
+          else if (!Array.isArray(commandPath)) {
+            if (commandPath.path) commandPath = commandPath.path
+            else if (commandData.type === "category") commandPath = findCategory(commands.categories[type], commandData.name)
+            else commandPath = findCommand(commands.categories[type], commandData.name)
+          }
           if (commandData.type === "category") commandList.append(
             E("a", { is: "f-a" }).attr("href", `/commands/${type}/${commandPath.join("/")}`).addClass("button secondary").append(
               linkIcon.clone(true),
@@ -92,6 +97,22 @@ export default class extends Page {
 
   onClosed() {
     scrollTo = null
+  }
+}
+
+function findCommand(tree, name, path = []) {
+  if (tree.commands?.[name]) return path.concat(name)
+  for (const [key, category] of Object.entries(tree.categories ?? {})) {
+    const found = findCommand(category, name, path.concat(key))
+    if (found) return found
+  }
+}
+
+function findCategory(tree, name, path = []) {
+  for (const [key, category] of Object.entries(tree.categories ?? {})) {
+    if (key === name) return path.concat(key)
+    const found = findCategory(category, name, path.concat(key))
+    if (found) return found
   }
 }
 
