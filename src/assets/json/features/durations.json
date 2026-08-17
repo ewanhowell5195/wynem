@@ -28,7 +28,7 @@
           ["End date", "<t:18 May 2025 12:56>"],
           ["Reminder", "Check on the server event preparations"]
         ],
-        "footer": ["You now have 1 reminder set"]
+        "footer": ["Reminder ID: 12\nYou now have 1 reminder set"]
       }
     },
     {
@@ -61,6 +61,7 @@
         ["y", "Years"]
       ]
     },
+    "Tip: Unless a command specifies its own limits, durations are limited to a maximum of `2` years.",
     {
       "type": "heading",
       "text": "Examples of durations"
@@ -117,7 +118,7 @@
                   ["End date", "18 May 2025 12:56"],
                   ["Reminder", "Check if the new members have joined"]
                 ],
-                "footer": ["You now have 2 reminders set"]
+                "footer": ["Reminder ID: 13\nYou now have 2 reminders set"]
               }
             },
             "You can set reminders for virtually any duration - from seconds to years:",
@@ -129,7 +130,8 @@
                 ["Long-term reminder", "1y - 1 year"],
                 ["Specific date", "2025/12/25 - December 25, 2025"]
               ]
-            }
+            },
+            "You can also set repeating reminders with the <command:repeatingreminder [duration] [reminder]|utility reminders setrepeating duration:[duration] reminder:[reminder]> command, and view or remove your reminders with the <command:viewreminders|utility reminders view> and <command:removereminder [id]|utility reminders remove reminder-id:[id]> commands."
           ]
         },
         {

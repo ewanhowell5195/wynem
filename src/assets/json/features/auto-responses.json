@@ -7,11 +7,13 @@
         "path": ["bot", "autoresponses"]
       },
       ["bot", "autoresponses", "addautoresponse"],
+      ["bot", "autoresponses", "editautoresponse"],
       ["bot", "autoresponses", "viewautoresponse"],
       ["bot", "autoresponses", "removeautoresponse"]
     ],
     "slash": [
       ["botconfig", "autoresponses", "add"],
+      ["botconfig", "autoresponses", "edit"],
       ["botconfig", "autoresponses", "view"],
       ["botconfig", "autoresponses", "remove"]
     ]
@@ -67,6 +69,19 @@
         ["Custom Code", "Write your own code to decide what the autoresponse does!"]
       ]
     },
+    {
+      "type": "heading",
+      "text": "Auto-response channels"
+    },
+    "Each auto-response can be limited to only respond in certain channels. When creating or editing an auto-response, the final step lets you select up to 25 channels, along with one of two modes:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Allow", "The auto-response will only respond in the selected channels"],
+        ["Deny", "The auto-response will respond everywhere except the selected channels"]
+      ]
+    },
+    "Selecting a category applies to all channels within it. If no channels are selected, the auto-response will respond everywhere.",
     {
       "type": "heading",
       "text": "How to use auto-responses"
@@ -338,6 +353,18 @@
                 }
               ]
             },
+            "Finally, you can limit which channels the auto-response can respond in. Select the mode and channels you want, or leave the channels empty to have it respond everywhere, and then press finish.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Select which channels the auto-response can respond in, then press finish\n\nAllow mode only responds in the selected channels, and deny mode responds everywhere except the selected channels. Selecting a category applies to all channels within it. Select no channels to respond everywhere.",
+                "buttons": [{
+                  "label": "Finish",
+                  "emoji": "flag",
+                  "style": "green"
+                }]
+              }
+            },
             "You are finished! Your auto-response has been created and is now active and ready for you to use!"
           ]
         },
@@ -367,6 +394,40 @@
                   "label": "All resource pack downloads can be found here",
                   "url": "https://ewanhowell.com/resourcepacks/"
                 }] 
+              }
+            }
+          ]
+        },
+        {
+          "name": "Editing Auto-responses",
+          "content": [
+            "To edit an auto-response, use the <command:editautoresponse [autoresponse]|botconfig autoresponses edit auto-response:[autoresponse]> command.\nFor example: <command:editautoresponse packdownload|botconfig autoresponses edit auto-response:packdownload>",
+            "The editor follows the same steps as the auto-response builder, with the current values prefilled. You can change the trigger type, ID, trigger, and channels.",
+            "When you reach the response step, you can choose to keep the current response, or replace it with a new one. The response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Would you like to keep or replace the auto-response's response?\n\nThe response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
+                "fields": [
+                  ["Keep", "Keep the current response, only updating the ID, trigger, and channels"],
+                  ["Replace", "Re-enter the auto-response's response"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Keep"
+                  },
+                  {
+                    "label": "Replace"
+                  }
+                ]
+              }
+            },
+            "After finishing the channels step, the auto-response will have been updated.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Auto-response updated",
+                "description": "The auto-response `packdownload` was successfully updated"
               }
             }
           ]

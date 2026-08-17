@@ -7,6 +7,9 @@
         "path": ["bot", "commands", "customcommands"]
       },
       ["bot", "commands", "customcommands", "addcustomcommand"],
+      ["bot", "commands", "customcommands", "editcustomcommand"],
+      ["bot", "commands", "customcommands", "viewcustomcommand"],
+      ["bot", "commands", "customcommands", "stealcustomcommand"],
       ["bot", "commands", "customcommands", "removecustomcommand"],
       {
         "path": ["bot", "commands", "help"],
@@ -16,6 +19,9 @@
     "slash": [
       ["customcommand"],
       ["botconfig", "customcommands", "add"],
+      ["botconfig", "customcommands", "edit"],
+      ["botconfig", "customcommands", "view"],
+      ["botconfig", "customcommands", "steal"],
       ["botconfig", "customcommands", "remove"]
     ]
   },
@@ -485,6 +491,102 @@
           ]
         },
         {
+          "name": "Editing Custom Commands",
+          "content": [
+            "To edit a custom command, use the <command:editcustomcommand [command]|botconfig customcommands edit command:[command]> command.\nFor example: <command:editcustomcommand example|botconfig customcommands edit command:example>",
+            "A modal will appear with the current name, description, and aliases prefilled, ready for you to change.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Custom Command Editor",
+                "rows": [
+                  ["Command name", "The name of the custom command", true],
+                  ["The description of the custom command", "The description of the custom command"],
+                  ["Command aliases", "Alternative command names (comma separated)"]
+                ]
+              }
+            },
+            "You will then be given the choice to keep or replace the content of the command. The command type cannot be changed. To change the command type, remove the command and recreate it.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Would you like to keep or replace the custom command's content?\n\nThe command type cannot be changed. To change the command type, remove the command and recreate it.",
+                "fields": [
+                  ["Keep", "Keep the current content, only updating the name, description, and aliases"],
+                  ["Replace", "Re-enter the command's content"]
+                ],
+                "buttons": [
+                  {
+                    "label": "Keep"
+                  },
+                  {
+                    "label": "Replace"
+                  }
+                ]
+              }
+            },
+            "If you choose to replace the content, you will re-enter it following the same steps as when creating the command, with the current values prefilled where possible."
+          ]
+        },
+        {
+          "name": "Viewing Custom Commands",
+          "content": [
+            "To view the contents of a custom command, use the <command:viewcustomcommand [command]|botconfig customcommands view command:[command]> command.\nFor example: <command:viewcustomcommand example|botconfig customcommands view command:example>",
+            "You can also view the commands of another user or server by providing the owner after the command: <command:viewcustomcommand [command] [owner]|botconfig customcommands view command:[command] owner:[owner]>. The owner can be a username, user ID, or server ID.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Custom Command", "/assets/images/icons/help.webp"],
+                "title": "example",
+                "fields": [
+                  ["Type", "Buttons"],
+                  ["Owner", "This server"],
+                  ["Aliases", "`packdownload` `download`"],
+                  ["URL Button Preview", "Shown below"]
+                ],
+                "buttons": [
+                  {
+                    "label": "All resource pack downloads can be found here",
+                    "url": "https://ewanhowell.com/resourcepacks/"
+                  },
+                  {
+                    "label": "Steal",
+                    "emoji": "plus"
+                  }
+                ]
+              }
+            },
+            "The view includes a steal button, which lets you instantly copy the command to your own server."
+          ]
+        },
+        {
+          "name": "Stealing Custom Commands",
+          "content": [
+            "Custom commands can be stolen from other users and servers, copying them to your own server.",
+            "To steal a command, use the <command:stealcustomcommand [owner] [command]|botconfig customcommands steal owner:[owner] command:[command]> command. The owner can be a username, user ID, or server ID.\nFor example: <command:stealcustomcommand Ewan example|botconfig customcommands steal owner:Ewan command:example>",
+            "A modal will appear with the command's current name, description, and aliases prefilled, letting you optionally rename or adjust it before it gets added.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Custom Command Stealer",
+                "rows": [
+                  ["Command name", "The name to steal the custom command under", true],
+                  ["The description of the custom command", "The description of the custom command"],
+                  ["Command aliases", "Alternative command names (comma separated)"]
+                ]
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "title": "Custom command stolen",
+                "description": "The command `example` was successfully stolen"
+              }
+            },
+            "You can also steal a command directly from the view of a command by pressing its steal button."
+          ]
+        },
+        {
           "name": "Removing Custom Commands",
           "content": [
             "To remove a custom command, start by running the command <span class=\"command prefix\"><code>e!removecustomcommand [customcommandname]</code>.\nFor example: <code>e!removecustomcommand example</code></span><span class=\"command slash\"><code>/botconfig customcommands remove command:[customcommandname]</code>.\nFor example: <code>/botconfig customcommands remove command:example</code></span>\n\nYou will be prompted to confirm that you want to remove the custom command. Press remove to continue.",
@@ -510,6 +612,12 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "type": "heading",
+      "text": "Personal commands"
+    },
+    "Personal commands work exactly the same way as custom commands, except they belong to you instead of a server, and can be used in any server that Wynem is in.",
+    "To manage your personal commands, use the same commands with `personal` in place of `custom`, for example <command:addpersonalcommand|personalcommand add>. To run a personal command, use <command:[commandname]|personalcommand run command:[commandname]>, or `e![commandname]:[username]` to run another user's personal command."
   ]
 }

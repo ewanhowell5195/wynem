@@ -56,5 +56,9 @@
   {
     "id": "custom-code",
     "description": "Write and execute custom JavaScript code directly in Discord"
+  },
+  {
+    "id": "blocked-emojis",
+    "description": "Block emojis from being used in reactions, with configurable punishments"
   }
 ]

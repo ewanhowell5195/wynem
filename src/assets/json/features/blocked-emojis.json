@@ -1,0 +1,137 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Blocked Emojis",
+        "path": ["moderation", "blockedemojis"]
+      },
+      ["moderation", "blockedemojis", "blockemoji"],
+      ["moderation", "blockedemojis", "blockedemojis"],
+      ["moderation", "blockedemojis", "unblockemoji"]
+    ],
+    "slash": [
+      ["moderation", "blockedemojis", "block"],
+      ["moderation", "blockedemojis", "view"],
+      ["moderation", "blockedemojis", "unblock"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are blocked emojis?"
+    },
+    "Blocked emojis are emojis that cannot be used as reactions in the server. When someone reacts with a blocked emoji, the reaction is automatically removed, and an action of your choosing is taken against them. This can be used to stop reactions being used for things like politics or toxicity.",
+    "A server can block up to `50` emojis, and each blocked emoji has its own action. Skin tones and similar emoji variants are matched automatically, so blocking 👍 also blocks 👍🏽.",
+    {
+      "type": "heading",
+      "text": "Actions"
+    },
+    "When a blocked emoji is used, the reaction is always removed, and one of the following actions is taken against the member:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Log", "Log the reaction removal"],
+        ["Timeout", "Log the reaction removal and time out the member. The timeout length can be set per emoji, and defaults to 20 minutes"],
+        ["Kick", "Log the reaction removal and kick the member"]
+      ]
+    },
+    "If a member uses another blocked emoji within 5 minutes of one being removed, the log action escalates to a timeout. The escalation never goes further than a timeout.",
+    "Members with moderation permissions are exempt from the punishments, but their reactions are still removed.",
+    {
+      "type": "heading",
+      "text": "Logging"
+    },
+    "Blocked reaction removals are logged with the `moderation-blocked-reaction` log type, which can be set up using the <command:managelogs|serverconfig logs manage> command. Timeouts and kicks are additionally logged with the `moderation-timeout` and `moderation-kick` log types.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Blocked reaction removed", "/assets/images/icons/reaction.webp"],
+        "description": "**Added by <@TheAnnoying> in <#general>**\n<a href=\"/\">Jump to message...</a>",
+        "fields": [
+          ["Emoji", "🤡"],
+          ["Action", "Timed out for 20 minutes"]
+        ],
+        "colour": "#DD2E44"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Custom emojis"
+    },
+    "Custom emojis are not supported, as endless alternatives exist. If you do not want custom emojis, disable the `Use External Emojis` permission for the server or for specific roles.",
+    {
+      "type": "heading",
+      "text": "How to use blocked emojis"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Blocking Emojis",
+          "content": [
+            "To block an emoji, use the <command:blockemoji [emoji] [action] [timeoutLength]|moderation blockedemojis block emoji:[emoji] action:[action] timeout-length:[timeoutLength]> command. The action defaults to `log`, and the timeout length defaults to `20m`.",
+            "For example: <command:blockemoji 🤡 timeout 1h|moderation blockedemojis block emoji:🤡 action:timeout timeout-length:1h>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Emoji blocked", "https://cdn.jsdelivr.net/gh/jdecked/twemoji/assets/72x72/1f921.png"],
+                "description": "The emoji 🤡 will now be removed from reactions",
+                "fields": [
+                  ["Action", "Log the reaction removal and time out the member"],
+                  ["Timeout length", "1 hour"]
+                ]
+              }
+            },
+            "Providing an already blocked emoji changes its action instead.",
+            "You can also provide a preset instead of an emoji, blocking a whole group of commonly abused emojis at once. The available presets are listed in the help of the <command:blockemoji|moderation blockedemojis block> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Preset blocked",
+                "description": "The `toxicity` preset emojis will now be removed from reactions",
+                "fields": [
+                  ["Emojis", "🤡 🤓 💀 🤮 🤢 💩 🖕 🥱 🤏"],
+                  ["Action", "Log the reaction removal"]
+                ]
+              }
+            },
+            "Preset emojis are added as normal blocked emojis, so they can be viewed, updated, and unblocked individually afterwards."
+          ]
+        },
+        {
+          "name": "Viewing Blocked Emojis",
+          "content": [
+            "To view the blocked emojis for the server, use the <command:blockedemojis|moderation blockedemojis view> command. The emojis are grouped by their action.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Blocked emojis",
+                "fields": [
+                  ["Log", "💩 🥱 🤏"],
+                  ["Timeout", "🤡 `1 hour`\n🖕 `20 minutes`"],
+                  ["Kick", "💀"]
+                ],
+                "footer": ["6/50 blocked emojis"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Unblocking Emojis",
+          "content": [
+            "To unblock an emoji, use the <command:unblockemoji [emoji]|moderation blockedemojis unblock emoji:[emoji]> command.",
+            "For example: <command:unblockemoji 🤡|moderation blockedemojis unblock emoji:🤡>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Emoji unblocked", "https://cdn.jsdelivr.net/gh/jdecked/twemoji/assets/72x72/1f921.png"],
+                "description": "The emoji 🤡 is no longer blocked"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
