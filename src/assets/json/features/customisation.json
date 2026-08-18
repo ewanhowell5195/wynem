@@ -29,7 +29,7 @@
       "type": "heading",
       "text": "Custom avatar"
     },
-    "Wynem's avatar can be customised per server. The avatar is generated with the same Wynem logo generator as the [wynem](/commands/prefix/images/imagefun/wynem) command: pick your own colours, or provide an image to generate them from.\n\nThe avatar is always generated in the Wynem logo style, keeping Wynem recognisable no matter the server.",
+    "Wynem's avatar can be customised per server. The avatar is generated with the same Wynem logo generator as the <commandlink:wynem|imagefun wynem|wynem> command: pick your own colours, or provide an image to generate them from.\n\nThe avatar is always generated in the Wynem logo style, keeping Wynem recognisable no matter the server.",
     {
       "type": "image",
       "name": "avatar",

@@ -1,4 +1,4 @@
-import { makeComponents, makeEmbed, makeMessage, makeModal, parseString } from "/js/embeds.js"
+import { findCommand, makeComponents, makeEmbed, makeMessage, makeModal, parseString } from "/js/embeds.js"
 
 export default class extends Page {
   constructor() {
@@ -68,8 +68,8 @@ export default class extends Page {
           }
         }
       }
-      $(".command-list").first().addClass("selected")
       if (Object.keys(feature.commands).length === 1) {
+        $(".command-list").first().addClass("selected")
         commandTabs.css("display", "none")
         $("#sidebar").addClass("tabless")
       } else {
@@ -80,7 +80,11 @@ export default class extends Page {
           $(`#command-list-${e.currentTarget.textContent.toLowerCase()}`).addClass("selected")
           $(".command").css("display", "none")
           $(`.${e.currentTarget.textContent.toLowerCase()}`).css("display", "")
-        }).first().addClass("active")
+          localStorage.setItem("commandType", e.currentTarget.textContent.toLowerCase())
+        })
+        const savedTab = Array.from($(".command-tab")).find(tab => tab.textContent.toLowerCase() === localStorage.getItem("commandType")) ?? $(".command-tab").first()[0]
+        $(savedTab).addClass("active")
+        $(`#command-list-${savedTab.textContent.toLowerCase()}`).addClass("selected")
       }
     }
 
@@ -93,19 +97,12 @@ export default class extends Page {
     }), 100)
 
     $(".command").css("display", "none")
-    $(".prefix").css("display", "")
+    const commandType = localStorage.getItem("commandType")
+    $(`.${["prefix", "slash"].includes(commandType) ? commandType : "prefix"}`).css("display", "")
   }
 
   onClosed() {
     scrollTo = null
-  }
-}
-
-function findCommand(tree, name, path = []) {
-  if (tree.commands?.[name]) return path.concat(name)
-  for (const [key, category] of Object.entries(tree.categories ?? {})) {
-    const found = findCommand(category, name, path.concat(key))
-    if (found) return found
   }
 }
 
