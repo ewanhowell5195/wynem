@@ -97,6 +97,7 @@
             {
               "type": "embed",
               "data": {
+                "title": "Select custom command type",
                 "description": "What type of custom command would you like to create?",
                 "fields": [
                   ["Message", "Will send a regular Discord message"],
@@ -287,6 +288,7 @@
                     {
                       "type": "embed",
                       "data": {
+                        "title": "Select image paste type",
                         "description": "What image paste type would you like for image input #1?",
                         "fields": [
                           ["Simple", "Paste an image in the most basic way. Location, width, and height are customisable"],
@@ -510,6 +512,7 @@
             {
               "type": "embed",
               "data": {
+                "title": "Keep or replace the content",
                 "description": "Would you like to keep or replace the custom command's content?\n\nThe command type cannot be changed. To change the command type, remove the command and recreate it.",
                 "fields": [
                   ["Keep", "Keep the current content, only updating the name, description, and aliases"],

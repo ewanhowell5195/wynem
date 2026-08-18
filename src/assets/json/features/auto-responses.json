@@ -147,6 +147,7 @@
             {
               "type": "embed",
               "data": {
+                "title": "Select auto-response type",
                 "description": "What type of auto-response would you like to create?",
                 "fields": [
                   ["Message", "Will send a regular Discord message"],
@@ -357,7 +358,35 @@
             {
               "type": "embed",
               "data": {
-                "description": "Select which channels the auto-response can respond in, then press finish\n\nAllow mode only responds in the selected channels, and deny mode responds everywhere except the selected channels. Selecting a category applies to all channels within it. Select no channels to respond everywhere.",
+                "title": "Select auto-response channels",
+                "description": "Which channels would you like the auto-response to respond in?\n\nSelecting a category applies to all channels within it, and selecting no channels will respond everywhere. Press finish when you are done.",
+                "fields": [
+                  ["Allow mode", "Only responds in the selected channels"],
+                  ["Deny mode", "Responds everywhere except the selected channels"]
+                ],
+                "selects": [
+                  {
+                    "placeholder": "Deny",
+                    "options": [
+                      ["Allow", "Only respond in the selected channels"],
+                      ["Deny", "Respond everywhere except the selected channels"]
+                    ]
+                  },
+                  {
+                    "placeholder": "No channels selected",
+                    "options": [
+                      {
+                        "channel": "general"
+                      },
+                      {
+                        "channel": "bot-testing"
+                      },
+                      {
+                        "channel": "welcome"
+                      }
+                    ]
+                  }
+                ],
                 "buttons": [{
                   "label": "Finish",
                   "emoji": "flag",
@@ -407,6 +436,7 @@
             {
               "type": "embed",
               "data": {
+                "title": "Keep or replace the response",
                 "description": "Would you like to keep or replace the auto-response's response?\n\nThe response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
                 "fields": [
                   ["Keep", "Keep the current response, only updating the ID, trigger, and channels"],
