@@ -1,4 +1,4 @@
-import { makeEmbed, makeMessage, makeModal, parseString } from "/js/embeds.js"
+import { makeComponents, makeEmbed, makeMessage, makeModal, parseString } from "/js/embeds.js"
 
 export default class extends Page {
   constructor() {
@@ -40,6 +40,7 @@ export default class extends Page {
             else if (commandData.type === "category") commandPath = findCategory(commands.categories[type], commandData.name)
             else commandPath = findCommand(commands.categories[type], commandData.name)
           }
+          if (!commandPath) continue
           if (commandData.type === "category") commandList.append(
             E("a", { is: "f-a" }).attr("href", `/commands/${type}/${commandPath.join("/")}`).addClass("button secondary").append(
               linkIcon.clone(true),
@@ -132,9 +133,11 @@ function addBlocks($, element, blocks, feature, args) {
         for (const [i, cell] of row.entries()) tr.append(E("td").html(parseString(cell)))
       }
     } else if (block.type === "image") {
-      E("img").attr("src", `/assets/images/features/${feature}/${block.name}.webp`).css("max-height", `${block.height ?? 256}px`).appendTo(section)
+      E("img").addClass("feature-image").attr({ src: `/assets/images/features/${feature}/${block.name}.webp`, "data-popupable": "" }).css("max-height", `${block.height ?? 256}px`).appendTo(section)
     } else if (block.type === "embed") {
       makeEmbed($, section, block.data, args)
+    } else if (block.type === "components") {
+      makeComponents($, section, block.data, args)
     } else if (block.type === "message") {
       makeMessage($, section, block.data, args)
     } else if (block.type === "modal") {

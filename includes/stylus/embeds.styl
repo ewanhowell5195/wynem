@@ -507,10 +507,21 @@
   font-size: 13px
   opacity: .5
 
+.embed-selects
+  flex-direction: column
+
 .embed-select-container
   margin-top: 8px
   position: relative
   width: 100%
+
+.modal-row-description
+  font-size: 13px
+  color: var(--color-secondary)
+  margin: -4px 0 8px
+
+.modal-row .embed-select-container
+  margin-top: 0
 
 .embed-select
   background-color: var(--color-grey-dark)
@@ -604,6 +615,65 @@
   .pfp-container
     opacity: 0
     pointer-events: none
-    
+
   .name-row
     display: none
+
+.cv2
+  padding: 16px
+  background-color: var(--color-grey-lighter)
+  margin-top: 4px
+  border-radius: 8px
+  border: 1px solid var(--color-grey)
+  border-left: 4px solid var(--color-blue)
+  font-size: 14px
+  color: var(--color-discord-text)
+  max-width: 484px
+  box-shadow: var(--box-shadow)
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+  *
+    white-space: pre-wrap
+    overflow-wrap: anywhere
+    line-height: 1.25em
+
+.cv2-section
+  display: flex
+  gap: 16px
+  justify-content: space-between
+  align-items: center
+
+  > .embed-button
+    flex-shrink: 0
+
+.cv2-separator
+  border-top: 1px solid var(--color-grey)
+  margin: 4px 0
+
+  &.invisible
+    border-top: none
+
+.cv2-thumbnail
+  border-radius: 4px
+  max-width: 80px
+  max-height: 80px
+  cursor: pointer
+  flex-shrink: 0
+
+.cv2-buttons
+  display: flex
+  gap: 8px
+  flex-wrap: wrap
+
+.cv2-gallery
+  display: flex
+  gap: 4px
+  flex-wrap: wrap
+
+  img
+    border-radius: 4px
+    max-width: @css { min(400px, 100vw - 172px) }
+    max-height: 300px
+    cursor: pointer

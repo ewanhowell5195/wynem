@@ -57,14 +57,14 @@ export function makeEmbed($, parent, data, args = {}) {
     reply = E("div").addClass("reply-container").css("display", "none"),
     E("div").append(
       E("div").addClass("pfp-container").append(
-        E("img").addClass(args.outline ? "outline" : undefined).attr("src", "/assets/images/logo/logo.webp")
+        E("img").addClass(args.outline ? "outline" : undefined).attr("src", data.avatar ?? "/assets/images/logo/logo.webp")
       ),
       E("div").addClass("embed-content").append(
         nameRow = E("div").addClass("name-row").append(
-          E("div").addClass("name").text("Wynem"),
+          E("div").addClass("name").text(data.username ?? "Wynem"),
           E("div").addClass("tag").append(
-            $("#check-icon").contents().clone(),
-            E("div").text("BOT")
+            data.tag ? undefined : $("#check-icon").contents().clone(),
+            E("div").text(data.tag ?? "BOT")
           )
         ),
         embed = E("div").addClass(`embed${data.warning ? " warning" : ""}`).append(
@@ -73,7 +73,7 @@ export function makeEmbed($, parent, data, args = {}) {
             thumbnail = E("div")
           )
         ),
-        selectContainer = E("div").addClass("embed-select-container").css("display", "none"),
+        selectContainer = E("div").addClass("embed-selects").css("display", "none"),
         buttons = E("div").addClass("embed-buttons").css("display", "none")
       )
     )
@@ -102,42 +102,102 @@ export function makeEmbed($, parent, data, args = {}) {
   if (data.content) {
     E("div").addClass("text-content").html(parseString(data.content)).insertAfter(nameRow)
   }
-  if (data.select) {
-    selectContainer.css("display", "initial")
-    let text
-    const drop = E("div").addClass("embed-select").append(
-      text = E("div").text(data.select.placeholder).addClass("placeholder"),
-      $("#drop-icon").contents().clone(),
-    ).on("click", e => {
-      const select = $(e.currentTarget)
-      select.toggleClass("active")
-      options.toggle()
-      if (select.hasClass("active")) {
-        openSelects.push([select[0], options[0]])
-      }
-    }).appendTo(selectContainer)
-    const options = E("div").addClass("embed-select-options").hide().appendTo(selectContainer)
-    for (const option of data.select.options) {
-      const div = E("div").append(
-        E("div").text(option[0]),
-        E("div").text(option[1]),
-        $("#check-icon").contents().clone()
-      ).on("click", e => {
-        text.text(option[0]).removeClass("placeholder")
-        drop.click()
-        options.find(".active").removeClass("active")
-        div.addClass("active")
-      }).appendTo(options)
-    }
+  const selectDatas = data.selects ?? (data.select ? [data.select] : [])
+  if (selectDatas.length) {
+    selectContainer.css("display", "flex")
+    for (const select of selectDatas) makeSelect($, E("div").addClass("embed-select-container").appendTo(selectContainer), select)
   }
   if (data.buttons) {
     buttons.css("display", "flex")
-    for (const button of data.buttons)
-    E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(
-      button.emoji ? E("img").attr("src", `/assets/images/emojis/${button.emoji}.webp`) : undefined,
-      button.label ? E("div").text(button.label) : undefined,
-      button.url ? $("#url-icon").contents().clone() : undefined
-    ).appendTo(buttons)
+    for (const button of data.buttons) buttons.append(makeButton($, button))
+  }
+  parent.append(container)
+}
+
+function makeButton($, button) {
+  return E(button.url ? "a" : "div").attr({ href: button.url, target: "_blank" }).addClass(`embed-button${button.style ? ` embed-button-${button.style}` : ""}`).append(
+    button.emoji ? E("img").attr("src", `/assets/images/emojis/${button.emoji}.webp`) : undefined,
+    button.label ? E("div").text(button.label) : undefined,
+    button.url ? $("#url-icon").contents().clone() : undefined
+  )
+}
+
+function makeSelect($, selectContainer, data) {
+  let text
+  const drop = E("div").addClass("embed-select").append(
+    text = E("div").text(data.placeholder).addClass("placeholder"),
+    $("#drop-icon").contents().clone(),
+  ).on("click", e => {
+    const select = $(e.currentTarget)
+    select.toggleClass("active")
+    options.toggle()
+    if (select.hasClass("active")) {
+      openSelects.push([select[0], options[0]])
+    }
+  }).appendTo(selectContainer)
+  const options = E("div").addClass("embed-select-options").hide().appendTo(selectContainer)
+  for (const option of data.options) {
+    const [label, description] = Array.isArray(option) ? option : [option]
+    const div = E("div").append(
+      E("div").text(label),
+      description ? E("div").text(description) : undefined,
+      $("#check-icon").contents().clone()
+    ).on("click", e => {
+      text.text(label).removeClass("placeholder")
+      drop.click()
+      options.find(".active").removeClass("active")
+      div.addClass("active")
+    }).appendTo(options)
+  }
+}
+
+export function makeComponents($, parent, data, args = {}) {
+  let reply, cv2
+  const container = E("div").addClass("embed-container").append(
+    reply = E("div").addClass("reply-container").css("display", "none"),
+    E("div").append(
+      E("div").addClass("pfp-container").append(
+        E("img").addClass(args.outline ? "outline" : undefined).attr("src", data.avatar ?? "/assets/images/logo/logo.webp")
+      ),
+      E("div").addClass("embed-content").append(
+        E("div").addClass("name-row").append(
+          E("div").addClass("name").text(data.username ?? "Wynem"),
+          E("div").addClass("tag").append(
+            data.tag ? undefined : $("#check-icon").contents().clone(),
+            E("div").text(data.tag ?? "BOT")
+          )
+        ),
+        cv2 = E("div").addClass("cv2")
+      )
+    )
+  )
+  if (data.colour) cv2.css("border-left", `4px solid ${data.colour}`)
+  for (const item of data.components) {
+    if (typeof item === "string") {
+      E("div").addClass("cv2-text").html(parseString(item)).appendTo(cv2)
+    } else if (item.type === "separator") {
+      E("div").addClass(`cv2-separator${item.line === false ? " invisible" : ""}`).appendTo(cv2)
+    } else if (item.type === "section") {
+      E("div").addClass("cv2-section").append(
+        E("div").addClass("cv2-text").html(parseString(item.text)),
+        item.button ? makeButton($, item.button) : item.thumbnail ? E("img").addClass("cv2-thumbnail").attr({ src: item.thumbnail, "data-popupable": "" }) : undefined
+      ).appendTo(cv2)
+    } else if (item.type === "row") {
+      const row = E("div").addClass("cv2-buttons").appendTo(cv2)
+      for (const button of item.buttons) row.append(makeButton($, button))
+    } else if (item.type === "select") {
+      makeSelect($, E("div").addClass("embed-select-container").appendTo(cv2), item)
+    } else if (item.type === "gallery") {
+      const gallery = E("div").addClass("cv2-gallery").appendTo(cv2)
+      for (const image of item.images) gallery.append(E("img").attr({ src: image, "data-popupable": "" }))
+    }
+  }
+  if (data.reply) {
+    reply.css("display", "flex").append(
+      E("img").attr("src", data.reply.image),
+      E("div").css("color", data.reply.colour).text(data.reply.name),
+      E("div").html(parseString(data.reply.message))
+    )
   }
   parent.append(container)
 }
@@ -183,6 +243,16 @@ export function makeModal($, parent, data) {
     )
   )
   for (const row of data.rows) {
+    if (!Array.isArray(row)) {
+      const selectContainer = E("div").addClass("embed-select-container")
+      makeSelect($, selectContainer, row.select)
+      E("div").addClass("modal-row").append(
+        E("div").addClass("modal-row-title").html(`${row.label}${row.required ? " <span>*</span>" : ""}`),
+        row.description ? E("div").addClass("modal-row-description").text(row.description) : undefined,
+        selectContainer
+      ).appendTo(modal)
+      continue
+    }
     let input, count
     E("div").addClass("modal-row").append(
       E("div").addClass("modal-row-title").html(`${row[0]}${row[2] ? " <span>*</span>" : ""}`),
