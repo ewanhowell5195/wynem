@@ -72,13 +72,18 @@
           "content": [
             "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/botconfig customcommands add</code> command, and then click the button to start.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to start creating a custom command",
-                "buttons": [{
-                  "label": "Create a custom command",
-                  "emoji": "pencil"
-                }]
+                "components": [
+                  "Press the button to start creating a custom command",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Create a custom command",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
               }
             },
             "Next, a modal will appear, where you can enter the information for the custom command.\nFill in this modal and then click submit. Only the first field is required.",
@@ -87,46 +92,60 @@
               "data": {
                 "title": "Custom Command Builder",
                 "rows": [
-                  ["command name", "The name of the custom command", true],
-                  ["the description of the custom command", "The description of the command", false, 512],
-                  ["command aliases", "Alternative command names (comma separated)"]
+                  ["Command name", "The name of the custom command", true],
+                  ["The description of the custom command", "The description of the custom command", false, 512],
+                  ["Command aliases", "Alternative command names (comma separated)"]
                 ]
               }
             },
             "You will then be given a choice of what type of custom command you want to create. Pick a type.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Select custom command type",
-                "description": "What type of custom command would you like to create?",
-                "fields": [
-                  ["Message", "Will send a regular Discord message"],
-                  ["Image/Gif/Video", "Will send an image/gif/video in chat"],
-                  ["Custom Embed", "Will send a custom embed"],
-                  ["URL Buttons", "Will send a message containing some URL buttons"],
-                  ["Image Command", "Create a custom image command where users can paste images into a background image"],
-                  ["Custom Code", "Write your own code to decide what the command does!"]
-                ],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Message"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Select custom command type\nWhat type of custom command would you like to create?",
+                      "### Message\nWill send a regular Discord message",
+                      "### Image/Gif/Video\nWill send an image/gif/video in chat",
+                      "### Custom Embed\nWill send a custom embed",
+                      "### URL Buttons\nWill send a message containing some URL buttons",
+                      "### Image Command\nCreate a custom image command where users can paste images into a background image",
+                      "### Custom Code\nWrite your own code to decide what the command does!"
+                    ]
                   },
                   {
-                    "label": "Image/Gif/Video"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Message"
+                      },
+                      {
+                        "label": "Image/Gif/Video"
+                      },
+                      {
+                        "label": "Custom Embed"
+                      },
+                      {
+                        "label": "URL Buttons"
+                      },
+                      {
+                        "label": "Image Command"
+                      }
+                    ]
                   },
                   {
-                    "label": "Custom Embed"
-                  },
-                  {
-                    "label": "URL Buttons"
-                  },
-                  {
-                    "label": "Image Command"
-                  },
-                  {
-                    "label": "Custom Code"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Custom Code"
+                      }
+                    ]
                   }
-                ] 
+                ]
               }
             },
             {
@@ -137,26 +156,16 @@
                   "content": [
                     "You will be presented with a button to add the custom command's message. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the custom command's message",
-                        "buttons": [{
-                          "label": "Add Message",
-                          "emoji": "pencil"
-                        }] 
-                      }
-                    },
-                    "For additional image inputs (2 and 3), you will first be asked if you want to add another input:",
-                    {
-                      "type": "embed",
-                      "data": {
-                        "description": "Would you like to add image input #2?",
-                        "buttons": [
+                        "components": [
+                          "Press the button to add the custom command's message",
                           {
-                            "label": "Yes"
-                          },
-                          {
-                            "label": "No"
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add Message",
+                              "emoji": "pencil"
+                            }]
                           }
                         ]
                       }
@@ -167,7 +176,7 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["message", "The message to send", true, 2000]
+                          ["Message", "The message to send", true, 2000]
                         ]
                       }
                     }
@@ -178,13 +187,18 @@
                   "content": [
                     "You will be presented with a button to add the custom command's message. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the custom command's image/gif/video",
-                        "buttons": [{
-                          "label": "Add Image/Gif/Video",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the custom command's image/gif/video",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add Image/Gif/Video",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter the image/gif/video URL. Enter in your URL and then submit it.",
@@ -193,7 +207,7 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["image/gif/video", "https://imgur.com/gallery/pmSuXlo", true]
+                          ["Image/Gif/Video URL", "http://tinyurl.com/wynemexample", true]
                         ]
                       }
                     }
@@ -210,13 +224,18 @@
                   "content": [
                     "You will be presented with a button to add the custom command's URL buttons. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the custom command's URL buttons",
-                        "buttons": [{
-                          "label": "Add URL buttons",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the command's URL buttons",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add URL buttons",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "You will be able to add up to 25 buttons to your custom command.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
@@ -232,30 +251,35 @@
                       "data": {
                         "title": "URL Button Builder",
                         "rows": [
-                          ["button label", "The text on the button", true],
-                          ["button url", "The URL to go to when clicking the button", true]
+                          ["Button Label", "The text on the button", true],
+                          ["Button URL", "The URL to go to when clicking the button", true]
                         ]
                       }
                     },
                     "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press a button to continue adding URL buttons",
-                        "buttons": [
+                        "components": [
+                          "Press a button to continue adding URL buttons",
                           {
-                            "label": "Add button #2 to row #1",
-                            "emoji": "pencil"
-                          },
-                          {
-                            "label": "Skip",
-                            "emoji": "arrow_right"
-                          },
-                          {
-                            "label": "Finish",
-                            "emoji": "flag"
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Add button #2 to row #1",
+                                "emoji": "pencil"
+                              },
+                              {
+                                "label": "Skip",
+                                "emoji": "arrow_right"
+                              },
+                              {
+                                "label": "Finish",
+                                "emoji": "flag"
+                              }
+                            ]
                           }
-                        ] 
+                        ]
                       }
                     }
                   ]
@@ -265,13 +289,18 @@
                   "content": [
                     "You will be presented with a button to add the custom command's background image. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the command's background image",
-                        "buttons": [{
-                          "label": "Add background image",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the command's background image",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add background image",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter the background image URL. This will be the base image that users paste their images onto.",
@@ -280,43 +309,57 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["background image url", "https://example.com/image.png", true]
+                          ["Background Image URL", "https://example.com/image.png", true]
                         ]
                       }
                     },
                     "You will then be able to add up to 3 image input areas where users can paste their images. For each image input, you can choose from three paste types:",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "title": "Select image paste type",
-                        "description": "What image paste type would you like for image input #1?",
-                        "fields": [
-                          ["Simple", "Paste an image in the most basic way. Location, width, and height are customisable"],
-                          ["Rotated", "Paste an image with a custom rotation. Location, width, height, and rotation are customisable"],
-                          ["Perspective Distort", "Paste an image in the most complex way. You define the coordinates for each corner of the image individually"]
-                        ],
-                        "buttons": [
+                        "topLevel": true,
+                        "components": [
                           {
-                            "label": "Simple"
+                            "type": "container",
+                            "accent": true,
+                            "components": [
+                              "## Select image paste type\nWhat image paste type would you like for image input #1?",
+                              "### Simple\nPaste an image in the most basic way. Location, width, and height are customisable.",
+                              "### Rotated\nPaste an image with a custom rotation. Location, width, height, and rotation are customisable.",
+                              "### Perspective Distort\nPaste an image in the most complex way. You define the coordinates for each corner of the image individually."
+                            ]
                           },
                           {
-                            "label": "Rotated"
-                          },
-                          {
-                            "label": "Perspective Distort"
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Simple"
+                              },
+                              {
+                                "label": "Rotated"
+                              },
+                              {
+                                "label": "Perspective Distort"
+                              }
+                            ]
                           }
                         ]
                       }
                     },
                     "After choosing a paste type, you will be presented with a button to configure that image input:",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add image input #1",
-                        "buttons": [{
-                          "label": "Add image input #1",
-                          "emoji": "pencil"
-                        }]
+                        "components": [
+                          "Press the button to add image input #1",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add image input #1",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     {
@@ -331,11 +374,16 @@
                               "data": {
                                 "title": "Custom Command Builder",
                                 "rows": [
-                                  ["image x coordinate", "0", true],
-                                  ["image y coordinate", "0", true],
-                                  ["image width", "128", true],
-                                  ["image height", "128", true],
-                                  ["location", "Location against background (infront, behind)"]
+                                  ["Image x coordinate", "0", true],
+                                  ["Image y coordinate", "0", true],
+                                  ["Image width", "128", true],
+                                  ["Image height", "128", true],
+                                  {
+                                    "label": "Location",
+                                    "description": "Where to paste the image against the background",
+                                    "required": true,
+                                    "radios": [["In front", null, true], ["Behind"]]
+                                  }
                                 ]
                               }
                             },
@@ -351,10 +399,15 @@
                               "data": {
                                 "title": "Custom Command Builder",
                                 "rows": [
-                                  ["image x and y coordinates", "0, 0", true],
-                                  ["image width and height", "128, 128", true],
-                                  ["image rotation", "45"],
-                                  ["location", "Location against background (infront, behind)"]
+                                  ["Image x and y coordinates", "0, 0", true],
+                                  ["Image width and height", "128, 128", true],
+                                  ["Image rotation", "45"],
+                                  {
+                                    "label": "Location",
+                                    "description": "Where to paste the image against the background",
+                                    "required": true,
+                                    "radios": [["In front", null, true], ["Behind"]]
+                                  }
                                 ]
                               }
                             },
@@ -370,11 +423,16 @@
                               "data": {
                                 "title": "Custom Command Builder",
                                 "rows": [
-                                  ["top left x and y coordinates", "0, 0", true],
-                                  ["top right x and y coordinates", "128, 0", true],
-                                  ["bottom left x and y coordinates", "0, 128", true],
-                                  ["bottom right x and y coordinates", "128, 128", true],
-                                  ["location", "Location against background (infront, behind)"]
+                                  ["Top left x and y coordinates", "0, 0", true],
+                                  ["Top right x and y coordinates", "128, 0", true],
+                                  ["Bottom left x and y coordinates", "0, 128", true],
+                                  ["Bottom right x and y coordinates", "128, 128", true],
+                                  {
+                                    "label": "Location",
+                                    "description": "Where to paste the image against the background",
+                                    "required": true,
+                                    "radios": [["In front", null, true], ["Behind"]]
+                                  }
                                 ]
                               }
                             },
@@ -382,6 +440,26 @@
                           ]
                         }
                       ]
+                    },
+                    "For additional image inputs (2 and 3), you will first be asked if you want to add another input:",
+                    {
+                      "type": "components",
+                      "data": {
+                        "components": [
+                          "Would you like to add image input #2?",
+                          {
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Yes"
+                              },
+                              {
+                                "label": "No"
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     },
                     "Image commands allow users to create custom image compositions by pasting their images into predefined areas on your background image."
                   ]
@@ -391,43 +469,58 @@
                   "content": [
                     "You will first be asked whether the custom command should accept user-provided arguments.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Should this custom command accept user-provided arguments?",
-                        "buttons": [
+                        "components": [
+                          "Should this custom command accept user-provided arguments?",
                           {
-                            "label": "Yes"
-                          },
-                          {
-                            "label": "No"
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Yes"
+                              },
+                              {
+                                "label": "No"
+                              }
+                            ]
                           }
                         ]
                       }
                     },
                     "If you choose yes, you can add up to 3 arguments that users can provide when running the command. For the 2nd and 3rd arguments, you will be asked if you want to add them:",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Would you like to add a 2nd argument?",
-                        "buttons": [
+                        "components": [
+                          "Would you like to add a 2nd argument?",
                           {
-                            "label": "Yes"
-                          },
-                          {
-                            "label": "No"
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Yes"
+                              },
+                              {
+                                "label": "No"
+                              }
+                            ]
                           }
                         ]
                       }
                     },
                     "Then you'll be presented with a button to configure the argument:",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add argument 1 of 3\n\n**Argument types**: `text`, `member`, `number`, `integer`, `boolean`, `colour`, `percentage`\n\n-# Required arguments cannot come after optional arguments",
-                        "buttons": [{
-                          "label": "Add argument #1",
-                          "emoji": "pencil"
-                        }]
+                        "components": [
+                          "Press the button to add argument 1 of 3\n\n-# Required arguments cannot come after optional arguments",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add argument #1",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can configure the argument details:",
@@ -436,10 +529,21 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["argument name", "Argument Name", true],
-                          ["argument description", "Argument Description", true],
-                          ["argument type", "text, member, number, integer, boolean, colour, percentage"],
-                          ["is this argument required?", "Yes or No"]
+                          ["Argument Name", "Argument Name", true],
+                          ["Argument Description", "Argument Description", true],
+                          {
+                            "label": "Argument Type",
+                            "required": true,
+                            "select": {
+                              "placeholder": "Text",
+                              "options": ["Text", "Member", "Number", "Integer", "Boolean", "Colour", "Percentage"]
+                            }
+                          },
+                          {
+                            "label": "Required",
+                            "description": "Should this argument be required?",
+                            "checkbox": false
+                          }
                         ]
                       }
                     },
@@ -459,13 +563,18 @@
                     "When users run your command with arguments, the arguments are automatically grouped. If a user provides multiple words for the last argument, they are combined together. Users can also group arguments themselves by using quotes. For example, with a command that has two arguments:\n\n`e!mycommand apple this is a long description` would be parsed as:\n- Argument 1: `apple`\n- Argument 2: `this is a long description`\n\nOr using quotes to group the first argument:\n`e!mycommand \"red apple\" this is still the second argument` would be parsed as:\n- Argument 1: `red apple`\n- Argument 2: `this is still the second argument`\n\nWith three arguments:\n`e!mycommand red 25 this text goes in the last argument` would be parsed as:\n- Argument 1: `red`\n- Argument 2: `25`\n- Argument 3: `this text goes in the last argument`",
                     "You will then be presented with a button to add the custom command's code. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the custom command's code",
-                        "buttons": [{
-                          "label": "Add custom code",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the custom command's code\n\nYou can learn how to code for Wynem [here](/features/custom-code)!",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add custom code",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter your JavaScript code. This code will be executed when the custom command is run.",
@@ -474,7 +583,7 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["custom code", "console.log(\"JavaScript\")", true, 4000]
+                          ["Custom Code", "console.log(\"JavaScript\")", true, 4000]
                         ]
                       }
                     },
@@ -496,6 +605,21 @@
           "name": "Editing Custom Commands",
           "content": [
             "To edit a custom command, use the <command:editcustomcommand [command]|botconfig customcommands edit command:[command]> command.\nFor example: <command:editcustomcommand example|botconfig customcommands edit command:example>",
+            {
+              "type": "components",
+              "data": {
+                "components": [
+                  "Press the button to edit the `example` custom command",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Edit command",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
+              }
+            },
             "A modal will appear with the current name, description, and aliases prefilled, ready for you to change.",
             {
               "type": "modal",
@@ -503,27 +627,36 @@
                 "title": "Custom Command Editor",
                 "rows": [
                   ["Command name", "The name of the custom command", true],
-                  ["The description of the custom command", "The description of the custom command"],
+                  ["The description of the custom command", "The description of the custom command", false, 512],
                   ["Command aliases", "Alternative command names (comma separated)"]
                 ]
               }
             },
             "You will then be given the choice to keep or replace the content of the command. The command type cannot be changed. To change the command type, remove the command and recreate it.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Keep or replace the content",
-                "description": "Would you like to keep or replace the custom command's content?\n\nThe command type cannot be changed. To change the command type, remove the command and recreate it.",
-                "fields": [
-                  ["Keep", "Keep the current content, only updating the name, description, and aliases"],
-                  ["Replace", "Re-enter the command's content"]
-                ],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Keep"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Keep or replace the content\nWould you like to keep or replace the custom command's content?\n\nThe command type cannot be changed. To change the command type, remove the command and recreate it.",
+                      "### Keep\nKeep the current content, only updating the name, description, and aliases",
+                      "### Replace\nRe-enter the command's content"
+                    ]
                   },
                   {
-                    "label": "Replace"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Keep"
+                      },
+                      {
+                        "label": "Replace"
+                      }
+                    ]
                   }
                 ]
               }
@@ -567,23 +700,37 @@
           "content": [
             "Custom commands can be stolen from other users and servers, copying them to your own server.",
             "To steal a command, use the <command:stealcustomcommand [owner] [command]|botconfig customcommands steal owner:[owner] command:[command]> command. The owner can be a username, user ID, or server ID.\nFor example: <command:stealcustomcommand Ewan example|botconfig customcommands steal owner:Ewan command:example>",
-            "A modal will appear with the command's current name, description, and aliases prefilled, letting you optionally rename or adjust it before it gets added.",
+            "You will be presented with a button to steal the command. Press it, and a modal will appear with the command's current name, description, and aliases prefilled, letting you optionally rename or adjust it before it gets added.",
+            {
+              "type": "components",
+              "data": {
+                "components": [
+                  "Press the button to steal the `example` command from <@Ewan>",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Steal command",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
+              }
+            },
             {
               "type": "modal",
               "data": {
                 "title": "Custom Command Stealer",
                 "rows": [
                   ["Command name", "The name to steal the custom command under", true],
-                  ["The description of the custom command", "The description of the custom command"],
+                  ["The description of the custom command", "The description of the custom command", false, 512],
                   ["Command aliases", "Alternative command names (comma separated)"]
                 ]
               }
             },
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Custom command stolen",
-                "description": "The command `example` was successfully stolen"
+                "components": ["## Custom command stolen\nThe custom command `example` was successfully stolen from <@Ewan>\n\nYou have `24` custom command slots remaining"]
               }
             },
             "You can also steal a command directly from the view of a command by pressing its steal button."

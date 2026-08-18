@@ -66,13 +66,16 @@
           "content": [
             "To add a new rule to the server, first run the <command:addrule|serverconfig rule add> command, and then click the button to start.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to add a new rule",
-                "buttons": [
+                "components": [
+                  "Press the button to add a new rule",
                   {
-                    "label": "Add new rule",
-                    "emoji": "pencil"
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Add rule",
+                      "emoji": "pencil"
+                    }]
                   }
                 ]
               }
@@ -91,20 +94,34 @@
                 "title": "Rule Creator",
                 "rows": [
                   ["Rule", "No breaking the rules!", true],
-                  ["Rule Description", "Do not break the rules or you will be banned", false, 256]
+                  ["Rule Description", "Do not break the rules or you will be banned.", false, 256]
                 ]
               }
             },
             "After submitting the rule, your rule will have been created and added to the server!",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Rule added",
-                "description": "The rule has been added to the server\n\nHere is a preview of the rule:",
-                "embeds": [{
-                  "author": ["Rules", "/assets/images/icons/logs.webp"],
-                  "description": "## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server."
-                }]
+                "topLevel": true,
+                "components": [
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## Rule added\nThe rule has been added to the server\n\nHere is a preview of the rule:"]
+                  },
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server."]
+                  },
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Add another",
+                      "emoji": "plus"
+                    }]
+                  }
+                ]
               }
             }
           ]
@@ -114,13 +131,16 @@
           "content": [
             "To edit an existing rule, use the <command:editrule [rule]|serverconfig rule edit rule:[rule]> command. For example: <command:editrule 1|serverconfig rule edit rule:1>. Click the button on the resulting message to start.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to edit the rule:\n## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.",
-                "buttons": [
+                "components": [
+                  "Press the button to edit the rule:\n## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.",
                   {
-                    "label": "Edit rule",
-                    "emoji": "pencil"
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Edit rule",
+                      "emoji": "pencil"
+                    }]
                   }
                 ]
               }
@@ -138,14 +158,21 @@
             },
             "After submitting the rule changes, your rule will have been updated!",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Rule updated",
-                "description": "Rule `1` has been updated\n\nHere is a preview of the rule:",
-                "embeds": [{
-                  "author": ["Rules", "/assets/images/icons/logs.webp"],
-                  "description": "## Rule 1: This rule has been edited\nHello there, I am a description."
-                }]
+                "topLevel": true,
+                "components": [
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## Rule updated\nRule `1` has been updated\n\nHere is a preview of the rule:"]
+                  },
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## Rule 1: This rule has been edited\nHello there, I am a description."]
+                  }
+                ]
               }
             }
           ]
@@ -154,24 +181,16 @@
           "name": "Removing rules",
           "content": [
             "To remove an existing rule, use the <command:removerule [rule]|serverconfig rule remove rule:[rule]> command. For example: <command:removerule 1|serverconfig rule remove rule:1>.",
-            {
-              "type": "embed",
-              "data": {
-                "description": "Press the button to edit the rule:\n## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server.",
-                "buttons": [
-                  {
-                    "label": "Edit rule",
-                    "emoji": "pencil"
-                  }
-                ]
-              }
-            },
             "You will be prompted to confirm you want to remove the rule. Press remove to continue.",
             {
               "type": "embed",
               "data": {
                 "warning": true,
                 "description": "Are you sure you want to remove rule `1`?",
+                "embeds": [{
+                  "author": ["Rules", "/assets/images/icons/logs.webp"],
+                  "description": "## Rule 1: Follow the Discord Terms of Service\nPlease follow the Discord Terms of Service in all regards within this server."
+                }],
                 "buttons": [
                   {
                     "label": "Remove",
@@ -190,7 +209,7 @@
               "type": "embed",
               "data": {
                 "title": "Rule removed",
-                "description": "Rule `1` has been removed"
+                "description": "Rule `1` has been removed from the server"
               }
             }
           ]

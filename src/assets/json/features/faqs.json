@@ -70,13 +70,18 @@
             "To add or update an FAQ, use the <command:addfaq|serverconfig faq add> command. This command requires the `Manage Server` permission.",
             "Press the button to open the FAQ builder.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to start creating an FAQ",
-                "buttons": [{
-                  "label": "Create an FAQ",
-                  "emoji": "pencil"
-                }]
+                "components": [
+                  "Press the button to start creating an FAQ",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Create an FAQ",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
               }
             },
             "A modal will appear where you can enter the FAQ's category, ID, and text.",
@@ -94,17 +99,22 @@
             "Any `@user`, `@role`, `#channel`, and `:emoji:` names typed into the FAQ text are automatically converted into real mentions and emojis.",
             "Next, you can optionally set up some extra FAQ options, or press skip to finish.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press a button to continue creating the FAQ",
-                "buttons": [
+                "components": [
+                  "Press a button to continue creating the FAQ",
                   {
-                    "label": "Extra FAQ options",
-                    "emoji": "pencil"
-                  },
-                  {
-                    "label": "Skip",
-                    "emoji": "arrow_right"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Extra FAQ options",
+                        "emoji": "pencil"
+                      },
+                      {
+                        "label": "Skip",
+                        "emoji": "arrow_right"
+                      }
+                    ]
                   }
                 ]
               }
@@ -112,7 +122,7 @@
             {
               "type": "tablelist",
               "rows": [
-                ["Should the FAQ be in an embed?", "Whether the FAQ is sent as an embed, or as a plain message. Defaults to yes"],
+                ["Embed", "Whether the FAQ is sent as an embed, or as a plain message. Defaults to enabled"],
                 ["Image URL", "An image to show alongside the FAQ"],
                 ["FAQ ID Aliases", "Up to 10 alternative IDs for the FAQ, comma separated"]
               ]
@@ -122,7 +132,11 @@
               "data": {
                 "title": "FAQ Builder",
                 "rows": [
-                  ["Should the FAQ be in an embed?", "Default: Yes"],
+                  {
+                    "label": "Embed",
+                    "description": "Should the FAQ be shown in an embed?",
+                    "checkbox": true
+                  },
                   ["Image URL", "An image to show alongside the FAQ"],
                   ["FAQ ID Aliases", "Alternative FAQ IDs (comma separated)"]
                 ]
@@ -130,32 +144,47 @@
             },
             "Once finished, the FAQ is saved, and a preview of it is shown.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "FAQ added",
-                "description": "Here is a preview of the FAQ:",
-                "embeds": [{
-                  "author": ["FAQ", "/assets/images/icons/faq.webp"],
-                  "title": "Getting Started: Download",
-                  "description": "All resource pack downloads can be found at [ewanhowell.com](https://ewanhowell.com/resourcepacks/)"
-                }]
+                "topLevel": true,
+                "components": [
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## FAQ added\nHere is a preview of the FAQ:"]
+                  },
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": ["## Getting Started: Download\nAll resource pack downloads can be found at [ewanhowell.com](https://ewanhowell.com/resourcepacks/)"]
+                  }
+                ]
               }
             },
             "If an FAQ with the same category and ID already exists, you will first be asked to confirm that you want to update it.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "warning": true,
-                "description": "The FAQ `download` already exists in the `getting-started` category\n\nAre you sure you want to update it?",
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Confirm",
-                    "emoji": "bin",
-                    "style": "red"
+                    "type": "container",
+                    "accent": "#DD2E44",
+                    "components": ["## Warning!\nThe FAQ `download` already exists in the `getting-started` category\n\nAre you sure you want to update it?"]
                   },
                   {
-                    "label": "Cancel",
-                    "emoji": "cross"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Confirm",
+                        "emoji": "tick",
+                        "style": "red"
+                      },
+                      {
+                        "label": "Cancel",
+                        "emoji": "cross"
+                      }
+                    ]
                   }
                 ]
               }
@@ -222,7 +251,7 @@
                 "buttons": [
                   {
                     "label": "Confirm",
-                    "emoji": "bin",
+                    "emoji": "tick",
                     "style": "red"
                   },
                   {

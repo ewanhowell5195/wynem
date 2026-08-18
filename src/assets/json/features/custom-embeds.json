@@ -41,13 +41,18 @@
     },
     "Throughout this guide, there will be references to different sections of embeds. If you do not know what section is being mentioned, you can refer to the image above.\n\nTo start creating a custom embed, first run the <code class=\"command prefix\">e!createembed</code><code class=\"command slash\">/utility createembed</code> command, and then click the button to start.\nIf the custom embed is being created by another command, you can ignore this step.",
     {
-      "type": "embed",
+      "type": "components",
       "data": {
-        "description": "Press the button to start creating a custom embed",
-        "buttons": [{
-          "label": "Create embed",
-          "emoji": "pencil"
-        }]
+        "components": [
+          "Press the button to start creating a custom embed",
+          {
+            "type": "row",
+            "buttons": [{
+              "label": "Create embed",
+              "emoji": "pencil"
+            }]
+          }
+        ]
       }
     },
     "The first modal you will see is for the main content of the embed.\nIf you do not wish to include any of these, just click submit while leaving all fields blank.",
@@ -65,30 +70,48 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["title", "The title"],
-          ["url", "Turns the title into a clickable link (requires title)"],
-          ["description", "Appears underneath the title", false, 4000],
-          ["colour", "Changes the colour of the bar up the side"]
+          ["Title", "The title"],
+          {
+            "label": "URL",
+            "description": "Turns the title into a clickable link (requires title)",
+            "placeholder": "The title's link"
+          },
+          {
+            "label": "Description",
+            "placeholder": "Appears underneath the title",
+            "long": true,
+            "maxLength": 4000
+          },
+          {
+            "label": "Colour",
+            "description": "Changes the colour of the bar up the side",
+            "placeholder": "The embed colour"
+          }
         ]
       }
     },
     "After each modal, you will be given the choice to add more content, skip past the suggested content types, or finish the embed.\nThe rest of this guide will assume you always choose the first button.",
     {
-      "type": "embed",
+      "type": "components",
       "data": {
-        "description": "Press a button to continue creating the custom embed",
-        "buttons": [
+        "components": [
+          "Press a button to continue creating the custom embed",
           {
-            "label": "Add author and footer",
-            "emoji": "pencil"
-          },
-          {
-            "label": "Skip",
-            "emoji": "arrow_right"
-          },
-          {
-            "label": "Finish",
-            "emoji": "flag"
+            "type": "row",
+            "buttons": [
+              {
+                "label": "Add author and footer",
+                "emoji": "pencil"
+              },
+              {
+                "label": "Skip",
+                "emoji": "arrow_right"
+              },
+              {
+                "label": "Finish",
+                "emoji": "flag"
+              }
+            ]
           }
         ]
       }
@@ -109,11 +132,28 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["author", "The small text at the top"],
-          ["author image url", "An image to display next to the author (requires author)"],
-          ["author url", "Turns the author into a clickable link (requires author)"],
-          ["footer", "The small text at the bottom", false, 1024],
-          ["footer image url", "An image to display next to the footer (requires footer)"]
+          ["Author", "The small text at the top"],
+          {
+            "label": "Author Image URL",
+            "description": "An image to display next to the author (requires author)",
+            "placeholder": "The author's image"
+          },
+          {
+            "label": "Author URL",
+            "description": "Turns the author into a clickable link (requires author)",
+            "placeholder": "The author's link"
+          },
+          {
+            "label": "Footer",
+            "placeholder": "The small text at the bottom",
+            "long": true,
+            "maxLength": 2048
+          },
+          {
+            "label": "Footer Image URL",
+            "description": "An image to display next to the footer (requires footer)",
+            "placeholder": "The footer's image"
+          }
         ]
       }
     },
@@ -131,9 +171,21 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["image url", "A large image in the middle"],
-          ["thumbnail url", "A small image on the top right"],
-          ["timestamp", "2020/07/26 23:55"]
+          {
+            "label": "Image URL",
+            "description": "A large image in the middle",
+            "placeholder": "The embed image"
+          },
+          {
+            "label": "Thumbnail URL",
+            "description": "A small image on the top right",
+            "placeholder": "The embed thumbnail"
+          },
+          {
+            "label": "Timestamp",
+            "description": "A date and time shown in the footer",
+            "placeholder": "2026-08-18 22:30:00"
+          }
         ]
       }
     },
@@ -143,7 +195,7 @@
       "rows": [
         ["Field Name", "The name for the field."],
         ["Field Value", "The main text of the field. Appears beneath the title."],
-        ["Inline", "Fields can be set to be inline, which is where they are allowed to be on the same row as another field. Up to three fields can appear on a single row.\nThis input is a simple yes or no."]
+        ["Inline", "Fields can be set to be inline, which is where they are allowed to be on the same row as another field. Up to three fields can appear on a single row.\nThis input is a simple checkbox."]
       ]
     },
     {
@@ -151,9 +203,13 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["field name", "The name of the field", true],
-          ["field value", "The value of the field", true],
-          ["would you like the field to be inline?", false, 1024]
+          ["Field Name", "The name of the field", true],
+          ["Field Value", "The value of the field", true, 1024],
+          {
+            "label": "Inline",
+            "description": "Inline fields will be on the same row",
+            "checkbox": false
+          }
         ]
       }
     },
@@ -170,8 +226,8 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["button label", "The text on the button", true],
-          ["button url", "The URL to go to when clicking the button", true]
+          ["Button Label", "The text on the button", true],
+          ["Button URL", "The URL to go to when clicking the button", true]
         ]
       }
     },

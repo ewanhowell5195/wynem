@@ -95,41 +95,55 @@
             "To start setting up your own auto-responses, run the <code class=\"command prefix\">e!addautoresponse</code><code class=\"command slash\">/botconfig autoresponses add</code> command.",
             "You will first be given a choice of what trigger type the auto-response should use. Pick a type to continue.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Select auto-response trigger type",
-                "description": "What type of trigger would you like the auto-response to use?",
-                "fields": [
-                  ["Full message is trigger", "The entire message has to equal the trigger for it to respond."],
-                  ["Message contains trigger", "The message has to contain the trigger somewhere in it for it to respond."],
-                  ["Words required in order", "The words in the trigger are all required to be in the message, in the order provided. Other words can appear between them however."],
-                  ["Words required any order", "The words in the trigger are all required to be in the message. Other words can appear between them and their order does not matter."]
-                ],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Full message is trigger"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Select auto-response trigger type\nWhat type of trigger would you like the auto-response to use?",
+                      "### Full message is trigger\nThe entire message has to equal the trigger for it to respond.",
+                      "### Message contains trigger\nThe message has to contain the trigger somewhere in it for it to respond.",
+                      "### Words required in order\nThe words in the trigger are all required to be in the message, in the order provided. Other words can appear between them however.",
+                      "### Words required any order\nThe words in the trigger are all required to be in the message. Other words can appear between them and their order does not matter."
+                    ]
                   },
                   {
-                    "label": "Message contains trigger"
-                  },
-                  {
-                    "label": "Words required in order"
-                  },
-                  {
-                    "label": "Words required any order"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Full message is trigger"
+                      },
+                      {
+                        "label": "Message contains trigger"
+                      },
+                      {
+                        "label": "Words required in order"
+                      },
+                      {
+                        "label": "Words required any order"
+                      }
+                    ]
                   }
                 ]
               }
             },
             "Next, press the button to enter the ID and trigger for the auto-response.\nThe ID is something for you to identify the auto-response by when viewing all auto-responses or trying to remove them.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to add the auto-response's ID and Trigger",
-                "buttons": [{
-                  "label": "Add ID and Trigger",
-                  "emoji": "pencil"
-                }]
+                "components": [
+                  "Press the button to add the auto-response's ID and Trigger",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Add ID and Trigger",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
               }
             },
             "A modal will appear where you can enter the ID and trigger of the auto-response.",
@@ -145,38 +159,52 @@
             },
             "Next, you will get to choose what type of response will get sent when the trigger is fired. Choose the type to continue.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Select auto-response type",
-                "description": "What type of auto-response would you like to create?",
-                "fields": [
-                  ["Message", "Will send a regular Discord message"],
-                  ["Image/Gif/Video", "Will send an image/gif/video in chat"],
-                  ["Custom Embed", "Will send a custom embed"],
-                  ["URL Buttons", "Will send a message containing some URL buttons"],
-                  ["Emoji Reactions", "Will react to the message with some emoji reactions"],
-                  ["Custom Code", "Write your own code to decide what the auto-response does!"]
-                ],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Message"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Select auto-response type\nWhat type of auto-response would you like to create?",
+                      "### Message\nWill send a regular Discord message",
+                      "### Image/Gif/Video\nWill send an image/gif/video in chat",
+                      "### Custom Embed\nWill send a custom embed",
+                      "### URL Buttons\nWill send a message containing some URL buttons",
+                      "### Emoji Reactions\nWill react to the message with some emoji reactions",
+                      "### Custom Code\nWrite your own code to decide what the auto-response does!"
+                    ]
                   },
                   {
-                    "label": "Image/Gif/Video"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Message"
+                      },
+                      {
+                        "label": "Image/Gif/Video"
+                      },
+                      {
+                        "label": "Custom Embed"
+                      },
+                      {
+                        "label": "URL Buttons"
+                      },
+                      {
+                        "label": "Emoji Reactions"
+                      }
+                    ]
                   },
                   {
-                    "label": "Custom Embed"
-                  },
-                  {
-                    "label": "URL Buttons"
-                  },
-                  {
-                    "label": "Emoji Reactions"
-                  },
-                  {
-                    "label": "Custom Code"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Custom Code"
+                      }
+                    ]
                   }
-                ] 
+                ]
               }
             },
             {
@@ -187,13 +215,18 @@
                   "content": [
                     "You will be presented with a button to add the auto-response's message. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the auto-response's message",
-                        "buttons": [{
-                          "label": "Add Message",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the auto-response's message",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add Message",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter the message. Enter in your message and then submit it.",
@@ -213,13 +246,18 @@
                   "content": [
                     "You will be presented with a button to add the auto-response's message. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the auto-response's image/gif/video",
-                        "buttons": [{
-                          "label": "Add Image/Gif/Video",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the auto-response's image/gif/video",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add Image/Gif/Video",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter the image/gif/video URL. Enter in your URL and then submit it.",
@@ -228,7 +266,7 @@
                       "data": {
                         "title": "Auto-response Builder",
                         "rows": [
-                          ["Image/Gif/Video URL", "https://imgur.com/gallery/pmSuXlo", true]
+                          ["Image/Gif/Video URL", "http://tinyurl.com/wynemexample", true]
                         ]
                       }
                     }
@@ -245,13 +283,18 @@
                   "content": [
                     "You will be presented with a button to add the auto-response's URL buttons. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the auto-response's URL buttons",
-                        "buttons": [{
-                          "label": "Add URL Buttons",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the auto-response's URL buttons",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add URL buttons",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "You will be able to add up to 25 buttons to your auto-response.\nButtons are special links that appear in a message.\n\nThere are 5 rows of buttons, which support up to 5 buttons each.\nYou must have at least 1 button on a row to have another row.\nSkipping the first button in a row will skip all remaining buttons, whereas skipping any other button will skip the rest of the current row.",
@@ -274,23 +317,28 @@
                     },
                     "After adding each button, you will be given the option to add the next button, skip the current row, or move to the next row. Choose what you want to do to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press a button to continue adding URL buttons",
-                        "buttons": [
+                        "components": [
+                          "Press a button to continue adding URL buttons",
                           {
-                            "label": "Add button #2 to row #1",
-                            "emoji": "pencil"
-                          },
-                          {
-                            "label": "Skip",
-                            "emoji": "arrow_right"
-                          },
-                          {
-                            "label": "Finish",
-                            "emoji": "flag"
+                            "type": "row",
+                            "buttons": [
+                              {
+                                "label": "Add button #2 to row #1",
+                                "emoji": "pencil"
+                              },
+                              {
+                                "label": "Skip",
+                                "emoji": "arrow_right"
+                              },
+                              {
+                                "label": "Finish",
+                                "emoji": "flag"
+                              }
+                            ]
                           }
-                        ] 
+                        ]
                       }
                     }
                   ]
@@ -300,13 +348,18 @@
                   "content": [
                     "You will be presented with a button to add the auto-response's reaction emojis. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the auto-response's reaction emojis",
-                        "buttons": [{
-                          "label": "Add reaction emojis",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the auto-response's reaction emojis",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add reaction emojis",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "You will be able to add up to 5 emojis. You can provide either the emoji character, or the emoji name. If you use custom emojis, they can only be from the current server.",
@@ -330,13 +383,18 @@
                   "content": [
                     "You will be presented with a button to add the auto-response's custom code. Press it to continue.",
                     {
-                      "type": "embed",
+                      "type": "components",
                       "data": {
-                        "description": "Press the button to add the auto-response's custom code",
-                        "buttons": [{
-                          "label": "Add custom code",
-                          "emoji": "pencil"
-                        }] 
+                        "components": [
+                          "Press the button to add the auto-response's code\n\nYou can learn how to code for Wynem [here](/features/custom-code)!",
+                          {
+                            "type": "row",
+                            "buttons": [{
+                              "label": "Add custom code",
+                              "emoji": "pencil"
+                            }]
+                          }
+                        ]
                       }
                     },
                     "A modal will appear where you can enter your JavaScript code. This code will be executed when the auto-response is triggered, allowing you to create completely custom behaviors.",
@@ -345,7 +403,7 @@
                       "data": {
                         "title": "Auto-response Builder",
                         "rows": [
-                          ["custom code", "console.log(\"JavaScript\")", true, 4000]
+                          ["Custom Code", "console.log(\"JavaScript\")", true, 4000]
                         ]
                       }
                     },
@@ -356,16 +414,21 @@
             },
             "Finally, you can limit which channels the auto-response can respond in. Select the mode and channels you want, or leave the channels empty to have it respond everywhere, and then press finish.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Select auto-response channels",
-                "description": "Which channels would you like the auto-response to respond in?\n\nSelecting a category applies to all channels within it, and selecting no channels will respond everywhere. Press finish when you are done.",
-                "fields": [
-                  ["Allow mode", "Only responds in the selected channels"],
-                  ["Deny mode", "Responds everywhere except the selected channels"]
-                ],
-                "selects": [
+                "topLevel": true,
+                "components": [
                   {
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Select auto-response channels\nWhich channels would you like the auto-response to respond in?\n\nSelecting a category applies to all channels within it, and selecting no channels will respond everywhere. Press finish when you are done.",
+                      "### Allow mode\nOnly responds in the selected channels",
+                      "### Deny mode\nResponds everywhere except the selected channels"
+                    ]
+                  },
+                  {
+                    "type": "select",
                     "placeholder": "Deny",
                     "options": [
                       ["Allow", "Only respond in the selected channels"],
@@ -373,6 +436,7 @@
                     ]
                   },
                   {
+                    "type": "select",
                     "placeholder": "No channels selected",
                     "options": [
                       {
@@ -385,13 +449,16 @@
                         "channel": "welcome"
                       }
                     ]
+                  },
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Finish",
+                      "emoji": "flag",
+                      "style": "green"
+                    }]
                   }
-                ],
-                "buttons": [{
-                  "label": "Finish",
-                  "emoji": "flag",
-                  "style": "green"
-                }]
+                ]
               }
             },
             "You are finished! Your auto-response has been created and is now active and ready for you to use!"
@@ -434,30 +501,38 @@
             "The editor follows the same steps as the auto-response builder, with the current values prefilled. You can change the trigger type, ID, trigger, and channels.",
             "When you reach the response step, you can choose to keep the current response, or replace it with a new one. The response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Keep or replace the response",
-                "description": "Would you like to keep or replace the auto-response's response?\n\nThe response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
-                "fields": [
-                  ["Keep", "Keep the current response, only updating the ID, trigger, and channels"],
-                  ["Replace", "Re-enter the auto-response's response"]
-                ],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "label": "Keep"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Keep or replace the response\nWould you like to keep or replace the auto-response's response?\n\nThe response type cannot be changed. To change the response type, remove the auto-response and recreate it.",
+                      "### Keep\nKeep the current response, only updating the ID, trigger, and channels",
+                      "### Replace\nRe-enter the auto-response's response"
+                    ]
                   },
                   {
-                    "label": "Replace"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Keep"
+                      },
+                      {
+                        "label": "Replace"
+                      }
+                    ]
                   }
                 ]
               }
             },
             "After finishing the channels step, the auto-response will have been updated.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "title": "Auto-response updated",
-                "description": "The auto-response `packdownload` was successfully updated"
+                "components": ["## Auto-response updated\nThe auto-response `packdownload` was successfully updated"]
               }
             }
           ]

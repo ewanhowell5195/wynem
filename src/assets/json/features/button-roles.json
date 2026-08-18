@@ -61,13 +61,18 @@
           "content": [
             "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/role buttonroles</code> command, and then click the button to start.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press the button to start setting up the button roles",
-                "buttons": [{
-                  "label": "Set up button roles",
-                  "emoji": "pencil"
-                }]
+                "components": [
+                  "Press the button to start setting up the button roles",
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "label": "Set up button roles",
+                      "emoji": "pencil"
+                    }]
+                  }
+                ]
               }
             },
             "Next, a modal will appear, where you can enter the information for the first role.\nFill in this modal and then click submit. Only the first field is required.",
@@ -76,27 +81,61 @@
               "data": {
                 "title": "Button Role Builder",
                 "rows": [
-                  ["1st Role", "The name or ID of the 1st role", true],
+                  {
+                    "label": "1st Role",
+                    "required": true,
+                    "select": {
+                      "placeholder": "Select the 1st role",
+                      "options": [
+                        {
+                          "role": "Wynem Notices",
+                          "colour": "#6C80F6",
+                          "members": 273
+                        },
+                        {
+                          "role": "Pack Announcements",
+                          "colour": "#43B481",
+                          "members": 154
+                        }
+                      ]
+                    }
+                  },
                   ["1st Role Text", "The text that shows on the 1st role's button"],
                   ["1st Role Emoji", "The emoji that shows on the 1st role's button"],
-                  ["1st Role Colour", "The colour of the 1st role's button (red, green, blue, grey)"],
-                  ["1st Role Type", "normal, binding, unique"]
+                  {
+                    "label": "1st Role Colour",
+                    "description": "The colour of the role's button",
+                    "radios": ["Red", "Green", "Blue", "Grey"]
+                  },
+                  {
+                    "label": "1st Role Type",
+                    "radios": [
+                      ["Normal", "The user can add and remove this role as they wish"],
+                      ["Binding", "Once the role is applied, it cannot be removed"],
+                      ["Unique", "You can only have one unique role at a time"]
+                    ]
+                  }
                 ]
               }
             },
             "You will then be given the option to add another role, or move on. Add any extra roles you may want, or skip this section.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "Press a button to continue setting up the button roles",
-                "buttons": [
+                "components": [
+                  "Press a button to continue setting up the button roles",
                   {
-                    "label": "Add the 2nd role",
-                    "emoji": "pencil"
-                  },
-                  {
-                    "label": "Skip",
-                    "emoji": "arrow_right"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Add the 2nd role",
+                        "emoji": "pencil"
+                      },
+                      {
+                        "label": "Skip",
+                        "emoji": "arrow_right"
+                      }
+                    ]
                   }
                 ]
               }
@@ -111,18 +150,23 @@
               ]
             },
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "description": "What embed type would you like for the button roles?",
-                "buttons": [
+                "components": [
+                  "What embed type would you like for the button roles?",
                   {
-                    "label": "Default Embed"
-                  },
-                  {
-                    "label": "Custom Embed"
-                  },
-                  {
-                    "label": "No Embed"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "label": "Default Embed"
+                      },
+                      {
+                        "label": "Custom Embed"
+                      },
+                      {
+                        "label": "No Embed"
+                      }
+                    ]
                   }
                 ]
               }

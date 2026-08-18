@@ -342,6 +342,14 @@ export function makeModal($, parent, data) {
       } else if (row.checkboxes || row.radios) {
         const group = E("div").addClass("modal-option-group").appendTo(rowEl)
         for (const option of row.checkboxes ?? row.radios) makeOption(option, !!row.radios, group).appendTo(group)
+      } else {
+        rowEl.append(E("div").addClass("modal-row-input-container").append(
+          E(row.long ? "textarea" : "input").addClass(`modal-row-input${row.long ? " long" : ""}`).attr({
+            placeholder: row.placeholder,
+            rows: 3,
+            maxlength: row.maxLength ?? 128
+          })
+        ))
       }
       continue
     }
