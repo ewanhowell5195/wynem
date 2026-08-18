@@ -1342,24 +1342,6 @@
                       "description": "Make a member appear!",
                       "slashCommand": "avatar/appear"
                     },
-                    "avatardecoration": {
-                      "aliases": [
-                        "avatardecorate",
-                        "avatardecor",
-                        "avdecoration",
-                        "avdecorate",
-                        "avdecor",
-                        "decoration",
-                        "decorate",
-                        "decor"
-                      ],
-                      "arguments": "[decoration] [zoom-level] [image]",
-                      "description": [
-                        "Add an avatar decoration to your avatar.",
-                        "Zoom levels control how zoomed the image is:\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
-                      ],
-                      "slashCommand": "avatar/decoration"
-                    },
                     "avatarpie": {
                       "aliases": [
                         "avpie"
@@ -5094,31 +5076,6 @@
                 }
               ],
               "prefixCommand": "images/imagefun/avatars/bonk"
-            },
-            "decoration": {
-              "description": [
-                "Add an avatar decoration to your avatar.",
-                "Zoom levels control how zoomed the image is:\n- Avatar - The avatar is at 100% scale\n- Normal\n- Decoration - The decoration is fully visible when used as a profile picture"
-              ],
-              "arguments": [
-                {
-                  "name": "decoration",
-                  "description": "The avatar decoration"
-                },
-                {
-                  "name": "zoom-level",
-                  "description": "The output image zoom level"
-                },
-                {
-                  "name": "image-file",
-                  "description": "A file"
-                },
-                {
-                  "name": "image-string",
-                  "description": "URL, Emoji, etc"
-                }
-              ],
-              "prefixCommand": "images/imagefun/avatars/avatardecoration"
             },
             "disappear": {
               "description": "Make a member disappear!",
