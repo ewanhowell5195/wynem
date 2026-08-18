@@ -47,7 +47,7 @@
       "type": "embed",
       "data": {
         "author": ["Blocked reaction removed", "/assets/images/icons/reaction.webp"],
-        "description": "**Added by <@TheAnnoying> in <#general>**\n<a href=\"/\">Jump to message...</a>",
+        "description": "**Added by <@TheAnnoying> in <#general>**\n<a href=\"/\">Jump to message…</a>",
         "fields": [
           ["Emoji", "🤡"],
           ["Action", "Timed out for 20 minutes"]

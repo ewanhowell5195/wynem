@@ -181,7 +181,7 @@
             {
               "type": "embed",
               "data": {
-                "description": "The log manager timed out..."
+                "description": "The log manager timed out…"
               }
             }
           ]

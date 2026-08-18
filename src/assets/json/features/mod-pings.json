@@ -32,7 +32,7 @@
         "fields": [
           ["Note for moderators", "Click the button, or send a message in chat to resolve this"]
         ],
-        "footer": ["Started by Ewan\nTrying again in 60 seconds...", "/assets/images/logo/ewan.webp"],
+        "footer": ["Started by Ewan\nTrying again in 60 seconds…", "/assets/images/logo/ewan.webp"],
         "buttons": [
           {
             "label": "Resolve",
@@ -88,7 +88,7 @@
                 "fields": [
                   ["Note for moderators", "Click the button, or send a message in chat to resolve this"]
                 ],
-                "footer": ["Started by Ewan\nTrying again in 60 seconds...", "/assets/images/logo/ewan.webp"],
+                "footer": ["Started by Ewan\nTrying again in 60 seconds…", "/assets/images/logo/ewan.webp"],
                 "buttons": [
                   {
                     "label": "Resolve",
