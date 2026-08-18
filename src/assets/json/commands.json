@@ -2867,7 +2867,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "``"
                         ]
                       ]
                     }
@@ -2894,7 +2894,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "``"
                         ]
                       ]
                     }
@@ -2918,7 +2918,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "``"
                         ]
                       ]
                     }
@@ -2942,7 +2942,7 @@
                         ],
                         [
                           "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "``"
                         ]
                       ]
                     }
@@ -3317,7 +3317,7 @@
                     "Ban a member from the server.",
                     "The member is sent a message saying they were banned, along with the reason.",
                     "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
-                    "The \"Compromised Account\" button will ban the user, delete their last hour of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
+                    "The \"Compromised Account\" button will ban the user, delete their last 8 hours of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
                   ],
                   "permissions": [
                     "Guild Only",
@@ -3371,7 +3371,8 @@
                   "arguments": "[url]",
                   "description": "Set or remove a ban appeal link that gets sent to the user when they get banned.",
                   "permissions": [
-                    "Guild Only"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "botPermissions": [
                     "Manage Guild"
@@ -11362,6 +11363,9 @@
                   "description": "Ban appeal link"
                 }
               ],
+              "permissions": [
+                "Manage Guild"
+              ],
               "botPermissions": [
                 "Manage Guild"
               ],
@@ -11738,7 +11742,7 @@
             "Ban a member from the server.",
             "The member is sent a message saying they were banned, along with the reason.",
             "A ban appeal link will also be sent if you have one configured. See the \"setbanappeal\" command.",
-            "The \"Compromised Account\" button will ban the user, delete their last hour of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
+            "The \"Compromised Account\" button will ban the user, delete their last 8 hours of message history, send them a notification about their account being compromised, and then unban them, effectively converting the action into a kick."
           ],
           "arguments": [
             {
