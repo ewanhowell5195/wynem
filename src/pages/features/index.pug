@@ -1,6 +1,9 @@
 style: include:styl index.styl
 .container
-  .dev These features pages are under development and not complete
   h1 Wynem's Features
   p On this page you can view all of Wynem's main features, what they each do, and how you can use each one in your server!
+  #search(onclick = "this.children[1].focus()")
+    include /assets/images/svg/search.svg
+    input(placeholder = "Search features...")
   #features
+  #no-results(style = "display: none") No features matched your search
