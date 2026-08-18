@@ -1,0 +1,253 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Reminders",
+        "name": "reminders"
+      },
+      "reminder",
+      "repeatingreminder",
+      "viewreminders",
+      "removereminder"
+    ],
+    "slash": [
+      ["utility", "reminders", "set"],
+      ["utility", "reminders", "setrepeating"],
+      ["utility", "reminders", "view"],
+      ["utility", "reminders", "remove"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are reminders?"
+    },
+    "Reminders let Wynem ping you with a message of your choice after a set amount of time. Set a reminder, carry on with your day, and Wynem will remind you when the time is up.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<span class=\"command prefix\">e!reminder 3d Check the oven</span><span class=\"command slash\">used <span class=\"link\">/utility reminders set</span></span>"
+        },
+        "title": "Reminder set",
+        "fields": [
+          ["Length", "3 days"],
+          ["End date", "<t:21 August 2026 18:30>"],
+          ["Reminder", "Check the oven"]
+        ],
+        "footer": ["Reminder ID: 12\nYou now have 1 reminder set"]
+      }
+    },
+    "When the time is up, Wynem pings you in the channel the reminder was set in:",
+    {
+      "type": "embed",
+      "data": {
+        "content": "<@Ewan> Reminder",
+        "title": "Reminder",
+        "description": "Check the oven"
+      }
+    },
+    "Reminders set in Wynem's direct messages are delivered there instead. If Wynem cannot send messages in the reminder's channel, the reminder is sent to you in a direct message. If a reminder is delivered over a minute late, for example because the bot was offline, the reminder's footer will say how late it was.",
+    "You can have up to `5` reminders set at a time in each server, with reminders set in direct messages counted separately. Every reminder is given a reminder ID, shown in the footer of its embeds, which is used when removing reminders.",
+    "The duration supports a flexible format, such as `3d`, `1w2d`, or even exact dates. Check out [Duration Formatting](/features/durations) for everything it supports.",
+    {
+      "type": "heading",
+      "text": "Repeating reminders"
+    },
+    "Repeating reminders work just like regular reminders, but instead of ending when they are delivered, they reschedule themselves and fire again at a regular interval until you remove them. The interval must be at least `1` day.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<span class=\"command prefix\">e!repeatingreminder 1w Water the plants</span><span class=\"command slash\">used <span class=\"link\">/utility reminders setrepeating</span></span>"
+        },
+        "title": "Repeating reminder set",
+        "fields": [
+          ["Repeats every", "1 week"],
+          ["Next date", "<t:25 August 2026 18:30>"],
+          ["Reminder", "Water the plants"]
+        ],
+        "footer": ["Reminder ID: 13\nYou now have 2 reminders set"]
+      }
+    },
+    "When a repeating reminder is delivered, its footer shows how often it repeats:",
+    {
+      "type": "embed",
+      "data": {
+        "content": "<@Ewan> Reminder",
+        "title": "Repeating Reminder",
+        "description": "Water the plants",
+        "footer": ["This reminder is set to repeat every 1 week"]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use reminders"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting a reminder",
+          "content": [
+            "To set a reminder, use the <command:reminder [duration] [reminder]|utility reminders set duration:[duration] reminder:[reminder]> command.",
+            "For example: <code class=\"command prefix\">e!reminder 3d Check the oven</code><code class=\"command slash\">/utility reminders set duration:3d reminder:Check the oven</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Reminder set",
+                "fields": [
+                  ["Length", "3 days"],
+                  ["End date", "<t:21 August 2026 18:30>"],
+                  ["Reminder", "Check the oven"]
+                ],
+                "footer": ["Reminder ID: 12\nYou now have 1 reminder set"]
+              }
+            },
+            "Your reminder is now set, and will be delivered when the time is up. Reminder messages can be up to `1024` characters long.",
+            "You can have up to `5` reminders set at a time in each server. Trying to set any more will give you an error.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "colour": "#DD2E44",
+                "title": "Maximum reminders set",
+                "description": "You cannot set more than `5` reminders at a time"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Setting a repeating reminder",
+          "content": [
+            "To set a repeating reminder, use the <command:repeatingreminder [duration] [reminder]|utility reminders setrepeating duration:[duration] reminder:[reminder]> command. The duration is how often the reminder should repeat, and must be at least `1` day.",
+            "For example: <code class=\"command prefix\">e!repeatingreminder 1w Water the plants</code><code class=\"command slash\">/utility reminders setrepeating duration:1w reminder:Water the plants</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Repeating reminder set",
+                "fields": [
+                  ["Repeats every", "1 week"],
+                  ["Next date", "<t:25 August 2026 18:30>"],
+                  ["Reminder", "Water the plants"]
+                ],
+                "footer": ["Reminder ID: 13\nYou now have 2 reminders set"]
+              }
+            },
+            "The reminder will now be delivered at the interval you set, over and over, until it is removed. Repeating reminders count towards your `5` reminder limit."
+          ]
+        },
+        {
+          "name": "Viewing your reminders",
+          "content": [
+            "To view your active reminders, use the <command:viewreminders|utility reminders view> command.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Reminder 1/2", "/assets/images/icons/bell_blue.webp"],
+                "description": "Reminder for you in <#general>",
+                "fields": [
+                  ["Message", "Check the oven"],
+                  ["Length", "`3 days`"],
+                  ["End date", "<t:21 August 2026 18:30>"],
+                  ["Type", "One off reminder"]
+                ],
+                "footer": ["Reminder ID: 12"],
+                "buttons": [
+                  {
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "emoji": "arrow_right"
+                  }
+                ]
+              }
+            },
+            "If you have more than one reminder, arrow buttons appear so you can flip between them.",
+            "Pressing the bin button opens a modal where you can delete a reminder by its ID.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Delete reminder",
+                "rows": [
+                  ["Reminder ID", "The reminder ID to delete, or \"ALL\" to delete all reminders", true]
+                ]
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "title": "Reminder deleted",
+                "description": "The reminder with the ID `12` has been deleted",
+                "fields": [
+                  ["Message", "Check the oven"]
+                ]
+              }
+            },
+            "Entering `ALL` instead of an ID lets you delete every reminder at once. You will be asked to confirm first.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to delete all the reminders for you?\n\nThis action cannot be undone",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "If you have the `Moderate Members` permission, you can also view and manage the reminders of another member, or all the reminders in a channel, by providing the member or channel.\nFor example: <command:viewreminders @TheAnnoying|utility reminders view member-or-channel:@TheAnnoying> or <command:viewreminders #general|utility reminders view member-or-channel:#general>"
+          ]
+        },
+        {
+          "name": "Removing reminders",
+          "content": [
+            "To remove a reminder directly, use the <command:removereminder [reminderId]|utility reminders remove reminder-id:[reminderId]> command with the reminder's ID. You can find reminder IDs with the <command:viewreminders|utility reminders view> command.",
+            "For example: <code class=\"command prefix\">e!removereminder 12</code><code class=\"command slash\">/utility reminders remove reminder-id:12</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Reminder removed",
+                "description": "The reminder with the ID `12` has been removed",
+                "fields": [
+                  ["Length", "3 days"],
+                  ["End date", "<t:21 August 2026 18:30>"],
+                  ["Reminder", "Check the oven"]
+                ]
+              }
+            },
+            "You can only remove your own reminders, unless you have the `Moderate Members` permission, in which case you can remove any member's reminders. When removing another member's reminder, the embed also shows who the reminder belonged to.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Reminder removed",
+                "description": "The reminder with the ID `14` has been removed",
+                "fields": [
+                  ["Member", "<@TheAnnoying>"],
+                  ["Repeated every", "1 week"],
+                  ["Next date", "<t:25 August 2026 18:30>"],
+                  ["Reminder", "Post the weekly announcement"]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

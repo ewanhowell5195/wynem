@@ -1,0 +1,350 @@
+{
+  "commands": {
+    "prefix": [
+      "wynemavatar",
+      "embedcolour",
+      {
+        "type": "category",
+        "text": "Prefixes",
+        "name": "prefixes"
+      },
+      "prefix",
+      "prefixalias",
+      "prefixlessmode"
+    ],
+    "slash": [
+      ["botconfig", "avatar"],
+      ["botconfig", "embedcolour"],
+      ["botconfig", "prefixes", "prefix"],
+      ["botconfig", "prefixes", "prefixalias"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "Customising Wynem"
+    },
+    "Wynem can be customised per server to fit right in with your server's theme. You can give Wynem a custom avatar, change the colour of its embeds, and change the prefix its commands use. All of these are set per server, so they never affect anyone else.",
+    {
+      "type": "heading",
+      "text": "Custom avatar"
+    },
+    "Wynem's avatar can be customised per server. The avatar is generated with the same Wynem logo generator as the [wynem](/commands/prefix/images/imagefun/wynem) command: pick your own colours, or provide an image to generate them from.\n\nThe avatar is always generated in the Wynem logo style, keeping Wynem recognisable no matter the server.",
+    {
+      "type": "image",
+      "name": "avatar",
+      "height": 256
+    },
+    "The logo is made up of four colours. Only the first one is needed, and any you leave out are generated from the colours you do provide:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Vertical bars", "The vertical bar colour. Required, unless an image is provided"],
+        ["Horizontal bars", "The horizontal bar colour. Defaults to the vertical bar colour mixed with white"],
+        ["Background", "The background colour. Defaults to a dark shade based on the vertical bar colour"],
+        ["Shadow", "The shadow colour behind the logo. Defaults to translucent black"]
+      ]
+    },
+    "Colours can be any [CSS colour value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), like `red` or `#6C80F6`, and you can even provide a member to use their role colour.\n\nIf you provide an image, the vertical bar and background colours are extracted from it: the image's most common colour becomes the background, and its most distinct colour becomes the bars. The image itself is placed in the centre of the avatar, behind the logo.",
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the avatar",
+          "content": [
+            "To set the avatar, use the <command:wynemavatar [vertical-bars] [horizontal-bars] [background] [shadow] [image]|botconfig avatar vertical-bars:[colour] horizontal-bars:[colour] background:[colour] shadow:[colour] image-file:[image]> command. You need the **Manage Server** permission to use it, and the command has a `30` second cooldown.",
+            "For example: <command:wynemavatar #B81F23 #FE612C #431220|botconfig avatar vertical-bars:#B81F23 horizontal-bars:#FE612C background:#431220>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!wynemavatar #B81F23 #FE612C #431220</span><span class=\"command slash\">used <span class=\"link\">/botconfig avatar</span></span>"
+                },
+                "avatar": "/assets/images/features/customisation/avatar.webp",
+                "title": "Avatar set",
+                "description": "Set Wynem's avatar for this server",
+                "thumbnail": "/assets/images/features/customisation/avatar.webp"
+              }
+            },
+            "Wynem's avatar updates immediately, in this server only.\n\nIf you provide no vertical bar colour and no image (only possible with the slash command), the avatar cannot be generated:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Missing colour or image",
+                "description": "Provide at least the first colour, or an image to generate the colours from",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Resetting the avatar",
+          "content": [
+            "To reset the avatar back to the default, run the <command:wynemavatar|botconfig avatar> command with no options.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!wynemavatar</span><span class=\"command slash\">used <span class=\"link\">/botconfig avatar</span></span>"
+                },
+                "title": "Avatar reset",
+                "description": "Set Wynem's avatar in this server back to the default"
+              }
+            },
+            "Wynem's avatar in this server is back to the default Wynem logo."
+          ]
+        },
+        {
+          "name": "Rate limits",
+          "content": [
+            "Discord limits how often a server avatar can be changed. If the avatar was changed too recently, you will get this error:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Avatar changed too recently",
+                "description": "Discord limits how often avatars can be changed. Try again in a few minutes.",
+                "colour": "#DD2E44"
+              }
+            },
+            "Wait a few minutes and try again. If Discord rejects the avatar for any other reason, you will instead see a `Failed to update the avatar` error, and can try again later."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Embed colour"
+    },
+    "The embed colour is the coloured bar down the side of each message Wynem sends. It can be changed per server, and the colour can be any [CSS colour value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), just like the avatar colours.",
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the embed colour",
+          "content": [
+            "To change the embed colour, use the <command:embedcolour [colour]|botconfig embedcolour colour:[colour]> command. You need the **Manage Server** permission to use it.",
+            "For example: <command:embedcolour red|botconfig embedcolour colour:red>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!embedcolour red</span><span class=\"command slash\">used <span class=\"link\">/botconfig embedcolour</span></span>"
+                },
+                "title": "Embed colour set",
+                "description": "Set the embed colour to `#FF0000`",
+                "colour": "#FF0000"
+              }
+            },
+            "Every embed Wynem sends in the server, including the confirmation above, now uses the new colour."
+          ]
+        },
+        {
+          "name": "Resetting the embed colour",
+          "content": [
+            "To reset the embed colour, run the <command:embedcolour|botconfig embedcolour> command with no colour, or set the colour to `default`.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!embedcolour</span><span class=\"command slash\">used <span class=\"link\">/botconfig embedcolour</span></span>"
+                },
+                "title": "Embed colour set",
+                "description": "Set the embed colour back to the default"
+              }
+            },
+            "The embed colour is back to the default Wynem colour."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Prefixes"
+    },
+    "Wynem's default prefix is `e!`, but every server can set its own main prefix, along with up to `8` prefix aliases that work alongside it.\n\nIf you ever forget the prefix, just mention Wynem, and it will tell you every prefix that works in the server:",
+    {
+      "type": "components",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<@Wynem>"
+        },
+        "components": [{
+          "type": "section",
+          "text": "## Wynem\nMy default prefix is `e!`, but in this server it is set to `w!`\n\nUse `w!help` to view the commands that are available\n\nAlternative prefixes you can use in this server: `;`",
+          "thumbnail": "/assets/images/logo/logo.webp"
+        }]
+      }
+    },
+    "Custom prefixes can be up to 8 characters long, are stored in lowercase, cannot end in a letter or a number, and cannot contain spaces, backticks, quotes, backslashes, or the characters `|`, `<`, `*`, `~`, `@`.",
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Changing the prefix",
+          "content": [
+            "To change the main prefix, use the <command:prefix [prefix]|botconfig prefixes prefix prefix:[prefix]> command. You need the **Manage Server** permission to use it.\n\nProvide no prefix to view the current one:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!prefix</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefix</span></span>"
+                },
+                "title": "Current bot prefix",
+                "description": "The current prefix for <@Wynem> is `e!`\n\nYou can change the prefix with the command formatting `e!prefix [prefix]`"
+              }
+            },
+            "To change it, provide the new prefix. For example: <command:prefix w!|botconfig prefixes prefix prefix:w!>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!prefix w!</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefix</span></span>"
+                },
+                "title": "Custom prefix set",
+                "description": "Changed the prefix from `e!` to `w!`"
+              }
+            },
+            "The main prefix has been replaced, so commands now use `w!` instead of `e!`.\n\nTo return to the default prefix, set the prefix to `default`, `normal`, or `reset`:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">w!prefix reset</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefix</span></span>"
+                },
+                "title": "Custom prefix reset",
+                "description": "Changed the prefix from `w!` to `e!`"
+              }
+            },
+            "If the prefix does not follow the prefix rules, it will be rejected:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Invalid prefix",
+                "description": "Custom prefixes cannot end in a letter or a number",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Prefix aliases",
+          "content": [
+            "A prefix alias is an alternate prefix that can be used without overwriting the main prefix. A server can have up to `8` prefix aliases, and they follow the same rules as the main prefix.\n\nTo add one, use the <command:prefixalias [prefix]|botconfig prefixes prefixalias prefix:[prefix]> command. You need the **Manage Server** permission to use it.",
+            "For example: <command:prefixalias ;|botconfig prefixes prefixalias prefix:;>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!prefixalias ;</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefixalias</span></span>"
+                },
+                "title": "Custom prefix alias added",
+                "description": "You can now use `;` as an alternative prefix"
+              }
+            },
+            "Running the same command again with the same prefix removes the alias:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!prefixalias ;</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefixalias</span></span>"
+                },
+                "title": "Custom prefix alias removed",
+                "description": "The prefix `;` is no longer a custom prefix alias"
+              }
+            },
+            "Provide no prefix to view the current aliases:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!prefixalias</span><span class=\"command slash\">used <span class=\"link\">/botconfig prefixes prefixalias</span></span>"
+                },
+                "title": "Custom prefix aliases",
+                "description": "`w!`, `;`\n\nYou can add more custom prefix aliases with the `e!prefixalias [prefix]` command"
+              }
+            },
+            "An alias cannot be the default prefix or the server's current main custom prefix. If you want to use the default prefix while a custom main prefix is set, Wynem will suggest the fix:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to add prefix alias",
+                "description": "That is <@Wynem>'s default prefix\n\nIf you want to use this prefix, set the server prefix back to default and then use an alias prefix instead of a main one",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Prefixless mode",
+          "content": [
+            "In direct messages with Wynem, you can skip prefixes entirely. Prefixless mode is a personal toggle that only applies to your own DMs with Wynem, and the `prefixlessmode` command can only be used there.\n\nTo toggle it, send `e!prefixlessmode` to Wynem in a direct message:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "e!prefixlessmode"
+                },
+                "title": "Prefixless mode enabled",
+                "description": "Commands in direct messages no longer require a prefix"
+              }
+            },
+            "You can now use commands in Wynem's DMs without any prefix, like `help` instead of `e!help`. Run the command again to turn it back off:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "prefixlessmode"
+                },
+                "title": "Prefixless mode disabled",
+                "description": "Commands in direct messages now require the prefix `e!`"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

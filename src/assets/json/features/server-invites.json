@@ -1,0 +1,141 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Server Invites",
+        "name": "serverinvites"
+      },
+      "addserverinvite",
+      "serverinvite",
+      "removeserverinvite"
+    ],
+    "slash": [
+      ["serverconfig", "serverinvite", "add"],
+      ["server", "invites"],
+      ["serverconfig", "serverinvite", "remove"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are server invites?"
+    },
+    "Server invites are named invite links for partner or related servers, saved into Wynem. Instead of hunting for links in pinned messages, any member can pull up an invite by name, or view the whole list, whenever they need it.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<span class=\"command prefix\">e!serverinvite blockbench</span><span class=\"command slash\">used <span class=\"link\">/server invites</span></span>"
+        },
+        "content": "https://discord.com/invite/blockbench"
+      }
+    },
+    "A server can save up to `15` server invites. Adding and removing them requires the **Manage Server** permission, but viewing them is available to everyone.",
+    {
+      "type": "heading",
+      "text": "How to use server invites"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding server invites",
+          "content": [
+            "To add a server invite, use the <command:addserverinvite [invite] [name]|serverconfig serverinvite add invite:[invite] name:[name]> command. You need the **Manage Server** permission to use it.\n\nThe invite must be a working Discord invite link (Wynem checks it), and the name can be up to 24 characters long. Names are stored in lowercase with spaces removed, and displayed in title case.",
+            "For example: <command:addserverinvite https://discord.gg/blockbench Blockbench|serverconfig serverinvite add invite:https://discord.gg/blockbench name:Blockbench>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!addserverinvite https://discord.gg/blockbench Blockbench</span><span class=\"command slash\">used <span class=\"link\">/serverconfig serverinvite add</span></span>"
+                },
+                "title": "Server invite added",
+                "description": "The server invite `Blockbench` https://discord.gg/blockbench has been added to the server"
+              }
+            },
+            "The server invite has been added and is ready for your members to use.\n\nEach name and each link can only be saved once, and if the link is not a Discord invite link, it will be rejected:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Invalid Discord invite link",
+                "description": "The link `https://ewanhowell.com` is not a valid Discord invite link",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing server invites",
+          "content": [
+            "Anyone can view the server invites using the <command:serverinvite [name]|server invites name:[name]> command. Provide no name to view a list of every saved server invite.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!serverinvite</span><span class=\"command slash\">used <span class=\"link\">/server invites</span></span>"
+                },
+                "author": ["Server invites", "/assets/images/icons/discord.webp"],
+                "description": "[Blockbench](https://discord.gg/blockbench)\n[Dokustash](https://discord.gg/dokustash)\n[Wynem](https://discord.gg/wynem)"
+              }
+            },
+            "To get a specific server invite, provide its name:",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!serverinvite blockbench</span><span class=\"command slash\">used <span class=\"link\">/server invites</span></span>"
+                },
+                "content": "https://discord.com/invite/blockbench"
+              }
+            },
+            "Wynem sends the resolved invite link, ready to click or share. If the name is not an exact match, the closest matching server invite is used instead. If nothing matches, you will get an error:",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Server invite not found",
+                "description": "The server invite `Hypixel` was not found in this server",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing server invites",
+          "content": [
+            "To remove a server invite, use the <command:removeserverinvite [name]|serverconfig serverinvite remove name:[name]> command. You need the **Manage Server** permission to use it.",
+            "For example: <command:removeserverinvite blockbench|serverconfig serverinvite remove name:blockbench>",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!removeserverinvite blockbench</span><span class=\"command slash\">used <span class=\"link\">/serverconfig serverinvite remove</span></span>"
+                },
+                "title": "Server invite removed",
+                "description": "The server invite `Blockbench` https://discord.gg/blockbench has been removed from the server"
+              }
+            },
+            "The server invite has been removed and can no longer be viewed by members."
+          ]
+        }
+      ]
+    }
+  ]
+}

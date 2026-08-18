@@ -1,0 +1,248 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "FAQs",
+        "name": "faqs"
+      },
+      "addfaq",
+      "faq",
+      "rawfaq",
+      "renamefaq",
+      "removefaq"
+    ],
+    "slash": [
+      ["faq"],
+      ["serverconfig", "faq", "add"],
+      ["serverconfig", "faq", "raw"],
+      ["serverconfig", "faq", "rename"],
+      ["serverconfig", "faq", "remove"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are FAQs?"
+    },
+    "FAQs are a per-server store of frequently asked questions. Each FAQ entry holds the answer to a common question, so that the next time it gets asked, the answer can be brought up with a single command instead of being typed out again.",
+    {
+      "type": "message",
+      "data": {
+        "name": "TheAnnoying",
+        "colour": "#FFF",
+        "image": "/assets/images/avatars/theannoying.webp",
+        "message": "How do I download the pack?"
+      }
+    },
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<span class=\"command prefix\">e!faq download</span><span class=\"command slash\">used <span class=\"link\">/faq</span></span>"
+        },
+        "author": ["FAQ", "/assets/images/icons/faq.webp"],
+        "title": "Getting Started: Download",
+        "description": "All resource pack downloads can be found at [ewanhowell.com](https://ewanhowell.com/resourcepacks/)"
+      }
+    },
+    "A server can have up to `100` FAQs, organised into up to `25` categories.",
+    {
+      "type": "heading",
+      "text": "Categories and IDs"
+    },
+    "Every FAQ belongs to a category, and has an ID within that category. Categories and IDs can each be up to `32` characters long, and are converted to lowercase, with spaces and underscores replaced by hyphens. When an FAQ is displayed, its category and ID are shown title-cased, so `getting-started` and `download` become `Getting Started: Download`.",
+    "FAQs can also have up to `10` ID aliases: alternative IDs that the FAQ can be looked up by.",
+    "The <command:faq [id]|faq category:[category] id:[id]> command supports fuzzy matching, making it easy to look up your FAQs. The FAQ management commands require exact categories and IDs to ensure you select the right one.",
+    {
+      "type": "heading",
+      "text": "How to use FAQs"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding FAQs",
+          "content": [
+            "To add or update an FAQ, use the <command:addfaq|serverconfig faq add> command. This command requires the `Manage Server` permission.",
+            "Press the button to open the FAQ builder.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press the button to start creating an FAQ",
+                "buttons": [{
+                  "label": "Create an FAQ",
+                  "emoji": "pencil"
+                }]
+              }
+            },
+            "A modal will appear where you can enter the FAQ's category, ID, and text.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "FAQ Builder",
+                "rows": [
+                  ["FAQ Category", "The category for the FAQ", true],
+                  ["FAQ ID", "The ID for the FAQ", true],
+                  ["FAQ Text", "The text for the FAQ", true, 4000]
+                ]
+              }
+            },
+            "Any `@user`, `@role`, `#channel`, and `:emoji:` names typed into the FAQ text are automatically converted into real mentions and emojis.",
+            "Next, you can optionally set up some extra FAQ options, or press skip to finish.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "Press a button to continue creating the FAQ",
+                "buttons": [
+                  {
+                    "label": "Extra FAQ options",
+                    "emoji": "pencil"
+                  },
+                  {
+                    "label": "Skip",
+                    "emoji": "arrow_right"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "tablelist",
+              "rows": [
+                ["Should the FAQ be in an embed?", "Whether the FAQ is sent as an embed, or as a plain message. Defaults to yes"],
+                ["Image URL", "An image to show alongside the FAQ"],
+                ["FAQ ID Aliases", "Up to 10 alternative IDs for the FAQ, comma separated"]
+              ]
+            },
+            {
+              "type": "modal",
+              "data": {
+                "title": "FAQ Builder",
+                "rows": [
+                  ["Should the FAQ be in an embed?", "Default: Yes"],
+                  ["Image URL", "An image to show alongside the FAQ"],
+                  ["FAQ ID Aliases", "Alternative FAQ IDs (comma separated)"]
+                ]
+              }
+            },
+            "Once finished, the FAQ is saved, and a preview of it is shown.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "FAQ added",
+                "description": "Here is a preview of the FAQ:",
+                "embeds": [{
+                  "author": ["FAQ", "/assets/images/icons/faq.webp"],
+                  "title": "Getting Started: Download",
+                  "description": "All resource pack downloads can be found at [ewanhowell.com](https://ewanhowell.com/resourcepacks/)"
+                }]
+              }
+            },
+            "If an FAQ with the same category and ID already exists, you will first be asked to confirm that you want to update it.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "The FAQ `download` already exists in the `getting-started` category\n\nAre you sure you want to update it?",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing FAQs",
+          "content": [
+            "To view a list of every FAQ in the server, use the <command:faq|faq> command with no arguments. The FAQ viewing commands can be used by anyone.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["FAQ", "/assets/images/icons/faq.webp"],
+                "description": "Use the command <command:faq [category] [id]|faq category:[category] id:[id]> to view a specific FAQ entry",
+                "fields": [
+                  ["Getting Started", "`download`, `install`"],
+                  ["Resource Packs", "`cem`, `emissive`"]
+                ]
+              }
+            },
+            "To view a specific FAQ, provide its ID, or its category and ID together.\nFor example: <command:faq download|faq category:getting-started id:download>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["FAQ", "/assets/images/icons/faq.webp"],
+                "title": "Getting Started: Download",
+                "description": "All resource pack downloads can be found at [ewanhowell.com](https://ewanhowell.com/resourcepacks/)"
+              }
+            },
+            "The lookup is fuzzy matched against each FAQ's `category-id` combination, its ID, and its aliases, so a close enough spelling will still find the right FAQ."
+          ]
+        },
+        {
+          "name": "Getting the raw text",
+          "content": ["To get the raw text of an FAQ, use the <command:rawfaq [category] [id]|serverconfig faq raw category:[category] id:[id]> command. This command requires the `Manage Server` permission.", "For example: <command:rawfaq getting-started download|serverconfig faq raw category:getting-started id:download>", "Wynem will send a `getting-started-download.txt` file containing the FAQ's raw text. If the FAQ has any extra data, like an image or aliases, a `getting-started-download-data.json` file is also sent containing it.", "This is useful when updating an FAQ, as you can copy the raw text back into the FAQ builder without losing any formatting."]
+        },
+        {
+          "name": "Renaming FAQs",
+          "content": [
+            "To rename an FAQ, or move it to a different category, use the <command:renamefaq [oldCategory] [oldId] [newCategory] [newId]|serverconfig faq rename old-category:[oldCategory] old-id:[oldId] new-category:[newCategory] new-id:[newId]> command. This command requires the `Manage Messages` permission.",
+            "For example: <command:renamefaq getting-started download getting-started downloads|serverconfig faq rename old-category:getting-started old-id:download new-category:getting-started new-id:downloads>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "FAQ renamed",
+                "description": "The `Getting Started: Download` FAQ has been renamed to `Getting Started: Downloads`"
+              }
+            },
+            "The old and new names must be different, and the new name must not already be in use by another FAQ."
+          ]
+        },
+        {
+          "name": "Removing FAQs",
+          "content": [
+            "To remove an FAQ, use the <command:removefaq [category] [id]|serverconfig faq remove category:[category] id:[id]> command. This command requires the `Manage Messages` permission.",
+            "For example: <command:removefaq getting-started download|serverconfig faq remove category:getting-started id:download>",
+            "You will be prompted to confirm you want to remove the FAQ.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the FAQ `Getting Started: Download`?\n\nThis action cannot be undone",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the FAQ will have been removed.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "FAQ removed",
+                "description": "The `Getting Started: Download` FAQ has been removed"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

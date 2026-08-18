@@ -1,0 +1,120 @@
+{
+  "commands": {
+    "prefix": ["joinrole"],
+    "slash": [
+      ["role", "joinrole"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are join roles?"
+    },
+    "Join roles are roles that get automatically applied to members when they join the server. You can set up to 3 join roles, and they will be given to every new member, including bots.\n\nIf the server has membership screening enabled, members will only receive the join roles once they have completed the screening.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "Join roles",
+        "description": "These roles are given to members when they join the server\n\n<@&Member>\n<@&Minecrafter>"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use join roles"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding a join role",
+          "content": [
+            "To add a join role, use the <command:joinrole [role]|role joinrole role:[role]> command. Both you and Wynem require the **Manage Roles** permission.",
+            "For example: <command:joinrole @Member|role joinrole role:@Member>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join role added",
+                "description": "The role <@&Member> is now a join role"
+              }
+            },
+            "The role is now a join role, and will be given to members when they join the server.",
+            "The role must be below both your and Wynem's highest role level, and managed roles, such as bot roles and the server booster role, are not supported.",
+            "A server can have up to 3 join roles. If you try to add any more, you will get an error.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Too many join roles",
+                "description": "The maximum number of join roles is `3`",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing the join roles",
+          "content": [
+            "To view the current join roles, use the <command:joinrole|role joinrole> command without providing a role.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join roles",
+                "description": "These roles are given to members when they join the server\n\n<@&Member>\n<@&Minecrafter>"
+              }
+            },
+            "If there are no join roles set up in the server, you will be shown how to add one instead.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "No join roles",
+                "description": "There are currently no join roles set up in this server\n\nUse the formatting `e!joinrole <role>` to add a new join role"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing a join role",
+          "content": [
+            "To remove a join role, run the same command again with a role that is already a join role.",
+            "For example: <command:joinrole @Member|role joinrole role:@Member>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join role removed",
+                "description": "The role <@&Member> is no longer a join role"
+              }
+            },
+            "The role is no longer a join role, and will not be given to new members.",
+            "If a join role gets deleted from the server, it is automatically removed from the join roles."
+          ]
+        }
+      ]
+    },
+    "",
+    {
+      "type": "heading",
+      "text": "Applying the join roles"
+    },
+    "Wynem requires the **Manage Roles** permission to be able to apply the join roles. If the permission gets removed, Wynem will send an error message to the server when a member joins.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Error", "/assets/images/icons/error.webp"],
+        "title": "Failed to apply join role",
+        "description": "Failed to apply join roles to <@TheAnnoying>\n\nI require the `Manage Roles` permission to be able to add roles to new members",
+        "colour": "#DD2E44"
+      }
+    },
+    "Wynem can also only apply join roles that are below its highest role level. If a join role gets moved to or above Wynem's highest role, an error message will be sent instead.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Error", "/assets/images/icons/error.webp"],
+        "title": "Failed to apply join role",
+        "description": "Failed to apply the join role <@&Member> to <@TheAnnoying>\n\nI can only apply join roles that are lower than my highest role level",
+        "colour": "#DD2E44"
+      }
+    },
+    "These error messages are sent to the server's system channel, or the first available channel if there is no system channel."
+  ]
+}

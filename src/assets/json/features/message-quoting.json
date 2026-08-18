@@ -1,0 +1,200 @@
+{
+  "commands": {
+    "prefix": ["quotemessage", "togglequotes"],
+    "slash": [
+      ["server", "quote"],
+      ["botconfig", "toggle", "quotes"]
+    ],
+    "context": [
+      ["message", "quote-message"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is message quoting?"
+    },
+    "Message quoting lets Wynem show the contents of any Discord message, straight in chat. Whenever someone sends a link to a message from the same server, Wynem automatically quotes the linked message so nobody has to jump between channels to see what is being talked about.",
+    {
+      "type": "message",
+      "data": {
+        "name": "Ewan",
+        "colour": "#D14949",
+        "image": "/assets/images/logo/ewan.webp",
+        "message": "https://discord.com/channels/731714469840551958/731714470314377247/1090728442059771904"
+      }
+    },
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Message sent by TheAnnoying", "/assets/images/icons/quote.webp", "/"],
+        "thumbnail": "/assets/images/avatars/theannoying.webp",
+        "description": "What's the best texture pack to use?",
+        "footer": ["Quoted by Ewan", "/assets/images/logo/ewan.webp"],
+        "timestamp": "Today at 12:34",
+        "buttons": [
+          {
+            "label": "Jump",
+            "url": "/"
+          },
+          {
+            "emoji": "bin",
+            "style": "red"
+          }
+        ]
+      }
+    },
+    "The Jump button takes you to the original message. The bin button deletes the quote, and can be pressed by the person who sent the link, anyone with the `Manage Messages` permission, or the server's moderators.",
+    "A single message can contain up to `10` message links, and each one will be quoted.",
+    {
+      "type": "heading",
+      "text": "What gets quoted?"
+    },
+    "Quotes show as much of the original message as possible:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Message text", "The message's text is shown as the quote's description"],
+        ["Images", "The first image attachment is shown in the quote. Image links and Tenor gifs inside the message are shown too"],
+        ["Files", "Non image attachments are linked in an `Attached file` field"],
+        ["Stickers", "The names of any stickers are listed in a field"],
+        ["Embeds", "Any embeds on the message are displayed below the quote"],
+        ["Additional content", "Anything extra, like additional attachments or forwarded messages, is counted in an `Additional content` field"],
+        ["Forum posts", "Linking a forum post quotes the post's starter message, with the post's title shown as the quote's title"]
+      ]
+    },
+    "Messages from NSFW channels are never quoted into non NSFW channels, and only links to messages from the same server are quoted automatically.",
+    {
+      "type": "heading",
+      "text": "How to use message quoting"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Automatic quoting",
+          "content": [
+            "Automatic quoting is enabled by default, so there is nothing to set up. Whenever a message contains a link to a message from the same server, Wynem will quote it.",
+            "To get a message's link, right click the message (or long press on mobile) and select `Copy Message Link`, then send it in chat.",
+            {
+              "type": "message",
+              "data": {
+                "name": "Ewan",
+                "colour": "#D14949",
+                "image": "/assets/images/logo/ewan.webp",
+                "message": "https://discord.com/channels/731714469840551958/731714470314377247/1090728442059771904"
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Message sent by TheAnnoying", "/assets/images/icons/quote.webp", "/"],
+                "thumbnail": "/assets/images/avatars/theannoying.webp",
+                "description": "What's the best texture pack to use?",
+                "footer": ["Quoted by Ewan", "/assets/images/logo/ewan.webp"],
+                "timestamp": "Today at 12:34",
+                "buttons": [
+                  {
+                    "label": "Jump",
+                    "url": "/"
+                  },
+                  {
+                    "emoji": "bin",
+                    "style": "red"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "The quotemessage command",
+          "content": [
+            "To quote a message manually, use the <command:quotemessage [messageURL]|server quote message-url:[messageURL]> command with the message's link. You can also reply to a message with the prefix command to quote the message you replied to, without needing a link at all.",
+            "For example: <code class=\"command prefix\">e!quotemessage https://discord.com/channels/731714469840551958/731714470314377247/1090728442059771904</code><code class=\"command slash\">/server quote message-url:https://discord.com/channels/731714469840551958/731714470314377247/1090728442059771904</code>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Message sent by TheAnnoying", "/assets/images/icons/quote.webp", "/"],
+                "thumbnail": "/assets/images/avatars/theannoying.webp",
+                "description": "What's the best texture pack to use?",
+                "footer": ["Quoted by Ewan", "/assets/images/logo/ewan.webp"],
+                "timestamp": "Today at 12:34",
+                "buttons": [
+                  {
+                    "label": "Jump",
+                    "url": "/"
+                  },
+                  {
+                    "emoji": "bin",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "If the link is not a valid message link, or the message could not be quoted, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "colour": "#DD2E44",
+                "title": "Unable to quote message",
+                "description": "I was unable to quote the message https://discord.com/channels/731714469840551958/731714470314377247/1090728442059771904"
+              }
+            }
+          ]
+        },
+        {
+          "name": "The Apps context menu",
+          "content": [
+            "Wynem also has a context menu command for quoting messages, so you can quote a message without copying its link or typing a command.",
+            "Right click any message (or long press on mobile), then open the `Apps` submenu and select `Quote Message`. Wynem will quote the selected message.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Message sent by TheAnnoying", "/assets/images/icons/quote.webp", "/"],
+                "thumbnail": "/assets/images/avatars/theannoying.webp",
+                "description": "What's the best texture pack to use?",
+                "footer": ["Quoted by Ewan", "/assets/images/logo/ewan.webp"],
+                "timestamp": "Today at 12:34",
+                "buttons": [
+                  {
+                    "label": "Jump",
+                    "url": "/"
+                  },
+                  {
+                    "emoji": "bin",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "The context menu command also works with Wynem's user install, letting you quote messages even in servers that do not have Wynem in them."
+          ]
+        },
+        {
+          "name": "Toggling automatic quoting",
+          "content": [
+            "If you would rather Wynem did not quote every message link, automatic quoting can be turned off with the <command:togglequotes|botconfig toggle quotes> command. This requires the `Manage Server` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Quotes disabled",
+                "description": "I will no longer quote message links in this server"
+              }
+            },
+            "Running the command again turns automatic quoting back on.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Quotes enabled",
+                "description": "I will now quote message links in this server"
+              }
+            },
+            "The <command:quotemessage [messageURL]|server quote message-url:[messageURL]> command and the `Quote Message` context menu command keep working even while automatic quoting is disabled."
+          ]
+        }
+      ]
+    }
+  ]
+}

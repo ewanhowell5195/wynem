@@ -1,0 +1,161 @@
+{
+  "commands": {
+    "prefix": ["setautoban"],
+    "slash": [
+      ["serverconfig", "setautoban"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is auto-ban?"
+    },
+    "Auto-ban is a system designed to automatically remove scam bots and compromised accounts. It works by setting up traps that no genuine member would ever use, tricking bots into banning themselves, while real users will understand to avoid them.\n\nThere are two types of auto-ban, and they can be used together or on their own:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Channel", "An auto-ban channel will instantly ban any member who sends a message in it"],
+        ["Role", "An auto-ban role will instantly ban any member who is given that role"]
+      ]
+    },
+    "For example, a scam bot spamming every channel in the server will eventually post in the trap channel:",
+    {
+      "type": "message",
+      "data": {
+        "name": "TheAnnoying",
+        "colour": "#FFF",
+        "image": "/assets/images/avatars/theannoying.webp",
+        "message": "@everyone Free Nitro giveaway! Claim it quickly before it expires!"
+      }
+    },
+    "The moment the message is sent, the auto-ban triggers, and the member is removed from the server after being sent this direct message:",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Account Security Alert", "/assets/images/icons/warning_yellow.webp"],
+        "title": "Potential Compromise Detected!",
+        "description": "You were removed from the server `Ewan's Corner` because your account appears to be compromised. Please update your password immediately and review your connected applications for any suspicious activity.",
+        "colour": "#FEE75C"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "The compromised account ban"
+    },
+    "When an auto-ban is triggered, Wynem performs a \"Compromised Account\" ban rather than a regular ban:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Direct message", "The member is sent a direct message warning them that their account may be compromised. If their DMs are closed, the process still continues"],
+        ["Ban", "The member is banned, deleting their last 8 hours of messages"],
+        ["Unban", "The member is immediately unbanned, effectively turning the ban into a kick. Once they have secured their account, they are free to rejoin"]
+      ]
+    },
+    "The ban reason shown in the audit log depends on which trap was triggered:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Channel", "`[AUTO-BAN] A message was sent to the auto-ban channel - Compromised account`"],
+        ["Role", "`[AUTO-BAN] Auto-ban role was received - Compromised account`"]
+      ]
+    },
+    "The unban that follows is logged with the reason `Unbanned as part of compromised account kick process`.",
+    {
+      "type": "heading",
+      "text": "Exemptions"
+    },
+    "Members with moderator permissions (**Manage Messages**, **Moderate Members**, **Kick Members**, or **Ban Members**), and anyone whose highest role is equal to or higher than Wynem's highest role, are excluded from being auto-banned.\n\nWynem needs the **Ban Members** permission to auto-ban members. If it has been removed, Wynem will let the server know when a trap gets triggered:",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Error", "/assets/images/icons/error.webp"],
+        "title": "Failed to auto-ban member",
+        "description": "I failed to auto-ban <@TheAnnoying> when they sent a message in the <#bot-trap> channel because I no longer have the `Ban Members` permission\n\nYou can either re-grant me the `Ban Members` permission, or remove the auto-ban role with the <:/serverconfig setautoban> command",
+        "colour": "#DD2E44"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use auto-ban"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting up the auto-ban",
+          "content": [
+            "To configure the auto-ban, use the <command:setautoban|serverconfig setautoban> command. You need the **Manage Server** permission to use it, and Wynem needs the **Ban Members** permission.",
+            {
+              "type": "components",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!setautoban</span><span class=\"command slash\">used <span class=\"link\">/serverconfig setautoban</span></span>"
+                },
+                "components": [
+                  "## Auto-ban",
+                  {
+                    "type": "section",
+                    "text": "Press the button to configure the auto-ban settings",
+                    "button": {
+                      "label": "Configure Auto-ban",
+                      "emoji": "pencil"
+                    }
+                  }
+                ]
+              }
+            },
+            "Pressing the button opens the auto-ban configuration form:",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Auto-ban",
+                "rows": [
+                  {
+                    "label": "Auto-ban Channel",
+                    "description": "Any user who sends a message in this channel will be banned immediately",
+                    "select": {
+                      "placeholder": "Select auto-ban channel",
+                      "options": ["# bot-trap", "# welcome", "# general"]
+                    }
+                  },
+                  {
+                    "label": "Auto-ban Role",
+                    "description": "Any user who receives this role will be banned immediately",
+                    "select": {
+                      "placeholder": "Select auto-ban role",
+                      "options": ["@Bot Trap", "@Member", "@Artist"]
+                    }
+                  }
+                ]
+              }
+            },
+            "Both fields are optional, so you can set up just a channel, just a role, or both. The auto-ban role must be below both your highest role and Wynem's highest role.\n\nSubmit the form to enable the auto-ban:",
+            {
+              "type": "components",
+              "data": {
+                "components": ["## Auto-ban enabled\nThe auto-ban has been enabled for the <#bot-trap> channel and the <@&Bot Trap> role\n\nMake sure to make it VERY clear that users should NOT send messages in that channel or assign themselves this role"]
+              }
+            },
+            "If you select the channel the command was run in, or only set up one of the two traps, the confirmation wording adjusts to match.\n\nThe auto-ban is now active. Running the command again replaces the previous configuration. As the confirmation says, make it VERY clear to your members that the trap channel and role are not to be touched."
+          ]
+        },
+        {
+          "name": "Disabling the auto-ban",
+          "content": [
+            "To disable the auto-ban, run the <command:setautoban|serverconfig setautoban> command again and submit the form with both fields left empty.",
+            {
+              "type": "components",
+              "data": {
+                "components": ["## Auto-ban disabled\nThe auto-ban has been disabled"]
+              }
+            },
+            "The auto-ban has been turned off, and the channel and role are safe to use again."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "commands": {
+    "prefix": ["setbanappeal", "banappeal"],
+    "slash": [
+      ["serverconfig", "setbanappeal"],
+      ["server", "banappeal"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are ban appeals?"
+    },
+    "A ban appeal link is a link that banned members can use to appeal their ban, usually leading to a form or website where they can plead their case. Once configured, the link is included in the DM that Wynem sends to members when they are banned with the <command:ban [member] [reason]|ban member:[member] reason:[reason]> command, as an `Appeal ban` button.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "You have been banned from `Ewan's Server`",
+        "author": ["Banned", "/assets/images/icons/ban.webp"],
+        "fields": [
+          ["Reason", "Spamming in chat"]
+        ],
+        "footer": ["It is recommended to wait at least a week before making a ban appeal"],
+        "buttons": [{
+          "label": "Appeal ban",
+          "url": "https://example.com/banappeal"
+        }]
+      }
+    },
+    "The link is only sent when the ban is made through Wynem's ban command, as part of the [moderation suite](/features/moderation-records). Bans made directly through Discord will not send it, and members with their DMs closed will not receive the message.",
+    {
+      "type": "heading",
+      "text": "How to use ban appeals"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the appeal link",
+          "content": [
+            "To set the server's ban appeal link, use the <command:setbanappeal [url]|serverconfig setbanappeal url:[url]> command. It requires the `Manage Server` permission, and Wynem also needs the `Manage Server` permission.",
+            "For example: <command:setbanappeal https://example.com/banappeal|serverconfig setbanappeal url:https://example.com/banappeal>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ban appeal link added",
+                "description": "The link https://example.com/banappeal has been set as the ban appeal link"
+              }
+            },
+            "The link is now configured and will be sent to members banned with Wynem's ban command. To change the link, run the command again with the new link. If you provide a link without `https://` at the start, it will be added automatically."
+          ]
+        },
+        {
+          "name": "Viewing the appeal link",
+          "content": [
+            "To view the server's current ban appeal link, use the <command:banappeal|server banappeal> command. Anyone in the server can use it.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Ban appeal link", "/assets/images/icons/ban.webp"],
+                "description": "Server ban appeal link: https://example.com/banappeal"
+              }
+            },
+            "If no ban appeal link is configured, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#DD2E44",
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "No ban appeal link",
+                "description": "There is no ban appeal link configured for this server"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing the appeal link",
+          "content": [
+            "To remove the ban appeal link, use the <command:setbanappeal|serverconfig setbanappeal> command without providing a link.",
+            "You will be prompted to confirm you want to remove the ban appeal link.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the ban appeal link https://example.com/banappeal ?",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the ban appeal link will have been removed, and will no longer be sent to banned members.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ban appeal link removed",
+                "description": "The ban appeal link has been removed from the server"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

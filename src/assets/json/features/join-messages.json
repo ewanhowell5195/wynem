@@ -1,0 +1,346 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Join Messages",
+        "name": "joinmessages"
+      },
+      "setjoinmessage",
+      "setjoinimage",
+      "setjoindm",
+      "setleavemessage",
+      "setleaveimage",
+      "viewjoinmessages",
+      "removejoinmessage",
+      "removejoindm",
+      "removeleavemessage",
+      "resendjoininfo"
+    ],
+    "slash": [
+      ["serverconfig", "joinmessages", "setjoinmessage"],
+      ["serverconfig", "joinmessages", "setjoinimage"],
+      ["serverconfig", "joinmessages", "setjoindm"],
+      ["serverconfig", "joinmessages", "setleavemessage"],
+      ["serverconfig", "joinmessages", "setleaveimage"],
+      ["serverconfig", "joinmessages", "view"],
+      ["serverconfig", "joinmessages", "removejoinmessage"],
+      ["serverconfig", "joinmessages", "removejoindm"],
+      ["serverconfig", "joinmessages", "removeleavemessage"],
+      ["serverconfig", "resendjoininfo"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are join messages?"
+    },
+    "Join messages are messages that Wynem sends when members join or leave the server. There are three types that you can set up: a join message that gets sent to a channel with a generated welcome image, a leave message that does the same when a member leaves, and a join DM that gets sent directly to new members.\n\nAll of the join message commands require the **Manage Server** permission.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Member joined", "/assets/images/logo/logo.webp"],
+        "description": "<@Ewan> joined the server!",
+        "fields": [
+          ["Account creation date", "<t:18 May 2025>", true]
+        ],
+        "image": "/assets/images/features/join-messages/join.webp"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Message placeholders"
+    },
+    "The join message, leave message, and join DM all support handlebars. Place these in the message text to have them replaced when the message gets sent:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["`{{user}}`", "Ping the user"],
+        ["`{{username}}`", "The user's username"],
+        ["`{{name}}`", "The user's display name"],
+        ["`{{server}}`", "The server name"],
+        ["`{{owner}}`", "Ping the server owner"],
+        ["`{{bot}}`", "Ping the bot"],
+        ["`{{time}}`", "The current time"],
+        ["`{{date}}`", "The current date"],
+        ["`{{banappeal}}`", "The server's ban appeal link"],
+        ["`{{prefix}}`", "The bot's prefix in the server"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use join messages"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the join message",
+          "content": [
+            "To set the join message, use the <command:setjoinmessage [channel] [message]|serverconfig joinmessages setjoinmessage channel:[channel] message:[message]> command. The channel is where the join messages will be sent, and the message can be up to 64 characters long. The message is optional, and defaults to `Everyone welcome: {{name}}`.",
+            "For example: <command:setjoinmessage #welcome Everyone welcome: {{name}}|serverconfig joinmessages setjoinmessage channel:#welcome message:Everyone welcome: {{name}}>",
+            "You will be shown a preview of the join message, with you as the member joining.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join message set",
+                "description": "Here is a preview of the new join message:",
+                "embeds": [
+                  {
+                    "author": ["Member joined", "/assets/images/logo/logo.webp"],
+                    "description": "<@Ewan> joined the server!",
+                    "fields": [
+                      ["Account creation date", "<t:18 May 2025>", true]
+                    ],
+                    "image": "/assets/images/features/join-messages/join.webp"
+                  },
+                  {
+                    "description": "You can set a custom background image with the `e!setjoinimage` command"
+                  }
+                ]
+              }
+            },
+            "The join message is now set up! Whenever a member joins the server, the join message will be sent to the chosen channel with a welcome image generated from your message text and the member's avatar.",
+            "If the channel the join message sends to gets deleted, the join message is automatically removed."
+          ]
+        },
+        {
+          "name": "Setting the join image",
+          "content": [
+            "To give the join message a custom background image, use the <command:setjoinimage|serverconfig joinmessages setjoinimage image-file:[image]> command, providing the image as an attachment or an image URL. The image is resized to fit between 256×256 and 1,024×1,024.",
+            "A join message must be set before you can set a join image. If there is no join message set, you will get an error.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "No join message set",
+                "description": "Please set a join message using the `e!setjoinmessage` command first",
+                "colour": "#DD2E44"
+              }
+            },
+            "After setting the join image, you will be shown a preview of the join message using the new background.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join image set",
+                "description": "Here is a preview of the new join message:",
+                "embeds": [{
+                  "author": ["Member joined", "/assets/images/logo/logo.webp"],
+                  "description": "<@Ewan> joined the server!",
+                  "fields": [
+                    ["Account creation date", "<t:18 May 2025>", true]
+                  ],
+                  "image": "/assets/images/features/join-messages/join_custom.webp"
+                }]
+              }
+            },
+            "All future join messages will now use your custom background image."
+          ]
+        },
+        {
+          "name": "Setting the join DM",
+          "content": [
+            "To set a message that gets sent directly to new members when they join, use the <command:setjoindm [message]|serverconfig joinmessages setjoindm message:[message]> command. The message is required, and can be up to 1,024 characters long.",
+            "For example: <command:setjoindm Welcome to the server {{name}}! Make sure to read the rules!|serverconfig joinmessages setjoindm message:Welcome to the server {{name}}! Make sure to read the rules!>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join DM set",
+                "description": "Here is a preview of the new join DM:",
+                "embeds": [{
+                  "title": "Welcome to Wynem Support",
+                  "description": "Welcome to the server Ewan! Make sure to read the rules!",
+                  "thumbnail": "/assets/images/logo/logo.webp"
+                }]
+              }
+            },
+            "The join DM is now set up, and will be sent to members when they join the server.",
+            "Join DMs are never sent to bots, and members who have their DMs disabled will not receive one."
+          ]
+        },
+        {
+          "name": "Setting the leave message",
+          "content": [
+            "To set the leave message, use the <command:setleavemessage [channel] [message]|serverconfig joinmessages setleavemessage channel:[channel] message:[message]> command. The channel is where the leave messages will be sent, and the message can be up to 64 characters long. The message is optional, and defaults to `Goodbye {{name}}`.",
+            "For example: <command:setleavemessage #welcome Goodbye {{name}}|serverconfig joinmessages setleavemessage channel:#welcome message:Goodbye {{name}}>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Leave message set",
+                "description": "Here is a preview of the new leave message:",
+                "embeds": [
+                  {
+                    "author": ["Member left", "/assets/images/logo/logo.webp"],
+                    "description": "<@Ewan> left the server!",
+                    "image": "/assets/images/features/join-messages/leave.webp"
+                  },
+                  {
+                    "description": "You can set a custom background image with the `e!setleaveimage` command"
+                  }
+                ]
+              }
+            },
+            "The leave message is now set up! Whenever a member leaves the server, the leave message will be sent to the chosen channel.",
+            "If the channel the leave message sends to gets deleted, the leave message is automatically removed."
+          ]
+        },
+        {
+          "name": "Setting the leave image",
+          "content": [
+            "To give the leave message a custom background image, use the <command:setleaveimage|serverconfig joinmessages setleaveimage image-file:[image]> command, providing the image as an attachment or an image URL. The image is resized to fit between 256×256 and 1,024×1,024.",
+            "A leave message must be set before you can set a leave image. If there is no leave message set, you will get an error.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "No leave message set",
+                "description": "Please set a leave message using the `e!setleavemessage` command first",
+                "colour": "#DD2E44"
+              }
+            },
+            "After setting the leave image, you will be shown a preview of the leave message using the new background.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Leave image set",
+                "description": "Here is a preview of the new leave message:",
+                "embeds": [{
+                  "author": ["Member left", "/assets/images/logo/logo.webp"],
+                  "description": "<@Ewan> left the server!",
+                  "image": "/assets/images/features/join-messages/leave_custom.webp"
+                }]
+              }
+            },
+            "All future leave messages will now use your custom background image."
+          ]
+        },
+        {
+          "name": "Viewing the join messages",
+          "content": [
+            "To view the join messages currently set up in the server, use the <command:viewjoinmessages|serverconfig joinmessages view> command. It will show a preview of the join message, leave message, and join DM, depending on which of them are set up.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Server join message",
+                "description": "Here is a preview of the server's join message:",
+                "embeds": [
+                  {
+                    "author": ["Member joined", "/assets/images/logo/logo.webp"],
+                    "description": "<@Ewan> joined the server!",
+                    "fields": [
+                      ["Account creation date", "<t:18 May 2025>", true]
+                    ],
+                    "image": "/assets/images/features/join-messages/join.webp"
+                  },
+                  {
+                    "title": "Server leave message",
+                    "description": "Here is a preview of the server's leave message:"
+                  },
+                  {
+                    "author": ["Member left", "/assets/images/logo/logo.webp"],
+                    "description": "<@Ewan> left the server!",
+                    "image": "/assets/images/features/join-messages/leave.webp"
+                  },
+                  {
+                    "title": "Server join DM",
+                    "description": "Here is a preview of the server's join dm:"
+                  },
+                  {
+                    "title": "Welcome to Wynem Support",
+                    "description": "Welcome to the server Ewan! Make sure to read the rules!",
+                    "thumbnail": "/assets/images/logo/logo.webp"
+                  }
+                ]
+              }
+            },
+            "If there are no join messages set up in the server, you will get an error instead."
+          ]
+        },
+        {
+          "name": "Removing join messages",
+          "content": [
+            "To remove the join message, leave message, or join DM, use the <command:removejoinmessage|serverconfig joinmessages removejoinmessage>, <command:removeleavemessage|serverconfig joinmessages removeleavemessage>, or <command:removejoindm|serverconfig joinmessages removejoindm> commands.",
+            "You will be prompted to confirm the removal, along with a preview of the message being removed. For example, when removing the join message:",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the join message from the server?",
+                "embeds": [{
+                  "author": ["Member joined", "/assets/images/logo/logo.webp"],
+                  "description": "<@Ewan> joined the server!",
+                  "fields": [
+                    ["Account creation date", "<t:18 May 2025>", true]
+                  ],
+                  "image": "/assets/images/features/join-messages/join.webp"
+                }],
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the join message will have been removed.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Join message removed",
+                "description": "The join message has been removed"
+              }
+            },
+            "The same process applies when removing the leave message and the join DM."
+          ]
+        }
+      ]
+    },
+    "",
+    {
+      "type": "heading",
+      "text": "Resending the bot join info"
+    },
+    "When Wynem first joins a server, it sends an informational message to help you get started. You can resend this message at any time with the <command:resendjoininfo|serverconfig resendjoininfo> command, and it will be sent in the current channel. This command requires the **Manage Server** permission.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "Thanks for inviting me to Wynem Support",
+        "description": "Here is some information to help get you started!",
+        "thumbnail": "/assets/images/logo/logo.webp",
+        "image": "/assets/images/logo/wynem_banner.webp",
+        "fields": [
+          ["Features", "To view a list of all main features that you can use, visit [wynem.com](https://wynem.com/features/)"],
+          ["Commands", "To view all of the available commands, you can use <:/help>, or visit [wynem.com](https://wynem.com/commands/)"],
+          ["Bot notices", "Bot notices will bring you the latest news and updates about Wynem.\nTo receive bot notices, you can join [this server](https://discord.gg/pkRxtGw) and follow the `#wynem-notices` channel, follow Wynem on [Bluesky](https://bsky.app/profile/wynem.com), or use the <:/bot notices> command"],
+          ["Support", "If you need support with the bot, join the [Discord server](https://discord.gg/pkRxtGw) and we can help you there!"],
+          ["Suggestions", "To suggest command/feature ideas for Wynem, please use the <:/bot suggest> command"],
+          ["Bug reports", "If you find a bug with Wynem, please report it with the <:/bot bugreport> command"],
+          ["Terms of Service & Privacy Policy", "Please make sure to keep up to date with the [Terms of Service](https://wynem.com/terms/) and the [Privacy Policy](https://wynem.com/privacy/)"]
+        ],
+        "buttons": [
+          {
+            "label": "Features",
+            "url": "https://wynem.com/features/"
+          },
+          {
+            "label": "Commands",
+            "url": "https://wynem.com/commands/"
+          },
+          {
+            "label": "Server",
+            "url": "https://discord.gg/pkRxtGw"
+          },
+          {
+            "label": "Bluesky",
+            "url": "https://bsky.app/profile/wynem.com"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "commands": {
+    "prefix": ["setminecraftaccount", "minecraftaccount"],
+    "slash": [
+      ["minecraft", "setaccount"],
+      ["minecraft", "account"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are Minecraft accounts?"
+    },
+    "You can link a Minecraft Java Edition account to your Discord user, so that Minecraft commands that take a username can default to your own account. Once linked, you can run commands like <command:skin|minecraftskins skin> without providing a username at all.",
+    "The link is tied to your Discord user rather than to a server, so it works everywhere, including in DMs.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "Minecraft account",
+        "url": "/",
+        "fields": [
+          ["Member", "<@Ewan>"],
+          ["Minecraft Name", "`EwanHowell`"],
+          ["Account UUID", "`0c9151e48ba14969b5e0e68b17d0a582`"]
+        ],
+        "footer": ["Disclaimer: Wynem does not verify account ownership"]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Where the linked account is used"
+    },
+    "The following commands all use your linked account when you leave the username out:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["skin", "View the skin of a Minecraft Java edition player"],
+        ["head", "View the head of a Minecraft Java edition player"],
+        ["cape", "View the cape and elytra of a Minecraft Java edition player"],
+        ["outfit", "Apply an outfit to a Minecraft skin"],
+        ["renderskin", "Render a Minecraft skin in 3D"],
+        ["minecraftavatar", "Create a Minecraft avatar"],
+        ["minecraftkick", "Make one Minecraft player kick another Minecraft player!"]
+      ]
+    },
+    "You can also pass a member's @mention in place of a username in these commands, to use their linked account instead of your own.",
+    {
+      "type": "heading",
+      "text": "How to use Minecraft accounts"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Linking an account",
+          "content": [
+            "To link a Minecraft account, use the <command:setminecraftaccount [username]|minecraft setaccount minecraft-username:[username]> command.",
+            "For example: <command:setminecraftaccount EwanHowell|minecraft setaccount minecraft-username:EwanHowell>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Account set",
+                "description": "Set `EwanHowell` as your Minecraft account"
+              }
+            },
+            "The username is looked up against Mojang's account database, so it must belong to a real Java Edition account. Linking a new account replaces the previous one."
+          ]
+        },
+        {
+          "name": "Viewing an account",
+          "content": [
+            "To view the Minecraft account linked to someone's Discord, use the <command:minecraftaccount [member]|minecraft account member:[member]> command. Leave out the member to view your own account.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Minecraft account",
+                "url": "/",
+                "fields": [
+                  ["Member", "<@Ewan>"],
+                  ["Minecraft Name", "`EwanHowell`"],
+                  ["Account UUID", "`0c9151e48ba14969b5e0e68b17d0a582`"]
+                ],
+                "footer": ["Disclaimer: Wynem does not verify account ownership"]
+              }
+            },
+            "The embed title links to the account's [NameMC](https://namemc.com/) profile.",
+            "If the member hasn't linked an account, you will be told, along with how they can set one."
+          ]
+        },
+        {
+          "name": "Unlinking an account",
+          "content": [
+            "To remove your linked account, run the <command:setminecraftaccount|minecraft setaccount> command without a username.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Account removed",
+                "description": "`EwanHowell` is no longer set as your Minecraft account"
+              }
+            },
+            "If you run the command without a username while no account is linked, you will instead be asked to provide a username to set."
+          ]
+        }
+      ]
+    }
+  ]
+}

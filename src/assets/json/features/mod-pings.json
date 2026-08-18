@@ -1,0 +1,252 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Moderator Pings",
+        "name": "modpings"
+      },
+      "modping",
+      "togglemodping",
+      "setmodpingroles",
+      "viewmodpingroles"
+    ],
+    "slash": [
+      ["modping"],
+      ["serverconfig", "toggle", "modping"],
+      ["serverconfig", "modpingroles", "set"],
+      ["serverconfig", "modpingroles", "view"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are moderator pings?"
+    },
+    "Moderator pings are a system that allow members to quickly and easily get the attention of moderators for whatever reason is necessary.\n\nDuring a mod ping, Wynem will ping three members of the lowest ranking moderator role, with 60 seconds between each ping. If no moderator has responded, it will ping the entire role. If still no one has responded, it repeats this process two more times with the next two higher tiers of moderator role.\n\nWhen picking which members to ping, Wynem prioritises members who are online, then on do not disturb, then idle, then offline.",
+    {
+      "type": "embed",
+      "data": {
+        "content": "Moderator ping - <@TheAnnoying>",
+        "author": ["Moderator ping", "/assets/images/icons/warning_blue.webp"],
+        "fields": [
+          ["Note for moderators", "Click the button, or send a message in chat to resolve this"]
+        ],
+        "footer": ["Started by Ewan\nTrying again in 60 seconds...", "/assets/images/logo/ewan.webp"],
+        "buttons": [
+          {
+            "label": "Resolve",
+            "emoji": "checkbox",
+            "style": "green"
+          },
+          {
+            "label": "Cancel",
+            "emoji": "cross",
+            "style": "red"
+          }
+        ]
+      }
+    },
+    "As well as the command, mod pings can be triggered by mentioning any role named <@&Modping> or <@&Moderator Ping>. Capitalisation and spaces in the role name do not matter, so names like <@&ModPing> and <@&moderatorping> work too.",
+    {
+      "type": "heading",
+      "text": "Moderator ping roles"
+    },
+    "By default, the moderator role tiers are guessed, and Wynem will use the three highest moderator roles in the server. A moderator role is any role that has at least one of these permissions:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Manage Messages", "Can delete messages sent by other members"],
+        ["Moderate Members", "Can timeout members"],
+        ["Kick Members", "Can kick members from the server"],
+        ["Ban Members", "Can ban members from the server"]
+      ]
+    },
+    "If the guessed roles don't fit your server, you can manually set up to three custom roles to be used instead with the <command:setmodpingroles [role] [role2] [role3]|serverconfig modpingroles set role:[role] role2:[role2] role3:[role3]> command.",
+    {
+      "type": "heading",
+      "text": "How to use moderator pings"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Triggering a mod ping",
+          "content": [
+            "To trigger a mod ping, use the <command:modping|modping> command. Wynem will start pinging moderators one at a time. Only one mod ping can be running in a channel at a time.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!modping</span><span class=\"command slash\">used <span class=\"link\">/modping</span></span>"
+                },
+                "content": "Moderator ping - <@TheAnnoying>",
+                "author": ["Moderator ping", "/assets/images/icons/warning_blue.webp"],
+                "fields": [
+                  ["Note for moderators", "Click the button, or send a message in chat to resolve this"]
+                ],
+                "footer": ["Started by Ewan\nTrying again in 60 seconds...", "/assets/images/logo/ewan.webp"],
+                "buttons": [
+                  {
+                    "label": "Resolve",
+                    "emoji": "checkbox",
+                    "style": "green"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross",
+                    "style": "red"
+                  }
+                ]
+              }
+            },
+            "A moderator can resolve the mod ping by pressing the `Resolve` button, or by simply sending a message in the channel.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Resolved", "/assets/images/icons/success.webp"],
+                "description": "Resolved by <@TheAnnoying>",
+                "footer": ["Started by Ewan", "/assets/images/logo/ewan.webp"]
+              }
+            },
+            "If you started the mod ping, you can press the `Cancel` button to stop it.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Cancelled", "/assets/images/icons/cross.webp"],
+                "description": "Moderator ping cancelled",
+                "footer": ["Started by Ewan", "/assets/images/logo/ewan.webp"]
+              }
+            },
+            "If anyone who is not a moderator presses the `Resolve` button, they will get an error that only they can see.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Missing required permissions",
+                "description": "You need to be a moderator to perform this action",
+                "colour": "#DD2E44"
+              }
+            },
+            "If there is nobody that can be pinged, Wynem will respond with `There is no one available to moderator ping`. If every tier has been pinged and no moderator has responded, Wynem gives up on the mod ping."
+          ]
+        },
+        {
+          "name": "Toggling mod pings",
+          "content": [
+            "Mod pings are enabled by default. To toggle whether members can trigger them, use the <command:togglemodping|serverconfig toggle modping> command. This requires the `Manage Guild` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Moderator ping disabled",
+                "description": "Members will no longer be able to use `e!moderatorping` in this server"
+              }
+            },
+            "Running the command again re-enables them.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Moderator ping enabled",
+                "description": "Members will now be able to use `e!modping` in this server"
+              }
+            },
+            "While mod pings are disabled, trying to trigger one will show an error.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to run command",
+                "description": "Moderator pings are disabled in this server",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Setting the mod ping roles",
+          "content": [
+            "To set custom moderator ping roles, use the <command:setmodpingroles [role] [role2] [role3]|serverconfig modpingroles set role:[role] role2:[role2] role3:[role3]> command, providing up to three roles. This requires the `Manage Guild` permission.",
+            "The order of the roles is the order of priority, so the first role is the tier that gets pinged first. Running the command again will overwrite any previously set roles.",
+            "For example: <command:setmodpingroles @Helpers @Moderators @Admins|serverconfig modpingroles set role:@Helpers role2:@Moderators role3:@Admins>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Moderator ping roles set",
+                "description": "The moderator ping roles have been set\n\nThe new roles are:\n\n<@&Helpers>\n<@&Moderators>\n<@&Admins>"
+              }
+            },
+            "Every role you provide must be a moderator role. If one of them isn't, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Invalid moderator role",
+                "description": "<@&Members> is not a moderator role. Moderator roles require one of these permissions:\n\n`Manage Messages`\n`Moderate Members`\n`Kick Members`\n`Ban Members`",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing the mod ping roles",
+          "content": [
+            "To view the currently set moderator ping roles, use the <command:viewmodpingroles|serverconfig modpingroles view> command. This requires the `Manage Guild` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Moderator ping roles",
+                "description": "The moderator ping roles in order of priority:\n\n<@&Helpers>\n<@&Moderators>\n<@&Admins>"
+              }
+            },
+            "If there are no custom roles set, you will be told that Wynem is using the guessed roles instead.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "No moderator ping roles set",
+                "description": "There are no moderator ping roles set in this server. Wynem will use the three highest roles in this server.",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing the mod ping roles",
+          "content": [
+            "To remove the custom moderator ping roles and go back to the guessed roles, run the <command:setmodpingroles|serverconfig modpingroles set> command without providing any roles.",
+            "You will be prompted to confirm that you want to remove the roles. Press remove to continue.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the moderator ping roles?\n\nThe current roles are:\n\n<@&Helpers>\n<@&Moderators>\n<@&Admins>",
+                "buttons": [
+                  {
+                    "label": "Remove",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the roles will have been removed.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Moderator ping roles removed",
+                "description": "The moderator ping roles have been removed. Wynem will use the three highest roles in this server."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

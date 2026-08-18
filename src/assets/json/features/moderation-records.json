@@ -1,0 +1,470 @@
+{
+  "commands": {
+    "prefix": ["warn", "timeout", "endtimeout", "kick", "ban", "unban", "addnote", "records", "purge"],
+    "slash": [
+      ["warn"],
+      ["timeout"],
+      ["moderation", "endtimeout"],
+      ["kick"],
+      ["ban"],
+      ["unban"],
+      ["moderation", "addnote"],
+      ["moderation", "records"],
+      ["purge"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is the moderation suite?"
+    },
+    "Wynem includes a full moderation suite for managing the members of your server. Moderators can warn, time out, kick, and ban members, add private notes, and purge messages, all while keeping a record of the actions taken against each member.",
+    {
+      "type": "embed",
+      "data": {
+        "reply": {
+          "name": "Ewan",
+          "colour": "#D14949",
+          "image": "/assets/images/logo/ewan.webp",
+          "message": "<span class=\"command prefix\">e!warn @TheAnnoying Spamming in chat</span><span class=\"command slash\">used <span class=\"link\">/warn</span></span>"
+        },
+        "author": ["Member warned", "/assets/images/icons/warning_red.webp"],
+        "description": "<@TheAnnoying> has been warned",
+        "fields": [
+          ["Reason", "Spamming in chat"],
+          ["Total warnings", "1"]
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Moderation records"
+    },
+    "Warnings, timeouts, and notes are stored as records against the member they were given to. Each record stores the moderator who gave it, the date it was given, and the reason provided. Records can be viewed at any time with the records command, and deleted individually or all at once.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Warning", "Given with the warn command. The member is told they were warned"],
+        ["Timeout", "Given with the timeout command. Also stores the length of the timeout"],
+        ["Note", "Given with the addnote command. Members cannot see their notes"]
+      ]
+    },
+    "A member can have up to `50` records per server. Once a member hits the limit, warnings and timeouts will still be applied, but will no longer be saved as records, and new notes cannot be added.\n\nKicks, bans, and purges are not stored as records, but are still logged.",
+    {
+      "type": "heading",
+      "text": "Member DMs"
+    },
+    "When a member is warned, timed out, kicked, or banned, Wynem sends them a DM telling them what happened, along with the reason if one was provided. Members with their DMs closed simply will not receive the message. Notes are the exception: members are never told about their notes.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Warned", "/assets/images/icons/warning_red.webp"],
+        "description": "You have been warned in `Ewan's Server`",
+        "fields": [
+          ["Reason", "Spamming in chat"],
+          ["Total warnings", "1"]
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Moderation logs"
+    },
+    "Every moderation action can be logged to a channel of your choice using the following log types. Set them up with the <command:managelogs|serverconfig logs manage> command. For a full guide on logging, check out the [Logs](/features/logs) feature.",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["moderation-warn", "When a moderator uses the warn command"],
+        ["moderation-timeout", "When a moderator uses the timeout command"],
+        ["moderation-endtimeout", "When a moderator uses the endtimeout command"],
+        ["moderation-kick", "When a member gets kicked"],
+        ["moderation-ban", "When a member gets banned"],
+        ["moderation-unban", "When a member gets unbanned"],
+        ["moderation-addnote", "When a moderator uses the addnote command"],
+        ["moderation-purge", "When a moderator uses the purge command"]
+      ]
+    },
+    "Log messages include the member, the moderator, the reason, and the member's warning and timeout totals. For example, a `moderation-warn` log:",
+    {
+      "type": "embed",
+      "data": {
+        "colour": "#DD2E44",
+        "author": ["Member warned", "/assets/images/icons/warning_red.webp"],
+        "thumbnail": "/assets/images/avatars/theannoying.webp",
+        "fields": [
+          ["Member", "<@TheAnnoying>"],
+          ["Moderator", "<@Ewan>"],
+          ["Reason", "Spamming in chat"],
+          ["Total warnings", "1"],
+          ["Total timeouts", "0"]
+        ],
+        "footer": ["987654321098765432"],
+        "timestamp": "Today at 12:34"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use the moderation suite"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Warning members",
+          "content": [
+            "To warn a member, use the <command:warn [member] [reason]|warn member:[member] reason:[reason]> command. The reason is optional, and can be up to `512` characters long. You need the `Moderate Members` permission to use this command.",
+            "For example: <command:warn @TheAnnoying Spamming in chat|warn member:@TheAnnoying reason:Spamming in chat>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member warned", "/assets/images/icons/warning_red.webp"],
+                "description": "<@TheAnnoying> has been warned",
+                "fields": [
+                  ["Reason", "Spamming in chat"],
+                  ["Total warnings", "1"]
+                ]
+              }
+            },
+            "The warning is saved as a record, and the member is sent a DM telling them they were warned, along with the reason and their new warning total."
+          ]
+        },
+        {
+          "name": "Timing out members",
+          "content": [
+            "To time out a member so that they cannot type or speak, use the <command:timeout [member] [duration] [reason]|timeout member:[member] duration:[duration] reason:[reason]> command. Both you and Wynem need the `Moderate Members` permission.",
+            "The duration is optional and defaults to `10` minutes, with a maximum of `28` days. See the [Duration Formatting](/features/durations) feature for the formats you can use. The reason is also optional, and can be up to `512` characters long.",
+            "For example: <command:timeout @TheAnnoying 3d Spamming in chat|timeout member:@TheAnnoying duration:3d reason:Spamming in chat>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member timed out", "/assets/images/icons/speaker_red.webp"],
+                "description": "<@TheAnnoying> has been timed out",
+                "fields": [
+                  ["Length", "3 days"],
+                  ["Reason", "Spamming in chat"],
+                  ["Total timeouts", "1"]
+                ]
+              }
+            },
+            "The timeout is saved as a record, and the member is sent a DM telling them they were timed out, along with the length, the reason, and their new timeout total.",
+            "If the member is already timed out, you will be asked to confirm before the new timeout is applied.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "<@TheAnnoying> is already timed out, are you sure you want to time them out again?\n\nThis will extend the timeout by `3 days` and add a new log",
+                "buttons": [
+                  {
+                    "label": "Time out",
+                    "emoji": "mute",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ending timeouts",
+          "content": [
+            "To end the timeout of a member who is currently timed out, use the <command:endtimeout [member] [reason]|moderation endtimeout member:[member] reason:[reason]> command. Both you and Wynem need the `Moderate Members` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member time out ended", "/assets/images/icons/speaker_green.webp"],
+                "description": "<@TheAnnoying> is no longer timed out",
+                "fields": [
+                  ["Reason", "Apologised for the spam"],
+                  ["Total timeouts", "1"]
+                ]
+              }
+            },
+            "Ending a timeout does not remove the original timeout record. If the member is not timed out, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#DD2E44",
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to end the time out",
+                "description": "<@TheAnnoying> is not timed out"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Kicking members",
+          "content": [
+            "To kick a member from the server, use the <command:kick [member] [reason]|kick member:[member] reason:[reason]> command. The reason is optional, and can be up to `512` characters long. Both you and Wynem need the `Kick Members` permission.",
+            "You will be prompted to confirm you want to kick the member.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to kick <@TheAnnoying>?",
+                "buttons": [
+                  {
+                    "label": "Kick",
+                    "emoji": "door",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the member is sent a DM telling them they were kicked, and is then kicked from the server.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member kicked", "/assets/images/icons/kick.webp"],
+                "description": "<@TheAnnoying> has been kicked",
+                "fields": [
+                  ["Reason", "Spamming in chat"]
+                ]
+              }
+            },
+            "Kicks are not stored as records, but are still logged with the `moderation-kick` log type. Administrators cannot be kicked unless you are the server owner."
+          ]
+        },
+        {
+          "name": "Banning members",
+          "content": [
+            "To ban a member from the server, use the <command:ban [member] [reason]|ban member:[member] reason:[reason]> command. The reason is optional, and can be up to `512` characters long. You need the `Ban Members` permission, and Wynem needs the `Ban Members` and `Kick Members` permissions. Users who are not in the server can also be banned.",
+            "You will be prompted to confirm you want to ban the member.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to ban <@TheAnnoying>?",
+                "buttons": [
+                  {
+                    "label": "Ban",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  },
+                  {
+                    "label": "Compromised account",
+                    "emoji": "warn",
+                    "style": "blue"
+                  }
+                ]
+              }
+            },
+            "Pressing `Ban` sends the member a DM telling them they were banned, and then bans them. If a ban appeal link is configured, the DM also includes an `Appeal ban` button. See the [Ban Appeals](/features/ban-appeals) feature.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "You have been banned from `Ewan's Server`",
+                "author": ["Banned", "/assets/images/icons/ban.webp"],
+                "fields": [
+                  ["Reason", "Spamming in chat"]
+                ],
+                "footer": ["It is recommended to wait at least a week before making a ban appeal"],
+                "buttons": [{
+                  "label": "Appeal ban",
+                  "url": "https://example.com/banappeal"
+                }]
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member banned", "/assets/images/icons/ban.webp"],
+                "description": "<@TheAnnoying> has been banned",
+                "fields": [
+                  ["Reason", "Spamming in chat"]
+                ]
+              }
+            },
+            "The `Compromised account` option is for members whose accounts have been hacked, and is only offered for members who are in the server. Instead of a permanent ban, Wynem sends the member an account security alert, bans them while deleting their recent message history, and then immediately unbans them, effectively converting the ban into a kick.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#FEE75C",
+                "author": ["Account Security Alert", "/assets/images/icons/warning_yellow.webp"],
+                "title": "Potential Compromise Detected!",
+                "description": "You were removed from the server `Ewan's Server` because your account appears to be compromised. Please update your password immediately and review your connected applications for any suspicious activity."
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#FEE75C",
+                "author": ["Compromised member removed", "/assets/images/icons/warning_yellow.webp"],
+                "description": "<@TheAnnoying> has been removed and their recent messages deleted"
+              }
+            },
+            "Bans are not stored as records, but are still logged with the `moderation-ban` log type. Administrators cannot be banned unless you are the server owner."
+          ]
+        },
+        {
+          "name": "Unbanning users",
+          "content": [
+            "To unban a banned user, use the <command:unban [user] [reason]|unban user:[user] reason:[reason]> command. Both you and Wynem need the `Ban Members` permission. The slash command autocompletes the user from the server's ban list.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["User unbanned", "/assets/images/icons/unban.webp"],
+                "description": "<@TheAnnoying> has been unbanned",
+                "fields": [
+                  ["Unban reason", "Ban appeal accepted"],
+                  ["Ban reason", "Spamming in chat"]
+                ]
+              }
+            },
+            "Unbans are logged with the `moderation-unban` log type. If the user is not banned, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#DD2E44",
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "User not banned",
+                "description": "<@TheAnnoying> is not banned"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Adding notes",
+          "content": [
+            "To add a note to a member, use the <command:addnote [member] [note]|moderation addnote member:[member] note:[note]> command. The note is required, and can be up to `512` characters long. You need the `Moderate Members` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Note added", "/assets/images/icons/edit.webp"],
+                "description": "A note has been added for <@TheAnnoying>",
+                "fields": [
+                  ["Note", "Keep an eye on this member"]
+                ]
+              }
+            },
+            "The note is saved as a record. Members cannot see their notes, and are not sent a DM.",
+            "If the member has hit the limit of `50` records, the note cannot be added.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#DD2E44",
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to add note",
+                "description": "<@TheAnnoying> has hit the limit of 50 records"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing records",
+          "content": [
+            "To view the moderation records for a member, use the <command:records [member]|moderation records member:[member]> command. You need the `Moderate Members` permission.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Member records", "/assets/images/icons/logs.webp"],
+                "description": "**Records for** <@TheAnnoying>\n\n**Total records:** 3\n**Total notes:** 1\n**Total warnings:** 1\n**Total timeouts:** 1",
+                "thumbnail": "/assets/images/avatars/theannoying.webp",
+                "fields": [
+                  ["<:warn:> Warning", "**Given by <@Ewan> on <t:18 May 2025>\nReason:**\n> Spamming in chat\nRecord ID: `1`"],
+                  ["<:mute:> Timeout", "**Given by <@Ewan> on <t:12 June 2025> for `3 days`\nReason:**\n> Continued spamming\nRecord ID: `2`"],
+                  ["<:pencil:> Note", "**Given by <@Ewan> on <t:3 July 2025>\nNote:**\n> Keep an eye on this member\nRecord ID: `3`"]
+                ],
+                "footer": ["User ID: 987654321098765432"],
+                "buttons": [{
+                  "emoji": "bin",
+                  "style": "red"
+                }]
+              }
+            },
+            "Records are shown `5` to a page. If a member has more than `5` records, arrow buttons appear so you can move between the pages.",
+            "If the member has no records, you will be told instead.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "No records found",
+                "description": "<@TheAnnoying> does not have any records"
+              }
+            },
+            "To delete records, press the red bin button. A modal will appear where you can enter the ID of the record to delete, shown under each record, or `ALL` to delete every record.",
+            {
+              "type": "modal",
+              "data": {
+                "title": "Delete record",
+                "rows": [
+                  ["Record ID", "The record ID to delete, or \"ALL\" to delete all records", true]
+                ]
+              }
+            },
+            "After submitting a record ID, you will privately be told the record was deleted, and the records view will update.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Record deleted",
+                "description": "The record with the ID of `2` has been deleted"
+              }
+            },
+            "When deleting all records, you will privately be asked to confirm first.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to delete all the records for <@TheAnnoying>?\n\nThis action cannot be undone",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "checkbox",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, every record for the member will be deleted."
+          ]
+        },
+        {
+          "name": "Purging messages",
+          "content": [
+            "To bulk delete messages from a channel, use the <command:purge [count] [member]|purge count:[count] member:[member]> command. The count is optional and defaults to `5`, with a maximum of `99`. Both you and Wynem need the `Manage Messages` permission.",
+            "For example: <command:purge 10|purge count:10>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Messages purged", "/assets/images/icons/bin.webp"],
+                "description": "`10` messages have been purged"
+              }
+            },
+            "The confirmation message deletes itself after a few seconds.",
+            "You can also provide a member to only delete their messages. Wynem searches through the last `100` messages in the channel for messages from that member.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Messages purged", "/assets/images/icons/bin.webp"],
+                "description": "`10` messages from <@TheAnnoying> have been purged"
+              }
+            },
+            "Purges are logged with the `moderation-purge` log type. Messages that are over two weeks old cannot be purged.",
+            {
+              "type": "embed",
+              "data": {
+                "colour": "#DD2E44",
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to purge messages",
+                "description": "I can only purge messages that are less than two weeks old"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

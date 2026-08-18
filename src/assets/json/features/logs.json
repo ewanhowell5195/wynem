@@ -1,0 +1,278 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Logs",
+        "name": "logs"
+      },
+      "managelogs",
+      "viewlogs"
+    ],
+    "slash": [
+      ["serverconfig", "logs", "manage"],
+      ["serverconfig", "logs", "view"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are server logs?"
+    },
+    "Server logs are a way to keep a record of what happens in your server. When something happens, such as a member joining or a message being deleted, Wynem will send a log message to a channel of your choice.\n\nEach log type has its own channel setting, so you can send different types of logs to different channels, or send them all to the same channel. Every log includes a timestamp of when it was sent.",
+    "Logs are delivered using a webhook named **Wynem - Server logs**, so Wynem requires the `Manage Webhooks` permission to send them. Managing and viewing the logs requires the `Manage Guild` permission. If Wynem ever loses access to a logs channel or its webhook, that log type is automatically removed.",
+    "Here is an example of the `member-join` log:",
+    {
+      "type": "embed",
+      "data": {
+        "username": "Wynem - Server logs",
+        "tag": "APP",
+        "colour": "#43B481",
+        "author": ["Member joined", "/assets/images/icons/member_green.webp"],
+        "description": "<@TheAnnoying>",
+        "thumbnail": "/assets/images/avatars/theannoying.webp",
+        "fields": [
+          ["Total members", "1,234"]
+        ],
+        "footer": ["524928454937626624"],
+        "timestamp": "Today at 12:34"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Log types"
+    },
+    "There are `23` different log types, and each one can be sent to its own channel:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["member-join", "When a member joins the server"],
+        ["member-leave", "When a member leaves the server"],
+        ["member-nickname", "When a member sets, changes, or removes a nickname"],
+        ["member-role", "When a member gains or loses a role"],
+        ["member-server-avatar", "When a member sets, changes, or removes a server avatar"],
+        ["member-voice-channel", "When member joins, switches, or leaves a voice channel"],
+        ["message-delete", "When a message is deleted"],
+        ["message-edit", "When a message is edited"],
+        ["message-ghost-ping", "When a ghost ping is detected"],
+        ["message-new-reaction", "When a reaction is added to a message for the first time"],
+        ["message-purge", "When messages get bulk deleted"],
+        ["moderation-addnote", "When a moderator uses the addnote command"],
+        ["moderation-ban", "When a member gets banned"],
+        ["moderation-blocked-reaction", "When a blocked emoji reaction gets removed"],
+        ["moderation-endtimeout", "When a moderator uses the endtimeout command"],
+        ["moderation-kick", "When a member gets kicked"],
+        ["moderation-purge", "When a moderator uses the purge command"],
+        ["moderation-timeout", "When a moderator uses the timeout command"],
+        ["moderation-unban", "When a member gets unbanned"],
+        ["moderation-warn", "When a moderator uses the warn command"],
+        ["new-discord-member-join", "When a member that is new to Discord joins the server"],
+        ["server-invite-create", "When a server invite is created"],
+        ["server-invite-delete", "When a server invite is deleted"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use server logs"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting up logs",
+          "content": [
+            "To set up the server logs, use the <command:managelogs|serverconfig logs manage> command to open the log manager. Use the select menu to choose the log type you want to set up.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!managelogs</span><span class=\"command slash\">used <span class=\"link\">/serverconfig logs manage</span></span>"
+                },
+                "title": "Manage server logs",
+                "description": "Please select a log type",
+                "select": {
+                  "placeholder": "Select log type",
+                  "options": [
+                    ["member-join", "When a member joins the server"],
+                    ["member-leave", "When a member leaves the server"],
+                    ["member-nickname", "When a member sets, changes, or removes a nickname"],
+                    ["member-role", "When a member gains or loses a role"],
+                    ["member-server-avatar", "When a member sets, changes, or removes a server avatar"],
+                    ["member-voice-channel", "When member joins, switches, or leaves a voice channel"],
+                    ["message-delete", "When a message is deleted"],
+                    ["message-edit", "When a message is edited"],
+                    ["message-ghost-ping", "When a ghost ping is detected"],
+                    ["message-new-reaction", "When a reaction is added to a message for the first time"],
+                    ["message-purge", "When messages get bulk deleted"],
+                    ["moderation-addnote", "When a moderator uses the addnote command"],
+                    ["moderation-ban", "When a member gets banned"],
+                    ["moderation-blocked-reaction", "When a blocked emoji reaction gets removed"],
+                    ["moderation-endtimeout", "When a moderator uses the endtimeout command"],
+                    ["moderation-kick", "When a member gets kicked"],
+                    ["moderation-purge", "When a moderator uses the purge command"],
+                    ["moderation-timeout", "When a moderator uses the timeout command"],
+                    ["moderation-unban", "When a member gets unbanned"],
+                    ["moderation-warn", "When a moderator uses the warn command"],
+                    ["new-discord-member-join", "When a member that is new to Discord joins the server"],
+                    ["server-invite-create", "When a server invite is created"],
+                    ["server-invite-delete", "When a server invite is deleted"]
+                  ]
+                }
+              }
+            },
+            "After selecting a log type, the manager will show the channel currently set for that type. A channel select menu will appear, along with a select menu to change the log type you are editing. Choose the channel you want the logs sent to, then press the `Set logs channel` button.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Manage server logs",
+                "description": "Editing log type: **member-join**\n\nCurrent log channel: **None**",
+                "buttons": [{
+                  "label": "Set logs channel",
+                  "style": "green"
+                }],
+                "selects": [
+                  {
+                    "placeholder": "Change log type",
+                    "options": [
+                      ["member-join", "When a member joins the server"],
+                      ["member-leave", "When a member leaves the server"],
+                      ["member-nickname", "When a member sets, changes, or removes a nickname"],
+                      ["member-role", "When a member gains or loses a role"],
+                      ["member-server-avatar", "When a member sets, changes, or removes a server avatar"],
+                      ["member-voice-channel", "When member joins, switches, or leaves a voice channel"],
+                      ["message-delete", "When a message is deleted"],
+                      ["message-edit", "When a message is edited"],
+                      ["message-ghost-ping", "When a ghost ping is detected"],
+                      ["message-new-reaction", "When a reaction is added to a message for the first time"],
+                      ["message-purge", "When messages get bulk deleted"],
+                      ["moderation-addnote", "When a moderator uses the addnote command"],
+                      ["moderation-ban", "When a member gets banned"],
+                      ["moderation-blocked-reaction", "When a blocked emoji reaction gets removed"],
+                      ["moderation-endtimeout", "When a moderator uses the endtimeout command"],
+                      ["moderation-kick", "When a member gets kicked"],
+                      ["moderation-purge", "When a moderator uses the purge command"],
+                      ["moderation-timeout", "When a moderator uses the timeout command"],
+                      ["moderation-unban", "When a member gets unbanned"],
+                      ["moderation-warn", "When a moderator uses the warn command"],
+                      ["new-discord-member-join", "When a member that is new to Discord joins the server"],
+                      ["server-invite-create", "When a server invite is created"],
+                      ["server-invite-delete", "When a server invite is deleted"]
+                    ]
+                  },
+                  {
+                    "placeholder": "No logs channel selected",
+                    "options": ["# member-logs", "# message-logs", "# mod-logs"]
+                  }
+                ]
+              }
+            },
+            "Wynem will confirm the change with a message that only you can see.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Logs channel set",
+                "description": "The logs channel for `member-join` has been set to <#member-logs>"
+              }
+            },
+            "The manager stays open after setting a channel, so you can select another log type and continue setting up more logs. After a while of inactivity, the manager will time out.",
+            {
+              "type": "embed",
+              "data": {
+                "description": "The log manager timed out..."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing the logs",
+          "content": [
+            "To view the currently set up log channels, use the <command:viewlogs|serverconfig logs view> command.",
+            {
+              "type": "embed",
+              "data": {
+                "reply": {
+                  "name": "Ewan",
+                  "colour": "#D14949",
+                  "image": "/assets/images/logo/ewan.webp",
+                  "message": "<span class=\"command prefix\">e!viewlogs</span><span class=\"command slash\">used <span class=\"link\">/serverconfig logs view</span></span>"
+                },
+                "title": "Server log channels",
+                "description": "`member-join   ` - <#member-logs>\n`message-delete` - <#message-logs>\n`moderation-ban` - <#mod-logs>"
+              }
+            },
+            "If there are no logs set up in the server, you will be told so instead.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "No server logs",
+                "description": "There are no server logs set up in this server"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing logs",
+          "content": [
+            "To remove a log, open the log manager with the <command:managelogs|serverconfig logs manage> command and select the log type you want to remove. Leave the channel select menu empty, then press the `Set logs channel` button.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Manage server logs",
+                "description": "Editing log type: **member-join**\n\nCurrent log channel: **<#member-logs>**",
+                "buttons": [{
+                  "label": "Set logs channel",
+                  "style": "green"
+                }],
+                "selects": [
+                  {
+                    "placeholder": "Change log type",
+                    "options": [
+                      ["member-join", "When a member joins the server"],
+                      ["member-leave", "When a member leaves the server"],
+                      ["member-nickname", "When a member sets, changes, or removes a nickname"],
+                      ["member-role", "When a member gains or loses a role"],
+                      ["member-server-avatar", "When a member sets, changes, or removes a server avatar"],
+                      ["member-voice-channel", "When member joins, switches, or leaves a voice channel"],
+                      ["message-delete", "When a message is deleted"],
+                      ["message-edit", "When a message is edited"],
+                      ["message-ghost-ping", "When a ghost ping is detected"],
+                      ["message-new-reaction", "When a reaction is added to a message for the first time"],
+                      ["message-purge", "When messages get bulk deleted"],
+                      ["moderation-addnote", "When a moderator uses the addnote command"],
+                      ["moderation-ban", "When a member gets banned"],
+                      ["moderation-blocked-reaction", "When a blocked emoji reaction gets removed"],
+                      ["moderation-endtimeout", "When a moderator uses the endtimeout command"],
+                      ["moderation-kick", "When a member gets kicked"],
+                      ["moderation-purge", "When a moderator uses the purge command"],
+                      ["moderation-timeout", "When a moderator uses the timeout command"],
+                      ["moderation-unban", "When a member gets unbanned"],
+                      ["moderation-warn", "When a moderator uses the warn command"],
+                      ["new-discord-member-join", "When a member that is new to Discord joins the server"],
+                      ["server-invite-create", "When a server invite is created"],
+                      ["server-invite-delete", "When a server invite is deleted"]
+                    ]
+                  },
+                  {
+                    "placeholder": "No logs channel selected",
+                    "options": ["# member-logs", "# message-logs", "# mod-logs"]
+                  }
+                ]
+              }
+            },
+            "Wynem will confirm the removal with a message that only you can see, and that log type will no longer be sent anywhere.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Logs channel removed",
+                "description": "The logs channel for `member-join` has been removed"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

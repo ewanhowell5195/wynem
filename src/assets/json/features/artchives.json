@@ -1,0 +1,135 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Artchives",
+        "name": "artchives"
+      },
+      "setartchive",
+      "artchive",
+      "viewartchive",
+      "removeartchive"
+    ],
+    "slash": [
+      ["serverconfig", "artchive", "set"],
+      ["server", "artchive", "submit"],
+      ["server", "artchive", "view"],
+      ["serverconfig", "artchive", "remove"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is the Artchive?"
+    },
+    "The Artchive™ is a channel where members can submit images to be archived. These could be artworks, memes, or literally anything. It's up to each server to decide what to use it for.",
+    "Members submit their images with a command, and Wynem posts them into the Artchive channel, along with their description and who submitted them.",
+    {
+      "type": "embed",
+      "data": {
+        "content": "By <@Ewan>",
+        "author": ["Ewan - Click here to open", "/assets/images/logo/ewan.webp", "/"],
+        "description": "My GLaDOS model!",
+        "image": "/assets/images/features/glados.webp",
+        "footer": ["Submit your own using e!artchive"],
+        "buttons": [{
+          "emoji": "bin",
+          "style": "red"
+        }]
+      }
+    },
+    "Every submission comes with a delete button, which can be pressed by the submitter, or by members with the `Manage Messages` permission, to remove the submission.",
+    {
+      "type": "heading",
+      "text": "How to use the Artchive"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the Artchive channel",
+          "content": [
+            "To set the channel where submissions are sent, use the <command:setartchive [channel]|serverconfig artchive set channel:[channel]> command. If no channel is provided, the current channel is used. This command requires the `Manage Server` permission.",
+            "For example: <command:setartchive #artchive|serverconfig artchive set channel:#artchive>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Artchive channel set",
+                "description": "The Artchive channel has been set to <#artchive>"
+              }
+            },
+            "To move the Artchive, run the command again with a different channel."
+          ]
+        },
+        {
+          "name": "Submitting images",
+          "content": [
+            "To submit an image to the Artchive, use the <command:artchive [description]|server artchive submit description:[description] image:[image]> command, attaching your image to the message. The description is required, and must be between `8` and `1024` characters.",
+            "For example: <command:artchive My GLaDOS model!|server artchive submit description:My GLaDOS model! image:glados.png>",
+            "Up to `4` images can be attached to a single submission, and they will all be added to the same Artchive post. Only image files are supported.",
+            "The submission is posted into the Artchive channel, and you are given a link to jump straight to it.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Image submitted",
+                "url": "/",
+                "description": "The image was successfully added to the Artchive",
+                "buttons": [{
+                  "label": "Jump to submission",
+                  "url": "/"
+                }]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing the Artchive channel",
+          "content": [
+            "To check which channel the Artchive is set to, use the <command:viewartchive|server artchive view> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Artchive channel",
+                "description": "The Artchive is set to <#artchive>"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing the Artchive",
+          "content": [
+            "To remove the server's Artchive channel, use the <command:removeartchive|serverconfig artchive remove> command. This command requires the `Manage Channels` permission.",
+            "You will be prompted to confirm you want to remove the Artchive.",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the Artchive from <#artchive>?",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "embed",
+              "data": {
+                "title": "Artchive removed",
+                "description": "The Artchive has been removed"
+              }
+            },
+            "Removing the Artchive only disables new submissions. The submissions already in the channel are left untouched."
+          ]
+        }
+      ]
+    }
+  ]
+}

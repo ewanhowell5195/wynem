@@ -1,64 +1,188 @@
 [
   {
-    "id": "button-roles",
-    "description": "A way for users to apply roles to themselves"
-  },
-  {
-    "id": "custom-commands",
-    "description": "Commands that you can configure to respond with whatever you want"
-  },
-  {
-    "id": "custom-embeds",
-    "description": "Create custom embeds that are sent by Wynem and say whatever you want"
-  },
-  {
-    "id": "auto-responses",
-    "name": "Auto-responses",
-    "description": "A way to make Wynem respond to triggers in regular messages"
-  },
-  {
-    "id": "minecraft-textures",
-    "description": "Get and view textures from Minecraft versions or resource packs"
-  },
-  {
-    "id": "issue-tracker",
-    "description": "Easily view the issues from a GitHub repository in your server"
-  },
-  {
     "id": "automod",
+    "category": "Moderation",
+    "icon": "icons/locked",
     "description": "Add Wynem's automod templates to the server"
   },
   {
+    "id": "blocked-emojis",
+    "category": "Moderation",
+    "icon": "icons/reaction",
+    "description": "Block emojis from being used in reactions, with configurable punishments"
+  },
+  {
+    "id": "button-roles",
+    "category": "Server Setup",
+    "icon": "icons/member_green",
+    "description": "A way for users to apply roles to themselves"
+  },
+  {
     "id": "starboard",
+    "category": "Server Setup",
+    "icon": "icons/star",
     "description": "Add a channel where messages are sent after they reach a certain number of a reaction, usually a star."
   },
   {
     "id": "rules",
+    "category": "Server Setup",
+    "icon": "emojis/note",
     "description": "Add your server's rules into Wynem so that you can easily list them all, individually quote rules, and create a stylised rules message for your rules channel."
   },
   {
     "id": "tickets",
+    "category": "Server Setup",
+    "icon": "icons/help",
     "description": "A system that allows users to create private tickets, that get assigned to and handled by users with a special role."
   },
   {
-    "id": "user-left-notices",
-    "description": "Get notified when you reply to someone who has left the server"
+    "id": "issue-tracker",
+    "category": "Server Setup",
+    "icon": "icons/github",
+    "description": "Easily view the issues from a GitHub repository in your server"
+  },
+  {
+    "id": "custom-commands",
+    "category": "Messages & Responses",
+    "icon": "emojis/pencil",
+    "description": "Commands that you can configure to respond with whatever you want"
+  },
+  {
+    "id": "auto-responses",
+    "category": "Messages & Responses",
+    "icon": "icons/speaker_blue",
+    "name": "Auto-responses",
+    "description": "A way to make Wynem respond to triggers in regular messages"
+  },
+  {
+    "id": "custom-embeds",
+    "category": "Messages & Responses",
+    "icon": "icons/info",
+    "description": "Create custom embeds that are sent by Wynem and say whatever you want"
   },
   {
     "id": "ghost-ping-notices",
+    "category": "Messages & Responses",
+    "icon": "icons/warning_red",
     "description": "Get notified when someone mentions you and then deletes their message"
   },
   {
+    "id": "user-left-notices",
+    "category": "Messages & Responses",
+    "icon": "icons/door_red",
+    "description": "Get notified when you reply to someone who has left the server"
+  },
+  {
+    "id": "custom-code",
+    "category": "Tools & Utilities",
+    "icon": "emojis/wrench",
+    "description": "Write and execute custom JavaScript code directly in Discord"
+  },
+  {
     "id": "durations",
+    "category": "Tools & Utilities",
+    "icon": "icons/calculator",
     "name": "Duration Formatting",
     "description": "Learn how to specify time periods across various commands in Wynem"
   },
   {
-    "id": "custom-code",
-    "description": "Write and execute custom JavaScript code directly in Discord"
+    "id": "minecraft-textures",
+    "category": "Tools & Utilities",
+    "icon": "emojis/grass",
+    "description": "Get and view textures from Minecraft versions or resource packs"
   },
   {
-    "id": "blocked-emojis",
-    "description": "Block emojis from being used in reactions, with configurable punishments"
+    "id": "logs",
+    "category": "Moderation",
+    "icon": "icons/logs",
+    "description": "Keep a record of everything that happens in your server, with 23 log types that can each be sent to their own channel"
+  },
+  {
+    "id": "moderation-records",
+    "category": "Moderation",
+    "icon": "icons/stats",
+    "description": "Warn, time out, kick, and ban members, and keep records of your moderation actions"
+  },
+  {
+    "id": "auto-ban",
+    "category": "Moderation",
+    "icon": "icons/ban",
+    "description": "Automatically remove scam bots and compromised accounts using trap channels and roles"
+  },
+  {
+    "id": "ban-appeals",
+    "category": "Moderation",
+    "icon": "icons/unban",
+    "description": "Send banned members a link where they can appeal their ban"
+  },
+  {
+    "id": "mod-pings",
+    "category": "Moderation",
+    "icon": "icons/ping",
+    "description": "Let members quickly get the attention of moderators, pinging them in escalating tiers until someone responds"
+  },
+  {
+    "id": "join-messages",
+    "category": "Server Setup",
+    "icon": "icons/door_green",
+    "description": "Welcome new members with channel messages, generated welcome images, and DMs, and say goodbye when they leave"
+  },
+  {
+    "id": "join-roles",
+    "category": "Server Setup",
+    "icon": "icons/member_blue",
+    "description": "Roles that get automatically applied to members when they join the server"
+  },
+  {
+    "id": "faqs",
+    "category": "Server Setup",
+    "icon": "icons/faq",
+    "name": "FAQs",
+    "description": "Store answers to frequently asked questions, and quickly bring them up when they are asked"
+  },
+  {
+    "id": "server-invites",
+    "category": "Server Setup",
+    "icon": "icons/discord",
+    "description": "Save named invite links for partner servers that members can pull up at any time"
+  },
+  {
+    "id": "artchives",
+    "category": "Server Setup",
+    "icon": "icons/palette",
+    "name": "Artchive",
+    "description": "A channel where members can submit images to be archived and showcased"
+  },
+  {
+    "id": "customisation",
+    "category": "Server Setup",
+    "icon": "logo/logo",
+    "iconPlain": true,
+    "description": "Customise Wynem's avatar, embed colour, and prefixes in your server"
+  },
+  {
+    "id": "message-quoting",
+    "category": "Messages & Responses",
+    "icon": "icons/quote",
+    "description": "Automatically quote Discord messages whenever a message link is sent in the server"
+  },
+  {
+    "id": "reminders",
+    "category": "Tools & Utilities",
+    "icon": "icons/bell_blue",
+    "description": "Set one off and repeating reminders that ping you with a message of your choice when their time is up"
+  },
+  {
+    "id": "text-to-speech",
+    "category": "Tools & Utilities",
+    "icon": "icons/speaker_green",
+    "name": "Text to Speech",
+    "description": "Make Wynem read messages out loud in voice channels, with automatic TTS channels, multiple languages, and volume controls"
+  },
+  {
+    "id": "minecraft-accounts",
+    "category": "Tools & Utilities",
+    "icon": "icons/mojang",
+    "description": "Link a Minecraft account to your Discord so Minecraft commands default to it"
   }
 ]

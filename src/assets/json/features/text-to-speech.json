@@ -1,0 +1,308 @@
+{
+  "commands": {
+    "prefix": [
+      {
+        "type": "category",
+        "text": "Voice",
+        "name": "voice"
+      },
+      "tts",
+      "setttslanguage",
+      "volume",
+      "defaultvolume",
+      "leave",
+      "stop",
+      "setautotts",
+      "viewautotts",
+      "ignoreprefix",
+      "removeautotts"
+    ],
+    "slash": [
+      ["voice", "tts"],
+      ["voice", "setttslanguage"],
+      ["voice", "volume"],
+      ["voice", "leave"],
+      ["voice", "stop"],
+      ["serverconfig", "autotts", "set"],
+      ["voice", "viewautotts"],
+      ["serverconfig", "autotts", "ignoreprefix"],
+      ["serverconfig", "autotts", "remove"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is text to speech?"
+    },
+    "Text to speech (TTS) lets Wynem read messages out loud. Join a voice channel and use the <command:tts [text]|voice tts message:[text]> command, and Wynem will join your voice channel and speak your message.\n\nIf you are not in a voice channel, or you use the command in Wynem's direct messages, the message is sent as an `mp3` file instead.",
+    {
+      "type": "message",
+      "data": {
+        "name": "Ewan",
+        "colour": "#D14949",
+        "image": "/assets/images/logo/ewan.webp",
+        "message": "e!tts Hello everyone, welcome to the server!"
+      }
+    },
+    "Wynem reacts to your message once it starts reading it out. When using the slash command, Wynem instead replies with the message being read out:",
+    {
+      "type": "components",
+      "data": {
+        "components": ["**<@Ewan>:** Hello everyone, welcome to the server!"]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Message processing"
+    },
+    "Before a message is read out, Wynem cleans it up so that it sounds natural when spoken:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Mentions", "User, channel, and role mentions are read out as their names"],
+        ["Links", "Links are read out as just the website name"],
+        ["Long numbers", "Very long numbers, such as Discord IDs, are skipped"],
+        ["Abbreviations", "Common abbreviations are expanded, such as `btw` becoming `by the way` and `brb` becoming `be right back`"],
+        ["Censored words", "Fully censored words like `****` are swapped for random words, and `*`s inside words are replaced with random vowels"]
+      ]
+    },
+    "Messages can be up to `1000` characters long after processing. Anything longer will not be read out.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Error", "/assets/images/icons/error.webp"],
+        "colour": "#DD2E44",
+        "title": "Character limit passed",
+        "description": "The character limit is `1000` characters. That message has `1024` characters"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "TTS languages"
+    },
+    "Wynem can speak in many different languages. The default language is British English (`en-uk`). To see every available language, run the `e!tts` command without any text.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "Available TTS Languages",
+        "description": "`af` `ar` `ca` `cs` `da` `de` `el` `en` `en-au` `en-uk` `en-us` `eo` `es` `es-es` `es-us` `fi` `fr` `he` `hi` `hr` `ht` `hu` `hy` `id` `is` `it` `ja` `ko` `la` `lv` `mk` `nl` `no` `pl` `pt` `pt-br` `ro` `ru` `sk` `sq` `sr` `sv` `sw` `ta` `th` `tr` `vi` `zh` `zh-cn` `zh-tw` `zh-yue`",
+        "footer": ["Specify a language by using [language] at the start of your message"],
+        "buttons": [{
+          "label": "More details"
+        }]
+      }
+    },
+    "Pressing the More details button shows which language each code belongs to.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "Available TTS Languages",
+        "description": "```Afrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi```"
+      }
+    },
+    "To read a single message in another language, put the language inside square brackets at the start of your message.\nFor example: <command:tts [fr] Bonjour!|voice tts message:Bonjour! language:French>",
+    "To change your default TTS language, use the <command:setttslanguage [language]|voice setttslanguage language:[language]> command. Your language is saved to you, and is used everywhere, including AutoTTS.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "TTS language set",
+        "description": "Set your TTS language to `fr`"
+      }
+    },
+    "Setting your language to `en` or `en-uk` resets it back to the default. Running the command without a language shows all the available languages, along with your current one.",
+    {
+      "type": "embed",
+      "data": {
+        "title": "TTS language set",
+        "description": "Set your TTS language back to the default"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Voice controls"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Changing the volume",
+          "content": [
+            "To change how loud Wynem speaks, use the <command:volume [volume]|voice volume volume:[volume]> command with a volume between `1` and `100`. You must be in the same voice channel as Wynem to change the volume.",
+            "For example: <code class=\"command prefix\">e!volume 50</code><code class=\"command slash\">/voice volume volume:50</code>",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Voice volume set", "/assets/images/icons/speaker_blue.webp"],
+                "description": "My volume has been set to 50%"
+              }
+            },
+            "If Wynem is already reading something out, the new volume is applied after the current playback finishes.",
+            "Running the command without a volume shows the current volume.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Voice volume", "/assets/images/icons/speaker_blue.webp"],
+                "description": "My voice volume is currently set to 50%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Setting the default volume",
+          "content": [
+            "The default volume is the volume Wynem starts at whenever it joins a voice channel in your server. It defaults to `100`%.",
+            "To change it, use the `e!defaultvolume [volume]` command with a volume between `1` and `100`. This command requires the `Manage Server` permission, and is only available as a prefix command.",
+            "For example: `e!defaultvolume 75`",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Default voice volume set", "/assets/images/icons/speaker_blue.webp"],
+                "description": "My default volume has been set to 75%"
+              }
+            },
+            "If Wynem is currently in a voice channel, the new default volume is used the next time it joins one.",
+            "Running the command without a volume shows the current default volume.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Default voice volume", "/assets/images/icons/speaker_blue.webp"],
+                "description": "My default voice volume is currently set to 75%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Stopping and leaving",
+          "content": ["To make Wynem stop reading the current message, use the <command:stop|voice stop> command. Wynem reacts with a 🛑 once the audio has been stopped.", "To make Wynem leave the voice channel entirely, use the <command:leave|voice leave> command. Wynem reacts with a 👋 as it leaves.", "You must be in the same voice channel as Wynem to use either command."]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "AutoTTS"
+    },
+    "AutoTTS turns a channel into a hands free TTS channel: every message sent in it is automatically read out loud in your voice channel, with no command needed. Messages are processed and spoken exactly like the <command:tts [text]|voice tts message:[text]> command, using each member's own TTS language.",
+    "A message in the AutoTTS channel is only read out if:",
+    {
+      "type": "tablelist",
+      "rows": [
+        ["You are in a voice channel", "Messages are not read for members who are not in a voice channel"],
+        ["It is not a command", "Messages starting with the server's prefix, or any of the ignored prefixes, are skipped"],
+        ["It is not a link", "Messages that are just a link are skipped"],
+        ["It is not from a bot", "Bot messages are never read out"]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to use AutoTTS"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Setting the AutoTTS channel",
+          "content": [
+            "Setting up AutoTTS requires the `Manage Server` permission.",
+            "To set the AutoTTS channel, use the <command:setautotts [channel]|serverconfig autotts set channel:[channel]> command. The channel is optional, and defaults to the channel the command is run in.",
+            "For example: <code class=\"command prefix\">e!setautotts #autotts</code><code class=\"command slash\">/serverconfig autotts set channel:#autotts</code>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "AutoTTS channel set",
+                "description": "The AutoTTS channel has been set to <#autotts>"
+              }
+            },
+            "A server can only have one AutoTTS channel at a time. Running the command again moves the AutoTTS to the new channel."
+          ]
+        },
+        {
+          "name": "Viewing the AutoTTS channel",
+          "content": [
+            "To see which channel is currently the AutoTTS channel, use the <command:viewautotts|voice viewautotts> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "AutoTTS channel",
+                "description": "The AutoTTS is set to <#autotts>"
+              }
+            },
+            "If no AutoTTS channel is set, you will get an error instead.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "colour": "#DD2E44",
+                "title": "No AutoTTS channel set",
+                "description": "There is no AutoTTS channel set in this server"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ignoring prefixes",
+          "content": [
+            "If you use other bots in the AutoTTS channel, you can stop their commands being read out loud by ignoring their prefixes. This requires the `Manage Server` permission.",
+            "To ignore a prefix, use the <command:ignoreprefix [prefix]|serverconfig autotts ignoreprefix prefix:[prefix]> command.\nFor example: <command:ignoreprefix !|serverconfig autotts ignoreprefix prefix:!>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Prefix ignored",
+                "description": "The prefix `!` will be ignored for AutoTTS"
+              }
+            },
+            "Up to `10` prefixes can be ignored at a time. Wynem's own prefix is always ignored automatically.",
+            "Running the command with a prefix that is already ignored removes it from the ignored prefixes.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Prefix no longer ignored",
+                "description": "The prefix `!` is no longer ignored for AutoTTS"
+              }
+            },
+            "Running the command without a prefix shows the currently ignored prefixes.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Ignored AutoTTS prefixes",
+                "description": "`!`, `?`\n\nYou can add more ignored prefixes with the `e!ignoreprefix [prefix]` command"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing the AutoTTS channel",
+          "content": [
+            "To remove the AutoTTS channel, use the <command:removeautotts|serverconfig autotts remove> command. This requires the `Manage Server` permission.",
+            "You will be prompted to confirm you want to remove the AutoTTS",
+            {
+              "type": "embed",
+              "data": {
+                "warning": true,
+                "description": "Are you sure you want to remove the AutoTTS from <#autotts>?",
+                "buttons": [
+                  {
+                    "label": "Confirm",
+                    "emoji": "bin",
+                    "style": "red"
+                  },
+                  {
+                    "label": "Cancel",
+                    "emoji": "cross"
+                  }
+                ]
+              }
+            },
+            "After confirming, the AutoTTS channel will have been removed.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "AutoTTS removed",
+                "description": "The AutoTTS channel has been removed"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
