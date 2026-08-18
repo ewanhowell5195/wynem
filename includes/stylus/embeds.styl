@@ -1,91 +1,103 @@
 :host
-  --color-discord-ping: #414675
-  --color-discord-ping-hover: #5865F2
-  --color-discord-ping-text: #C2E2FD
-  --color-discord-text: #DBDEE1
-  --color-discord-text-light: #F2F3F5
-  --color-discord-button: #4E5058
-  --color-discord-button-hover: #6D6F78
-  --color-discord-button-active: #80848E
-  --color-discord-button-blue: #5865F2
-  --color-discord-button-blue-hover: #4752C4
-  --color-discord-button-blue-active: #3C45A5
-  --color-discord-button-green: #248046
-  --color-discord-button-green-hover: #1A6334
-  --color-discord-button-green-active: #15562B
-  --color-discord-button-red: #DA373C
-  --color-discord-button-red-hover: #A12828
-  --color-discord-button-red-active: #8F2022
+  --dc-surface: var(--color-grey-lighter)
+  --dc-popout: var(--color-grey-light)
+  --dc-border: rgba(151, 151, 159, 0.12)
+  --dc-border-strong: rgba(151, 151, 159, 0.2)
+  --dc-border-subtle: rgba(151, 151, 159, 0.04)
+  --dc-border-light: rgba(255, 255, 255, 0.08)
+  --dc-border-checkbox: rgba(151, 151, 159, 0.64)
+  --dc-input-bg: rgba(0, 0, 0, 0.08)
+  --dc-text: #F3F3F4
+  --dc-text-soft: #C5C6CA
+  --dc-text-muted: #ABACB2
+  --dc-text-faint: #9D9EA5
+  --dc-link: #76AFF6
+  --dc-blurple: #5865F2
+  --dc-blurple-hover: #4452BB
+  --dc-green: #008545
+  --dc-green-hover: #006C37
+  --dc-red: #D22D39
+  --dc-red-hover: #A9232E
+  --dc-secondary: rgba(151, 151, 159, 0.12)
+  --dc-secondary-hover: rgba(151, 151, 159, 0.16)
+  --dc-mention-bg: rgba(88, 101, 242, 0.24)
+  --dc-mention-text: #CDD7FF
+  --dc-code-bg: rgba(88, 101, 242, 0.08)
+  --dc-warn: #FCB529
+  --dc-warn-bg: rgba(248, 163, 0, 0.08)
+  --dc-required: #FFA09B
+  --dc-quote-bar: #595A63
+  --dc-spoiler: #7D7E87
 
-.embed-container 
+// ---------- message chrome ----------
+
+.embed-container
   max-width: calc(100vw - 80px)
   margin-bottom: 24px
+  font-size: 16px
+  color: var(--dc-text)
 
   > div:last-child
     display: flex
     gap: 16px
-    
-  code
-    padding: 1.38px
-    margin: -2.38px 0
-    font-family: var(--font-code)
-    font-size: 11.9px
-    border-radius: 3px
-    background-color: var(--color-grey)
 
 .message-container
-  margin-bottom: 0
+  margin-bottom: 17px
 
 .message
-  margin-top: 4px
-  color: var(--color-discord-text)
+  margin-top: 2px
+  color: var(--dc-text)
+  line-height: 22px
 
 .reply-container
   gap: 4px
   align-items: center
   font-size: 14px
-  margin: 0 0 10px 60px
+  margin: 0 0 4px 60px
   user-select: none
-  
+
   img
     width: 16px
     height: 16px
     border-radius: 50%
-      
+
   div:nth-child(2)
     position: relative
-  
+    font-weight: 500
+    opacity: .8
+
     &::before
       content: ""
-      border-left: 2px solid var(--color-grey-lighter)
+      border-left: 2px solid var(--dc-quote-bar)
       border-top-left-radius: 6px
-      border-top: 2px solid var(--color-grey-lighter)
+      border-top: 2px solid var(--dc-quote-bar)
       width: 33px
       height: 12px
       position: absolute
       transform: translate(calc(-100% - 24px), 6px)
-    
+
     &:hover
       text-decoration: underline
-    
+
   div:last-child
-    color: #B5BAC1
-    
+    color: var(--dc-text-soft)
+
     &:hover
       color: var(--color-text-white)
 
 .pfp-container > img
   width: 40px
+  height: 40px
   border-radius: 50%
   cursor: pointer
   user-select: none
-  
+
   &:hover
     filter: drop-shadow(0px 4px 4px #00000028)
-  
+
   &:active
     transform: translateY(1px)
-    
+
   &.outline
     border: 2px solid #2B2B2E
 
@@ -94,521 +106,996 @@
   flex-direction: column
   align-items: flex-start
   width: 100%
+  min-width: 0
 
 .name-row
   display: flex
-  gap: 5px
+  gap: 6px
+  align-items: center
+  line-height: 22px
 
 .name
   color: var(--color-blue)
+  font-weight: 500
   cursor: pointer
-  
+
   &:hover
     text-decoration: underline
-  
+
 .tag
-  background-color: var(--color-blue)
-  display: flex
+  background-color: var(--dc-blurple)
+  display: inline-flex
   font-size: 10px
   fill: var(--color-text-white)
   align-items: center
-  padding-right: 4px
-  border-radius: 3px
-  height: 16px
-  
+  gap: 1px
+  padding: 0 4px
+  border-radius: 4px
+  height: 15px
+  user-select: none
+
   > svg
-    width: 15px
-    height: 15px
+    width: 12px
+    height: 12px
+    margin-left: -2px
 
   > div
-    scale: 1 1.1
-    
+    color: var(--color-text-white)
+    font-size: 10px
+    font-weight: 600
+    letter-spacing: .2px
+
+.msg-timestamp
+  font-size: 12px
+  font-weight: 500
+  color: var(--dc-text-faint)
+  user-select: none
+
+.text-content
+  margin-top: 0
+  line-height: 22px
+  white-space: pre-wrap
+  overflow-wrap: anywhere
+
+  .emoji
+    width: 22px
+    height: 22px
+
+// ---------- markdown pieces ----------
+
+code
+  font-family: var(--font-code)
+
+.inline-code, .embed-container code:not(.codeblock code)
+  padding: 1px 3px
+  margin: -2px 0
+  font-family: var(--font-code)
+  font-size: .85em
+  border-radius: 4px
+  border: 1px solid var(--dc-border-strong)
+  background-color: var(--dc-code-bg)
+
+.codeblock
+  font-family: var(--font-code)
+  font-size: 14px
+  line-height: 18px
+  background-color: var(--dc-code-bg)
+  border: 1px solid var(--dc-border-strong)
+  color: var(--color-text-white)
+  padding: 7px
+  border-radius: 4px
+  margin-top: 6px
+  white-space: pre-wrap
+
+  code
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+    font-size: inherit
+
+.ping
+  background-color: var(--dc-mention-bg)
+  border-radius: 3px
+  padding: 0 2px
+  font-weight: 500
+  color: var(--dc-mention-text) !important
+  cursor: pointer
+  transition: background-color .05s ease-out, color .05s ease-out
+  user-select: none
+  text-decoration: none
+
+  &:hover
+    background-color: var(--dc-blurple)
+    color: var(--color-text-white) !important
+
+.role
+  color: #ff993c !important
+  background-color: #4e3b2a
+
+  &:hover
+    color: #ff993c !important
+    background-color: #63452C
+
+.emoji
+  width: 1.375em
+  height: 1.375em
+  margin-bottom: -0.3em
+
+.timestamp
+  padding: 0 2px
+  border-radius: 3px
+  background-color: var(--dc-secondary-hover)
+
+.listbar
+  background-color: var(--dc-quote-bar)
+  width: 4px
+  border-radius: 4px
+  display: inline-block
+  margin: 0 12px -3px 0
+  height: 1.15em
+
+.heading1
+  font-size: 24px
+  font-weight: 700
+  line-height: 33px
+  margin: 16px 0 8px
+  display: block
+  color: var(--color-text-white)
+
+  &:first-child
+    margin-top: 0
+
+.heading2
+  font-size: 20px
+  font-weight: 700
+  line-height: 27.5px
+  margin: 16px 0 8px
+  display: block
+  color: var(--color-text-white)
+
+  &:first-child
+    margin-top: 0
+
+.heading3
+  font-size: 16px
+  font-weight: 700
+  line-height: 22px
+  margin: 16px 0 8px
+  display: block
+  color: var(--color-text-white)
+
+  &:first-child
+    margin-top: 0
+
+.small
+  display: block
+  font-size: .85em
+  color: var(--dc-text-soft)
+
+a.anchor, .embed a
+  color: var(--dc-link)
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+// ---------- embeds ----------
+
 .embed
-  padding: 8px 16px 16px 12px
-  background-color: var(--color-grey-lighter)
-  margin-top: 4px
+  background-color: var(--dc-surface)
+  margin-top: 2px
   border-radius: 4px
   border-left: 4px solid var(--color-blue)
   font-size: 14px
-  color: var(--color-discord-text)
-  max-width: 484px
-  box-shadow: var(--box-shadow)
-  
+  line-height: 18px
+  color: var(--dc-text)
+  max-width: 432px
+  padding: 2px 16px 16px 12px
+  box-sizing: border-box
+  display: grid
+  grid-template-columns: minmax(0, 1fr)
+
   *
     white-space: pre-wrap
     overflow-wrap: anywhere
-    line-height: 1.25em
-  
-  > div:first-child
-    display: flex
-    gap: 16px
-    justify-content: space-between
-    
+
+  &.has-thumbnail
+    grid-template-columns: minmax(0, 1fr) 80px
+    column-gap: 16px
+
+.embed ~ .embed
+  margin-top: 4px
+
 .warning
-  border-left: 4px solid #DD2E44
-  
-.embed-title
-  font-size: 16px
-  margin-top: 8px
-  font-weight: 600
-  color: var(--color-text-white)
-  padding: 2px 0
-  display: block
-  
-  a&
-    color: var(--color-blue-light)
-    text-decoration: none
-    
-    &:hover
-      text-decoration: underline
-  
-  code
-    font-size: 13.6px
-    margin: -2.72px 0
-    padding: 2.72px
+  border-left-color: #DD2E44
 
-.embed-description
-  margin-top: 8px
-  padding: 1px 0
+.embed-main
+  min-width: 0
 
-.embed-buttons
-  margin-top: 8px
-  gap: 8px
-  flex-wrap: wrap
-
-.embed-button
-  background-color: var(--color-discord-button)
-  border-radius: 3px
-  display: flex
-  align-items: center
-  padding: 8px 20px
-  gap: 4px
-  transition: background-color .17s
-  user-select: none
-  cursor: pointer
-  min-height: 16px
-  font-size: 14px
-  color: var(--color-text-white)
-  text-decoration: none
-  box-shadow: var(--box-shadow)
-  overflow-wrap: anywhere
-  text-align: center
-  
-  &:hover
-    background-color: var(--color-discord-button-hover)
-    
-  &:active
-    background-color: var(--color-discord-button-active)
-    
-  > img
-    width: 19.25px
-    height: 19.25px
-    
-  > svg
-    width: 16px
-    height: 16px
-    fill: var(--color-text-white)
-    margin-left: 4px
-
-.embed-button-blue
-  background-color: var(--color-discord-button-blue)
-  
-  &:hover
-    background-color: var(--color-discord-button-blue-hover)
-    
-  &:active
-    background-color: var(--color-discord-button-blue-active)
-    
-.embed-button-green
-  background-color: var(--color-discord-button-green)
-  
-  &:hover
-    background-color: var(--color-discord-button-green-hover)
-    
-  &:active
-    background-color: var(--color-discord-button-green-active)
-    
-.embed-button-red
-  background-color: var(--color-discord-button-red)
-  
-  &:hover
-    background-color: var(--color-discord-button-red-hover)
-    
-  &:active
-    background-color: var(--color-discord-button-red-active)
-
-.embed-fields
-  display: flex
-  gap: 8px
-  flex-wrap: wrap
-  margin-top: 12px
-
-  > div
-    flex-grow: 1
-
-.embed-field-name
-  font-weight: 600
-  color: var(--color-text-white)
-  padding: 1px 0
-  margin-bottom: 4px
-  
-.embed-field-value
-  padding: 1px 0
-  
 .embed-author
   margin-top: 8px
-  font-size: 14px
-  padding: 1px 0
   display: flex
   align-items: center
   gap: 8px
-  font-weight: 600
-  
-  *
-    color: var(--color-text-white)
-  
+
   img
     width: 24px
     height: 24px
     border-radius: 50%
 
-.embed-footer
+  span, a
+    color: var(--color-text-white)
+    font-size: 14px
+    font-weight: 600
+
+.embed-title
+  font-size: 16px
+  line-height: 22px
   margin-top: 8px
-  font-size: 12px
-  padding: 1px 0
+  font-weight: 600
+  color: var(--color-text-white)
+  display: block
+
+  a&, > a
+    color: var(--dc-link)
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+.embed-description
+  margin-top: 8px
+
+.embed-fields
   display: flex
-  align-items: center
+  flex-direction: column
   gap: 8px
-  
-  img
-    width: 20px
-    height: 20px
-    border-radius: 50%
-  
+  margin-top: 8px
+
+.embed-field-row
+  display: flex
+  gap: 8px
+
+  > div
+    flex: 1
+    min-width: 0
+
+.embed-field-name
+  font-weight: 600
+  color: var(--color-text-white)
+  margin-bottom: 2px
+
+.embed-field-value
+  min-width: 0
+
 .embed-image
   border-radius: 4px
   margin-top: 16px
   max-width: @css { min(400px, 100vw - 172px) }
   max-height: 300px
   cursor: pointer
-  
+
 .embed-thumbnail
-  border-radius: 4px
+  grid-column: 2
+  grid-row: 1 / 100
   margin-top: 8px
-  max-width: 80px
-  max-height: 80px
-  cursor: pointer
-  
-.ping
-  background-color: var(--color-discord-ping)
-  border-radius: 3px
-  padding: 2px
-  color: var(--color-discord-ping-text) !important
-  cursor: pointer
-  transition: background-color .05s, color .05s
-  user-select: none
-  text-decoration: none
-  
-  &:hover
-    background-color: var(--color-discord-ping-hover)
-    color: var(--color-text-white) !important
 
-.role
-  color: #ff993c !important
-  background-color: #4e3b2a
-  
-  &:hover
-    color: #ff993c !important
-    background-color: #63452C
+  img
+    width: 80px
+    height: 80px
+    border-radius: 4px
+    object-fit: cover
+    cursor: pointer
 
-.emoji
-  width: 18px
-  height: 18px
-  margin-bottom: -3px
-  
-.timestamp
-  padding 0 2px
-  border-radius: 3px
-  background-color: #4F515A
-  
-.listbar
-  background-color: #4E5058
-  height: 18px
-  width: 4px
-  border-radius: 4px
-  display: inline-block
-  margin: 0 12px -4px 0
-  
-.modal-container
-  border-radius: 5px
-  background-color: var(--color-grey-lighter)
-  max-width: 440px
-  user-select: none
-  overflow: hidden
-  box-shadow: var(--box-shadow)
-  margin-bottom: 24px
-  
-.modal-top
-  padding: 16px 16px 32px 16px
+.embed-footer
+  margin-top: 8px
+  font-size: 12px
+  font-weight: 500
   display: flex
-  position: relative
-  gap: 8px
   align-items: center
-  
-  > img
-    width: 24px
-    height: 24px
+  gap: 8px
+
+  img
+    width: 20px
+    height: 20px
     border-radius: 50%
-  
-  > div
-    font-size: 24px
-    color: var(--color-discord-text-light)
-    margin-right: 28px
+
+.embed-footer-separator
+  margin: 0 4px
+
+// ---------- buttons ----------
+
+.embed-buttons
+  display: flex
+  margin-top: 8px
+  gap: 8px
+  flex-wrap: wrap
+
+.embed-button
+  background-color: var(--dc-secondary)
+  border: 1px solid var(--dc-border-subtle)
+  border-radius: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 3px 11px
+  gap: 4px
+  min-width: 60px
+  min-height: 32px
+  height: 32px
+  box-sizing: border-box
+  transition: background-color .17s, color .17s
+  user-select: none
+  cursor: pointer
+  font-size: 14px
+  font-weight: 500
+  line-height: 18px
+  color: var(--color-text-white)
+  text-decoration: none
+  white-space: nowrap
+
+  &:hover
+    background-color: var(--dc-secondary-hover)
+
+  > img
+    width: 19px
+    height: 19px
 
   > svg
-    position: absolute
-    width: 28px
-    height: 28px
-    top: 16px
-    right: 16px
-    fill: var(--color-secondary)
-    cursor: pointer
-    transition: fill .2s ease-in-out
-    
-    &:hover
-      fill: var(--color-discord-text-light)
-      
-.modal-bottom
-  padding: 16px
-  display: flex
-  justify-content: flex-end
-  background-color: var(--color-grey-light)
-  
-  > div
-    width: 96px
-    height: 38px
-    display: flex
-    justify-content: center
-    align-items: center
-    font-size: 14px
-    cursor: pointer
-    
-.modal-submit
-  transition: background-color .17s
-  border-radius: 3px
-  background-color: var(--color-discord-button-blue)
-  
+    width: 16px
+    height: 16px
+    fill: var(--color-text-white)
+    margin-left: 4px
+
+  &.disabled
+    opacity: .5
+    cursor: not-allowed
+
+.embed-button-blue
+  background-color: var(--dc-blurple)
+  border-color: var(--dc-border-light)
+
   &:hover
-    background-color: var(--color-discord-button-blue-hover)
-    
-  &:active
-    background-color: var(--color-discord-button-blue-active)
-    
-.modal-close:hover
-  text-decoration: underline
-  
-.modal
-  padding: 0 16px
-  
-.modal-row
-  margin-bottom: 16px
-  
-.modal-row-title
-  font-size: 12px
-  text-transform: uppercase
-  font-weight: 700
-  color: var(--color-discord-text)
-  margin-bottom: 8px
-  
-  > span
-    color: var(--color-discord-button-red)
-    filter: brightness(1.25)
+    background-color: var(--dc-blurple-hover)
 
-.modal-row-input-container
-  position: relative
-  
-  > div
-    position: absolute
-    bottom: 12px
-    right: 14px
-    pointer-events: none
-    font-family: var(--font-code)
-    font-size: 12px
-    color: var(--color-secondary)
+.embed-button-green
+  background-color: var(--dc-green)
+  border-color: var(--dc-border-light)
 
-.modal-row-input
-  background-color: var(--color-grey)
-  border-radius: 3px
-  padding: 10px
-  font-size: 15px
-  width: 100%
-  border: none
-  outline: none
-  box-sizing: border-box
-  
-  &::placeholder
-    color: var(--color-secondary)
-    letter-spacing: -0.2px
-    
-  &.long
-    resize: none
-    padding-right: 32px
-    font-family: var(--font)
-
-    &::-webkit-scrollbar
-      border: none
-      background: none
-      width: 14px
-      height: 14px
-      
-    &::-webkit-scrollbar-thumb
-      background-color: var(--color-grey-dark)
-    
-    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track
-      border-radius: 7px
-      background-clip: padding-box
-      border: 3px solid transparent
-      
-    &::-webkit-scrollbar-track
-      background-color: var(--color-grey-light)
-      
-.codeblock
-  font-family: var(--font-code)
-  background-color: var(--color-grey-dark)
-  padding: 10px
-  border-radius: 5px
-  margin-top: 6px
-
-.embed .codeblock,
-.sections .codeblock
-  background-color: var(--color-grey)
-
-.embed a
-  text-decoration: none
-  
   &:hover
-    text-decoration: underline
-    
-.text-content
-  margin-top: 5px
-  
-  .emoji
-    width: 22px
-    height: 22px
+    background-color: var(--dc-green-hover)
 
-.heading2
-  font-size: 20px
-  font-weight: 700
-  margin: 16px 0 8px
-  display: inline-block
-  color: var(--color-text-white)
+.embed-button-red
+  background-color: var(--dc-red)
+  border-color: var(--dc-border-light)
 
-.small
-  font-size: 13px
-  opacity: .5
+  &:hover
+    background-color: var(--dc-red-hover)
+
+// ---------- selects ----------
 
 .embed-selects
+  display: flex
   flex-direction: column
+  width: 400px
+  max-width: 100%
 
 .embed-select-container
   margin-top: 8px
   position: relative
   width: 100%
-
-.modal-row-description
-  font-size: 13px
-  color: var(--color-secondary)
-  margin: -4px 0 8px
-
-.modal-row .embed-select-container
-  margin-top: 0
+  max-width: 400px
 
 .embed-select
-  background-color: var(--color-grey-dark)
-  padding: 8px
-  border-radius: 3px
-  display: flex
+  background-color: var(--dc-input-bg)
+  border: 1px solid var(--dc-border-strong)
+  padding: 8px 8px 8px 12px
+  border-radius: 8px
+  display: grid
+  grid-template-columns: minmax(0, 1fr) 18px
+  gap: 8px
   cursor: pointer
   align-items: center
-  gap: 20px
-  width: @css{ min(calc(100% - 20px), 382px) }
-  justify-content: space-between
-  height: 18px
-  border: 1px solid var(--color-grey-dark)
-  transition: border .17s
-  box-shadow: var(--box-shadow)
+  height: 40px
+  box-sizing: border-box
+  transition: border-color .1s
   user-select: none
-  
-  &:hover
-    border: 1px solid black
-  
-  > div:first-child
-    height: 16px
-    margin-bottom: 2px
-    
-    &.placeholder
-      opacity: 0.6
-    
-  svg
-    fill: var(--color-discord-text)
-    
+  font-size: 16px
+  font-weight: 500
+
   &.active
-    border-radius: 3px 3px 0 0
-    
-    svg
-      transform: rotate(180deg)
-    
+    border-color: var(--dc-blurple)
+
+  > div:first-child
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    &.placeholder
+      color: var(--dc-text-soft)
+
+  svg
+    width: 18px
+    height: 18px
+    fill: var(--dc-text)
+
 .embed-select-options
   position: absolute
-  bottom: 0
+  top: calc(100% + 8px)
   left: 0
-  transform: translateY(100%)
-  background-color: var(--color-grey)
-  border: 1px solid var(--color-grey-dark)
-  box-shadow: var(--box-shadow)
-  border-radius: 0 0 3px 3px
-  overflow: hidden
+  right: 0
+  background-color: var(--dc-popout)
+  border: 1px solid var(--dc-border)
+  border-radius: 8px
+  overflow: hidden auto
+  max-height: 190px
   cursor: pointer
   user-select: none
-  width: @css{ min(calc(100% - 4px), 398px) }
-  
+  z-index: 2
+
   > div
-    font-size: 14px
     padding: 8px
     position: relative
-    
+    display: flex
+    align-items: center
+
     &:hover
-      background-color: var(--color-grey-lighter)
-    
-    svg
+      background-color: var(--dc-secondary)
+
+    > img
+      width: 22px
+      height: 22px
+      margin-right: 8px
+
+    > svg
       display: none
       fill: var(--color-text-white)
       position: absolute
       right: 8px
       top: 50%
       transform: translateY(-50%)
-      background-color: var(--color-blue)
+      background-color: var(--dc-blurple)
       border-radius: 50%
+      width: 18px
+      height: 18px
 
     &.active
-      background-color: #404249
-      
-      svg
+      background-color: var(--dc-secondary)
+
+      > svg
         display: initial
 
-    > div
-      line-height: 18px
-      text-overflow: ellipsis
-      text-wrap: nowrap
-      overflow: hidden
+    &.entity
+      height: 44px
+      padding: 12px
+      box-sizing: border-box
+      gap: 8px
+      white-space: nowrap
 
-    :first-child
-      font-weight: bold
-      margin-bottom: 4px
-      
-    :last-child
-      color: var(--color-discord-text)
-      
+      > img
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        margin-right: 0
+
+.entity-role, .entity-channel
+  display: flex
+  flex-shrink: 0
+
+  svg
+    width: 24px
+    height: 24px
+
+.entity-channel
+  color: var(--dc-text-soft)
+
+.entity-label
+  font-size: 16px
+  line-height: 20px
+  color: var(--dc-text-soft)
+  overflow: hidden
+  text-overflow: ellipsis
+
+.entity-sub
+  font-size: 16px
+  line-height: 20px
+  color: var(--dc-text-muted)
+  margin-left: -4px
+  overflow: hidden
+  text-overflow: ellipsis
+
+.entity-members
+  display: flex
+  align-items: center
+  gap: 4px
+  color: var(--dc-text-muted)
+  font-size: 16px
+  line-height: 20px
+  margin-left: -2px
+
+  svg
+    width: 16px
+    height: 16px
+    fill: currentColor
+
+.embed-select-option-label
+  min-width: 0
+  flex: 1
+  padding-right: 26px
+
+  > div:first-child
+    font-size: 14px
+    font-weight: 600
+    color: var(--color-text-white)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+  > div:nth-child(2)
+    font-size: 14px
+    line-height: 18px
+    color: var(--dc-text-soft)
+    margin-top: 2px
+
+// ---------- components v2 ----------
+
+.cv2
+  display: flex
+  flex-direction: column
+  gap: 8px
+  max-width: @css { min(600px, 100%) }
+  margin-top: 2px
+  font-size: 16px
+  line-height: 22px
+  color: var(--dc-text)
+  align-self: stretch
+  width: 100%
+
+  .embed-select-container
+    margin-top: 0
+
+.cv2-container
+  display: flex
+  flex-direction: column
+  gap: 8px
+  padding: 16px
+  border-radius: 8px
+  border: 1px solid var(--dc-border)
+  background-color: var(--dc-surface)
+  position: relative
+  font-size: 14px
+  line-height: 19px
+
+  &.cv2-accent::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 4px
+    border-radius: 8px 0 0 8px
+    background-color: var(--cv2-accent, var(--color-blue))
+
+  .small
+    font-size: 12px
+    line-height: 16.5px
+
+.cv2-text
+  white-space: pre-wrap
+  overflow-wrap: anywhere
+
+.cv2-section
+  display: flex
+  justify-content: space-between
+  gap: 12px
+
+.cv2-section-text
+  display: flex
+  flex-direction: column
+  gap: 4px
+  min-width: 0
+
+  &.centered
+    justify-content: center
+
+.cv2-section-thumbnail
+  width: 85px
+  height: 85px
+  border-radius: 8px
+  object-fit: cover
+  flex-shrink: 0
+  cursor: pointer
+
+.cv2-separator
+  border-top: 1px solid var(--dc-border-strong)
+
+  &.large
+    margin: 8px 0
+
+  &.invisible
+    border-top-color: transparent
+
+.cv2-buttons
+  display: flex
+  gap: 8px
+  flex-wrap: wrap
+
+.cv2-gallery
+  border-radius: 8px
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  gap: 4px
+
+.cv2-gallery-row
+  display: grid
+  gap: 4px
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 3px
+    cursor: pointer
+    display: block
+
+.cv2-gallery-single
+  max-height: 350px
+
+  img
+    max-height: 350px
+    height: auto
+    width: auto
+    max-width: 100%
+
+.cv2-spoiler
+  position: relative
+  background-color: var(--dc-spoiler)
+  border-radius: 3px
+  cursor: pointer
+
+  img
+    visibility: hidden
+
+  &.revealed
+    background-color: transparent
+
+    img
+      visibility: visible
+
+    .cv2-spoiler-pill
+      display: none
+
+.cv2-spoiler-pill
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 8px 12px
+  border-radius: 20px
+  background-color: rgba(0, 0, 0, 0.6)
+  color: #E4E4E6
+  font-size: 15px
+  font-weight: 600
+  line-height: 15px
+  user-select: none
+
+.cv2-file
+  display: flex
+  align-items: center
+  padding: 16px
+  border-radius: 8px
+  border: 1px solid var(--dc-border)
+  background-color: var(--dc-surface)
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14)
+  box-sizing: border-box
+  width: 432px
+  max-width: 100%
+
+  > svg
+    width: 30px
+    height: 40px
+    margin-right: 8px
+    flex-shrink: 0
+
+.cv2-file-name
+  color: var(--dc-link)
+  font-size: 16px
+  line-height: 20px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  cursor: pointer
+
+  &:hover
+    text-decoration: underline
+
+.cv2-file-size
+  color: var(--dc-text-muted)
+  font-size: 12px
+  line-height: 16px
+
+// ---------- modal ----------
+
+.modal-container
+  border-radius: 12px
+  border: 1px solid var(--dc-border)
+  background-color: var(--dc-surface)
+  max-width: 480px
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24)
+  margin-bottom: 24px
+  padding: 8px 0 16px
+  font-size: 16px
+  color: var(--dc-text)
+
+.modal-top
+  padding: 16px 24px 8px
+  display: flex
+  position: relative
+  gap: 8px
+  align-items: center
+
+  > img
+    width: 24px
+    height: 24px
+    border-radius: 50%
+
+  > div
+    font-size: 24px
+    font-weight: 600
+    color: var(--color-text-white)
+    margin-right: 44px
+
+.modal-close
+  position: absolute
+  width: 40px
+  height: 40px
+  top: 12px
+  right: 16px
+  border-radius: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: background-color .05s ease-in
+
+  svg
+    width: 20px
+    height: 20px
+    fill: var(--dc-text-soft)
+
+  &:hover
+    background-color: var(--dc-secondary)
+
+.modal
+  padding: 0 24px
+  margin-top: 16px
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+.modal-row-title
+  font-size: 16px
+  font-weight: 500
+  letter-spacing: .32px
+  color: var(--color-text-white)
+  margin-bottom: 8px
+
+  > span
+    color: var(--dc-required)
+    padding-left: 4px
+
+.modal-row-description
+  font-size: 14px
+  line-height: 20px
+  margin-bottom: 8px
+
+.modal-row .embed-select-container
+  max-width: none
+
+.modal-text
+  font-size: 16px
+  line-height: 22px
+  white-space: pre-wrap
+  overflow-wrap: anywhere
+
+.modal-file-upload
+  border: 1px solid var(--dc-border-strong)
+  background-color: var(--dc-input-bg)
+  border-radius: 8px
+  padding: 24px 12px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 8px
+  cursor: pointer
+  user-select: none
+
+  svg
+    width: 20px
+    height: 20px
+    fill: var(--color-text-white)
+
+  > div
+    font-size: 16px
+    line-height: 20px
+    color: var(--dc-text-muted)
+
+    span
+      color: var(--dc-link)
+
+      &:hover
+        text-decoration: underline
+
+  > div:last-child
+    font-size: 12px
+    line-height: 16px
+
+.modal-option-group
+  padding: 8px 0 4px
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+.modal-option
+  display: flex
+  align-items: flex-start
+  gap: 12px
+  cursor: pointer
+  user-select: none
+
+  > div:last-child
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+    > div:first-child
+      font-size: 16px
+      line-height: 20px
+      color: var(--color-text-white)
+
+    > div:nth-child(2)
+      font-size: 14px
+      line-height: 18px
+      color: var(--dc-text-soft)
+
+.modal-checkbox
+  width: 20px
+  height: 20px
+  border-radius: 4px
+  border: 1px solid var(--dc-border-checkbox)
+  background-color: var(--dc-input-bg)
+  flex-shrink: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  box-sizing: border-box
+  transition: background-color .17s, border-color .17s
+
+  svg
+    width: 18px
+    height: 18px
+    fill: var(--color-text-white)
+    opacity: 0
+    transition: opacity .17s
+
+  &.checked
+    background-color: var(--dc-blurple)
+    border-color: var(--dc-border)
+
+    svg
+      opacity: 1
+
+.modal-radio
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: 1px solid var(--dc-border-checkbox)
+  background-color: var(--dc-input-bg)
+  flex-shrink: 0
+  position: relative
+  box-sizing: border-box
+  transition: background-color .17s, border-color .17s
+
+  &.checked
+    background-color: var(--dc-blurple)
+    border-color: var(--dc-blurple)
+
+    &::after
+      content: ""
+      position: absolute
+      inset: 0
+      margin: auto
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: var(--color-text-white)
+
+.modal-row-input-container
+  position: relative
+
+.modal-row-input
+  background-color: var(--dc-input-bg)
+  border: 1px solid var(--dc-border-strong)
+  border-radius: 8px
+  padding: 0 12px
+  height: 40px
+  font-size: 16px
+  width: 100%
+  color: var(--dc-text)
+  outline: none
+  box-sizing: border-box
+  transition: border-color .1s
+
+  &::placeholder
+    color: var(--dc-text-faint)
+
+  &:focus
+    border-color: var(--dc-blurple)
+
+  &.long
+    resize: none
+    height: 90px
+    padding: 12px 10px
+    font-family: var(--font)
+    line-height: 20px
+
+    &::-webkit-scrollbar
+      border: none
+      background: none
+      width: 14px
+      height: 14px
+
+    &::-webkit-scrollbar-thumb
+      background-color: var(--color-grey-dark)
+
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track
+      border-radius: 7px
+      background-clip: padding-box
+      border: 3px solid transparent
+
+    &::-webkit-scrollbar-track
+      background-color: var(--color-grey-light)
+
+.modal-bottom
+  padding: 16px 24px 0
+  display: flex
+  gap: 8px
+
+  > div
+    flex: 1
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 16px
+    font-weight: 500
+    border-radius: 8px
+    box-sizing: border-box
+    cursor: pointer
+    user-select: none
+    transition: background-color .05s ease-in
+
+.modal-cancel
+  background-color: var(--dc-secondary)
+  border: 1px solid var(--dc-border-subtle)
+
+  &:hover
+    background-color: var(--dc-secondary-hover)
+
+.modal-submit
+  background-color: var(--dc-blurple)
+  border: 1px solid var(--dc-border-light)
+
+  &:hover
+    background-color: var(--dc-blurple-hover)
+
+// ---------- misc ----------
+
+.hidden
+  display: none
+
 .userless
   margin-top: -44px
 
@@ -618,62 +1105,3 @@
 
   .name-row
     display: none
-
-.cv2
-  padding: 16px
-  background-color: var(--color-grey-lighter)
-  margin-top: 4px
-  border-radius: 8px
-  border: 1px solid var(--color-grey)
-  border-left: 4px solid var(--color-blue)
-  font-size: 14px
-  color: var(--color-discord-text)
-  max-width: 484px
-  box-shadow: var(--box-shadow)
-  display: flex
-  flex-direction: column
-  gap: 8px
-
-  *
-    white-space: pre-wrap
-    overflow-wrap: anywhere
-    line-height: 1.25em
-
-.cv2-section
-  display: flex
-  gap: 16px
-  justify-content: space-between
-  align-items: center
-
-  > .embed-button
-    flex-shrink: 0
-
-.cv2-separator
-  border-top: 1px solid var(--color-grey)
-  margin: 4px 0
-
-  &.invisible
-    border-top: none
-
-.cv2-thumbnail
-  border-radius: 4px
-  max-width: 80px
-  max-height: 80px
-  cursor: pointer
-  flex-shrink: 0
-
-.cv2-buttons
-  display: flex
-  gap: 8px
-  flex-wrap: wrap
-
-.cv2-gallery
-  display: flex
-  gap: 4px
-  flex-wrap: wrap
-
-  img
-    border-radius: 4px
-    max-width: @css { min(400px, 100vw - 172px) }
-    max-height: 300px
-    cursor: pointer

@@ -163,7 +163,8 @@ const routes = [
   pageRoute("cem"),
   pageRoute("cemanimation"),
   pageRoute("features"),
-  pageRoute("feature", "/features/:name")
+  pageRoute("feature", "/features/:name"),
+  pageRoute("embeds")
 ]
 
 function compareURLs(a, b) {
