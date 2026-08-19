@@ -70,7 +70,7 @@
         {
           "name": "Creating Custom Commands",
           "content": [
-            "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/botconfig customcommands add</code> command, and then click the button to start.",
+            "To start setting up your own custom commands, first run the <code class=\"command prefix\">e!addcustomcommand</code><code class=\"command slash\">/botconfig customcommands add</code> command, and then click the button to start. The slash command skips this step and opens the form directly.",
             {
               "type": "components",
               "data": {

@@ -59,7 +59,7 @@
         {
           "name": "Creating Button Roles",
           "content": [
-            "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/role buttonroles</code> command, and then click the button to start.",
+            "To start setting up your own button roles, first run the <code class=\"command prefix\">e!buttonroles</code><code class=\"command slash\">/role buttonroles</code> command, and then click the button to start. The slash command skips this step and opens the form directly.",
             {
               "type": "components",
               "data": {

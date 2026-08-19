@@ -266,7 +266,7 @@
         {
           "name": "Adding Ticket Types",
           "content": [
-            "To add a new ticket type, first run the <code class=\"command prefix\">e!addtickettype</code><code class=\"command slash\">/serverconfig tickets addtype</code> command, and then click the button to start.",
+            "To add a new ticket type, first run the <code class=\"command prefix\">e!addtickettype</code><code class=\"command slash\">/serverconfig tickets addtype</code> command, and then click the button to start. The slash command skips this step and opens the form directly.",
             {
               "type": "components",
               "data": {
