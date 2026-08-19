@@ -149,24 +149,37 @@
           "content": [
             "To view your active reminders, use the <command:viewreminders|utility reminders view> command.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "author": ["Reminder 1/2", "/assets/images/icons/bell_blue.webp"],
-                "description": "Reminder for you in <#general>",
-                "fields": [
-                  ["Message", "Check the oven"],
-                  ["Length", "`3 days`"],
-                  ["End date", "<t:21 August 2026 18:30>"],
-                  ["Type", "One off reminder"]
-                ],
-                "footer": ["Reminder ID: 12"],
-                "buttons": [
+                "topLevel": true,
+                "components": [
                   {
-                    "emoji": "bin",
-                    "style": "red"
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      "## Reminder 1/2\nReminder for you in <#general>",
+                      "### Message\nCheck the oven",
+                      "### Length\n`3 days`",
+                      "### End date\n<t:21 August 2026 18:30>",
+                      "### Type\nOne off reminder",
+                      "-# Reminder ID: 12"
+                    ]
                   },
                   {
-                    "emoji": "arrow_right"
+                    "type": "row",
+                    "buttons": [
+                      {
+                        "emoji": "arrow_left",
+                        "disabled": true
+                      },
+                      {
+                        "emoji": "bin",
+                        "style": "red"
+                      },
+                      {
+                        "emoji": "arrow_right"
+                      }
+                    ]
                   }
                 ]
               }
@@ -201,7 +214,7 @@
                 "buttons": [
                   {
                     "label": "Confirm",
-                    "emoji": "bin",
+                    "emoji": "tick",
                     "style": "red"
                   },
                   {

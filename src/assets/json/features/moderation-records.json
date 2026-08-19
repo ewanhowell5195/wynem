@@ -365,21 +365,33 @@
           "content": [
             "To view the moderation records for a member, use the <command:records [member]|moderation records member:[member]> command. You need the `Moderate Members` permission.",
             {
-              "type": "embed",
+              "type": "components",
               "data": {
-                "author": ["Member records", "/assets/images/icons/logs.webp"],
-                "description": "**Records for** <@TheAnnoying>\n\n**Total records:** 3\n**Total notes:** 1\n**Total warnings:** 1\n**Total timeouts:** 1",
-                "thumbnail": "/assets/images/avatars/theannoying.webp",
-                "fields": [
-                  ["<:warn:> Warning", "**Given by <@Ewan> on <t:18 May 2025>\nReason:**\n> Spamming in chat\nRecord ID: `1`"],
-                  ["<:mute:> Timeout", "**Given by <@Ewan> on <t:12 June 2025> for `3 days`\nReason:**\n> Continued spamming\nRecord ID: `2`"],
-                  ["<:pencil:> Note", "**Given by <@Ewan> on <t:3 July 2025>\nNote:**\n> Keep an eye on this member\nRecord ID: `3`"]
-                ],
-                "footer": ["User ID: 987654321098765432"],
-                "buttons": [{
-                  "emoji": "bin",
-                  "style": "red"
-                }]
+                "topLevel": true,
+                "components": [
+                  {
+                    "type": "container",
+                    "accent": true,
+                    "components": [
+                      {
+                        "type": "section",
+                        "text": "## Member records\n**Records for** <@TheAnnoying>\n\n**Total records:** 3\n**Total notes:** 1\n**Total warnings:** 1\n**Total timeouts:** 1",
+                        "thumbnail": "/assets/images/avatars/theannoying.webp"
+                      },
+                      "### <:warn:> Warning\n**Given by <@Ewan> on <t:18 May 2025>\nReason:**\n> Spamming in chat\nRecord ID: `1`",
+                      "### <:mute:> Timeout\n**Given by <@Ewan> on <t:12 June 2025> for `3 days`\nReason:**\n> Continued spamming\nRecord ID: `2`",
+                      "### <:pencil:> Note\n**Given by <@Ewan> on <t:3 July 2025>\nNote:**\n> Keep an eye on this member\nRecord ID: `3`",
+                      "-# User ID: 987654321098765432"
+                    ]
+                  },
+                  {
+                    "type": "row",
+                    "buttons": [{
+                      "emoji": "bin",
+                      "style": "red"
+                    }]
+                  }
+                ]
               }
             },
             "Records are shown `5` to a page. If a member has more than `5` records, arrow buttons appear so you can move between the pages.",
@@ -418,7 +430,7 @@
                 "buttons": [
                   {
                     "label": "Confirm",
-                    "emoji": "checkbox",
+                    "emoji": "tick",
                     "style": "red"
                   },
                   {

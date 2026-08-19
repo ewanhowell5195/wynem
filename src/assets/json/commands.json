@@ -12042,7 +12042,8 @@
                 },
                 {
                   "name": "Interpolation",
-                  "description": "The interpolation method for the resize"
+                  "description": "The interpolation method for the resize",
+                  "required": true
                 }
               ],
               "type": "message",
