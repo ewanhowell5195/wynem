@@ -68,7 +68,7 @@
           "name": "Adding FAQs",
           "content": [
             "To add or update an FAQ, use the <command:addfaq|serverconfig faq add> command. This command requires the `Manage Server` permission.",
-            "Press the button to open the FAQ builder.",
+            "Press the button to open the FAQ builder. The slash command skips this step and opens the form directly.",
             {
               "type": "components",
               "data": {

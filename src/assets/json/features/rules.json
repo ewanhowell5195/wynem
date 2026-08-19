@@ -64,7 +64,7 @@
         {
           "name": "Adding rules",
           "content": [
-            "To add a new rule to the server, first run the <command:addrule|serverconfig rule add> command, and then click the button to start.",
+            "To add a new rule to the server, first run the <command:addrule|serverconfig rule add> command, and then click the button to start. The slash command skips this step and opens the form directly.",
             {
               "type": "components",
               "data": {
