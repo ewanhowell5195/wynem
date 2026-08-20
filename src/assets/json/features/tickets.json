@@ -291,7 +291,7 @@
                   ["ID", "A short ID that is added before the thread names", true],
                   ["Name", "The name of the ticket type", true],
                   ["Description", "The description of the ticket type", true, 52],
-                  ["Sort Priority Number", "Higher priority appears first in the list"]
+                  ["Sort priority number", "Higher priority appears first in the list"]
                 ]
               }
             },
@@ -353,8 +353,8 @@
                       "data": {
                         "title": "Ticket Type Builder",
                         "rows": [
-                          ["Entry Label (this text)", "The label of the text entry", true],
-                          ["Entry Placeholder", "The placeholder text (this text)", true],
+                          ["Entry label (this text)", "The label of the text entry", true],
+                          ["Entry placeholder", "The placeholder text (this text)", true],
                           {
                             "label": "Multi-line",
                             "description": "Should the text entry be multi-line?",
@@ -467,13 +467,13 @@
             {
               "type": "embed",
               "data": {
-                "author": ["Ticket Type", "/assets/images/icons/faq.webp"],
+                "author": ["Ticket type", "/assets/images/icons/faq.webp"],
                 "fields": [
-                  ["Ticket Type ID", "Ban Appeal"],
-                  ["Ticket Type Name", "Ban Appeal"],
-                  ["Ticket Type Description", "You would like to submit a ban appeal"],
-                  ["Ticket Type Sort Priority", "0"],
-                  ["Ticket Type Mode", "Create"],
+                  ["Ticket type ID", "Ban Appeal"],
+                  ["Ticket type name", "Ban Appeal"],
+                  ["Ticket type description", "You would like to submit a ban appeal"],
+                  ["Ticket type sort priority", "0"],
+                  ["Ticket type mode", "Create"],
                   ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
                   ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 32```"],
                   ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 3```"]
@@ -516,7 +516,7 @@
                   ["ID", "Ban Appeal"],
                   ["Name", "Ban Appeal"],
                   ["Description", "You would like to submit a ban appeal", false, 52],
-                  ["Sort Priority Number", "0"]
+                  ["Sort priority number", "0"]
                 ]
               }
             },
@@ -559,8 +559,8 @@
                       "data": {
                         "title": "Ticket Type Builder",
                         "rows": [
-                          ["Entry Label (this text)", "Discord Username"],
-                          ["Entry Placeholder", "Your banned Discord account username"],
+                          ["Entry label (this text)", "Discord Username"],
+                          ["Entry placeholder", "Your banned Discord account username"],
                           {
                             "label": "Multi-line",
                             "description": "Should the text entry be multi-line?",
@@ -667,13 +667,13 @@
               "type": "embed",
               "data": {
                 "userless": true,
-                "author": ["Ticket Type", "/assets/images/icons/faq.webp"],
+                "author": ["Ticket type", "/assets/images/icons/faq.webp"],
                 "fields": [
-                  ["Ticket Type ID", "Ban Appeal"],
-                  ["Ticket Type Name", "Ban Appeal"],
-                  ["Ticket Type Description", "You would like to submit a ban appeal"],
-                  ["Ticket Type Sort Priority", "0"],
-                  ["Ticket Type Mode", "Create"],
+                  ["Ticket type ID", "Ban Appeal"],
+                  ["Ticket type name", "Ban Appeal"],
+                  ["Ticket type description", "You would like to submit a ban appeal"],
+                  ["Ticket type sort priority", "0"],
+                  ["Ticket type mode", "Create"],
                   ["Text Entry 1", "```Label: Discord Username\nPlaceholder: Your banned Discord account username\nRequired: true\nMin Length: 3```"],
                   ["Text Entry 2", "```Label: Why were you banned?\nPlaceholder: What was the reason that you were banned?\nMulti-line: true\nRequired: true\nMin Length: 32```"],
                   ["Text Entry 3", "```Label: Why should you be unbanned?\nPlaceholder: For what reason should you be unbanned?\nMulti-line: true\nRequired: true\nMin Length: 3```"]

@@ -90,9 +90,9 @@
               "data": {
                 "title": "FAQ Builder",
                 "rows": [
-                  ["FAQ Category", "The category for the FAQ", true],
+                  ["FAQ category", "The category for the FAQ", true],
                   ["FAQ ID", "The ID for the FAQ", true],
-                  ["FAQ Text", "The text for the FAQ", true, 4000]
+                  ["FAQ text", "The text for the FAQ", true, 4000]
                 ]
               }
             },
@@ -124,7 +124,7 @@
               "rows": [
                 ["Embed", "Whether the FAQ is sent as an embed, or as a plain message. Defaults to enabled"],
                 ["Image URL", "An image to show alongside the FAQ"],
-                ["FAQ ID Aliases", "Up to 10 alternative IDs for the FAQ, comma separated"]
+                ["FAQ ID aliases", "Up to 10 alternative IDs for the FAQ, comma separated"]
               ]
             },
             {
@@ -138,7 +138,7 @@
                     "checkbox": true
                   },
                   ["Image URL", "An image to show alongside the FAQ"],
-                  ["FAQ ID Aliases", "Alternative FAQ IDs (comma separated)"]
+                  ["FAQ ID aliases", "Alternative FAQ IDs (comma separated)"]
                 ]
               }
             },
@@ -202,7 +202,7 @@
                 "description": "Use the command <command:faq [category] [id]|faq category:[category] id:[id]> to view a specific FAQ entry",
                 "fields": [
                   ["Getting Started", "`download`, `install`"],
-                  ["Resource Packs", "`cem`, `emissive`"]
+                  ["Resource packs", "`cem`, `emissive`"]
                 ]
               }
             },

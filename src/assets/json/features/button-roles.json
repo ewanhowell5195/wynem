@@ -144,9 +144,9 @@
             {
               "type": "tablelist",
               "rows": [
-                ["Default Embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
-                ["Custom Embed", "Create your own custom embed that can look however you want"],
-                ["No Embed", "Send no embed, the message will be just the buttons on their own"]
+                ["Default embed", "Use the default button role embed, which is auto generated from the information provided for each button."],
+                ["Custom embed", "Create your own custom embed that can look however you want"],
+                ["No embed", "Send no embed, the message will be just the buttons on their own"]
               ]
             },
             {
@@ -158,13 +158,13 @@
                     "type": "row",
                     "buttons": [
                       {
-                        "label": "Default Embed"
+                        "label": "Default embed"
                       },
                       {
-                        "label": "Custom Embed"
+                        "label": "Custom embed"
                       },
                       {
-                        "label": "No Embed"
+                        "label": "No embed"
                       }
                     ]
                   }

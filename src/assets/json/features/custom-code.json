@@ -26,7 +26,7 @@
       "type": "tablelist",
       "rows": [
         ["Eval command", "Run JavaScript code directly in Discord for any purpose"],
-        ["Custom Commands", "Write code that executes when users run your custom command"],
+        ["Custom commands", "Write code that executes when users run your custom command"],
         ["Auto-responses", "Write code that executes when messages trigger your auto-response"]
       ]
     },

@@ -290,8 +290,8 @@
               "type": "embed",
               "data": {
                 "colour": "#FEE75C",
-                "author": ["Account Security Alert", "/assets/images/icons/warning_yellow.webp"],
-                "title": "Potential Compromise Detected!",
+                "author": ["Account security alert", "/assets/images/icons/warning_yellow.webp"],
+                "title": "Potential compromise detected!",
                 "description": "You were removed from the server `Ewan's Server` because your account appears to be compromised. Please update your password immediately and review your connected applications for any suspicious activity."
               }
             },

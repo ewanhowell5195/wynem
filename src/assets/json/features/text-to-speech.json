@@ -84,7 +84,7 @@
     {
       "type": "embed",
       "data": {
-        "title": "Available TTS Languages",
+        "title": "Available TTS languages",
         "description": "`af` `ar` `ca` `cs` `da` `de` `el` `en` `en-au` `en-uk` `en-us` `eo` `es` `es-es` `es-us` `fi` `fr` `he` `hi` `hr` `ht` `hu` `hy` `id` `is` `it` `ja` `ko` `la` `lv` `mk` `nl` `no` `pl` `pt` `pt-br` `ro` `ru` `sk` `sq` `sr` `sv` `sw` `ta` `th` `tr` `vi` `zh` `zh-cn` `zh-tw` `zh-yue`",
         "footer": ["Specify a language by using [language] at the start of your message"],
         "buttons": [{
@@ -96,7 +96,7 @@
     {
       "type": "embed",
       "data": {
-        "title": "Available TTS Languages",
+        "title": "Available TTS languages",
         "description": "```Afrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi```"
       }
     },

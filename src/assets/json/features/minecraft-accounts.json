@@ -20,7 +20,7 @@
         "url": "/",
         "fields": [
           ["Member", "<@Ewan>"],
-          ["Minecraft Name", "`EwanHowell`"],
+          ["Minecraft name", "`EwanHowell`"],
           ["Account UUID", "`0c9151e48ba14969b5e0e68b17d0a582`"]
         ],
         "footer": ["Disclaimer: Wynem does not verify account ownership"]
@@ -77,7 +77,7 @@
                 "url": "/",
                 "fields": [
                   ["Member", "<@Ewan>"],
-                  ["Minecraft Name", "`EwanHowell`"],
+                  ["Minecraft name", "`EwanHowell`"],
                   ["Account UUID", "`0c9151e48ba14969b5e0e68b17d0a582`"]
                 ],
                 "footer": ["Disclaimer: Wynem does not verify account ownership"]

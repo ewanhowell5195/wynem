@@ -121,10 +121,10 @@
       "type": "tablelist",
       "rows": [
         ["Author", "A row of small text that appears above the title."],
-        ["Author Image URL", "A small image that appears to the left of the author."],
+        ["Author image URL", "A small image that appears to the left of the author."],
         ["Author URL", "This URL turns the author text in to a clickable link."],
         ["Footer", "The small text at the bottom of the embed. Supports multiple lines."],
-        ["Footer Image URL", "A small image that appears to the left of the footer."]
+        ["Footer image URL", "A small image that appears to the left of the footer."]
       ]
     },
     {
@@ -134,7 +134,7 @@
         "rows": [
           ["Author", "The small text at the top"],
           {
-            "label": "Author Image URL",
+            "label": "Author image URL",
             "description": "An image to display next to the author (requires author)",
             "placeholder": "The author's image"
           },
@@ -150,7 +150,7 @@
             "maxLength": 2048
           },
           {
-            "label": "Footer Image URL",
+            "label": "Footer image URL",
             "description": "An image to display next to the footer (requires footer)",
             "placeholder": "The footer's image"
           }
@@ -193,8 +193,8 @@
     {
       "type": "tablelist",
       "rows": [
-        ["Field Name", "The name for the field."],
-        ["Field Value", "The main text of the field. Appears beneath the title."],
+        ["Field name", "The name for the field."],
+        ["Field value", "The main text of the field. Appears beneath the title."],
         ["Inline", "Fields can be set to be inline, which is where they are allowed to be on the same row as another field. Up to three fields can appear on a single row.\nThis input is a simple checkbox."]
       ]
     },
@@ -203,8 +203,8 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["Field Name", "The name of the field", true],
-          ["Field Value", "The value of the field", true, 1024],
+          ["Field name", "The name of the field", true],
+          ["Field value", "The value of the field", true, 1024],
           {
             "label": "Inline",
             "description": "Inline fields will be on the same row",
@@ -217,7 +217,7 @@
     {
       "type": "tablelist",
       "rows": [
-        ["Button Label", "The text that is displayed on the button."],
+        ["Button label", "The text that is displayed on the button."],
         ["Button URL", "The URL to go to when you click on the button."]
       ]
     },
@@ -226,7 +226,7 @@
       "data": {
         "title": "Embed Builder",
         "rows": [
-          ["Button Label", "The text on the button", true],
+          ["Button label", "The text on the button", true],
           ["Button URL", "The URL to go to when clicking the button", true]
         ]
       }

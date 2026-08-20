@@ -63,10 +63,10 @@
       "rows": [
         ["Message", "Wynem will reply with a regular Discord message"],
         ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
-        ["Custom Embed", "Reply with your own custom embed that can look however you want"],
-        ["URL Buttons", "Will send a message containing some clickable URL buttons"],
-        ["Emoji Reactions", "Will react to the message with some emoji reactions"],
-        ["Custom Code", "Write your own code to decide what the autoresponse does!"]
+        ["Custom embed", "Reply with your own custom embed that can look however you want"],
+        ["URL buttons", "Will send a message containing some clickable URL buttons"],
+        ["Emoji reactions", "Will react to the message with some emoji reactions"],
+        ["Custom code", "Write your own code to decide what the autoresponse does!"]
       ]
     },
     {
@@ -139,7 +139,7 @@
                   {
                     "type": "row",
                     "buttons": [{
-                      "label": "Add ID and Trigger",
+                      "label": "Add ID and trigger",
                       "emoji": "pencil"
                     }]
                   }
@@ -153,7 +153,7 @@
                 "title": "Auto-response Builder",
                 "rows": [
                   ["Auto-response ID", "The ID for you to identify the auto-response by", true],
-                  ["Auto-response Trigger", "The text that will trigger the auto-response", true]
+                  ["Auto-response trigger", "The text that will trigger the auto-response", true]
                 ]
               }
             },
@@ -186,13 +186,13 @@
                         "label": "Image/Gif/Video"
                       },
                       {
-                        "label": "Custom Embed"
+                        "label": "Custom embed"
                       },
                       {
-                        "label": "URL Buttons"
+                        "label": "URL buttons"
                       },
                       {
-                        "label": "Emoji Reactions"
+                        "label": "Emoji reactions"
                       }
                     ]
                   },
@@ -200,7 +200,7 @@
                     "type": "row",
                     "buttons": [
                       {
-                        "label": "Custom Code"
+                        "label": "Custom code"
                       }
                     ]
                   }
@@ -273,13 +273,13 @@
                   ]
                 },
                 {
-                  "name": "Custom Embed",
+                  "name": "Custom embed",
                   "content": [
                     "The custom embeds option will start the custom embed builder. For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature."
                   ]
                 },
                 {
-                  "name": "URL Buttons",
+                  "name": "URL buttons",
                   "content": [
                     "You will be presented with a button to add the auto-response's URL buttons. Press it to continue.",
                     {
@@ -301,7 +301,7 @@
                     {
                       "type": "tablelist",
                       "rows": [
-                        ["Button Label", "The text that is displayed on the button"],
+                        ["Button label", "The text that is displayed on the button"],
                         ["Button URL", "The URL to go to when you click on the button"]
                       ]
                     },
@@ -310,7 +310,7 @@
                       "data": {
                         "title": "URL Button Builder",
                         "rows": [
-                          ["Button Label", "The text on the button", true],
+                          ["Button label", "The text on the button", true],
                           ["Button URL", "The URL to go to when clicking the button", true]
                         ]
                       }
@@ -344,7 +344,7 @@
                   ]
                 },
                 {
-                  "name": "Emoji Reactions",
+                  "name": "Emoji reactions",
                   "content": [
                     "You will be presented with a button to add the auto-response's reaction emojis. Press it to continue.",
                     {
@@ -379,7 +379,7 @@
                   ]
                 },
                 {
-                  "name": "Custom Code",
+                  "name": "Custom code",
                   "content": [
                     "You will be presented with a button to add the auto-response's custom code. Press it to continue.",
                     {
@@ -403,7 +403,7 @@
                       "data": {
                         "title": "Auto-response Builder",
                         "rows": [
-                          ["Custom Code", "console.log(\"JavaScript\")", true, 4000]
+                          ["Custom code", "console.log(\"JavaScript\")", true, 4000]
                         ]
                       }
                     },
@@ -482,9 +482,9 @@
                 "title": "Auto-response `packdownload`",
                 "fields": [
                   ["Trigger", "where pack download"],
-                  ["Trigger Type", "Words Unordered", true],
-                  ["Response Type", "Buttons", true],
-                  ["URL Button Preview", "Shown below"]
+                  ["Trigger type", "Words Unordered", true],
+                  ["Response type", "Buttons", true],
+                  ["URL button preview", "Shown below"]
                 ],
                 "buttons": [{
                   "label": "All resource pack downloads can be found here",
@@ -548,8 +548,8 @@
                 "description": "This action will remove the `packdownload` auto-response\n\nAre you sure you want to continue?",
                 "fields": [
                   ["Trigger", "where pack download"],
-                  ["Trigger Type", "Words Unordered", true],
-                  ["Response Type", "Buttons", true],
+                  ["Trigger type", "Words Unordered", true],
+                  ["Response type", "Buttons", true],
                   ["Buttons", "`All resource p…` - `https://www.ew…`"]
                 ],
                 "buttons": [

@@ -3,7 +3,7 @@
     "prefix": [
       {
         "type": "category",
-        "text": "Custom Commands",
+        "text": "Custom commands",
         "name": "customcommands"
       },
       "addcustomcommand",
@@ -54,10 +54,10 @@
       "rows": [
         ["Message", "Wynem will reply with a regular Discord message"],
         ["Image/Gif/Video", "Will send an image, gif, or a video in chat"],
-        ["Custom Embed", "Reply with your own custom embed that can look however you want"],
-        ["URL Buttons", "Will send a message containing some clickable URL buttons"],
-        ["Image Command", "Create a custom image command where users can paste images into a background image"],
-        ["Custom Code", "Write your own code to decide what the command does!"]
+        ["Custom embed", "Reply with your own custom embed that can look however you want"],
+        ["URL buttons", "Will send a message containing some clickable URL buttons"],
+        ["Image command", "Create a custom image command where users can paste images into a background image"],
+        ["Custom code", "Write your own code to decide what the command does!"]
       ]
     },
     {
@@ -127,13 +127,13 @@
                         "label": "Image/Gif/Video"
                       },
                       {
-                        "label": "Custom Embed"
+                        "label": "Custom embed"
                       },
                       {
-                        "label": "URL Buttons"
+                        "label": "URL buttons"
                       },
                       {
-                        "label": "Image Command"
+                        "label": "Image command"
                       }
                     ]
                   },
@@ -141,7 +141,7 @@
                     "type": "row",
                     "buttons": [
                       {
-                        "label": "Custom Code"
+                        "label": "Custom code"
                       }
                     ]
                   }
@@ -214,13 +214,13 @@
                   ]
                 },
                 {
-                  "name": "Custom Embed",
+                  "name": "Custom embed",
                   "content": [
                     "The custom embeds option will start the custom embed builder. For a guide on creating custom embeds, check out the <a href=\"/features/custom-embeds\" is=\"f-a\">Custom Embed</a> feature."
                   ]
                 },
                 {
-                  "name": "URL Buttons",
+                  "name": "URL buttons",
                   "content": [
                     "You will be presented with a button to add the custom command's URL buttons. Press it to continue.",
                     {
@@ -242,7 +242,7 @@
                     {
                       "type": "tablelist",
                       "rows": [
-                        ["Button Label", "The text that is displayed on the button"],
+                        ["Button label", "The text that is displayed on the button"],
                         ["Button URL", "The URL to go to when you click on the button"]
                       ]
                     },
@@ -251,7 +251,7 @@
                       "data": {
                         "title": "URL Button Builder",
                         "rows": [
-                          ["Button Label", "The text on the button", true],
+                          ["Button label", "The text on the button", true],
                           ["Button URL", "The URL to go to when clicking the button", true]
                         ]
                       }
@@ -285,7 +285,7 @@
                   ]
                 },
                 {
-                  "name": "Image Command",
+                  "name": "Image command",
                   "content": [
                     "You will be presented with a button to add the custom command's background image. Press it to continue.",
                     {
@@ -309,7 +309,7 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["Background Image URL", "https://example.com/image.png", true]
+                          ["Background image URL", "https://example.com/image.png", true]
                         ]
                       }
                     },
@@ -339,7 +339,7 @@
                                 "label": "Rotated"
                               },
                               {
-                                "label": "Perspective Distort"
+                                "label": "Perspective distort"
                               }
                             ]
                           }
@@ -415,7 +415,7 @@
                           ]
                         },
                         {
-                          "name": "Perspective Distort",
+                          "name": "Perspective distort",
                           "content": [
                             "The Perspective Distort paste type provides the most advanced image transformation options. Instead of using simple width/height dimensions, you define the exact pixel coordinates where each of the four corners of the user's image should be positioned. This allows for complex effects like perspective, skewing, and non-rectangular shapes.",
                             {
@@ -465,7 +465,7 @@
                   ]
                 },
                 {
-                  "name": "Custom Code",
+                  "name": "Custom code",
                   "content": [
                     "You will first be asked whether the custom command should accept user-provided arguments.",
                     {
@@ -529,10 +529,10 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["Argument Name", "Argument Name", true],
-                          ["Argument Description", "Argument Description", true],
+                          ["Argument name", "Argument name", true],
+                          ["Argument description", "Argument description", true],
                           {
-                            "label": "Argument Type",
+                            "label": "Argument type",
                             "required": true,
                             "select": {
                               "placeholder": "Text",
@@ -583,7 +583,7 @@
                       "data": {
                         "title": "Custom Command Builder",
                         "rows": [
-                          ["Custom Code", "console.log(\"JavaScript\")", true, 4000]
+                          ["Custom code", "console.log(\"JavaScript\")", true, 4000]
                         ]
                       }
                     },
@@ -678,7 +678,7 @@
                   ["Type", "Buttons"],
                   ["Owner", "This server"],
                   ["Aliases", "`packdownload` `download`"],
-                  ["URL Button Preview", "Shown below"]
+                  ["URL button preview", "Shown below"]
                 ],
                 "buttons": [
                   {

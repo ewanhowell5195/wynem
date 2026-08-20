@@ -103,8 +103,8 @@
                 "author": ["minecrafttexture - More information", "/assets/images/icons/info.webp"],
                 "title": "Supported versions",
                 "fields": [
-                  ["Official Versions", "Any version from the official Minecraft launcher"],
-                  ["Resource Packs", "`f8thful`\n`dokucraft_light`\n`barebones`"]
+                  ["Official versions", "Any version from the official Minecraft launcher"],
+                  ["Resource packs", "`f8thful`\n`dokucraft_light`\n`barebones`"]
                 ]
               }
             },

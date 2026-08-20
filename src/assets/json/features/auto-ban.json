@@ -32,8 +32,8 @@
     {
       "type": "embed",
       "data": {
-        "author": ["Account Security Alert", "/assets/images/icons/warning_yellow.webp"],
-        "title": "Potential Compromise Detected!",
+        "author": ["Account security alert", "/assets/images/icons/warning_yellow.webp"],
+        "title": "Potential compromise detected!",
         "description": "You were removed from the server `Ewan's Corner` because your account appears to be compromised. Please update your password immediately and review your connected applications for any suspicious activity.",
         "colour": "#FEE75C"
       }
@@ -114,7 +114,7 @@
                 "title": "Auto-ban",
                 "rows": [
                   {
-                    "label": "Auto-ban Channel",
+                    "label": "Auto-ban channel",
                     "description": "Any user who sends a message in this channel will be banned immediately",
                     "select": {
                       "placeholder": "Select auto-ban channel",
@@ -122,7 +122,7 @@
                     }
                   },
                   {
-                    "label": "Auto-ban Role",
+                    "label": "Auto-ban role",
                     "description": "Any user who receives this role will be banned immediately",
                     "select": {
                       "placeholder": "Select auto-ban role",

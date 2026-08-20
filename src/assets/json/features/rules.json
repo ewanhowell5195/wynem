@@ -85,7 +85,7 @@
               "type": "tablelist",
               "rows": [
                 ["Rule", "The rule itself."],
-                ["Rule Description", "A description for the rule. This is optional."]
+                ["Rule description", "A description for the rule. This is optional."]
               ]
             },
             {
@@ -94,7 +94,7 @@
                 "title": "Rule Creator",
                 "rows": [
                   ["Rule", "No breaking the rules!", true],
-                  ["Rule Description", "Do not break the rules or you will be banned.", false, 256]
+                  ["Rule description", "Do not break the rules or you will be banned.", false, 256]
                 ]
               }
             },
@@ -152,7 +152,7 @@
                 "title": "Rule Editor",
                 "rows": [
                   ["Rule", "Follow the Discord Terms of Service", true],
-                  ["Rule Description", "Please follow the Discord Terms of Service in all regards withi…", false, 512]
+                  ["Rule description", "Please follow the Discord Terms of Service in all regards withi…", false, 512]
                 ]
               }
             },
