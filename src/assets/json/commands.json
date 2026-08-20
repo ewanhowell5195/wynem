@@ -2844,12 +2844,12 @@
                       "title": "Supported versions",
                       "fields": [
                         [
-                          "Official Versions",
+                          "Official versions",
                           "Any Java Edition version from the official Minecraft launcher"
                         ],
                         [
-                          "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "Resource packs",
+                          "``"
                         ]
                       ]
                     }
@@ -2871,12 +2871,12 @@
                       "title": "Supported versions",
                       "fields": [
                         [
-                          "Official Versions",
+                          "Official versions",
                           "Any Java Edition version from the official Minecraft launcher"
                         ],
                         [
-                          "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "Resource packs",
+                          "``"
                         ]
                       ]
                     }
@@ -2895,12 +2895,12 @@
                       "title": "Supported versions",
                       "fields": [
                         [
-                          "Official Versions",
+                          "Official versions",
                           "Any Java Edition version from the official Minecraft launcher"
                         ],
                         [
-                          "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "Resource packs",
+                          "``"
                         ]
                       ]
                     }
@@ -2919,12 +2919,12 @@
                       "title": "Supported versions",
                       "fields": [
                         [
-                          "Official Versions",
+                          "Official versions",
                           "Any version from the official Minecraft launcher"
                         ],
                         [
-                          "Resource Packs",
-                          "`4thful`\n`allure`\n`barebones`\n`barely_default`\n`caelesti`\n`classic_faithful_32x`\n`classic_faithful_32x_jappa`\n`classic_faithful_64x`\n`classic_faithful_64x_jappa`\n`dokucraft_dark`\n`dokucraft_dwarven`\n`dokucraft_high`\n`dokucraft_light`\n`f8thful`\n`faithful_32x`\n`faithful_64x`\n`faithless`\n`hidyks_realm`\n`ice_cream`\n`mspainted`\n`optifine`"
+                          "Resource packs",
+                          "``"
                         ]
                       ]
                     }
@@ -4820,7 +4820,7 @@
               ],
               "extra": [
                 {
-                  "title": "Available Translation Languages",
+                  "title": "Available translation languages",
                   "description": "```yml\nAutomatic: auto\nAbkhaz: ab\nAcehnese: ace\nAcholi: ach\nAfar: aa\nAfrikaans: af\nAlbanian: sq\nAlur: alz\nAmharic: am\nArabic: ar\nArmenian: hy\nAssamese: as\nAvar: av\nAwadhi: awa\nAymara: ay\nAzerbaijani: az\nBalinese: ban\nBaluchi: bal\nBambara: bm\nBaoulé: bci\nBashkir: ba\nBasque: eu\nBatak Karo: btx\nBatak Simalungun: bts\nBatak Toba: bbc\nBelarusian: be\nBemba: bem\nBengali: bn\nBetawi: bew\nBhojpuri: bho\nBikol: bik\nBosnian: bs\nBreton: br\nBulgarian: bg\nBuryat: bua\nCantonese: yue\nCatalan: ca\nCebuano: ceb\nChamorro: ch\nChechen: ce\nChichewa: ny\nChinese (Simplified): zh-CN\nChinese (Traditional): zh-TW\nChuukese: chk\nChuvash: cv\nCorsican: co\nCrimean Tatar (Cyrillic): crh\nCrimean Tatar (Latin): crh-Latn\nCroatian: hr\nCzech: cs\nDanish: da\nDari: fa-AF\nDhivehi: dv\nDinka: din\nDogri: doi\nDombe: dov\nDutch: nl\nDyula: dyu\nDzongkha: dz\nEnglish: en\nEsperanto: eo\nEstonian: et\nEwe: ee\nFaroese: fo\nFijian: fj\nFilipino: tl\nFinnish: fi\nFon: fon\nFrench: fr\nFrench (Canada): fr-CA\nFrisian: fy\nFriulian: fur\nFulani: ff\nGa: gaa\nGalician: gl\nGeorgian: ka\nGerman: de\nGreek: el\nGuarani: gn\nGujarati: gu\nHaitian Creole: ht\nHakha Chin: cnh\nHausa: ha\nHawaiian: haw\nHebrew: he\nHebrew: iw\nHiligaynon: hil\nHindi: hi\nHmong: hmn\nHungarian: hu\nHunsrik: hrx\nIban: iba\nIcelandic: is\nIgbo: ig\nIlocano: ilo\nIndonesian: id\nInuktut (Latin): iu-Latn\nInuktut (Syllabics): iu\nIrish: ga\nItalian: it\nJamaican Patois: jam\nJapanese: ja\nJavanese: jw\nJingpo: kac\nKalaallisut: kl\nKannada: kn\nKanuri: kr\nKapampangan: pam\nKazakh: kk\nKhasi: kha\nKhmer: km\nKiga: cgg\nKikongo: kg\nKinyarwanda: rw\nKituba: ktu\nKokborok: trp\nKomi: kv\nKonkani: gom\nKorean: ko\nKrio: kri\nKurdish (Kurmanji): ku\nKurdish (Sorani): ckb\nKyrgyz: ky\nLao: lo\nLatgalian: ltg\nLatin: la\nLatvian: lv\nLigurian: lij\nLimburgish: li\nLingala: ln\nLithuanian: lt\nLombard: lmo\nLuganda: lg\nLuo: luo\nLuxembourgish: lb\nMacedonian: mk\nMadurese: mad\nMaithili: mai\nMakassar: mak\nMalagasy: mg\nMalay: ms\nMalay (Jawi): ms-Arab\nMalayalam: ml\nMaltese: mt\nMam: mam\nManx: gv\nMaori: mi\nMarathi: mr\nMarshallese: mh\nMarwadi: mwr\nMauritian Creole: mfe\nMeadow Mari: chm\nMeiteilon (Manipuri): mni-Mtei\nMinang: min\nMizo: lus\nMongolian: mn\nMyanmar (Burmese): my\nNahuatl (Eastern Huasteca): nhe\nNdau: ndc-ZW\nNdebele (South): nr\nNepalbhasa (Newari): new\nNepali: ne\nNKo: bm-Nkoo\nNorwegian: no\nNuer: nus\nOccitan: oc\nOdia (Oriya): or\nOromo: om\nOssetian: os\nPangasinan: pag\nPapiamento: pap\nPashto: ps\nPersian: fa\nPolish: pl\nPortuguese (Brazil): pt\nPortuguese (Portugal): pt-PT\nPunjabi (Gurmukhi): pa\nPunjabi (Shahmukhi): pa-Arab\nQuechua: qu\nQʼeqchiʼ: kek\nRomani: rom\nRomanian: ro\nRundi: rn\nRussian: ru\nSami (North): se\nSamoan: sm\nSango: sg\nSanskrit: sa\nSantali (Latin): sat-Latn\nSantali (Ol Chiki): sat\nScots Gaelic: gd\nSepedi: nso\nSerbian: sr\nSesotho: st\nSeychellois Creole: crs\nShan: shn\nShona: sn\nSicilian: scn\nSilesian: szl\nSindhi: sd\nSinhala: si\nSlovak: sk\nSlovenian: sl\nSomali: so\nSpanish: es\nSundanese: su\nSusu: sus\nSwahili: sw\nSwati: ss\nSwedish: sv\nTahitian: ty\nTajik: tg\nTamazight: ber-Latn\nTamazight (Tifinagh): ber\nTamil: ta\nTatar: tt\nTelugu: te\nTetum: tet\nThai: th\nTibetan: bo\nTigrinya: ti\nTiv: tiv\nTok Pisin: tpi\nTongan: to\nTshiluba: lua\nTsonga: ts\nTswana: tn\nTulu: tcy\nTumbuka: tum\nTurkish: tr\nTurkmen: tk\nTuvan: tyv\nTwi: ak\nUdmurt: udm\nUkrainian: uk\nUrdu: ur\nUyghur: ug\nUzbek: uz\nVenda: ve\nVenetian: vec\nVietnamese: vi\nWaray: war\nWelsh: cy\nWolof: wo\nXhosa: xh\nYakut: sah\nYiddish: yi\nYoruba: yo\nYucatec Maya: yua\nZapotec: zap\nZulu: zu\n```"
                 }
               ],
@@ -4940,7 +4940,7 @@
               ],
               "extra": [
                 {
-                  "title": "Available TTS Languages",
+                  "title": "Available TTS languages",
                   "description": "```yml\nAfrikaans: af\nAlbanian: sq\nArabic: ar\nArmenian: hy\nCatalan: ca\nChinese: zh\nChinese-Mandarin/China: zh-cn\nChinese-Mandarin/Taiwan: zh-tw\nChinese-Cantonese: zh-yue\nCroatian: hr\nCzech: cs\nDanish: da\nDutch: nl\nEnglish: en\nEnglish-Australia: en-au\nEnglish-United-Kingdom: en-uk\nEnglish-United-States: en-us\nEsperanto: eo\nFinnish: fi\nFrench: fr\nGerman: de\nGreek: el\nHaitian-Creole: ht\nHebrew: he\nHindi: hi\nHungarian: hu\nIcelandic: is\nIndonesian: id\nItalian: it\nJapanese: ja\nKorean: ko\nLatin: la\nLatvian: lv\nMacedonian: mk\nNorwegian: no\nPolish: pl\nPortuguese: pt\nPortuguese-Brazil: pt-br\nRomanian: ro\nRussian: ru\nSerbian: sr\nSlovak: sk\nSpanish: es\nSpanish-Spain: es-es\nSpanish-United-States: es-us\nSwahili: sw\nSwedish: sv\nTamil: ta\nThai: th\nTurkish: tr\nVietnamese: vi\n```"
                 }
               ],
