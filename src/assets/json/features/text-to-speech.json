@@ -233,7 +233,7 @@
                 "author": ["Error", "/assets/images/icons/error.webp"],
                 "colour": "#DD2E44",
                 "title": "No AutoTTS channel set",
-                "description": "There is no AutoTTS channel set in this server"
+                "description": "There is no AutoTTS channel configured in this server"
               }
             }
           ]

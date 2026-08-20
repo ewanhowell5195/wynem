@@ -207,7 +207,7 @@
               "data": {
                 "author": ["Error", "/assets/images/icons/error.webp"],
                 "title": "No moderator ping roles set",
-                "description": "There are no moderator ping roles set in this server. Wynem will use the three highest roles in this server.",
+                "description": "There are no moderator ping roles configured in this server. Wynem will use the three highest roles in this server.",
                 "colour": "#DD2E44"
               }
             }
