@@ -348,14 +348,14 @@
               }
             },
             "The note is saved as a record. Members cannot see their notes, and are not sent a DM.",
-            "If the member has hit the limit of `50` records, the note cannot be added.",
+            "If the member has reached the limit of `50` records, the note cannot be added.",
             {
               "type": "embed",
               "data": {
                 "colour": "#DD2E44",
                 "author": ["Error", "/assets/images/icons/error.webp"],
                 "title": "Unable to add note",
-                "description": "<@TheAnnoying> has hit the limit of 50 records"
+                "description": "<@TheAnnoying> has reached the limit of 50 records"
               }
             }
           ]

@@ -101,7 +101,7 @@
       "data": {
         "author": ["Error", "/assets/images/icons/error.webp"],
         "title": "Failed to apply join role",
-        "description": "Failed to apply join roles to <@TheAnnoying>\n\nI require the `Manage Roles` permission to be able to add roles to new members",
+        "description": "Failed to apply join roles to <@TheAnnoying>\n\nI need the `Manage Roles` permission to be able to add roles to new members",
         "colour": "#DD2E44"
       }
     },
