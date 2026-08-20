@@ -68,7 +68,7 @@
                 "colour": "#DD2E44",
                 "author": ["Error", "/assets/images/icons/error.webp"],
                 "title": "No ban appeal link",
-                "description": "There is no ban appeal link configured for this server"
+                "description": "There is no ban appeal link set up in this server"
               }
             }
           ]
