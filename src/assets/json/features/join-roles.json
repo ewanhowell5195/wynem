@@ -67,7 +67,7 @@
               "type": "embed",
               "data": {
                 "title": "No join roles",
-                "description": "There are currently no join roles set up in this server\n\nUse the formatting `e!joinrole <role>` to add a new join role"
+                "description": "There are currently no join roles configured in this server\n\nUse the formatting `e!joinrole <role>` to add a new join role"
               }
             }
           ]

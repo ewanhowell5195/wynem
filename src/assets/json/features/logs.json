@@ -208,7 +208,7 @@
               "type": "embed",
               "data": {
                 "title": "No server logs",
-                "description": "There are no server logs set up in this server"
+                "description": "There are no server logs configured in this server"
               }
             }
           ]
