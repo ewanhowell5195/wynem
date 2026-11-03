@@ -22,6 +22,7 @@ style: include:styl index.styl
   p When you set a reminder, its message, time, and the channel it was set in are stored in a local database on the bot server. Reminders are deleted once they finish, when you remove them, or when you leave the server they were set in.
   h3 User Settings:
   p Your chosen text to speech language and your command usage statistics are stored in a local database on the bot server.
+  p If a user is banned from using Wynem for abuse, their user ID is stored in a local database on the bot server with a flag that blocks them from using the bot.
   h3 Servers:
   p Whenever Wynem joins and leaves a server, a log is stored within a private Discord channel which lists the details of the server, such as name, member count, date created, and number of channels. This data is only stored within Discord and is never stored locally.
   p Whenever Wynem is installed or uninstalled as a user app, a log is stored noting the user installation. This data is only stored within Discord and is never stored locally.
@@ -31,11 +32,11 @@ style: include:styl index.styl
   p Wynem reads message content to provide the features that server admins enable, such as message logs, auto-responses, message link quoting, the starboard, and text to speech channels. Message content is never stored in Wynem's database, and is never used to train AI or machine learning models.
   p Wynem uses presence data, such as your online status and activity, only at the moment a feature needs it, for example to ping moderators who are online or to show your status in the user info command. Presence data is never stored.
   h3 Backups:
-  p The local database on the bot server is backed up once a day.
+  p The local database on the bot server is backed up once a day, and backups are kept for 30 days.
   h3 Direct Messages:
-  p When you send a direct message to Wynem, this message is sent to a private Discord channel. This logs the full message content, including attachments, except for stickers and emojis that Wynem does not have access to. This data is only stored within Discord and is never stored locally.
+  p When you send a direct message to Wynem, this message is sent to a private Discord channel. This logs the full message content, including attachments, except for stickers and emojis that Wynem does not have access to. This data is only stored within Discord, and is never stored locally.
   h3 Commands:
-  p Any command executed through Wynem is sent to a private Discord channel. This logs the full message content, including attachments. This data is only stored within Discord and is never stored locally.
+  p Any command executed through Wynem is sent to a private Discord channel. This logs the full message content, including attachments. If a command causes an error, the error and the message that caused it are also sent to a private Discord channel. This data is only stored within Discord, and is never stored locally.
   p A record of how many times you have executed each command is stored in a local database on the bot server.
   br
   h1 HOW WE USE INFORMATION
@@ -58,13 +59,20 @@ style: include:styl index.styl
   p To opt out of logging for commands or activities conducted through a User App, uninstall Wynem from your account.
   br
   h1 REMOVAL OF DATA
-  p Some commands exist for you to remove your own data, such as removing your linked Minecraft account, your text to speech language, or your reminders. These commands can be used to remove that data.
+  p You can export the data Wynem stores about you, such as your settings and reminders, with the exportdata command. Server admins with the Manage Server permission can also use it to export the data Wynem stores about their server, including its settings and moderation records.
+  p Some commands exist for you to remove your own data, such as removing your linked Minecraft account, your text to speech language, your reminders, or your personal custom commands. These commands can be used to remove that data.
   h3 Attachments:
   p Any attachments logged are only ever logged using the original Discord URL. By deleting the message containing the attachment, you are deleting the content from Discord's servers, therefore the attachment URL will no longer be valid.
   h3 Commands and Direct Messages:
-  p To remove any command and direct messages that have been logged, please contact me through the contacts listed at the bottom of this policy, with the Message and User ID of the log you would like removed.
+  p To remove any command, error, and direct message logs, please contact me through the contacts listed at the bottom of this policy, with the Message and User ID of the log you would like removed.
   h3 Server Logs and Moderation Records:
   p We do not own any of the data logged about you through server logs and moderation records. This data is owned by the Server owners/admins. You will have to contact them to have your data removed.
+  h3 Data That Cannot Be Removed:
+  p Some data cannot be removed on request:
+  ul
+    li Bot ban records are kept for as long as the ban is in place, as they are needed to prevent the ban from being bypassed.
+    li Data removed from the local database may remain in backups for up to 30 days.
+    li Server logs and moderation records are owned by the server they were created in, and can only be removed by that server's owners or admins.
   br
   h1 CHILDREN'S PRIVACY
   p Discord does not provide services to children under the age of 13, so this extends to the usage of Wynem. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us so that we can remove it.
