@@ -1,10 +1,11 @@
 style: include:styl index.styl
 .container
   h1.title Privacy Policy
+  p Last updated: 3 November 2026
   p By using the Discord bot Wynem, you agree that you have read and agree to this policy.
   p This is our Privacy Policy, which will describe the types of data collected, how it is used, how to opt out of data collection, and how to remove your data.
   p The terms "we", "us", and "our" refer to the owner and moderators of Wynem. The terms "bot" and "Wynem" refer to the Discord bot itself. The terms "you" and "your" refer to you, the user.
-  p We may update this Privacy Policy at any time. Any changes that are made will be made effective immediately. Please make sure you are kept up to date with this Privacy Policy.
+  p We may update this Privacy Policy at any time. Any changes will be announced in the Wynem notices channel and on Bluesky, and the date at the top of this policy will be updated. Changes are effective from that date.
   br
   h1 PRIVACY STATEMENT
   p We respect the privacy of your information. This policy describes the types of information that we may collect from you or that you may provide when you use Wynem, as well as describing our practices for collecting, using, maintaining, protecting and disclosing that information.
@@ -23,12 +24,15 @@ style: include:styl index.styl
   h3 User Settings:
   p Your chosen text to speech language and your command usage statistics are stored in a local database on the bot server.
   p If a user is banned from using Wynem for abuse, their user ID is stored in a local database on the bot server with a flag that blocks them from using the bot.
+  h3 Custom Commands:
+  p Personal and server custom commands, including their names, descriptions, aliases, and content, are stored in a local database on the bot server. Personal custom commands are kept until you remove them, and server custom commands are kept until they are removed or Wynem is removed from the server.
+  p Custom commands are not private: anyone can view any personal or server custom command, including its code, and copy it into their own server.
   h3 Servers:
   p Whenever Wynem joins and leaves a server, a log is stored within a private Discord channel which lists the details of the server, such as name, member count, date created, and number of channels. This data is only stored within Discord and is never stored locally.
   p Whenever Wynem is installed or uninstalled as a user app, a log is stored noting the user installation. This data is only stored within Discord and is never stored locally.
-  p Server logs may be enabled in any server that Wynem is in. Server logs log your activity in a server. The data logged includes edited message content, deleted message content, nicknames, voice channels joined, and any moderation taken against you. This data is only stored in the server where the specific activity occurred and is accessible only to those with appropriate permissions in the server.
+  p Server logs may be enabled in any server that Wynem is in. Server logs log your activity in a server. The data logged includes joining and leaving the server (including whether your account is new to Discord), nickname, role, and server avatar changes, voice channels joined, switched, and left, edited and deleted message content, ghost pings, the first reaction to a message, removed blocked reactions, bulk deleted messages, server invites created and deleted, and any moderation taken against you, such as warns, notes, timeouts, kicks, and bans. This data is only stored in the server where the specific activity occurred and is accessible only to those with appropriate permissions in the server.
   p When a member is warned, timed out, or given a moderation note, a moderation record is saved in a local database on the bot server. This includes the member, the moderator, the time, the length of any timeout, and the reason. Moderation records are kept until a moderator removes them, or until Wynem is removed from the server.
-  p Server settings that admins configure, such as auto-responses, custom commands, FAQs, rules, join messages, and log channels, are stored in a local database on the bot server. These are deleted when Wynem is removed from the server.
+  p Server settings that admins configure, such as auto-responses, FAQs, rules, join messages, and log channels, are stored in a local database on the bot server. These are deleted when Wynem is removed from the server.
   p Wynem reads message content to provide the features that server admins enable, such as message logs, auto-responses, message link quoting, the starboard, and text to speech channels. Message content is never stored in Wynem's database, and is never used to train AI or machine learning models.
   p Wynem uses presence data, such as your online status and activity, only at the moment a feature needs it, for example to ping moderators who are online or to show your status in the user info command. Presence data is never stored.
   h3 Backups:
@@ -64,7 +68,7 @@ style: include:styl index.styl
   h3 Attachments:
   p Any attachments logged are only ever logged using the original Discord URL. By deleting the message containing the attachment, you are deleting the content from Discord's servers, therefore the attachment URL will no longer be valid.
   h3 Commands and Direct Messages:
-  p To remove any command, error, and direct message logs, please contact me through the contacts listed at the bottom of this policy, with the Message and User ID of the log you would like removed.
+  p To remove any command, error, and direct message logs, please contact us through the contacts listed at the bottom of this policy, with the Message and User ID of the log you would like removed.
   h3 Server Logs and Moderation Records:
   p We do not own any of the data logged about you through server logs and moderation records. This data is owned by the Server owners/admins. You will have to contact them to have your data removed.
   h3 Data That Cannot Be Removed:
@@ -86,8 +90,14 @@ style: include:styl index.styl
     li GitHub receives issue numbers when a server's issue tracker is used.
   p Any data collected through these third-party websites is separate from Wynem and is not governed by this Privacy Policy. We are not responsible for the privacy practices, content, or data handling of these websites. If you interact with these third-party sites or services through links provided by Wynem, please be aware that any data you choose to share is subject to their policies, not ours.
   br
+  h1 YOUR RIGHTS
+  p The developer of Wynem is responsible for the data described in this policy, and can be contacted through the contacts listed below.
+  p Data is processed on the basis of legitimate interests: providing the features you and your server choose to use, providing support, preventing abuse of Wynem, and keeping the bot running reliably.
+  p You have the right to access, correct, export, and request the removal of your data, and to object to or restrict how it is processed, except where this policy states otherwise. To use these rights, use the commands described above or contact us through the contacts listed below.
+  p If you are unhappy with how your data is handled, you can complain to the Information Commissioner's Office (ico.org.uk).
+  br
   h1 CONTACT INFORMATION
-  h3 If you have any questions about this Privacy Policy, you can contact me:
+  h3 If you have any questions about this Privacy Policy, you can contact us:
   ul
     li On Discord: 
       a(href = `https://discord.${self.domain}/`, target = "_blank") Ewan's Server
