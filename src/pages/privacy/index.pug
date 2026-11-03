@@ -17,12 +17,21 @@ style: include:styl index.styl
   br
   h1 THE INFORMATION WE COLLECT AND HOW WE COLLECT IT
   h3 Personally Identifiable Information:
-  p Wynem collects and stores Minecraft usernames that you link to your Discord account to allow Minecraft account-related commands to use your Discord name instead of requiring your Minecraft username each time. This link also allows others to check the Minecraft username associated with your Discord account. This information is provided voluntarily, can be removed by you at any time, and is stored locally on the bot server. This will only be personally identifiable if the username is personally identifiable.
+  p Wynem collects and stores the Minecraft account (its UUID) that you link to your Discord account to allow Minecraft account-related commands to use your Discord name instead of requiring your Minecraft username each time. This link also allows others to check the Minecraft account associated with your Discord account. This information is provided voluntarily, can be removed by you at any time, and is stored locally on the bot server. This will only be personally identifiable if the username is personally identifiable.
+  h3 Reminders:
+  p When you set a reminder, its message, time, and the channel it was set in are stored in a local database on the bot server. Reminders are deleted once they finish, when you remove them, or when you leave the server they were set in.
+  h3 User Settings:
+  p Your chosen text to speech language and your command usage statistics are stored in a local database on the bot server.
   h3 Servers:
   p Whenever Wynem joins and leaves a server, a log is stored within a private Discord channel which lists the details of the server, such as name, member count, date created, and number of channels. This data is only stored within Discord and is never stored locally.
   p Whenever Wynem is installed or uninstalled as a user app, a log is stored noting the user installation. This data is only stored within Discord and is never stored locally.
   p Server logs may be enabled in any server that Wynem is in. Server logs log your activity in a server. The data logged includes edited message content, deleted message content, nicknames, voice channels joined, and any moderation taken against you. This data is only stored in the server where the specific activity occurred and is accessible only to those with appropriate permissions in the server.
-  p When a member is muted or warned, a moderation log is saved in a local database on the bot server. Only the 10 newest warn logs and 10 newest mute logs are stored. The total count is still tracked however.
+  p When a member is warned, timed out, or given a moderation note, a moderation record is saved in a local database on the bot server. This includes the member, the moderator, the time, the length of any timeout, and the reason. Moderation records are kept until a moderator removes them, or until Wynem is removed from the server.
+  p Server settings that admins configure, such as auto-responses, custom commands, FAQs, rules, join messages, and log channels, are stored in a local database on the bot server. These are deleted when Wynem is removed from the server.
+  p Wynem reads message content to provide the features that server admins enable, such as message logs, auto-responses, message link quoting, the starboard, and text to speech channels. Message content is never stored in Wynem's database, and is never used to train AI or machine learning models.
+  p Wynem uses presence data, such as your online status and activity, only at the moment a feature needs it, for example to ping moderators who are online or to show your status in the user info command. Presence data is never stored.
+  h3 Backups:
+  p The local database on the bot server is backed up once a day.
   h3 Direct Messages:
   p When you send a direct message to Wynem, this message is sent to a private Discord channel. This logs the full message content, including attachments, except for stickers and emojis that Wynem does not have access to. This data is only stored within Discord and is never stored locally.
   h3 Commands:
@@ -49,7 +58,7 @@ style: include:styl index.styl
   p To opt out of logging for commands or activities conducted through a User App, uninstall Wynem from your account.
   br
   h1 REMOVAL OF DATA
-  p Some commands exist for you to remove your own data, such as removing Minecraft usernames. These commands can be used to remove that data.
+  p Some commands exist for you to remove your own data, such as removing your linked Minecraft account, your text to speech language, or your reminders. These commands can be used to remove that data.
   h3 Attachments:
   p Any attachments logged are only ever logged using the original Discord URL. By deleting the message containing the attachment, you are deleting the content from Discord's servers, therefore the attachment URL will no longer be valid.
   h3 Commands and Direct Messages:
@@ -62,7 +71,12 @@ style: include:styl index.styl
   br
   h1 THIRD-PARTY WEBSITES
   p Wynem may contain links to third-party websites or services. These websites are operated independently of Wynem and have their own privacy policies and terms of service. We encourage you to review the privacy practices of any third-party website or service before sharing your personal information with them.
-  p Wynem does not share your information with any third-party websites or services. Any data collected through these third-party websites is separate from Wynem and is not governed by this Privacy Policy. We are not responsible for the privacy practices, content, or data handling of these websites. If you interact with these third-party sites or services through links provided by Wynem, please be aware that any data you choose to share is subject to their policies, not ours.
+  p Wynem never sells your information. It only sends data to the following third-party services, and only when you or your server use the feature that needs them:
+  ul
+    li Google Translate receives the text being translated when the translate command is used.
+    li Google Text-to-Speech receives the text being read out when text to speech is used, including messages sent in a server's text to speech channel.
+    li GitHub receives issue numbers when a server's issue tracker is used.
+  p Any data collected through these third-party websites is separate from Wynem and is not governed by this Privacy Policy. We are not responsible for the privacy practices, content, or data handling of these websites. If you interact with these third-party sites or services through links provided by Wynem, please be aware that any data you choose to share is subject to their policies, not ours.
   br
   h1 CONTACT INFORMATION
   h3 If you have any questions about this Privacy Policy, you can contact me:
