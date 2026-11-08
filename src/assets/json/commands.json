@@ -413,7 +413,7 @@
                 "reportbug",
                 "bug"
               ],
-              "cooldown": 3600,
+              "cooldown": 300,
               "description": "Submit a bug report for the bot.",
               "slashCommand": "bot/bugreport"
             },
@@ -549,7 +549,7 @@
                 "suggestions",
                 "feedback"
               ],
-              "cooldown": 3600,
+              "cooldown": 300,
               "description": "Make a suggestion for the bot.",
               "slashCommand": "bot/suggest"
             },
@@ -5349,7 +5349,7 @@
           "commands": {
             "bugreport": {
               "description": "Submit a bug report for the bot.",
-              "cooldown": 3600,
+              "cooldown": 300,
               "prefixCommand": "bot/bugreport"
             },
             "contact": {
@@ -5403,7 +5403,7 @@
             },
             "suggest": {
               "description": "Make a suggestion for the bot.",
-              "cooldown": 3600,
+              "cooldown": 300,
               "prefixCommand": "bot/suggest"
             },
             "terms": {
