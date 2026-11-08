@@ -3159,31 +3159,6 @@
               "description": "Get a link to the changelog of the latest Minecraft version.",
               "slashCommand": "minecraft/changelog"
             },
-            "minecraftdungeonstitlegenerator": {
-              "aliases": [
-                "minecraftdungeonstitle",
-                "mcdungeonstitle",
-                "mcdtitlegenerator",
-                "mcdtitle",
-                "mcdtg",
-                "mcdt",
-                "dungeonstitlegenerator",
-                "dungeonstitle",
-                "dtitlegenerator",
-                "dtitle",
-                "dtg",
-                "dt"
-              ],
-              "arguments": "[top-text] [top-texture] [bottom-text] [bottom-texture] [disable-terminators]",
-              "cooldown": 5,
-              "description": [
-                "Generate a Minecraft Dungeons-styled title logo.",
-                "Use \"default\" to use the default texture.",
-                "Provide no arguments to view a list of all textures.",
-                "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
-              ],
-              "slashCommand": "minecraft/dungeonstitlegenerator"
-            },
             "minecrafttitlegenerator": {
               "aliases": [
                 "minecrafttitle",
@@ -9933,38 +9908,6 @@
                 }
               ],
               "prefixCommand": "minecraft/minecraftchangelog"
-            },
-            "dungeonstitlegenerator": {
-              "description": [
-                "Generate a Minecraft Dungeons-styled title logo.",
-                "Use \"default\" to use the default texture.",
-                "Provide no arguments to view a list of all textures.",
-                "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
-              ],
-              "cooldown": 5,
-              "arguments": [
-                {
-                  "name": "top-text",
-                  "description": "The top text"
-                },
-                {
-                  "name": "top-texture",
-                  "description": "The top texture"
-                },
-                {
-                  "name": "bottom-text",
-                  "description": "The bottom text"
-                },
-                {
-                  "name": "bottom-texture",
-                  "description": "The bottom texture"
-                },
-                {
-                  "name": "disable-terminators",
-                  "description": "Disable the line terminators"
-                }
-              ],
-              "prefixCommand": "minecraft/minecraftdungeonstitlegenerator"
             },
             "mojira": {
               "description": "View a bug on the Minecraft issue tracker.",
