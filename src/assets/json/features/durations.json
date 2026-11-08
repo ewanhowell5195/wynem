@@ -145,7 +145,8 @@
                 ["Slowmode", "Limit how frequently users can send messages in a channel"]
               ]
             },
-            "For all these commands, the duration formatting works exactly the same way. For example, if you want to set a 30-minute slowmode in a channel or timeout a user for 2 days, you would use `30m` or `2d` respectively."
+            "For all these commands, the duration formatting works exactly the same way. For example, if you want to set a 30-minute slowmode in a channel or timeout a user for 2 days, you would use `30m` or `2d` respectively.",
+            "To remove a slowmode, use `off` or `disable` instead of a duration, e.g. <command:slowmode off|channel slowmode length:off>."
           ]
         }
       ]

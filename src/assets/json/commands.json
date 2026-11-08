@@ -5682,7 +5682,7 @@
               "arguments": [
                 {
                   "name": "length",
-                  "description": "The length of the cooldown",
+                  "description": "The length of the cooldown, or off to remove it",
                   "required": true
                 }
               ],
