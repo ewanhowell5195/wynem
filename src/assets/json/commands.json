@@ -139,6 +139,48 @@
             },
             "commands": {
               "categories": {
+                "commandaliases": {
+                  "commands": {
+                    "addcommandalias": {
+                      "aliases": [
+                        "commandalias"
+                      ],
+                      "arguments": "[command] [alias]",
+                      "description": [
+                        "Add a server alias for one of the bot's commands.",
+                        "The alias works exactly like the command name it points to, including other aliases."
+                      ],
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "botconfig/commandaliases/add"
+                    },
+                    "removecommandalias": {
+                      "aliases": [
+                        "deletecommandalias"
+                      ],
+                      "arguments": "[alias]",
+                      "description": "Remove a server alias for one of the bot's commands.",
+                      "permissions": [
+                        "Guild Only",
+                        "Manage Guild"
+                      ],
+                      "slashCommand": "botconfig/commandaliases/remove"
+                    },
+                    "viewcommandaliases": {
+                      "aliases": [
+                        "commandaliases",
+                        "viewcommandalias"
+                      ],
+                      "description": "View the server's aliases for the bot's commands.",
+                      "permissions": [
+                        "Guild Only"
+                      ],
+                      "slashCommand": "botconfig/commandaliases/view"
+                    }
+                  }
+                },
                 "customcommands": {
                   "description": [
                     "Custom commands are commands that you can configure to respond with whatever you want.",
@@ -3595,11 +3637,12 @@
                 "clean",
                 "delete"
               ],
-              "arguments": "[count] [member]",
+              "arguments": "[count] [member] [channel]",
               "description": [
                 "Bulk delete messages from a channel.",
                 "Defaults to 5, maximum 99.",
                 "Mention a user to delete only their messages.",
+                "Provide a channel to purge messages from there instead of the current channel.",
                 "This cannot delete messages that are over two weeks old."
               ],
               "permissions": [
@@ -4623,7 +4666,6 @@
                     "remindme",
                     "addreminder"
                   ],
-                  "arguments": "[duration] [reminder]",
                   "description": "Set a reminder for yourself.",
                   "slashCommand": "utility/reminders/set"
                 },
@@ -4648,7 +4690,6 @@
                     "repeatremind",
                     "repeatremindme"
                   ],
-                  "arguments": "[duration] [reminder]",
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
                   "slashCommand": "utility/reminders/setrepeating"
                 },
@@ -4676,6 +4717,20 @@
               "arguments": "[equation]",
               "description": "Summon a calculator.",
               "slashCommand": "utility/calculator"
+            },
+            "charcount": {
+              "aliases": [
+                "charactercount",
+                "wordcount",
+                "linecount",
+                "count"
+              ],
+              "arguments": "[text]",
+              "description": [
+                "Count the characters, words and lines in some text.",
+                "Attach a text file, or reply to a message, to count that instead."
+              ],
+              "slashCommand": "utility/charcount"
             },
             "colour": {
               "aliases": [
@@ -5454,6 +5509,50 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/viewautoresponse"
+                }
+              }
+            },
+            "commandaliases": {
+              "commands": {
+                "add": {
+                  "description": [
+                    "Add a server alias for one of the bot's commands.",
+                    "The alias works exactly like the command name it points to, including other aliases."
+                  ],
+                  "arguments": [
+                    {
+                      "name": "command",
+                      "description": "The command or command alias the new alias runs",
+                      "required": true
+                    },
+                    {
+                      "name": "alias",
+                      "description": "The new alias",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/commandaliases/addcommandalias"
+                },
+                "remove": {
+                  "description": "Remove a server alias for one of the bot's commands.",
+                  "arguments": [
+                    {
+                      "name": "alias",
+                      "description": "The command alias to remove",
+                      "required": true
+                    }
+                  ],
+                  "permissions": [
+                    "Manage Guild"
+                  ],
+                  "prefixCommand": "bot/commands/commandaliases/removecommandalias"
+                },
+                "view": {
+                  "description": "View the server's aliases for the bot's commands.",
+                  "prefixCommand": "bot/commands/commandaliases/viewcommandaliases"
                 }
               }
             },
@@ -11338,34 +11437,10 @@
                 },
                 "set": {
                   "description": "Set a reminder for yourself.",
-                  "arguments": [
-                    {
-                      "name": "duration",
-                      "description": "How long should the reminder last",
-                      "required": true
-                    },
-                    {
-                      "name": "reminder",
-                      "description": "The reminder message",
-                      "required": true
-                    }
-                  ],
                   "prefixCommand": "utility/reminders/reminder"
                 },
                 "setrepeating": {
                   "description": "Set a reminder for yourself that repeats at a regular interval.",
-                  "arguments": [
-                    {
-                      "name": "duration",
-                      "description": "How often should the reminder repeat",
-                      "required": true
-                    },
-                    {
-                      "name": "reminder",
-                      "description": "The reminder message",
-                      "required": true
-                    }
-                  ],
                   "prefixCommand": "utility/reminders/repeatingreminder"
                 },
                 "view": {
@@ -11394,6 +11469,23 @@
                 }
               ],
               "prefixCommand": "utility/calculator"
+            },
+            "charcount": {
+              "description": [
+                "Count the characters, words and lines in some text.",
+                "Attach a text file, or reply to a message, to count that instead."
+              ],
+              "arguments": [
+                {
+                  "name": "text",
+                  "description": "The text to count"
+                },
+                {
+                  "name": "file",
+                  "description": "A text file to count"
+                }
+              ],
+              "prefixCommand": "utility/charcount"
             },
             "colour": {
               "description": [
@@ -11788,6 +11880,7 @@
             "Bulk delete messages from a channel.",
             "Defaults to 5, maximum 99.",
             "Mention a user to delete only their messages.",
+            "Provide a channel to purge messages from there instead of the current channel.",
             "This cannot delete messages that are over two weeks old."
           ],
           "arguments": [
@@ -11798,6 +11891,10 @@
             {
               "name": "member",
               "description": "The member whose messages to purge"
+            },
+            {
+              "name": "channel",
+              "description": "The channel or thread to purge messages from"
             }
           ],
           "permissions": [
