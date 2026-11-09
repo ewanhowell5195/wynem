@@ -161,6 +161,12 @@
     "description": "Customise Wynem's avatar, embed colour, and prefixes in your server"
   },
   {
+    "id": "command-aliases",
+    "category": "Server Setup",
+    "icon": "icons/edit",
+    "description": "Add your own names for Wynem's commands in your server"
+  },
+  {
     "id": "message-quoting",
     "category": "Messages & Responses",
     "icon": "icons/quote",

@@ -1,0 +1,95 @@
+{
+  "commands": {
+    "prefix": [
+      "addcommandalias",
+      "removecommandalias",
+      "viewcommandaliases"
+    ],
+    "slash": [
+      ["botconfig", "commandaliases", "add"],
+      ["botconfig", "commandaliases", "remove"],
+      ["botconfig", "commandaliases", "view"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What are command aliases?"
+    },
+    "Command aliases are extra names for Wynem's commands that only work in your server. They let you shorten the commands your server uses most, or name them in a way that suits your community.\n\nAn alias works exactly like the name it points to. You can point an alias at a command's main name or at one of its built-in aliases, and it keeps that alias's behaviour. For example, an alias pointing at `bottomcaption` puts the caption at the bottom, just like `e!bottomcaption` does.",
+    "Command aliases only apply to prefix commands. Server aliases for a command are also listed when viewing that command with <command:help [command]|help command:[command]>.",
+    {
+      "type": "heading",
+      "text": "How to use command aliases"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Adding an alias",
+          "content": [
+            "To add a command alias, use the <command:addcommandalias [command] [alias]|botconfig commandaliases add command:[command] alias:[alias]> command.",
+            "For example: <command:addcommandalias bottomcaption bc|botconfig commandaliases add command:bottomcaption alias:bc>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Command alias added",
+                "description": "You can now use `e!bc` to run `e!bottomcaption`"
+              }
+            },
+            "Aliases can only contain letters, numbers, `-` and `_`, and cannot use a name that is already taken by one of Wynem's commands, one of their aliases, or one of the server's custom commands.",
+            {
+              "type": "embed",
+              "data": {
+                "author": ["Error", "/assets/images/icons/error.webp"],
+                "title": "Unable to add command alias",
+                "description": "`bottomcaption` is already the name or alias of the `caption` command",
+                "colour": "#DD2E44"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Viewing aliases",
+          "content": [
+            "To view all the command aliases in the server, use the <command:viewcommandaliases|botconfig commandaliases view> command.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Command aliases",
+                "description": "`e!bc` → `e!bottomcaption`\n`e!yeet` → `e!ban`"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Removing an alias",
+          "content": [
+            "To remove a command alias, use the <command:removecommandalias [alias]|botconfig commandaliases remove alias:[alias]> command.",
+            "For example: <command:removecommandalias bc|botconfig commandaliases remove alias:bc>",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Command alias removed",
+                "description": "`e!bc` no longer runs `e!bottomcaption`"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Limits"
+    },
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Aliases per server", "50"],
+        ["Alias length", "32 characters"],
+        ["Required permission", "Manage Server"]
+      ]
+    },
+    "If Wynem later adds a command or custom command with the same name as one of your aliases, that command takes priority over the alias."
+  ]
+}
