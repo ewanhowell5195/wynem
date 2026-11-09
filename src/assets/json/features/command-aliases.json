@@ -37,14 +37,22 @@
                 "description": "You can now use `e!bc` to run `e!bottomcaption`"
               }
             },
-            "Aliases can only contain letters, numbers, `-` and `_`, and cannot use a name that is already taken by one of Wynem's commands, one of their aliases, or one of the server's custom commands.",
+            "Aliases can only contain letters, numbers, `-` and `_`.\n\nAn alias can take over the name of one of Wynem's commands or aliases, so you can change what that name does in your server. A few names are reserved and cannot be used, such as `help` and the command alias commands themselves. Aliases also cannot use the name of one of the server's custom commands.",
             {
               "type": "embed",
               "data": {
                 "author": ["Error", "/assets/images/icons/error.webp"],
                 "title": "Unable to add command alias",
-                "description": "`bottomcaption` is already the name or alias of the `caption` command",
+                "description": "The name `help` is reserved",
                 "colour": "#DD2E44"
+              }
+            },
+            "Adding an alias that already exists replaces it, pointing it at the new command instead.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Command alias updated",
+                "description": "You can now use `e!bc` to run `e!caption`"
               }
             }
           ]
@@ -90,6 +98,6 @@
         ["Required permission", "Manage Server"]
       ]
     },
-    "If Wynem later adds a command or custom command with the same name as one of your aliases, that command takes priority over the alias."
+    "If the server later adds a custom command with the same name as one of its aliases, the custom command takes priority over the alias."
   ]
 }
