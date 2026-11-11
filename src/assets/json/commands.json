@@ -148,7 +148,8 @@
                       "arguments": "[command] [alias]",
                       "description": [
                         "Add a server alias for one of the bot's commands.",
-                        "The alias works exactly like the command name it points to, including other aliases."
+                        "The alias works exactly like the command name it points to, including other aliases.",
+                        "Aliases can replace the bot's own command names and aliases in the server, apart from a few reserved ones."
                       ],
                       "permissions": [
                         "Guild Only",
@@ -5517,7 +5518,8 @@
                 "add": {
                   "description": [
                     "Add a server alias for one of the bot's commands.",
-                    "The alias works exactly like the command name it points to, including other aliases."
+                    "The alias works exactly like the command name it points to, including other aliases.",
+                    "Aliases can replace the bot's own command names and aliases in the server, apart from a few reserved ones."
                   ],
                   "arguments": [
                     {
