@@ -108,10 +108,7 @@
                     "deleteautoresponse"
                   ],
                   "arguments": "[auto-response-id]",
-                  "description": [
-                    "Remove an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
-                  ],
+                  "description": "Remove an auto-response from the server.",
                   "permissions": [
                     "Guild Only",
                     "Manage Guild"
@@ -566,6 +563,7 @@
               ],
               "description": "Resend the message the bot sends when it joins a server, in the current channel.",
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "slashCommand": "serverconfig/resendjoininfo"
@@ -1420,6 +1418,9 @@
                         "If members are not specified, random members from the server will be picked.",
                         "The birthday boy will always be Wynem on \"26/7\"."
                       ],
+                      "permissions": [
+                        "Guild Only"
+                      ],
                       "slashCommand": "avatar/birthday"
                     },
                     "bonk": {
@@ -1700,7 +1701,7 @@
                         "wobblify"
                       ],
                       "arguments": "[amplitude] [period] [x] [y] [phase-shift] [image]",
-                      "description": "Apply an occilating twist effect to an image.",
+                      "description": "Apply an oscillating twist effect to an image.",
                       "slashCommand": "imagedistortions/sinetwist"
                     },
                     "twist": {
@@ -2486,7 +2487,7 @@
                   "slashCommand": "imagemanipulation/pad"
                 },
                 "paste": {
-                  "arguments": "[x] [y] [width] [height] [paste-image] [base-bmage]",
+                  "arguments": "[x] [y] [width] [height] [paste-image] [base-image]",
                   "description": "Paste an image onto another image.",
                   "slashCommand": "imagemanipulation/paste"
                 },
@@ -3350,7 +3351,7 @@
                     "An auto-ban channel will instantly ban any member who sends a message in it.",
                     "An auto-ban role will instantly ban any member who is given that role.",
                     "These can be used to trick bots into banning themselves, while real users will understand to avoid them.",
-                    "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last hour of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
+                    "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last 8 hours of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
                     "Members with moderator permissions, or anyone whose highest role is equal to or higher than the bot's, are excluded from being auto-banned."
                   ],
                   "permissions": [
@@ -3743,7 +3744,7 @@
                   "description": "Remove the server's Artchive channel.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Channels"
+                    "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/artchive/remove"
                 },
@@ -3820,6 +3821,9 @@
                         "sbinfo"
                       ],
                       "description": "Get the information about the server's starboards.",
+                      "permissions": [
+                        "Guild Only"
+                      ],
                       "slashCommand": "server/starboardinfo"
                     }
                   }
@@ -3857,7 +3861,7 @@
                     "Manage Messages"
                   ],
                   "botPermissions": [
-                    "Manage Channels"
+                    "Manage Roles"
                   ],
                   "slashCommand": "channel/lock"
                 },
@@ -3873,7 +3877,7 @@
                   "botPermissions": [
                     "Pin Messages"
                   ],
-                  "slashCommand": "channel/repin"
+                  "slashCommand": "repin"
                 },
                 "slowmode": {
                   "aliases": [
@@ -3997,7 +4001,7 @@
                   "description": "Remove an FAQ entry.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Messages"
+                    "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/faq/remove"
                 },
@@ -4009,7 +4013,7 @@
                   "description": "Rename an FAQ entry.",
                   "permissions": [
                     "Guild Only",
-                    "Manage Messages"
+                    "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/faq/rename"
                 }
@@ -4035,7 +4039,8 @@
                   "arguments": "[url]",
                   "description": "Set or remove a GitHub repo to use for issue tracking.",
                   "permissions": [
-                    "Guild Only"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/setissuetracker"
                 },
@@ -4334,7 +4339,7 @@
                   "aliases": [
                     "ruleedit"
                   ],
-                  "arguments": "[integer]",
+                  "arguments": "[rule]",
                   "description": "Edit one of the server rules.",
                   "permissions": [
                     "Guild Only",
@@ -4364,10 +4369,11 @@
                   "aliases": [
                     "ruleremove"
                   ],
-                  "arguments": "[integer]",
+                  "arguments": "[rule]",
                   "description": "Remove a rule from the server rules.",
                   "permissions": [
-                    "Guild Only"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/rule/remove"
                 },
@@ -4375,7 +4381,7 @@
                   "aliases": [
                     "rules"
                   ],
-                  "arguments": "[integer]",
+                  "arguments": "[rule]",
                   "description": "View the server rules.",
                   "permissions": [
                     "Guild Only"
@@ -4585,7 +4591,7 @@
               ],
               "arguments": "[message-url]",
               "description": [
-                "Quote someone elses message.",
+                "Quote someone else's message.",
                 "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
               ],
               "permissions": [
@@ -4770,6 +4776,7 @@
                 "usereval"
               ],
               "arguments": "[code]",
+              "cooldown": 5,
               "description": "Evaluate some JavaScript code and view the output.",
               "slashCommand": "eval"
             },
@@ -4827,15 +4834,6 @@
               "arguments": "[count] [min-length] [max-length] [starts-with] [includes] [ends-with]",
               "description": "Generate random words.",
               "slashCommand": "utility/randomwords"
-            },
-            "rollout": {
-              "arguments": "[experiment] [id]",
-              "description": [
-                "Check if an ID is rolled out in a Discord experiment",
-                "If no ID is provided, it will default to the current server's ID",
-                "If you are not in a server, it will default to your User ID"
-              ],
-              "slashCommand": "utility/rollout"
             },
             "tinyurl": {
               "arguments": "[url]",
@@ -5090,6 +5088,9 @@
                   "name": "guest4",
                   "description": "Guest 4"
                 }
+              ],
+              "permissions": [
+                "Guild Only"
               ],
               "prefixCommand": "images/imagefun/avatars/birthday"
             },
@@ -5457,6 +5458,7 @@
                     "The builder can limit which channels the auto-response responds in, either only responding in the selected channels, or responding everywhere except them."
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/addautoresponse"
@@ -5474,23 +5476,22 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/editautoresponse"
                 },
                 "remove": {
-                  "description": [
-                    "Remove an auto-response from the server.",
-                    "Provide no arguments to view a list of active auto-responses."
-                  ],
+                  "description": "Remove an auto-response from the server.",
                   "arguments": [
                     {
                       "name": "auto-response-id",
-                      "description": "The auto-response to view",
+                      "description": "The auto-response to remove",
                       "required": true
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/removeautoresponse"
@@ -5507,6 +5508,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/autoresponses/viewautoresponse"
@@ -5534,6 +5536,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/commandaliases/addcommandalias"
@@ -5548,12 +5551,16 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/commandaliases/removecommandalias"
                 },
                 "view": {
                   "description": "View the server's aliases for the bot's commands.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
                   "prefixCommand": "bot/commands/commandaliases/viewcommandaliases"
                 }
               }
@@ -5563,6 +5570,7 @@
                 "add": {
                   "description": "Run a builder that adds a new custom command for the server.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/customcommands/addcustomcommand"
@@ -5577,6 +5585,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/customcommands/editcustomcommand"
@@ -5591,6 +5600,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/customcommands/removecustomcommand"
@@ -5610,6 +5620,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/commands/customcommands/stealcustomcommand"
@@ -5626,6 +5637,9 @@
                       "name": "owner",
                       "description": "The user or server the command belongs to (username, user ID, server ID, or `server`)"
                     }
+                  ],
+                  "permissions": [
+                    "Guild Only"
                   ],
                   "prefixCommand": "bot/commands/customcommands/viewcustomcommand"
                 }
@@ -5645,6 +5659,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/prefixes/prefix"
@@ -5661,6 +5676,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "bot/prefixes/prefixalias"
@@ -5672,6 +5688,7 @@
                 "quotes": {
                   "description": "Toggles whether the bot will quote a message whenever a message link is sent.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serversettings/togglequotes"
@@ -5714,6 +5731,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "prefixCommand": "bot/wynemavatar"
@@ -5727,6 +5745,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "prefixCommand": "voice/defaultvolume"
@@ -5744,6 +5763,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "prefixCommand": "bot/embedcolour"
@@ -5755,28 +5775,13 @@
             "lock": {
               "description": "Toggle everyone's ability to send messages in the current channel.",
               "permissions": [
+                "Guild Only",
                 "Manage Messages"
               ],
               "botPermissions": [
-                "Manage Channels"
+                "Manage Roles"
               ],
               "prefixCommand": "server/channel/lock"
-            },
-            "repin": {
-              "description": "Re-pin a message to move it to the top of the channel pins.",
-              "arguments": [
-                {
-                  "name": "message",
-                  "description": "The message ID or URL to re-pin"
-                }
-              ],
-              "permissions": [
-                "Pin Messages"
-              ],
-              "botPermissions": [
-                "Pin Messages"
-              ],
-              "prefixCommand": "server/channel/repin"
             },
             "slowmode": {
               "description": "Set a custom slowmode for the current channel.",
@@ -5788,6 +5793,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Messages"
               ],
               "botPermissions": [
@@ -5817,6 +5823,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Emojis And Stickers"
               ],
               "botPermissions": [
@@ -5834,6 +5841,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Emojis And Stickers"
               ],
               "botPermissions": [
@@ -5874,6 +5882,9 @@
                       "name": "board-height",
                       "description": "The height of the board"
                     }
+                  ],
+                  "permissions": [
+                    "Guild Only"
                   ],
                   "prefixCommand": "fun/games/connect4"
                 },
@@ -7311,7 +7322,7 @@
               "prefixCommand": "images/imagefun/distortions/magick"
             },
             "sinetwist": {
-              "description": "Apply an occilating twist effect to an image.",
+              "description": "Apply an oscillating twist effect to an image.",
               "arguments": [
                 {
                   "name": "amplitude",
@@ -8720,11 +8731,11 @@
                   "description": "The image to paste"
                 },
                 {
-                  "name": "base-bmage-file",
+                  "name": "base-image-file",
                   "description": "The image to paste onto"
                 },
                 {
-                  "name": "base-bmage-string",
+                  "name": "base-image-string",
                   "description": "The image to paste onto"
                 }
               ],
@@ -10337,6 +10348,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "botPermissions": [
@@ -10354,6 +10366,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/blockedemojis/unblockemoji"
@@ -10365,6 +10378,7 @@
                     "Members with moderation permissions are exempt from the punishments."
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/blockedemojis/blockedemojis"
@@ -10382,7 +10396,7 @@
               "arguments": [
                 {
                   "name": "member",
-                  "description": "The member to add the note too",
+                  "description": "The member to add the note to",
                   "required": true
                 },
                 {
@@ -10392,6 +10406,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Moderate Members"
               ],
               "prefixCommand": "moderation/addnote"
@@ -10410,6 +10425,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Moderate Members"
               ],
               "botPermissions": [
@@ -10427,6 +10443,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Moderate Members"
               ],
               "prefixCommand": "moderation/records"
@@ -10537,6 +10554,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Roles"
               ],
               "botPermissions": [
@@ -10551,6 +10569,7 @@
                 "Role types:\n- **Normal** - The user can add and remove this role as they wish\n- **Binding** - Once the role is applied, it cannot be removed\n- **Unique** - You can only have one unique role at a time"
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Roles"
               ],
               "botPermissions": [
@@ -10570,6 +10589,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Roles"
               ],
               "botPermissions": [
@@ -10592,6 +10612,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Roles"
               ],
               "botPermissions": [
@@ -10631,10 +10652,16 @@
                       "description": "A fourth image"
                     }
                   ],
+                  "permissions": [
+                    "Guild Only"
+                  ],
                   "prefixCommand": "server/artchives/artchive"
                 },
                 "view": {
                   "description": "Show the server's Artchive channel.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
                   "prefixCommand": "server/artchives/viewartchive"
                 }
               }
@@ -10650,10 +10677,16 @@
                       "required": true
                     }
                   ],
+                  "permissions": [
+                    "Guild Only"
+                  ],
                   "prefixCommand": "server/issuetracker/issue"
                 },
                 "repo": {
                   "description": "View the issue tracker for the current server.",
+                  "permissions": [
+                    "Guild Only"
+                  ],
                   "prefixCommand": "server/issuetracker/showissuetracker"
                 }
               }
@@ -10662,10 +10695,16 @@
           "commands": {
             "banappeal": {
               "description": "Get the ban appeal link for the current server.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "moderation/bans/banappeal"
             },
             "info": {
               "description": "Get some information about the current server.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "server/serverinfo"
             },
             "invites": {
@@ -10679,6 +10718,9 @@
                   "description": "The server name"
                 }
               ],
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "server/serverinvites/serverinvite"
             },
             "namesearch": {
@@ -10690,11 +10732,14 @@
                   "required": true
                 }
               ],
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "server/namesearch"
             },
             "quote": {
               "description": [
-                "Quote someone elses message.",
+                "Quote someone else's message.",
                 "You can either provide a message link, reply to a message with this command, or send a message link without this command if automatic message quoting is enabled."
               ],
               "arguments": [
@@ -10704,6 +10749,9 @@
                   "required": true
                 }
               ],
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "server/quotemessage",
               "contextCommand": "message/quote-message"
             },
@@ -10711,15 +10759,20 @@
               "description": "View the server rules.",
               "arguments": [
                 {
-                  "name": "integer",
-                  "description": "Rule number",
-                  "required": true
+                  "name": "rule",
+                  "description": "Rule number"
                 }
+              ],
+              "permissions": [
+                "Guild Only"
               ],
               "prefixCommand": "server/rules/rule"
             },
             "starboardinfo": {
               "description": "Get the information about the server's starboards.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "server/channel/starboards/starboardinfo"
             },
             "viewtickets": {
@@ -10729,6 +10782,9 @@
                   "name": "ticket-type",
                   "description": "The ticket type"
                 }
+              ],
+              "permissions": [
+                "Guild Only"
               ],
               "prefixCommand": "server/tickets/viewtickets"
             }
@@ -10741,7 +10797,8 @@
                 "remove": {
                   "description": "Remove the server's Artchive channel.",
                   "permissions": [
-                    "Manage Channels"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/artchives/removeartchive"
                 },
@@ -10754,6 +10811,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/artchives/setartchive"
@@ -10775,6 +10833,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "voice/ignoreprefix"
@@ -10782,6 +10841,7 @@
                 "remove": {
                   "description": "Remove the server's AutoTTS channel.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "voice/removeautotts"
@@ -10798,6 +10858,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "voice/setautotts"
@@ -10827,6 +10888,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/channel/starboards/starboard"
@@ -10849,6 +10911,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/channel/starboards/starboardblacklist"
@@ -10863,6 +10926,7 @@
                     "There is a maximum of 100 FAQs per server, and a maximum of 25 FAQ categories per server"
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/addfaq"
@@ -10885,6 +10949,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/rawfaq"
@@ -10904,7 +10969,8 @@
                     }
                   ],
                   "permissions": [
-                    "Manage Messages"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/removefaq"
                 },
@@ -10933,7 +10999,8 @@
                     }
                   ],
                   "permissions": [
-                    "Manage Messages"
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/faqs/renamefaq"
                 }
@@ -10944,6 +11011,7 @@
                 "removejoindm": {
                   "description": "Remove the server's join DM.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/removejoindm"
@@ -10951,6 +11019,7 @@
                 "removejoinmessage": {
                   "description": "Remove the server's join message.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/removejoinmessage"
@@ -10958,6 +11027,7 @@
                 "removeleavemessage": {
                   "description": "Remove the server's leave message.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/removeleavemessage"
@@ -10972,6 +11042,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/setjoindm"
@@ -10989,6 +11060,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/setjoinimage"
@@ -11007,6 +11079,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/setjoinmessage"
@@ -11024,6 +11097,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/setleaveimage"
@@ -11042,6 +11116,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/setleavemessage"
@@ -11050,6 +11125,7 @@
                   "description": "View the join messages for the current server.",
                   "cooldown": 5,
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/joinmessages/viewjoinmessages"
@@ -11061,6 +11137,7 @@
                 "manage": {
                   "description": "Manage the bot logs for the server.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "botPermissions": [
@@ -11071,6 +11148,7 @@
                 "view": {
                   "description": "View the bot log channels for the server.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/logs/viewlogs"
@@ -11099,6 +11177,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/setmodpingroles"
@@ -11106,6 +11185,7 @@
                 "view": {
                   "description": "View the roles set to be used in moderator pings.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/viewmodpingroles"
@@ -11117,6 +11197,7 @@
                 "add": {
                   "description": "Add a new rule to the server rules.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/rules/addrule"
@@ -11125,12 +11206,13 @@
                   "description": "Edit one of the server rules.",
                   "arguments": [
                     {
-                      "name": "integer",
+                      "name": "rule",
                       "description": "Rule number",
                       "required": true
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/rules/editrule"
@@ -11138,6 +11220,7 @@
                 "embed": {
                   "description": "Create an embed showcasing the server rules.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/rules/embedrules"
@@ -11146,10 +11229,14 @@
                   "description": "Remove a rule from the server rules.",
                   "arguments": [
                     {
-                      "name": "integer",
+                      "name": "rule",
                       "description": "Rule number",
                       "required": true
                     }
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
                   ],
                   "prefixCommand": "server/rules/removerule"
                 }
@@ -11172,6 +11259,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serverinvites/addserverinvite"
@@ -11181,10 +11269,12 @@
                   "arguments": [
                     {
                       "name": "name",
-                      "description": "The server name"
+                      "description": "The server name",
+                      "required": true
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serverinvites/removeserverinvite"
@@ -11201,6 +11291,7 @@
                     "The ticket sort priority controls the order that the ticket types appear in the ticket type selection list."
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/tickets/addtickettype"
@@ -11219,6 +11310,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/tickets/edittickettype"
@@ -11226,6 +11318,7 @@
                 "remove": {
                   "description": "Remove the tickets system from the server.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/tickets/removetickets"
@@ -11240,6 +11333,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/tickets/removetickettype"
@@ -11263,6 +11357,7 @@
                     }
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "botPermissions": [
@@ -11277,6 +11372,7 @@
                 "autoissues": {
                   "description": "Toggles whether the bot will automatically reply to GitHub issue numbers.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/issuetracker/toggleautoissues"
@@ -11288,6 +11384,7 @@
                     "Once a ping is 10 minutes old, it can be deleted without triggering a ghost ping alert."
                   ],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serversettings/toggleghostpingnotices"
@@ -11295,6 +11392,7 @@
                 "modping": {
                   "description": "Toggles the ability for users to trigger a moderator ping.",
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "moderation/modpings/togglemodping"
@@ -11306,6 +11404,7 @@
                   ],
                   "arguments": [],
                   "permissions": [
+                    "Guild Only",
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serversettings/toggleuserleftnotices"
@@ -11324,6 +11423,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "botPermissions": [
@@ -11334,6 +11434,7 @@
             "resendjoininfo": {
               "description": "Resend the message the bot sends when it joins a server, in the current channel.",
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "prefixCommand": "bot/resendjoininfo"
@@ -11345,10 +11446,11 @@
                 "An auto-ban channel will instantly ban any member who sends a message in it.",
                 "An auto-ban role will instantly ban any member who is given that role.",
                 "These can be used to trick bots into banning themselves, while real users will understand to avoid them.",
-                "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last hour of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
+                "When an auto-ban is triggered, the bot performs a \"Compromised Account\" ban. The member is banned, their last 8 hours of message history is deleted, they receive a direct message warning that their account may be compromised, and then they are immediately unbanned, effectively turning the ban into a kick.",
                 "Members with moderator permissions, or anyone whose highest role is equal to or higher than the bot's, are excluded from being auto-banned."
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "botPermissions": [
@@ -11365,6 +11467,7 @@
                 }
               ],
               "permissions": [
+                "Guild Only",
                 "Manage Guild"
               ],
               "botPermissions": [
@@ -11379,6 +11482,10 @@
                   "name": "url",
                   "description": "GitHub repo URL"
                 }
+              ],
+              "permissions": [
+                "Guild Only",
+                "Manage Guild"
               ],
               "prefixCommand": "server/issuetracker/setissuetracker"
             }
@@ -11599,25 +11706,6 @@
               ],
               "prefixCommand": "utility/randomwords"
             },
-            "rollout": {
-              "description": [
-                "Check if an ID is rolled out in a Discord experiment",
-                "If no ID is provided, it will default to the current server's ID",
-                "If you are not in a server, it will default to your User ID"
-              ],
-              "arguments": [
-                {
-                  "name": "experiment",
-                  "description": "The experiment to check",
-                  "required": true
-                },
-                {
-                  "name": "id",
-                  "description": "The ID to check"
-                }
-              ],
-              "prefixCommand": "utility/rollout"
-            },
             "tinyurl": {
               "description": "Shorten a link using tinyurl.",
               "arguments": [
@@ -11659,6 +11747,9 @@
           "commands": {
             "leave": {
               "description": "Make the bot leave the current voice channel.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "voice/leave"
             },
             "play": {
@@ -11672,6 +11763,9 @@
                   "name": "source",
                   "description": "The audio source to play"
                 }
+              ],
+              "permissions": [
+                "Guild Only"
               ],
               "prefixCommand": "voice/play"
             },
@@ -11687,6 +11781,9 @@
             },
             "stop": {
               "description": "Make the bot stop playing audio in the current voice channel.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "voice/stop"
             },
             "tts": {
@@ -11715,6 +11812,9 @@
             },
             "viewautotts": {
               "description": "Show the server's AutoTTS channel.",
+              "permissions": [
+                "Guild Only"
+              ],
               "prefixCommand": "voice/viewautotts"
             },
             "volume": {
@@ -11724,6 +11824,9 @@
                   "name": "volume",
                   "description": "The voice volume to use, as a percentage"
                 }
+              ],
+              "permissions": [
+                "Guild Only"
               ],
               "prefixCommand": "voice/volume"
             }
@@ -11762,6 +11865,9 @@
         },
         "close": {
           "description": "Close the current thread channel or forum post.",
+          "permissions": [
+            "Guild Only"
+          ],
           "botPermissions": [
             "Manage Threads"
           ],
@@ -11798,6 +11904,7 @@
         },
         "eval": {
           "description": "Evaluate some JavaScript code and view the output.",
+          "cooldown": 5,
           "arguments": [
             {
               "name": "code",
@@ -11907,6 +12014,23 @@
             "Manage Messages"
           ],
           "prefixCommand": "moderation/purge"
+        },
+        "repin": {
+          "description": "Re-pin a message to move it to the top of the channel pins.",
+          "arguments": [
+            {
+              "name": "message",
+              "description": "The message ID or URL to re-pin"
+            }
+          ],
+          "permissions": [
+            "Guild Only",
+            "Pin Messages"
+          ],
+          "botPermissions": [
+            "Pin Messages"
+          ],
+          "prefixCommand": "server/channel/repin"
         },
         "reset": {
           "description": [
@@ -12065,7 +12189,7 @@
               "slashCommand": "utility/getrawmessage"
             },
             "quote-message": {
-              "description": "Quote someone elses message.",
+              "description": "Quote someone else's message.",
               "type": "message",
               "prefixCommand": "server/quotemessage",
               "slashCommand": "server/quote"
