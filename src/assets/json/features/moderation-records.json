@@ -152,7 +152,7 @@
               "type": "embed",
               "data": {
                 "warning": true,
-                "description": "<@TheAnnoying> is already timed out, are you sure you want to time them out again?\n\nThis will extend the timeout by `3 days` and add a new log",
+                "description": "<@TheAnnoying> is already timed out, are you sure you want to time them out again?\n\nThis will replace their current timeout with one lasting `3 days` and add a new log",
                 "buttons": [
                   {
                     "label": "Time out",

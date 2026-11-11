@@ -142,7 +142,7 @@
               "type": "embed",
               "data": {
                 "title": "Moderator ping disabled",
-                "description": "Members will no longer be able to use `e!moderatorping` in this server"
+                "description": "Members will no longer be able to use `e!modping` in this server"
               }
             },
             "Running the command again re-enables them.",
