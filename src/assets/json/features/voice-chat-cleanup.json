@@ -62,7 +62,7 @@
       "type": "heading",
       "text": "Spam timeouts"
     },
-    "Members who keep sending messages in an empty voice channel chat are timed out automatically. A message counts towards a timeout when it is sent within a minute of that member's previous message, and every message restarts that minute. Sending 3 messages in a row like this times the member out for 20 minutes, and they are sent a direct message about it.",
+    "Members who spam in an empty voice channel chat are automatically timed out for 20 minutes.",
     {
       "type": "embed",
       "data": {
@@ -74,20 +74,6 @@
           ["Total timeouts", "1"]
         ]
       }
-    },
-    {
-      "type": "heading",
-      "text": "Important notes"
-    },
-    {
-      "type": "tablelist",
-      "rows": [
-        ["Moderators", "Messages sent by moderators are never deleted."],
-        ["Warning Message", "Only one warning is shown in a channel at a time. It is deleted once a minute has passed without any new messages in that chat."],
-        ["Joining", "When someone joins the voice channel, the warning is deleted and every member's message count for that channel is reset."],
-        ["Records", "Automatic timeouts are saved as moderation records, the same as timeouts given by a moderator."],
-        ["Permissions", "If Wynem loses the <code>Moderate Members</code> permission, messages are still deleted but members are no longer timed out. If it loses the <code>Manage Messages</code> permission, voice chat cleanup is disabled and Wynem sends a notice to the server."]
-      ]
     }
   ]
 }
