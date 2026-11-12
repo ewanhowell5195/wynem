@@ -13,6 +13,7 @@
       "text": "What is voice chat cleanup?"
     },
     "Every voice channel has its own text chat. Voice chat cleanup stops members from using that chat while nobody is in the voice channel. Any message sent there while the voice channel is empty is deleted, and Wynem posts a warning in its place.",
+    "This is especially useful against scam messages. Scams posted in a voice channel's chat are often missed by moderators, since few people check those chats while nobody is using them. Voice chat cleanup removes them straight away.",
     {
       "type": "embed",
       "data": {
