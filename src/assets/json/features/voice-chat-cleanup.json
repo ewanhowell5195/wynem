@@ -70,7 +70,7 @@
         "description": "You have been timed out in `Wynem and friends`",
         "fields": [
           ["Length", "00:20:00"],
-          ["Reason", "[AUTO-TIMEOUT] Spamming in an empty voice channel chat"],
+          ["Reason", "[VC-CLEANUP] Spamming in an empty voice channel chat"],
           ["Total timeouts", "1"]
         ]
       }
