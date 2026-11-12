@@ -1,0 +1,92 @@
+{
+  "commands": {
+    "prefix": [
+      "togglevoicechatcleanup"
+    ],
+    "slash": [
+      ["serverconfig", "toggle", "voicechatcleanup"]
+    ]
+  },
+  "description": [
+    {
+      "type": "heading",
+      "text": "What is voice chat cleanup?"
+    },
+    "Every voice channel has its own text chat. Voice chat cleanup stops members from using that chat while nobody is in the voice channel. Any message sent there while the voice channel is empty is deleted, and Wynem posts a warning in its place.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Voice channel not in use", "/assets/images/icons/speaker_red.webp"],
+        "description": "Do not use this channel unless the voice chat is in use",
+        "colour": "#DD2E44"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "How to use voice chat cleanup"
+    },
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "name": "Enabling voice chat cleanup",
+          "content": [
+            "Voice chat cleanup is disabled by default. To enable it, use the <code class=\"command prefix\">e!togglevoicechatcleanup</code><code class=\"command slash\">/serverconfig toggle voicechatcleanup</code> command. Wynem needs the <code>Manage Messages</code> and <code>Moderate Members</code> permissions to enable it.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Voice chat cleanup enabled",
+                "description": "I will now delete messages sent in voice channel chats while nobody is in the voice channel"
+              }
+            },
+            "Once enabled, it applies to every voice channel in the server."
+          ]
+        },
+        {
+          "name": "Disabling voice chat cleanup",
+          "content": [
+            "To disable voice chat cleanup, use the <code class=\"command prefix\">e!togglevoicechatcleanup</code><code class=\"command slash\">/serverconfig toggle voicechatcleanup</code> command again.",
+            {
+              "type": "embed",
+              "data": {
+                "title": "Voice chat cleanup disabled",
+                "description": "I will no longer delete messages sent in empty voice channel chats"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Spam timeouts"
+    },
+    "Members who keep sending messages in an empty voice channel chat are timed out automatically. A message counts towards a timeout when it is sent within a minute of that member's previous message, and every message restarts that minute. Sending 3 messages in a row like this times the member out for 20 minutes, and they are sent a direct message about it.",
+    {
+      "type": "embed",
+      "data": {
+        "author": ["Timed out", "/assets/images/icons/speaker_red.webp"],
+        "description": "You have been timed out in `Wynem and friends`",
+        "fields": [
+          ["Length", "00:20:00"],
+          ["Reason", "[AUTO-TIMEOUT] Spamming in an empty voice channel chat"],
+          ["Total timeouts", "1"]
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Important notes"
+    },
+    {
+      "type": "tablelist",
+      "rows": [
+        ["Moderators", "Messages sent by moderators are never deleted."],
+        ["Warning Message", "Only one warning is shown in a channel at a time. It is deleted once a minute has passed without any new messages in that chat."],
+        ["Joining", "When someone joins the voice channel, the warning is deleted and every member's message count for that channel is reset."],
+        ["Records", "Automatic timeouts are saved as moderation records, the same as timeouts given by a moderator."],
+        ["Permissions", "If Wynem loses the <code>Moderate Members</code> permission, messages are still deleted but members are no longer timed out. If it loses the <code>Manage Messages</code> permission, voice chat cleanup is disabled and Wynem sends a notice to the server."]
+      ]
+    }
+  ]
+}

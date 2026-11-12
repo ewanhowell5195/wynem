@@ -110,6 +110,12 @@
     "description": "Automatically remove scam bots and compromised accounts using trap channels and roles"
   },
   {
+    "id": "voice-chat-cleanup",
+    "category": "Moderation",
+    "icon": "icons/speaker_red",
+    "description": "Keep voice channel chats clear while nobody is in the voice channel, timing out members who spam them"
+  },
+  {
     "id": "ban-appeals",
     "category": "Moderation",
     "icon": "icons/unban",
