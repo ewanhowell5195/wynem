@@ -3211,11 +3211,12 @@
                 "mctg",
                 "mct"
               ],
-              "arguments": "[top-text] [top-texture] [bottom-text] [bottom-texture] [small-text] [small-texture]",
+              "arguments": "[top-text] [top-texture] [bottom-text] [bottom-texture] [small-text] [small-texture] [stretch]",
               "cooldown": 5,
               "description": [
                 "Generate a Minecraft-styled title logo.",
                 "Use \"default\" to use the default texture.",
+                "A colour can be used in place of a texture. Separate several colours with commas to make a gradient.",
                 "Provide no arguments to view a list of all textures.",
                 "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
               ],
@@ -4472,6 +4473,26 @@
                     "Manage Guild"
                   ],
                   "slashCommand": "serverconfig/toggle/userleftnotices"
+                },
+                "togglevoicechatcleanup": {
+                  "aliases": [
+                    "voicechatcleanup",
+                    "togglevoicecleanup",
+                    "voicecleanup"
+                  ],
+                  "description": [
+                    "Toggles whether messages sent in a voice channel's chat are deleted while nobody is in the voice channel.",
+                    "Members that spam in the channel get timed out."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Messages",
+                    "Moderate Members"
+                  ],
+                  "slashCommand": "serverconfig/toggle/voicechatcleanup"
                 }
               }
             },
@@ -10098,6 +10119,7 @@
               "description": [
                 "Generate a Minecraft-styled title logo.",
                 "Use \"default\" to use the default texture.",
+                "A colour can be used in place of a texture. Separate several colours with commas to make a gradient.",
                 "Provide no arguments to view a list of all textures.",
                 "For more advanced Minecraft titles, use the Minecraft Title Generator Blockbench plugin."
               ],
@@ -10109,7 +10131,7 @@
                 },
                 {
                   "name": "top-texture",
-                  "description": "The top texture"
+                  "description": "The top texture or colour"
                 },
                 {
                   "name": "bottom-text",
@@ -10117,7 +10139,7 @@
                 },
                 {
                   "name": "bottom-texture",
-                  "description": "The bottom texture"
+                  "description": "The bottom texture or colour"
                 },
                 {
                   "name": "small-text",
@@ -10125,7 +10147,11 @@
                 },
                 {
                   "name": "small-texture",
-                  "description": "The small texture"
+                  "description": "The small texture or colour"
+                },
+                {
+                  "name": "stretch",
+                  "description": "Stretch the bottom text to match the width of the top text"
                 }
               ],
               "prefixCommand": "minecraft/minecrafttitlegenerator"
@@ -11408,6 +11434,21 @@
                     "Manage Guild"
                   ],
                   "prefixCommand": "server/serversettings/toggleuserleftnotices"
+                },
+                "voicechatcleanup": {
+                  "description": [
+                    "Toggles whether messages sent in a voice channel's chat are deleted while nobody is in the voice channel.",
+                    "Members that spam in the channel get timed out."
+                  ],
+                  "permissions": [
+                    "Guild Only",
+                    "Manage Guild"
+                  ],
+                  "botPermissions": [
+                    "Manage Messages",
+                    "Moderate Members"
+                  ],
+                  "prefixCommand": "server/serversettings/togglevoicechatcleanup"
                 }
               }
             }
