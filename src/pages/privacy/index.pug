@@ -1,7 +1,7 @@
 style: include:styl index.styl
 .container
   h1.title Privacy Policy
-  p Last updated: 3 November 2026
+  p Last updated: 25 November 2026
   p By using the Discord bot Wynem, you agree that you have read and agree to this policy.
   p This is our Privacy Policy, which will describe the types of data collected, how it is used, how to opt out of data collection, and how to remove your data.
   p The terms "we", "us", and "our" refer to the owner and moderators of Wynem. The terms "bot" and "Wynem" refer to the Discord bot itself. The terms "you" and "your" refer to you, the user.
@@ -36,7 +36,7 @@ style: include:styl index.styl
   p Wynem reads message content to provide the features that server admins enable, such as message logs, auto-responses, message link quoting, the starboard, and text to speech channels. Message content is never stored in Wynem's database, and is never used to train AI or machine learning models.
   p Wynem uses presence data, such as your online status and activity, only at the moment a feature needs it, for example to ping moderators who are online or to show your status in the user info command. Presence data is never stored.
   h3 Backups:
-  p The local database on the bot server is backed up once a day, and backups are kept for 30 days. The bot server and its backups are only accessible to the developer of Wynem.
+  p The local database on the bot server is backed up once a day to private storage hosted by Cloudflare, and each backup is automatically deleted within 30 days. The bot server and its backups are only accessible to the developer of Wynem.
   h3 Direct Messages:
   p When you send a direct message to Wynem, this message is sent to a private Discord channel. This logs the full message content, including attachments, except for stickers and emojis that Wynem does not have access to. This data is only stored within Discord, and is never stored locally.
   h3 Commands:
@@ -83,7 +83,7 @@ style: include:styl index.styl
   br
   h1 THIRD-PARTY WEBSITES
   p Wynem may contain links to third-party websites or services. These websites are operated independently of Wynem and have their own privacy policies and terms of service. We encourage you to review the privacy practices of any third-party website or service before sharing your personal information with them.
-  p Wynem never sells your information. It only sends data to the following third-party services, and only when you or your server use the feature that needs them:
+  p Wynem never sells your information. Other than the backups described above, it only sends data to the following third-party services, and only when you or your server use the feature that needs them:
   ul
     li Google Translate receives the text being translated when the translate command is used.
     li Google Text-to-Speech receives the text being read out when text to speech is used, including messages sent in a server's text to speech channel.
